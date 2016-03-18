@@ -49,44 +49,46 @@ body
 
 h1
 {
-    font-size: 2em;
+    font-size: 1.9em;
     font-weight: bold;
-    margin: 1em 0 0.67em 0;
+    margin: 1em 0 0.526em 0;
 }
 
 h2
 {
     color: #0000FF;
-    font-size: 1.3em;
+    font-size: 1.625em;
     font-weight: bold;
-    margin: 1.5em 0 0.67em 0;
+    margin: 1em 0 0.615em 0;
 }
 
 h3
 {
-    font-size: 1.17em;
+    font-size: 1.398em;
     font-weight: bold;
-    margin: 0,.85em 0;
+    margin: 1em 0 0.715em 0;
 }
 
 h4
 {
+    font-size: 1.221em;
     font-weight: bold;
-    margin: 1.33em 0;
+    margin: 1em 0 0.819em 0;
 }
 
 h5
 {
-    font-size: 0.83em;
+    color: #404040;
+    font-size: 1.101em;
     font-weight: bold;
-    margin: 1.67em 0;
+    margin: 1em 0 0.908em 0;
 }
 
 h6
 {
-    font-size: 0.67em;
+    font-size: 1.05em;
     font-weight: bold;
-    margin: 2.33em 0;
+    margin: 1em 0 0.526em 0;
 }
 
 p
@@ -135,6 +137,7 @@ ul
 {
     float: left;
     font-size: 4em;
+    font-weight: bold;
     margin: 0.75em 0 0 20px;
 }
 
@@ -178,6 +181,16 @@ ul
     border: 1px solid black;
     color: black;
     margin: 0px 16px;
-    padding: 0px 16px;
+    padding: 16px;
+    font-family: "courier new", courier, monospace;
+}
+
+div.code
+{
+    padding: 0 16px;
+}
+
+.token
+{
     font-family: "courier new", courier, monospace;
 }

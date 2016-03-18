@@ -384,6 +384,11 @@ var group__compiler =
       [ "GetErrorBuffer", "class_bond_1_1_semantic_analyzer.html#a5649df9025de67add417ee08a7bdf320", null ],
       [ "GetSymbolTable", "class_bond_1_1_semantic_analyzer.html#ab1ef4510af69ea0c5497ed01b0bdf66f", null ]
     ] ],
+    [ "SymbolTable", "class_bond_1_1_symbol_table.html", [
+      [ "SymbolTable", "class_bond_1_1_symbol_table.html#ad8e3dbb7d430ada31b05d4dcf0789528", null ],
+      [ "GetGlobalScope", "class_bond_1_1_symbol_table.html#ae417e3661b13d5adfbd4e43ddbbb36a7", null ],
+      [ "GetGlobalScope", "class_bond_1_1_symbol_table.html#a3b56fd661fdc66d4398285c727e324ec", null ]
+    ] ],
     [ "Token", "class_bond_1_1_token.html", [
       [ "Annotation", "class_bond_1_1_token.html#ad4b6c5692435cfc04cc96eb829d10da2", [
         [ "OCTAL", "class_bond_1_1_token.html#ad4b6c5692435cfc04cc96eb829d10da2a61dbfe01af7c84f4dbcbb6b3b239ceb7", null ],

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bond Programming Language</title>
+<link rel="stylesheet" type="text/css" href="css/bond.css">
+</head>
+
+<body>
+<div class="page">
+
+<div class="header">
+	<img class="headlogo" src="img/bond_logo_90x124.png" alt="Bond Logo">
+	<p class="prodid">Bond</p>
+</div>
+
+<ul class="navbar">
+	<li class="navbutton"><a href="index.html">Home</a></li>
+	<li class="navbutton"><a href="documentation.html">Documentation</a></li>
+	<li class="navbutton"><a href="download.html">Download</a></li>
+	<li class="navbutton"><a href="license.html">License</a></li>
+</ul>
+
+<div class="content">
+	<h2>The Bond Language</h2>
+	<p>When Bond was created, the goal was not to invent yet another language; it was more of an endeavour to create a minimalistic runtime environment for a bytecode interpreted language. So, where possible, Bond borrowed its syntax and semantics from C. In the spirit of keeping things simple and clean, some notable differences exist between Bond and C.</p>
+
+	<h2>Notable Differences With C</h2>
+
+	<h4>No preprocessor</h4>
+	<p>There is no preprocessor, so there are no macros or other mechanisms to manipulate the source code before it is scanned by the compiler.</p>
+
+	<h4>No header files or forward declarations</h4>
+	<p>All code is placed in .bond files with no need for separate header files. Header files are not needed since type, function and constant declarations do not need to occur before they are referenced in source code; the compiler will resolve those references during semantic analysis after all files have been parsed. This important difference with C also means that structs do not need to be forward declared and functions do not need separate declarations and definitions.</p>
+
+	<h4>Include directives</h4>
+	<p>Despite the lack of header files, the Bond language supports include directives so that the compiler may be informed about where referenced code is defined so that it may be scanned and parsed prior to semantic analysis. In contrast to C's include directive, Bond's is a compiler directive, not a preprocessor directive. The text of the included file is not substituted in place into the including file. Instead, the referenced file is added to the list of files to be scanned by the compiler if it is not already in the list. If files are multiply or circularly included, the compiler will only scan the included file once. The syntax is as follows. Note that <span class="token">include</span> is a reserved keyword.</p>
+
+	<pre class="code">include &quot;file/to/include.bond&quot;;</pre>
+
+	<h4>Ambiguities in the grammar</h4>
+	<p>C's grammar is ambiguous and Bond inherited those ambiguities. Some statements in C can be parsed in more than one way, such as the following:</p>
+
+	<pre class="code">A * B;</pre>
+
+	<p>This line of code can be parsed as the declarative statement: <span class="token">B</span> is a pointer to type <span class="token">A</span>. Or it can be parsed as the expression statement: the value of variable <span class="token">A</span> times the value of variable <span class="token">B</span>. C compilers resolve the ambiguity using forward declarations and by giving the parser access to the symbol table so that it can look up whether <span class="token">A</span> is a type. This approach introduces a burden on the programmer to add forward declarations to the source code and pushes elements of semantic analysis (i.e. maintenance of the symbol table) into the parser.</p>
+
+	<p>Fortunately, such ambiguities result in statements with no effect when parsed as expression statements, so it is not necessary to support such statements. Bond's approach to resolving the ambiguity is to favour parsing statements as declarative statements whenever possible. If it turns out that <span class="token">A</span> is not a type, the semantic analyzer will raise an error to that effect during a later stage of compilation.</p>
+
+	<p>In hindsight, it may have been worth considering eliminating such ambiguities by modifying the syntax for declarative statements.</p>
+
+	<p>For clarity and to avoid other possible ambiguities, the syntax for casting and the sizeof operator were both slightly modified. The syntax for casting is:</p>
+
+	<pre class="code">cast&lt;type&gt;(expression)</pre>
+
+	<p>The sizeof operator comes in two forms: one for types and one for expressions:</p>
+
+	<pre class="code">sizeof&lt;type&gt;
+sizeof expression</pre>
+
+	<p>The expression in the second form can optionally be wrapped in parentheses as is the case in C.</p>
+
+	<br>
+</div> <!--content-->
+
+</div> <!--page-->
+</body>
+</html>
