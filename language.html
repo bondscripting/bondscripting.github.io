@@ -9,57 +9,191 @@
 <div class="page">
 
 <div class="header">
-	<img class="headlogo" src="img/bond_logo_90x124.png" alt="Bond Logo">
-	<p class="prodid">Bond</p>
+<img class="headlogo" src="img/bond_logo_90x124.png" alt="Bond Logo">
+<p class="prodid">Bond</p>
 </div>
 
 <ul class="navbar">
-	<li class="navbutton"><a href="index.html">Home</a></li>
-	<li class="navbutton"><a href="documentation.html">Documentation</a></li>
-	<li class="navbutton"><a href="download.html">Download</a></li>
-	<li class="navbutton"><a href="license.html">License</a></li>
+<li class="navbutton"><a href="index.html">Home</a></li>
+<li class="navbutton"><a href="documentation.html">Documentation</a></li>
+<li class="navbutton"><a href="download.html">Download</a></li>
+<li class="navbutton"><a href="license.html">License</a></li>
 </ul>
 
 <div class="content">
-	<h2>The Bond Language</h2>
-	<p>When Bond was created, the goal was not to invent yet another language; it was more of an endeavour to create a minimalistic runtime environment for a bytecode interpreted language. So, where possible, Bond borrowed its syntax and semantics from C. In the spirit of keeping things simple and clean, some notable differences exist between Bond and C.</p>
+<h2 id="language">The Bond Language</h2>
+<p>When Bond was created, the goal was not to invent yet another language; it was more of an endeavour to create a minimalistic runtime environment for a bytecode interpreted language. So, where possible, Bond borrowed its syntax and semantics from C. In the spirit of keeping things simple and clean, some notable differences exist between Bond and C.</p>
 
-	<h2>Notable Differences With C</h2>
+<h2 id="differences_with_c">Notable Differences With C</h2>
 
-	<h4>No preprocessor</h4>
-	<p>There is no preprocessor, so there are no macros or other mechanisms to manipulate the source code before it is scanned by the compiler.</p>
+<h4 id="diff_no_preprocessor">No preprocessor</h4>
+<p>There is no preprocessor, so there are no macros or other mechanisms to manipulate the source code before it is scanned by the compiler.</p>
 
-	<h4>No header files or forward declarations</h4>
-	<p>All code is placed in .bond files with no need for separate header files. Header files are not needed since type, function and constant declarations do not need to occur before they are referenced in source code; the compiler will resolve those references during semantic analysis after all files have been parsed. This important difference with C also means that structs do not need to be forward declared and functions do not need separate declarations and definitions.</p>
+<h4 id="diff_no_headers">No header files or forward declarations</h4>
+<p>All code is placed in .bond files with no need for separate header files. Header files are not needed since type, function and constant declarations do not need to occur before they are referenced in source code; the compiler will resolve those references during semantic analysis after all files have been parsed. This important difference with C also means that structs do not need to be forward declared and functions do not need separate declarations and definitions.</p>
 
-	<h4>Include directives</h4>
-	<p>Despite the lack of header files, the Bond language supports include directives so that the compiler may be informed about where referenced code is defined so that it may be scanned and parsed prior to semantic analysis. In contrast to C's include directive, Bond's is a compiler directive, not a preprocessor directive. The text of the included file is not substituted in place into the including file. Instead, the referenced file is added to the list of files to be scanned by the compiler if it is not already in the list. If files are multiply or circularly included, the compiler will only scan the included file once. The syntax is as follows. Note that <span class="token">include</span> is a reserved keyword.</p>
+<h4 id="diff_include">Include directives</h4>
+<p>Despite the lack of header files, the Bond language supports include directives so that the compiler may be informed about where referenced code is defined so that it may be scanned and parsed prior to semantic analysis. In contrast to C's include directive, Bond's is a compiler directive, not a preprocessor directive. The text of the included file is not substituted in place into the including file. Instead, the referenced file is added to the list of files to be scanned by the compiler if it is not already in the list. If files are multiply or circularly included, the compiler will only scan the included file once. The syntax is as follows. Note that <span class="token">include</span> is a reserved keyword.</p>
 
-	<pre class="code">include &quot;file/to/include.bond&quot;;</pre>
+<pre class="code">include &quot;file/to/include.bond&quot;;</pre>
 
-	<h4>Ambiguities in the grammar</h4>
-	<p>C's grammar is ambiguous and Bond inherited those ambiguities. Some statements in C can be parsed in more than one way, such as the following:</p>
+<h4 id="diff_ambiguities">Ambiguities in the grammar</h4>
+<p>C's grammar is ambiguous and Bond inherited those ambiguities. Some statements in C can be parsed in more than one way, such as the following:</p>
 
-	<pre class="code">A * B;</pre>
+<pre class="code">A * B;</pre>
 
-	<p>This line of code can be parsed as the declarative statement: <span class="token">B</span> is a pointer to type <span class="token">A</span>. Or it can be parsed as the expression statement: the value of variable <span class="token">A</span> times the value of variable <span class="token">B</span>. C compilers resolve the ambiguity using forward declarations and by giving the parser access to the symbol table so that it can look up whether <span class="token">A</span> is a type. This approach introduces a burden on the programmer to add forward declarations to the source code and pushes elements of semantic analysis (i.e. maintenance of the symbol table) into the parser.</p>
+<p>This line of code can be parsed as the declarative statement: <span class="token">B</span> is a pointer to type <span class="token">A</span>. Or it can be parsed as the expression statement: the value of variable <span class="token">A</span> times the value of variable <span class="token">B</span>. C compilers resolve the ambiguity using forward declarations and by giving the parser access to the symbol table so that it can look up whether <span class="token">A</span> is a type. This approach introduces a burden on the programmer to add forward declarations to the source code and pushes elements of semantic analysis (i.e. maintenance of the symbol table) into the parser.</p>
 
-	<p>Fortunately, such ambiguities result in statements with no effect when parsed as expression statements, so it is not necessary to support such statements. Bond's approach to resolving the ambiguity is to favour parsing statements as declarative statements whenever possible. If it turns out that <span class="token">A</span> is not a type, the semantic analyzer will raise an error to that effect during a later stage of compilation.</p>
+<p>Fortunately, such ambiguities result in statements with no effect when parsed as expression statements, so it is not necessary to support such statements. Bond's approach to resolving the ambiguity is to favour parsing statements as declarative statements whenever possible. If it turns out that <span class="token">A</span> is not a type, the semantic analyzer will raise an error to that effect during a later stage of compilation.</p>
 
-	<p>In hindsight, it may have been worth considering eliminating such ambiguities by modifying the syntax for declarative statements.</p>
+<p>In hindsight, it may have been worth considering eliminating such ambiguities by modifying the syntax for declarative statements.</p>
 
-	<p>For clarity and to avoid other possible ambiguities, the syntax for casting and the sizeof operator were both slightly modified. The syntax for casting is:</p>
+<p>For clarity and to avoid other possible ambiguities, the syntax for casting and the sizeof operator were both slightly modified. The syntax for casting is:</p>
 
-	<pre class="code">cast&lt;type&gt;(expression)</pre>
+<pre class="code">cast&lt;type&gt;(expression)</pre>
 
-	<p>The sizeof operator comes in two forms: one for types and one for expressions:</p>
+<p>The sizeof operator comes in two forms: one for types and one for expressions:</p>
 
-	<pre class="code">sizeof&lt;type&gt;
+<pre class="code">sizeof&lt;type&gt;
 sizeof expression</pre>
 
-	<p>The expression in the second form can optionally be wrapped in parentheses as is the case in C.</p>
+<p>The expression in the second form can optionally be wrapped in parentheses as is the case in C.</p>
 
-	<br>
+<h4 id="diff_type_declarations">Type declarations</h4>
+<p>To simplify reading and parsing type declarations, all elements pertaining to type declarations (e.g. type names, <span class="token">[]</span>, <span class="token">*</span>, <span class="token">const</span>) appear prior to variable names. The most obvious effect of this change is with array declarations, but there are some other subtleties as well.</p>
+
+<pre class="code">int[3][5] array; // C equivalent is: int array[3][5];
+int[3] a, b;     // Both a and b are of type int[3].
+int* a, b;       // Both a and b are of type int*. In C, a is int* and b is int.</pre>
+
+<h4 id="diff_primitive_names">Primitive type names</h4>
+<p>All primitive type names consist of a single reserved keyword. Where C has the type <span class="token">unsigned int</span>, Bond has <span class="token">uint</span>.</p>
+
+<h4 id="diff_fixed_width">Numeric types have a fixed width</h4>
+<p>The types <span class="token">char</span>, <span class="token">short</span>, <span class="token">int</span> and <span class="token">long</span> (as well as their unsigned counterparts) have 8, 16, 32, and 64 bits respectively. The types <span class="token">float</span> and <span class="token">double</span> have 32 and 64 bits respectively. See the section on <a href="#primitive_types">Primitive Types</a> for further details.</p>
+
+<h4 id="diff_no_function_pointers">No function pointers</h4>
+<p>Indeed, the Bond language makes no provisions for function pointers.</p>
+
+<h4 id="diff_no_variadic_functions">No variadic functions</h4>
+<p>Adding support for variadic functions involves work that has not been tackled. Bond may have variadic functions someday, but for the time being, that work is not planned.</p>
+
+<h4 id="diff_namespaces">Namespaces</h4>
+<p>Bond has namespaces that serve the same purpose as C++ namespaces, which is to prevent name collisions. All declarations of the Bond standard library are in the <span class="token">Bond</span> namespace.
+
+<pre class="code">Namespace Foo
+{
+	const int BAR = 42;
+}
+
+// Identifiers within namespaces are qualified with ::
+const int BAZ = Foo::BAR;</pre>
+
+<p>See the section on <a href="#namespaces">Namespaces</a> for further details.</p>
+
+<h4 id="diff_member_functions">Structs can have member functions</h4>
+<p>Another aspect borrowed from C++ is struct member functions. See the section on <a href="#struct_types">Structure Types</a> for further details.</p>
+
+<h4 id="diff_no_globals">No global or static variables</h4>
+<p>Global constants are permitted, however, global variables are not. (TODO: see the documentation on the Virtual Machine Architecture for the justification.)</p>
+
+<pre class="code">const int[2][3] GLOBAL_CONSTANT = {{1, 2, 3}, {4, 5, 6}}; // Permitted
+int[2][3] GLOBAL_VARIABLE = {{1, 2, 3}, {4, 5, 6}};       // Error</pre>
+
+<p>There are also no static variables, so all local variables have a lifetime that does not surpass that of the scope in which they are declared.</p>
+
+<h4 id="diff_native_blocks">Native blocks</h4>
+<p>Declarations for functions and structs implemented in C++ can be placed in native blocks, allowing those functions to be called and those types to be manipulated from Bond code with full type checking and semantic analysis.See the section on <a href="#native_blocks">Native Blocks</a> for further details.</p>
+
+<h2 id="language_ref">Language Reference</h2>
+<h3 id="elements">Elements of the Language</h3>
+<h4 id="identifiers">Identifiers</h4>
+<p>Identifiers are names for symbols such as variables, functions and types defined in code. Identifiers consist of any sequence of letters, digits and underscores ('_'), with the exception that the first character cannot be a digit. Also, keywords are reserved and cannot be used as identifiers. Identifiers are case sensitive.</p>
+
+<h4 id="keywords">Keywords</h4>
+<p>Keywords are reserved by the language and have special meaning for the compiler. The following is a list of all Bond keywords.</p>
+
+<div class="code"><p>bool break case cast char const continue default do double else enum false float for if include int long namespace native null return short sizeof struct switch this true uchar uint ulong ushort void while</p></div>
+
+<h4 id="literal_constants">Literal Constants</h4>
+Literal constants represent immutable values in source code. They can be booleans, numbers, characters, strings of characters or the null pointer.
+
+<h5 id="bool_constants">Boolean Constants</h5>
+<p>The type bool has two values represented by the keywords <span class="token">true</span> and <span class="token">false</span>.</p>
+
+<h5 id="integer_constants">Integer Constants</h5>
+<p>Integer constants represent integral values. They can be expressed in decimal (base 10), octal (base 8) or hexadecimal (base 16).</p>
+
+<p>Hexadecimal integers consist of <span class="token">0x</span> and a sequence of hexadecimal digits which are the digits <span class="token">0</span> through <span class="token">9</span> and the letters <span class="token">a</span> through <span class="token">f</span> and <span class="token">A</span> through <span class="token">F</span>. For example, <span class="token">0x2f</span> represents decimal value 47.</p>
+
+<p>Octal integers consist of <span class="token">0</span> and a sequence of octal digits which are the digits <span class="token">0</span> through <span class="token">7</span>. For example, <span class="token">063</span> represents the decimal value 51.</p>
+
+<p>Decimal integers consist a sequence of the digits <span class="token">0</span> through <span class="token">9</span> and cannot begin with a <span class="token">0</span>.</p>
+
+<p>An optional suffix <span class="token">u</span> or <span class="token">U</span> can be appended to force the value to be of type <span class="token">uint</span> and an optional suffix <span class="token">l</span> or <span class="token">L</span> can be appended to force the value to be of type <span class="token">long</span>. The two can be combined to create values of type <span class="token">ulong</span>. For example, <span class="token">27u</span> is of type <span class="token">uint</span> and <span class="token">27ul</span> is of type <span class="token">ulong</span>.</p>
+
+<h5 id="floating_point_constants">Floating-Point Constants</h5>
+<p>Floating-point constants represent an approximation of real numbers. They are composed of an integral part, a decimal point, a fractional part and an exponent part. The integral part or the fractional part may be omitted, but not both and the exponent may always be omitted. The integral and fractional parts consist of a sequence of digits, while the exponent consists of <span class="token">e</span> or <span class="token">E</span> followed by an optional sign and a sequence of digits.</p>
+
+<p>An optional suffix <span class="token">f</span> or <span class="token">F</span> can be appended to force the value to be of type <span class="token">float</span>, otherwise the value will be of type <span class="token">double</span>.</p>
+
+<p>The following are examples of valid floating-point constants.</p>
+<pre class="code">3.          // Decimal part only. Without a '.' the value would be of type int.
+.5          // Fractional part only.
+3.14159     // Both decimal and fractional parts.
+314159e-5   // Same as above expressed with an exponent.
+3.14159f    // This value is of type float.</pre>
+
+<h5 id="character_constants">Character Constants</h5>
+<p>Character constants represent values of type char and are typically expressed as a single character between single quotes. For example, <span class="token">'a'</span> represents the letter a.</p>
+
+<p>Some values cannot be expressed with a single character and are expressed as an escape sequence between single quotes. Escape sequences begin with a backslash and are depicted in the table below.</p>
+
+<h5 id="string_literals">String Literals</h5>
+<p>String literals represent a sequence of characters of type <span class="token">const char[]</span>. They consist of a sequence of character constants enclosed in double quotes and are implicitly terminated with a null character (<span class="token">\0</span>).</p>
+
+<h5 id="null_pointer">Null Pointer</h5>
+<p>The null pointer, a pointer that points to nothing, is represented by the keyword <span class="token">null</span>. The null pointer does not have a specific type (e.g. <span class="token">void *</span>, <span class="token">char *</span>) and it can be assigned to or compared with any pointer type without a cast.</p>
+
+<h4 id="punctuation">Operators and Punctuation</h4>
+<div class="code"><p>+ - * / % ++ -- < <= > >= << >> == != ! && || & | ^ ~ ? -> = <<= >>= += -= *= /= %= &= |= ^= ( ) { } [ ] . ; : :: ,</p></div>
+
+<h3 id="data_types">Data Types</h3>
+<p>Bond is a statically typed language, so every variable and expression has a type known at compile time.</p>
+
+<p>Bond is also intended to be a strongly typed language, however, at the moment it is rather weakly typed. The compiler allows the conversion of any numerical type to any other numerical type without an explicit cast, either through assignment or the usual arithmetic conversions, even if it could result in a loss of data. The compiler also allows the conversion of any pointer type to any other pointer type without an explicit cast. These loopholes in the type checking system are expected to be closed in the future.</p>
+
+<h4 id="primitive_types">Primitive Types</h4>
+<p>Primitive types are predefined in the language and are named by their reserved keyword.</p>
+
+<h5 id="boolean_type">Boolean Type</h5>
+<p>There is one type to represent Boolean values named <span class="token">bool</span>. It has two values: <span class="token">true</span> and <span class="token">false</span>.</p>
+
+<h5 id="integer_types">Integer Types</h5>
+
+<h5 id="floating_point_constants">Floating-Point Constants</h5>
+
+<h4 id="enum_types">Enumerated Types</h4>
+
+<h4 id="array_types">Array Types</h4>
+
+<h4 id="struct_types">Structure Types</h4>
+
+<h4 id="pointer_types">Pointer Types</h4>
+
+<h3 id="expressions">Expressions and Operators</h3>
+
+<h3 id="statements">Statements</h3>
+
+<h3 id="functions">Functions</h3>
+
+<h3 id="namespaces">Namespaces</h3>
+
+<h3 id="native_blocks">Native Blocks</h3>
+
+<h3 id="program_structure">Program Structure</h3>
+
+<br>
 </div> <!--content-->
 
 </div> <!--page-->
