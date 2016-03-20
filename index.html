@@ -9,39 +9,41 @@
 <div class="page">
 
 <div class="header">
-	<img class="headlogo" src="img/bond_logo_90x124.png" alt="Bond Logo">
-	<p class="prodid">Bond</p>
+<img class="headlogo" src="img/bond_logo_90x124.png" alt="Bond Logo">
+<p class="prodid">Bond</p>
 </div>
 
 <ul class="navbar">
-	<li class="navbutton"><a href="index.html">Home</a></li>
-	<li class="navbutton"><a href="documentation.html">Documentation</a></li>
-	<li class="navbutton"><a href="download.html">Download</a></li>
-	<li class="navbutton"><a href="license.html">License</a></li>
+<li class="navbutton"><a href="index.html">Home</a></li>
+<li class="navbutton"><a href="documentation.html">Documentation</a></li>
+<li class="navbutton"><a href="download.html">Download</a></li>
+<li class="navbutton"><a href="license.html">License</a></li>
 </ul>
 
 <div class="content">
-	<h2>What is Bond?</h2>
-	<p>Bond is a lightweight bytecode interpreted embeddable scripting language implemented in C++. The language has a familiar procedural syntax, and the runtime aims to have a simple and lean architecture.</p>
+<h2>What is Bond?</h2>
+<p>Bond is a lightweight bytecode interpreted embeddable scripting language implemented in C++. The language has a familiar procedural syntax, and the runtime aims to have a simple and lean architecture.</p>
 
-	<h2>Key Features</h2>
-	<h4>Fully implemented in standard C++</h4>
-	<p>Bond does not have any dependencies on external libraries or technologies, which makes it portable to any platform with a modern C++ compiler.</p>
+<h2>Key Features</h2>
+<h4>Fully implemented in standard C++</h4>
+<p>Bond does not have any dependencies on external libraries or technologies, which makes it portable to any platform with a modern C++ compiler.</p>
 
-	<h4>Familiar syntax, semantics and scoping rules</h4>
-	<p>Bond is a procedural language that borrows most of its syntax, semantics and scoping rules from other programming languages. In fact, it is very similar to C in many respects. Its static typing system is also an invaluable tool that enables syntax and semantic errors to be caught at compile time.</p>
+<h4>Familiar syntax, semantics and scoping rules</h4>
+<p>Bond is a procedural language that borrows most of its syntax, semantics and scoping rules from other programming languages. In fact, it is very similar to C in many respects. Its static typing system is also an invaluable tool that enables syntax and semantic errors to be caught at compile time.</p>
 
-	<h4>Low overhead</h4>
-	<p>The Bond Virtual Machine strives to be as minimal and simple as possible in order to incur as few costs as possible. It has a small memory footprint and its explicit memory management implies that there are no surprise memory allocations at runtime and there is no performance cost for automatic garbage collection. Symbols in Bond source code are resolved at compile or load time, so they do not incur any runtime symbol table look-ups. Compiled bytecode can even be shared between multiple independent virtual machines.</p>
+<h4>Low overhead</h4>
+<p>The Bond Virtual Machine strives to be as minimal and simple as possible in order to incur as few costs as possible. It has a small memory footprint and its explicit memory management implies that there are no surprise memory allocations at runtime and there is no performance cost for automatic garbage collection. Symbols in Bond source code are resolved at compile or load time, so they do not incur any runtime symbol table look-ups. Compiled bytecode can even be shared between multiple independent virtual machines.</p>
 
-	<h4>Easy to embed</h4>
-	<p>All of Bond&#39;s functionality is encapsulated in a library that does not depend on any global variables. It is worth noting that the command line tools are written as thin layers around this library in the same way that developers would embed Bond into their own applications.</p>
+<h4>Easy to embed</h4>
+<p>All of Bond&#39;s functionality is encapsulated in a library that does not depend on any global variables. It is worth noting that the command line tools are written as thin layers around this library in the same way that developers would embed Bond into their own applications.</p>
 
-	<h4>Modular design</h4>
-	<p>Bond&#39;s modular design makes it easy to replace components, such as memory allocators and output streams, to adapt it to an application&#39;s needs. It is also possible to reuse components, such as the lexer and parser, to build new tools to manipulate Bond source code.</p>
+<h4>Modular design</h4>
+<p>Bond&#39;s modular design makes it easy to replace components, such as memory allocators and output streams, to adapt it to an application&#39;s needs. It is also possible to reuse components, such as the lexer and parser, to build new tools to manipulate Bond source code.</p>
 
-	<h4>Extendable with native code</h4>
-	<p>Bond scripts can call native functions implemented in C++ and can also manipulate C++ object instances without requiring them to be wrapped in proxy objects.</p>
+<h4>Extendable with native code</h4>
+<p>Bond scripts can call native functions implemented in C++ and can also manipulate C++ object instances without requiring them to be wrapped in proxy objects.</p>
+
+<br>
 </div> <!--content-->
 
 </div> <!--page-->
