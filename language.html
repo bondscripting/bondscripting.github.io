@@ -22,7 +22,50 @@
 
 <div class="content">
 <h2 id="language">The Bond Language</h2>
-<p>When Bond was created, the goal was not to invent yet another language; it was more of an endeavour to create a minimalistic runtime environment for a bytecode interpreted language. So, where possible, Bond borrowed its syntax and semantics from C. In the spirit of keeping things simple and clean, some notable differences exist between Bond and C.</p>
+<p>When Bond was created, the goal was not to invent yet another language; it was more of an endeavour to create a minimalistic runtime environment for a bytecode interpreted language. So, where possible, Bond borrowed its syntax and semantics from C. This document begins by covering some notable differences that exist between Bond and C that exist in the spirit of keeping things clean and simple. Then the document moves on to cover the Bond language in detail.</p>
+
+<ul class="toc">
+<li class="toc_h2"><a href="#differences_with_c">Notable Differences With C</a></li>
+<li class="toc_h3"><a href="#diff_no_preprocessor">No preprocessor</a></li>
+<li class="toc_h3"><a href="#diff_no_headers">No header files or forward declarations</a></li>
+<li class="toc_h3"><a href="#diff_include">Include directives</a></li>
+<li class="toc_h3"><a href="#diff_ambiguities">Ambiguities in the grammar</a></li>
+<li class="toc_h3"><a href="#diff_type_declarations">Type declarations</a></li>
+<li class="toc_h3"><a href="#diff_primitive_names">Primitive type names</a></li>
+<li class="toc_h3"><a href="#diff_fixed_width">Numeric types have a fixed width</a></li>
+<li class="toc_h3"><a href="#diff_no_function_pointers">No function pointers</a></li>
+<li class="toc_h3"><a href="#diff_no_variadic_functions">No variadic functions</a></li>
+<li class="toc_h3"><a href="#diff_namespaces">Namespaces</a></li>
+<li class="toc_h3"><a href="#diff_member_functions">Structs can have member functions</a></li>
+<li class="toc_h3"><a href="#diff_no_globals">No global or static variables</a></li>
+<li class="toc_h3"><a href="#diff_native_blocks">Native blocks</a></li>
+<li class="toc_h2"><a href="#language_ref">Language Reference</a></li>
+<li class="toc_h3"><a href="#elements">Basics of Bond</a></li>
+<li class="toc_h4"><a href="#None">Structure of a Program</a></li>
+<li class="toc_h4"><a href="#identifiers">Identifiers</a></li>
+<li class="toc_h4"><a href="#keywords">Keywords</a></li>
+<li class="toc_h4"><a href="#primitive_types">Primitive Types</a></li>
+<li class="toc_h5"><a href="#boolean_type">Boolean Type</a></li>
+<li class="toc_h5"><a href="#integer_types">Integer Types</a></li>
+<li class="toc_h5"><a href="#floating_point_types">Floating-Point Types</a></li>
+<li class="toc_h4"><a href="#literal_constants">Literal Constants</a></li>
+<li class="toc_h5"><a href="#bool_constants">Boolean Constants</a></li>
+<li class="toc_h5"><a href="#integer_constants">Integer Constants</a></li>
+<li class="toc_h5"><a href="#floating_point_constants">Floating-Point Constants</a></li>
+<li class="toc_h5"><a href="#character_constants">Character Constants</a></li>
+<li class="toc_h5"><a href="#string_literals">String Literals</a></li>
+<li class="toc_h4"><a href="#variables">Variables</a></li>
+<li class="toc_h4"><a href="#punctuation">Operators</a></li>
+<li class="toc_h3"><a href="#statements">Statements</a></li>
+<li class="toc_h3"><a href="#functions">Functions</a></li>
+<li class="toc_h3"><a href="#data_types">Data Types</a></li>
+<li class="toc_h4"><a href="#enum_types">Enumerated Types</a></li>
+<li class="toc_h4"><a href="#array_types">Array Types</a></li>
+<li class="toc_h4"><a href="#struct_types">Structure Types</a></li>
+<li class="toc_h4"><a href="#pointer_types">Pointer Types</a></li>
+<li class="toc_h3"><a href="#namespaces">Namespaces</a></li>
+<li class="toc_h3"><a href="#native_blocks">Native Blocks</a></li>
+</ul>
 
 <h2 id="differences_with_c">Notable Differences With C</h2>
 
@@ -83,7 +126,7 @@ int* a, b;       // Both a and b are of type int*. In C, a is int* and b is int.
 
 <pre class="code">Namespace Foo
 {
-	const int BAR = 42;
+    const int BAR = 42;
 }
 
 // Identifiers within namespaces are qualified with ::
@@ -106,7 +149,67 @@ int[2][3] GLOBAL_VARIABLE = {{1, 2, 3}, {4, 5, 6}};       // Error</pre>
 <p>Declarations for functions and structs implemented in C++ can be placed in native blocks, allowing those functions to be called and those types to be manipulated from Bond code with full type checking and semantic analysis.See the section on <a href="#native_blocks">Native Blocks</a> for further details.</p>
 
 <h2 id="language_ref">Language Reference</h2>
-<h3 id="elements">Elements of the Language</h3>
+<h3 id="elements">Basics of Bond</h3>
+
+<h4>Structure of a Program</h4>
+<p>For a quick overview of several of the fundamental concepts of Bond, let us take a quick look at the ubiquitous Hello World program. The source code for it follows.</p>
+
+<pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8</pre>
+<pre class="code">// This is a Hello World program written in Bond.
+include &quot;io.bond&quot;;
+
+int main()
+{
+    Bond::StdOut()-&gt;PrintStr(&quot;Hello World!&quot;);
+    return 0;
+}</pre>
+
+<p>When this program runs, it prints the following output to the screen.</p>
+
+<pre class="code">Hello World!</pre>
+
+<p>Here is a line-by-line breakdown of the program.</p>
+
+<dl>
+<dt>Line 1: <span class="token">// This is a Hello World program written in Bond.</span></dt>
+<dd>Two consecutive forward slashes indicate the beginning of  a comment. Comments are useful for documenting code, but do not influence the program. They are ignored by the compiler.</dd>
+
+<dt>Line 2: <span class="token">include &quot;io.bond&quot;;</span></dt>
+<dd>An include directive tells the compiler that the programmer wishes to reference code written in another file. In this case, the referenced file is <span class="token">io.bond</span>. The file <span class="token">io.bond</span> is part of the Standard Bond Library and defines input and output operations.</dd>
+</dl>
+
+<dt>Line 3: A blank line.</dt>
+<dd>Blank lines have no effect on the program, but do help to organize code and improve readability.</dd>
+
+<dt>Line 4: <span class="token">int main()</span></dt>
+<dd>This line begins the declaration of a function whose name is <span class="token">main</span>. A function encapsulates the code that performs a specific task or operation. Functions are covered in greater detail in the <a href="#primitive_types">Functions</a> section later.
+
+<p>A function declaration specifies a return type (i.e. what kind of result the function produces; in this case <span class="token">int</span>), a name (<span class="token">main</span>), and a parameter list enclosed in parentheses (i.e. the operands of the operation performed by the function). This example does not require any parameters.</p>
+
+<p>The <span class="token">main</span> function is a special function for standalone Bond programs. It is the entry point of the program (i.e. where execution of the program begins). When Bond is embedded in a larger application written in C++, any function may be an entry point.</p>
+</dd>
+
+<dt>Lines 5 and 8: <span class="token">{</span> and <span class="token">}</span></dt>
+<dd>A function has an opening brace and a closing brace to enclose its body, the code that performs the function's task.</dd>
+
+<dt>Line 6: <span class="token">Bond::StdOut()-&gt;PrintStr(&quot;Hello World!&quot;);</span></dt>
+<dd>This line of code is a statement. Statements perform actions. This particular line of code is quite loaded, since it calls two functions.
+
+<p>The first function is called <span class="token">Bond::StdOut</span> and it is defined in <span class="token">io.bond</span>, which was included on line 2. The function is actually just called <span class="token">StdOut</span> and it is defined in the namespace called <span class="token">Bond</span>. We will see more about namespaces in the <a href="#namespaces">Namespaces</a> section. The pair of parentheses that follow indicate that we are calling the function. The function returns an <span class="token">OutputStream</span>, which allows the program to print some output.</p>
+
+<p>The second function is called <span class="token">PrintStr</span>. The <span class="token">-></span> symbol indicates that the function belongs to the <span class="token">OutputStream</span> returned by the first function. Again the pair of parentheses indicate that we are calling the function. However, this time the parentheses enclose the string <span class="token">&quot;Hello World!&quot;</span>. That string is given to the <span class="token">PrintStr</span> function so that the function may print it to the screen.</p>
+</dd>
+
+<dt>Line 7: <span class="token">return 0;</span></dt>
+<dd>This line of code is a statement that specifies what value is returned by the main function. As we saw on line 4, the main function returns an <span class="token">int</span>. In Bond, as with other programming languages, such as C and C++, the return value of the <span class="token">main</span> function indicates the exit status of the program. By convention a return value of 0 indicates that the program terminated normally, whereas any other value indicates an application specific error code.</dd>
+
 <h4 id="identifiers">Identifiers</h4>
 <p>Identifiers are names for symbols such as variables, functions and types defined in code. Identifiers consist of any sequence of letters, digits and underscores ('_'), with the exception that the first character cannot be a digit. Also, keywords are reserved and cannot be used as identifiers. Identifiers are case sensitive.</p>
 
@@ -115,6 +218,84 @@ int[2][3] GLOBAL_VARIABLE = {{1, 2, 3}, {4, 5, 6}};       // Error</pre>
 
 <div class="code"><p>bool break case cast char const continue default do double else enum false float for if include int long namespace native null return short sizeof struct switch this true uchar uint ulong ushort void while</p></div>
 
+<h4 id="primitive_types">Primitive Types</h4>
+<p>Bond is a statically typed language, so every variable and expression has a type known at compile time. The type of a value describes how much space it occupies in memory, how that memory is interpreted and what operations and range of values are valid. At the core of the type system are the primitive types. Primitive types are predefined in the language and are named by their reserved keyword. The type system is actually much more vast and the remaining types are covered in the <a href="#data_types">Data Types</a> section.</p>
+
+<h5 id="boolean_type">Boolean Type</h5>
+<p>There is one type to represent Boolean values named <span class="token">bool</span>. It has two values: <span class="token">true</span> and <span class="token">false</span>. The bool type is implemented in the Bond Runtime Library using the C++ <span class="token">uint8_t</span> type.</p>
+
+<h5 id="integer_types">Integer Types</h5>
+<p>The integer data types are used for storing values which are whole numbers. There are several types that vary in size and range of values that they can represent. Note that the <span class="token">char</span> and <span class="token">uchar</span> types are used to store characters.</p>
+
+<p>The following table provides the details for all of the integer types, including the underlying C++ types used to implement them in the Bond Runtime Library.</p>
+
+<table>
+<tr>
+<th>Type</th>
+<th>C++ Type</th>
+<th>Storage Size</th>
+<th>Value Range</th>
+</tr>
+
+<tr>
+<td><span class="token">char</span></td>
+<td><span class="token">int8_t</span></td>
+<td>8 bits</td>
+<td>-128 to 127</td>
+</tr>
+
+<tr>
+<td><span class="token">uchar</span></td>
+<td><span class="token">uint8_t</span></td>
+<td>8 bits</td>
+<td>0 to 256</td>
+</tr>
+
+<tr>
+<td><span class="token">short</span></td>
+<td><span class="token">int16_t</span></td>
+<td>16 bits</td>
+<td>-32,768 to 32,767</td>
+</tr>
+
+<tr>
+<td><span class="token">ushort</span></td>
+<td><span class="token">uint16_t</span></td>
+<td>16 bits</td>
+<td>0 to 65,535</td>
+</tr>
+
+<tr>
+<td><span class="token">int</span></td>
+<td><span class="token">int32_t</span></td>
+<td>32 bits</td>
+<td>-2,147,483,648 to 2,147,483,647</td>
+</tr>
+
+<tr>
+<td><span class="token">uint</span></td>
+<td><span class="token">uint32_t</span></td>
+<td>32 bits</td>
+<td>0 to 4,294,967,295</td>
+
+<tr>
+<td><span class="token">long</span></td>
+<td><span class="token">int64_t</span></td>
+<td>64 bits</td>
+<td>-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807</td>
+</tr>
+
+<tr>
+<td><span class="token">ulong</span></td>
+<td><span class="token">uint64_t</span></td>
+<td>64 bits</td>
+<td>0 to 18,446,744,073,709,551,615</td>
+</tr>
+</table>
+
+<h5 id="floating_point_types">Floating-Point Types</h5>
+<p>Bond supports two floating-point types which are used for storing values that approximate real numbers: <span class="token">float</span> and <span class="token">double</span>. These two types are implemented in the Bond Runtime Library using the C++ <span class="token">float</span> and <span class="token">double</span> types, which are assumed to conform to the IEEE 754 <a href="https://en.wikipedia.org/wiki/Single-precision_floating-point_format">binary32</a> and <a href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format">binary64</a> formats respectively.</p>
+
 <h4 id="literal_constants">Literal Constants</h4>
 Literal constants represent immutable values in source code. They can be booleans, numbers, characters, strings of characters or the null pointer.
 
@@ -122,7 +303,7 @@ Literal constants represent immutable values in source code. They can be boolean
 <p>The type bool has two values represented by the keywords <span class="token">true</span> and <span class="token">false</span>.</p>
 
 <h5 id="integer_constants">Integer Constants</h5>
-<p>Integer constants represent integral values. They can be expressed in decimal (base 10), octal (base 8) or hexadecimal (base 16).</p>
+<p>Integer constants represent integral values (i.e. whole numbers). They can be expressed in decimal (base 10), octal (base 8) or hexadecimal (base 16).</p>
 
 <p>Hexadecimal integers consist of <span class="token">0x</span> and a sequence of hexadecimal digits which are the digits <span class="token">0</span> through <span class="token">9</span> and the letters <span class="token">a</span> through <span class="token">f</span> and <span class="token">A</span> through <span class="token">F</span>. For example, <span class="token">0x2f</span> represents decimal value 47.</p>
 
@@ -138,7 +319,7 @@ Literal constants represent immutable values in source code. They can be boolean
 <p>An optional suffix <span class="token">f</span> or <span class="token">F</span> can be appended to force the value to be of type <span class="token">float</span>, otherwise the value will be of type <span class="token">double</span>.</p>
 
 <p>The following are examples of valid floating-point constants.</p>
-<pre class="code">3.          // Decimal part only. Without a '.' the value would be of type int.
+<pre class="code">3.          // Decimal part only. Without a '.' the value would be an int.
 .5          // Fractional part only.
 3.14159     // Both decimal and fractional parts.
 314159e-5   // Same as above expressed with an exponent.
@@ -152,26 +333,83 @@ Literal constants represent immutable values in source code. They can be boolean
 <h5 id="string_literals">String Literals</h5>
 <p>String literals represent a sequence of characters of type <span class="token">const char[]</span>. They consist of a sequence of character constants enclosed in double quotes and are implicitly terminated with a null character (<span class="token">\0</span>).</p>
 
+<!--
 <h5 id="null_pointer">Null Pointer</h5>
-<p>The null pointer, a pointer that points to nothing, is represented by the keyword <span class="token">null</span>. The null pointer does not have a specific type (e.g. <span class="token">void *</span>, <span class="token">char *</span>) and it can be assigned to or compared with any pointer type without a cast.</p>
+<p>The null pointer, a pointer that points to nothing, is represented by the keyword <span class="token">null</span>. The null pointer does not have a specific type (e.g. <span class="token">void *</span>, <span class="token">char *</span>) and it can be assigned to or compared with any pointer type without a cast.</p> -->
 
-<h4 id="punctuation">Operators and Punctuation</h4>
+<h4 id="variables">Variables</h4>
+<p>A variable is a named storage area for a value of a particular type. A variable can be used to store the result of a computation, and recalling it later. The syntax to declare a variable is a type name followed by a name (an identifier). The following snippet shows the declaration of a variable named <span class="token">x</span> that stores an <span class="token">int</span>.</p>
+
+<pre class="code">int x;</pre>
+
+<p>Several variables of the same type can be declared at once by using a comma separated list of names.</p>
+
+<pre class="code">int x, y, z;</pre>
+
+<p>However, it is often easier to read and understand code that uses separate declarations.</p>
+
+<pre class="code">int x;
+int y;
+int z;</pre>
+
+<p>A variable can be initialized when it is declared by following its name with an equal sign and an expression that produces the value that is assigned to the variable.</p>
+
+<pre class="code">int x = 7;</pre>
+
+<p>The value of a variable can be accessed by placing its name in an expression.</p>
+
+<pre class="code">int x = 6;
+int y = 8;
+
+// Add the value of variables x and y.
+int sum = x + y;</pre>
+
+<p>A variable can be assigned a new value over the course of a program's execution by placing it on the left hand side of an equal sign.</p>
+
+<pre class="code">// Initialize x to 0.
+int x = 0;
+
+// Add 1 to the current value of x and assign the result to x.
+x = x + 1;
+
+// The value of x is now 1.</pre>
+
+<p>A variable declared with the keyword <span class="token">const</span> cannot have its value changed after it has been initialized.</p>
+
+<pre class="code">const double PI = 3.14159;
+PI = 4; // Error. Cannot assign a value to a const variable.</pre>
+
+<p>There are at least two benefits to using constant variables. The first is that it enables the compiler to perform optimizations. If a constant variable is initialized with a constant expression that can be evaluated at compile time, writing and reading the variable's value to and from memory becomes a superfluous activity. The compiler can instead substitute the variable's value, which it already knows, directly into the generated code wherever that variable is referenced.</p>
+
+<p>The second benefit to constant variables is that they improve the readability of code. Even if the value of a constant variable is not known at compile time, it provides the reader with a guarantee that there is no code that alters the value of the variable after it has been initialized.</p>
+
+<pre class="code">const int result = CalculateResult();
+
+// Skip many lines of complicated code.
+
+// Without understanding all of the above code, we are certain
+// that the value of result has been determined on the first line.
+int resultPlusOne = result + 1;</pre>
+
+
+
+
+
+
+
+
+
+<h4 id="punctuation">Operators</h4>
 <div class="code"><p>+ - * / % ++ -- < <= > >= << >> == != ! && || & | ^ ~ ? -> = <<= >>= += -= *= /= %= &= |= ^= ( ) { } [ ] . ; : :: ,</p></div>
+
+<h3 id="statements">Statements</h3>
+
+<h3 id="functions">Functions</h3>
 
 <h3 id="data_types">Data Types</h3>
 <p>Bond is a statically typed language, so every variable and expression has a type known at compile time.</p>
 
 <p>Bond is also intended to be a strongly typed language, however, at the moment it is rather weakly typed. The compiler allows the conversion of any numerical type to any other numerical type without an explicit cast, either through assignment or the usual arithmetic conversions, even if it could result in a loss of data. The compiler also allows the conversion of any pointer type to any other pointer type without an explicit cast. These loopholes in the type checking system are expected to be closed in the future.</p>
-
-<h4 id="primitive_types">Primitive Types</h4>
-<p>Primitive types are predefined in the language and are named by their reserved keyword.</p>
-
-<h5 id="boolean_type">Boolean Type</h5>
-<p>There is one type to represent Boolean values named <span class="token">bool</span>. It has two values: <span class="token">true</span> and <span class="token">false</span>.</p>
-
-<h5 id="integer_types">Integer Types</h5>
-
-<h5 id="floating_point_constants">Floating-Point Constants</h5>
 
 <h4 id="enum_types">Enumerated Types</h4>
 
@@ -181,17 +419,9 @@ Literal constants represent immutable values in source code. They can be boolean
 
 <h4 id="pointer_types">Pointer Types</h4>
 
-<h3 id="expressions">Expressions and Operators</h3>
-
-<h3 id="statements">Statements</h3>
-
-<h3 id="functions">Functions</h3>
-
 <h3 id="namespaces">Namespaces</h3>
 
 <h3 id="native_blocks">Native Blocks</h3>
-
-<h3 id="program_structure">Program Structure</h3>
 
 <br>
 </div> <!--content-->
