@@ -21,6 +21,7 @@
 </ul>
 
 <div class="content">
+
 <h2 id="language">The Bond Language</h2>
 <p>When Bond was created, the goal was not to invent yet another language; it was more of an endeavour to create a minimalistic runtime environment for a bytecode interpreted language. So, where possible, Bond borrowed its syntax and semantics from C. This document begins by covering some notable differences that exist between Bond and C that exist in the spirit of keeping things clean and simple. Then the document moves on to cover the Bond language in detail.</p>
 
@@ -222,7 +223,7 @@ int main()
 <p>Bond is a statically typed language, so every variable and expression has a type known at compile time. The type of a value describes how much space it occupies in memory, how that memory is interpreted and what operations and range of values are valid. At the core of the type system are the primitive types. Primitive types are predefined in the language and are named by their reserved keyword. The type system is actually much more vast and the remaining types are covered in the <a href="#data_types">Data Types</a> section.</p>
 
 <h5 id="boolean_type">Boolean Type</h5>
-<p>There is one type to represent Boolean values named <span class="token">bool</span>. It has two values: <span class="token">true</span> and <span class="token">false</span>. The bool type is implemented in the Bond Runtime Library using the C++ <span class="token">uint8_t</span> type.</p>
+<p>There is one type to represent Boolean values named <span class="token">bool</span>. It has two values: <span class="token">true</span> and <span class="token">false</span>. The <span class="token">bool</span> type is implemented in the Bond Runtime Library using the C++ <span class="token">uint8_t</span> type.</p>
 
 <h5 id="integer_types">Integer Types</h5>
 <p>The integer data types are used for storing values which are whole numbers. There are several types that vary in size and range of values that they can represent. Note that the <span class="token">char</span> and <span class="token">uchar</span> types are used to store characters.</p>
@@ -391,14 +392,6 @@ PI = 4; // Error. Cannot assign a value to a const variable.</pre>
 // that the value of result has been determined on the first line.
 int resultPlusOne = result + 1;</pre>
 
-
-
-
-
-
-
-
-
 <h4 id="punctuation">Operators</h4>
 <div class="code"><p>+ - * / % ++ -- < <= > >= << >> == != ! && || & | ^ ~ ? -> = <<= >>= += -= *= /= %= &= |= ^= ( ) { } [ ] . ; : :: ,</p></div>
 
@@ -411,7 +404,26 @@ int resultPlusOne = result + 1;</pre>
 
 <p>Bond is also intended to be a strongly typed language, however, at the moment it is rather weakly typed. The compiler allows the conversion of any numerical type to any other numerical type without an explicit cast, either through assignment or the usual arithmetic conversions, even if it could result in a loss of data. The compiler also allows the conversion of any pointer type to any other pointer type without an explicit cast. These loopholes in the type checking system are expected to be closed in the future.</p>
 
+<p>We have already seen the primitive types for storing simple values, however, Bond's type system supports several others.</p>
+
 <h4 id="enum_types">Enumerated Types</h4>
+<p>An enumeration is a set of named integer constants. Values of an enumeration are represented using the type <span class="token">int</span>, and behave as the <span class="token">int</span> type in every respect (e.g. array indexing, arithmetic operations, relational operations, etc.).</p>
+
+<p>An enumeration is declared using the <span class="token">enum</span >keyword, followed by an identifier to name the type, an open brace, an enumerator list, a closing brace and a semicolon.</p>
+
+<pre class="code">enum AnimalSounds
+{
+    Moo,        // Value is 0 since this is the first enumerator.
+    Oink,       // Value is 1 since Moo + 1 = 1.
+    Baa = 42,   // Value is explicitly specified as 42.
+    Quack,      // Value is 43 since Bah + 1 = 43.
+    Meow = -1,  // Values can be negative.
+    Woof        // Values can be duplicated. This one is also 0.
+};</pre>
+
+<p>The enumerator list consists of a comma separated list of enumerators. A comma following the last enumerator is allowed, but not required.</p>
+
+<p>An enumerator can be a single identifier. In that case its value is 0 if it is the first enumerator, or it takes the value of the previous enumerator + 1. Alternatively an enumerator can be an identifier followed by an equal sign and a constant expression. In that case it takes on the value of the constant expression.</p>
 
 <h4 id="array_types">Array Types</h4>
 
