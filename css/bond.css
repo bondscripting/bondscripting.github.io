@@ -31,12 +31,6 @@ blockquote:before, blockquote:after, q:before, q:after
     content: '';
     content: none;
 }
-table
-{
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
 
 /* Begin Style */
 body
@@ -96,6 +90,38 @@ p
     margin: 1em 0;
 }
 
+table
+{
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 16px;
+    overflow-x: auto;
+}
+
+th
+{
+    background-color: #D8D8D8;
+    border: 1px solid #A0A0A0;
+    font-weight: bold;
+    padding: 8px 16px;
+}
+
+td
+{
+    border: 1px solid #A0A0A0;
+    padding: 8px 16px;
+}
+
+dt
+{
+    margin: 1em 0 0 0;
+}
+
+dd
+{
+    margin: 0 0 0 2em;
+}
+
 blockquote
 {
     margin: 1em 40px;
@@ -148,11 +174,11 @@ ul
 
 .navbar
 {
+    background-color: #203040;
     list-style-type: none;
     margin: 0;
-    padding: 0;
     overflow: hidden;
-    background-color: #203040;
+    padding: 0;
 }
 
 .navbutton
@@ -175,23 +201,85 @@ ul
     text-decoration: underline;
 }
 
+.toc
+{
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+.toc a
+{
+    text-decoration: none;
+}
+
+.toc a:hover
+{
+    text-decoration: underline;
+}
+
+.toc_h1
+{
+    margin: 0.25em 0;
+}
+
+.toc_h2
+{
+    margin: 1em 2em 0.25em;
+}
+
+.toc_h3
+{
+    margin: 0.25em 4em;
+}
+
+.toc_h4
+{
+    margin: 0.25em 6em;
+}
+
+.toc_h5
+{
+    margin: 0.25em 8em;
+}
+
+.toc_h6
+{
+    margin: 0.25em 10em;
+}
+
 .code
 {
     background-color: #E8E8E0;
     border: 1px solid black;
     color: black;
     font-family: "courier new", courier, monospace;
-    margin: 0px 16px;
+    margin: 16px;
     padding: 16px;
-    white-space: pre-wrap;
+}
+
+pre.code
+{
+    overflow-x: auto;
 }
 
 div.code
 {
     padding: 0 16px;
+    white-space: pre-wrap;
 }
 
 .token
 {
     font-family: "courier new", courier, monospace;
+}
+
+.lineno
+{
+    color: #404040;
+    float: left;
+    font-family: "courier new", courier, monospace;
+    margin: 0;
+    padding: 16px 4px 16px 0;
 }
