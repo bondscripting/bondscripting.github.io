@@ -12,6 +12,7 @@ video
     border: 0;
     font-size: 100%;
     font: inherit;
+    max-height: 1000000em;
     vertical-align: baseline;
 }
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
@@ -143,7 +144,7 @@ ul
 
 .page
 {
-    max-width: 1200px;
+    max-width: 1080px;
     margin: auto;
 }
 
@@ -267,7 +268,6 @@ pre.code
 div.code
 {
     padding: 0 16px;
-    white-space: pre-wrap;
 }
 
 .token

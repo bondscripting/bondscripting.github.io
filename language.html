@@ -74,7 +74,7 @@
 <p>There is no preprocessor, so there are no macros or other mechanisms to manipulate the source code before it is scanned by the compiler.</p>
 
 <h4 id="diff_no_headers">No header files or forward declarations</h4>
-<p>All code is placed in .bond files with no need for separate header files. Header files are not needed since type, function and constant declarations do not need to occur before they are referenced in source code; the compiler will resolve those references during semantic analysis after all files have been parsed. This important difference with C also means that structs do not need to be forward declared and functions do not need separate declarations and definitions.</p>
+<p>All code is placed in <span class="token">.bond</span> files with no need for separate header files. Header files are not needed since type, function and constant declarations do not need to occur before they are referenced in source code; the compiler will resolve those references during semantic analysis after all files have been parsed. This important difference with C also means that structs do not need to be forward declared and functions do not need separate declarations and definitions.</p>
 
 <h4 id="diff_include">Include directives</h4>
 <p>Despite the lack of header files, the Bond language supports include directives so that the compiler may be informed about where referenced code is defined so that it may be scanned and parsed prior to semantic analysis. In contrast to C's include directive, Bond's is a compiler directive, not a preprocessor directive. The text of the included file is not substituted in place into the including file. Instead, the referenced file is added to the list of files to be scanned by the compiler if it is not already in the list. If files are multiply or circularly included, the compiler will only scan the included file once. The syntax is as follows. Note that <span class="token">include</span> is a reserved keyword.</p>
@@ -209,7 +209,7 @@ int main()
 </dd>
 
 <dt>Line 7: <span class="token">return 0;</span></dt>
-<dd>This line of code is a statement that specifies what value is returned by the main function. As we saw on line 4, the main function returns an <span class="token">int</span>. In Bond, as with other programming languages, such as C and C++, the return value of the <span class="token">main</span> function indicates the exit status of the program. By convention a return value of 0 indicates that the program terminated normally, whereas any other value indicates an application specific error code.</dd>
+<dd>This line of code is a statement that specifies what value is returned by the <span class="token">main</span> function. As we saw on line 4, the <span class="token">main</span> function returns an <span class="token">int</span>. In Bond, as with other programming languages, such as C and C++, the return value of the <span class="token">main</span> function indicates the exit status of the program. By convention, a return value of 0 indicates that the program terminated normally, whereas any other value indicates an application specific error code.</dd>
 
 <h4 id="identifiers">Identifiers</h4>
 <p>Identifiers are names for symbols such as variables, functions and types defined in code. Identifiers consist of any sequence of letters, digits and underscores ('_'), with the exception that the first character cannot be a digit. Also, keywords are reserved and cannot be used as identifiers. Identifiers are case sensitive.</p>
@@ -416,7 +416,7 @@ int resultPlusOne = result + 1;</pre>
     Moo,        // Value is 0 since this is the first enumerator.
     Oink,       // Value is 1 since Moo + 1 = 1.
     Baa = 42,   // Value is explicitly specified as 42.
-    Quack,      // Value is 43 since Bah + 1 = 43.
+    Quack,      // Value is 43 since Baa + 1 = 43.
     Meow = -1,  // Values can be negative.
     Woof        // Values can be duplicated. This one is also 0.
 };</pre>
