@@ -56,7 +56,19 @@
 <li class="toc_h5"><a href="#character_constants">Character Constants</a></li>
 <li class="toc_h5"><a href="#string_literals">String Literals</a></li>
 <li class="toc_h4"><a href="#variables">Variables</a></li>
-<li class="toc_h4"><a href="#punctuation">Operators</a></li>
+<li class="toc_h4"><a href="#operators">Operators</a></li>
+<li class="toc_h5"><a href="#assignment_operator">Assignment Operator</a></li>
+<li class="toc_h5"><a href="#arithmetic_operators">Arithmetic Operators</a></li>
+<li class="toc_h5"><a href="#increment_operators">Increment and Decrement Operators</a></li>
+<li class="toc_h5"><a href="#relational_operators">Relational and Comparison Operators</a></li>
+<li class="toc_h5"><a href="#logical_operators">Logical Operators</a></li>
+<li class="toc_h5"><a href="#bitwise_logical_operators">Bitwise Logical Operators</a></li>
+<li class="toc_h5"><a href="#bit_shifting_operators">Bit Shifting Operators</a></li>
+<li class="toc_h5"><a href="#compound_assignment_operators">Compound Assignment Operators</a></li>
+<li class="toc_h5"><a href="#ternary_operator">Ternary Operator</a></li>
+<li class="toc_h5"><a href="#type_casting_operator">Type Casting Operator</a></li>
+<li class="toc_h5"><a href="#sizeof_operator">sizeof Operator</a></li>
+<li class="toc_h5"><a href="#operator_precedence">Operator Precedence</a></li>
 <li class="toc_h3"><a href="#statements">Statements</a></li>
 <li class="toc_h3"><a href="#functions">Functions</a></li>
 <li class="toc_h3"><a href="#data_types">Data Types</a></li>
@@ -392,8 +404,158 @@ PI = 4; // Error. Cannot assign a value to a const variable.</pre>
 // that the value of result has been determined on the first line.
 int resultPlusOne = result + 1;</pre>
 
-<h4 id="punctuation">Operators</h4>
-<div class="code"><p>+ - * / % ++ -- < <= > >= << >> == != ! && || & | ^ ~ ? -> = <<= >>= += -= *= /= %= &= |= ^= ( ) { } [ ] . ; : :: ,</p></div>
+<h4 id="operators">Operators</h4>
+
+<!-- TODO: Mention parentheses to force precedence. -->
+
+<h5 id="assignment_operator">Assignment Operator</h5>
+
+<p>As we have seen in the <a href="#variables">Variables</a> section, the assignment operator, represented by an equal sign =, assigns a value to a variable. Even though the assignment operator is represented by an equal sign, it is not used for determining equality.</p>
+
+<p>The expression producing the value that is assigned is on the right side of the assignment operator, and the variable receiving the value is on the left. In the following example, the value of the variable <span class="token">y</span> is assigned to the variable <span class="token">x</span>.<p>
+
+<pre class="code">x = y;</pre>
+
+<p>As with all other expressions, the assignment expression evaluates to a value, which is the value assigned. The value of the assignment expression can then be used in another expression. This approach should be used carefully, since it can lead to code which is difficult to understand. In the following example, the assignment of the value <span class="token">7</span> to the variable <span class="token">y</span> produces the value <span class="token">7</span>, which is then added to the value <span class="token">8</span> and assigned to the variable <span class="token">x</span>.</p>
+
+<pre class="code">x = 8 + (y = 7); // x is 15 and y is 7.</pre>
+
+<h5 id="arithmetic_operators">Arithmetic Operators</h5>
+<p>The five binary arithmetic operators are <span class="token">+</span>, <span class="token">-</span>, <span class="token">*</span>, <span class="token">/</span> and <span class="token">%</span>, and they perform addition, subtraction, multiplication, division and modulo division respectively. The syntax for using these operators is straightforward and resembles the notation for basic arithmetic (i.e. the two operands appear on either side of the operator). The operands can be any expression that evaluates to a numerical type, including constants, variables, other arithmetic expressions, function calls and so forth.</pre>
+
+<pre class="code">double a = 2.0;
+double b = a + 1.0;      // Addition: b is 3.0.
+double c = b - 7.0;      // Subtraction: c is -4.0.
+double d = b * c;        // Multiplication: d is -12.0.
+double e = d / a;        // Division: e is -6.0.
+int remainder = 23 % 10; // Modulo division: remainder is 3.</pre>
+
+<p>Modulo division, which is applicable only to integers, produces the remainder of a division.</p>
+
+<!-- TODO: usual arithmetic conversions -->
+
+<p>The <span class="token">+</span> and <span class="token">-</span> operators can also be used as unary operators and appear before their lone operand. The <span class="token">-</span> operator negates its operand, meaning that it is equivalent to multiplying the operand by <span class="token">-1</span>. The <span class="token">+</span> operator is equivalent to multiplying its operand by <span class="token">1</span>, which leaves it intact. It is not particularly useful and is only included in the language for completeness.</p>
+
+<pre class="code">double a = 3.0;
+double b = -a; // b is -3.0.
+double c = -b; // c is 3.0.
+double d = +a; // d is 3.0.
+double e = +b; // e is -3.0.</pre>
+
+<p>Putting it all together:</p>
+
+<pre class="code">double a = -2.0 - -((3.0 * 12.0) / (3.0 + 6.0)); // a is 2.0.</pre>
+
+<h5 id="increment_operators">Increment and Decrement Operators</h5>
+<p>Since adding and subtracting <span class="token">1</span> from variables is such a common thing to do when programming, special shorthand operators exist specifically for that task denoted with <span class="token">++</span> and <span class="token">--</span>. The former adds <span class="token">1</span> to its operand and the latter subtracts <span class="token">1</span>.</p>
+
+<p>The following two lines of code are equivalent methods of adding <span class="token">1</span> to the variable <span class="token">a</span>.</p>
+
+<pre class="code">++a;
+a = a + 1;</pre>
+
+<p>Likewise, the following two lines of code are equivalent methods of subtracting <span class="token">1</span> from the variable <span class="token">a</span>.</p>
+
+<pre class="code">--a;
+a = a - 1;</pre>
+
+<p>Furthermore, the increment and decrement operators can both be used in prefix or suffix forms. Both forms perform the same operation, however they differ in their order of evaluation. In the prefix form, the addition or subtraction is performed first, then the value of the expression is evaluated. In the suffix form, the value of expression is evaluated first, then the addition or subtraction is performed. The following examples show the difference.</p>
+
+<pre class="code">int a = 7;
+int b = ++a;
+// a is 8 and b is also 8. a is incremented before its value is captured.
+
+a = 7;
+b = a++;
+// a is 8, but b is 7. The value of a is captured before it is incremented.</pre>
+
+<h5 id="relational_operators">Relational and Comparison Operators</h5>
+<p>The six relational operators are <span class="token">==</span>, <span class="token">!=</span>, <span class="token">&lt;</span>, <span class="token">&gt;</span>, <span class="token">&lt;=</span> and <span class="token">&gt=</span>, and they are used to compare the value of two expressions. The result of a relational operator is a <span class="token">bool</span> (i.e. either the value <span class="token">true</span> or <span class="token">false</span>) indicating whether the comparison was successful.</p>
+
+<p>The <span class="token">==</span> and <span class="token">!=</span> operators test whether two values are equal or not equal respectively.</p>
+
+<pre class="code">int a = 7;
+int b = 7;
+int c = 9;
+a == b;    // Result is true since both operands are 7.
+a == c;    // Result is false since both operands are 7.
+a != b;    // Result is false since one operand is 7 and one is 9.
+a != b;    // Result is true since one operand is 7 and one is 9.</pre>
+
+<p>The <span class="token">&lt;</span>, <span class="token">&gt;</span>, <span class="token">&lt;=</span> and <span class="token">&gt=</span> operators test whether the first operand is less than, greater than, less than or equal to and greater than or equal to the second operator respectively.</p>
+
+<pre class="code">int a = 7;
+int b = 7;
+int c = 9;
+a < b;     // Result is false since 7 is not less than 7.
+a < c;     // Result is true since 7 is less than 9.
+c < a;     // Result is false since 9 is not less than 7.
+a > b;     // Result is false since 7 is not greater than 7.
+a > c;     // Result is false since 7 is not greater than 9.
+c > a;     // Result is true since 9 is greater than 7.
+a <= b;    // Result is true since 7 is equal to 7.
+a <= c;    // Result is true since 7 is less than 9.
+c <= a;    // Result is false since 9 is not less than or equal to 7.
+a >= b;    // Result is true since 7 is equal to 7.
+a >= c;    // Result is false since 7 is not greater than or equal to 9.
+c >= a;    // Result is true since 9 is greater than 7.</pre>
+
+<h5 id="logical_operators">Logical Operators</h5>
+<p>The two binary logical operators <span class="token">&amp;&amp</span> and <span class="token">||</span> are used for combining the truth values of two Boolean expressions.</p>
+
+<p>The conjunction operator <span class="token">&amp;&amp</span> evaluates to <span class="token">true</span> only if its operands are both <span class="token">true</span>, otherwise it evaluates to <span class="token">false</span>. If the first operand is <span class="token">false</span>, the second operand is not evaluated at all, since the expression will evaluate to <span class="token">false</span> regardless of the second operand's value.</p>
+
+<p>The disjunction operator <span class="token">||</span> evaluates to <span class="token">false</span> only if its operands are both <span class="token">false</span>, otherwise it evaluates to <span class="token">true</span>. If the first operand is <span class="token">true</span>, the second operand is not evaluated at all, since the expression will evaluate to <span class="token">true</span> regardless of the second operand's value.</p>
+
+<pre class="code">bool a = true;
+bool b = true;
+bool c = false;
+bool d = false;
+a &amp;&amp; b;    // Result is true since both operands are true.
+a &amp;&amp; c;    // Result is false since second operand is false.
+c &amp;&amp; a;    // Result is false since first operand is false.
+c &amp;&amp; d;    // Result is false since both operands are false.
+a || b;    // Result is true since both operands are true.
+a || c;    // Result is true since first operand is true.
+c || a;    // Result is true since second operand is true.
+c || d;    // Result is false since both operands are false.</pre>
+
+<p>The third logical operator is the unary not operator <span class="token">!</span>. This operator negates the value of its Boolean operand, such that <span class="token">false</span> becomes <span class="token">true</span> and vice-versa.</p>
+
+<p>We can combine all of the operators that we have learned so far to formulate more complex conditions. The following snippet of code checks whether a variable named <span class="token">value</span> falls in the range [5 - 10] if the range check is enabled. If the range check is not enabled, the condition always succeeds.</p>
+
+<pre class="code">bool conditionValid = !rangeCheckEnabled || ((value >= 5) && (value <= 10));</pre>
+
+<h5 id="bitwise_logical_operators">Bitwise Logical Operators</h5>
+<p>There are a handful of operators for directly manipulating the bits of integer values. First are the bitwise logical operators, which are analogous to the Boolean logical operators seen above. Withc each of the binary bitwise logical operators, each bit of the left operand is paired with the corresponding bit of the right operand and the operation is performed between each pair of bits. A bit value of 0 corresponds to a truth value of <span class="token">false</span>, whereas a bit value of 1 corresponds to a truth value of <span class="token">true</span>.</p>
+
+<p>The <span class="token">&amp;</span> operator performs a bitwise conjunction, while the <span class="token">|</span> operator performs a bitwise disjunction. A third operator, <span class="token">^</span>, performs an exclusive disjunction. In the case of the exclusive disjunction operator, the result is <span class="token">true</span> if only one, but not both of the operands are <span class="token">true</span>.</p>
+
+<pre class="code">int a = 12;
+int b = 10;
+a & b; // Result is  8, since 1100 & 1010 is 1000.
+a | b; // Result is 14, since 1100 | 1010 is 1110.
+a ^ b; // Result is  6, since 1100 ^ 1010 is 0110.</pre>
+
+<p>The <span class="token">~</span> operator is analogous to the unary Boolean not operator. It flips each bit of its operand such that 0 becomes 1 and 1 becomes 0. Note that all bits including leading zeroes and the sign bit of signed integers are flipped.</p>
+
+<pre class="code">int a = 12;
+~a; // Result is -13, since ~1100 is 11111111111111111111111111110011.</pre>
+
+<h5 id="bit_shifting_operators">Bit Shifting Operators</h5>
+<p>Another set of operators for manipulating the bits of integers are the bit shifting operators. The left shift operator <span class="token">&lt;&lt;</span> shifts the bits of the left operand to the left. The right operand specifies the number of positions by which the bits are shifted. Bits shifted out of the left side are discarded whereas bits inserted to the right are zero.</p>
+
+<p>Similarly, the <span class="token">&gt;&gt;</span> operator shifts the bits of the left operand to the right by the number of positions specified by the right operand. Bits shifted out of the right side are discarded and bits inserted into the left side follow slightly more complicated rules. Inserted bits are usually zero, however, if the left operand is a signed integer, then the inserted bits are the same as the contents of the leftmost bit (i.e. the sign bit). This behaviour has the interesting property of preserving the sign of the left operand.</p>
+
+<h5 id="compound_assignment_operators">Compound Assignment Operators</h5>
+
+<h5 id="ternary_operator">Ternary Operator</h5>
+
+<h5 id="type_casting_operator">Type Casting Operator</h5>
+
+<h5 id="sizeof_operator">sizeof Operator</h5>
+
+<h5 id="operator_precedence">Operator Precedence</h5>
 
 <h3 id="statements">Statements</h3>
 
@@ -411,7 +573,7 @@ int resultPlusOne = result + 1;</pre>
 
 <p>An enumeration is declared using the <span class="token">enum</span> keyword, followed by an identifier to name the type, an open brace, an enumerator list, a closing brace and a semicolon.</p>
 
-<pre class="code">enum AnimalSounds
+<pre class="code">enum AnimalSound
 {
     Moo,        // Value is 0 since this is the first enumerator.
     Oink,       // Value is 1 since Moo + 1 = 1.
@@ -424,6 +586,10 @@ int resultPlusOne = result + 1;</pre>
 <p>The enumerator list consists of a comma separated list of enumerators. A comma following the last enumerator is allowed, but not required.</p>
 
 <p>An enumerator can be a single identifier. In that case its value is 0 if it is the first enumerator, or it takes the value of the previous enumerator + 1. Alternatively an enumerator can be an identifier followed by an equal sign and a constant expression. In that case it takes on the value of the constant expression.</p>
+
+<p>We can declare and initialize a variable of an enumerated type as we would a variable of any other type. In this case, we declare the type as <span class="token">AnimalSound</span>, and use the name of any one of the enumerators in the initializer. We could also have used any other expression, such as a function call, that resolves to an <span class="token">AnimalSound</span>.</p>
+
+<pre class="code">AnimalSound sound = Moo;</pre>
 
 <h4 id="array_types">Array Types</h4>
 
