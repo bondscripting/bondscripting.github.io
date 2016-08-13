@@ -569,17 +569,20 @@ var group__nodes =
       [ "GetTargetTypeDescriptor", "class_bond_1_1_cast_expression.html#ad129dccc70c5ca65e1541f1049f1109c", null ],
       [ "GetTargetTypeDescriptor", "class_bond_1_1_cast_expression.html#a382a1391c0120525de58110aa64898ca", null ]
     ] ],
-    [ "SizeofExpression", "class_bond_1_1_sizeof_expression.html", [
-      [ "SizeofExpression", "class_bond_1_1_sizeof_expression.html#afe0bcad110de4f25fdbca054dba39195", null ],
-      [ "SizeofExpression", "class_bond_1_1_sizeof_expression.html#ac4fd7469fdcfa1450a37f5e40cef4577", null ],
-      [ "~SizeofExpression", "class_bond_1_1_sizeof_expression.html#ac9082c7c20f6870921f9722b2d4af3c9", null ],
-      [ "Accept", "class_bond_1_1_sizeof_expression.html#a3e3f9434650df7372b8a482e2067d977", null ],
-      [ "Accept", "class_bond_1_1_sizeof_expression.html#abdecfb48d4dcd24e523f4fa1f10a6034", null ],
-      [ "GetContextToken", "class_bond_1_1_sizeof_expression.html#a12d7493727233507d104c66b133bc79f", null ],
-      [ "GetRhs", "class_bond_1_1_sizeof_expression.html#aed5137b479ffc68ff63331e7db29e5fe", null ],
-      [ "GetRhs", "class_bond_1_1_sizeof_expression.html#af71688969b3ab1fbdca2cbc8e9fff6e2", null ],
-      [ "GetTargetTypeDescriptor", "class_bond_1_1_sizeof_expression.html#aeb2ded044516e1119642da21cd080157", null ],
-      [ "GetTargetTypeDescriptor", "class_bond_1_1_sizeof_expression.html#a6b8681fe03171f27e38c695baf8243ac", null ]
+    [ "PropertyofExpression", "class_bond_1_1_propertyof_expression.html", [
+      [ "PropertyofExpression", "class_bond_1_1_propertyof_expression.html#a65b6e17e36d324eac9b2a9c628d67477", null ],
+      [ "PropertyofExpression", "class_bond_1_1_propertyof_expression.html#a70a44427a603546942c2cb4e3690c78f", null ],
+      [ "~PropertyofExpression", "class_bond_1_1_propertyof_expression.html#a7a5583adad4f8c2936a4b8c95694aff2", null ],
+      [ "Accept", "class_bond_1_1_propertyof_expression.html#ae47f84deae1ccceacdb6bf4c22c2d646", null ],
+      [ "Accept", "class_bond_1_1_propertyof_expression.html#aefaf48862a14fe7e4e2cc782a25cf403", null ],
+      [ "GetContextToken", "class_bond_1_1_propertyof_expression.html#a79db523134c1788ed490eb069bb63e1d", null ],
+      [ "GetOperator", "class_bond_1_1_propertyof_expression.html#a935345474bdd28f4c82b7c7a677e220c", null ],
+      [ "GetRhs", "class_bond_1_1_propertyof_expression.html#aaa6c88cc6d415916a5b7a3a6064b48f4", null ],
+      [ "GetRhs", "class_bond_1_1_propertyof_expression.html#a7a6540bc0eff54d2b386aaf94eb1acdd", null ],
+      [ "GetTargetTypeDescriptor", "class_bond_1_1_propertyof_expression.html#a60d838baeca7b914b36da707f0851488", null ],
+      [ "GetTargetTypeDescriptor", "class_bond_1_1_propertyof_expression.html#a1250b17ad300ff82a88dfd58a762b4d2", null ],
+      [ "IsAlignof", "class_bond_1_1_propertyof_expression.html#acb620afc1a528f610ae522429aa9088a", null ],
+      [ "IsSizeof", "class_bond_1_1_propertyof_expression.html#aa3261d3a48f5ebeb032c673a2aa5c0e8", null ]
     ] ],
     [ "ConstantLiteralExpression", "class_bond_1_1_constant_literal_expression.html", [
       [ "ConstantLiteralExpression", "class_bond_1_1_constant_literal_expression.html#aaaf403da43ced295479c40ac33bd9108", null ],

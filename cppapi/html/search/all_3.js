@@ -21,7 +21,7 @@ var searchData=
   ['disassembler',['Disassembler',['../class_bond_1_1_disassembler.html',1,'Bond']]],
   ['diskfileloader',['DiskFileLoader',['../class_bond_1_1_disk_file_loader.html#a1d51a7e5c30190f3037b2e95c3c624b9',1,'Bond::DiskFileLoader']]],
   ['diskfileloader',['DiskFileLoader',['../class_bond_1_1_disk_file_loader.html',1,'Bond']]],
-  ['dispose',['Dispose',['../class_bond_1_1_lexer.html#aac359e14bd5375c72f53b10ccf0d72c2',1,'Bond::Lexer::Dispose()'],['../class_bond_1_1_parser.html#aaea6ff7b3d07c79af83d868a89fb6875',1,'Bond::Parser::Dispose()']]],
+  ['dispose',['Dispose',['../class_bond_1_1_parser.html#aaea6ff7b3d07c79af83d868a89fb6875',1,'Bond::Parser']]],
   ['disposefile',['DisposeFile',['../class_bond_1_1_disk_file_loader.html#a21fecdf997402a6eb1cb00cd272ef5d4',1,'Bond::DiskFileLoader::DisposeFile()'],['../class_bond_1_1_file_loader.html#a3263957e0b2a9c670daeac2a61fc6a46',1,'Bond::FileLoader::DisposeFile()'],['../class_bond_1_1_memory_file_loader.html#aaca34b0e6a12a527b3264b973f58985b',1,'Bond::MemoryFileLoader::DisposeFile()']]],
   ['double_5ftoken',['DOUBLE_TOKEN',['../group__compiler.html#ga3196e4c099aaab744e1f235851c757e4',1,'Bond']]],
   ['double_5ftype_5fspecifier',['DOUBLE_TYPE_SPECIFIER',['../group__nodes.html#gafb2d463e315e4cd6aa93666fe3da99c0',1,'Bond']]],

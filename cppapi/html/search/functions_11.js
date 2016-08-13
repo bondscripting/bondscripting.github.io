@@ -65,7 +65,6 @@ var searchData=
   ['sinf',['Sinf',['../namespace_bond.html#afdac119f567baf29121435ffc548e6aa',1,'Bond']]],
   ['sinh',['Sinh',['../namespace_bond.html#ae28c0ace35df4cc502dda95634464360',1,'Bond']]],
   ['sinhf',['Sinhf',['../namespace_bond.html#a6b5e417393587288aaf4835821f6fee7',1,'Bond']]],
-  ['sizeofexpression',['SizeofExpression',['../class_bond_1_1_sizeof_expression.html#afe0bcad110de4f25fdbca054dba39195',1,'Bond::SizeofExpression::SizeofExpression(const Token *op, TypeDescriptor *targetTypeDescriptor)'],['../class_bond_1_1_sizeof_expression.html#ac4fd7469fdcfa1450a37f5e40cef4577',1,'Bond::SizeofExpression::SizeofExpression(const Token *op, Expression *rhs)']]],
   ['skipto',['SkipTo',['../class_bond_1_1_token_stream.html#aebc7bc925e190a5fb1fca869ea4cafc5',1,'Bond::TokenStream::SkipTo(Token::TokenType type)'],['../class_bond_1_1_token_stream.html#a6cc5c9e7caece52960fb38246124d468',1,'Bond::TokenStream::SkipTo(const TokenTypeSet &amp;typeSet)']]],
   ['sqrt',['Sqrt',['../namespace_bond.html#a3cf644479ac13fb57c01ed2a63d282d9',1,'Bond']]],
   ['sqrtf',['Sqrtf',['../namespace_bond.html#a7592d9f076ed48d59587e494bc4d26f8',1,'Bond']]],

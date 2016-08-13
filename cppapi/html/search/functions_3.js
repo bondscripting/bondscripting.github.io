@@ -11,7 +11,7 @@ var searchData=
   ['disassemble',['Disassemble',['../class_bond_1_1_disassembler.html#ad3eab14a85d51273375150ea61f29b1c',1,'Bond::Disassembler']]],
   ['disassembler',['Disassembler',['../class_bond_1_1_disassembler.html#ae8816b32366a16afde4ef05abb7ef386',1,'Bond::Disassembler']]],
   ['diskfileloader',['DiskFileLoader',['../class_bond_1_1_disk_file_loader.html#a1d51a7e5c30190f3037b2e95c3c624b9',1,'Bond::DiskFileLoader']]],
-  ['dispose',['Dispose',['../class_bond_1_1_lexer.html#aac359e14bd5375c72f53b10ccf0d72c2',1,'Bond::Lexer::Dispose()'],['../class_bond_1_1_parser.html#aaea6ff7b3d07c79af83d868a89fb6875',1,'Bond::Parser::Dispose()']]],
+  ['dispose',['Dispose',['../class_bond_1_1_parser.html#aaea6ff7b3d07c79af83d868a89fb6875',1,'Bond::Parser']]],
   ['disposefile',['DisposeFile',['../class_bond_1_1_disk_file_loader.html#a21fecdf997402a6eb1cb00cd272ef5d4',1,'Bond::DiskFileLoader::DisposeFile()'],['../class_bond_1_1_file_loader.html#a3263957e0b2a9c670daeac2a61fc6a46',1,'Bond::FileLoader::DisposeFile()'],['../class_bond_1_1_memory_file_loader.html#aaca34b0e6a12a527b3264b973f58985b',1,'Bond::MemoryFileLoader::DisposeFile()']]],
   ['dumpcallstack',['DumpCallStack',['../class_bond_1_1_v_m.html#a5e33f94d23dc0ed565ffe6c1c73c9938',1,'Bond::VM']]],
   ['dumpstackframe',['DumpStackFrame',['../class_bond_1_1_v_m.html#add1e80fc18b075730e27aff6d95522da',1,'Bond::VM']]]

@@ -1,6 +1,7 @@
 var hierarchy =
 [
     [ "Bond::Allocator::AlignedDeallocator< T >", "struct_bond_1_1_allocator_1_1_aligned_deallocator.html", null ],
+    [ "Bond::Allocator::AlignedObjectDeallocator< T >", "struct_bond_1_1_allocator_1_1_aligned_object_deallocator.html", null ],
     [ "Bond::Allocator", "class_bond_1_1_allocator.html", [
       [ "Bond::DefaultAllocator", "class_bond_1_1_default_allocator.html", null ]
     ] ],
@@ -55,6 +56,7 @@ var hierarchy =
     [ "Bond::NativeBindingCollection", "struct_bond_1_1_native_binding_collection.html", null ],
     [ "Bond::NativeBindingGenerator", "class_bond_1_1_native_binding_generator.html", null ],
     [ "Bond::NativeFunctionBinding", "struct_bond_1_1_native_function_binding.html", null ],
+    [ "Bond::Allocator::ObjectDeallocator< T >", "struct_bond_1_1_allocator_1_1_object_deallocator.html", null ],
     [ "Bond::OutputStreamAdaptor", "class_bond_1_1_output_stream_adaptor.html", null ],
     [ "Bond::ParamListSignature", "struct_bond_1_1_param_list_signature.html", null ],
     [ "Bond::ParamSignature", "struct_bond_1_1_param_signature.html", null ],
@@ -73,7 +75,7 @@ var hierarchy =
           [ "Bond::IdentifierExpression", "class_bond_1_1_identifier_expression.html", null ],
           [ "Bond::MemberExpression", "class_bond_1_1_member_expression.html", null ],
           [ "Bond::PostfixExpression", "class_bond_1_1_postfix_expression.html", null ],
-          [ "Bond::SizeofExpression", "class_bond_1_1_sizeof_expression.html", null ],
+          [ "Bond::PropertyofExpression", "class_bond_1_1_propertyof_expression.html", null ],
           [ "Bond::ThisExpression", "class_bond_1_1_this_expression.html", null ],
           [ "Bond::UnaryExpression", "class_bond_1_1_unary_expression.html", null ]
         ] ],
@@ -147,7 +149,9 @@ var hierarchy =
     [ "Bond::TypeAndValue", "class_bond_1_1_type_and_value.html", null ],
     [ "unique_ptr", null, [
       [ "Bond::Allocator::AlignedHandle< T >", "class_bond_1_1_allocator_1_1_aligned_handle.html", null ],
+      [ "Bond::Allocator::AlignedObjectHandle< T >", "class_bond_1_1_allocator_1_1_aligned_object_handle.html", null ],
       [ "Bond::Allocator::Handle< T >", "class_bond_1_1_allocator_1_1_handle.html", null ],
+      [ "Bond::Allocator::ObjectHandle< T >", "class_bond_1_1_allocator_1_1_object_handle.html", null ],
       [ "Bond::Allocator::Handle< uint8_t >", "class_bond_1_1_allocator_1_1_handle.html", null ]
     ] ],
     [ "Bond::Value", "union_bond_1_1_value.html", null ],

@@ -5,6 +5,7 @@ var class_bond_1_1_token =
       [ "HEX", "class_bond_1_1_token.html#ad4b6c5692435cfc04cc96eb829d10da2a2f8111ca56dd179a05260d8f54f51498", null ]
     ] ],
     [ "TokenType", "class_bond_1_1_token.html#a6d09a1144b5a79476ae9c8056728362f", [
+      [ "KEY_ALIGNOF", "class_bond_1_1_token.html#a6d09a1144b5a79476ae9c8056728362fad4c4c904ddae8d96c9ce9ee290bac85a", null ],
       [ "KEY_BOOL", "class_bond_1_1_token.html#a6d09a1144b5a79476ae9c8056728362fa2e32f6a1878ef7bbd0d522bf82b409b4", null ],
       [ "KEY_BREAK", "class_bond_1_1_token.html#a6d09a1144b5a79476ae9c8056728362fa527e1c78d1bd35fe2962b8e0be1e29de", null ],
       [ "KEY_CASE", "class_bond_1_1_token.html#a6d09a1144b5a79476ae9c8056728362fa96ba58ea2e12a059268b4b804b43ea81", null ],

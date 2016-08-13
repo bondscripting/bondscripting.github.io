@@ -44,7 +44,6 @@ var searchData=
   ['insertsymbol',['InsertSymbol',['../class_bond_1_1_symbol.html#a6d19ac252374cf7047511864f5e0cabf',1,'Bond::Symbol']]],
   ['int_5ftoken',['INT_TOKEN',['../group__compiler.html#ga0788343abf1d6e3fd67a610694eb0c98',1,'Bond']]],
   ['int_5ftype_5fspecifier',['INT_TYPE_SPECIFIER',['../group__nodes.html#ga952ffdd8c0edf0fc17d50633c234bcec',1,'Bond']]],
-  ['integer_5fconstants_5ftypeset',['INTEGER_CONSTANTS_TYPESET',['../group__compiler.html#ga98acec5a79d87adfc8a4e810678211fc',1,'Bond']]],
   ['integer_5ftype_5fspecifiers_5ftypeset',['INTEGER_TYPE_SPECIFIERS_TYPESET',['../group__compiler.html#gab6e8e5fda03511fdaf4644f3f3a4fa63',1,'Bond']]],
   ['integerbinaryoperator',['IntegerBinaryOperator',['../namespace_bond.html#a0c880b78953574db6fa89bc2ccca3d88',1,'Bond']]],
   ['internal_5ferror',['INTERNAL_ERROR',['../class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4cafbff367435dc427c53770c388d20dc2e',1,'Bond::CompilerError']]],
@@ -72,6 +71,7 @@ var searchData=
   ['i_2fo',['I/O',['../group___i_o.html',1,'']]],
   ['io_5fbinding_5fcollection',['IO_BINDING_COLLECTION',['../namespace_bond.html#a15c419622e488dd254d34fe34f808b62',1,'Bond']]],
   ['isaddressable',['IsAddressable',['../class_bond_1_1_type_descriptor.html#a86a836a4b736a5720b544de189c8a4de',1,'Bond::TypeDescriptor']]],
+  ['isalignof',['IsAlignof',['../class_bond_1_1_propertyof_expression.html#acb620afc1a528f610ae522429aa9088a',1,'Bond::PropertyofExpression']]],
   ['isalnum',['IsAlnum',['../namespace_bond.html#a3ab714bdfc7d79942a6c755513ceb916',1,'Bond']]],
   ['isalpha',['IsAlpha',['../namespace_bond.html#aabd2fc6da38674030dfe6b110dcef730',1,'Bond']]],
   ['isanonymous',['IsAnonymous',['../class_bond_1_1_symbol.html#a5a8b96dc47322c498a1622c41c5ced70',1,'Bond::Symbol']]],
@@ -102,6 +102,7 @@ var searchData=
   ['ismost32integertype',['IsMost32IntegerType',['../class_bond_1_1_type_descriptor.html#a4e7a82ff13d32033ae53831bbcd075fc',1,'Bond::TypeDescriptor::IsMost32IntegerType()'],['../class_bond_1_1_type_specifier.html#ae7e53c5b5f29bb1b55668b6c08d92917',1,'Bond::TypeSpecifier::IsMost32IntegerType()']]],
   ['isnative',['IsNative',['../class_bond_1_1_struct_declaration.html#aa97512e197b37013760b03ac31f67a71',1,'Bond::StructDeclaration::IsNative()'],['../class_bond_1_1_function_definition.html#a11abe6dba376b35cb6afb291f49a5afb',1,'Bond::FunctionDefinition::IsNative()'],['../struct_bond_1_1_function.html#a8a80e7d2199446de6a75647a506db18d',1,'Bond::Function::IsNative()']]],
   ['isnativestructmember',['IsNativeStructMember',['../class_bond_1_1_named_initializer.html#a3d010a2214caf4d4dcf002f82e71fcdb',1,'Bond::NamedInitializer']]],
+  ['isnegativeintegerconstant',['IsNegativeIntegerConstant',['../namespace_bond.html#a98f22a8bc81e64a22c4880e79cffeeb7',1,'Bond']]],
   ['isnulltype',['IsNullType',['../class_bond_1_1_type_descriptor.html#a5cf87db83d8530211e886ac5eaada946',1,'Bond::TypeDescriptor']]],
   ['isnumerictype',['IsNumericType',['../class_bond_1_1_type_descriptor.html#afac9b418c61fa4f2daf6f5cff2604918',1,'Bond::TypeDescriptor::IsNumericType()'],['../class_bond_1_1_type_specifier.html#a3a0ae65eb9b38ceaae67a929137ccdc5',1,'Bond::TypeSpecifier::IsNumericType()']]],
   ['ispointerintrinsictype',['IsPointerIntrinsicType',['../class_bond_1_1_type_descriptor.html#aecfa521ba95626c1b93c82817d4d87c0',1,'Bond::TypeDescriptor']]],
@@ -112,6 +113,7 @@ var searchData=
   ['ispunct',['IsPunct',['../namespace_bond.html#a4e1e161c1708e8a363cbdad43701b018',1,'Bond']]],
   ['isresolved',['IsResolved',['../class_bond_1_1_symbol.html#a5f455475a60ed08fa48422f1fa7b0c14',1,'Bond::Symbol::IsResolved()'],['../class_bond_1_1_type_descriptor.html#a50a6b044a9ea35e59a0971d2389d6b2c',1,'Bond::TypeDescriptor::IsResolved()'],['../class_bond_1_1_type_specifier.html#a431e2d82ce2d7a4c7d5ea132039cfeef',1,'Bond::TypeSpecifier::IsResolved()'],['../class_bond_1_1_struct_declaration.html#a4ed815a4c40ec4cdc8ce6cc0ac81eaa2',1,'Bond::StructDeclaration::IsResolved()'],['../class_bond_1_1_initializer.html#aadad3ddfe5d037de975b416e592e3e5d',1,'Bond::Initializer::IsResolved()'],['../class_bond_1_1_type_and_value.html#a9e21141e06766ae1cbcdd8394897834a',1,'Bond::TypeAndValue::IsResolved()']]],
   ['isreturn',['IsReturn',['../class_bond_1_1_jump_statement.html#a6a793243072e85668b67acf3606252a0',1,'Bond::JumpStatement']]],
+  ['issizeof',['IsSizeof',['../class_bond_1_1_propertyof_expression.html#aa3261d3a48f5ebeb032c673a2aa5c0e8',1,'Bond::PropertyofExpression']]],
   ['isspace',['IsSpace',['../namespace_bond.html#aa73c243f8c07a967459763c4c9971d31',1,'Bond']]],
   ['isstringtype',['IsStringType',['../class_bond_1_1_type_descriptor.html#a72ad79943e04a5cc9d58fb6873222510',1,'Bond::TypeDescriptor']]],
   ['isstructtype',['IsStructType',['../class_bond_1_1_type_descriptor.html#aa6e8ad62406a18902578daf2e6d01ab3',1,'Bond::TypeDescriptor::IsStructType()'],['../class_bond_1_1_type_specifier.html#ae5607b51e6dcd16a00146afa11fc44a4',1,'Bond::TypeSpecifier::IsStructType()']]],
@@ -124,6 +126,6 @@ var searchData=
   ['isvaluetype',['IsValueType',['../class_bond_1_1_type_descriptor.html#a0925aa8deceead768c5e8a0e276e5cdc',1,'Bond::TypeDescriptor']]],
   ['isvoidtype',['IsVoidType',['../class_bond_1_1_type_descriptor.html#af25abade9b3579318eccf505bc1a76f1',1,'Bond::TypeDescriptor::IsVoidType()'],['../class_bond_1_1_type_specifier.html#a41f8e13e801d368b2b06bd5fef814b02',1,'Bond::TypeSpecifier::IsVoidType()']]],
   ['isxdigit',['IsXDigit',['../namespace_bond.html#a6f2d79552fff6aea967fcde64fa3312e',1,'Bond']]],
-  ['iterator',['Iterator',['../class_bond_1_1_auto_stack_1_1_iterator.html',1,'Bond::AutoStack']]],
-  ['iterator',['Iterator',['../class_bond_1_1_auto_stack_1_1_element.html#a9830fc407400559db7e7783cc10a9394',1,'Bond::AutoStack::Element::Iterator()'],['../class_bond_1_1_auto_stack_1_1_iterator.html#ac82bf32e30168219394c4ad01ccacf82',1,'Bond::AutoStack::Iterator::Iterator()'],['../class_bond_1_1_auto_stack_1_1_iterator.html#adafcdaec038ab3ef1ff0f6a1504326b0',1,'Bond::AutoStack::Iterator::Iterator(Element *element)']]]
+  ['iterator',['Iterator',['../class_bond_1_1_auto_stack_1_1_element.html#a9830fc407400559db7e7783cc10a9394',1,'Bond::AutoStack::Element::Iterator()'],['../class_bond_1_1_auto_stack_1_1_iterator.html#ac82bf32e30168219394c4ad01ccacf82',1,'Bond::AutoStack::Iterator::Iterator()'],['../class_bond_1_1_auto_stack_1_1_iterator.html#adafcdaec038ab3ef1ff0f6a1504326b0',1,'Bond::AutoStack::Iterator::Iterator(Element *element)']]],
+  ['iterator',['Iterator',['../class_bond_1_1_auto_stack_1_1_iterator.html',1,'Bond::AutoStack']]]
 ];

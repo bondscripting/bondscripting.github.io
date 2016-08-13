@@ -1,6 +1,7 @@
 var searchData=
 [
   ['shift_5foperators_5ftypeset',['SHIFT_OPERATORS_TYPESET',['../group__compiler.html#ga1d649c2fd0cb13731ad287b9073bf2e4',1,'Bond']]],
+  ['signed_5finteger_5fconstants_5ftypeset',['SIGNED_INTEGER_CONSTANTS_TYPESET',['../group__compiler.html#ga543c505c34ff21a885129b62313fedc9',1,'Bond']]],
   ['signed_5finteger_5ftype_5fspecifiers_5ftypeset',['SIGNED_INTEGER_TYPE_SPECIFIERS_TYPESET',['../group__compiler.html#gaafea1ca0cfae7ebe4da1d7e8d67c861e',1,'Bond']]],
   ['statement_5fdelimiters_5ftypeset',['STATEMENT_DELIMITERS_TYPESET',['../group__compiler.html#ga79fe0150789678136e9264725b1647d2',1,'Bond']]],
   ['string_5fbinding_5fcollection',['STRING_BINDING_COLLECTION',['../namespace_bond.html#aff4f39fdd4b5a4e758bf37f8126fdaef',1,'Bond']]],
