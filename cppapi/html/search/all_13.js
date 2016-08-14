@@ -12,7 +12,7 @@ var searchData=
   ['token',['Token',['../class_bond_1_1_token.html#a92cf848043ec58df09ebc99f5b206c14',1,'Bond::Token::Token()'],['../class_bond_1_1_token.html#a4c5958db8a3264dea5a49a67488bab7a',1,'Bond::Token::Token(const char *text, TokenType tokenType)'],['../class_bond_1_1_token.html#a02fc7a1aa886a0564b1d12480d605dd2',1,'Bond::Token::Token(const StreamPos &amp;startPos, const StreamPos &amp;endPos, const Value &amp;value, const char *text, const char *fileName, TokenType tokenType, short annotations=0)']]],
   ['tokencollection',['TokenCollection',['../class_bond_1_1_token_collection.html',1,'Bond']]],
   ['tokencollection',['TokenCollection',['../class_bond_1_1_token_collection.html#a7d60fd7504972754b8bff7cbe41cdfdf',1,'Bond::TokenCollection']]],
-  ['tokencollectionhandle',['TokenCollectionHandle',['../namespace_bond.html#a1fa36118c02afd1f252081501e134396',1,'Bond']]],
+  ['tokencollectionhandle',['TokenCollectionHandle',['../group__compiler.html#ga1fa36118c02afd1f252081501e134396',1,'Bond']]],
   ['tokenstream',['TokenStream',['../class_bond_1_1_token_stream.html',1,'Bond']]],
   ['tokenstream',['TokenStream',['../class_bond_1_1_token_stream.html#a6760f38e84ea0846923a366bb816939a',1,'Bond::TokenStream::TokenStream()'],['../class_bond_1_1_token_stream.html#a716429ba2c0cb2865819e4a6a7564ecc',1,'Bond::TokenStream::TokenStream(const Token *buffer, int length)']]],
   ['tokentype',['TokenType',['../class_bond_1_1_token.html#a6d09a1144b5a79476ae9c8056728362f',1,'Bond::Token']]],

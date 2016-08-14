@@ -110,7 +110,7 @@ $(document).ready(function(){initNavTree('class_bond_1_1_front_end.html','');});
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="class_bond_1_1_front_end-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Bond::FrontEnd Class Reference</div>  </div>
+<div class="title">Bond::FrontEnd Class Reference<div class="ingroups"><a class="el" href="group__compiler.html">Compiler</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -124,15 +124,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa2354aa9a23ea626e5a295a507644304"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_front_end.html#aa2354aa9a23ea626e5a295a507644304">FrontEnd</a> (<a class="el" href="class_bond_1_1_allocator.html">Allocator</a> &amp;allocator, <a class="el" href="class_bond_1_1_lexer.html">Lexer</a> &amp;lexer, <a class="el" href="class_bond_1_1_parser.html">Parser</a> &amp;parser, <a class="el" href="class_bond_1_1_semantic_analyzer.html">SemanticAnalyzer</a> &amp;semanticAnalyzer, <a class="el" href="class_bond_1_1_file_loader.html">FileLoader</a> &amp;fileLoader)</td></tr>
 <tr class="memdesc:aa2354aa9a23ea626e5a295a507644304"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_bond_1_1_front_end.html" title="A compiler front end for the Bond scripting language. ">FrontEnd</a> object.  <a href="#aa2354aa9a23ea626e5a295a507644304">More...</a><br /></td></tr>
 <tr class="separator:aa2354aa9a23ea626e5a295a507644304"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85bbaf5a12f77a32943fbfaa27ba94ea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_front_end.html#a85bbaf5a12f77a32943fbfaa27ba94ea">FrontEnd</a> (const <a class="el" href="class_bond_1_1_front_end.html">FrontEnd</a> &amp;other)=delete</td></tr>
+<tr class="separator:a85bbaf5a12f77a32943fbfaa27ba94ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34da6cac0bc72c7b0e220682eaaf331e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_bond_1_1_front_end.html">FrontEnd</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_front_end.html#a34da6cac0bc72c7b0e220682eaaf331e">operator=</a> (const <a class="el" href="class_bond_1_1_front_end.html">FrontEnd</a> &amp;other)=delete</td></tr>
+<tr class="separator:a34da6cac0bc72c7b0e220682eaaf331e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8791e6e2edd528285f6163c156eb6cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_front_end.html#af8791e6e2edd528285f6163c156eb6cd">AddInputFile</a> (const <a class="el" href="class_bond_1_1_simple_string.html">SimpleString</a> &amp;inputFileName)</td></tr>
 <tr class="memdesc:af8791e6e2edd528285f6163c156eb6cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the name of a <a class="el" href="namespace_bond.html">Bond</a> source file to the input file list.  <a href="#af8791e6e2edd528285f6163c156eb6cd">More...</a><br /></td></tr>
 <tr class="separator:af8791e6e2edd528285f6163c156eb6cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a578cc6d3da6c0e851c3c37beb3f0a913"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_front_end.html#a578cc6d3da6c0e851c3c37beb3f0a913">ContainsInputFile</a> (const <a class="el" href="class_bond_1_1_simple_string.html">SimpleString</a> &amp;inputFileName)</td></tr>
 <tr class="memdesc:a578cc6d3da6c0e851c3c37beb3f0a913"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the given file name exists in the input file list..  <a href="#a578cc6d3da6c0e851c3c37beb3f0a913">More...</a><br /></td></tr>
 <tr class="separator:a578cc6d3da6c0e851c3c37beb3f0a913"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30c55aa69798ee20db9bd6ceb0e67239"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_front_end.html#a30c55aa69798ee20db9bd6ceb0e67239">Analyze</a> ()</td></tr>
-<tr class="memdesc:a30c55aa69798ee20db9bd6ceb0e67239"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs loading, parsing and semantic analysis of all source files in the input file list, as well as those files referenced via include directives.  <a href="#a30c55aa69798ee20db9bd6ceb0e67239">More...</a><br /></td></tr>
-<tr class="separator:a30c55aa69798ee20db9bd6ceb0e67239"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a170c4012697130fc4192909fef6f28b3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_bond_1_1_translation_unit.html">TranslationUnit</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_front_end.html#a170c4012697130fc4192909fef6f28b3">Analyze</a> ()</td></tr>
+<tr class="memdesc:a170c4012697130fc4192909fef6f28b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs loading, parsing and semantic analysis of all source files in the input file list, as well as those files referenced via include directives. returns A parse tree of ParseNodes rooted with a list of TranslationUnits.  <a href="#a170c4012697130fc4192909fef6f28b3">More...</a><br /></td></tr>
+<tr class="separator:a170c4012697130fc4192909fef6f28b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a863fdcd80ae2dea0b783203deaa3de38"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_front_end.html#a863fdcd80ae2dea0b783203deaa3de38">HasErrors</a> () const </td></tr>
 <tr class="memdesc:a863fdcd80ae2dea0b783203deaa3de38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether any errors occured whilst anylizing the source code.  <a href="#a863fdcd80ae2dea0b783203deaa3de38">More...</a><br /></td></tr>
 <tr class="separator:a863fdcd80ae2dea0b783203deaa3de38"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -209,6 +213,30 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a85bbaf5a12f77a32943fbfaa27ba94ea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Bond::FrontEnd::FrontEnd </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_bond_1_1_front_end.html">FrontEnd</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="af8791e6e2edd528285f6163c156eb6cd"></a>
 <div class="memitem">
@@ -234,12 +262,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a30c55aa69798ee20db9bd6ceb0e67239"></a>
+<a class="anchor" id="a170c4012697130fc4192909fef6f28b3"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Bond::FrontEnd::Analyze </td>
+          <td class="memname"><a class="el" href="class_bond_1_1_translation_unit.html">TranslationUnit</a>* Bond::FrontEnd::Analyze </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -247,7 +275,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Performs loading, parsing and semantic analysis of all source files in the input file list, as well as those files referenced via include directives. </p>
+<p>Performs loading, parsing and semantic analysis of all source files in the input file list, as well as those files referenced via include directives. returns A parse tree of ParseNodes rooted with a list of TranslationUnits. </p>
 
 </div>
 </div>
@@ -289,6 +317,30 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns whether any errors occured whilst anylizing the source code. </p>
+
+</div>
+</div>
+<a class="anchor" id="a34da6cac0bc72c7b0e220682eaaf331e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_bond_1_1_front_end.html">FrontEnd</a>&amp; Bond::FrontEnd::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_bond_1_1_front_end.html">FrontEnd</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

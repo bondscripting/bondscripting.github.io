@@ -3,7 +3,7 @@ var searchData=
   ['ldexp',['Ldexp',['../namespace_bond.html#a73966e1d0cd4914ee2c67c8bc51a20d0',1,'Bond']]],
   ['ldexpf',['Ldexpf',['../namespace_bond.html#a20a802e08b36a4dae6fc58a89f630b26',1,'Bond']]],
   ['lex',['Lex',['../class_bond_1_1_lexer.html#a206e6933360c7fc1221cdf6225c71e48',1,'Bond::Lexer']]],
-  ['lexer',['Lexer',['../class_bond_1_1_lexer.html#a66df778cd381046f3077c96695592629',1,'Bond::Lexer']]],
+  ['lexer',['Lexer',['../class_bond_1_1_lexer.html#a66df778cd381046f3077c96695592629',1,'Bond::Lexer::Lexer(Allocator &amp;allocator, CompilerErrorBuffer &amp;errorBuffer)'],['../class_bond_1_1_lexer.html#af864c25af5f08fe65dea21546573d3ed',1,'Bond::Lexer::Lexer(const Lexer &amp;other)=delete']]],
   ['listparsenode',['ListParseNode',['../class_bond_1_1_list_parse_node.html#a7be09e471f388a343f2b68de7417f939',1,'Bond::ListParseNode']]],
   ['load',['Load',['../class_bond_1_1_cbo_loader.html#a7ebce48d9271823d7b4180238050c946',1,'Bond::CboLoader']]],
   ['loadalllibs',['LoadAllLibs',['../namespace_bond.html#a2ae79b2dc304e71e95a55f2696cd9d57',1,'Bond']]],

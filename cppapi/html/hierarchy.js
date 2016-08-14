@@ -108,7 +108,6 @@ var hierarchy =
       [ "Bond::TypeSpecifier", "class_bond_1_1_type_specifier.html", null ]
     ] ],
     [ "Bond::ParseNodeCount", "struct_bond_1_1_parse_node_count.html", null ],
-    [ "Bond::ParseNodeFactory", "class_bond_1_1_parse_node_factory.html", null ],
     [ "Bond::ParseNodeList< NodeType >", "class_bond_1_1_parse_node_list.html", null ],
     [ "Bond::ParseNodeVisitor", "class_bond_1_1_parse_node_visitor.html", [
       [ "Bond::ParseNodeTraverser", "class_bond_1_1_parse_node_traverser.html", [

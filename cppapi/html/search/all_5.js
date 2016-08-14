@@ -21,7 +21,7 @@ var searchData=
   ['freealigned',['FreeAligned',['../class_bond_1_1_allocator.html#a6dca1d0e262561c46aef5715d538b191',1,'Bond::Allocator::FreeAligned(void *buffer)=0'],['../class_bond_1_1_allocator.html#a0074ece5a6c1030276b83645df27d8dc',1,'Bond::Allocator::FreeAligned(const void *buffer)'],['../class_bond_1_1_default_allocator.html#aff539565827a26b13ab7e7ed5923941a',1,'Bond::DefaultAllocator::FreeAligned()'],['../namespace_bond.html#acaa4da7881f37ecfe803bc154ac96cb8',1,'Bond::FreeAligned()']]],
   ['frexp',['Frexp',['../namespace_bond.html#abbcb6b19b807ef76cb09b97f60b9fe68',1,'Bond']]],
   ['frexpf',['Frexpf',['../namespace_bond.html#ac38ccd41e5392a5d7a63c7c14f62758c',1,'Bond']]],
-  ['frontend',['FrontEnd',['../class_bond_1_1_front_end.html#aa2354aa9a23ea626e5a295a507644304',1,'Bond::FrontEnd']]],
+  ['frontend',['FrontEnd',['../class_bond_1_1_front_end.html#aa2354aa9a23ea626e5a295a507644304',1,'Bond::FrontEnd::FrontEnd(Allocator &amp;allocator, Lexer &amp;lexer, Parser &amp;parser, SemanticAnalyzer &amp;semanticAnalyzer, FileLoader &amp;fileLoader)'],['../class_bond_1_1_front_end.html#a85bbaf5a12f77a32943fbfaa27ba94ea',1,'Bond::FrontEnd::FrontEnd(const FrontEnd &amp;other)=delete']]],
   ['frontend',['FrontEnd',['../class_bond_1_1_front_end.html',1,'Bond']]],
   ['function',['Function',['../struct_bond_1_1_function.html',1,'Bond']]],
   ['function_5fcall_5fin_5fconst_5fexpression',['FUNCTION_CALL_IN_CONST_EXPRESSION',['../class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4cad2a21664b7ea9baf2b939321b4da80d9',1,'Bond::CompilerError']]],

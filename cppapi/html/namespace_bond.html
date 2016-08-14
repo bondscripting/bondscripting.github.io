@@ -288,8 +288,6 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_parse_node_counter.html">ParseNodeCounter</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_parse_node_factory.html">ParseNodeFactory</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_parse_node_list.html">ParseNodeList</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_parse_node_traverser.html">ParseNodeTraverser</a></td></tr>
@@ -393,9 +391,15 @@ Classes</h2></td></tr>
 Typedefs</h2></td></tr>
 <tr class="memitem:a516b3b2816755fd7f6c6976085360fb2"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#a516b3b2816755fd7f6c6976085360fb2">NativeFunction</a>) (<a class="el" href="class_bond_1_1_callee_stack_frame.html">CalleeStackFrame</a> &amp;frame)</td></tr>
 <tr class="separator:a516b3b2816755fd7f6c6976085360fb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fa36118c02afd1f252081501e134396"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="class_bond_1_1_allocator_1_1_handle.html">Allocator::Handle</a>&lt; const <a class="el" href="class_bond_1_1_token_collection.html">TokenCollection</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#a1fa36118c02afd1f252081501e134396">TokenCollectionHandle</a></td></tr>
-<tr class="memdesc:a1fa36118c02afd1f252081501e134396"><td class="mdescLeft">&#160;</td><td class="mdescRight">A smart pointer to a <a class="el" href="class_bond_1_1_token_collection.html" title="An ordered immutable collection of Tokens. ">TokenCollection</a>.  <a href="#a1fa36118c02afd1f252081501e134396">More...</a><br /></td></tr>
-<tr class="separator:a1fa36118c02afd1f252081501e134396"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1fa36118c02afd1f252081501e134396"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="class_bond_1_1_allocator_1_1_handle.html">Allocator::Handle</a>&lt; const <a class="el" href="class_bond_1_1_token_collection.html">TokenCollection</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__compiler.html#ga1fa36118c02afd1f252081501e134396">TokenCollectionHandle</a></td></tr>
+<tr class="memdesc:ga1fa36118c02afd1f252081501e134396"><td class="mdescLeft">&#160;</td><td class="mdescRight">An owning pointer to a dynamically allocated <a class="el" href="class_bond_1_1_token_collection.html" title="An ordered immutable collection of Tokens. ">TokenCollection</a>.  <a href="group__compiler.html#ga1fa36118c02afd1f252081501e134396">More...</a><br /></td></tr>
+<tr class="separator:ga1fa36118c02afd1f252081501e134396"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabc6e1643c8baf99c177f5f2d1bffcab7"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="class_bond_1_1_allocator_1_1_object_handle.html">Allocator::ObjectHandle</a>&lt; <a class="el" href="class_bond_1_1_parse_node.html">ParseNode</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__compiler.html#gabc6e1643c8baf99c177f5f2d1bffcab7">ParseNodeHandle</a></td></tr>
+<tr class="memdesc:gabc6e1643c8baf99c177f5f2d1bffcab7"><td class="mdescLeft">&#160;</td><td class="mdescRight">An owning pointer to a dynamically allocated <a class="el" href="class_bond_1_1_parse_node.html">ParseNode</a>.  <a href="group__compiler.html#gabc6e1643c8baf99c177f5f2d1bffcab7">More...</a><br /></td></tr>
+<tr class="separator:gabc6e1643c8baf99c177f5f2d1bffcab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab7d9448fe4aa29ee614bfea9a245a14a"><td class="memItemLeft" align="right" valign="top">typedef Vector&lt; <a class="el" href="group__compiler.html#gabc6e1643c8baf99c177f5f2d1bffcab7">ParseNodeHandle</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__compiler.html#gab7d9448fe4aa29ee614bfea9a245a14a">ParseNodeStore</a></td></tr>
+<tr class="memdesc:gab7d9448fe4aa29ee614bfea9a245a14a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A collection of dynamically allocated ParseNodes.  <a href="group__compiler.html#gab7d9448fe4aa29ee614bfea9a245a14a">More...</a><br /></td></tr>
+<tr class="separator:gab7d9448fe4aa29ee614bfea9a245a14a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a473aacb8a77d3d4c679f66542194453a"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="class_bond_1_1_auto_stack.html">AutoStack</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#a473aacb8a77d3d4c679f66542194453a">BoolStack</a></td></tr>
 <tr class="separator:a473aacb8a77d3d4c679f66542194453a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a965203f61cc50b40c0326cef4c24a1aa"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="class_bond_1_1_auto_stack.html">AutoStack</a>&lt; int32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#a965203f61cc50b40c0326cef4c24a1aa">IntStack</a></td></tr>
@@ -1473,20 +1477,6 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a1fa36118c02afd1f252081501e134396"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="class_bond_1_1_allocator_1_1_handle.html">Allocator::Handle</a>&lt;const <a class="el" href="class_bond_1_1_token_collection.html">TokenCollection</a>&gt; <a class="el" href="namespace_bond.html#a1fa36118c02afd1f252081501e134396">Bond::TokenCollectionHandle</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>A smart pointer to a <a class="el" href="class_bond_1_1_token_collection.html" title="An ordered immutable collection of Tokens. ">TokenCollection</a>. </p>
 
 </div>
 </div>

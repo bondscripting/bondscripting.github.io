@@ -80,7 +80,6 @@ var namespace_bond =
     [ "ParseNode", "class_bond_1_1_parse_node.html", "class_bond_1_1_parse_node" ],
     [ "ParseNodeCount", "struct_bond_1_1_parse_node_count.html", "struct_bond_1_1_parse_node_count" ],
     [ "ParseNodeCounter", "class_bond_1_1_parse_node_counter.html", "class_bond_1_1_parse_node_counter" ],
-    [ "ParseNodeFactory", "class_bond_1_1_parse_node_factory.html", "class_bond_1_1_parse_node_factory" ],
     [ "ParseNodeList", "class_bond_1_1_parse_node_list.html", "class_bond_1_1_parse_node_list" ],
     [ "ParseNodeTraverser", "class_bond_1_1_parse_node_traverser.html", "class_bond_1_1_parse_node_traverser" ],
     [ "ParseNodeVisitor", "class_bond_1_1_parse_node_visitor.html", "class_bond_1_1_parse_node_visitor" ],

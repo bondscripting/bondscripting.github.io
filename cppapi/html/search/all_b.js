@@ -7,7 +7,7 @@ var searchData=
   ['left',['Left',['../namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a983becf80d3cd5820e11b2d4be2e9406',1,'Bond::IO']]],
   ['length',['length',['../union_bond_1_1_value.html#a806ccbe6093efb326c284b847bbd4499',1,'Bond::Value']]],
   ['lex',['Lex',['../class_bond_1_1_lexer.html#a206e6933360c7fc1221cdf6225c71e48',1,'Bond::Lexer']]],
-  ['lexer',['Lexer',['../class_bond_1_1_lexer.html#a66df778cd381046f3077c96695592629',1,'Bond::Lexer']]],
+  ['lexer',['Lexer',['../class_bond_1_1_lexer.html#a66df778cd381046f3077c96695592629',1,'Bond::Lexer::Lexer(Allocator &amp;allocator, CompilerErrorBuffer &amp;errorBuffer)'],['../class_bond_1_1_lexer.html#af864c25af5f08fe65dea21546573d3ed',1,'Bond::Lexer::Lexer(const Lexer &amp;other)=delete']]],
   ['lexer',['Lexer',['../class_bond_1_1_lexer.html',1,'Bond']]],
   ['line',['line',['../struct_bond_1_1_stream_pos.html#a658a87ab66115df63f8e4b25dc284c0e',1,'Bond::StreamPos']]],
   ['listparsenode',['ListParseNode',['../class_bond_1_1_list_parse_node.html',1,'Bond']]],
