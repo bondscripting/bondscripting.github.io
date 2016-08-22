@@ -5,7 +5,7 @@ var searchData=
   ['decodepointersize',['DecodePointerSize',['../namespace_bond.html#a24b449c82ebb83b89b3dd486b705fb84',1,'Bond']]],
   ['decodesizeandtype',['DecodeSizeAndType',['../namespace_bond.html#a2948462830c26bf47cfe2b792b3f04a1',1,'Bond']]],
   ['defaultallocator',['DefaultAllocator',['../class_bond_1_1_default_allocator.html#ac4525ad743ccc9465027c60379c21f79',1,'Bond::DefaultAllocator']]],
-  ['disassemble',['Disassemble',['../class_bond_1_1_disassembler.html#ad3eab14a85d51273375150ea61f29b1c',1,'Bond::Disassembler']]],
+  ['disassemble',['Disassemble',['../class_bond_1_1_disassembler.html#a81ce78f48b74ec9aa36693443639fbb0',1,'Bond::Disassembler::Disassemble(const void *byteCode, size_t length, OutputStream &amp;outputStream)'],['../class_bond_1_1_disassembler.html#ae13479fff30f7f049a30696400fc4dad',1,'Bond::Disassembler::Disassemble(InputStream &amp;cboStream, OutputStream &amp;outputStream)']]],
   ['disassembler',['Disassembler',['../class_bond_1_1_disassembler.html#ae8816b32366a16afde4ef05abb7ef386',1,'Bond::Disassembler']]],
   ['diskfileloader',['DiskFileLoader',['../class_bond_1_1_disk_file_loader.html#a1d51a7e5c30190f3037b2e95c3c624b9',1,'Bond::DiskFileLoader']]],
   ['disposefile',['DisposeFile',['../class_bond_1_1_disk_file_loader.html#a21fecdf997402a6eb1cb00cd272ef5d4',1,'Bond::DiskFileLoader::DisposeFile()'],['../class_bond_1_1_file_loader.html#a3263957e0b2a9c670daeac2a61fc6a46',1,'Bond::FileLoader::DisposeFile()'],['../class_bond_1_1_memory_file_loader.html#aaca34b0e6a12a527b3264b973f58985b',1,'Bond::MemoryFileLoader::DisposeFile()']]],

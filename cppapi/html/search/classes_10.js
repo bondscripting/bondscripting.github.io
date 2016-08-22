@@ -4,6 +4,7 @@ var searchData=
   ['simplestring',['SimpleString',['../class_bond_1_1_simple_string.html',1,'Bond']]],
   ['stderroutputstream',['StdErrOutputStream',['../class_bond_1_1_std_err_output_stream.html',1,'Bond']]],
   ['stdininputstream',['StdInInputStream',['../class_bond_1_1_std_in_input_stream.html',1,'Bond']]],
+  ['stdiofilehandle',['StdioFileHandle',['../class_bond_1_1_stdio_file_handle.html',1,'Bond']]],
   ['stdioinputstream',['StdioInputStream',['../class_bond_1_1_stdio_input_stream.html',1,'Bond']]],
   ['stdiooutputstream',['StdioOutputStream',['../class_bond_1_1_stdio_output_stream.html',1,'Bond']]],
   ['stdoutoutputstream',['StdOutOutputStream',['../class_bond_1_1_std_out_output_stream.html',1,'Bond']]],

@@ -3,6 +3,7 @@ var class_bond_1_1_auto_stack_1_1_element =
     [ "Element", "class_bond_1_1_auto_stack_1_1_element.html#afb84b94262af5974489ff12d85278d9c", null ],
     [ "Element", "class_bond_1_1_auto_stack_1_1_element.html#af2eae6176048c785749238e09faec1b4", null ],
     [ "~Element", "class_bond_1_1_auto_stack_1_1_element.html#abe594e5419fd097a77f4a0241dbe93e1", null ],
+    [ "Element", "class_bond_1_1_auto_stack_1_1_element.html#a0f72139964b9a02c217e69de36659064", null ],
     [ "GetNext", "class_bond_1_1_auto_stack_1_1_element.html#abeeca9f0b79f9d96998747e78b91821d", null ],
     [ "GetNext", "class_bond_1_1_auto_stack_1_1_element.html#a940a5be81238a74649754720aa73c1a2", null ],
     [ "GetValue", "class_bond_1_1_auto_stack_1_1_element.html#a08cfb250c72e8748f446984a76c9fc3d", null ],

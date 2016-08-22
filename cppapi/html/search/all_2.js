@@ -23,7 +23,7 @@ var searchData=
   ['cbo_5fmin_5fsupported_5fminor_5fversion',['CBO_MIN_SUPPORTED_MINOR_VERSION',['../namespace_bond.html#a935156ef53d785ca14e156a595457bc1',1,'Bond']]],
   ['cbo_5fminor_5fversion',['CBO_MINOR_VERSION',['../namespace_bond.html#acf89777723582ac6ecc811dde18a4c44',1,'Bond']]],
   ['cboloader',['CboLoader',['../class_bond_1_1_cbo_loader.html',1,'Bond']]],
-  ['cboloader',['CboLoader',['../class_bond_1_1_cbo_loader.html#a657ef1b9635916bdfb0b90c996aa1bc1',1,'Bond::CboLoader::CboLoader(Allocator &amp;allocator)'],['../class_bond_1_1_cbo_loader.html#a5cef6d058b44d685b41f935e77d0f676',1,'Bond::CboLoader::CboLoader(Allocator &amp;tempAllocator, Allocator &amp;permAllocator)']]],
+  ['cboloader',['CboLoader',['../class_bond_1_1_cbo_loader.html#a657ef1b9635916bdfb0b90c996aa1bc1',1,'Bond::CboLoader::CboLoader(Allocator &amp;allocator)'],['../class_bond_1_1_cbo_loader.html#a5cef6d058b44d685b41f935e77d0f676',1,'Bond::CboLoader::CboLoader(Allocator &amp;tempAllocator, Allocator &amp;permAllocator)'],['../class_bond_1_1_cbo_loader.html#aaf65970814102a8425de97ee6bab72bf',1,'Bond::CboLoader::CboLoader(const CboLoader &amp;other)=delete']]],
   ['cbovalidator',['CboValidator',['../class_bond_1_1_cbo_validator.html',1,'Bond']]],
   ['cbrace',['CBRACE',['../class_bond_1_1_token.html#a6d09a1144b5a79476ae9c8056728362fae993df6b482f780127531d1d9685288b',1,'Bond::Token']]],
   ['cbracket',['CBRACKET',['../class_bond_1_1_token.html#a6d09a1144b5a79476ae9c8056728362fa782d7e732221c7c14575ac1ef9c71c5a',1,'Bond::Token']]],

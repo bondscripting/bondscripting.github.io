@@ -123,14 +123,15 @@ Inheritance diagram for Bond::Stream:</div>
  <div class="center">
   <img src="class_bond_1_1_stream.png" usemap="#Bond::Stream_map" alt=""/>
   <map id="Bond::Stream_map" name="Bond::Stream_map">
-<area href="class_bond_1_1_input_stream.html" alt="Bond::InputStream" shape="rect" coords="0,56,169,80"/>
-<area href="class_bond_1_1_output_stream.html" alt="Bond::OutputStream" shape="rect" coords="268,56,437,80"/>
-<area href="class_bond_1_1_stdio_input_stream.html" alt="Bond::StdioInputStream" shape="rect" coords="0,112,169,136"/>
-<area href="class_bond_1_1_memory_output_stream.html" alt="Bond::MemoryOutputStream" shape="rect" coords="179,112,348,136"/>
-<area href="class_bond_1_1_stdio_output_stream.html" alt="Bond::StdioOutputStream" shape="rect" coords="358,112,527,136"/>
-<area href="class_bond_1_1_std_in_input_stream.html" alt="Bond::StdInInputStream" shape="rect" coords="0,168,169,192"/>
-<area href="class_bond_1_1_std_err_output_stream.html" alt="Bond::StdErrOutputStream" shape="rect" coords="268,168,437,192"/>
-<area href="class_bond_1_1_std_out_output_stream.html" alt="Bond::StdOutOutputStream" shape="rect" coords="447,168,616,192"/>
+<area href="class_bond_1_1_input_stream.html" alt="Bond::InputStream" shape="rect" coords="89,56,258,80"/>
+<area href="class_bond_1_1_output_stream.html" alt="Bond::OutputStream" shape="rect" coords="447,56,616,80"/>
+<area href="class_bond_1_1_memory_input_stream.html" alt="Bond::MemoryInputStream" shape="rect" coords="0,112,169,136"/>
+<area href="class_bond_1_1_stdio_input_stream.html" alt="Bond::StdioInputStream" shape="rect" coords="179,112,348,136"/>
+<area href="class_bond_1_1_memory_output_stream.html" alt="Bond::MemoryOutputStream" shape="rect" coords="358,112,527,136"/>
+<area href="class_bond_1_1_stdio_output_stream.html" alt="Bond::StdioOutputStream" shape="rect" coords="537,112,706,136"/>
+<area href="class_bond_1_1_std_in_input_stream.html" alt="Bond::StdInInputStream" shape="rect" coords="179,168,348,192"/>
+<area href="class_bond_1_1_std_err_output_stream.html" alt="Bond::StdErrOutputStream" shape="rect" coords="447,168,616,192"/>
+<area href="class_bond_1_1_std_out_output_stream.html" alt="Bond::StdOutOutputStream" shape="rect" coords="626,168,795,192"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -147,6 +148,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a655ad666aaf7d5771d4fb4f2f4a84e3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22021b526850d25b8414035f406ffb28"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_bond_1_1_stream.html#a489b6b37c5ef8c0101dbee13bb83acd7">pos_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stream.html#a22021b526850d25b8414035f406ffb28">GetPosition</a> () const  =0</td></tr>
 <tr class="separator:a22021b526850d25b8414035f406ffb28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c9d74c70a6bca39fd657445f99cfabf"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_bond_1_1_stream.html#a489b6b37c5ef8c0101dbee13bb83acd7">pos_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stream.html#a8c9d74c70a6bca39fd657445f99cfabf">GetEndPosition</a> () const  =0</td></tr>
+<tr class="separator:a8c9d74c70a6bca39fd657445f99cfabf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc8c5408aaae3ffe731bc6e4f4414d36"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stream.html#abc8c5408aaae3ffe731bc6e4f4414d36">SetPosition</a> (<a class="el" href="class_bond_1_1_stream.html#a6314350315fb68539f436be332b8419d">off_t</a> offset)=0</td></tr>
 <tr class="separator:abc8c5408aaae3ffe731bc6e4f4414d36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8b7ccb707a2e8ea06f12f8fbcfa2748"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stream.html#ac8b7ccb707a2e8ea06f12f8fbcfa2748">SetPositionFromEnd</a> (<a class="el" href="class_bond_1_1_stream.html#a6314350315fb68539f436be332b8419d">off_t</a> offset)=0</td></tr>
@@ -233,7 +236,32 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_bond_1_1_memory_output_stream.html#abfd06c7b2d832f4d56dc1730b7ac614f">Bond::MemoryOutputStream</a>, <a class="el" href="class_bond_1_1_stdio_input_stream.html#aa9e47d9941dd15f77bc618af46bb62fd">Bond::StdioInputStream</a>, and <a class="el" href="class_bond_1_1_stdio_output_stream.html#a3d0f7d4082b2306093269db940c43e0e">Bond::StdioOutputStream</a>.</p>
+<p>Implemented in <a class="el" href="class_bond_1_1_stdio_input_stream.html#aa9e47d9941dd15f77bc618af46bb62fd">Bond::StdioInputStream</a>, <a class="el" href="class_bond_1_1_stdio_output_stream.html#a3d0f7d4082b2306093269db940c43e0e">Bond::StdioOutputStream</a>, <a class="el" href="class_bond_1_1_memory_input_stream.html#a429f202d47402f128097cfb68cd63e28">Bond::MemoryInputStream</a>, and <a class="el" href="class_bond_1_1_memory_output_stream.html#abfd06c7b2d832f4d56dc1730b7ac614f">Bond::MemoryOutputStream</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8c9d74c70a6bca39fd657445f99cfabf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_bond_1_1_stream.html#a489b6b37c5ef8c0101dbee13bb83acd7">pos_t</a> Bond::Stream::GetEndPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_bond_1_1_stdio_input_stream.html#a881401d0939a9ebde94aa82f1917b578">Bond::StdioInputStream</a>, <a class="el" href="class_bond_1_1_stdio_output_stream.html#aceea71e53467b112b9fa8e33b9a29d7c">Bond::StdioOutputStream</a>, <a class="el" href="class_bond_1_1_memory_input_stream.html#aee7cb7a81b012d6903a2db0d89cb002f">Bond::MemoryInputStream</a>, and <a class="el" href="class_bond_1_1_memory_output_stream.html#ad026eaf2a18a132d0e8d0f0576f820cb">Bond::MemoryOutputStream</a>.</p>
 
 </div>
 </div>
@@ -258,7 +286,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_bond_1_1_memory_output_stream.html#a3b35f8f369d153724ae911ffe50ef686">Bond::MemoryOutputStream</a>, <a class="el" href="class_bond_1_1_stdio_input_stream.html#a3955429f56d85916ca4ca364668cec3c">Bond::StdioInputStream</a>, and <a class="el" href="class_bond_1_1_stdio_output_stream.html#a518990e44b14829c82f2f504c3f61d59">Bond::StdioOutputStream</a>.</p>
+<p>Implemented in <a class="el" href="class_bond_1_1_stdio_input_stream.html#a3955429f56d85916ca4ca364668cec3c">Bond::StdioInputStream</a>, <a class="el" href="class_bond_1_1_stdio_output_stream.html#a518990e44b14829c82f2f504c3f61d59">Bond::StdioOutputStream</a>, <a class="el" href="class_bond_1_1_memory_input_stream.html#ae8a3c042826cc927c0b2920eebd0ae6e">Bond::MemoryInputStream</a>, and <a class="el" href="class_bond_1_1_memory_output_stream.html#a3b35f8f369d153724ae911ffe50ef686">Bond::MemoryOutputStream</a>.</p>
 
 </div>
 </div>
@@ -283,7 +311,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_bond_1_1_memory_output_stream.html#a9689b100788d7348a3c6005ee6a5cd5a">Bond::MemoryOutputStream</a>, <a class="el" href="class_bond_1_1_stdio_input_stream.html#a78300482bc66c2fd346f34fc22ca96bf">Bond::StdioInputStream</a>, and <a class="el" href="class_bond_1_1_stdio_output_stream.html#ae0b7ac38d7e21ac24e348d37b01ae147">Bond::StdioOutputStream</a>.</p>
+<p>Implemented in <a class="el" href="class_bond_1_1_stdio_input_stream.html#a78300482bc66c2fd346f34fc22ca96bf">Bond::StdioInputStream</a>, <a class="el" href="class_bond_1_1_stdio_output_stream.html#ae0b7ac38d7e21ac24e348d37b01ae147">Bond::StdioOutputStream</a>, <a class="el" href="class_bond_1_1_memory_input_stream.html#ab8e3f196bbe9071863171ef0de19ae3d">Bond::MemoryInputStream</a>, and <a class="el" href="class_bond_1_1_memory_output_stream.html#a9689b100788d7348a3c6005ee6a5cd5a">Bond::MemoryOutputStream</a>.</p>
 
 </div>
 </div>
@@ -309,7 +337,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_bond_1_1_memory_output_stream.html#a52a5be0ac186b4c575d32aa26e9568c3">Bond::MemoryOutputStream</a>, <a class="el" href="class_bond_1_1_stdio_input_stream.html#a21ce2dd85fbd19bb2b272bab8fc89dd2">Bond::StdioInputStream</a>, and <a class="el" href="class_bond_1_1_stdio_output_stream.html#ae60681dc6a7cb4a96a70eb3566cd6dc8">Bond::StdioOutputStream</a>.</p>
+<p>Implemented in <a class="el" href="class_bond_1_1_stdio_input_stream.html#a21ce2dd85fbd19bb2b272bab8fc89dd2">Bond::StdioInputStream</a>, <a class="el" href="class_bond_1_1_stdio_output_stream.html#ae60681dc6a7cb4a96a70eb3566cd6dc8">Bond::StdioOutputStream</a>, <a class="el" href="class_bond_1_1_memory_input_stream.html#a8cfffb2c091c4a061c36e5a4ad7307c5">Bond::MemoryInputStream</a>, and <a class="el" href="class_bond_1_1_memory_output_stream.html#a52a5be0ac186b4c575d32aa26e9568c3">Bond::MemoryOutputStream</a>.</p>
 
 </div>
 </div>
@@ -335,7 +363,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_bond_1_1_memory_output_stream.html#acb63c6e8adaa0b2474bf019b5e973483">Bond::MemoryOutputStream</a>, <a class="el" href="class_bond_1_1_stdio_input_stream.html#a55fa17cbe5681116f03dac43e5610348">Bond::StdioInputStream</a>, and <a class="el" href="class_bond_1_1_stdio_output_stream.html#a75cd7b84f24c93dfa651a34f244af7f5">Bond::StdioOutputStream</a>.</p>
+<p>Implemented in <a class="el" href="class_bond_1_1_stdio_input_stream.html#a55fa17cbe5681116f03dac43e5610348">Bond::StdioInputStream</a>, <a class="el" href="class_bond_1_1_stdio_output_stream.html#a75cd7b84f24c93dfa651a34f244af7f5">Bond::StdioOutputStream</a>, <a class="el" href="class_bond_1_1_memory_input_stream.html#af858b6064d7a3dc6a2364db166725714">Bond::MemoryInputStream</a>, and <a class="el" href="class_bond_1_1_memory_output_stream.html#acb63c6e8adaa0b2474bf019b5e973483">Bond::MemoryOutputStream</a>.</p>
 
 </div>
 </div>

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>Bond: Bond::MemoryOutputStream Class Reference</title>
+<title>Bond: Bond::MemoryInputStream Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -88,7 +88,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('class_bond_1_1_memory_output_stream.html','');});
+$(document).ready(function(){initNavTree('class_bond_1_1_memory_input_stream.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -108,53 +108,55 @@ $(document).ready(function(){initNavTree('class_bond_1_1_memory_output_stream.ht
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="class_bond_1_1_memory_output_stream-members.html">List of all members</a>  </div>
+<a href="class_bond_1_1_memory_input_stream-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Bond::MemoryOutputStream Class Reference</div>  </div>
+<div class="title">Bond::MemoryInputStream Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;memoryoutputstream.h&gt;</code></p>
+<p><code>#include &lt;memoryinputstream.h&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for Bond::MemoryOutputStream:</div>
+Inheritance diagram for Bond::MemoryInputStream:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="class_bond_1_1_memory_output_stream.png" usemap="#Bond::MemoryOutputStream_map" alt=""/>
-  <map id="Bond::MemoryOutputStream_map" name="Bond::MemoryOutputStream_map">
-<area href="class_bond_1_1_output_stream.html" alt="Bond::OutputStream" shape="rect" coords="0,56,169,80"/>
-<area href="class_bond_1_1_stream.html" alt="Bond::Stream" shape="rect" coords="0,0,169,24"/>
+  <img src="class_bond_1_1_memory_input_stream.png" usemap="#Bond::MemoryInputStream_map" alt=""/>
+  <map id="Bond::MemoryInputStream_map" name="Bond::MemoryInputStream_map">
+<area href="class_bond_1_1_input_stream.html" alt="Bond::InputStream" shape="rect" coords="0,56,159,80"/>
+<area href="class_bond_1_1_stream.html" alt="Bond::Stream" shape="rect" coords="0,0,159,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a55dc594cb0f06e062b98d70fb929c794"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_memory_output_stream.html#a55dc594cb0f06e062b98d70fb929c794">MemoryOutputStream</a> (void *buffer, <a class="el" href="class_bond_1_1_stream.html#a489b6b37c5ef8c0101dbee13bb83acd7">pos_t</a> size)</td></tr>
-<tr class="separator:a55dc594cb0f06e062b98d70fb929c794"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeccdc4be8f528bd1fa42c508da85174a"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_memory_output_stream.html#aeccdc4be8f528bd1fa42c508da85174a">~MemoryOutputStream</a> ()</td></tr>
-<tr class="separator:aeccdc4be8f528bd1fa42c508da85174a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a267440fa535ab521f73d5590998e163b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_memory_output_stream.html#a267440fa535ab521f73d5590998e163b">VPrint</a> (const char *format, va_list argList) override</td></tr>
-<tr class="separator:a267440fa535ab521f73d5590998e163b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed908158fd309fcdaac7161514b50428"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_memory_output_stream.html#aed908158fd309fcdaac7161514b50428">Write</a> (const uint8_t *bytes, size_t numBytes)</td></tr>
-<tr class="separator:aed908158fd309fcdaac7161514b50428"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a325e19eefc0fc08175f87d32ba15c085"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_memory_output_stream.html#a325e19eefc0fc08175f87d32ba15c085">Write</a> (uint8_t c) override</td></tr>
-<tr class="separator:a325e19eefc0fc08175f87d32ba15c085"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b35f8f369d153724ae911ffe50ef686"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_bond_1_1_stream.html#a489b6b37c5ef8c0101dbee13bb83acd7">pos_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_memory_output_stream.html#a3b35f8f369d153724ae911ffe50ef686">GetPosition</a> () const  override</td></tr>
-<tr class="separator:a3b35f8f369d153724ae911ffe50ef686"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad026eaf2a18a132d0e8d0f0576f820cb"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_bond_1_1_stream.html#a489b6b37c5ef8c0101dbee13bb83acd7">pos_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_memory_output_stream.html#ad026eaf2a18a132d0e8d0f0576f820cb">GetEndPosition</a> () const  override</td></tr>
-<tr class="separator:ad026eaf2a18a132d0e8d0f0576f820cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52a5be0ac186b4c575d32aa26e9568c3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_memory_output_stream.html#a52a5be0ac186b4c575d32aa26e9568c3">SetPosition</a> (<a class="el" href="class_bond_1_1_stream.html#a6314350315fb68539f436be332b8419d">off_t</a> offset) override</td></tr>
-<tr class="separator:a52a5be0ac186b4c575d32aa26e9568c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb63c6e8adaa0b2474bf019b5e973483"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_memory_output_stream.html#acb63c6e8adaa0b2474bf019b5e973483">SetPositionFromEnd</a> (<a class="el" href="class_bond_1_1_stream.html#a6314350315fb68539f436be332b8419d">off_t</a> offset) override</td></tr>
-<tr class="separator:acb63c6e8adaa0b2474bf019b5e973483"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abfd06c7b2d832f4d56dc1730b7ac614f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_memory_output_stream.html#abfd06c7b2d832f4d56dc1730b7ac614f">AddOffset</a> (<a class="el" href="class_bond_1_1_stream.html#a6314350315fb68539f436be332b8419d">off_t</a> offset) override</td></tr>
-<tr class="separator:abfd06c7b2d832f4d56dc1730b7ac614f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9689b100788d7348a3c6005ee6a5cd5a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_memory_output_stream.html#a9689b100788d7348a3c6005ee6a5cd5a">IsEof</a> () const  override</td></tr>
-<tr class="separator:a9689b100788d7348a3c6005ee6a5cd5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_bond_1_1_output_stream"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_bond_1_1_output_stream')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_bond_1_1_output_stream.html">Bond::OutputStream</a></td></tr>
-<tr class="memitem:ae7397df53cce0ddc6a4ef7ca436a8984 inherit pub_methods_class_bond_1_1_output_stream"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_output_stream.html#ae7397df53cce0ddc6a4ef7ca436a8984">~OutputStream</a> ()</td></tr>
-<tr class="separator:ae7397df53cce0ddc6a4ef7ca436a8984 inherit pub_methods_class_bond_1_1_output_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7a47879c322d92f2e1f8ce546cc524c inherit pub_methods_class_bond_1_1_output_stream"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_output_stream.html#ac7a47879c322d92f2e1f8ce546cc524c">Print</a> (const char *format,...)</td></tr>
-<tr class="separator:ac7a47879c322d92f2e1f8ce546cc524c inherit pub_methods_class_bond_1_1_output_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5247182e3c432e465a57b7ccca2feb9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_memory_input_stream.html#ae5247182e3c432e465a57b7ccca2feb9">MemoryInputStream</a> (const void *buffer, <a class="el" href="class_bond_1_1_stream.html#a489b6b37c5ef8c0101dbee13bb83acd7">pos_t</a> size)</td></tr>
+<tr class="separator:ae5247182e3c432e465a57b7ccca2feb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44e6d19338f3cf4fdf24c46faf2787e6"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_memory_input_stream.html#a44e6d19338f3cf4fdf24c46faf2787e6">~MemoryInputStream</a> ()</td></tr>
+<tr class="separator:a44e6d19338f3cf4fdf24c46faf2787e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07a6f00eecf1caa0cc242200242d7b1e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_memory_input_stream.html#a07a6f00eecf1caa0cc242200242d7b1e">VScan</a> (const char *format, va_list argList) override</td></tr>
+<tr class="separator:a07a6f00eecf1caa0cc242200242d7b1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a410195071750a904f0f33b9c0831bf02"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_memory_input_stream.html#a410195071750a904f0f33b9c0831bf02">Read</a> (uint8_t *bytes, size_t numBytes)</td></tr>
+<tr class="separator:a410195071750a904f0f33b9c0831bf02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1c4095fd2ebadc8c5d36de3c70614fc"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_memory_input_stream.html#af1c4095fd2ebadc8c5d36de3c70614fc">Read</a> () override</td></tr>
+<tr class="separator:af1c4095fd2ebadc8c5d36de3c70614fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8a3c042826cc927c0b2920eebd0ae6e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_bond_1_1_stream.html#a489b6b37c5ef8c0101dbee13bb83acd7">pos_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_memory_input_stream.html#ae8a3c042826cc927c0b2920eebd0ae6e">GetPosition</a> () const  override</td></tr>
+<tr class="separator:ae8a3c042826cc927c0b2920eebd0ae6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee7cb7a81b012d6903a2db0d89cb002f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_bond_1_1_stream.html#a489b6b37c5ef8c0101dbee13bb83acd7">pos_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_memory_input_stream.html#aee7cb7a81b012d6903a2db0d89cb002f">GetEndPosition</a> () const  override</td></tr>
+<tr class="separator:aee7cb7a81b012d6903a2db0d89cb002f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cfffb2c091c4a061c36e5a4ad7307c5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_memory_input_stream.html#a8cfffb2c091c4a061c36e5a4ad7307c5">SetPosition</a> (<a class="el" href="class_bond_1_1_stream.html#a6314350315fb68539f436be332b8419d">off_t</a> offset) override</td></tr>
+<tr class="separator:a8cfffb2c091c4a061c36e5a4ad7307c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af858b6064d7a3dc6a2364db166725714"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_memory_input_stream.html#af858b6064d7a3dc6a2364db166725714">SetPositionFromEnd</a> (<a class="el" href="class_bond_1_1_stream.html#a6314350315fb68539f436be332b8419d">off_t</a> offset) override</td></tr>
+<tr class="separator:af858b6064d7a3dc6a2364db166725714"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a429f202d47402f128097cfb68cd63e28"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_memory_input_stream.html#a429f202d47402f128097cfb68cd63e28">AddOffset</a> (<a class="el" href="class_bond_1_1_stream.html#a6314350315fb68539f436be332b8419d">off_t</a> offset) override</td></tr>
+<tr class="separator:a429f202d47402f128097cfb68cd63e28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8e3f196bbe9071863171ef0de19ae3d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_memory_input_stream.html#ab8e3f196bbe9071863171ef0de19ae3d">IsEof</a> () const  override</td></tr>
+<tr class="separator:ab8e3f196bbe9071863171ef0de19ae3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_bond_1_1_input_stream"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_bond_1_1_input_stream')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_bond_1_1_input_stream.html">Bond::InputStream</a></td></tr>
+<tr class="memitem:a9463811973236acbf3f07a642da03649 inherit pub_methods_class_bond_1_1_input_stream"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_input_stream.html#a9463811973236acbf3f07a642da03649">~InputStream</a> ()</td></tr>
+<tr class="separator:a9463811973236acbf3f07a642da03649 inherit pub_methods_class_bond_1_1_input_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37123879cbaa867d975653221a9e6d4f inherit pub_methods_class_bond_1_1_input_stream"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_input_stream.html#a37123879cbaa867d975653221a9e6d4f">Scan</a> (const char *format,...)</td></tr>
+<tr class="separator:a37123879cbaa867d975653221a9e6d4f inherit pub_methods_class_bond_1_1_input_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a685b3338bb49beeed21f7b0581584d0f inherit pub_methods_class_bond_1_1_input_stream"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_input_stream.html#a685b3338bb49beeed21f7b0581584d0f">Read</a> (char *bytes, size_t numBytes)</td></tr>
+<tr class="separator:a685b3338bb49beeed21f7b0581584d0f inherit pub_methods_class_bond_1_1_input_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_bond_1_1_stream"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_bond_1_1_stream')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_bond_1_1_stream.html">Bond::Stream</a></td></tr>
 <tr class="memitem:a655ad666aaf7d5771d4fb4f2f4a84e3c inherit pub_methods_class_bond_1_1_stream"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stream.html#a655ad666aaf7d5771d4fb4f2f4a84e3c">~Stream</a> ()</td></tr>
 <tr class="separator:a655ad666aaf7d5771d4fb4f2f4a84e3c inherit pub_methods_class_bond_1_1_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -171,14 +173,14 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a34e5305e69fc9e7f8c946cf05cbf4cfb inherit pub_static_attribs_class_bond_1_1_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a55dc594cb0f06e062b98d70fb929c794"></a>
+<a class="anchor" id="ae5247182e3c432e465a57b7ccca2feb9"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Bond::MemoryOutputStream::MemoryOutputStream </td>
+          <td class="memname">Bond::MemoryInputStream::MemoryInputStream </td>
           <td>(</td>
-          <td class="paramtype">void *&#160;</td>
+          <td class="paramtype">const void *&#160;</td>
           <td class="paramname"><em>buffer</em>, </td>
         </tr>
         <tr>
@@ -197,7 +199,7 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aeccdc4be8f528bd1fa42c508da85174a"></a>
+<a class="anchor" id="a44e6d19338f3cf4fdf24c46faf2787e6"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -205,7 +207,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual Bond::MemoryOutputStream::~MemoryOutputStream </td>
+          <td class="memname">virtual Bond::MemoryInputStream::~MemoryInputStream </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -221,7 +223,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="abfd06c7b2d832f4d56dc1730b7ac614f"></a>
+<a class="anchor" id="a429f202d47402f128097cfb68cd63e28"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -229,7 +231,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void Bond::MemoryOutputStream::AddOffset </td>
+          <td class="memname">virtual void Bond::MemoryInputStream::AddOffset </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_bond_1_1_stream.html#a6314350315fb68539f436be332b8419d">off_t</a>&#160;</td>
           <td class="paramname"><em>offset</em></td><td>)</td>
@@ -247,7 +249,7 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad026eaf2a18a132d0e8d0f0576f820cb"></a>
+<a class="anchor" id="aee7cb7a81b012d6903a2db0d89cb002f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -255,7 +257,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="class_bond_1_1_stream.html#a489b6b37c5ef8c0101dbee13bb83acd7">pos_t</a> Bond::MemoryOutputStream::GetEndPosition </td>
+          <td class="memname">virtual <a class="el" href="class_bond_1_1_stream.html#a489b6b37c5ef8c0101dbee13bb83acd7">pos_t</a> Bond::MemoryInputStream::GetEndPosition </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -272,7 +274,7 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a3b35f8f369d153724ae911ffe50ef686"></a>
+<a class="anchor" id="ae8a3c042826cc927c0b2920eebd0ae6e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -280,7 +282,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="class_bond_1_1_stream.html#a489b6b37c5ef8c0101dbee13bb83acd7">pos_t</a> Bond::MemoryOutputStream::GetPosition </td>
+          <td class="memname">virtual <a class="el" href="class_bond_1_1_stream.html#a489b6b37c5ef8c0101dbee13bb83acd7">pos_t</a> Bond::MemoryInputStream::GetPosition </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -297,7 +299,7 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9689b100788d7348a3c6005ee6a5cd5a"></a>
+<a class="anchor" id="ab8e3f196bbe9071863171ef0de19ae3d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -305,7 +307,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool Bond::MemoryOutputStream::IsEof </td>
+          <td class="memname">virtual bool Bond::MemoryInputStream::IsEof </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -322,7 +324,7 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a52a5be0ac186b4c575d32aa26e9568c3"></a>
+<a class="anchor" id="a410195071750a904f0f33b9c0831bf02"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -330,7 +332,68 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void Bond::MemoryOutputStream::SetPosition </td>
+          <td class="memname">virtual size_t Bond::MemoryInputStream::Read </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>bytes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>numBytes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="class_bond_1_1_input_stream.html#af7b215ecc1d113cea45c5c4a11c775a2">Bond::InputStream</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af1c4095fd2ebadc8c5d36de3c70614fc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Bond::MemoryInputStream::Read </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="class_bond_1_1_input_stream.html#a558de5cdf47d15b87dd95d1190688f3f">Bond::InputStream</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8cfffb2c091c4a061c36e5a4ad7307c5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Bond::MemoryInputStream::SetPosition </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_bond_1_1_stream.html#a6314350315fb68539f436be332b8419d">off_t</a>&#160;</td>
           <td class="paramname"><em>offset</em></td><td>)</td>
@@ -348,7 +411,7 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="acb63c6e8adaa0b2474bf019b5e973483"></a>
+<a class="anchor" id="af858b6064d7a3dc6a2364db166725714"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -356,7 +419,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void Bond::MemoryOutputStream::SetPositionFromEnd </td>
+          <td class="memname">virtual void Bond::MemoryInputStream::SetPositionFromEnd </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_bond_1_1_stream.html#a6314350315fb68539f436be332b8419d">off_t</a>&#160;</td>
           <td class="paramname"><em>offset</em></td><td>)</td>
@@ -374,7 +437,7 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a267440fa535ab521f73d5590998e163b"></a>
+<a class="anchor" id="a07a6f00eecf1caa0cc242200242d7b1e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -382,7 +445,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void Bond::MemoryOutputStream::VPrint </td>
+          <td class="memname">virtual void Bond::MemoryInputStream::VScan </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>format</em>, </td>
@@ -406,81 +469,19 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_bond_1_1_output_stream.html#a097d05b63093fa0edb12ff43c114f8f5">Bond::OutputStream</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aed908158fd309fcdaac7161514b50428"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void Bond::MemoryOutputStream::Write </td>
-          <td>(</td>
-          <td class="paramtype">const uint8_t *&#160;</td>
-          <td class="paramname"><em>bytes</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>numBytes</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reimplemented from <a class="el" href="class_bond_1_1_output_stream.html#a4341cfc0c16a7e07cdaa9fe186d1b911">Bond::OutputStream</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a325e19eefc0fc08175f87d32ba15c085"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void Bond::MemoryOutputStream::Write </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>c</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implements <a class="el" href="class_bond_1_1_output_stream.html#a080b4c34941f762298c4bfc3c97e1e60">Bond::OutputStream</a>.</p>
+<p>Implements <a class="el" href="class_bond_1_1_input_stream.html#af635f7445e7f02e4b7dd70b1ab116a91">Bond::InputStream</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>include/bond/io/memoryoutputstream.h</li>
+<li>include/bond/io/memoryinputstream.h</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespace_bond.html">Bond</a></li><li class="navelem"><a class="el" href="class_bond_1_1_memory_output_stream.html">MemoryOutputStream</a></li>
+    <li class="navelem"><a class="el" href="namespace_bond.html">Bond</a></li><li class="navelem"><a class="el" href="class_bond_1_1_memory_input_stream.html">MemoryInputStream</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>

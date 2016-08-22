@@ -1,7 +1,7 @@
 var searchData=
 [
   ['element',['Element',['../class_bond_1_1_auto_stack_1_1_element.html',1,'Bond::AutoStack']]],
-  ['element',['Element',['../class_bond_1_1_auto_stack_1_1_element.html#afb84b94262af5974489ff12d85278d9c',1,'Bond::AutoStack::Element::Element(AutoStack &amp;stack)'],['../class_bond_1_1_auto_stack_1_1_element.html#af2eae6176048c785749238e09faec1b4',1,'Bond::AutoStack::Element::Element(AutoStack &amp;stack, Args &amp;&amp;...args)']]],
+  ['element',['Element',['../class_bond_1_1_auto_stack_1_1_element.html#afb84b94262af5974489ff12d85278d9c',1,'Bond::AutoStack::Element::Element(AutoStack &amp;stack)'],['../class_bond_1_1_auto_stack_1_1_element.html#af2eae6176048c785749238e09faec1b4',1,'Bond::AutoStack::Element::Element(AutoStack &amp;stack, Args &amp;&amp;...args)'],['../class_bond_1_1_auto_stack_1_1_element.html#a0f72139964b9a02c217e69de36659064',1,'Bond::AutoStack::Element::Element(const Element &amp;other)=delete']]],
   ['empty_5fcharacter_5fconstant',['EMPTY_CHARACTER_CONSTANT',['../class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4ca399dfe800d3319e8365da7bddf436fb8',1,'Bond::CompilerError']]],
   ['empty_5fswitch_5flabel_5flist',['EMPTY_SWITCH_LABEL_LIST',['../class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4ca6af1ca988ba9ef2242dd72852f8d71b1',1,'Bond::CompilerError']]],
   ['empty_5fswitch_5fstatement',['EMPTY_SWITCH_STATEMENT',['../class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4ca43d62f0507e92a3af9ad3e16c11a45ef',1,'Bond::CompilerError']]],

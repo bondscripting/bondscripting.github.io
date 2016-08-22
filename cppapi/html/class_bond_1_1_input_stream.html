@@ -121,9 +121,10 @@ Inheritance diagram for Bond::InputStream:</div>
  <div class="center">
   <img src="class_bond_1_1_input_stream.png" usemap="#Bond::InputStream_map" alt=""/>
   <map id="Bond::InputStream_map" name="Bond::InputStream_map">
-<area href="class_bond_1_1_stream.html" alt="Bond::Stream" shape="rect" coords="0,0,141,24"/>
-<area href="class_bond_1_1_stdio_input_stream.html" alt="Bond::StdioInputStream" shape="rect" coords="0,112,141,136"/>
-<area href="class_bond_1_1_std_in_input_stream.html" alt="Bond::StdInInputStream" shape="rect" coords="0,168,141,192"/>
+<area href="class_bond_1_1_stream.html" alt="Bond::Stream" shape="rect" coords="84,0,243,24"/>
+<area href="class_bond_1_1_memory_input_stream.html" alt="Bond::MemoryInputStream" shape="rect" coords="0,112,159,136"/>
+<area href="class_bond_1_1_stdio_input_stream.html" alt="Bond::StdioInputStream" shape="rect" coords="169,112,328,136"/>
+<area href="class_bond_1_1_std_in_input_stream.html" alt="Bond::StdInInputStream" shape="rect" coords="169,168,328,192"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -135,6 +136,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a37123879cbaa867d975653221a9e6d4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af635f7445e7f02e4b7dd70b1ab116a91"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_input_stream.html#af635f7445e7f02e4b7dd70b1ab116a91">VScan</a> (const char *format, va_list argList)=0</td></tr>
 <tr class="separator:af635f7445e7f02e4b7dd70b1ab116a91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a685b3338bb49beeed21f7b0581584d0f"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_input_stream.html#a685b3338bb49beeed21f7b0581584d0f">Read</a> (char *bytes, size_t numBytes)</td></tr>
+<tr class="separator:a685b3338bb49beeed21f7b0581584d0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7b215ecc1d113cea45c5c4a11c775a2"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_input_stream.html#af7b215ecc1d113cea45c5c4a11c775a2">Read</a> (uint8_t *bytes, size_t numBytes)</td></tr>
 <tr class="separator:af7b215ecc1d113cea45c5c4a11c775a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a558de5cdf47d15b87dd95d1190688f3f"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_input_stream.html#a558de5cdf47d15b87dd95d1190688f3f">Read</a> ()=0</td></tr>
@@ -144,6 +147,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a655ad666aaf7d5771d4fb4f2f4a84e3c inherit pub_methods_class_bond_1_1_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22021b526850d25b8414035f406ffb28 inherit pub_methods_class_bond_1_1_stream"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_bond_1_1_stream.html#a489b6b37c5ef8c0101dbee13bb83acd7">pos_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stream.html#a22021b526850d25b8414035f406ffb28">GetPosition</a> () const  =0</td></tr>
 <tr class="separator:a22021b526850d25b8414035f406ffb28 inherit pub_methods_class_bond_1_1_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c9d74c70a6bca39fd657445f99cfabf inherit pub_methods_class_bond_1_1_stream"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_bond_1_1_stream.html#a489b6b37c5ef8c0101dbee13bb83acd7">pos_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stream.html#a8c9d74c70a6bca39fd657445f99cfabf">GetEndPosition</a> () const  =0</td></tr>
+<tr class="separator:a8c9d74c70a6bca39fd657445f99cfabf inherit pub_methods_class_bond_1_1_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc8c5408aaae3ffe731bc6e4f4414d36 inherit pub_methods_class_bond_1_1_stream"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stream.html#abc8c5408aaae3ffe731bc6e4f4414d36">SetPosition</a> (<a class="el" href="class_bond_1_1_stream.html#a6314350315fb68539f436be332b8419d">off_t</a> offset)=0</td></tr>
 <tr class="separator:abc8c5408aaae3ffe731bc6e4f4414d36 inherit pub_methods_class_bond_1_1_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8b7ccb707a2e8ea06f12f8fbcfa2748 inherit pub_methods_class_bond_1_1_stream"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stream.html#ac8b7ccb707a2e8ea06f12f8fbcfa2748">SetPositionFromEnd</a> (<a class="el" href="class_bond_1_1_stream.html#a6314350315fb68539f436be332b8419d">off_t</a> offset)=0</td></tr>
@@ -189,6 +194,40 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a685b3338bb49beeed21f7b0581584d0f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t Bond::InputStream::Read </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>bytes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>numBytes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="af7b215ecc1d113cea45c5c4a11c775a2"></a>
 <div class="memitem">
 <div class="memproto">
@@ -221,7 +260,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_bond_1_1_stdio_input_stream.html#a7aaf67fa0a564948cbc80c9a91a9e652">Bond::StdioInputStream</a>.</p>
+<p>Reimplemented in <a class="el" href="class_bond_1_1_stdio_input_stream.html#a7aaf67fa0a564948cbc80c9a91a9e652">Bond::StdioInputStream</a>, and <a class="el" href="class_bond_1_1_memory_input_stream.html#a410195071750a904f0f33b9c0831bf02">Bond::MemoryInputStream</a>.</p>
 
 </div>
 </div>
@@ -246,7 +285,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_bond_1_1_stdio_input_stream.html#a977b35c606aae8cfc5918416242a9b73">Bond::StdioInputStream</a>.</p>
+<p>Implemented in <a class="el" href="class_bond_1_1_stdio_input_stream.html#a977b35c606aae8cfc5918416242a9b73">Bond::StdioInputStream</a>, and <a class="el" href="class_bond_1_1_memory_input_stream.html#af1c4095fd2ebadc8c5d36de3c70614fc">Bond::MemoryInputStream</a>.</p>
 
 </div>
 </div>
@@ -316,7 +355,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_bond_1_1_stdio_input_stream.html#a9c4776b8bd94e1ac73a6188df3f246c8">Bond::StdioInputStream</a>.</p>
+<p>Implemented in <a class="el" href="class_bond_1_1_stdio_input_stream.html#a9c4776b8bd94e1ac73a6188df3f246c8">Bond::StdioInputStream</a>, and <a class="el" href="class_bond_1_1_memory_input_stream.html#a07a6f00eecf1caa0cc242200242d7b1e">Bond::MemoryInputStream</a>.</p>
 
 </div>
 </div>

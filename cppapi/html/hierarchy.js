@@ -36,10 +36,9 @@ var hierarchy =
     [ "Bond::DataEntry", "struct_bond_1_1_data_entry.html", null ],
     [ "Bond::Allocator::Deallocator< T >", "struct_bond_1_1_allocator_1_1_deallocator.html", null ],
     [ "Bond::Disassembler", "class_bond_1_1_disassembler.html", null ],
-    [ "Element", null, [
+    [ "Bond::AutoStack< ElementType >::Element", "class_bond_1_1_auto_stack_1_1_element.html", [
       [ "Bond::CallerStackFrame", "class_bond_1_1_caller_stack_frame.html", null ]
     ] ],
-    [ "Bond::AutoStack< ElementType >::Element", "class_bond_1_1_auto_stack_1_1_element.html", null ],
     [ "Bond::Exception", "class_bond_1_1_exception.html", null ],
     [ "Bond::FileData", "struct_bond_1_1_file_data.html", null ],
     [ "Bond::FileLoader", "class_bond_1_1_file_loader.html", [
@@ -125,8 +124,10 @@ var hierarchy =
     [ "Bond::ReturnSignature", "struct_bond_1_1_return_signature.html", null ],
     [ "Bond::SemanticAnalyzer", "class_bond_1_1_semantic_analyzer.html", null ],
     [ "Bond::SimpleString", "class_bond_1_1_simple_string.html", null ],
+    [ "Bond::StdioFileHandle", "class_bond_1_1_stdio_file_handle.html", null ],
     [ "Bond::Stream", "class_bond_1_1_stream.html", [
       [ "Bond::InputStream", "class_bond_1_1_input_stream.html", [
+        [ "Bond::MemoryInputStream", "class_bond_1_1_memory_input_stream.html", null ],
         [ "Bond::StdioInputStream", "class_bond_1_1_stdio_input_stream.html", [
           [ "Bond::StdInInputStream", "class_bond_1_1_std_in_input_stream.html", null ]
         ] ]

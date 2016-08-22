@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['element',['Element',['../class_bond_1_1_auto_stack_1_1_element.html#afb84b94262af5974489ff12d85278d9c',1,'Bond::AutoStack::Element::Element(AutoStack &amp;stack)'],['../class_bond_1_1_auto_stack_1_1_element.html#af2eae6176048c785749238e09faec1b4',1,'Bond::AutoStack::Element::Element(AutoStack &amp;stack, Args &amp;&amp;...args)']]],
+  ['element',['Element',['../class_bond_1_1_auto_stack_1_1_element.html#afb84b94262af5974489ff12d85278d9c',1,'Bond::AutoStack::Element::Element(AutoStack &amp;stack)'],['../class_bond_1_1_auto_stack_1_1_element.html#af2eae6176048c785749238e09faec1b4',1,'Bond::AutoStack::Element::Element(AutoStack &amp;stack, Args &amp;&amp;...args)'],['../class_bond_1_1_auto_stack_1_1_element.html#a0f72139964b9a02c217e69de36659064',1,'Bond::AutoStack::Element::Element(const Element &amp;other)=delete']]],
   ['encodepointersize',['EncodePointerSize',['../namespace_bond.html#af1b3e1c6f78fbf6062f96995f18ec866',1,'Bond']]],
   ['encodesizeandtype',['EncodeSizeAndType',['../namespace_bond.html#afa2d779ed8fdb43635864158610dcd18',1,'Bond']]],
   ['end',['end',['../class_bond_1_1_auto_stack.html#a6cdd48fb7cd3ad20e13db43e67c151fb',1,'Bond::AutoStack::end()'],['../class_bond_1_1_auto_stack.html#a5fa0ef6b6db007477c0177845b6061a6',1,'Bond::AutoStack::end() const ']]],

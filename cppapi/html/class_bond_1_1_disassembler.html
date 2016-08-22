@@ -122,8 +122,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae8816b32366a16afde4ef05abb7ef386"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadb8c265febab84f1c674c8304b119fd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_disassembler.html#aadb8c265febab84f1c674c8304b119fd">~Disassembler</a> ()</td></tr>
 <tr class="separator:aadb8c265febab84f1c674c8304b119fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3eab14a85d51273375150ea61f29b1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_disassembler.html#ad3eab14a85d51273375150ea61f29b1c">Disassemble</a> (<a class="el" href="class_bond_1_1_output_stream.html">OutputStream</a> &amp;stream, const void *byteCode, size_t length)</td></tr>
-<tr class="separator:ad3eab14a85d51273375150ea61f29b1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81ce78f48b74ec9aa36693443639fbb0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_disassembler.html#a81ce78f48b74ec9aa36693443639fbb0">Disassemble</a> (const void *byteCode, size_t length, <a class="el" href="class_bond_1_1_output_stream.html">OutputStream</a> &amp;outputStream)</td></tr>
+<tr class="separator:a81ce78f48b74ec9aa36693443639fbb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae13479fff30f7f049a30696400fc4dad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_disassembler.html#ae13479fff30f7f049a30696400fc4dad">Disassemble</a> (<a class="el" href="class_bond_1_1_input_stream.html">InputStream</a> &amp;cboStream, <a class="el" href="class_bond_1_1_output_stream.html">OutputStream</a> &amp;outputStream)</td></tr>
+<tr class="separator:ae13479fff30f7f049a30696400fc4dad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabf7f098d042e7e22dc39bad47752b51"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_bond_1_1_disassembler.html">Disassembler</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_disassembler.html#aabf7f098d042e7e22dc39bad47752b51">operator=</a> (const <a class="el" href="class_bond_1_1_disassembler.html">Disassembler</a> &amp;other)=delete</td></tr>
 <tr class="separator:aabf7f098d042e7e22dc39bad47752b51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -176,19 +178,13 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ad3eab14a85d51273375150ea61f29b1c"></a>
+<a class="anchor" id="a81ce78f48b74ec9aa36693443639fbb0"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void Bond::Disassembler::Disassemble </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_bond_1_1_output_stream.html">OutputStream</a> &amp;&#160;</td>
-          <td class="paramname"><em>stream</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">const void *&#160;</td>
           <td class="paramname"><em>byteCode</em>, </td>
         </tr>
@@ -196,7 +192,39 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>length</em>&#160;</td>
+          <td class="paramname"><em>length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_bond_1_1_output_stream.html">OutputStream</a> &amp;&#160;</td>
+          <td class="paramname"><em>outputStream</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae13479fff30f7f049a30696400fc4dad"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Bond::Disassembler::Disassemble </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_bond_1_1_input_stream.html">InputStream</a> &amp;&#160;</td>
+          <td class="paramname"><em>cboStream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_bond_1_1_output_stream.html">OutputStream</a> &amp;&#160;</td>
+          <td class="paramname"><em>outputStream</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
