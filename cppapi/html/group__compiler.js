@@ -133,7 +133,7 @@ var group__compiler =
       [ "Reset", "class_bond_1_1_compiler_error_buffer.html#afc3479c3660326fbe635c36288763180", null ]
     ] ],
     [ "FrontEnd", "class_bond_1_1_front_end.html", [
-      [ "FrontEnd", "class_bond_1_1_front_end.html#aa2354aa9a23ea626e5a295a507644304", null ],
+      [ "FrontEnd", "class_bond_1_1_front_end.html#a78fc74fcbb9390ea919138b4d61bda07", null ],
       [ "FrontEnd", "class_bond_1_1_front_end.html#a85bbaf5a12f77a32943fbfaa27ba94ea", null ],
       [ "AddInputFile", "class_bond_1_1_front_end.html#af8791e6e2edd528285f6163c156eb6cd", null ],
       [ "Analyze", "class_bond_1_1_front_end.html#a170c4012697130fc4192909fef6f28b3", null ],
@@ -580,6 +580,7 @@ var group__compiler =
     [ "ParseNodeHandle", "group__compiler.html#gabc6e1643c8baf99c177f5f2d1bffcab7", null ],
     [ "ParseNodeStore", "group__compiler.html#gab7d9448fe4aa29ee614bfea9a245a14a", null ],
     [ "TokenCollectionHandle", "group__compiler.html#ga1fa36118c02afd1f252081501e134396", null ],
+    [ "TokenCollectionStore", "group__compiler.html#ga2b717ff38e99f6c94de68de15d095823", null ],
     [ "ADDITIVE_OPERATORS_TYPESET", "group__compiler.html#ga6962c5b3330183f5047c563d0fd012dc", null ],
     [ "ASSIGNMENT_OPERATORS_TYPESET", "group__compiler.html#gaf02f4056296bf8d944df540b89a930f1", null ],
     [ "BLOCK_DELIMITERS_TYPESET", "group__compiler.html#gab090f4ef728344d6ee1b2d0bb29767a2", null ],

@@ -1,6 +1,7 @@
 var class_bond_1_1_stdio_output_stream =
 [
     [ "StdioOutputStream", "class_bond_1_1_stdio_output_stream.html#a48775a2edb830a60baa3030443e6f3ef", null ],
+    [ "StdioOutputStream", "class_bond_1_1_stdio_output_stream.html#afb6bfebe475af15521eca7e37327402e", null ],
     [ "StdioOutputStream", "class_bond_1_1_stdio_output_stream.html#a87131c3847aea56c5e0aad1a1da9791e", null ],
     [ "StdioOutputStream", "class_bond_1_1_stdio_output_stream.html#aa79534bbbefb863f5d5d59036d1094ae", null ],
     [ "~StdioOutputStream", "class_bond_1_1_stdio_output_stream.html#adf3f5e5f3518397c82559bf43f6d4314", null ],

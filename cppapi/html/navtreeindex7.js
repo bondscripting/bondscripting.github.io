@@ -1,5 +1,8 @@
 var NAVTREEINDEX7 =
 {
+"struct_bond_1_1_binary_bit_x_or_operator.html":[2,0,0,6],
+"struct_bond_1_1_binary_bit_x_or_operator.html#a83b174b42223c44a04a0ddee48526aaa":[2,0,0,6,0],
+"struct_bond_1_1_binary_div_operator.html":[2,0,0,7],
 "struct_bond_1_1_binary_div_operator.html#a92c8dbcf77428c44b68748beb5505e28":[2,0,0,7,0],
 "struct_bond_1_1_binary_equal_operator.html":[2,0,0,8],
 "struct_bond_1_1_binary_equal_operator.html#ade2434ebbc6ceac360c8547cbe876a84":[2,0,0,8,0],
