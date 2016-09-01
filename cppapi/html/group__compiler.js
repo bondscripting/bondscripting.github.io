@@ -2,17 +2,13 @@ var group__compiler =
 [
     [ "Parse Nodes", "group__nodes.html", "group__nodes" ],
     [ "CharStream", "class_bond_1_1_char_stream.html", [
-      [ "CharStream", "class_bond_1_1_char_stream.html#ad338147f2b74d698e46b11798e368c98", null ],
-      [ "CharStream", "class_bond_1_1_char_stream.html#ad852bf0c59af0865163d504e008992da", null ],
-      [ "GetBuffer", "class_bond_1_1_char_stream.html#a7392c4be156c3309fe5334e43c2e0c4b", null ],
-      [ "GetLength", "class_bond_1_1_char_stream.html#aedb3e3ae41dc6534cf086ffa90f45f82", null ],
+      [ "CharStream", "class_bond_1_1_char_stream.html#a80a69607a8f2680aee3635b4d90eea69", null ],
       [ "GetStreamPos", "class_bond_1_1_char_stream.html#acc6b9855563e3b2278ef8e5efcf1af65", null ],
       [ "HasNext", "class_bond_1_1_char_stream.html#a4b4ad19729c1b34b5b32075b75f90a91", null ],
       [ "Next", "class_bond_1_1_char_stream.html#a32376af2a197854880eea5942618defb", null ],
-      [ "Peek", "class_bond_1_1_char_stream.html#a8823a97e62b5369b5a0a9f87171634f2", null ],
       [ "Reset", "class_bond_1_1_char_stream.html#a8a826023ea6294a0301ee8d23e560f64", null ],
-      [ "Unget", "class_bond_1_1_char_stream.html#af4dca1cf11040ae35f0418781ab9b358", null ],
-      [ "Unget", "class_bond_1_1_char_stream.html#a6b662bac63aaf5ca8a469489ffc18322", null ]
+      [ "Reset", "class_bond_1_1_char_stream.html#a9566c16036acb05f183ab41469913961", null ],
+      [ "Sync", "class_bond_1_1_char_stream.html#a55cbcb5a994057bc8306549e66782239", null ]
     ] ],
     [ "CodeGenerator", "class_bond_1_1_code_generator.html", [
       [ "CodeGenerator", "class_bond_1_1_code_generator.html#a6872dc7c2720d3502bd96db43c55c40c", null ],
@@ -133,7 +129,7 @@ var group__compiler =
       [ "Reset", "class_bond_1_1_compiler_error_buffer.html#afc3479c3660326fbe635c36288763180", null ]
     ] ],
     [ "FrontEnd", "class_bond_1_1_front_end.html", [
-      [ "FrontEnd", "class_bond_1_1_front_end.html#a78fc74fcbb9390ea919138b4d61bda07", null ],
+      [ "FrontEnd", "class_bond_1_1_front_end.html#a3725ee1ea6aca440270b23cf465c1e2a", null ],
       [ "FrontEnd", "class_bond_1_1_front_end.html#a85bbaf5a12f77a32943fbfaa27ba94ea", null ],
       [ "AddInputFile", "class_bond_1_1_front_end.html#af8791e6e2edd528285f6163c156eb6cd", null ],
       [ "Analyze", "class_bond_1_1_front_end.html#a170c4012697130fc4192909fef6f28b3", null ],
@@ -146,6 +142,7 @@ var group__compiler =
       [ "Lexer", "class_bond_1_1_lexer.html#af864c25af5f08fe65dea21546573d3ed", null ],
       [ "GetErrorBuffer", "class_bond_1_1_lexer.html#a7356127ffe7455f6be0ecdeedc563667", null ],
       [ "Lex", "class_bond_1_1_lexer.html#a206e6933360c7fc1221cdf6225c71e48", null ],
+      [ "Lex", "class_bond_1_1_lexer.html#a0fcc5634ac4d112e887bd1b585466333", null ],
       [ "operator=", "class_bond_1_1_lexer.html#ab4e8c22866e2b1ca876e8426f49c06ed", null ]
     ] ],
     [ "ParseNodeTraverser", "class_bond_1_1_parse_node_traverser.html", [

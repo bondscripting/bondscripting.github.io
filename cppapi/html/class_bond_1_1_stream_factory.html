@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>Bond: Bond::MemoryFileLoader::Index Struct Reference</title>
+<title>Bond: Bond::StreamFactory Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -88,7 +88,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('struct_bond_1_1_memory_file_loader_1_1_index.html','');});
+$(document).ready(function(){initNavTree('class_bond_1_1_stream_factory.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -108,31 +108,39 @@ $(document).ready(function(){initNavTree('struct_bond_1_1_memory_file_loader_1_1
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="struct_bond_1_1_memory_file_loader_1_1_index-members.html">List of all members</a>  </div>
+<a href="class_bond_1_1_stream_factory-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Bond::MemoryFileLoader::Index Struct Reference</div>  </div>
+<div class="title">Bond::StreamFactory Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__io.html">I/O</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;bond/io/memoryfileloader.h&gt;</code></p>
+<p>An abstract interface for creating file streams without being coupled to any particular concrete type of stream.  
+ <a href="class_bond_1_1_stream_factory.html#details">More...</a></p>
+
+<p><code>#include &lt;bond/io/streamfactory.h&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Bond::StreamFactory:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_bond_1_1_stream_factory.png" usemap="#Bond::StreamFactory_map" alt=""/>
+  <map id="Bond::StreamFactory_map" name="Bond::StreamFactory_map">
+<area href="class_bond_1_1_memory_stream_factory.html" title="A concreate implementation of StreamFactory that instantiates MemoryInputStreams for a collection of ..." alt="Bond::MemoryStreamFactory" shape="rect" coords="0,56,176,80"/>
+<area href="class_bond_1_1_stdio_stream_factory.html" title="A concreate implementation of StreamFactory that instantiates StdioInputStreams. " alt="Bond::StdioStreamFactory" shape="rect" coords="186,56,362,80"/>
+</map>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a255a9dcd4646c34475f29e9830e2876c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_memory_file_loader_1_1_index.html#a255a9dcd4646c34475f29e9830e2876c">Index</a> (const <a class="el" href="class_bond_1_1_simple_string.html">SimpleString</a> *fileNames, const <a class="el" href="struct_bond_1_1_file_data.html">FileData</a> *files, size_t numFiles)</td></tr>
-<tr class="separator:a255a9dcd4646c34475f29e9830e2876c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a23487b7628253ccc949f595edae93b9e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_bond_1_1_simple_string.html">SimpleString</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_memory_file_loader_1_1_index.html#a23487b7628253ccc949f595edae93b9e">mFileNames</a></td></tr>
-<tr class="separator:a23487b7628253ccc949f595edae93b9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf473b80e2a66acc2e2344f5a8fc1c99"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_bond_1_1_file_data.html">FileData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_memory_file_loader_1_1_index.html#adf473b80e2a66acc2e2344f5a8fc1c99">mFiles</a></td></tr>
-<tr class="separator:adf473b80e2a66acc2e2344f5a8fc1c99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a376be20ea1fcb23fb9c17a33e8a52368"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_memory_file_loader_1_1_index.html#a376be20ea1fcb23fb9c17a33e8a52368">mNumFiles</a></td></tr>
-<tr class="separator:a376be20ea1fcb23fb9c17a33e8a52368"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dfcffed7d47ba4643581e079b882c87"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stream_factory.html#a0dfcffed7d47ba4643581e079b882c87">~StreamFactory</a> ()</td></tr>
+<tr class="separator:a0dfcffed7d47ba4643581e079b882c87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfa35fa12b772b748c5aaa65c9541691"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__io.html#ga8f82d3f414a8e773867ebbef1fcb9eeb">InputStreamHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stream_factory.html#adfa35fa12b772b748c5aaa65c9541691">CreateInputStream</a> (const char *fileName)=0</td></tr>
+<tr class="memdesc:adfa35fa12b772b748c5aaa65c9541691"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an owning pointer to a dynamically allocated <a class="el" href="class_bond_1_1_input_stream.html" title="An abstract interface for performing both unformatted and formatted input operations. ">InputStream</a>.  <a href="#adfa35fa12b772b748c5aaa65c9541691">More...</a><br /></td></tr>
+<tr class="separator:adfa35fa12b772b748c5aaa65c9541691"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a255a9dcd4646c34475f29e9830e2876c"></a>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>An abstract interface for creating file streams without being coupled to any particular concrete type of stream. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a0dfcffed7d47ba4643581e079b882c87"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -140,84 +148,65 @@ Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Bond::MemoryFileLoader::Index::Index </td>
+          <td class="memname">virtual Bond::StreamFactory::~StreamFactory </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_bond_1_1_simple_string.html">SimpleString</a> *&#160;</td>
-          <td class="paramname"><em>fileNames</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="struct_bond_1_1_file_data.html">FileData</a> *&#160;</td>
-          <td class="paramname"><em>files</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>numFiles</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a23487b7628253ccc949f595edae93b9e"></a>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="adfa35fa12b772b748c5aaa65c9541691"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_simple_string.html">SimpleString</a>* Bond::MemoryFileLoader::Index::mFileNames</td>
+          <td class="memname">virtual <a class="el" href="group__io.html#ga8f82d3f414a8e773867ebbef1fcb9eeb">InputStreamHandle</a> Bond::StreamFactory::CreateInputStream </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>fileName</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Returns an owning pointer to a dynamically allocated <a class="el" href="class_bond_1_1_input_stream.html" title="An abstract interface for performing both unformatted and formatted input operations. ">InputStream</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileName</td><td>The name of the file for which an input stream is created. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="class_bond_1_1_memory_stream_factory.html#a76f26b3e3b3bd3963e6e3c9672d8ba43">Bond::MemoryStreamFactory</a>, and <a class="el" href="class_bond_1_1_stdio_stream_factory.html#af765a5ae21db0d37d23ae0341f0e9777">Bond::StdioStreamFactory</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="adf473b80e2a66acc2e2344f5a8fc1c99"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="struct_bond_1_1_file_data.html">FileData</a>* Bond::MemoryFileLoader::Index::mFiles</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a376be20ea1fcb23fb9c17a33e8a52368"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t Bond::MemoryFileLoader::Index::mNumFiles</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li>include/bond/io/memoryfileloader.h</li>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>include/bond/io/streamfactory.h</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespace_bond.html">Bond</a></li><li class="navelem"><a class="el" href="class_bond_1_1_memory_file_loader.html">MemoryFileLoader</a></li><li class="navelem"><a class="el" href="struct_bond_1_1_memory_file_loader_1_1_index.html">Index</a></li>
+    <li class="navelem"><a class="el" href="namespace_bond.html">Bond</a></li><li class="navelem"><a class="el" href="class_bond_1_1_stream_factory.html">StreamFactory</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>

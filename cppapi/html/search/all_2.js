@@ -33,7 +33,7 @@ var searchData=
   ['char_5ftype_5fspecifier',['CHAR_TYPE_SPECIFIER',['../group__nodes.html#ga9520c571b7909598d2a243e0d7f63570',1,'Bond']]],
   ['char_5ftype_5fspecifiers_5ftypeset',['CHAR_TYPE_SPECIFIERS_TYPESET',['../group__compiler.html#gabe0f430df464e7804afaab17ef9d2a73',1,'Bond']]],
   ['charstream',['CharStream',['../class_bond_1_1_char_stream.html',1,'Bond']]],
-  ['charstream',['CharStream',['../class_bond_1_1_char_stream.html#ad338147f2b74d698e46b11798e368c98',1,'Bond::CharStream::CharStream()'],['../class_bond_1_1_char_stream.html#ad852bf0c59af0865163d504e008992da',1,'Bond::CharStream::CharStream(const char *buffer, size_t length)']]],
+  ['charstream',['CharStream',['../class_bond_1_1_char_stream.html#a80a69607a8f2680aee3635b4d90eea69',1,'Bond::CharStream']]],
   ['clearflags',['ClearFlags',['../class_bond_1_1_input_stream_adaptor.html#a0471550cbff3bb9352be9ec2ef1de837',1,'Bond::InputStreamAdaptor::ClearFlags()'],['../class_bond_1_1_output_stream_adaptor.html#a9c0e0e0fc2f3177801c329944e703e53',1,'Bond::OutputStreamAdaptor::ClearFlags()']]],
   ['clearlvalue',['ClearLValue',['../class_bond_1_1_type_descriptor.html#ae9f284887a8a4757de9b6360b3ebb29d',1,'Bond::TypeDescriptor']]],
   ['codegenerator',['CodeGenerator',['../class_bond_1_1_code_generator.html#a6872dc7c2720d3502bd96db43c55c40c',1,'Bond::CodeGenerator']]],
@@ -48,8 +48,8 @@ var searchData=
   ['compare',['Compare',['../class_bond_1_1_qualified_name.html#af6082e67ffb15656a98f654a9e8e9d60',1,'Bond::QualifiedName::Compare(const QualifiedName &amp;other) const '],['../class_bond_1_1_qualified_name.html#aabfe803db1b4121f1d20acc5bac7a7da',1,'Bond::QualifiedName::Compare(const char *other) const ']]],
   ['comparisonbinaryoperator',['ComparisonBinaryOperator',['../namespace_bond.html#aac522efc7746fd818c4a672fddf05ff6',1,'Bond']]],
   ['compiler',['Compiler',['../group__compiler.html',1,'']]],
-  ['compilererror',['CompilerError',['../class_bond_1_1_compiler_error.html',1,'Bond']]],
   ['compilererror',['CompilerError',['../class_bond_1_1_compiler_error.html#a63542242178727d42f4ef8d702c82a95',1,'Bond::CompilerError::CompilerError()'],['../class_bond_1_1_compiler_error.html#a200662609fc9c845d64be10e55076a7e',1,'Bond::CompilerError::CompilerError(Type type, const Token *context, intptr_t arg0, intptr_t arg1)']]],
+  ['compilererror',['CompilerError',['../class_bond_1_1_compiler_error.html',1,'Bond']]],
   ['compilererrorbuffer',['CompilerErrorBuffer',['../class_bond_1_1_compiler_error_buffer.html#af3acd12d5dcc557e844521767e5c4c01',1,'Bond::CompilerErrorBuffer']]],
   ['compilererrorbuffer',['CompilerErrorBuffer',['../class_bond_1_1_compiler_error_buffer.html',1,'Bond']]],
   ['compoundstatement',['CompoundStatement',['../class_bond_1_1_compound_statement.html#a5347add09f88afce81a966137757fed8',1,'Bond::CompoundStatement']]],
@@ -72,8 +72,8 @@ var searchData=
   ['constantliteralexpression',['ConstantLiteralExpression',['../class_bond_1_1_constant_literal_expression.html',1,'Bond']]],
   ['constants',['Constants',['../namespace_bond_1_1_i_o.html#aae3188d0b70931e09bd2ec1b9056c206',1,'Bond::IO']]],
   ['constanttable',['ConstantTable',['../struct_bond_1_1_constant_table.html',1,'Bond']]],
-  ['constiterator',['ConstIterator',['../class_bond_1_1_auto_stack_1_1_element.html#a5485970bb9da6b5d782fa28638b5658f',1,'Bond::AutoStack::Element::ConstIterator()'],['../class_bond_1_1_auto_stack_1_1_const_iterator.html#a32f84ad07eec9c493fe0215a2f802cca',1,'Bond::AutoStack::ConstIterator::ConstIterator()'],['../class_bond_1_1_auto_stack_1_1_const_iterator.html#a0d97b0c06e9a3ad5eb5e1e3eeefbcb56',1,'Bond::AutoStack::ConstIterator::ConstIterator(const Element *element)'],['../class_bond_1_1_auto_stack_1_1_const_iterator.html#a569d917b132a458bfb38ae94ab1382ae',1,'Bond::AutoStack::ConstIterator::ConstIterator(const Iterator &amp;iterator)']]],
   ['constiterator',['ConstIterator',['../class_bond_1_1_auto_stack_1_1_const_iterator.html',1,'Bond::AutoStack']]],
+  ['constiterator',['ConstIterator',['../class_bond_1_1_auto_stack_1_1_element.html#a5485970bb9da6b5d782fa28638b5658f',1,'Bond::AutoStack::Element::ConstIterator()'],['../class_bond_1_1_auto_stack_1_1_const_iterator.html#a32f84ad07eec9c493fe0215a2f802cca',1,'Bond::AutoStack::ConstIterator::ConstIterator()'],['../class_bond_1_1_auto_stack_1_1_const_iterator.html#a0d97b0c06e9a3ad5eb5e1e3eeefbcb56',1,'Bond::AutoStack::ConstIterator::ConstIterator(const Element *element)'],['../class_bond_1_1_auto_stack_1_1_const_iterator.html#a569d917b132a458bfb38ae94ab1382ae',1,'Bond::AutoStack::ConstIterator::ConstIterator(const Iterator &amp;iterator)']]],
   ['contains',['Contains',['../class_bond_1_1_token_type_set.html#a7bd163aa68f1a62e19f107d2bdbab572',1,'Bond::TokenTypeSet::Contains()'],['../class_bond_1_1_auto_stack.html#ace2404638e0ee3a709a5504e4563bbb0',1,'Bond::AutoStack::Contains()']]],
   ['containsinputfile',['ContainsInputFile',['../class_bond_1_1_front_end.html#a578cc6d3da6c0e851c3c37beb3f0a913',1,'Bond::FrontEnd']]],
   ['convertbigendian16',['ConvertBigEndian16',['../namespace_bond.html#a4f81c8e3d83ea10a8585d91fb5f985e9',1,'Bond::ConvertBigEndian16(void *value)'],['../namespace_bond.html#aa52e75dccdbc737dd5129e60e2c088c3',1,'Bond::ConvertBigEndian16(Value16 value)']]],
@@ -96,5 +96,6 @@ var searchData=
   ['coshf',['Coshf',['../namespace_bond.html#a794f7c4ca0ebf864c499538dbbfc3128',1,'Bond']]],
   ['count',['Count',['../class_bond_1_1_parse_node_counter.html#a36bc35e19cd20865c03211b61c7eaf72',1,'Bond::ParseNodeCounter']]],
   ['countlist',['CountList',['../class_bond_1_1_parse_node_counter.html#a7f6f56e6774cc6fccde4b183c2785723',1,'Bond::ParseNodeCounter']]],
-  ['cparen',['CPAREN',['../class_bond_1_1_token.html#a6d09a1144b5a79476ae9c8056728362faa0b914a566a6ec5bc2f8398ce273d4b3',1,'Bond::Token']]]
+  ['cparen',['CPAREN',['../class_bond_1_1_token.html#a6d09a1144b5a79476ae9c8056728362faa0b914a566a6ec5bc2f8398ce273d4b3',1,'Bond::Token']]],
+  ['createinputstream',['CreateInputStream',['../class_bond_1_1_memory_stream_factory.html#a76f26b3e3b3bd3963e6e3c9672d8ba43',1,'Bond::MemoryStreamFactory::CreateInputStream()'],['../class_bond_1_1_stdio_stream_factory.html#af765a5ae21db0d37d23ae0341f0e9777',1,'Bond::StdioStreamFactory::CreateInputStream()'],['../class_bond_1_1_stream_factory.html#adfa35fa12b772b748c5aaa65c9541691',1,'Bond::StreamFactory::CreateInputStream()']]]
 ];

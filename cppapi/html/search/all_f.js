@@ -25,7 +25,7 @@ var searchData=
   ['parser',['Parser',['../class_bond_1_1_parser.html',1,'Bond']]],
   ['parser',['Parser',['../class_bond_1_1_parser.html#aa97dd9676e5ad69b324bfce54e85aa56',1,'Bond::Parser::Parser(Allocator &amp;allocator, CompilerErrorBuffer &amp;errorBuffer, ParseNodeStore &amp;store)'],['../class_bond_1_1_parser.html#a8aaf8ad8104c208abd2391235e4510a2',1,'Bond::Parser::Parser(const Parser &amp;other)=delete']]],
   ['parsetreeprinter',['ParseTreePrinter',['../class_bond_1_1_parse_tree_printer.html',1,'Bond']]],
-  ['peek',['Peek',['../class_bond_1_1_char_stream.html#a8823a97e62b5369b5a0a9f87171634f2',1,'Bond::CharStream::Peek()'],['../class_bond_1_1_token_stream.html#a38e823201b71b750ca99e11595c852d9',1,'Bond::TokenStream::Peek()']]],
+  ['peek',['Peek',['../class_bond_1_1_token_stream.html#a38e823201b71b750ca99e11595c852d9',1,'Bond::TokenStream']]],
   ['peekif',['PeekIf',['../class_bond_1_1_token_stream.html#a66a2f4932b2599b17080d66c1d8f1bf5',1,'Bond::TokenStream::PeekIf(Token::TokenType type) const '],['../class_bond_1_1_token_stream.html#ac315a8b9dad06fac7339c929337b2eb5',1,'Bond::TokenStream::PeekIf(const TokenTypeSet &amp;typeSet) const ']]],
   ['period',['PERIOD',['../class_bond_1_1_token.html#a6d09a1144b5a79476ae9c8056728362fa7babe09c0fb5bcb781394153629631cd',1,'Bond::Token']]],
   ['pointer_5f32bit',['POINTER_32BIT',['../namespace_bond.html#ad6df57f21c24017711bb3ccd316fb4b6a523bae4bc1f4f5e39684b239b950476b',1,'Bond']]],

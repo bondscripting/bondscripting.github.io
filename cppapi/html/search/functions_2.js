@@ -13,7 +13,7 @@ var searchData=
   ['cboloader',['CboLoader',['../class_bond_1_1_cbo_loader.html#a657ef1b9635916bdfb0b90c996aa1bc1',1,'Bond::CboLoader::CboLoader(Allocator &amp;allocator)'],['../class_bond_1_1_cbo_loader.html#a5cef6d058b44d685b41f935e77d0f676',1,'Bond::CboLoader::CboLoader(Allocator &amp;tempAllocator, Allocator &amp;permAllocator)'],['../class_bond_1_1_cbo_loader.html#aaf65970814102a8425de97ee6bab72bf',1,'Bond::CboLoader::CboLoader(const CboLoader &amp;other)=delete']]],
   ['ceil',['Ceil',['../namespace_bond.html#a25fb9aaa54f776ff74f64f5ab2b6d0ba',1,'Bond']]],
   ['ceilf',['Ceilf',['../namespace_bond.html#a48ef43fc30875227f604734c1e5596dc',1,'Bond']]],
-  ['charstream',['CharStream',['../class_bond_1_1_char_stream.html#ad338147f2b74d698e46b11798e368c98',1,'Bond::CharStream::CharStream()'],['../class_bond_1_1_char_stream.html#ad852bf0c59af0865163d504e008992da',1,'Bond::CharStream::CharStream(const char *buffer, size_t length)']]],
+  ['charstream',['CharStream',['../class_bond_1_1_char_stream.html#a80a69607a8f2680aee3635b4d90eea69',1,'Bond::CharStream']]],
   ['clearflags',['ClearFlags',['../class_bond_1_1_input_stream_adaptor.html#a0471550cbff3bb9352be9ec2ef1de837',1,'Bond::InputStreamAdaptor::ClearFlags()'],['../class_bond_1_1_output_stream_adaptor.html#a9c0e0e0fc2f3177801c329944e703e53',1,'Bond::OutputStreamAdaptor::ClearFlags()']]],
   ['clearlvalue',['ClearLValue',['../class_bond_1_1_type_descriptor.html#ae9f284887a8a4757de9b6360b3ebb29d',1,'Bond::TypeDescriptor']]],
   ['codegenerator',['CodeGenerator',['../class_bond_1_1_code_generator.html#a6872dc7c2720d3502bd96db43c55c40c',1,'Bond::CodeGenerator']]],
@@ -48,5 +48,6 @@ var searchData=
   ['cosh',['Cosh',['../namespace_bond.html#a888c19ba1025b688eaf2ca0929c0a8ad',1,'Bond']]],
   ['coshf',['Coshf',['../namespace_bond.html#a794f7c4ca0ebf864c499538dbbfc3128',1,'Bond']]],
   ['count',['Count',['../class_bond_1_1_parse_node_counter.html#a36bc35e19cd20865c03211b61c7eaf72',1,'Bond::ParseNodeCounter']]],
-  ['countlist',['CountList',['../class_bond_1_1_parse_node_counter.html#a7f6f56e6774cc6fccde4b183c2785723',1,'Bond::ParseNodeCounter']]]
+  ['countlist',['CountList',['../class_bond_1_1_parse_node_counter.html#a7f6f56e6774cc6fccde4b183c2785723',1,'Bond::ParseNodeCounter']]],
+  ['createinputstream',['CreateInputStream',['../class_bond_1_1_memory_stream_factory.html#a76f26b3e3b3bd3963e6e3c9672d8ba43',1,'Bond::MemoryStreamFactory::CreateInputStream()'],['../class_bond_1_1_stdio_stream_factory.html#af765a5ae21db0d37d23ae0341f0e9777',1,'Bond::StdioStreamFactory::CreateInputStream()'],['../class_bond_1_1_stream_factory.html#adfa35fa12b772b748c5aaa65c9541691',1,'Bond::StreamFactory::CreateInputStream()']]]
 ];

@@ -5,7 +5,7 @@ var searchData=
   ['recursive_5fstruct',['RECURSIVE_STRUCT',['../class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4ca17b6a466950e10920ae632cf9bdb4b9a',1,'Bond::CompilerError']]],
   ['relational_5foperators_5ftypeset',['RELATIONAL_OPERATORS_TYPESET',['../group__compiler.html#gae037f865ad40449220db1bcc581dc35c',1,'Bond']]],
   ['requirescodegeneration',['RequiresCodeGeneration',['../class_bond_1_1_translation_unit.html#a92a83b16fdfc6152b7b1d269f833b982',1,'Bond::TranslationUnit']]],
-  ['reset',['Reset',['../class_bond_1_1_char_stream.html#a8a826023ea6294a0301ee8d23e560f64',1,'Bond::CharStream::Reset()'],['../class_bond_1_1_compiler_error_buffer.html#afc3479c3660326fbe635c36288763180',1,'Bond::CompilerErrorBuffer::Reset()'],['../class_bond_1_1_token_stream.html#ab92f017668577a5f7afafe231d3a3253',1,'Bond::TokenStream::Reset()']]],
+  ['reset',['Reset',['../class_bond_1_1_char_stream.html#a8a826023ea6294a0301ee8d23e560f64',1,'Bond::CharStream::Reset()'],['../class_bond_1_1_char_stream.html#a9566c16036acb05f183ab41469913961',1,'Bond::CharStream::Reset(const StreamPos &amp;pos)'],['../class_bond_1_1_compiler_error_buffer.html#afc3479c3660326fbe635c36288763180',1,'Bond::CompilerErrorBuffer::Reset()'],['../class_bond_1_1_token_stream.html#ab92f017668577a5f7afafe231d3a3253',1,'Bond::TokenStream::Reset()']]],
   ['resolve',['Resolve',['../class_bond_1_1_type_and_value.html#aa1d5b5efe2a9a4a245d676f55e814a6d',1,'Bond::TypeAndValue']]],
   ['resolvedswitchlabel',['ResolvedSwitchLabel',['../class_bond_1_1_resolved_switch_label.html',1,'Bond']]],
   ['resolvedswitchlabel',['ResolvedSwitchLabel',['../class_bond_1_1_resolved_switch_label.html#ab531a8f60745abdf638d0a4ae80ec354',1,'Bond::ResolvedSwitchLabel']]],

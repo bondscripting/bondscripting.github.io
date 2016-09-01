@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>Bond: Bond::FileLoader Class Reference</title>
+<title>Bond: Bond::DataChunk Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -88,7 +88,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('class_bond_1_1_file_loader.html','');});
+$(document).ready(function(){initNavTree('struct_bond_1_1_data_chunk.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -107,42 +107,36 @@ $(document).ready(function(){initNavTree('class_bond_1_1_file_loader.html','');}
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="class_bond_1_1_file_loader-members.html">List of all members</a>  </div>
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="struct_bond_1_1_data_chunk-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Bond::FileLoader Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">Bond::DataChunk Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;bond/io/fileloader.h&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for Bond::FileLoader:</div>
-<div class="dyncontent">
- <div class="center">
-  <img src="class_bond_1_1_file_loader.png" usemap="#Bond::FileLoader_map" alt=""/>
-  <map id="Bond::FileLoader_map" name="Bond::FileLoader_map">
-<area href="class_bond_1_1_disk_file_loader.html" alt="Bond::DiskFileLoader" shape="rect" coords="0,56,154,80"/>
-<area href="class_bond_1_1_memory_file_loader.html" alt="Bond::MemoryFileLoader" shape="rect" coords="164,56,318,80"/>
-</map>
- </div></div>
+<p><code>#include &lt;bond/types/datachunk.h&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_file_loader_1_1_handle.html">Handle</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2254b44d925ffadb3e7c972b584987f3"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_file_loader.html#a2254b44d925ffadb3e7c972b584987f3">~FileLoader</a> ()</td></tr>
-<tr class="separator:a2254b44d925ffadb3e7c972b584987f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a505ae86f51e2c8e59b721fae64602d30"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_bond_1_1_file_loader_1_1_handle.html">Handle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_file_loader.html#a505ae86f51e2c8e59b721fae64602d30">LoadFile</a> (const char *fileName)=0</td></tr>
-<tr class="separator:a505ae86f51e2c8e59b721fae64602d30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3263957e0b2a9c670daeac2a61fc6a46"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_file_loader.html#a3263957e0b2a9c670daeac2a61fc6a46">DisposeFile</a> (<a class="el" href="struct_bond_1_1_file_data.html">FileData</a> &amp;fileData)=0</td></tr>
-<tr class="separator:a3263957e0b2a9c670daeac2a61fc6a46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af74271a982eeed907075668c87f6b4de"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_data_chunk.html#af74271a982eeed907075668c87f6b4de">DataChunk</a> ()</td></tr>
+<tr class="separator:af74271a982eeed907075668c87f6b4de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc11c178f6c429bd430ad7e87b731df0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_data_chunk.html#abc11c178f6c429bd430ad7e87b731df0">DataChunk</a> (const void *data, size_t length)</td></tr>
+<tr class="separator:abc11c178f6c429bd430ad7e87b731df0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd461f462c4bdb55793bee9d3e3cf76e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_data_chunk.html#abd461f462c4bdb55793bee9d3e3cf76e">DataChunk</a> (const <a class="el" href="struct_bond_1_1_data_chunk.html">DataChunk</a> &amp;other)=default</td></tr>
+<tr class="separator:abd461f462c4bdb55793bee9d3e3cf76e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8315aea69039d81ea0f3ce274cfd2246"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_data_chunk.html#a8315aea69039d81ea0f3ce274cfd2246">operator==</a> (const <a class="el" href="struct_bond_1_1_data_chunk.html">DataChunk</a> &amp;other) const </td></tr>
+<tr class="separator:a8315aea69039d81ea0f3ce274cfd2246"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a56c49df35d0203b37ea8c56020fefaa2"><td class="memItemLeft" align="right" valign="top">const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_data_chunk.html#a56c49df35d0203b37ea8c56020fefaa2">mData</a></td></tr>
+<tr class="separator:a56c49df35d0203b37ea8c56020fefaa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11fc0962ccb7a5df7aad2cb4d7f1bd5a"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_data_chunk.html#a11fc0962ccb7a5df7aad2cb4d7f1bd5a">mLength</a></td></tr>
+<tr class="separator:a11fc0962ccb7a5df7aad2cb4d7f1bd5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a2254b44d925ffadb3e7c972b584987f3"></a>
+<a class="anchor" id="af74271a982eeed907075668c87f6b4de"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -150,7 +144,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual Bond::FileLoader::~FileLoader </td>
+          <td class="memname">Bond::DataChunk::DataChunk </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -158,7 +152,65 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abc11c178f6c429bd430ad7e87b731df0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Bond::DataChunk::DataChunk </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abd461f462c4bdb55793bee9d3e3cf76e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Bond::DataChunk::DataChunk </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_bond_1_1_data_chunk.html">DataChunk</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -166,7 +218,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a3263957e0b2a9c670daeac2a61fc6a46"></a>
+<a class="anchor" id="a8315aea69039d81ea0f3ce274cfd2246"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -174,59 +226,56 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void Bond::FileLoader::DisposeFile </td>
+          <td class="memname">bool Bond::DataChunk::operator== </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_bond_1_1_file_data.html">FileData</a> &amp;&#160;</td>
-          <td class="paramname"><em>fileData</em></td><td>)</td>
-          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_bond_1_1_data_chunk.html">DataChunk</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_bond_1_1_memory_file_loader.html#aaca34b0e6a12a527b3264b973f58985b">Bond::MemoryFileLoader</a>, and <a class="el" href="class_bond_1_1_disk_file_loader.html#a21fecdf997402a6eb1cb00cd272ef5d4">Bond::DiskFileLoader</a>.</p>
-
 </div>
 </div>
-<a class="anchor" id="a505ae86f51e2c8e59b721fae64602d30"></a>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a56c49df35d0203b37ea8c56020fefaa2"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="class_bond_1_1_file_loader_1_1_handle.html">Handle</a> Bond::FileLoader::LoadFile </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>fileName</em></td><td>)</td>
-          <td></td>
+          <td class="memname">const void* Bond::DataChunk::mData</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_bond_1_1_memory_file_loader.html#a77cd0a321f24ecaa02c27249ccd39aff">Bond::MemoryFileLoader</a>, and <a class="el" href="class_bond_1_1_disk_file_loader.html#af3ba259c3e619bf3428ac0dacfec58a1">Bond::DiskFileLoader</a>.</p>
+</div>
+</div>
+<a class="anchor" id="a11fc0962ccb7a5df7aad2cb4d7f1bd5a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t Bond::DataChunk::mLength</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>include/bond/io/fileloader.h</li>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>include/bond/types/datachunk.h</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespace_bond.html">Bond</a></li><li class="navelem"><a class="el" href="class_bond_1_1_file_loader.html">FileLoader</a></li>
+    <li class="navelem"><a class="el" href="namespace_bond.html">Bond</a></li><li class="navelem"><a class="el" href="struct_bond_1_1_data_chunk.html">DataChunk</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>

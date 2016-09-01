@@ -198,9 +198,9 @@ $(document).ready(function(){initNavTree('functions_func_s.html','');});
 , <a class="el" href="class_bond_1_1_member_expression.html#a9b82b4bdce30ee84f358d064fe5c65e2">Bond::MemberExpression</a>
 , <a class="el" href="class_bond_1_1_type_specifier.html#a9d21832a90feff3ead47405e7e0382bb">Bond::TypeSpecifier</a>
 </li>
-<li>SetDelegateLoader()
-: <a class="el" href="class_bond_1_1_disk_file_loader.html#a4bf9d0fe2407f107e7b0b6edd9be4d4e">Bond::DiskFileLoader</a>
-, <a class="el" href="class_bond_1_1_memory_file_loader.html#a0ebb77313a9e90f857f19e2bf172e8b5">Bond::MemoryFileLoader</a>
+<li>SetDelegateFactory()
+: <a class="el" href="class_bond_1_1_memory_stream_factory.html#a3ab2fb1714b93174416e50bb07579b5b">Bond::MemoryStreamFactory</a>
+, <a class="el" href="class_bond_1_1_stdio_stream_factory.html#a0ccd1e9d5a7a55c234562f9656b99198">Bond::StdioStreamFactory</a>
 </li>
 <li>SetDoubleValue()
 : <a class="el" href="class_bond_1_1_token.html#aadec59a2f0b1e1e6dca32de3cc21f747">Bond::Token</a>
@@ -306,7 +306,7 @@ $(document).ready(function(){initNavTree('functions_func_s.html','');});
 : <a class="el" href="class_bond_1_1_callee_stack_frame.html#a2f9b421c01095ecaad891cd4573ff9e8">Bond::CalleeStackFrame</a>
 </li>
 <li>SetRootPath()
-: <a class="el" href="class_bond_1_1_disk_file_loader.html#a2d131bcc9b0b9a946650a869c008e9aa">Bond::DiskFileLoader</a>
+: <a class="el" href="class_bond_1_1_stdio_stream_factory.html#a0259b72a76cecd87343a254afc4fbd5e">Bond::StdioStreamFactory</a>
 </li>
 <li>SetSize()
 : <a class="el" href="class_bond_1_1_struct_declaration.html#aecb9badfbfde937f6d584a668b6297c2">Bond::StructDeclaration</a>
@@ -353,7 +353,7 @@ $(document).ready(function(){initNavTree('functions_func_s.html','');});
 : <a class="el" href="class_bond_1_1_output_stream_adaptor.html#a999252cfe9ff3630ba1e67aa8f831bb4">Bond::OutputStreamAdaptor</a>
 </li>
 <li>SimpleString()
-: <a class="el" href="class_bond_1_1_simple_string.html#a700228fdeb5888c8baa29811dba82882">Bond::SimpleString</a>
+: <a class="el" href="class_bond_1_1_simple_string.html#a40af7167b8ac698006851d16c7abddc9">Bond::SimpleString</a>
 </li>
 <li>SkipTo()
 : <a class="el" href="class_bond_1_1_token_stream.html#aebc7bc925e190a5fb1fca869ea4cafc5">Bond::TokenStream</a>
@@ -365,19 +365,22 @@ $(document).ready(function(){initNavTree('functions_func_s.html','');});
 : <a class="el" href="class_bond_1_1_std_in_input_stream.html#aaf35b1e82af73c854d553d4d8d21b960">Bond::StdInInputStream</a>
 </li>
 <li>StdioFileHandle()
-: <a class="el" href="class_bond_1_1_stdio_file_handle.html#a8345ee7f92a7a5486e2f8f56ef4ae09c">Bond::StdioFileHandle</a>
+: <a class="el" href="class_bond_1_1_stdio_file_handle.html#aa8f82c2e0c7574a55f77a2b56155aefd">Bond::StdioFileHandle</a>
 </li>
 <li>StdioInputStream()
-: <a class="el" href="class_bond_1_1_stdio_input_stream.html#a8676a9f3a821500f42c1ebc67b430e7e">Bond::StdioInputStream</a>
+: <a class="el" href="class_bond_1_1_stdio_input_stream.html#a1080d48b74da19cdca0ca42701bb6d94">Bond::StdioInputStream</a>
 </li>
 <li>StdioOutputStream()
-: <a class="el" href="class_bond_1_1_stdio_output_stream.html#a87131c3847aea56c5e0aad1a1da9791e">Bond::StdioOutputStream</a>
+: <a class="el" href="class_bond_1_1_stdio_output_stream.html#a48775a2edb830a60baa3030443e6f3ef">Bond::StdioOutputStream</a>
+</li>
+<li>StdioStreamFactory()
+: <a class="el" href="class_bond_1_1_stdio_stream_factory.html#a76a8c95ef4020926830965976eca4d5d">Bond::StdioStreamFactory</a>
 </li>
 <li>StdOutOutputStream()
 : <a class="el" href="class_bond_1_1_std_out_output_stream.html#a1a3abd4eda9895b3aee7fa3718f7ad83">Bond::StdOutOutputStream</a>
 </li>
 <li>StreamPos()
-: <a class="el" href="struct_bond_1_1_stream_pos.html#a60f549469d22ba16ea884bd3653c21bc">Bond::StreamPos</a>
+: <a class="el" href="struct_bond_1_1_stream_pos.html#a163dba2528d1b984dda4e9f1f590aaeb">Bond::StreamPos</a>
 </li>
 <li>StructDeclaration()
 : <a class="el" href="class_bond_1_1_struct_declaration.html#aa638df5018dfd96782f5a3e904b6caa5">Bond::StructDeclaration</a>
@@ -396,6 +399,9 @@ $(document).ready(function(){initNavTree('functions_func_s.html','');});
 </li>
 <li>SymbolTable()
 : <a class="el" href="class_bond_1_1_symbol_table.html#ad8e3dbb7d430ada31b05d4dcf0789528">Bond::SymbolTable</a>
+</li>
+<li>Sync()
+: <a class="el" href="class_bond_1_1_char_stream.html#a55cbcb5a994057bc8306549e66782239">Bond::CharStream</a>
 </li>
 </ul>
 </div><!-- contents -->

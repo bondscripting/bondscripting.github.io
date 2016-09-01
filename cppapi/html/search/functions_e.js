@@ -9,7 +9,7 @@ var searchData=
   ['parsenodecounter',['ParseNodeCounter',['../class_bond_1_1_parse_node_counter.html#a3e56e4e7e8a6dc69e3db69778deafd07',1,'Bond::ParseNodeCounter']]],
   ['parsenodelist',['ParseNodeList',['../class_bond_1_1_parse_node_list.html#a0394db043b4a3ddab8972e632f12ba77',1,'Bond::ParseNodeList']]],
   ['parser',['Parser',['../class_bond_1_1_parser.html#aa97dd9676e5ad69b324bfce54e85aa56',1,'Bond::Parser::Parser(Allocator &amp;allocator, CompilerErrorBuffer &amp;errorBuffer, ParseNodeStore &amp;store)'],['../class_bond_1_1_parser.html#a8aaf8ad8104c208abd2391235e4510a2',1,'Bond::Parser::Parser(const Parser &amp;other)=delete']]],
-  ['peek',['Peek',['../class_bond_1_1_char_stream.html#a8823a97e62b5369b5a0a9f87171634f2',1,'Bond::CharStream::Peek()'],['../class_bond_1_1_token_stream.html#a38e823201b71b750ca99e11595c852d9',1,'Bond::TokenStream::Peek()']]],
+  ['peek',['Peek',['../class_bond_1_1_token_stream.html#a38e823201b71b750ca99e11595c852d9',1,'Bond::TokenStream']]],
   ['peekif',['PeekIf',['../class_bond_1_1_token_stream.html#a66a2f4932b2599b17080d66c1d8f1bf5',1,'Bond::TokenStream::PeekIf(Token::TokenType type) const '],['../class_bond_1_1_token_stream.html#ac315a8b9dad06fac7339c929337b2eb5',1,'Bond::TokenStream::PeekIf(const TokenTypeSet &amp;typeSet) const ']]],
   ['pop',['Pop',['../class_bond_1_1_auto_stack.html#ac86ad4633f85047e574f30ca25ab6f12',1,'Bond::AutoStack']]],
   ['postfixexpression',['PostfixExpression',['../class_bond_1_1_postfix_expression.html#a059eb747d969eebd81eb05749495ddf6',1,'Bond::PostfixExpression']]],
