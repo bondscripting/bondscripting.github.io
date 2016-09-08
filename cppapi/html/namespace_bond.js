@@ -20,8 +20,6 @@ var namespace_bond =
     [ "BinaryNotEqualOperator", "struct_bond_1_1_binary_not_equal_operator.html", "struct_bond_1_1_binary_not_equal_operator" ],
     [ "BinaryRightOperator", "struct_bond_1_1_binary_right_operator.html", "struct_bond_1_1_binary_right_operator" ],
     [ "BinarySubOperator", "struct_bond_1_1_binary_sub_operator.html", "struct_bond_1_1_binary_sub_operator" ],
-    [ "CalleeStackFrame", "class_bond_1_1_callee_stack_frame.html", "class_bond_1_1_callee_stack_frame" ],
-    [ "CallerStackFrame", "class_bond_1_1_caller_stack_frame.html", "class_bond_1_1_caller_stack_frame" ],
     [ "CastExpression", "class_bond_1_1_cast_expression.html", "class_bond_1_1_cast_expression" ],
     [ "CastVisitor", "class_bond_1_1_cast_visitor.html", "class_bond_1_1_cast_visitor" ],
     [ "CboLoader", "class_bond_1_1_cbo_loader.html", "class_bond_1_1_cbo_loader" ],
@@ -29,6 +27,8 @@ var namespace_bond =
     [ "CharStream", "class_bond_1_1_char_stream.html", "class_bond_1_1_char_stream" ],
     [ "CodeGenerator", "class_bond_1_1_code_generator.html", "class_bond_1_1_code_generator" ],
     [ "CodeSegment", "class_bond_1_1_code_segment.html", "class_bond_1_1_code_segment" ],
+    [ "Collectable", "class_bond_1_1_collectable.html", "class_bond_1_1_collectable" ],
+    [ "Collector", "class_bond_1_1_collector.html", "class_bond_1_1_collector" ],
     [ "CompilerError", "class_bond_1_1_compiler_error.html", "class_bond_1_1_compiler_error" ],
     [ "CompilerErrorBuffer", "class_bond_1_1_compiler_error_buffer.html", "class_bond_1_1_compiler_error_buffer" ],
     [ "CompoundStatement", "class_bond_1_1_compound_statement.html", "class_bond_1_1_compound_statement" ],
@@ -59,6 +59,7 @@ var namespace_bond =
     [ "Initializer", "class_bond_1_1_initializer.html", "class_bond_1_1_initializer" ],
     [ "InputStream", "class_bond_1_1_input_stream.html", "class_bond_1_1_input_stream" ],
     [ "InputStreamAdaptor", "class_bond_1_1_input_stream_adaptor.html", "class_bond_1_1_input_stream_adaptor" ],
+    [ "InvocationStackFrame", "class_bond_1_1_invocation_stack_frame.html", "class_bond_1_1_invocation_stack_frame" ],
     [ "JumpStatement", "class_bond_1_1_jump_statement.html", "class_bond_1_1_jump_statement" ],
     [ "Lexer", "class_bond_1_1_lexer.html", "class_bond_1_1_lexer" ],
     [ "ListParseNode", "class_bond_1_1_list_parse_node.html", "class_bond_1_1_list_parse_node" ],
@@ -95,6 +96,7 @@ var namespace_bond =
     [ "ReturnSignature", "struct_bond_1_1_return_signature.html", "struct_bond_1_1_return_signature" ],
     [ "SemanticAnalyzer", "class_bond_1_1_semantic_analyzer.html", "class_bond_1_1_semantic_analyzer" ],
     [ "SimpleString", "class_bond_1_1_simple_string.html", "class_bond_1_1_simple_string" ],
+    [ "StackFrame", "class_bond_1_1_stack_frame.html", "class_bond_1_1_stack_frame" ],
     [ "StdErrOutputStream", "class_bond_1_1_std_err_output_stream.html", "class_bond_1_1_std_err_output_stream" ],
     [ "StdInInputStream", "class_bond_1_1_std_in_input_stream.html", "class_bond_1_1_std_in_input_stream" ],
     [ "StdioFileHandle", "class_bond_1_1_stdio_file_handle.html", "class_bond_1_1_stdio_file_handle" ],
@@ -126,5 +128,6 @@ var namespace_bond =
     [ "Value32", "union_bond_1_1_value32.html", "union_bond_1_1_value32" ],
     [ "Value64", "union_bond_1_1_value64.html", "union_bond_1_1_value64" ],
     [ "VM", "class_bond_1_1_v_m.html", "class_bond_1_1_v_m" ],
-    [ "WhileStatement", "class_bond_1_1_while_statement.html", "class_bond_1_1_while_statement" ]
+    [ "WhileStatement", "class_bond_1_1_while_statement.html", "class_bond_1_1_while_statement" ],
+    [ "WrapperCollectable", "class_bond_1_1_wrapper_collectable.html", "class_bond_1_1_wrapper_collectable" ]
 ];

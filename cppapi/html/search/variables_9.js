@@ -63,6 +63,7 @@ var searchData=
   ['mnamespacedefinition',['mNamespaceDefinition',['../struct_bond_1_1_parse_node_count.html#ab7f2c2c76c15523e6b0b5ee52c30f249',1,'Bond::ParseNodeCount']]],
   ['mnativeblock',['mNativeBlock',['../struct_bond_1_1_parse_node_count.html#a7613923583f62f446df637940687ef4e',1,'Bond::ParseNodeCount']]],
   ['mnativefunction',['mNativeFunction',['../struct_bond_1_1_function.html#ab401b078a3a77fdc8016751788783e89',1,'Bond::Function']]],
+  ['mnext',['mNext',['../class_bond_1_1_collectable.html#a492e767f05eb30d9d2d47236c667bb03',1,'Bond::Collectable']]],
   ['mnumchunks',['mNumChunks',['../struct_bond_1_1_data_chunk_index.html#a5e77884f6460b48b665f3aa2ce14911a',1,'Bond::DataChunkIndex']]],
   ['most32_5finteger_5fconstants_5ftypeset',['MOST32_INTEGER_CONSTANTS_TYPESET',['../group__compiler.html#gac40b1f7400ba9e3fd1bfd29a6a8b7aa9',1,'Bond']]],
   ['most32_5finteger_5ftype_5fspecifiers_5ftypeset',['MOST32_INTEGER_TYPE_SPECIFIERS_TYPESET',['../group__compiler.html#ga97c8cedea226a5156be5989588b0e3fa',1,'Bond']]],

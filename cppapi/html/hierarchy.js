@@ -6,7 +6,7 @@ var hierarchy =
       [ "Bond::DefaultAllocator", "class_bond_1_1_default_allocator.html", null ]
     ] ],
     [ "Bond::AutoStack< ElementType >", "class_bond_1_1_auto_stack.html", null ],
-    [ "Bond::AutoStack< CalleeStackFrame >", "class_bond_1_1_auto_stack.html", null ],
+    [ "Bond::AutoStack< StackFrame >", "class_bond_1_1_auto_stack.html", null ],
     [ "Bond::BinaryAddOperator", "struct_bond_1_1_binary_add_operator.html", null ],
     [ "Bond::BinaryBitAndOperator", "struct_bond_1_1_binary_bit_and_operator.html", null ],
     [ "Bond::BinaryBitOrOperator", "struct_bond_1_1_binary_bit_or_operator.html", null ],
@@ -23,12 +23,15 @@ var hierarchy =
     [ "Bond::BinaryNotEqualOperator", "struct_bond_1_1_binary_not_equal_operator.html", null ],
     [ "Bond::BinaryRightOperator", "struct_bond_1_1_binary_right_operator.html", null ],
     [ "Bond::BinarySubOperator", "struct_bond_1_1_binary_sub_operator.html", null ],
-    [ "Bond::CalleeStackFrame", "class_bond_1_1_callee_stack_frame.html", null ],
     [ "Bond::CboLoader", "class_bond_1_1_cbo_loader.html", null ],
     [ "Bond::CboValidator", "class_bond_1_1_cbo_validator.html", null ],
     [ "Bond::CharStream", "class_bond_1_1_char_stream.html", null ],
     [ "Bond::CodeGenerator", "class_bond_1_1_code_generator.html", null ],
     [ "Bond::CodeSegment", "class_bond_1_1_code_segment.html", null ],
+    [ "Bond::Collectable", "class_bond_1_1_collectable.html", [
+      [ "Bond::WrapperCollectable< T >", "class_bond_1_1_wrapper_collectable.html", null ]
+    ] ],
+    [ "Bond::Collector", "class_bond_1_1_collector.html", null ],
     [ "Bond::CompilerError", "class_bond_1_1_compiler_error.html", null ],
     [ "Bond::CompilerErrorBuffer", "class_bond_1_1_compiler_error_buffer.html", null ],
     [ "Bond::ConstantTable", "struct_bond_1_1_constant_table.html", null ],
@@ -38,9 +41,10 @@ var hierarchy =
     [ "Bond::DataEntry", "struct_bond_1_1_data_entry.html", null ],
     [ "Bond::Allocator::Deallocator< T >", "struct_bond_1_1_allocator_1_1_deallocator.html", null ],
     [ "Bond::Disassembler", "class_bond_1_1_disassembler.html", null ],
-    [ "Bond::AutoStack< ElementType >::Element", "class_bond_1_1_auto_stack_1_1_element.html", [
-      [ "Bond::CallerStackFrame", "class_bond_1_1_caller_stack_frame.html", null ]
+    [ "Element", null, [
+      [ "Bond::InvocationStackFrame", "class_bond_1_1_invocation_stack_frame.html", null ]
     ] ],
+    [ "Bond::AutoStack< ElementType >::Element", "class_bond_1_1_auto_stack_1_1_element.html", null ],
     [ "Bond::Exception", "class_bond_1_1_exception.html", null ],
     [ "Bond::FrontEnd", "class_bond_1_1_front_end.html", null ],
     [ "Bond::Function", "struct_bond_1_1_function.html", null ],
@@ -119,6 +123,7 @@ var hierarchy =
     [ "Bond::ReturnSignature", "struct_bond_1_1_return_signature.html", null ],
     [ "Bond::SemanticAnalyzer", "class_bond_1_1_semantic_analyzer.html", null ],
     [ "Bond::SimpleString", "class_bond_1_1_simple_string.html", null ],
+    [ "Bond::StackFrame", "class_bond_1_1_stack_frame.html", null ],
     [ "Bond::StdioFileHandle", "class_bond_1_1_stdio_file_handle.html", null ],
     [ "Bond::Stream", "class_bond_1_1_stream.html", [
       [ "Bond::InputStream", "class_bond_1_1_input_stream.html", [
@@ -151,7 +156,8 @@ var hierarchy =
       [ "Bond::Allocator::AlignedObjectHandle< T >", "class_bond_1_1_allocator_1_1_aligned_object_handle.html", null ],
       [ "Bond::Allocator::Handle< T >", "class_bond_1_1_allocator_1_1_handle.html", null ],
       [ "Bond::Allocator::ObjectHandle< T >", "class_bond_1_1_allocator_1_1_object_handle.html", null ],
-      [ "Bond::Allocator::Handle< uint8_t >", "class_bond_1_1_allocator_1_1_handle.html", null ]
+      [ "Bond::Allocator::Handle< uint8_t >", "class_bond_1_1_allocator_1_1_handle.html", null ],
+      [ "Bond::Allocator::ObjectHandle< Collectable >", "class_bond_1_1_allocator_1_1_object_handle.html", null ]
     ] ],
     [ "Bond::Value", "union_bond_1_1_value.html", null ],
     [ "Bond::Value16", "union_bond_1_1_value16.html", null ],

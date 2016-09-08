@@ -5,6 +5,7 @@ var searchData=
   ['_7ebinaryexpression',['~BinaryExpression',['../class_bond_1_1_binary_expression.html#a5ee46b056e53830c80091de92f447cb9',1,'Bond::BinaryExpression']]],
   ['_7ecastexpression',['~CastExpression',['../class_bond_1_1_cast_expression.html#abe195dded1e0528b660eebb0677bed35',1,'Bond::CastExpression']]],
   ['_7ecodegenerator',['~CodeGenerator',['../class_bond_1_1_code_generator.html#a7bd6d49742286d3c78042a07bc64604a',1,'Bond::CodeGenerator']]],
+  ['_7ecollectable',['~Collectable',['../class_bond_1_1_collectable.html#adab23fd61fce9b2e8d73c944bb36e45e',1,'Bond::Collectable']]],
   ['_7ecompoundstatement',['~CompoundStatement',['../class_bond_1_1_compound_statement.html#acc9a58812e5a3f31724cf7db96d368e0',1,'Bond::CompoundStatement']]],
   ['_7econditionalexpression',['~ConditionalExpression',['../class_bond_1_1_conditional_expression.html#ae410fc5cbff79665856163667e67f2c6',1,'Bond::ConditionalExpression']]],
   ['_7econstantliteralexpression',['~ConstantLiteralExpression',['../class_bond_1_1_constant_literal_expression.html#ad5b9bb13d2247614fb0a69371d178740',1,'Bond::ConstantLiteralExpression']]],
@@ -66,5 +67,6 @@ var searchData=
   ['_7etypespecifier',['~TypeSpecifier',['../class_bond_1_1_type_specifier.html#a09e9f070d23e90d7c46b3b6a3209d3c1',1,'Bond::TypeSpecifier']]],
   ['_7eunaryexpression',['~UnaryExpression',['../class_bond_1_1_unary_expression.html#aed2834e3ab719bdeed5642af8683dce4',1,'Bond::UnaryExpression']]],
   ['_7evm',['~VM',['../class_bond_1_1_v_m.html#accba99893a1c4bd2e5f0238a5927899d',1,'Bond::VM']]],
-  ['_7ewhilestatement',['~WhileStatement',['../class_bond_1_1_while_statement.html#a73388154443611d38ccce6ba7057c81f',1,'Bond::WhileStatement']]]
+  ['_7ewhilestatement',['~WhileStatement',['../class_bond_1_1_while_statement.html#a73388154443611d38ccce6ba7057c81f',1,'Bond::WhileStatement']]],
+  ['_7ewrappercollectable',['~WrapperCollectable',['../class_bond_1_1_wrapper_collectable.html#ae8cd45f559417b239afdbc30f4cddd72',1,'Bond::WrapperCollectable']]]
 ];

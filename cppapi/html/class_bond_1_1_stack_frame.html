@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>Bond: Bond::CalleeStackFrame Class Reference</title>
+<title>Bond: Bond::StackFrame Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -88,7 +88,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('class_bond_1_1_callee_stack_frame.html','');});
+$(document).ready(function(){initNavTree('class_bond_1_1_stack_frame.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -109,9 +109,9 @@ $(document).ready(function(){initNavTree('class_bond_1_1_callee_stack_frame.html
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#friends">Friends</a> &#124;
-<a href="class_bond_1_1_callee_stack_frame-members.html">List of all members</a>  </div>
+<a href="class_bond_1_1_stack_frame-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Bond::CalleeStackFrame Class Reference<div class="ingroups"><a class="el" href="group__vm.html">Virtual Machine</a></div></div>  </div>
+<div class="title">Bond::StackFrame Class Reference<div class="ingroups"><a class="el" href="group__vm.html">Virtual Machine</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -119,30 +119,38 @@ $(document).ready(function(){initNavTree('class_bond_1_1_callee_stack_frame.html
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7ac904fec3965da0702418203f6d7fa4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_callee_stack_frame.html#a7ac904fec3965da0702418203f6d7fa4">CalleeStackFrame</a> (<a class="el" href="class_bond_1_1_v_m.html">VM</a> &amp;vm)</td></tr>
-<tr class="separator:a7ac904fec3965da0702418203f6d7fa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0bfb9b0213916bae2669ab38e8bbd0e2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_callee_stack_frame.html#a0bfb9b0213916bae2669ab38e8bbd0e2">CalleeStackFrame</a> (<a class="el" href="class_bond_1_1_v_m.html">VM</a> &amp;vm, const <a class="el" href="struct_bond_1_1_function.html">Function</a> &amp;function, uint8_t *framePointer, uint8_t *stackPointer, uint8_t *returnPointer)</td></tr>
-<tr class="separator:a0bfb9b0213916bae2669ab38e8bbd0e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa81d90c2ed7237dc2a51c2afea4ccc07"><td class="memTemplParams" colspan="2">template&lt;typename ArgType &gt; </td></tr>
-<tr class="memitem:aa81d90c2ed7237dc2a51c2afea4ccc07"><td class="memTemplItemLeft" align="right" valign="top">const ArgType &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_bond_1_1_callee_stack_frame.html#aa81d90c2ed7237dc2a51c2afea4ccc07">GetArg</a> (size_t index) const </td></tr>
-<tr class="separator:aa81d90c2ed7237dc2a51c2afea4ccc07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f9b421c01095ecaad891cd4573ff9e8"><td class="memTemplParams" colspan="2">template&lt;typename ReturnType &gt; </td></tr>
-<tr class="memitem:a2f9b421c01095ecaad891cd4573ff9e8"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_bond_1_1_callee_stack_frame.html#a2f9b421c01095ecaad891cd4573ff9e8">SetReturnValue</a> (const ReturnType &amp;returnValue)</td></tr>
-<tr class="separator:a2f9b421c01095ecaad891cd4573ff9e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab95d6dc4a7cc864df229eac3e6a7848c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_bond_1_1_v_m.html">VM</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_callee_stack_frame.html#ab95d6dc4a7cc864df229eac3e6a7848c">GetVM</a> () const </td></tr>
-<tr class="separator:ab95d6dc4a7cc864df229eac3e6a7848c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff91fbd3023d6756fca17cda96ce8633"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_bond_1_1_callee_stack_frame.html">CalleeStackFrame</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_callee_stack_frame.html#aff91fbd3023d6756fca17cda96ce8633">operator=</a> (const <a class="el" href="class_bond_1_1_callee_stack_frame.html">CalleeStackFrame</a> &amp;other)=delete</td></tr>
-<tr class="separator:aff91fbd3023d6756fca17cda96ce8633"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecab98b70d6f86548395afa390322a26"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stack_frame.html#aecab98b70d6f86548395afa390322a26">StackFrame</a> (<a class="el" href="class_bond_1_1_v_m.html">VM</a> &amp;vm)</td></tr>
+<tr class="separator:aecab98b70d6f86548395afa390322a26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6427c6b53cfaf1313264315075242893"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stack_frame.html#a6427c6b53cfaf1313264315075242893">StackFrame</a> (<a class="el" href="class_bond_1_1_v_m.html">VM</a> &amp;vm, const <a class="el" href="struct_bond_1_1_function.html">Function</a> &amp;function, uint8_t *framePointer, uint8_t *stackPointer, uint8_t *returnPointer)</td></tr>
+<tr class="separator:a6427c6b53cfaf1313264315075242893"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a489d984184c57dcddd319c2c373620"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stack_frame.html#a9a489d984184c57dcddd319c2c373620">StackFrame</a> (const <a class="el" href="class_bond_1_1_stack_frame.html">StackFrame</a> &amp;other)=delete</td></tr>
+<tr class="separator:a9a489d984184c57dcddd319c2c373620"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7db1aafd49f79c3d23fc97f29ef34a2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_bond_1_1_stack_frame.html">StackFrame</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stack_frame.html#a7db1aafd49f79c3d23fc97f29ef34a2d">operator=</a> (const <a class="el" href="class_bond_1_1_stack_frame.html">StackFrame</a> &amp;other)=delete</td></tr>
+<tr class="separator:a7db1aafd49f79c3d23fc97f29ef34a2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af53a63a0b7d7199582fe75da65cbad6e"><td class="memTemplParams" colspan="2">template&lt;typename ArgType &gt; </td></tr>
+<tr class="memitem:af53a63a0b7d7199582fe75da65cbad6e"><td class="memTemplItemLeft" align="right" valign="top">const ArgType &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stack_frame.html#af53a63a0b7d7199582fe75da65cbad6e">GetArg</a> (size_t index) const </td></tr>
+<tr class="separator:af53a63a0b7d7199582fe75da65cbad6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8ce7c98c04f724dc6ea9b783b89306d"><td class="memTemplParams" colspan="2">template&lt;typename ReturnType &gt; </td></tr>
+<tr class="memitem:af8ce7c98c04f724dc6ea9b783b89306d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stack_frame.html#af8ce7c98c04f724dc6ea9b783b89306d">SetReturnValue</a> (const ReturnType &amp;returnValue)</td></tr>
+<tr class="separator:af8ce7c98c04f724dc6ea9b783b89306d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a127eadbaba08ecce2d04a76b23e189e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_bond_1_1_v_m.html">VM</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stack_frame.html#a127eadbaba08ecce2d04a76b23e189e3">GetVM</a> ()</td></tr>
+<tr class="separator:a127eadbaba08ecce2d04a76b23e189e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac419921fead1bfb4c541ac5e512517e8"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_bond_1_1_v_m.html">VM</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stack_frame.html#ac419921fead1bfb4c541ac5e512517e8">GetVM</a> () const </td></tr>
+<tr class="separator:ac419921fead1bfb4c541ac5e512517e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab1d43e70137cea1ae4eb56cd9087925"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_bond_1_1_collector.html">Collector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stack_frame.html#aab1d43e70137cea1ae4eb56cd9087925">GetCollector</a> ()</td></tr>
+<tr class="separator:aab1d43e70137cea1ae4eb56cd9087925"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03020a5af7785539250f8ef5874f5c9d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_bond_1_1_collector.html">Collector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stack_frame.html#a03020a5af7785539250f8ef5874f5c9d">GetCollector</a> () const </td></tr>
+<tr class="separator:a03020a5af7785539250f8ef5874f5c9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:ac692204ff14b03296e5ff3cfc4a3b3d6"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_callee_stack_frame.html#ac692204ff14b03296e5ff3cfc4a3b3d6">VM</a></td></tr>
+<tr class="memitem:ac692204ff14b03296e5ff3cfc4a3b3d6"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stack_frame.html#ac692204ff14b03296e5ff3cfc4a3b3d6">VM</a></td></tr>
 <tr class="separator:ac692204ff14b03296e5ff3cfc4a3b3d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f4bd9a29b47c2d683c5bf299c5d1f00"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_callee_stack_frame.html#a5f4bd9a29b47c2d683c5bf299c5d1f00">CallerStackFrame</a></td></tr>
-<tr class="separator:a5f4bd9a29b47c2d683c5bf299c5d1f00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48430cf6c88398807b1688016b492e88"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stack_frame.html#a48430cf6c88398807b1688016b492e88">InvocationStackFrame</a></td></tr>
+<tr class="separator:a48430cf6c88398807b1688016b492e88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a7ac904fec3965da0702418203f6d7fa4"></a>
+<a class="anchor" id="aecab98b70d6f86548395afa390322a26"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -150,7 +158,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Bond::CalleeStackFrame::CalleeStackFrame </td>
+          <td class="memname">Bond::StackFrame::StackFrame </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_bond_1_1_v_m.html">VM</a> &amp;&#160;</td>
           <td class="paramname"><em>vm</em></td><td>)</td>
@@ -166,7 +174,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a0bfb9b0213916bae2669ab38e8bbd0e2"></a>
+<a class="anchor" id="a6427c6b53cfaf1313264315075242893"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -174,7 +182,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Bond::CalleeStackFrame::CalleeStackFrame </td>
+          <td class="memname">Bond::StackFrame::StackFrame </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_bond_1_1_v_m.html">VM</a> &amp;&#160;</td>
           <td class="paramname"><em>vm</em>, </td>
@@ -218,15 +226,39 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a9a489d984184c57dcddd319c2c373620"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Bond::StackFrame::StackFrame </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_bond_1_1_stack_frame.html">StackFrame</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="aa81d90c2ed7237dc2a51c2afea4ccc07"></a>
+<a class="anchor" id="af53a63a0b7d7199582fe75da65cbad6e"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename ArgType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const ArgType&amp; Bond::CalleeStackFrame::GetArg </td>
+          <td class="memname">const ArgType&amp; Bond::StackFrame::GetArg </td>
           <td>(</td>
           <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>index</em></td><td>)</td>
@@ -237,7 +269,7 @@ template&lt;typename ArgType &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ab95d6dc4a7cc864df229eac3e6a7848c"></a>
+<a class="anchor" id="aab1d43e70137cea1ae4eb56cd9087925"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -245,7 +277,30 @@ template&lt;typename ArgType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_bond_1_1_v_m.html">VM</a>&amp; Bond::CalleeStackFrame::GetVM </td>
+          <td class="memname"><a class="el" href="class_bond_1_1_collector.html">Collector</a>&amp; Bond::StackFrame::GetCollector </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a03020a5af7785539250f8ef5874f5c9d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_bond_1_1_collector.html">Collector</a>&amp; Bond::StackFrame::GetCollector </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -260,7 +315,7 @@ template&lt;typename ArgType &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="aff91fbd3023d6756fca17cda96ce8633"></a>
+<a class="anchor" id="a127eadbaba08ecce2d04a76b23e189e3"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -268,9 +323,55 @@ template&lt;typename ArgType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_bond_1_1_callee_stack_frame.html">CalleeStackFrame</a>&amp; Bond::CalleeStackFrame::operator= </td>
+          <td class="memname"><a class="el" href="class_bond_1_1_v_m.html">VM</a>&amp; Bond::StackFrame::GetVM </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_bond_1_1_callee_stack_frame.html">CalleeStackFrame</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac419921fead1bfb4c541ac5e512517e8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_bond_1_1_v_m.html">VM</a>&amp; Bond::StackFrame::GetVM </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7db1aafd49f79c3d23fc97f29ef34a2d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_bond_1_1_stack_frame.html">StackFrame</a>&amp; Bond::StackFrame::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_bond_1_1_stack_frame.html">StackFrame</a> &amp;&#160;</td>
           <td class="paramname"><em>other</em></td><td>)</td>
           <td></td>
         </tr>
@@ -284,14 +385,14 @@ template&lt;typename ArgType &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a2f9b421c01095ecaad891cd4573ff9e8"></a>
+<a class="anchor" id="af8ce7c98c04f724dc6ea9b783b89306d"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename ReturnType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void Bond::CalleeStackFrame::SetReturnValue </td>
+          <td class="memname">void Bond::StackFrame::SetReturnValue </td>
           <td>(</td>
           <td class="paramtype">const ReturnType &amp;&#160;</td>
           <td class="paramname"><em>returnValue</em></td><td>)</td>
@@ -303,7 +404,7 @@ template&lt;typename ReturnType &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Function Documentation</h2>
-<a class="anchor" id="a5f4bd9a29b47c2d683c5bf299c5d1f00"></a>
+<a class="anchor" id="a48430cf6c88398807b1688016b492e88"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -311,7 +412,7 @@ template&lt;typename ReturnType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">friend class <a class="el" href="class_bond_1_1_caller_stack_frame.html">CallerStackFrame</a></td>
+          <td class="memname">friend class <a class="el" href="class_bond_1_1_invocation_stack_frame.html">InvocationStackFrame</a></td>
         </tr>
       </table>
   </td>
@@ -351,7 +452,7 @@ template&lt;typename ReturnType &gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespace_bond.html">Bond</a></li><li class="navelem"><a class="el" href="class_bond_1_1_callee_stack_frame.html">CalleeStackFrame</a></li>
+    <li class="navelem"><a class="el" href="namespace_bond.html">Bond</a></li><li class="navelem"><a class="el" href="class_bond_1_1_stack_frame.html">StackFrame</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>

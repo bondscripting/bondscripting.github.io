@@ -1,8 +1,8 @@
 var searchData=
 [
   ['label_5fdelimiters_5ftypeset',['LABEL_DELIMITERS_TYPESET',['../group__compiler.html#ga9ca9355415112f9f314f50daa5dad289',1,'Bond']]],
-  ['ldexp',['Ldexp',['../namespace_bond.html#a73966e1d0cd4914ee2c67c8bc51a20d0',1,'Bond']]],
-  ['ldexpf',['Ldexpf',['../namespace_bond.html#a20a802e08b36a4dae6fc58a89f630b26',1,'Bond']]],
+  ['ldexp',['Ldexp',['../namespace_bond.html#aaa5a6f61a2599f271ae7cdecc946bb29',1,'Bond']]],
+  ['ldexpf',['Ldexpf',['../namespace_bond.html#a084f161fe9eebb6eecb455cd6ca2aaff',1,'Bond']]],
   ['least32_5finteger_5ftype_5fspecifiers_5ftypeset',['LEAST32_INTEGER_TYPE_SPECIFIERS_TYPESET',['../group__compiler.html#ga4a75d07b0787dc636880fa63bc201a5f',1,'Bond']]],
   ['left',['Left',['../namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a983becf80d3cd5820e11b2d4be2e9406',1,'Bond::IO']]],
   ['length',['length',['../union_bond_1_1_value.html#a806ccbe6093efb326c284b847bbd4499',1,'Bond::Value']]],
@@ -19,10 +19,10 @@ var searchData=
   ['loadlibmemory',['LoadLibMemory',['../namespace_bond.html#a5161e74109b08995a10b1702160e5cfb',1,'Bond']]],
   ['loadlibstring',['LoadLibString',['../namespace_bond.html#a2c2fd85897d6b37dc9a57c8288d48f24',1,'Bond']]],
   ['loadlibtype',['LoadLibType',['../namespace_bond.html#afb87cdb802efadf391827114c496e93a',1,'Bond']]],
-  ['log',['Log',['../namespace_bond.html#af8647a68de9c49663c667f5c58575bc2',1,'Bond']]],
-  ['log10',['Log10',['../namespace_bond.html#a8ca3502bb97fa947ef0d2c7def825582',1,'Bond']]],
-  ['log10f',['Log10f',['../namespace_bond.html#a7a3f927a77ee6bb3dffca621303ab6f1',1,'Bond']]],
-  ['logf',['Logf',['../namespace_bond.html#a2d2ac733617233f4d4e93c51c2685e21',1,'Bond']]],
+  ['log',['Log',['../namespace_bond.html#a6fdaf38b41cbf17668059203138b968e',1,'Bond']]],
+  ['log10',['Log10',['../namespace_bond.html#afe90e0660bdece54b026555bbc253f9d',1,'Bond']]],
+  ['log10f',['Log10f',['../namespace_bond.html#a1c3928a4fbec1bc2f0a6725076b7fdba',1,'Bond']]],
+  ['logf',['Logf',['../namespace_bond.html#ad4b48387522bf6d23dbb7c2f4e499833',1,'Bond']]],
   ['long_5finteger_5ftype_5fspecifiers_5ftypeset',['LONG_INTEGER_TYPE_SPECIFIERS_TYPESET',['../group__compiler.html#gaf0174c32866ace77edad0298bfdc48a7',1,'Bond']]],
   ['long_5ftoken',['LONG_TOKEN',['../group__compiler.html#ga0a3506f9eeebeefa561759d459945194',1,'Bond']]],
   ['long_5ftype_5fspecifier',['LONG_TYPE_SPECIFIER',['../group__nodes.html#gae323adbb316e4f861916b86545bb7b63',1,'Bond']]]

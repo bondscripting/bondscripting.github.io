@@ -9,15 +9,17 @@ var class_bond_1_1_v_m =
     [ "CallVoidFunction", "class_bond_1_1_v_m.html#af943278d3236418fd0d56230d06649bc", null ],
     [ "CallVoidFunction", "class_bond_1_1_v_m.html#af84321d37a8155c58df7b98d2e39c44d", null ],
     [ "DumpCallStack", "class_bond_1_1_v_m.html#a5e33f94d23dc0ed565ffe6c1c73c9938", null ],
-    [ "DumpStackFrame", "class_bond_1_1_v_m.html#add1e80fc18b075730e27aff6d95522da", null ],
+    [ "DumpStackFrame", "class_bond_1_1_v_m.html#a803b6af32594bf96859d5290629157dd", null ],
     [ "GetAllocator", "class_bond_1_1_v_m.html#a4146200d00819dcf118a504636820172", null ],
+    [ "GetCallerStackFrame", "class_bond_1_1_v_m.html#a703a4540bca8cf2c312e7ebdc539d5a6", null ],
+    [ "GetCallerStackFrame", "class_bond_1_1_v_m.html#a837a6b10e55af6e5fba9cac592d5bd23", null ],
     [ "GetCodeSegment", "class_bond_1_1_v_m.html#af764cac0adfda9ddec986e97ad0ae1fb", null ],
+    [ "GetStackFrame", "class_bond_1_1_v_m.html#a3573abf465c8ec39e379707b6f618cb0", null ],
+    [ "GetStackFrame", "class_bond_1_1_v_m.html#a3cbb13d8ae03293f4120015a7ea98ad4", null ],
     [ "GetStdErr", "class_bond_1_1_v_m.html#a9bd7984d5120943ddfdfb38865f03da9", null ],
     [ "GetStdIn", "class_bond_1_1_v_m.html#a39eaafbb79fccb08ea89bc4a76e74d8f", null ],
     [ "GetStdOut", "class_bond_1_1_v_m.html#a03cfeb255d8d1f0c0264c82123d95ccc", null ],
-    [ "GetTopStackFrame", "class_bond_1_1_v_m.html#a230a8ee815351065037237ebe6e7c060", null ],
-    [ "GetTopStackFrame", "class_bond_1_1_v_m.html#af8d333dc24b64ce9b3385e4df8b03503", null ],
     [ "operator=", "class_bond_1_1_v_m.html#a9cd1ddcd9d01b264119293a5352a3920", null ],
     [ "RaiseError", "class_bond_1_1_v_m.html#a9c4b65a4e616a42acfab54fd7f435ff8", null ],
-    [ "CallerStackFrame", "class_bond_1_1_v_m.html#a5f4bd9a29b47c2d683c5bf299c5d1f00", null ]
+    [ "InvocationStackFrame", "class_bond_1_1_v_m.html#a48430cf6c88398807b1688016b492e88", null ]
 ];

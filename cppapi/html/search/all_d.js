@@ -10,7 +10,7 @@ var searchData=
   ['nativebindinggenerator',['NativeBindingGenerator',['../class_bond_1_1_native_binding_generator.html',1,'Bond']]],
   ['nativeblock',['NativeBlock',['../class_bond_1_1_native_block.html',1,'Bond']]],
   ['nativeblock',['NativeBlock',['../class_bond_1_1_native_block.html#a3e269de1bfe8f8802d916aef21198470',1,'Bond::NativeBlock']]],
-  ['nativefunction',['NativeFunction',['../namespace_bond.html#a516b3b2816755fd7f6c6976085360fb2',1,'Bond']]],
+  ['nativefunction',['NativeFunction',['../namespace_bond.html#a21baebd4e9c62553dd8fd839ce8a0431',1,'Bond']]],
   ['nativefunctionbinding',['NativeFunctionBinding',['../struct_bond_1_1_native_function_binding.html',1,'Bond']]],
   ['next',['Next',['../class_bond_1_1_char_stream.html#a32376af2a197854880eea5942618defb',1,'Bond::CharStream::Next()'],['../class_bond_1_1_token_stream.html#a61388c2bb27aa2048194e2a8bea0e0ae',1,'Bond::TokenStream::Next()']]],
   ['nextif',['NextIf',['../class_bond_1_1_token_stream.html#aa67ab78dc78dd59ffb397362a52b2a0a',1,'Bond::TokenStream::NextIf(Token::TokenType type)'],['../class_bond_1_1_token_stream.html#a091cab1d812729ce89d14b5dc67cbf07',1,'Bond::TokenStream::NextIf(const TokenTypeSet &amp;typeSet)']]],

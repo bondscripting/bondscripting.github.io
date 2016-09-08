@@ -111,27 +111,47 @@ $(document).ready(function(){initNavTree('group__vm.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_callee_stack_frame.html">Bond::CalleeStackFrame</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_collectable.html">Bond::Collectable</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_caller_stack_frame.html">Bond::CallerStackFrame</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_wrapper_collectable.html">Bond::WrapperCollectable&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_collector.html">Bond::Collector</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_invocation_stack_frame.html">Bond::InvocationStackFrame</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_v_m.html">Bond::VM</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:ga2cdf1bde1a86a3e4beadfc7eb134a03d"><td class="memItemLeft" align="right" valign="top">typedef AutoStack&lt; CalleeStackFrame &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__vm.html#ga2cdf1bde1a86a3e4beadfc7eb134a03d">Bond::StackFrames</a></td></tr>
-<tr class="separator:ga2cdf1bde1a86a3e4beadfc7eb134a03d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafa928831f66f99255739910ae1c1adbb"><td class="memItemLeft" align="right" valign="top">typedef Allocator::ObjectHandle&lt; Collectable &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__vm.html#gafa928831f66f99255739910ae1c1adbb">Bond::CollectableHandle</a></td></tr>
+<tr class="separator:gafa928831f66f99255739910ae1c1adbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa26b04bb3d53922d0775e28b6a2fdb73"><td class="memItemLeft" align="right" valign="top">typedef AutoStack&lt; StackFrame &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__vm.html#gaa26b04bb3d53922d0775e28b6a2fdb73">Bond::StackFrames</a></td></tr>
+<tr class="separator:gaa26b04bb3d53922d0775e28b6a2fdb73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>These classes form the parts of the <a class="el" href="namespace_bond.html">Bond</a> virtual machine. </p>
 <h2 class="groupheader">Typedef Documentation</h2>
-<a class="anchor" id="ga2cdf1bde1a86a3e4beadfc7eb134a03d"></a>
+<a class="anchor" id="gafa928831f66f99255739910ae1c1adbb"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef AutoStack&lt;CalleeStackFrame&gt; <a class="el" href="group__vm.html#ga2cdf1bde1a86a3e4beadfc7eb134a03d">Bond::StackFrames</a></td>
+          <td class="memname">typedef Allocator::ObjectHandle&lt;Collectable&gt; <a class="el" href="group__vm.html#gafa928831f66f99255739910ae1c1adbb">Bond::CollectableHandle</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="gaa26b04bb3d53922d0775e28b6a2fdb73"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef AutoStack&lt;StackFrame&gt; <a class="el" href="group__vm.html#gaa26b04bb3d53922d0775e28b6a2fdb73">Bond::StackFrames</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
