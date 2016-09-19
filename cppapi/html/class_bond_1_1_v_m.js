@@ -1,6 +1,6 @@
 var class_bond_1_1_v_m =
 [
-    [ "VM", "class_bond_1_1_v_m.html#add3792cd24741fed35b38ee11d960c63", null ],
+    [ "VM", "class_bond_1_1_v_m.html#ab59972f249c6b37e3fcc5a5aa0b6cc55", null ],
     [ "~VM", "class_bond_1_1_v_m.html#accba99893a1c4bd2e5f0238a5927899d", null ],
     [ "CallFunction", "class_bond_1_1_v_m.html#a2338d3cb614778bed867a3c5bc9c2877", null ],
     [ "CallFunction", "class_bond_1_1_v_m.html#a9cd2fc58695bf551bddd772e40107260", null ],
@@ -19,6 +19,7 @@ var class_bond_1_1_v_m =
     [ "GetStdErr", "class_bond_1_1_v_m.html#a9bd7984d5120943ddfdfb38865f03da9", null ],
     [ "GetStdIn", "class_bond_1_1_v_m.html#a39eaafbb79fccb08ea89bc4a76e74d8f", null ],
     [ "GetStdOut", "class_bond_1_1_v_m.html#a03cfeb255d8d1f0c0264c82123d95ccc", null ],
+    [ "GetStreamFactory", "class_bond_1_1_v_m.html#a91688de680e523c92b72be4346950dbe", null ],
     [ "operator=", "class_bond_1_1_v_m.html#a9cd1ddcd9d01b264119293a5352a3920", null ],
     [ "RaiseError", "class_bond_1_1_v_m.html#a9c4b65a4e616a42acfab54fd7f435ff8", null ],
     [ "InvocationStackFrame", "class_bond_1_1_v_m.html#a48430cf6c88398807b1688016b492e88", null ]

@@ -348,7 +348,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A concrete implementation of OuputStream that performs input operations to a stdio FILE*.  <a href="class_bond_1_1_stdio_output_stream.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stdio_stream_factory.html">StdioStreamFactory</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A concreate implementation of <a class="el" href="class_bond_1_1_stream_factory.html" title="An abstract interface for creating file streams without being coupled to any particular concrete type...">StreamFactory</a> that instantiates StdioInputStreams.  <a href="class_bond_1_1_stdio_stream_factory.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A concreate implementation of <a class="el" href="class_bond_1_1_stream_factory.html" title="An abstract interface for creating file streams without being coupled to any particular concrete type...">StreamFactory</a> that creates instances of <a class="el" href="class_bond_1_1_stdio_input_stream.html" title="A concrete implementation of InputStream that performs input operations from a stdio FILE*...">StdioInputStream</a> and <a class="el" href="class_bond_1_1_stdio_output_stream.html" title="A concrete implementation of OuputStream that performs input operations to a stdio FILE*...">StdioOutputStream</a>.  <a href="class_bond_1_1_stdio_stream_factory.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_std_out_output_stream.html">StdOutOutputStream</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -428,9 +428,12 @@ Typedefs</h2></td></tr>
 <tr class="memitem:gab7d9448fe4aa29ee614bfea9a245a14a"><td class="memItemLeft" align="right" valign="top">typedef Vector&lt; <a class="el" href="group__compiler.html#gabc6e1643c8baf99c177f5f2d1bffcab7">ParseNodeHandle</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__compiler.html#gab7d9448fe4aa29ee614bfea9a245a14a">ParseNodeStore</a></td></tr>
 <tr class="memdesc:gab7d9448fe4aa29ee614bfea9a245a14a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A collection of dynamically allocated ParseNodes.  <a href="group__compiler.html#gab7d9448fe4aa29ee614bfea9a245a14a">More...</a><br /></td></tr>
 <tr class="separator:gab7d9448fe4aa29ee614bfea9a245a14a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8f82d3f414a8e773867ebbef1fcb9eeb"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="class_bond_1_1_allocator_1_1_handle.html">Allocator::Handle</a>&lt; <a class="el" href="class_bond_1_1_input_stream.html">InputStream</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__io.html#ga8f82d3f414a8e773867ebbef1fcb9eeb">InputStreamHandle</a></td></tr>
-<tr class="memdesc:ga8f82d3f414a8e773867ebbef1fcb9eeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">An owning pointer to a dynamically allocated <a class="el" href="class_bond_1_1_input_stream.html" title="An abstract interface for performing both unformatted and formatted input operations. ">InputStream</a>.  <a href="group__io.html#ga8f82d3f414a8e773867ebbef1fcb9eeb">More...</a><br /></td></tr>
-<tr class="separator:ga8f82d3f414a8e773867ebbef1fcb9eeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga37b72a5672b81b2727ba53b4ffbe47f8"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="class_bond_1_1_allocator_1_1_object_handle.html">Allocator::ObjectHandle</a>&lt; <a class="el" href="class_bond_1_1_input_stream.html">InputStream</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__io.html#ga37b72a5672b81b2727ba53b4ffbe47f8">InputStreamHandle</a></td></tr>
+<tr class="memdesc:ga37b72a5672b81b2727ba53b4ffbe47f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">An owning pointer to a dynamically allocated <a class="el" href="class_bond_1_1_input_stream.html" title="An abstract interface for performing both unformatted and formatted input operations. ">InputStream</a>.  <a href="group__io.html#ga37b72a5672b81b2727ba53b4ffbe47f8">More...</a><br /></td></tr>
+<tr class="separator:ga37b72a5672b81b2727ba53b4ffbe47f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga68173a5e6d6425a9194cfc319b70863c"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="class_bond_1_1_allocator_1_1_object_handle.html">Allocator::ObjectHandle</a>&lt; <a class="el" href="class_bond_1_1_output_stream.html">OutputStream</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__io.html#ga68173a5e6d6425a9194cfc319b70863c">OutputStreamHandle</a></td></tr>
+<tr class="memdesc:ga68173a5e6d6425a9194cfc319b70863c"><td class="mdescLeft">&#160;</td><td class="mdescRight">An owning pointer to a dynamically allocated <a class="el" href="class_bond_1_1_output_stream.html" title="An abstract interface for performing both unformatted and formatted output operations. ">OutputStream</a>.  <a href="group__io.html#ga68173a5e6d6425a9194cfc319b70863c">More...</a><br /></td></tr>
+<tr class="separator:ga68173a5e6d6425a9194cfc319b70863c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a473aacb8a77d3d4c679f66542194453a"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="class_bond_1_1_auto_stack.html">AutoStack</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#a473aacb8a77d3d4c679f66542194453a">BoolStack</a></td></tr>
 <tr class="separator:a473aacb8a77d3d4c679f66542194453a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a965203f61cc50b40c0326cef4c24a1aa"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="class_bond_1_1_auto_stack.html">AutoStack</a>&lt; int32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#a965203f61cc50b40c0326cef4c24a1aa">IntStack</a></td></tr>
@@ -799,6 +802,8 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:aa45b995fac97225ace1dd837b3ba3c62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#aa45b995fac97225ace1dd837b3ba3c62">InputStream__Close</a> (<a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;frame)</td></tr>
+<tr class="separator:aa45b995fac97225ace1dd837b3ba3c62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93ef1ef6bddaf9764c6f0d6aa33b9ffb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#a93ef1ef6bddaf9764c6f0d6aa33b9ffb">InputStream__ScanStr</a> (<a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;frame)</td></tr>
 <tr class="separator:a93ef1ef6bddaf9764c6f0d6aa33b9ffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9acaa57597b35489a1d3f01704a3f141"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#a9acaa57597b35489a1d3f01704a3f141">InputStream__ScanB</a> (<a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;frame)</td></tr>
@@ -831,6 +836,8 @@ Functions</h2></td></tr>
 <tr class="separator:a90acf6170a74f7f5de3635894a804544"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac92af7d0674049883d352fa048e3ccaa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#ac92af7d0674049883d352fa048e3ccaa">InputStream__GetPosition</a> (<a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;frame)</td></tr>
 <tr class="separator:ac92af7d0674049883d352fa048e3ccaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae86006ca71c19636fba00ea621bf3a03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#ae86006ca71c19636fba00ea621bf3a03">InputStream__GetEndPosition</a> (<a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;frame)</td></tr>
+<tr class="separator:ae86006ca71c19636fba00ea621bf3a03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5db7460b3274d2614988a66bcfa3c748"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#a5db7460b3274d2614988a66bcfa3c748">InputStream__SetPosition</a> (<a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;frame)</td></tr>
 <tr class="separator:a5db7460b3274d2614988a66bcfa3c748"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0e1f3634d670121160252315c5e879a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#ae0e1f3634d670121160252315c5e879a">InputStream__SetPositionFromEnd</a> (<a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;frame)</td></tr>
@@ -839,6 +846,10 @@ Functions</h2></td></tr>
 <tr class="separator:a97b037267b2d3f5338cc1657cf9910ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08affd2c8098b3e6eecd4d837bdea459"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#a08affd2c8098b3e6eecd4d837bdea459">InputStream__IsEof</a> (<a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;frame)</td></tr>
 <tr class="separator:a08affd2c8098b3e6eecd4d837bdea459"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7850c7142e46d30c56f1ce0fc727761"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#aa7850c7142e46d30c56f1ce0fc727761">OutputStream__Close</a> (<a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;frame)</td></tr>
+<tr class="separator:aa7850c7142e46d30c56f1ce0fc727761"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad718f99ef5a217cf77c1ace927c17a9c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#ad718f99ef5a217cf77c1ace927c17a9c">OutputStream__Flush</a> (<a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;frame)</td></tr>
+<tr class="separator:ad718f99ef5a217cf77c1ace927c17a9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af297b4a366e71196c506b236ac1e83eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#af297b4a366e71196c506b236ac1e83eb">OutputStream__PrintStr</a> (<a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;frame)</td></tr>
 <tr class="separator:af297b4a366e71196c506b236ac1e83eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefd3d8ef6369a3ed04b2ab82d9875d10"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#aefd3d8ef6369a3ed04b2ab82d9875d10">OutputStream__PrintB</a> (<a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;frame)</td></tr>
@@ -879,6 +890,8 @@ Functions</h2></td></tr>
 <tr class="separator:afa8d780e972d57c3079b3cc85b88235b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad366f0467d1394a3fa3f693b8fccf588"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#ad366f0467d1394a3fa3f693b8fccf588">OutputStream__GetPosition</a> (<a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;frame)</td></tr>
 <tr class="separator:ad366f0467d1394a3fa3f693b8fccf588"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc876eee5913e34aa5c3b52dcf9990b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#afc876eee5913e34aa5c3b52dcf9990b6">OutputStream__GetEndPosition</a> (<a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;frame)</td></tr>
+<tr class="separator:afc876eee5913e34aa5c3b52dcf9990b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7bac617ecad2303c7dc5b29d857cdd8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#af7bac617ecad2303c7dc5b29d857cdd8">OutputStream__SetPosition</a> (<a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;frame)</td></tr>
 <tr class="separator:af7bac617ecad2303c7dc5b29d857cdd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60be79d683259c07c03f2ea3ee977a0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#a60be79d683259c07c03f2ea3ee977a0a">OutputStream__SetPositionFromEnd</a> (<a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;frame)</td></tr>
@@ -893,6 +906,22 @@ Functions</h2></td></tr>
 <tr class="separator:acd73e335f9385e2fbf359c544edc6058"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a870a91f69bf8a9a13ea94e35f6970c44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#a870a91f69bf8a9a13ea94e35f6970c44">StdErr</a> (<a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;frame)</td></tr>
 <tr class="separator:a870a91f69bf8a9a13ea94e35f6970c44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af53ada0dc9583ac235dda97d84ae6825"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#af53ada0dc9583ac235dda97d84ae6825">CreateInputStream</a> (<a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;frame)</td></tr>
+<tr class="separator:af53ada0dc9583ac235dda97d84ae6825"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af042cbd74dbc0e11d852344d04a18612"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#af042cbd74dbc0e11d852344d04a18612">CreateInputStreamCollected</a> (<a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;frame)</td></tr>
+<tr class="separator:af042cbd74dbc0e11d852344d04a18612"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a4405d5f0b20d1513fe20f77918f406"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#a8a4405d5f0b20d1513fe20f77918f406">CreateInputStreamWithCollector</a> (<a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;frame)</td></tr>
+<tr class="separator:a8a4405d5f0b20d1513fe20f77918f406"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2b52fd5e5aef428d5eb467fa869ea2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#ab2b52fd5e5aef428d5eb467fa869ea2f">FreeInputStream</a> (<a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;frame)</td></tr>
+<tr class="separator:ab2b52fd5e5aef428d5eb467fa869ea2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae225f791b505fdc4fff0dcd33699bbba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#ae225f791b505fdc4fff0dcd33699bbba">CreateOutputStream</a> (<a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;frame)</td></tr>
+<tr class="separator:ae225f791b505fdc4fff0dcd33699bbba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ec49f23494bae0d5188ebba3203683c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#a1ec49f23494bae0d5188ebba3203683c">CreateOutputStreamCollected</a> (<a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;frame)</td></tr>
+<tr class="separator:a1ec49f23494bae0d5188ebba3203683c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71eef183ba015a5da660658fd2456316"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#a71eef183ba015a5da660658fd2456316">CreateOutputStreamWithCollector</a> (<a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;frame)</td></tr>
+<tr class="separator:a71eef183ba015a5da660658fd2456316"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c62348472b4ae69e59e909b209e5f59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#a7c62348472b4ae69e59e909b209e5f59">FreeOutputStream</a> (<a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;frame)</td></tr>
+<tr class="separator:a7c62348472b4ae69e59e909b209e5f59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a659d4451bf4dd7aa814652183fa7e04e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#a659d4451bf4dd7aa814652183fa7e04e">Sin</a> (<a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;frame)</td></tr>
 <tr class="separator:a659d4451bf4dd7aa814652183fa7e04e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c33dbbeb52f4f11110570b7b8ade462"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#a8c33dbbeb52f4f11110570b7b8ade462">Sinf</a> (<a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;frame)</td></tr>
@@ -1015,6 +1044,8 @@ Functions</h2></td></tr>
 <tr class="separator:afb87cdb802efadf391827114c496e93a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a733eb863a8010ed5b2cb79dcac2c289c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#a733eb863a8010ed5b2cb79dcac2c289c">Strlen</a> (<a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;frame)</td></tr>
 <tr class="separator:a733eb863a8010ed5b2cb79dcac2c289c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5343e221c18be71f07ec10551ca8d6a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#a5343e221c18be71f07ec10551ca8d6a9">Strcmp</a> (<a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;frame)</td></tr>
+<tr class="separator:a5343e221c18be71f07ec10551ca8d6a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d60ca04104e945a8dfa826565c75dc8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#a6d60ca04104e945a8dfa826565c75dc8">TryParseInt</a> (<a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;frame)</td></tr>
 <tr class="separator:a6d60ca04104e945a8dfa826565c75dc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a619400c4ede7d169075c3d0dfccdffd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#a619400c4ede7d169075c3d0dfccdffd9">TryParseLong</a> (<a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;frame)</td></tr>
@@ -3798,6 +3829,102 @@ template&lt;typename Operator &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="af53ada0dc9583ac235dda97d84ae6825"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Bond::CreateInputStream </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;&#160;</td>
+          <td class="paramname"><em>frame</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af042cbd74dbc0e11d852344d04a18612"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Bond::CreateInputStreamCollected </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;&#160;</td>
+          <td class="paramname"><em>frame</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8a4405d5f0b20d1513fe20f77918f406"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Bond::CreateInputStreamWithCollector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;&#160;</td>
+          <td class="paramname"><em>frame</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae225f791b505fdc4fff0dcd33699bbba"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Bond::CreateOutputStream </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;&#160;</td>
+          <td class="paramname"><em>frame</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1ec49f23494bae0d5188ebba3203683c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Bond::CreateOutputStreamCollected </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;&#160;</td>
+          <td class="paramname"><em>frame</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a71eef183ba015a5da660658fd2456316"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Bond::CreateOutputStreamWithCollector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;&#160;</td>
+          <td class="paramname"><em>frame</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a24b449c82ebb83b89b3dd486b705fb84"></a>
 <div class="memitem">
 <div class="memproto">
@@ -4166,6 +4293,38 @@ template&lt;typename Operator &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="ab2b52fd5e5aef428d5eb467fa869ea2f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Bond::FreeInputStream </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;&#160;</td>
+          <td class="paramname"><em>frame</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7c62348472b4ae69e59e909b209e5f59"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Bond::FreeOutputStream </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;&#160;</td>
+          <td class="paramname"><em>frame</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a8c09d3498345f47830dff9170d688712"></a>
 <div class="memitem">
 <div class="memproto">
@@ -4374,12 +4533,44 @@ template&lt;typename Operator &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="aa45b995fac97225ace1dd837b3ba3c62"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Bond::InputStream__Close </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;&#160;</td>
+          <td class="paramname"><em>frame</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a34130e534484d6b8f532c72df9fd8fa5"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void Bond::InputStream__Get </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;&#160;</td>
+          <td class="paramname"><em>frame</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae86006ca71c19636fba00ea621bf3a03"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Bond::InputStream__GetEndPosition </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;&#160;</td>
           <td class="paramname"><em>frame</em></td><td>)</td>
@@ -5526,6 +5717,54 @@ template&lt;typename Operator &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="aa7850c7142e46d30c56f1ce0fc727761"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Bond::OutputStream__Close </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;&#160;</td>
+          <td class="paramname"><em>frame</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad718f99ef5a217cf77c1ace927c17a9c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Bond::OutputStream__Flush </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;&#160;</td>
+          <td class="paramname"><em>frame</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afc876eee5913e34aa5c3b52dcf9990b6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Bond::OutputStream__GetEndPosition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;&#160;</td>
+          <td class="paramname"><em>frame</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ae68fca644f5bfb85da083481ad64258d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -6230,6 +6469,22 @@ template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void Bond::StdOut </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;&#160;</td>
+          <td class="paramname"><em>frame</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5343e221c18be71f07ec10551ca8d6a9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Bond::Strcmp </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> &amp;&#160;</td>
           <td class="paramname"><em>frame</em></td><td>)</td>

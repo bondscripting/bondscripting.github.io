@@ -4,6 +4,7 @@ var class_bond_1_1_stream =
     [ "pos_t", "class_bond_1_1_stream.html#a489b6b37c5ef8c0101dbee13bb83acd7", null ],
     [ "~Stream", "class_bond_1_1_stream.html#a655ad666aaf7d5771d4fb4f2f4a84e3c", null ],
     [ "AddOffset", "class_bond_1_1_stream.html#a792ecc29f09dd22a4136d42ca1cd31a9", null ],
+    [ "Close", "class_bond_1_1_stream.html#a982f9804fba2e4c07a8c0677e7e8cc6a", null ],
     [ "GetEndPosition", "class_bond_1_1_stream.html#a8c9d74c70a6bca39fd657445f99cfabf", null ],
     [ "GetPosition", "class_bond_1_1_stream.html#a22021b526850d25b8414035f406ffb28", null ],
     [ "IsEof", "class_bond_1_1_stream.html#a8393b828e6dabf5342af40a2e3e2b3c9", null ],

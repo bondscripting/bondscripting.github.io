@@ -9,5 +9,6 @@ var class_bond_1_1_stdio_file_handle =
     [ "GetFile", "class_bond_1_1_stdio_file_handle.html#a850a156b7add82981c33bb04429b6988", null ],
     [ "IsBound", "class_bond_1_1_stdio_file_handle.html#af619946e1e7b8ff31afdda5138565f24", null ],
     [ "operator=", "class_bond_1_1_stdio_file_handle.html#a25f7ec0589cb14c4e3cc61e5b82d602f", null ],
+    [ "operator=", "class_bond_1_1_stdio_file_handle.html#a40c30953f27f2f4d855df6993a429ebb", null ],
     [ "operator=", "class_bond_1_1_stdio_file_handle.html#ab701307ae56c1ccdff56720e6113ad25", null ]
 ];

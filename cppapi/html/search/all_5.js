@@ -9,6 +9,7 @@ var searchData=
   ['float_5ftype_5fspecifier',['FLOAT_TYPE_SPECIFIER',['../group__nodes.html#gaf1a1a6c703343aacdb728567a4c62d60',1,'Bond']]],
   ['floor',['Floor',['../namespace_bond.html#a1d227b19bf8a003fbb5ac1c5ce294173',1,'Bond']]],
   ['floorf',['Floorf',['../namespace_bond.html#a77bc4cb819d1afde8d3ea02bfa2e8b9a',1,'Bond']]],
+  ['flush',['Flush',['../class_bond_1_1_output_stream.html#a09b23a084136be412667db989a3d4790',1,'Bond::OutputStream::Flush()'],['../class_bond_1_1_stdio_output_stream.html#abf5df978237df3fa8fe625ba5e77f355',1,'Bond::StdioOutputStream::Flush()']]],
   ['fmod',['Fmod',['../namespace_bond.html#a70b8ec8a2e613c6e28c1ac0e240236ba',1,'Bond']]],
   ['fmodf',['Fmodf',['../namespace_bond.html#ae26cef31e0d91f7e8fdced7e1aebf872',1,'Bond']]],
   ['for_5fcondition_5fis_5fnot_5fboolean',['FOR_CONDITION_IS_NOT_BOOLEAN',['../class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4ca45a1ddd2d4b6da648fdd24d02e321479',1,'Bond::CompilerError']]],
@@ -16,6 +17,8 @@ var searchData=
   ['forstatement',['ForStatement',['../class_bond_1_1_for_statement.html',1,'Bond']]],
   ['free',['Free',['../class_bond_1_1_allocator.html#af126cf26d4c816747f4171957878415c',1,'Bond::Allocator::Free(void *buffer)=0'],['../class_bond_1_1_allocator.html#afac9f8f25601d36f7832c57c1509cbf3',1,'Bond::Allocator::Free(const void *buffer)'],['../class_bond_1_1_default_allocator.html#a76c6205b27523ee05eb5a3824d1d9e01',1,'Bond::DefaultAllocator::Free()'],['../namespace_bond.html#a1906ce4a2f3a797ad2d7fe1b1f9d4d21',1,'Bond::Free()']]],
   ['freealigned',['FreeAligned',['../class_bond_1_1_allocator.html#a6dca1d0e262561c46aef5715d538b191',1,'Bond::Allocator::FreeAligned(void *buffer)=0'],['../class_bond_1_1_allocator.html#a0074ece5a6c1030276b83645df27d8dc',1,'Bond::Allocator::FreeAligned(const void *buffer)'],['../class_bond_1_1_default_allocator.html#aff539565827a26b13ab7e7ed5923941a',1,'Bond::DefaultAllocator::FreeAligned()'],['../namespace_bond.html#a3da725273b1f3c008969b83d97ea385e',1,'Bond::FreeAligned()']]],
+  ['freeinputstream',['FreeInputStream',['../namespace_bond.html#ab2b52fd5e5aef428d5eb467fa869ea2f',1,'Bond']]],
+  ['freeoutputstream',['FreeOutputStream',['../namespace_bond.html#a7c62348472b4ae69e59e909b209e5f59',1,'Bond']]],
   ['frexp',['Frexp',['../namespace_bond.html#a8c09d3498345f47830dff9170d688712',1,'Bond']]],
   ['frexpf',['Frexpf',['../namespace_bond.html#a3a5e6f7c439791f772975dd1707905ab',1,'Bond']]],
   ['frontend',['FrontEnd',['../class_bond_1_1_front_end.html',1,'Bond']]],
@@ -25,8 +28,8 @@ var searchData=
   ['function_5freturns_5farray',['FUNCTION_RETURNS_ARRAY',['../class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4ca2bd0c136a0eeba800ab073206fd2f18a',1,'Bond::CompilerError']]],
   ['functioncallexpression',['FunctionCallExpression',['../class_bond_1_1_function_call_expression.html',1,'Bond']]],
   ['functioncallexpression',['FunctionCallExpression',['../class_bond_1_1_function_call_expression.html#a3bb345f98930cd1b782aed349b502cdb',1,'Bond::FunctionCallExpression']]],
-  ['functiondefinition',['FunctionDefinition',['../class_bond_1_1_function_definition.html#aabdcb69f71f737b543a2088a18895749',1,'Bond::FunctionDefinition']]],
   ['functiondefinition',['FunctionDefinition',['../class_bond_1_1_function_definition.html',1,'Bond']]],
-  ['functionprototype',['FunctionPrototype',['../class_bond_1_1_function_prototype.html',1,'Bond']]],
-  ['functionprototype',['FunctionPrototype',['../class_bond_1_1_function_prototype.html#aa3eecfb78eb0faa8f6984d764d5bf6ef',1,'Bond::FunctionPrototype']]]
+  ['functiondefinition',['FunctionDefinition',['../class_bond_1_1_function_definition.html#aabdcb69f71f737b543a2088a18895749',1,'Bond::FunctionDefinition']]],
+  ['functionprototype',['FunctionPrototype',['../class_bond_1_1_function_prototype.html#aa3eecfb78eb0faa8f6984d764d5bf6ef',1,'Bond::FunctionPrototype']]],
+  ['functionprototype',['FunctionPrototype',['../class_bond_1_1_function_prototype.html',1,'Bond']]]
 ];

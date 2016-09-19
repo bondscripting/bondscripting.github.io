@@ -31,7 +31,7 @@ var group__io =
       [ "GetEndPosition", "class_bond_1_1_memory_input_stream.html#aee7cb7a81b012d6903a2db0d89cb002f", null ],
       [ "GetPosition", "class_bond_1_1_memory_input_stream.html#ae8a3c042826cc927c0b2920eebd0ae6e", null ],
       [ "IsEof", "class_bond_1_1_memory_input_stream.html#ab8e3f196bbe9071863171ef0de19ae3d", null ],
-      [ "Read", "class_bond_1_1_memory_input_stream.html#a410195071750a904f0f33b9c0831bf02", null ],
+      [ "Read", "class_bond_1_1_memory_input_stream.html#a1fea24f6bd640e12ebe8d9ab717d381f", null ],
       [ "Read", "class_bond_1_1_memory_input_stream.html#af1c4095fd2ebadc8c5d36de3c70614fc", null ],
       [ "SetPosition", "class_bond_1_1_memory_input_stream.html#a8cfffb2c091c4a061c36e5a4ad7307c5", null ],
       [ "SetPositionFromEnd", "class_bond_1_1_memory_input_stream.html#af858b6064d7a3dc6a2364db166725714", null ],
@@ -47,17 +47,19 @@ var group__io =
       [ "SetPosition", "class_bond_1_1_memory_output_stream.html#a52a5be0ac186b4c575d32aa26e9568c3", null ],
       [ "SetPositionFromEnd", "class_bond_1_1_memory_output_stream.html#acb63c6e8adaa0b2474bf019b5e973483", null ],
       [ "VPrint", "class_bond_1_1_memory_output_stream.html#a267440fa535ab521f73d5590998e163b", null ],
-      [ "Write", "class_bond_1_1_memory_output_stream.html#aed908158fd309fcdaac7161514b50428", null ],
+      [ "Write", "class_bond_1_1_memory_output_stream.html#ad6a887ac62a938a409bcf2788bc8d3e8", null ],
       [ "Write", "class_bond_1_1_memory_output_stream.html#a325e19eefc0fc08175f87d32ba15c085", null ]
     ] ],
     [ "MemoryStreamFactory", "class_bond_1_1_memory_stream_factory.html", [
-      [ "MemoryStreamFactory", "class_bond_1_1_memory_stream_factory.html#a85a794068f21aaa1e507fe83980f8a5b", null ],
+      [ "MemoryStreamFactory", "class_bond_1_1_memory_stream_factory.html#a8cf6bc1b18bc59af2273013b66a9d4bc", null ],
       [ "~MemoryStreamFactory", "class_bond_1_1_memory_stream_factory.html#ae5fc3c499ab034e4c8aee3f71fff0c50", null ],
       [ "CreateInputStream", "class_bond_1_1_memory_stream_factory.html#a76f26b3e3b3bd3963e6e3c9672d8ba43", null ],
+      [ "CreateOutputStream", "class_bond_1_1_memory_stream_factory.html#a879348ec44c972746f5a1dfdb29a5087", null ],
       [ "SetDelegateFactory", "class_bond_1_1_memory_stream_factory.html#a3ab2fb1714b93174416e50bb07579b5b", null ]
     ] ],
     [ "OutputStream", "class_bond_1_1_output_stream.html", [
       [ "~OutputStream", "class_bond_1_1_output_stream.html#ae7397df53cce0ddc6a4ef7ca436a8984", null ],
+      [ "Flush", "class_bond_1_1_output_stream.html#a09b23a084136be412667db989a3d4790", null ],
       [ "Print", "class_bond_1_1_output_stream.html#ac7a47879c322d92f2e1f8ce546cc524c", null ],
       [ "VPrint", "class_bond_1_1_output_stream.html#a097d05b63093fa0edb12ff43c114f8f5", null ],
       [ "Write", "class_bond_1_1_output_stream.html#a4341cfc0c16a7e07cdaa9fe186d1b911", null ],
@@ -93,6 +95,7 @@ var group__io =
       [ "GetFile", "class_bond_1_1_stdio_file_handle.html#a850a156b7add82981c33bb04429b6988", null ],
       [ "IsBound", "class_bond_1_1_stdio_file_handle.html#af619946e1e7b8ff31afdda5138565f24", null ],
       [ "operator=", "class_bond_1_1_stdio_file_handle.html#a25f7ec0589cb14c4e3cc61e5b82d602f", null ],
+      [ "operator=", "class_bond_1_1_stdio_file_handle.html#a40c30953f27f2f4d855df6993a429ebb", null ],
       [ "operator=", "class_bond_1_1_stdio_file_handle.html#ab701307ae56c1ccdff56720e6113ad25", null ]
     ] ],
     [ "StdioInputStream", "class_bond_1_1_stdio_input_stream.html", [
@@ -103,6 +106,7 @@ var group__io =
       [ "~StdioInputStream", "class_bond_1_1_stdio_input_stream.html#a890b5f1d13eed5db6183d23f4ec8ce5f", null ],
       [ "StdioInputStream", "class_bond_1_1_stdio_input_stream.html#a1080d48b74da19cdca0ca42701bb6d94", null ],
       [ "AddOffset", "class_bond_1_1_stdio_input_stream.html#aa9e47d9941dd15f77bc618af46bb62fd", null ],
+      [ "Close", "class_bond_1_1_stdio_input_stream.html#a807a5f41a4994ef05822d23e5707e840", null ],
       [ "GetEndPosition", "class_bond_1_1_stdio_input_stream.html#a881401d0939a9ebde94aa82f1917b578", null ],
       [ "GetPosition", "class_bond_1_1_stdio_input_stream.html#a3955429f56d85916ca4ca364668cec3c", null ],
       [ "IsBound", "class_bond_1_1_stdio_input_stream.html#a8a08efa9c6b09e9545c720e3c94196bb", null ],
@@ -123,6 +127,8 @@ var group__io =
       [ "~StdioOutputStream", "class_bond_1_1_stdio_output_stream.html#adf3f5e5f3518397c82559bf43f6d4314", null ],
       [ "StdioOutputStream", "class_bond_1_1_stdio_output_stream.html#ad9ce10a360d601cded17ea3045ad3ba6", null ],
       [ "AddOffset", "class_bond_1_1_stdio_output_stream.html#a3d0f7d4082b2306093269db940c43e0e", null ],
+      [ "Close", "class_bond_1_1_stdio_output_stream.html#ae3e8c0f4a0d90f4439443fdea19f62a0", null ],
+      [ "Flush", "class_bond_1_1_stdio_output_stream.html#abf5df978237df3fa8fe625ba5e77f355", null ],
       [ "GetEndPosition", "class_bond_1_1_stdio_output_stream.html#aceea71e53467b112b9fa8e33b9a29d7c", null ],
       [ "GetPosition", "class_bond_1_1_stdio_output_stream.html#a518990e44b14829c82f2f504c3f61d59", null ],
       [ "IsBound", "class_bond_1_1_stdio_output_stream.html#a6f98e134f16443047f29bd54d0d2707e", null ],
@@ -136,9 +142,10 @@ var group__io =
       [ "Write", "class_bond_1_1_stdio_output_stream.html#af26e823f6f65914c27ecdd18ae7bf05e", null ]
     ] ],
     [ "StdioStreamFactory", "class_bond_1_1_stdio_stream_factory.html", [
-      [ "StdioStreamFactory", "class_bond_1_1_stdio_stream_factory.html#a76a8c95ef4020926830965976eca4d5d", null ],
+      [ "StdioStreamFactory", "class_bond_1_1_stdio_stream_factory.html#a383f324b7ce8a7c2fb987d09daf0e048", null ],
       [ "~StdioStreamFactory", "class_bond_1_1_stdio_stream_factory.html#a6694bbc8d3db6d9a0a7c1bd58d89c89e", null ],
       [ "CreateInputStream", "class_bond_1_1_stdio_stream_factory.html#af765a5ae21db0d37d23ae0341f0e9777", null ],
+      [ "CreateOutputStream", "class_bond_1_1_stdio_stream_factory.html#a501b5cce22c3dfe099f5ba460875f7ff", null ],
       [ "SetDelegateFactory", "class_bond_1_1_stdio_stream_factory.html#a0ccd1e9d5a7a55c234562f9656b99198", null ],
       [ "SetRootPath", "class_bond_1_1_stdio_stream_factory.html#a0259b72a76cecd87343a254afc4fbd5e", null ]
     ] ],
@@ -147,6 +154,7 @@ var group__io =
       [ "pos_t", "class_bond_1_1_stream.html#a489b6b37c5ef8c0101dbee13bb83acd7", null ],
       [ "~Stream", "class_bond_1_1_stream.html#a655ad666aaf7d5771d4fb4f2f4a84e3c", null ],
       [ "AddOffset", "class_bond_1_1_stream.html#a792ecc29f09dd22a4136d42ca1cd31a9", null ],
+      [ "Close", "class_bond_1_1_stream.html#a982f9804fba2e4c07a8c0677e7e8cc6a", null ],
       [ "GetEndPosition", "class_bond_1_1_stream.html#a8c9d74c70a6bca39fd657445f99cfabf", null ],
       [ "GetPosition", "class_bond_1_1_stream.html#a22021b526850d25b8414035f406ffb28", null ],
       [ "IsEof", "class_bond_1_1_stream.html#a8393b828e6dabf5342af40a2e3e2b3c9", null ],
@@ -155,7 +163,9 @@ var group__io =
     ] ],
     [ "StreamFactory", "class_bond_1_1_stream_factory.html", [
       [ "~StreamFactory", "class_bond_1_1_stream_factory.html#a0dfcffed7d47ba4643581e079b882c87", null ],
-      [ "CreateInputStream", "class_bond_1_1_stream_factory.html#adfa35fa12b772b748c5aaa65c9541691", null ]
+      [ "CreateInputStream", "class_bond_1_1_stream_factory.html#adfa35fa12b772b748c5aaa65c9541691", null ],
+      [ "CreateOutputStream", "class_bond_1_1_stream_factory.html#ac8b88c2fa27215b5ee7d99a334a76673", null ]
     ] ],
-    [ "InputStreamHandle", "group__io.html#ga8f82d3f414a8e773867ebbef1fcb9eeb", null ]
+    [ "InputStreamHandle", "group__io.html#ga37b72a5672b81b2727ba53b4ffbe47f8", null ],
+    [ "OutputStreamHandle", "group__io.html#ga68173a5e6d6425a9194cfc319b70863c", null ]
 ];

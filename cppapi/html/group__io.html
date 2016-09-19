@@ -142,7 +142,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A concrete implementation of OuputStream that performs input operations to a stdio FILE*.  <a href="class_bond_1_1_stdio_output_stream.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stdio_stream_factory.html">Bond::StdioStreamFactory</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A concreate implementation of <a class="el" href="class_bond_1_1_stream_factory.html" title="An abstract interface for creating file streams without being coupled to any particular concrete type...">StreamFactory</a> that instantiates StdioInputStreams.  <a href="class_bond_1_1_stdio_stream_factory.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A concreate implementation of <a class="el" href="class_bond_1_1_stream_factory.html" title="An abstract interface for creating file streams without being coupled to any particular concrete type...">StreamFactory</a> that creates instances of <a class="el" href="class_bond_1_1_stdio_input_stream.html" title="A concrete implementation of InputStream that performs input operations from a stdio FILE*...">StdioInputStream</a> and <a class="el" href="class_bond_1_1_stdio_output_stream.html" title="A concrete implementation of OuputStream that performs input operations to a stdio FILE*...">StdioOutputStream</a>.  <a href="class_bond_1_1_stdio_stream_factory.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stream.html">Bond::Stream</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A base interface for performing <a class="el" href="namespace_bond_1_1_i_o.html">IO</a> operations.  <a href="class_bond_1_1_stream.html#details">More...</a><br /></td></tr>
@@ -153,24 +153,41 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:ga8f82d3f414a8e773867ebbef1fcb9eeb"><td class="memItemLeft" align="right" valign="top">typedef Allocator::Handle&lt; InputStream &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__io.html#ga8f82d3f414a8e773867ebbef1fcb9eeb">Bond::InputStreamHandle</a></td></tr>
-<tr class="memdesc:ga8f82d3f414a8e773867ebbef1fcb9eeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">An owning pointer to a dynamically allocated <a class="el" href="class_bond_1_1_input_stream.html" title="An abstract interface for performing both unformatted and formatted input operations. ">InputStream</a>.  <a href="group__io.html#ga8f82d3f414a8e773867ebbef1fcb9eeb">More...</a><br /></td></tr>
-<tr class="separator:ga8f82d3f414a8e773867ebbef1fcb9eeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga37b72a5672b81b2727ba53b4ffbe47f8"><td class="memItemLeft" align="right" valign="top">typedef Allocator::ObjectHandle&lt; InputStream &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__io.html#ga37b72a5672b81b2727ba53b4ffbe47f8">Bond::InputStreamHandle</a></td></tr>
+<tr class="memdesc:ga37b72a5672b81b2727ba53b4ffbe47f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">An owning pointer to a dynamically allocated <a class="el" href="class_bond_1_1_input_stream.html" title="An abstract interface for performing both unformatted and formatted input operations. ">InputStream</a>.  <a href="group__io.html#ga37b72a5672b81b2727ba53b4ffbe47f8">More...</a><br /></td></tr>
+<tr class="separator:ga37b72a5672b81b2727ba53b4ffbe47f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga68173a5e6d6425a9194cfc319b70863c"><td class="memItemLeft" align="right" valign="top">typedef Allocator::ObjectHandle&lt; OutputStream &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__io.html#ga68173a5e6d6425a9194cfc319b70863c">Bond::OutputStreamHandle</a></td></tr>
+<tr class="memdesc:ga68173a5e6d6425a9194cfc319b70863c"><td class="mdescLeft">&#160;</td><td class="mdescRight">An owning pointer to a dynamically allocated <a class="el" href="class_bond_1_1_output_stream.html" title="An abstract interface for performing both unformatted and formatted output operations. ">OutputStream</a>.  <a href="group__io.html#ga68173a5e6d6425a9194cfc319b70863c">More...</a><br /></td></tr>
+<tr class="separator:ga68173a5e6d6425a9194cfc319b70863c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>These interfaces and their default implementations are used by <a class="el" href="namespace_bond.html">Bond</a> for performing I/O operations without making assumptions about what underlying I/O library is used. </p>
 <h2 class="groupheader">Typedef Documentation</h2>
-<a class="anchor" id="ga8f82d3f414a8e773867ebbef1fcb9eeb"></a>
+<a class="anchor" id="ga37b72a5672b81b2727ba53b4ffbe47f8"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef Allocator::Handle&lt;InputStream&gt; <a class="el" href="group__io.html#ga8f82d3f414a8e773867ebbef1fcb9eeb">Bond::InputStreamHandle</a></td>
+          <td class="memname">typedef Allocator::ObjectHandle&lt;InputStream&gt; <a class="el" href="group__io.html#ga37b72a5672b81b2727ba53b4ffbe47f8">Bond::InputStreamHandle</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>An owning pointer to a dynamically allocated <a class="el" href="class_bond_1_1_input_stream.html" title="An abstract interface for performing both unformatted and formatted input operations. ">InputStream</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga68173a5e6d6425a9194cfc319b70863c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef Allocator::ObjectHandle&lt;OutputStream&gt; <a class="el" href="group__io.html#ga68173a5e6d6425a9194cfc319b70863c">Bond::OutputStreamHandle</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>An owning pointer to a dynamically allocated <a class="el" href="class_bond_1_1_output_stream.html" title="An abstract interface for performing both unformatted and formatted output operations. ">OutputStream</a>. </p>
 
 </div>
 </div>

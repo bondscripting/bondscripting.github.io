@@ -126,17 +126,20 @@ Inheritance diagram for Bond::Allocator::AlignedObjectHandle&lt; T &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a463057a52076e757457347a2a97c751c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_allocator_1_1_aligned_object_handle.html#a463057a52076e757457347a2a97c751c">AlignedObjectHandle</a> ()</td></tr>
-<tr class="separator:a463057a52076e757457347a2a97c751c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb3a8eb5ad8ab3f4d25e047c08633150"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_allocator_1_1_aligned_object_handle.html#acb3a8eb5ad8ab3f4d25e047c08633150">AlignedObjectHandle</a> (<a class="el" href="class_bond_1_1_allocator.html">Allocator</a> *allocator=nullptr, T *ptr=nullptr)</td></tr>
+<tr class="separator:acb3a8eb5ad8ab3f4d25e047c08633150"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8679edc9fdd8b007c40962bd91bcd0db"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_allocator_1_1_aligned_object_handle.html#a8679edc9fdd8b007c40962bd91bcd0db">AlignedObjectHandle</a> (<a class="el" href="class_bond_1_1_allocator.html">Allocator</a> &amp;allocator, T *ptr=nullptr)</td></tr>
 <tr class="separator:a8679edc9fdd8b007c40962bd91bcd0db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaff0094094e063bdba2a88b3d205b62e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_allocator_1_1_aligned_object_handle.html#aaff0094094e063bdba2a88b3d205b62e">AlignedObjectHandle</a> (<a class="el" href="class_bond_1_1_allocator_1_1_aligned_object_handle.html">AlignedObjectHandle</a> &amp;&amp;other)</td></tr>
 <tr class="separator:aaff0094094e063bdba2a88b3d205b62e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae9da5d675522a6f7474fa83f1fdfd23"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_bond_1_1_allocator_1_1_aligned_object_handle.html">AlignedObjectHandle</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_allocator_1_1_aligned_object_handle.html#aae9da5d675522a6f7474fa83f1fdfd23">operator=</a> (<a class="el" href="class_bond_1_1_allocator_1_1_aligned_object_handle.html">AlignedObjectHandle</a> &amp;&amp;other)</td></tr>
 <tr class="separator:aae9da5d675522a6f7474fa83f1fdfd23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0a71adff37d10d4e84b50ab2ac4f831"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
+<tr class="memitem:ae0a71adff37d10d4e84b50ab2ac4f831"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_bond_1_1_allocator_1_1_aligned_object_handle.html#ae0a71adff37d10d4e84b50ab2ac4f831">operator AlignedObjectHandle&lt; U &gt;</a> ()&amp;&amp;</td></tr>
+<tr class="separator:ae0a71adff37d10d4e84b50ab2ac4f831"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a463057a52076e757457347a2a97c751c"></a>
+<a class="anchor" id="acb3a8eb5ad8ab3f4d25e047c08633150"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -148,8 +151,19 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname"><a class="el" href="class_bond_1_1_allocator_1_1_aligned_object_handle.html">Bond::Allocator::AlignedObjectHandle</a>&lt; T &gt;::<a class="el" href="class_bond_1_1_allocator_1_1_aligned_object_handle.html">AlignedObjectHandle</a> </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_bond_1_1_allocator.html">Allocator</a> *&#160;</td>
+          <td class="paramname"><em>allocator</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>ptr</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -224,6 +238,33 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ae0a71adff37d10d4e84b50ab2ac4f831"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename U &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_bond_1_1_allocator_1_1_aligned_object_handle.html">Bond::Allocator::AlignedObjectHandle</a>&lt; T &gt;::operator <a class="el" href="class_bond_1_1_allocator_1_1_aligned_object_handle.html">AlignedObjectHandle</a>&lt; U &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="aae9da5d675522a6f7474fa83f1fdfd23"></a>
 <div class="memitem">
 <div class="memproto">

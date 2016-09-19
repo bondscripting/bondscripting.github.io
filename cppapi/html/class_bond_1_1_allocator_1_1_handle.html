@@ -126,17 +126,20 @@ Inheritance diagram for Bond::Allocator::Handle&lt; T &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a61aec9f8bcea4f6921839a02e053dbf4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_allocator_1_1_handle.html#a61aec9f8bcea4f6921839a02e053dbf4">Handle</a> ()</td></tr>
-<tr class="separator:a61aec9f8bcea4f6921839a02e053dbf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e9fbf4db1f98410fd8cc9246cb3662b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_allocator_1_1_handle.html#a6e9fbf4db1f98410fd8cc9246cb3662b">Handle</a> (<a class="el" href="class_bond_1_1_allocator.html">Allocator</a> *allocator=nullptr, T *ptr=nullptr)</td></tr>
+<tr class="separator:a6e9fbf4db1f98410fd8cc9246cb3662b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e754a110a404f6c6b6fbd8a451a24f6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_allocator_1_1_handle.html#a5e754a110a404f6c6b6fbd8a451a24f6">Handle</a> (<a class="el" href="class_bond_1_1_allocator.html">Allocator</a> &amp;allocator, T *ptr=nullptr)</td></tr>
 <tr class="separator:a5e754a110a404f6c6b6fbd8a451a24f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae98f2d8a3e80b345ca8e2c5684187c0a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_allocator_1_1_handle.html#ae98f2d8a3e80b345ca8e2c5684187c0a">Handle</a> (<a class="el" href="class_bond_1_1_allocator_1_1_handle.html">Handle</a> &amp;&amp;other)</td></tr>
 <tr class="separator:ae98f2d8a3e80b345ca8e2c5684187c0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6e7ce9232b96865c98e8dc02aa32029"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_bond_1_1_allocator_1_1_handle.html">Handle</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_allocator_1_1_handle.html#af6e7ce9232b96865c98e8dc02aa32029">operator=</a> (<a class="el" href="class_bond_1_1_allocator_1_1_handle.html">Handle</a> &amp;&amp;other)</td></tr>
 <tr class="separator:af6e7ce9232b96865c98e8dc02aa32029"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad331c0fe1d6175ec6761cbd5d096fd1e"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
+<tr class="memitem:ad331c0fe1d6175ec6761cbd5d096fd1e"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_bond_1_1_allocator_1_1_handle.html#ad331c0fe1d6175ec6761cbd5d096fd1e">operator Handle&lt; U &gt;</a> ()&amp;&amp;</td></tr>
+<tr class="separator:ad331c0fe1d6175ec6761cbd5d096fd1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a61aec9f8bcea4f6921839a02e053dbf4"></a>
+<a class="anchor" id="a6e9fbf4db1f98410fd8cc9246cb3662b"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -148,8 +151,19 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="class_bond_1_1_allocator_1_1_handle.html">Bond::Allocator::Handle</a>&lt; T &gt;::<a class="el" href="class_bond_1_1_allocator_1_1_handle.html">Handle</a> </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_bond_1_1_allocator.html">Allocator</a> *&#160;</td>
+          <td class="paramname"><em>allocator</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>ptr</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -224,6 +238,33 @@ template&lt;typename T&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ad331c0fe1d6175ec6761cbd5d096fd1e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<div class="memtemplate">
+template&lt;typename U &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_bond_1_1_allocator_1_1_handle.html">Bond::Allocator::Handle</a>&lt; T &gt;::operator <a class="el" href="class_bond_1_1_allocator_1_1_handle.html">Handle</a>&lt; U &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="af6e7ce9232b96865c98e8dc02aa32029"></a>
 <div class="memitem">
 <div class="memproto">

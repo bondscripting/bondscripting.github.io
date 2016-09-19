@@ -137,8 +137,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aeccdc4be8f528bd1fa42c508da85174a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a267440fa535ab521f73d5590998e163b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_memory_output_stream.html#a267440fa535ab521f73d5590998e163b">VPrint</a> (const char *format, va_list argList) override</td></tr>
 <tr class="separator:a267440fa535ab521f73d5590998e163b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed908158fd309fcdaac7161514b50428"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_memory_output_stream.html#aed908158fd309fcdaac7161514b50428">Write</a> (const uint8_t *bytes, size_t numBytes)</td></tr>
-<tr class="separator:aed908158fd309fcdaac7161514b50428"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6a887ac62a938a409bcf2788bc8d3e8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_memory_output_stream.html#ad6a887ac62a938a409bcf2788bc8d3e8">Write</a> (const uint8_t *bytes, size_t numBytes) override</td></tr>
+<tr class="separator:ad6a887ac62a938a409bcf2788bc8d3e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a325e19eefc0fc08175f87d32ba15c085"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_memory_output_stream.html#a325e19eefc0fc08175f87d32ba15c085">Write</a> (uint8_t c) override</td></tr>
 <tr class="separator:a325e19eefc0fc08175f87d32ba15c085"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b35f8f369d153724ae911ffe50ef686"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_bond_1_1_stream.html#a489b6b37c5ef8c0101dbee13bb83acd7">pos_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_memory_output_stream.html#a3b35f8f369d153724ae911ffe50ef686">GetPosition</a> () const  override</td></tr>
@@ -156,11 +156,15 @@ Public Member Functions</h2></td></tr>
 <tr class="inherit_header pub_methods_class_bond_1_1_output_stream"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_bond_1_1_output_stream')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_bond_1_1_output_stream.html">Bond::OutputStream</a></td></tr>
 <tr class="memitem:ae7397df53cce0ddc6a4ef7ca436a8984 inherit pub_methods_class_bond_1_1_output_stream"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_output_stream.html#ae7397df53cce0ddc6a4ef7ca436a8984">~OutputStream</a> ()</td></tr>
 <tr class="separator:ae7397df53cce0ddc6a4ef7ca436a8984 inherit pub_methods_class_bond_1_1_output_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09b23a084136be412667db989a3d4790 inherit pub_methods_class_bond_1_1_output_stream"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_output_stream.html#a09b23a084136be412667db989a3d4790">Flush</a> ()</td></tr>
+<tr class="separator:a09b23a084136be412667db989a3d4790 inherit pub_methods_class_bond_1_1_output_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7a47879c322d92f2e1f8ce546cc524c inherit pub_methods_class_bond_1_1_output_stream"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_output_stream.html#ac7a47879c322d92f2e1f8ce546cc524c">Print</a> (const char *format,...)</td></tr>
 <tr class="separator:ac7a47879c322d92f2e1f8ce546cc524c inherit pub_methods_class_bond_1_1_output_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_bond_1_1_stream"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_bond_1_1_stream')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_bond_1_1_stream.html">Bond::Stream</a></td></tr>
 <tr class="memitem:a655ad666aaf7d5771d4fb4f2f4a84e3c inherit pub_methods_class_bond_1_1_stream"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stream.html#a655ad666aaf7d5771d4fb4f2f4a84e3c">~Stream</a> ()</td></tr>
 <tr class="separator:a655ad666aaf7d5771d4fb4f2f4a84e3c inherit pub_methods_class_bond_1_1_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a982f9804fba2e4c07a8c0677e7e8cc6a inherit pub_methods_class_bond_1_1_stream"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stream.html#a982f9804fba2e4c07a8c0677e7e8cc6a">Close</a> ()</td></tr>
+<tr class="separator:a982f9804fba2e4c07a8c0677e7e8cc6a inherit pub_methods_class_bond_1_1_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -415,7 +419,7 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aed908158fd309fcdaac7161514b50428"></a>
+<a class="anchor" id="ad6a887ac62a938a409bcf2788bc8d3e8"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -442,7 +446,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

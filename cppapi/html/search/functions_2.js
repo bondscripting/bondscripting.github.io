@@ -16,6 +16,7 @@ var searchData=
   ['charstream',['CharStream',['../class_bond_1_1_char_stream.html#a80a69607a8f2680aee3635b4d90eea69',1,'Bond::CharStream']]],
   ['clearflags',['ClearFlags',['../class_bond_1_1_input_stream_adaptor.html#a0471550cbff3bb9352be9ec2ef1de837',1,'Bond::InputStreamAdaptor::ClearFlags()'],['../class_bond_1_1_output_stream_adaptor.html#a9c0e0e0fc2f3177801c329944e703e53',1,'Bond::OutputStreamAdaptor::ClearFlags()']]],
   ['clearlvalue',['ClearLValue',['../class_bond_1_1_type_descriptor.html#ae9f284887a8a4757de9b6360b3ebb29d',1,'Bond::TypeDescriptor']]],
+  ['close',['Close',['../class_bond_1_1_stdio_input_stream.html#a807a5f41a4994ef05822d23e5707e840',1,'Bond::StdioInputStream::Close()'],['../class_bond_1_1_stdio_output_stream.html#ae3e8c0f4a0d90f4439443fdea19f62a0',1,'Bond::StdioOutputStream::Close()'],['../class_bond_1_1_stream.html#a982f9804fba2e4c07a8c0677e7e8cc6a',1,'Bond::Stream::Close()']]],
   ['codegenerator',['CodeGenerator',['../class_bond_1_1_code_generator.html#a6872dc7c2720d3502bd96db43c55c40c',1,'Bond::CodeGenerator']]],
   ['codesegment',['CodeSegment',['../class_bond_1_1_code_segment.html#a3bed94f0932de8ca94cdd6b3787d2ebc',1,'Bond::CodeSegment']]],
   ['combineoperandtypes',['CombineOperandTypes',['../namespace_bond.html#adec47d25003d66bfb6440a758e40abd0',1,'Bond']]],
@@ -49,5 +50,10 @@ var searchData=
   ['coshf',['Coshf',['../namespace_bond.html#a9c4d306cf5611f16f5aa7db65f423e9c',1,'Bond']]],
   ['count',['Count',['../class_bond_1_1_parse_node_counter.html#a36bc35e19cd20865c03211b61c7eaf72',1,'Bond::ParseNodeCounter']]],
   ['countlist',['CountList',['../class_bond_1_1_parse_node_counter.html#a7f6f56e6774cc6fccde4b183c2785723',1,'Bond::ParseNodeCounter']]],
-  ['createinputstream',['CreateInputStream',['../class_bond_1_1_memory_stream_factory.html#a76f26b3e3b3bd3963e6e3c9672d8ba43',1,'Bond::MemoryStreamFactory::CreateInputStream()'],['../class_bond_1_1_stdio_stream_factory.html#af765a5ae21db0d37d23ae0341f0e9777',1,'Bond::StdioStreamFactory::CreateInputStream()'],['../class_bond_1_1_stream_factory.html#adfa35fa12b772b748c5aaa65c9541691',1,'Bond::StreamFactory::CreateInputStream()']]]
+  ['createinputstream',['CreateInputStream',['../class_bond_1_1_memory_stream_factory.html#a76f26b3e3b3bd3963e6e3c9672d8ba43',1,'Bond::MemoryStreamFactory::CreateInputStream()'],['../class_bond_1_1_stdio_stream_factory.html#af765a5ae21db0d37d23ae0341f0e9777',1,'Bond::StdioStreamFactory::CreateInputStream()'],['../class_bond_1_1_stream_factory.html#adfa35fa12b772b748c5aaa65c9541691',1,'Bond::StreamFactory::CreateInputStream()'],['../namespace_bond.html#af53ada0dc9583ac235dda97d84ae6825',1,'Bond::CreateInputStream()']]],
+  ['createinputstreamcollected',['CreateInputStreamCollected',['../namespace_bond.html#af042cbd74dbc0e11d852344d04a18612',1,'Bond']]],
+  ['createinputstreamwithcollector',['CreateInputStreamWithCollector',['../namespace_bond.html#a8a4405d5f0b20d1513fe20f77918f406',1,'Bond']]],
+  ['createoutputstream',['CreateOutputStream',['../class_bond_1_1_memory_stream_factory.html#a879348ec44c972746f5a1dfdb29a5087',1,'Bond::MemoryStreamFactory::CreateOutputStream()'],['../class_bond_1_1_stdio_stream_factory.html#a501b5cce22c3dfe099f5ba460875f7ff',1,'Bond::StdioStreamFactory::CreateOutputStream()'],['../class_bond_1_1_stream_factory.html#ac8b88c2fa27215b5ee7d99a334a76673',1,'Bond::StreamFactory::CreateOutputStream()'],['../namespace_bond.html#ae225f791b505fdc4fff0dcd33699bbba',1,'Bond::CreateOutputStream()']]],
+  ['createoutputstreamcollected',['CreateOutputStreamCollected',['../namespace_bond.html#a1ec49f23494bae0d5188ebba3203683c',1,'Bond']]],
+  ['createoutputstreamwithcollector',['CreateOutputStreamWithCollector',['../namespace_bond.html#a71eef183ba015a5da660658fd2456316',1,'Bond']]]
 ];

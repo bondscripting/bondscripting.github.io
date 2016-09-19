@@ -130,6 +130,7 @@ var searchData=
   ['getstdin',['GetStdIn',['../class_bond_1_1_v_m.html#a39eaafbb79fccb08ea89bc4a76e74d8f',1,'Bond::VM']]],
   ['getstdout',['GetStdOut',['../class_bond_1_1_v_m.html#a03cfeb255d8d1f0c0264c82123d95ccc',1,'Bond::VM']]],
   ['getstream',['GetStream',['../class_bond_1_1_input_stream_adaptor.html#a5a6840a27923ee0f4c1fe807b192c5f9',1,'Bond::InputStreamAdaptor::GetStream()'],['../class_bond_1_1_output_stream_adaptor.html#a40be1394855b736ddf46c96a9d2b87de',1,'Bond::OutputStreamAdaptor::GetStream()']]],
+  ['getstreamfactory',['GetStreamFactory',['../class_bond_1_1_v_m.html#a91688de680e523c92b72be4346950dbe',1,'Bond::VM']]],
   ['getstreampos',['GetStreamPos',['../class_bond_1_1_char_stream.html#acc6b9855563e3b2278ef8e5efcf1af65',1,'Bond::CharStream']]],
   ['getstring',['GetString',['../class_bond_1_1_simple_string.html#ae6b6b2ee8d3a782108f34ceffc6bb1ec',1,'Bond::SimpleString']]],
   ['getstringlength',['GetStringLength',['../class_bond_1_1_token.html#ae592c102844308cd70092362b0bfebe2',1,'Bond::Token']]],

@@ -9,6 +9,6 @@ var class_bond_1_1_memory_output_stream =
     [ "SetPosition", "class_bond_1_1_memory_output_stream.html#a52a5be0ac186b4c575d32aa26e9568c3", null ],
     [ "SetPositionFromEnd", "class_bond_1_1_memory_output_stream.html#acb63c6e8adaa0b2474bf019b5e973483", null ],
     [ "VPrint", "class_bond_1_1_memory_output_stream.html#a267440fa535ab521f73d5590998e163b", null ],
-    [ "Write", "class_bond_1_1_memory_output_stream.html#aed908158fd309fcdaac7161514b50428", null ],
+    [ "Write", "class_bond_1_1_memory_output_stream.html#ad6a887ac62a938a409bcf2788bc8d3e8", null ],
     [ "Write", "class_bond_1_1_memory_output_stream.html#a325e19eefc0fc08175f87d32ba15c085", null ]
 ];

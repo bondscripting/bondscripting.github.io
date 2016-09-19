@@ -7,6 +7,7 @@ var class_bond_1_1_stdio_input_stream =
     [ "~StdioInputStream", "class_bond_1_1_stdio_input_stream.html#a890b5f1d13eed5db6183d23f4ec8ce5f", null ],
     [ "StdioInputStream", "class_bond_1_1_stdio_input_stream.html#a1080d48b74da19cdca0ca42701bb6d94", null ],
     [ "AddOffset", "class_bond_1_1_stdio_input_stream.html#aa9e47d9941dd15f77bc618af46bb62fd", null ],
+    [ "Close", "class_bond_1_1_stdio_input_stream.html#a807a5f41a4994ef05822d23e5707e840", null ],
     [ "GetEndPosition", "class_bond_1_1_stdio_input_stream.html#a881401d0939a9ebde94aa82f1917b578", null ],
     [ "GetPosition", "class_bond_1_1_stdio_input_stream.html#a3955429f56d85916ca4ca364668cec3c", null ],
     [ "IsBound", "class_bond_1_1_stdio_input_stream.html#a8a08efa9c6b09e9545c720e3c94196bb", null ],

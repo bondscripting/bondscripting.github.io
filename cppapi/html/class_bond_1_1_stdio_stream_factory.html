@@ -114,7 +114,7 @@ $(document).ready(function(){initNavTree('class_bond_1_1_stdio_stream_factory.ht
 </div><!--header-->
 <div class="contents">
 
-<p>A concreate implementation of <a class="el" href="class_bond_1_1_stream_factory.html" title="An abstract interface for creating file streams without being coupled to any particular concrete type...">StreamFactory</a> that instantiates StdioInputStreams.  
+<p>A concreate implementation of <a class="el" href="class_bond_1_1_stream_factory.html" title="An abstract interface for creating file streams without being coupled to any particular concrete type...">StreamFactory</a> that creates instances of <a class="el" href="class_bond_1_1_stdio_input_stream.html" title="A concrete implementation of InputStream that performs input operations from a stdio FILE*...">StdioInputStream</a> and <a class="el" href="class_bond_1_1_stdio_output_stream.html" title="A concrete implementation of OuputStream that performs input operations to a stdio FILE*...">StdioOutputStream</a>.  
  <a href="class_bond_1_1_stdio_stream_factory.html#details">More...</a></p>
 
 <p><code>#include &lt;bond/io/stdiostreamfactory.h&gt;</code></p>
@@ -130,13 +130,16 @@ Inheritance diagram for Bond::StdioStreamFactory:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a76a8c95ef4020926830965976eca4d5d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stdio_stream_factory.html#a76a8c95ef4020926830965976eca4d5d">StdioStreamFactory</a> (<a class="el" href="class_bond_1_1_allocator.html">Allocator</a> &amp;allocator, const char *rootPath=nullptr, <a class="el" href="class_bond_1_1_stream_factory.html">StreamFactory</a> *delegateFactory=nullptr)</td></tr>
-<tr class="separator:a76a8c95ef4020926830965976eca4d5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a383f324b7ce8a7c2fb987d09daf0e048"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stdio_stream_factory.html#a383f324b7ce8a7c2fb987d09daf0e048">StdioStreamFactory</a> (<a class="el" href="class_bond_1_1_allocator.html">Allocator</a> &amp;allocator, const char *rootPath=nullptr, <a class="el" href="class_bond_1_1_stream_factory.html">StreamFactory</a> *delegateFactory=nullptr, bool throwOnFailure=true)</td></tr>
+<tr class="separator:a383f324b7ce8a7c2fb987d09daf0e048"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6694bbc8d3db6d9a0a7c1bd58d89c89e"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stdio_stream_factory.html#a6694bbc8d3db6d9a0a7c1bd58d89c89e">~StdioStreamFactory</a> ()</td></tr>
 <tr class="separator:a6694bbc8d3db6d9a0a7c1bd58d89c89e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af765a5ae21db0d37d23ae0341f0e9777"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__io.html#ga8f82d3f414a8e773867ebbef1fcb9eeb">InputStreamHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stdio_stream_factory.html#af765a5ae21db0d37d23ae0341f0e9777">CreateInputStream</a> (const char *fileName) override</td></tr>
-<tr class="memdesc:af765a5ae21db0d37d23ae0341f0e9777"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an owning pointer to a dynamically allocated <a class="el" href="class_bond_1_1_stdio_input_stream.html" title="A concrete implementation of InputStream that performs input operations from a stdio FILE*...">StdioInputStream</a>.  <a href="#af765a5ae21db0d37d23ae0341f0e9777">More...</a><br /></td></tr>
+<tr class="memitem:af765a5ae21db0d37d23ae0341f0e9777"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__io.html#ga37b72a5672b81b2727ba53b4ffbe47f8">InputStreamHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stdio_stream_factory.html#af765a5ae21db0d37d23ae0341f0e9777">CreateInputStream</a> (const char *fileName) override</td></tr>
+<tr class="memdesc:af765a5ae21db0d37d23ae0341f0e9777"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an owning pointer to a dynamically allocated <a class="el" href="class_bond_1_1_input_stream.html" title="An abstract interface for performing both unformatted and formatted input operations. ">InputStream</a>.  <a href="#af765a5ae21db0d37d23ae0341f0e9777">More...</a><br /></td></tr>
 <tr class="separator:af765a5ae21db0d37d23ae0341f0e9777"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a501b5cce22c3dfe099f5ba460875f7ff"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__io.html#ga68173a5e6d6425a9194cfc319b70863c">OutputStreamHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stdio_stream_factory.html#a501b5cce22c3dfe099f5ba460875f7ff">CreateOutputStream</a> (const char *fileName, bool append=false) override</td></tr>
+<tr class="memdesc:a501b5cce22c3dfe099f5ba460875f7ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an owning pointer to a dynamically allocated <a class="el" href="class_bond_1_1_output_stream.html" title="An abstract interface for performing both unformatted and formatted output operations. ">OutputStream</a>.  <a href="#a501b5cce22c3dfe099f5ba460875f7ff">More...</a><br /></td></tr>
+<tr class="separator:a501b5cce22c3dfe099f5ba460875f7ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0259b72a76cecd87343a254afc4fbd5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stdio_stream_factory.html#a0259b72a76cecd87343a254afc4fbd5e">SetRootPath</a> (const char *rootPath)</td></tr>
 <tr class="separator:a0259b72a76cecd87343a254afc4fbd5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ccd1e9d5a7a55c234562f9656b99198"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stdio_stream_factory.html#a0ccd1e9d5a7a55c234562f9656b99198">SetDelegateFactory</a> (<a class="el" href="class_bond_1_1_stream_factory.html">StreamFactory</a> *delegateFactory)</td></tr>
@@ -146,9 +149,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0dfcffed7d47ba4643581e079b882c87 inherit pub_methods_class_bond_1_1_stream_factory"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A concreate implementation of <a class="el" href="class_bond_1_1_stream_factory.html" title="An abstract interface for creating file streams without being coupled to any particular concrete type...">StreamFactory</a> that instantiates StdioInputStreams. </p>
+<div class="textblock"><p>A concreate implementation of <a class="el" href="class_bond_1_1_stream_factory.html" title="An abstract interface for creating file streams without being coupled to any particular concrete type...">StreamFactory</a> that creates instances of <a class="el" href="class_bond_1_1_stdio_input_stream.html" title="A concrete implementation of InputStream that performs input operations from a stdio FILE*...">StdioInputStream</a> and <a class="el" href="class_bond_1_1_stdio_output_stream.html" title="A concrete implementation of OuputStream that performs input operations to a stdio FILE*...">StdioOutputStream</a>. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a76a8c95ef4020926830965976eca4d5d"></a>
+<a class="anchor" id="a383f324b7ce8a7c2fb987d09daf0e048"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -171,7 +174,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="class_bond_1_1_stream_factory.html">StreamFactory</a> *&#160;</td>
-          <td class="paramname"><em>delegateFactory</em> = <code>nullptr</code>&#160;</td>
+          <td class="paramname"><em>delegateFactory</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>throwOnFailure</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -220,7 +229,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="group__io.html#ga8f82d3f414a8e773867ebbef1fcb9eeb">InputStreamHandle</a> Bond::StdioStreamFactory::CreateInputStream </td>
+          <td class="memname">virtual <a class="el" href="group__io.html#ga37b72a5672b81b2727ba53b4ffbe47f8">InputStreamHandle</a> Bond::StdioStreamFactory::CreateInputStream </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>fileName</em></td><td>)</td>
@@ -234,7 +243,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns an owning pointer to a dynamically allocated <a class="el" href="class_bond_1_1_stdio_input_stream.html" title="A concrete implementation of InputStream that performs input operations from a stdio FILE*...">StdioInputStream</a>. </p>
+<p>Returns an owning pointer to a dynamically allocated <a class="el" href="class_bond_1_1_input_stream.html" title="An abstract interface for performing both unformatted and formatted input operations. ">InputStream</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">fileName</td><td>The name of the file for which an input stream is created. </td></tr>
@@ -243,6 +252,51 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Implements <a class="el" href="class_bond_1_1_stream_factory.html#adfa35fa12b772b748c5aaa65c9541691">Bond::StreamFactory</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a501b5cce22c3dfe099f5ba460875f7ff"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__io.html#ga68173a5e6d6425a9194cfc319b70863c">OutputStreamHandle</a> Bond::StdioStreamFactory::CreateOutputStream </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>fileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>append</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns an owning pointer to a dynamically allocated <a class="el" href="class_bond_1_1_output_stream.html" title="An abstract interface for performing both unformatted and formatted output operations. ">OutputStream</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileName</td><td>The name of the file for which an Output stream is created. </td></tr>
+    <tr><td class="paramname">append</td><td>Whether bytes are written to the end of an existing file. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_bond_1_1_stream_factory.html#ac8b88c2fa27215b5ee7d99a334a76673">Bond::StreamFactory</a>.</p>
 
 </div>
 </div>
