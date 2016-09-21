@@ -32,7 +32,7 @@
 <p>Bond is a procedural language that borrows most of its syntax, semantics and scoping rules from other programming languages. In fact, it is very similar to C in many respects. Its static typing system is also an invaluable tool that enables syntax and semantic errors to be caught at compile time.</p>
 
 <h4>Low overhead</h4>
-<p>The Bond Virtual Machine strives to be as minimal and simple as possible in order to incur as few costs as possible. It has a small memory footprint and its explicit memory management implies that there are no surprise memory allocations at runtime and there is no performance cost for automatic garbage collection. Symbols in Bond source code are resolved at compile or load time, so they do not incur any runtime symbol table look-ups. Compiled bytecode can even be shared between multiple independent virtual machines.</p>
+<p>The Bond Virtual Machine strives to be as minimal and simple as possible in order to incur as few costs as possible. It has a small memory footprint with no surprise memory allocations at runtime. The combination of scope-based and explicit resource management also implies that there is no performance cost for automatic garbage collection. Symbols in Bond source code are resolved at compile or load time, so there are no runtime symbol table look-ups. Furthermore, compiled bytecode can even be shared between multiple independent virtual machines.</p>
 
 <h4>Easy to embed</h4>
 <p>All of Bond&#39;s functionality is encapsulated in a library that does not depend on any global variables. It is worth noting that the command line tools are written as thin layers around this library in the same way that developers would embed Bond into their own applications.</p>

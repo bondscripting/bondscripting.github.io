@@ -39,6 +39,7 @@
 <li class="toc_h3"><a href="#diff_namespaces">Namespaces</a></li>
 <li class="toc_h3"><a href="#diff_member_functions">Structs can have member functions</a></li>
 <li class="toc_h3"><a href="#diff_no_globals">No global or static variables</a></li>
+<li class="toc_h3"><a href="#diff_sbrm">Scope-based resource management</a></li>
 <li class="toc_h3"><a href="#diff_native_blocks">Native blocks</a></li>
 <li class="toc_h2"><a href="#language_ref">Language Reference</a></li>
 <li class="toc_h3"><a href="#elements">Basics of Bond</a></li>
@@ -66,10 +67,12 @@
 <li class="toc_h5"><a href="#bit_shifting_operators">Bit Shifting Operators</a></li>
 <li class="toc_h5"><a href="#compound_assignment_operators">Compound Assignment Operators</a></li>
 <li class="toc_h5"><a href="#ternary_operator">Ternary Operator</a></li>
+<li class="toc_h5"><a href="#comma_operator">Comma Operator</a></li>
 <li class="toc_h5"><a href="#type_casting_operator">Type Casting Operator</a></li>
 <li class="toc_h5"><a href="#sizeof_operator">sizeof Operator</a></li>
 <li class="toc_h5"><a href="#operator_precedence">Operator Precedence</a></li>
 <li class="toc_h3"><a href="#statements">Statements</a></li>
+<li class="toc_h4"><a href="#for_loop">For Loop</a></li>
 <li class="toc_h3"><a href="#functions">Functions</a></li>
 <li class="toc_h3"><a href="#data_types">Data Types</a></li>
 <li class="toc_h4"><a href="#enum_types">Enumerated Types</a></li>
@@ -77,6 +80,7 @@
 <li class="toc_h4"><a href="#struct_types">Structure Types</a></li>
 <li class="toc_h4"><a href="#pointer_types">Pointer Types</a></li>
 <li class="toc_h3"><a href="#namespaces">Namespaces</a></li>
+<li class="toc_h3"><a href="#sbrm">Scope-Based Resource Management</a></li>
 <li class="toc_h3"><a href="#native_blocks">Native Blocks</a></li>
 </ul>
 
@@ -158,8 +162,11 @@ int[2][3] GLOBAL_VARIABLE = {{1, 2, 3}, {4, 5, 6}};       // Error</pre>
 
 <p>There are also no static variables, so all local variables have a lifetime that does not surpass that of the scope in which they are declared.</p>
 
+<h4 id="diff_sbrm">Scope-based resource management</h4>
+<p>C has explicit resource management, meaning that the acquisition of a resource must be explicitly paired with the release of that resource in code. For example, memory allocated with malloc() must be deallocated with free() and files opened with fopen() must be closed with fclose(). Bond supports explicit resource management as well, but it also has a form of scope-based resource management that allows resources to be automatically released when a function returns. See the section on <a href="#sbrm">Scope-Based Resource Management</a> for further details.</p>
+
 <h4 id="diff_native_blocks">Native blocks</h4>
-<p>Declarations for functions and structs implemented in C++ can be placed in native blocks, allowing those functions to be called and those types to be manipulated from Bond code with full type checking and semantic analysis.See the section on <a href="#native_blocks">Native Blocks</a> for further details.</p>
+<p>Declarations for functions and structs implemented in C++ can be placed in native blocks, allowing those functions to be called and those types to be manipulated from Bond code with full type checking and semantic analysis. See the section on <a href="#native_blocks">Native Blocks</a> for further details.</p>
 
 <h2 id="language_ref">Language Reference</h2>
 <h3 id="elements">Basics of Bond</h3>
@@ -545,11 +552,102 @@ a ^ b; // Result is  6, since 1100 ^ 1010 is 0110.</pre>
 <h5 id="bit_shifting_operators">Bit Shifting Operators</h5>
 <p>Another set of operators for manipulating the bits of integers are the bit shifting operators. The left shift operator <span class="token">&lt;&lt;</span> shifts the bits of the left operand to the left. The right operand specifies the number of positions by which the bits are shifted. Bits shifted out of the left side are discarded whereas bits inserted to the right are zero.</p>
 
+<pre class="code">int a = 123; // a is 00000000000000000000000001111011.
+a << 3;      // Result is 00000000000000000000001111011000.</pre>
+
 <p>Similarly, the <span class="token">&gt;&gt;</span> operator shifts the bits of the left operand to the right by the number of positions specified by the right operand. Bits shifted out of the right side are discarded and bits inserted into the left side follow slightly more complicated rules. Inserted bits are usually zero, however, if the left operand is a signed integer, then the inserted bits are the same as the contents of the leftmost bit (i.e. the sign bit). This behaviour has the interesting property of preserving the sign of the left operand.</p>
 
+<pre class="code">int a = 123; // a is 00000000000000000000000001111011.
+a >> 3;      // Result is 00000000000000000000000000001111, zeros inserted on the left.
+a = -123;    // a is 11111111111111111111111110000101.
+a >> 3;      // Result is 11111111111111111111111111110000, ones inserted on the left.</pre>
+
 <h5 id="compound_assignment_operators">Compound Assignment Operators</h5>
+<p>There are ten compound assignment operators that, in addition to performing an operation, assign the result to the variable or memory location (see <a href="#array_types">Arrays</a> and <a href="#pointer_types">Pointers</a>) described by the left operand. These operators do not introduce any new operations, they just provide convenient shorthand notation. See the table below for an overview of all of the compound assignment operators.</p>
+
+<table>
+<tr>
+<th>Compound Operator</th>
+<th>Equivalent Expression</th>
+</tr>
+
+<tr>
+<td><span class="token">a += b;</span></td>
+<td><span class="token">a = a + b;</span></td>
+</tr>
+
+<tr>
+<td><span class="token">a -= b;</span></td>
+<td><span class="token">a = a - b;</span></td>
+</tr>
+
+<tr>
+<td><span class="token">a *= b;</span></td>
+<td><span class="token">a = a * b;</span></td>
+</tr>
+
+<tr>
+<td><span class="token">a /= b;</span></td>
+<td><span class="token">a = a / b;</span></td>
+</tr>
+
+<tr>
+<td><span class="token">a %= b;</span></td>
+<td><span class="token">a = a % b;</span></td>
+</tr>
+
+<tr>
+<td><span class="token">a &= b;</span></td>
+<td><span class="token">a = a & b;</span></td>
+</tr>
+
+<tr>
+<td><span class="token">a |= b;</span></td>
+<td><span class="token">a = a | b;</span></td>
+</tr>
+
+<tr>
+<td><span class="token">a ^= b;</span></td>
+<td><span class="token">a = a ^ b;</span></td>
+</tr>
+
+<tr>
+<td><span class="token">a &lt;&lt;= b;</span></td>
+<td><span class="token">a = a &lt;&lt; b;</span></td>
+</tr>
+
+<tr>
+<td><span class="token">a &gt;&gt;= b;</span></td>
+<td><span class="token">a = a &gt;&gt; b;</span></td>
+</tr>
+</table>
 
 <h5 id="ternary_operator">Ternary Operator</h5>
+<p>The ternary operator, also known as the conditional operator, allows for an expression to evaluate to one of two results based on the evaluation of a boolean condition. The notation for the ternary operator is as follows:</p>
+
+<pre class="code">condition ? expression1 : expression2</pre>
+
+<p>The condition expression is evaluated first, which must evaluate to a value of type <span class="token">bool</span>. If the result of the condition is <span class="token">true</span>, then expression1 is evaluated and the result of the ternary operator is the value of expression1. Otherwise, if the condition is <span class="token">false</span>, then expression2 is evaluated and the result of the ternary operator is the value of expression2. Note that only one of expression1 or expression2 is evaluated, and both expressions must have compatible types.</p>
+
+<pre class="code">bool a = true;
+bool b = false;
+int c = 6;
+Int d = 8;
+a ? c : d; // Result is 6 since a is true so the value of c is evaluated.
+b ? c : d; // Result is 8 since b is true so the value of d is evaluated.
+((c &gt;= 1) &amp;&amp; (c &lt;= 10)) ? (d - 1) : (d + 1); // Result is 7 (d - 1) since c is in the range [1 - 10].
+
+// Multiple possible outcomes based on the result of function calls.
+Condition1() ? (Condition2() ? Result1() : Result2()) : (Condition3() ? Result3() : Result4());</pre>
+
+
+<h5 id="comma_operator">Comma Operator</h5>
+<p>The comma operator is used to concatenate several expressions where only one expression is expected. All of the subexpressions are evaluated in order, however, the result of the enclosing expression is that of the last subexpression only.</p>
+
+<pre class="code">int a = 0;
+int b = (a = 7), a * 2;  // a is assigned the value 7, then b is assigned the value 14 (i.e. 7 * 2).</pre>
+
+<p>The example above would be much easier to understand if it had been written in two statements: one that assigns a value to <span class="token">a</span> and one that assigns a value to <span class="token">b</span>. This lack of clarity is almost always present when using the comma operator, so it is best to avoid it when possible. There are cases, as we will see in the <a href="#for_loop">For Loop</a> section, where the comma operator is an appropriate tool.</p>
 
 <h5 id="type_casting_operator">Type Casting Operator</h5>
 
@@ -558,6 +656,8 @@ a ^ b; // Result is  6, since 1100 ^ 1010 is 0110.</pre>
 <h5 id="operator_precedence">Operator Precedence</h5>
 
 <h3 id="statements">Statements</h3>
+
+<h4 id="for_loop">For Loop</h4>
 
 <h3 id="functions">Functions</h3>
 
@@ -598,6 +698,8 @@ a ^ b; // Result is  6, since 1100 ^ 1010 is 0110.</pre>
 <h4 id="pointer_types">Pointer Types</h4>
 
 <h3 id="namespaces">Namespaces</h3>
+
+<h3 id="sbrm">Scope-Based Resource Management</h3>
 
 <h3 id="native_blocks">Native Blocks</h3>
 
