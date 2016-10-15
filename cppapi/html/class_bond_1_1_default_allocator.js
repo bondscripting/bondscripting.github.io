@@ -6,5 +6,5 @@ var class_bond_1_1_default_allocator =
     [ "AllocateAligned", "class_bond_1_1_default_allocator.html#ad9a528b5c08b379d086b8964e84005f2", null ],
     [ "Free", "class_bond_1_1_default_allocator.html#a76c6205b27523ee05eb5a3824d1d9e01", null ],
     [ "FreeAligned", "class_bond_1_1_default_allocator.html#aff539565827a26b13ab7e7ed5923941a", null ],
-    [ "GetNumAllocations", "class_bond_1_1_default_allocator.html#ac3b9f24663676c79994d218d7ec6a28e", null ]
+    [ "GetNumAllocations", "class_bond_1_1_default_allocator.html#a6cda81cd2c8b211351092c572690438b", null ]
 ];

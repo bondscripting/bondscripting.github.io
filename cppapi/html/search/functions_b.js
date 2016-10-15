@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['matches',['Matches',['../class_bond_1_1_symbol.html#a286ae3fbddc60b070c96321820f2e0f6',1,'Bond::Symbol']]],
+  ['matches',['Matches',['../class_bond_1_1_symbol.html#a83a354f5dbb3ee43e53474e53e607b3e',1,'Bond::Symbol']]],
   ['max',['Max',['../namespace_bond.html#a421d21696c200c0cf9f1482ccd6968e7',1,'Bond']]],
   ['memberexpression',['MemberExpression',['../class_bond_1_1_member_expression.html#a9be727271c361c2a26e788fd706f732d',1,'Bond::MemberExpression']]],
   ['memcpy',['Memcpy',['../namespace_bond.html#a2ac1a65bbe125a5eaecf713161ab8cf8',1,'Bond']]],

@@ -1,14 +1,14 @@
 var searchData=
 [
   ['element',['Element',['../class_bond_1_1_auto_stack_1_1_element.html',1,'Bond::AutoStack']]],
-  ['element',['Element',['../class_bond_1_1_auto_stack_1_1_element.html#afb84b94262af5974489ff12d85278d9c',1,'Bond::AutoStack::Element::Element(AutoStack &amp;stack)'],['../class_bond_1_1_auto_stack_1_1_element.html#af2eae6176048c785749238e09faec1b4',1,'Bond::AutoStack::Element::Element(AutoStack &amp;stack, Args &amp;&amp;...args)'],['../class_bond_1_1_auto_stack_1_1_element.html#a0f72139964b9a02c217e69de36659064',1,'Bond::AutoStack::Element::Element(const Element &amp;other)=delete']]],
+  ['element',['Element',['../class_bond_1_1_auto_stack_1_1_element.html#ae7ae4beb9f556920dfe5c387d18a0d75',1,'Bond::AutoStack::Element::Element(AutoStack &amp;stack)'],['../class_bond_1_1_auto_stack_1_1_element.html#a64d87856304e52c41ba9d6248131be5a',1,'Bond::AutoStack::Element::Element(AutoStack &amp;stack, Args &amp;&amp;... args)'],['../class_bond_1_1_auto_stack_1_1_element.html#acdac1ae97091d81327e2e3bf835783b8',1,'Bond::AutoStack::Element::Element(const Element &amp;other)=delete']]],
   ['empty_5fcharacter_5fconstant',['EMPTY_CHARACTER_CONSTANT',['../class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4ca399dfe800d3319e8365da7bddf436fb8',1,'Bond::CompilerError']]],
   ['empty_5fswitch_5flabel_5flist',['EMPTY_SWITCH_LABEL_LIST',['../class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4ca6af1ca988ba9ef2242dd72852f8d71b1',1,'Bond::CompilerError']]],
   ['empty_5fswitch_5fstatement',['EMPTY_SWITCH_STATEMENT',['../class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4ca43d62f0507e92a3af9ad3e16c11a45ef',1,'Bond::CompilerError']]],
   ['emptyexpression',['EmptyExpression',['../class_bond_1_1_empty_expression.html',1,'Bond']]],
   ['encodepointersize',['EncodePointerSize',['../namespace_bond.html#af1b3e1c6f78fbf6062f96995f18ec866',1,'Bond']]],
   ['encodesizeandtype',['EncodeSizeAndType',['../namespace_bond.html#afa2d779ed8fdb43635864158610dcd18',1,'Bond']]],
-  ['end',['END',['../class_bond_1_1_token.html#a6d09a1144b5a79476ae9c8056728362fa28e181c559ca375d7774b96f32a1039f',1,'Bond::Token::END()'],['../class_bond_1_1_auto_stack.html#a6cdd48fb7cd3ad20e13db43e67c151fb',1,'Bond::AutoStack::end()'],['../class_bond_1_1_auto_stack.html#a5fa0ef6b6db007477c0177845b6061a6',1,'Bond::AutoStack::end() const ']]],
+  ['end',['END',['../class_bond_1_1_token.html#a6d09a1144b5a79476ae9c8056728362fa28e181c559ca375d7774b96f32a1039f',1,'Bond::Token::END()'],['../class_bond_1_1_auto_stack.html#a5a23832bb6b33dfb78c340e1e5d03cc8',1,'Bond::AutoStack::end()'],['../class_bond_1_1_auto_stack.html#ac69e489ac6c50192e3e272383376409e',1,'Bond::AutoStack::end() const']]],
   ['enum_5fdelimiters_5ftypeset',['ENUM_DELIMITERS_TYPESET',['../group__compiler.html#ga2f3a174e0a7cc50b96d629c7feb1b35f',1,'Bond']]],
   ['enumdeclaration',['EnumDeclaration',['../class_bond_1_1_enum_declaration.html',1,'Bond']]],
   ['enumdeclaration',['EnumDeclaration',['../class_bond_1_1_enum_declaration.html#a670b74ce569c5680361e0809e6651b5b',1,'Bond::EnumDeclaration']]],
