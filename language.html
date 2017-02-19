@@ -77,8 +77,8 @@
 <li class="toc_h4"><a href="#compound_statements">Compound Statements</a></li>
 <li class="toc_h4"><a href="#if_statements"><span class="token">if</span> Statements</a></li>
 <li class="toc_h4"><a href="#switch_statements"><span class="token">switch</span> Statements</a></li>
-<li class="toc_h4"><a href="#for_statements"><span class="token">for</span> Statements</a></li>
 <li class="toc_h4"><a href="#while_statements"><span class="token">while</span> Statements</a></li>
+<li class="toc_h4"><a href="#for_statements"><span class="token">for</span> Statements</a></li>
 <li class="toc_h4"><a href="#jump_statements">Jump Statements</a></li>
 <li class="toc_h3"><a href="#functions">Functions</a></li>
 <li class="toc_h3"><a href="#data_types">Data Types</a></li>
@@ -210,7 +210,6 @@ int main()
 
 <dt>Line 2: <span class="token">include &quot;io.bond&quot;;</span></dt>
 <dd>An include directive tells the compiler that the programmer wishes to reference code written in another file. In this case, the referenced file is <span class="token">io.bond</span>. The file <span class="token">io.bond</span> is part of the Standard Bond Library and defines input and output operations.</dd>
-</dl>
 
 <dt>Line 3: A blank line.</dt>
 <dd>Blank lines have no effect on the program, but do help to organize code and improve readability.</dd>
@@ -236,6 +235,7 @@ int main()
 
 <dt>Line 7: <span class="token">return 0;</span></dt>
 <dd>This line of code is a statement that specifies what value is returned by the <span class="token">main</span> function. As we saw on line 4, the <span class="token">main</span> function returns an <span class="token">int</span>. In Bond, as with other programming languages, such as C and C++, the return value of the <span class="token">main</span> function indicates the exit status of the program. By convention, a return value of 0 indicates that the program terminated normally, whereas any other value indicates an application specific error code.</dd>
+</dl>
 
 <h4 id="identifiers">Identifiers</h4>
 <p>Identifiers are names for symbols such as variables, functions and types defined in code. Identifiers consist of any sequence of letters, digits and underscores ('_'), with the exception that the first character cannot be a digit. Also, keywords are reserved and cannot be used as identifiers. Identifiers are case sensitive.</p>
@@ -434,7 +434,7 @@ int resultPlusOne = result + 1;</pre>
 <pre class="code">x = 8 + (y = 7); // x is 15 and y is 7.</pre>
 
 <h5 id="arithmetic_operators">Arithmetic Operators</h5>
-<p>The five binary arithmetic operators are <span class="token">+</span>, <span class="token">-</span>, <span class="token">*</span>, <span class="token">/</span> and <span class="token">%</span>, and they perform addition, subtraction, multiplication, division and modulo division respectively. The syntax for using these operators is straightforward and resembles the notation for basic arithmetic (i.e. the two operands appear on either side of the operator). The operands can be any expression that evaluates to a numerical type, including constants, variables, other arithmetic expressions, function calls and so forth.</pre>
+<p>The five binary arithmetic operators are <span class="token">+</span>, <span class="token">-</span>, <span class="token">*</span>, <span class="token">/</span> and <span class="token">%</span>, and they perform addition, subtraction, multiplication, division and modulo division respectively. The syntax for using these operators is straightforward and resembles the notation for basic arithmetic (i.e. the two operands appear on either side of the operator). The operands can be any expression that evaluates to a numerical type, including constants, variables, other arithmetic expressions, function calls and so forth.</p>
 
 <pre class="code">double a = 2.0;
 double b = a + 1.0;      // Addition: b is 3.0.
@@ -483,7 +483,7 @@ b = a++;
 // a is 8, but b is 7. The value of a is captured before it is incremented.</pre>
 
 <h5 id="relational_operators">Relational and Comparison Operators</h5>
-<p>The six relational operators are <span class="token">==</span>, <span class="token">!=</span>, <span class="token">&lt;</span>, <span class="token">&gt;</span>, <span class="token">&lt;=</span> and <span class="token">&gt=</span>, and they are used to compare the value of two expressions. The result of a relational operator is a <span class="token">bool</span> (i.e. either the value <span class="token">true</span> or <span class="token">false</span>) indicating whether the comparison was successful.</p>
+<p>The six relational operators are <span class="token">==</span>, <span class="token">!=</span>, <span class="token">&lt;</span>, <span class="token">&gt;</span>, <span class="token">&lt;=</span> and <span class="token">&gt;=</span>, and they are used to compare the value of two expressions. The result of a relational operator is a <span class="token">bool</span> (i.e. either the value <span class="token">true</span> or <span class="token">false</span>) indicating whether the comparison was successful.</p>
 
 <p>The <span class="token">==</span> and <span class="token">!=</span> operators test whether two values are equal or not equal respectively.</p>
 
@@ -495,28 +495,28 @@ a == c;    // Result is false since both operands are 7.
 a != b;    // Result is false since one operand is 7 and one is 9.
 a != b;    // Result is true since one operand is 7 and one is 9.</pre>
 
-<p>The <span class="token">&lt;</span>, <span class="token">&gt;</span>, <span class="token">&lt;=</span> and <span class="token">&gt=</span> operators test whether the first operand is less than, greater than, less than or equal to and greater than or equal to the second operator respectively.</p>
+<p>The <span class="token">&lt;</span>, <span class="token">&gt;</span>, <span class="token">&lt;=</span> and <span class="token">&gt;=</span> operators test whether the first operand is less than, greater than, less than or equal to and greater than or equal to the second operator respectively.</p>
 
 <pre class="code">int a = 7;
 int b = 7;
 int c = 9;
-a < b;     // Result is false since 7 is not less than 7.
-a < c;     // Result is true since 7 is less than 9.
-c < a;     // Result is false since 9 is not less than 7.
-a > b;     // Result is false since 7 is not greater than 7.
-a > c;     // Result is false since 7 is not greater than 9.
-c > a;     // Result is true since 9 is greater than 7.
-a <= b;    // Result is true since 7 is equal to 7.
-a <= c;    // Result is true since 7 is less than 9.
-c <= a;    // Result is false since 9 is not less than or equal to 7.
-a >= b;    // Result is true since 7 is equal to 7.
-a >= c;    // Result is false since 7 is not greater than or equal to 9.
-c >= a;    // Result is true since 9 is greater than 7.</pre>
+a &lt; b;     // Result is false since 7 is not less than 7.
+a &lt; c;     // Result is true since 7 is less than 9.
+c &lt; a;     // Result is false since 9 is not less than 7.
+a &gt; b;     // Result is false since 7 is not greater than 7.
+a &gt; c;     // Result is false since 7 is not greater than 9.
+c &gt; a;     // Result is true since 9 is greater than 7.
+a &lt;= b;    // Result is true since 7 is equal to 7.
+a &lt;= c;    // Result is true since 7 is less than 9.
+c &lt;= a;    // Result is false since 9 is not less than or equal to 7.
+a &gt;= b;    // Result is true since 7 is equal to 7.
+a &gt;= c;    // Result is false since 7 is not greater than or equal to 9.
+c &gt;= a;    // Result is true since 9 is greater than 7.</pre>
 
 <h5 id="logical_operators">Logical Operators</h5>
-<p>The two binary logical operators <span class="token">&amp;&amp</span> and <span class="token">||</span> are used for combining the truth values of two Boolean expressions.</p>
+<p>The two binary logical operators <span class="token">&amp;&amp;</span> and <span class="token">||</span> are used for combining the truth values of two Boolean expressions.</p>
 
-<p>The conjunction operator <span class="token">&amp;&amp</span> evaluates to <span class="token">true</span> only if its operands are both <span class="token">true</span>, otherwise it evaluates to <span class="token">false</span>. If the first operand is <span class="token">false</span>, the second operand is not evaluated at all, since the expression will evaluate to <span class="token">false</span> regardless of the second operand's value.</p>
+<p>The conjunction operator <span class="token">&amp;&amp;</span> evaluates to <span class="token">true</span> only if its operands are both <span class="token">true</span>, otherwise it evaluates to <span class="token">false</span>. If the first operand is <span class="token">false</span>, the second operand is not evaluated at all, since the expression will evaluate to <span class="token">false</span> regardless of the second operand's value.</p>
 
 <p>The disjunction operator <span class="token">||</span> evaluates to <span class="token">false</span> only if its operands are both <span class="token">false</span>, otherwise it evaluates to <span class="token">true</span>. If the first operand is <span class="token">true</span>, the second operand is not evaluated at all, since the expression will evaluate to <span class="token">true</span> regardless of the second operand's value.</p>
 
@@ -537,7 +537,7 @@ c || d;    // Result is false since both operands are false.</pre>
 
 <p>We can combine all of the operators that we have learned so far to formulate more complex conditions. The following snippet of code checks whether a variable named <span class="token">value</span> falls in the range [5 - 10] if the range check is enabled. If the range check is not enabled, the condition always succeeds.</p>
 
-<pre class="code">bool conditionValid = !rangeCheckEnabled || ((value >= 5) && (value <= 10));</pre>
+<pre class="code">bool conditionValid = !rangeCheckEnabled || ((value &gt;= 5) &amp;&amp; (value &lt;= 10));</pre>
 
 <h5 id="bitwise_logical_operators">Bitwise Logical Operators</h5>
 <p>There are a handful of operators for directly manipulating the bits of integer values. First are the bitwise logical operators, which are analogous to the Boolean logical operators seen above. With each of the binary bitwise logical operators, each bit of the left operand is paired with the corresponding bit of the right operand and the operation is performed between each pair of bits. A bit value of 0 corresponds to a truth value of <span class="token">false</span>, whereas a bit value of 1 corresponds to a truth value of <span class="token">true</span>.</p>
@@ -559,7 +559,7 @@ a ^ b; // Result is  6, since 1100 ^ 1010 is 0110.</pre>
 <p>Another set of operators for manipulating the bits of integers are the bit shifting operators. The left shift operator <span class="token">&lt;&lt;</span> shifts the bits of the left operand to the left. The right operand specifies the number of positions by which the bits are shifted. Bits shifted out of the left side are discarded whereas bits inserted to the right are zero.</p>
 
 <pre class="code">int a = 123; // a is 00000000000000000000000001111011.
-a << 3;      // Result is 00000000000000000000001111011000.</pre>
+a &lt;&lt; 3;      // Result is 00000000000000000000001111011000.</pre>
 
 <p>Similarly, the <span class="token">&gt;&gt;</span> operator shifts the bits of the left operand to the right by the number of positions specified by the right operand. Bits shifted out of the right side are discarded and bits inserted into the left side follow slightly more complicated rules. Inserted bits are usually zero, however, if the left operand is a signed integer, then the inserted bits are the same as the contents of the leftmost bit (i.e. the sign bit). This behaviour has the interesting property of preserving the sign of the left operand.</p>
 
@@ -890,14 +890,14 @@ int sum = a + b; // a and b are still 10 and 40 respectively.
 else
     false_statement</pre>
 
-<p>The condition_expression is evaluated and if its result is true, the true_statement is then executed, otherwise the false_statement is executed. Both the true_statement and false_statement are single statements, but they can be compound statements to allow for an arbitrary amount of code to be conditionally executed.</p>
+<p>The <span class="token">condition_expression<span> is evaluated and if its result is true, the <span class="token">true_statement</span> is then executed, otherwise the <span class="token">false_statement</span> is executed. Both the <span class="token">true_statement</span> and <span class="token">false_statement</span> are single statements, but they can be compound statements to allow for an arbitrary amount of code to be conditionally executed.</p>
 
 <pre class="code">if (x > 10)
     Bond::StdOut()->PrintStr("X is greater than 10.");
 else
     Bond::StdOut()->PrintStr("X is less than or equal to 10.");</pre>
 
-<p>The else clause, which includes the false_statement, is optional. This example also demonstrates the use of a compound statement.</p>
+<p>The else clause, which includes the <span class="token">false_statement</span>, is optional. This example also demonstrates the use of a compound statement.</p>
 
 <pre class="code">if (x > 10)
 {
@@ -908,11 +908,11 @@ Bond::StdOut()->PrintStr("This statement executes regardless.");</pre>
 
 <p>Multiple if statements can be daisy-chained to evaluate several conditions. This is known as a cascaded if statement.</p>
 
-<pre class="code">if (x < 10)
+<pre class="code">if (x &lt; 10)
     Bond::StdOut()->PrintStr("X is less than 10.");
-else if (x < 20)
+else if (x &lt; 20)
     Bond::StdOut()->PrintStr("X is greater than or equal to 10 but less than 20.");
-else if (x < 30)
+else if (x &lt; 30)
     Bond::StdOut()->PrintStr("X is greater than or equal to 20 but less than 30.");
 else
     Bond::StdOut()->PrintStr("X is greater than or equal to 30.");</pre>
@@ -923,19 +923,19 @@ else
 <pre class="code">switch (control_expression)
 {
     case value_1:
-        statements_1;
+        statements_1
         break;
     case value_2:
-        statements_2;
+        statements_2
         break;
 
     ...
 
     case value_n:
-        statements_n;
+        statements_n
         break;
     default:
-        default_statements;
+        default_statements
         break;
 }</pre>
 
@@ -943,23 +943,25 @@ else
 
 <pre class="code">if (control_expression == value_1)
 {
-    statements_1;
+    statements_1
 }
 else if (control_expression == value_2)
 {
-    statements_2;
+    statements_2
 }
-…
+
+...
+
 else if (control_expression == value_n)
 {
-    statements_n;
+    statements_n
 }
 else
 {
-    default_statements;
+    default_statements
 }</pre>
 
-<p>The switch statement works by evaluating the control_expression once, which must be of type <span class="token">int</span> or <span class="token">uint</span>, then comparing the result against the values next to each case label looking for an exact match. The values (value_1, value_2 and so forth), must be compile time constants (either literals, constant variables, or enumerators). When a match is found, the statements following the matching case label are executed. When a break statement is encountered, execution resumes after the switch statement. If no exact value is matched, the statements following the default label are executed. If no exact match is found and there is no default label, then none of the statement contained within the switch statement are executed and execution resumes after the switch statement.</p>
+<p>The switch statement works by evaluating the <span class="token">control_expression</span> once, which must be of type <span class="token">int</span> or <span class="token">uint</span>, then comparing the result against the values next to each case label looking for an exact match. The values (<span class="token">value_1</span>, <span class="token">value_2</span> and so forth), must be compile time constants (either literals, constant variables, or enumerators). When a match is found, the statements following the matching case label are executed. When a break statement is encountered, execution resumes after the switch statement. If no exact value is matched, the statements following the default label are executed. If no exact match is found and there is no default label, then none of the statement contained within the switch statement are executed and execution resumes after the switch statement.</p>
 
 <pre class="code">const int FEET = 1;
 const int METERS = 2;
@@ -979,8 +981,8 @@ switch (units)
 
 <p>So why is there a need for a switch statement when a cascaded if statement is just as capable? The fundamental difference between the two is one of efficiency; the cascaded if statement does a sequential search for a match, whereas the internal machinery of a switch statement can perform either a table lookup or a binary search. The cascaded if statement also requires the Bond compiler to generate a longer stream of instructions.</p>
 
-<h4 id="for_statements"><span class="token">for</span> Statements</h4>
 <h4 id="while_statements"><span class="token">while</span> Statements</h4>
+<h4 id="for_statements"><span class="token">for</span> Statements</h4>
 <h4 id="jump_statements">Jump Statements</h4>
 
 <h3 id="functions">Functions</h3>
