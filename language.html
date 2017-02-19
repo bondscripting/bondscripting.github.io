@@ -23,7 +23,7 @@
 <div class="content">
 
 <h2 id="language">The Bond Language</h2>
-<p>When Bond was created, the goal was not to invent yet another language; it was more of an endeavour to create a minimalistic runtime environment for a bytecode interpreted language. So, where possible, Bond borrowed its syntax and semantics from C. This document begins by covering some notable differences that exist between Bond and C that exist in the spirit of keeping things clean and simple. Then the document moves on to cover the Bond language in detail.</p>
+<p>When Bond was created, the goal was not to invent yet another language; it was more of an endeavour to create a minimalistic runtime environment for a bytecode interpreted language. So, where possible, Bond borrowed its syntax and semantics from C. This document begins by covering some notable differences between Bond and C that exist in the spirit of keeping things clean and simple. Then the document moves on to cover the Bond language in detail.</p>
 
 <ul class="toc">
 <li class="toc_h2"><a href="#differences_with_c">Notable Differences With C</a></li>
@@ -69,10 +69,17 @@
 <li class="toc_h5"><a href="#ternary_operator">Ternary Operator</a></li>
 <li class="toc_h5"><a href="#comma_operator">Comma Operator</a></li>
 <li class="toc_h5"><a href="#type_casting_operator">Type Casting Operator</a></li>
-<li class="toc_h5"><a href="#sizeof_operator">sizeof and alignof Operators</a></li>
+<li class="toc_h5"><a href="#sizeof_operator"><span class="token">sizeof</span> and <span class="token">alignof</span> Operators</a></li>
 <li class="toc_h5"><a href="#operator_precedence">Operator Precedence</a></li>
 <li class="toc_h3"><a href="#statements">Statements</a></li>
-<li class="toc_h4"><a href="#for_loop">For Loop</a></li>
+<li class="toc_h4"><a href="#expression_statements">Expression Statements</a></li>
+<li class="toc_h4"><a href="#declarative_statements">Declarative Statements</a></li>
+<li class="toc_h4"><a href="#compound_statements">Compound Statements</a></li>
+<li class="toc_h4"><a href="#if_statements"><span class="token">if</span> Statements</a></li>
+<li class="toc_h4"><a href="#switch_statements"><span class="token">switch</span> Statements</a></li>
+<li class="toc_h4"><a href="#for_statements"><span class="token">for</span> Statements</a></li>
+<li class="toc_h4"><a href="#while_statements"><span class="token">while</span> Statements</a></li>
+<li class="toc_h4"><a href="#jump_statements">Jump Statements</a></li>
 <li class="toc_h3"><a href="#functions">Functions</a></li>
 <li class="toc_h3"><a href="#data_types">Data Types</a></li>
 <li class="toc_h4"><a href="#enum_types">Enumerated Types</a></li>
@@ -102,13 +109,13 @@
 
 <pre class="code">A * B;</pre>
 
-<p>This line of code can be parsed as the declarative statement: <span class="token">B</span> is a pointer to type <span class="token">A</span>. Or it can be parsed as the expression statement: the value of variable <span class="token">A</span> times the value of variable <span class="token">B</span>. C compilers resolve the ambiguity using forward declarations and by giving the parser access to the symbol table so that it can look up whether <span class="token">A</span> is a type. This approach introduces a burden on the programmer to add forward declarations to the source code and pushes elements of semantic analysis (i.e. maintenance of the symbol table) into the parser.</p>
+<p>This line of code can be parsed as the declarative statement: <span class="token">B</span> is a pointer to type <span class="token">A</span>. Or it can be parsed as the expression statement: the value of variable <span class="token">A</span> times the value of variable <span class="token">B</span>. C compilers resolve the ambiguity using forward declarations and by giving the parser access to the symbol table so that it can look up whether <span class="token">A</span> is a type. This approach introduces a burden on the programmer to add forward declarations to the source code and pushes elements of semantic analysis (e.g. maintenance of the symbol table) into the parser.</p>
 
 <p>Fortunately, such ambiguities result in statements with no effect when parsed as expression statements, so it is not necessary to support such statements. Bond's approach to resolving the ambiguity is to favour parsing statements as declarative statements whenever possible. If it turns out that <span class="token">A</span> is not a type, the semantic analyzer will raise an error to that effect during a later stage of compilation.</p>
 
 <p>In hindsight, it may have been worth considering eliminating such ambiguities by modifying the syntax for declarative statements.</p>
 
-<p>For clarity and to avoid other possible ambiguities, the syntax for casting and the sizeof operator were both slightly modified. The syntax for casting is:</p>
+<p>For clarity and to avoid other possible ambiguities, the syntax for casting and the sizeof operator were both slightly modified from C. The syntax for casting is:</p>
 
 <pre class="code">cast&lt;type&gt;(expression)</pre>
 
@@ -416,7 +423,6 @@ int resultPlusOne = result + 1;</pre>
 <!-- TODO: Mention parentheses to force precedence. -->
 
 <h5 id="assignment_operator">Assignment Operator</h5>
-
 <p>As we have seen in the <a href="#variables">Variables</a> section, the assignment operator, represented by an equal sign =, assigns a value to a variable. Even though the assignment operator is represented by an equal sign, it is not used for determining equality.</p>
 
 <p>The expression producing the value that is assigned is on the right side of the assignment operator, and the variable receiving the value is on the left. In the following example, the value of the variable <span class="token">y</span> is assigned to the variable <span class="token">x</span>.<p>
@@ -664,7 +670,7 @@ int c = cast&lt;int&gt;(a + b) + 5; // cast&lt;int&gt;(1.5 + 2.6) + 5
                               // 4 + 5
                               // 9</pre>
 
-<h5 id="sizeof_operator">sizeof and alignof Operators</h5>
+<h5 id="sizeof_operator"><span class="token">sizeof</span> and <span class="token">alignof</span> Operators</h5>
 <p>The sizeof operator is used to evaluate the size in bytes of a value of a given type. It can be expressed in two forms as follows:</p>
 
 <pre class="code">sizeof&lt;type&gt;
@@ -850,7 +856,132 @@ alignofDouble = alignof(4.0 + 2.0); // equivalent to alignof&lt;double&gt;.</pre
 
 <h3 id="statements">Statements</h3>
 
-<h4 id="for_loop">For Loop</h4>
+<h4 id="expression_statements">Expression Statements</h4>
+<p>Many of the code examples presented so far in this document have been examples of expression statements. An expression statement consists of a single expression terminated with a semicolon. Expression statements only do meaningful work if they have some kind of side effect, such as assigning a value to a variable, or calling a function that in turn has side effects.</p>
+
+<pre class="code">a + b;     // Calculates a result which is discarded. Does no meaningful work.
+a = b + c; // Performs an addition and assigns the result to the variable a.</pre>
+
+<h4 id="declarative_statements">Declarative Statements</h4>
+<p>A declarative statement is used to declare and optionally initialize a variable. In fact, we have already covered declarative statements in some detail in the <a href="#variables">Variables</a> section, and have seen many examples in the sample code. The only aspect of declarative statements that we have yet to cover is the initialization of aggregate types, however, that will be deferred to the sections on <a href="#array_types">Array Types</a> and <a href="#struct_types">Structure Types</a>.</p>
+
+<h4 id="compound_statements">Compound Statements</h4>
+<p>A compound statement, also known as a block, provides a means to collect several statements together that can be placed wherever a single statement is expected. A block consists of a list of zero or more statements enclosed in curly braces: <span class="token">{}</span>. The statements contained within a block are all executed in order and can be any type of statement, including nested compound statements. Furthermore, any variables declared within a block are local to that block and cease to exist when program execution leaves the scope of the block.</p>
+
+<pre class="code">int a = 10;
+int b = 20;
+
+// The following is a compound statement that contains two statements.
+{
+    int c = 30; // Declare a new variable that only exists between {}.
+    b = a + c;  // Assign a new value (40) to b declared above.
+}
+
+int sum = a + b; // a and b are still 10 and 40 respectively.
+
+// The following would be an error because c no longer exists.
+// sum += c;</pre>
+
+<h4 id="if_statements"><span class="token">if</span> Statements</h4>
+<p>An if statement allows part of a program to be executed conditionally based on the evaluation of a boolean expression. The basic syntax for an if statement is the following, where <span class="token">if</span> and <span class="token">else</span> are reserved keywords:</p>
+
+<pre class="code">if (condition_expression)
+    true_statement
+else
+    false_statement</pre>
+
+<p>The condition_expression is evaluated and if its result is true, the true_statement is then executed, otherwise the false_statement is executed. Both the true_statement and false_statement are single statements, but they can be compound statements to allow for an arbitrary amount of code to be conditionally executed.</p>
+
+<pre class="code">if (x > 10)
+    Bond::StdOut()->PrintStr("X is greater than 10.");
+else
+    Bond::StdOut()->PrintStr("X is less than or equal to 10.");</pre>
+
+<p>The else clause, which includes the false_statement, is optional. This example also demonstrates the use of a compound statement.</p>
+
+<pre class="code">if (x > 10)
+{
+    Bond::StdOut()->PrintStr("This is a compound statement.\n");
+    Bond::StdOut()->PrintStr("X is greater than 10.");
+}
+Bond::StdOut()->PrintStr("This statement executes regardless.");</pre>
+
+<p>Multiple if statements can be daisy-chained to evaluate several conditions. This is known as a cascaded if statement.</p>
+
+<pre class="code">if (x < 10)
+    Bond::StdOut()->PrintStr("X is less than 10.");
+else if (x < 20)
+    Bond::StdOut()->PrintStr("X is greater than or equal to 10 but less than 20.");
+else if (x < 30)
+    Bond::StdOut()->PrintStr("X is greater than or equal to 20 but less than 30.");
+else
+    Bond::StdOut()->PrintStr("X is greater than or equal to 30.");</pre>
+
+<h4 id="switch_statements"><span class="token">switch</span> Statements</h4>
+<p>Another type of statement, called the switch statement, can be used to conditionally execute pieces of code. It selects a block of code to execute based on the value of an integral expression. The syntax is as follows, where <span class="token">switch</span>, <span class="token">case</span>, <span class="token">default</span> and <span class="token">break</span> are all reserved keywords:</p>
+
+<pre class="code">switch (control_expression)
+{
+    case value_1:
+        statements_1;
+        break;
+    case value_2:
+        statements_2;
+        break;
+
+    ...
+
+    case value_n:
+        statements_n;
+        break;
+    default:
+        default_statements;
+        break;
+}</pre>
+
+<p>To put the switch statement into perspective, it is worth noting that the above switch statement is roughly equivalent in functionality to the following cascaded if statement.</p>
+
+<pre class="code">if (control_expression == value_1)
+{
+    statements_1;
+}
+else if (control_expression == value_2)
+{
+    statements_2;
+}
+…
+else if (control_expression == value_n)
+{
+    statements_n;
+}
+else
+{
+    default_statements;
+}</pre>
+
+<p>The switch statement works by evaluating the control_expression once, which must be of type <span class="token">int</span> or <span class="token">uint</span>, then comparing the result against the values next to each case label looking for an exact match. The values (value_1, value_2 and so forth), must be compile time constants (either literals, constant variables, or enumerators). When a match is found, the statements following the matching case label are executed. When a break statement is encountered, execution resumes after the switch statement. If no exact value is matched, the statements following the default label are executed. If no exact match is found and there is no default label, then none of the statement contained within the switch statement are executed and execution resumes after the switch statement.</p>
+
+<pre class="code">const int FEET = 1;
+const int METERS = 2;
+
+switch (units)
+{
+    case FEET:
+        Bond::StdOut()->PrintStr("Units are in feet.");
+        break;
+    case METERS:
+        Bond::StdOut()->PrintStr("Units are in meters.");
+        break;
+    default:
+        Bond::StdOut()->PrintStr("Units are not recognized.");
+    break;
+}</pre>
+
+<p>So why is there a need for a switch statement when a cascaded if statement is just as capable? The fundamental difference between the two is one of efficiency; the cascaded if statement does a sequential search for a match, whereas the internal machinery of a switch statement can perform either a table lookup or a binary search. The cascaded if statement also requires the Bond compiler to generate a longer stream of instructions.</p>
+
+<h4 id="for_statements"><span class="token">for</span> Statements</h4>
+<h4 id="while_statements"><span class="token">while</span> Statements</h4>
+<h4 id="jump_statements">Jump Statements</h4>
 
 <h3 id="functions">Functions</h3>
 
