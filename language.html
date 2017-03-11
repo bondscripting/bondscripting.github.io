@@ -982,7 +982,58 @@ switch (units)
 <p>So why is there a need for a switch statement when a cascaded if statement is just as capable? The fundamental difference between the two is one of efficiency; the cascaded if statement does a sequential search for a match, whereas the internal machinery of a switch statement can perform either a table lookup or a binary search. The cascaded if statement also requires the Bond compiler to generate a longer stream of instructions.</p>
 
 <h4 id="while_statements"><span class="token">while</span> Statements</h4>
+<p>A while statement, also known as a while loop, is a statement similar in structure to an if statement, but rather than conditionally executing a statement once, it repeatedly executes a statement as long as the condition remains true. The syntax is:</p>
+
+<pre class="code">while (condition_expression)
+    body_statement</pre>
+
+<p>The while loop first executes the <span class="token">condition_expression</span> and if its result is true, the <span class="token">body_statement</span> is executed. In contrast to the if statement, execution then returns to the top of the loop and the condition is then re-evaluated, and the cycle repeats until the <span class="token">condition_expression</span> is false. For the loop to terminate, the body of the loop should typically have a side effect (e.g. increment a counter) to cause the condition to become false after some number of iterations.</p>
+
+<pre class="code" id="while_example">int i = 0;
+while (i &lt; 3)
+{
+    Bond::StdOut()->PrintStr("i is: ")->PrintI(i)->PrintStr("\n");
+    ++i;
+}
+Bond::StdOut()->PrintStr("After the loop, i is: ")->PrintI(i)->PrintStr("\n");</pre>
+
+<p>The output of executing the above snippet of code would be:</p>
+
+<pre class="code">i is: 0
+i is: 1
+i is: 2
+After the loop, i is: 3</pre>
+
+<p>Another form of the while loop is the do-while loop. It exchanges the order of evaluation of the <span class="token">condition_expression</span> and the <span class="token">body_statement</span>, so that the body is always executed at least once. This form of loop is less common, but useful in cases where something required to evaluate the condition is determined within the body of the loop. The notation for the do-while loop is:</p>
+
+<pre class="code">do
+    body_statement
+while (condition_expression);</pre>
+
 <h4 id="for_statements"><span class="token">for</span> Statements</h4>
+<p>Another form of iteration statement is the for statement, also called the for loop. The for loop provides a bit of additional syntax to manage the iteration, which is as follows:</p>
+
+<pre class="code">for (init_expression; condition_expression; increment_expression)
+    body_statement</pre>
+
+<p>The above for loop syntax is equivalent to the following while loop:</p>
+
+<pre class="code">init_expression;
+while (condition_expression)
+{
+    body_statement
+    increment_expression;
+}</pre>
+
+<p>All three expressions between the parentheses following the <span class="token">for</span> keyword are optional. The <span class="token">init_expression</span> executes first and once only. It can be used to declare and/or initialize a variable. Then, as with the while loop, the <span class="token">condition_expression</span> is evaluated. If it evaluates to true, the <span class="token">body_statement</span> executes. Subsequently, the <span class="token">increment_expression</span> is evaluated; it is expected to have a side effect (e.g. increment the variable declared in the <span class="token">init_epression</span>), since the result of the expression is not used otherwise. Finally, execution returns to the top of the loop and the <span class="token">condition_expression</span> is evaluated again. Once the condition evaluates to false, execution proceeds to the statement following the body of the loop.</p>
+
+<p>The <a href="#while_example">example</a> presented in the <a href="#while_statements"><span class="token">while</span> Statements</a> section can be written more concisely as:</p>
+
+<pre class="code">for (int i = 0; i &lt; 3; ++i)
+{
+    Bond::StdOut()->PrintStr("i is: ")->PrintI(i)->PrintStr("\n");
+}</pre>
+
 <h4 id="jump_statements">Jump Statements</h4>
 
 <h3 id="functions">Functions</h3>
