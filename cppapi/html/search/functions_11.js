@@ -86,7 +86,7 @@ var searchData=
   ['stringlength',['StringLength',['../namespace_bond.html#a05d5edf492ec8cad97d0d8209d1ae388',1,'Bond']]],
   ['strlen',['Strlen',['../namespace_bond.html#a733eb863a8010ed5b2cb79dcac2c289c',1,'Bond']]],
   ['structdeclaration',['StructDeclaration',['../class_bond_1_1_struct_declaration.html#aa638df5018dfd96782f5a3e904b6caa5',1,'Bond::StructDeclaration']]],
-  ['swapbytes',['SwapBytes',['../namespace_bond.html#a9994b8cde3ec525c6a2000f028eff1e8',1,'Bond']]],
+  ['swapbytes',['SwapBytes',['../group__endian.html#ga9994b8cde3ec525c6a2000f028eff1e8',1,'Bond']]],
   ['switchlabel',['SwitchLabel',['../class_bond_1_1_switch_label.html#ac5f0729cf8d5ad05075d75809916f900',1,'Bond::SwitchLabel::SwitchLabel(const Token *label)'],['../class_bond_1_1_switch_label.html#ac6f921a3c7105956c52dfd66b8ce092d',1,'Bond::SwitchLabel::SwitchLabel(const Token *label, Expression *expression)']]],
   ['switchsection',['SwitchSection',['../class_bond_1_1_switch_section.html#a3de413a7cedf32244339594736438448',1,'Bond::SwitchSection']]],
   ['switchstatement',['SwitchStatement',['../class_bond_1_1_switch_statement.html#a0eee0ccee3b600da2533c650b617be5c',1,'Bond::SwitchStatement']]],

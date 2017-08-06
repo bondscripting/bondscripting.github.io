@@ -1,8 +1,7 @@
 var searchData=
 [
   ['begin',['begin',['../class_bond_1_1_auto_stack.html#a551dbf8d291e06f206615e4559cfa4a0',1,'Bond::AutoStack::begin()'],['../class_bond_1_1_auto_stack.html#a93766f1d75b94ffd571919406e4abed3',1,'Bond::AutoStack::begin() const']]],
-  ['binaryexpression',['BinaryExpression',['../class_bond_1_1_binary_expression.html',1,'Bond']]],
-  ['binaryexpression',['BinaryExpression',['../class_bond_1_1_binary_expression.html#a7f9984111210b20c077cbfdf0a29768c',1,'Bond::BinaryExpression']]],
+  ['binaryexpression',['BinaryExpression',['../class_bond_1_1_binary_expression.html',1,'Bond::BinaryExpression'],['../class_bond_1_1_binary_expression.html#a7f9984111210b20c077cbfdf0a29768c',1,'Bond::BinaryExpression::BinaryExpression()']]],
   ['block_5fdelimiters_5ftypeset',['BLOCK_DELIMITERS_TYPESET',['../group__compiler.html#gab090f4ef728344d6ee1b2d0bb29767a2',1,'Bond']]],
   ['bond',['Bond',['../namespace_bond.html',1,'']]],
   ['bond_5fblob_5fid_5flength',['BOND_BLOB_ID_LENGTH',['../namespace_bond.html#a8b7951f69a859e9da283c3045e0f246f',1,'Bond']]],

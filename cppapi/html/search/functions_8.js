@@ -68,7 +68,7 @@ var searchData=
   ['isnumerictype',['IsNumericType',['../class_bond_1_1_type_descriptor.html#ae24d27d16a55d8c0eeffbeade2845277',1,'Bond::TypeDescriptor::IsNumericType()'],['../class_bond_1_1_type_specifier.html#a395bbdd6e5063585cad78f7d1a97ec25',1,'Bond::TypeSpecifier::IsNumericType()']]],
   ['ispointerintrinsictype',['IsPointerIntrinsicType',['../class_bond_1_1_type_descriptor.html#a3d307205c36b4f9d2a1a35e6a71439d8',1,'Bond::TypeDescriptor']]],
   ['ispointertype',['IsPointerType',['../class_bond_1_1_type_descriptor.html#a26ccccb0b5f61912b788547206ffdbf4',1,'Bond::TypeDescriptor']]],
-  ['ispoweroftwo',['IsPowerOfTwo',['../namespace_bond.html#a4de3ef1d111693de2f5eeb17e347a7ea',1,'Bond']]],
+  ['ispoweroftwo',['IsPowerOfTwo',['../group__math.html#ga4de3ef1d111693de2f5eeb17e347a7ea',1,'Bond']]],
   ['isprimitivetype',['IsPrimitiveType',['../class_bond_1_1_type_descriptor.html#a0d857b7fa889ede4448b6b461ee29a98',1,'Bond::TypeDescriptor']]],
   ['isprint',['IsPrint',['../namespace_bond.html#a8ff72d22327cd3b936d6ec02a77daff9',1,'Bond']]],
   ['ispunct',['IsPunct',['../namespace_bond.html#a48d1fd0d7049ab709fab6b79234f6af6',1,'Bond']]],

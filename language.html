@@ -893,29 +893,29 @@ else
 <p>The <span class="token">condition_expression</span> is evaluated and if its result is true, the <span class="token">true_statement</span> is then executed, otherwise the <span class="token">false_statement</span> is executed. Both the <span class="token">true_statement</span> and <span class="token">false_statement</span> are single statements, but they can be compound statements to allow for an arbitrary amount of code to be conditionally executed.</p>
 
 <pre class="code">if (x > 10)
-    Bond::StdOut()->PrintStr("X is greater than 10.");
+    Bond::StdOut()-&gt;PrintStr("X is greater than 10.");
 else
-    Bond::StdOut()->PrintStr("X is less than or equal to 10.");</pre>
+    Bond::StdOut()-&gt;PrintStr("X is less than or equal to 10.");</pre>
 
 <p>The else clause, which includes the <span class="token">false_statement</span>, is optional. This example also demonstrates the use of a compound statement.</p>
 
 <pre class="code">if (x > 10)
 {
-    Bond::StdOut()->PrintStr("This is a compound statement.\n");
-    Bond::StdOut()->PrintStr("X is greater than 10.");
+    Bond::StdOut()-&gt;PrintStr("This is a compound statement.\n");
+    Bond::StdOut()-&gt;PrintStr("X is greater than 10.");
 }
-Bond::StdOut()->PrintStr("This statement executes regardless.");</pre>
+Bond::StdOut()-&gt;PrintStr("This statement executes regardless.");</pre>
 
 <p>Multiple if statements can be daisy-chained to evaluate several conditions. This is known as a cascaded if statement.</p>
 
 <pre class="code">if (x &lt; 10)
-    Bond::StdOut()->PrintStr("X is less than 10.");
+    Bond::StdOut()-&gt;PrintStr("X is less than 10.");
 else if (x &lt; 20)
-    Bond::StdOut()->PrintStr("X is greater than or equal to 10 but less than 20.");
+    Bond::StdOut()-&gt;PrintStr("X is greater than or equal to 10 but less than 20.");
 else if (x &lt; 30)
-    Bond::StdOut()->PrintStr("X is greater than or equal to 20 but less than 30.");
+    Bond::StdOut()-&gt;PrintStr("X is greater than or equal to 20 but less than 30.");
 else
-    Bond::StdOut()->PrintStr("X is greater than or equal to 30.");</pre>
+    Bond::StdOut()-&gt;PrintStr("X is greater than or equal to 30.");</pre>
 
 <h4 id="switch_statements"><span class="token">switch</span> Statements</h4>
 <p>Another type of statement, called the switch statement, can be used to conditionally execute pieces of code. It selects a block of code to execute based on the value of an integral expression. The syntax is as follows, where <span class="token">switch</span>, <span class="token">case</span>, <span class="token">default</span> and <span class="token">break</span> are all reserved keywords:</p>
@@ -969,14 +969,14 @@ const int METERS = 2;
 switch (units)
 {
     case FEET:
-        Bond::StdOut()->PrintStr("Units are in feet.");
+        Bond::StdOut()-&gt;PrintStr("Units are in feet.");
         break;
     case METERS:
-        Bond::StdOut()->PrintStr("Units are in meters.");
+        Bond::StdOut()-&gt;PrintStr("Units are in meters.");
         break;
     default:
-        Bond::StdOut()->PrintStr("Units are not recognized.");
-    break;
+        Bond::StdOut()-&gt;PrintStr("Units are not recognized.");
+        break;
 }</pre>
 
 <p>So why is there a need for a switch statement when a cascaded if statement is just as capable? The fundamental difference between the two is one of efficiency; the cascaded if statement does a sequential search for a match, whereas the internal machinery of a switch statement can perform either a table lookup or a binary search. The cascaded if statement also requires the Bond compiler to generate a longer stream of instructions.</p>
@@ -992,12 +992,12 @@ switch (units)
 <pre class="code" id="while_example">int i = 0;
 while (i &lt; 3)
 {
-    Bond::StdOut()->PrintStr("i is: ")->PrintI(i)->PrintStr("\n");
+    Bond::StdOut()-&gt;PrintStr("i is: ")-&gt;PrintI(i)-&gt;PrintStr("\n");
     ++i;
 }
-Bond::StdOut()->PrintStr("After the loop, i is: ")->PrintI(i)->PrintStr("\n");</pre>
+Bond::StdOut()-&gt;PrintStr("After the loop, i is: ")-&gt;PrintI(i)-&gt;PrintStr("\n");</pre>
 
-<p>The output of executing the above snippet of code would be:</p>
+<p>The output from the above snippet of code would be:</p>
 
 <pre class="code">i is: 0
 i is: 1
@@ -1031,10 +1031,57 @@ while (condition_expression)
 
 <pre class="code">for (int i = 0; i &lt; 3; ++i)
 {
-    Bond::StdOut()->PrintStr("i is: ")->PrintI(i)->PrintStr("\n");
+    Bond::StdOut()-&gt;PrintStr("i is: ")-&gt;PrintI(i)-&gt;PrintStr("\n");
 }</pre>
 
 <h4 id="jump_statements">Jump Statements</h4>
+<p>There are two statements that can be nested in the body of a loop that allow for greater control over the execution of the loop. They are the break and continue statements.</p>
+
+<p>The break statement allows a loop to be terminated before its exit condition is satisfied. It can be placed anywhere within the body of a loop and is usually contained within an if statement that tests for special conditions.</p>
+
+<pre class="code">int a = 0;
+int b = 0;
+for (int i = 0; i &lt; 10; ++i)
+{
+    ++a;
+    if (i == 7)
+    {
+        // Exit loop immediately.
+        break;
+    }
+    ++b;
+}
+Bond::StdOut()-&gt;PrintStr("a is: ")-&gt;PrintI(a)-&gt;PrintStr("\n");
+Bond::StdOut()-&gt;PrintStr("b is: ")-&gt;PrintI(b)-&gt;PrintStr("\n");</pre>
+
+<p>The output from the above snippet of code would be:</p>
+
+<pre class="code">a is: 8
+b is: 7</pre>
+
+<p>The continue statement allows the remainder of the body of a loop to be skipped. The loop continues to iterate as though execution had reached the end of the body.</p>
+
+<pre class="code">int a = 0;
+int b = 0;
+for (int i = 0; i < 10; ++i)
+{
+    ++a;
+    if ((i % 3) == 0)
+    {
+        // Skip numbers divisible by 3.
+        continue;
+    }
+    ++b;
+}
+Bond::StdOut()-&gt;PrintStr("a is: ")-&gt;PrintI(a)-&gt;PrintStr("\n");
+Bond::StdOut()-&gt;PrintStr("b is: ")-&gt;PrintI(b)-&gt;PrintStr("\n");</pre>
+
+<p>Note that this code hits the continue statement four times when i is equal to 0, 3, 6 and 9, so b is not incremented on those four executions of the loop.The output is:</p>
+
+<pre class="code">a is: 10
+b is: 6</pre>
+
+<p>If a continue or break statement appears within nested loops, its effect applies only to the innermost loop. It is an error to use a continue statement outside the body of a loop or to use a continue statement outside the body of a loop or a switch statement.</p>
 
 <h3 id="functions">Functions</h3>
 

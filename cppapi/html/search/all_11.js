@@ -8,15 +8,12 @@ var searchData=
   ['requirescodegeneration',['RequiresCodeGeneration',['../class_bond_1_1_translation_unit.html#a2557ffafdbb3431b2c0376e07d61d0f3',1,'Bond::TranslationUnit']]],
   ['reset',['Reset',['../class_bond_1_1_char_stream.html#a8a826023ea6294a0301ee8d23e560f64',1,'Bond::CharStream::Reset()'],['../class_bond_1_1_char_stream.html#a9566c16036acb05f183ab41469913961',1,'Bond::CharStream::Reset(const StreamPos &amp;pos)'],['../class_bond_1_1_compiler_error_buffer.html#afc3479c3660326fbe635c36288763180',1,'Bond::CompilerErrorBuffer::Reset()'],['../class_bond_1_1_token_stream.html#ab92f017668577a5f7afafe231d3a3253',1,'Bond::TokenStream::Reset()']]],
   ['resolve',['Resolve',['../class_bond_1_1_type_and_value.html#aa1d5b5efe2a9a4a245d676f55e814a6d',1,'Bond::TypeAndValue']]],
-  ['resolvedswitchlabel',['ResolvedSwitchLabel',['../class_bond_1_1_resolved_switch_label.html',1,'Bond']]],
-  ['resolvedswitchlabel',['ResolvedSwitchLabel',['../class_bond_1_1_resolved_switch_label.html#ab531a8f60745abdf638d0a4ae80ec354',1,'Bond::ResolvedSwitchLabel']]],
-  ['result',['Result',['../struct_bond_1_1_cbo_validator_1_1_result.html',1,'Bond::CboValidator']]],
-  ['result',['Result',['../struct_bond_1_1_cbo_validator_1_1_result.html#aa10273b0e92a2138fb80f63e34987eb8',1,'Bond::CboValidator::Result']]],
+  ['resolvedswitchlabel',['ResolvedSwitchLabel',['../class_bond_1_1_resolved_switch_label.html',1,'Bond::ResolvedSwitchLabel'],['../class_bond_1_1_resolved_switch_label.html#ab531a8f60745abdf638d0a4ae80ec354',1,'Bond::ResolvedSwitchLabel::ResolvedSwitchLabel()']]],
+  ['result',['Result',['../struct_bond_1_1_cbo_validator_1_1_result.html',1,'Bond::CboValidator::Result'],['../struct_bond_1_1_cbo_validator_1_1_result.html#aa10273b0e92a2138fb80f63e34987eb8',1,'Bond::CboValidator::Result::Result()']]],
   ['return_5fof_5fundefined_5fsize',['RETURN_OF_UNDEFINED_SIZE',['../class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4cae2a81e21e1f73a4d6e401786ed263c7d',1,'Bond::CompilerError']]],
-  ['returnsignature',['ReturnSignature',['../struct_bond_1_1_return_signature.html',1,'Bond']]],
-  ['returnsignature',['ReturnSignature',['../struct_bond_1_1_return_signature.html#ab7f459aa6fc5532c4f962b244bb70734',1,'Bond::ReturnSignature']]],
-  ['reversebyteorder16',['ReverseByteOrder16',['../namespace_bond.html#afa567a2b69c4700890147df458d0f075',1,'Bond::ReverseByteOrder16(uint8_t value[2])'],['../namespace_bond.html#abd86f63bd1228327a68b4d090c2d0f9b',1,'Bond::ReverseByteOrder16(Value16 value)']]],
-  ['reversebyteorder32',['ReverseByteOrder32',['../namespace_bond.html#ad55dd2f15557a73f6ed54f1b8fd22023',1,'Bond::ReverseByteOrder32(uint8_t value[4])'],['../namespace_bond.html#ac81687d71c790e302164a0524f71d9a8',1,'Bond::ReverseByteOrder32(Value32 value)']]],
-  ['reversebyteorder64',['ReverseByteOrder64',['../namespace_bond.html#a499524fba4d5db0ac7544e5305c778b7',1,'Bond::ReverseByteOrder64(uint8_t value[8])'],['../namespace_bond.html#a87353c37b737a3075b76d300da8e4c19',1,'Bond::ReverseByteOrder64(Value64 value)']]],
-  ['rounduptopoweroftwo32',['RoundUpToPowerOfTwo32',['../namespace_bond.html#a9f3d113d264251653f831227998c8a6f',1,'Bond']]]
+  ['returnsignature',['ReturnSignature',['../struct_bond_1_1_return_signature.html',1,'Bond::ReturnSignature'],['../struct_bond_1_1_return_signature.html#ab7f459aa6fc5532c4f962b244bb70734',1,'Bond::ReturnSignature::ReturnSignature()']]],
+  ['reversebyteorder16',['ReverseByteOrder16',['../group__endian.html#gafa567a2b69c4700890147df458d0f075',1,'Bond::ReverseByteOrder16(uint8_t value[2])'],['../group__endian.html#gabd86f63bd1228327a68b4d090c2d0f9b',1,'Bond::ReverseByteOrder16(Value16 value)']]],
+  ['reversebyteorder32',['ReverseByteOrder32',['../group__endian.html#gad55dd2f15557a73f6ed54f1b8fd22023',1,'Bond::ReverseByteOrder32(uint8_t value[4])'],['../group__endian.html#gac81687d71c790e302164a0524f71d9a8',1,'Bond::ReverseByteOrder32(Value32 value)']]],
+  ['reversebyteorder64',['ReverseByteOrder64',['../group__endian.html#ga499524fba4d5db0ac7544e5305c778b7',1,'Bond::ReverseByteOrder64(uint8_t value[8])'],['../group__endian.html#ga87353c37b737a3075b76d300da8e4c19',1,'Bond::ReverseByteOrder64(Value64 value)']]],
+  ['rounduptopoweroftwo32',['RoundUpToPowerOfTwo32',['../group__math.html#ga9f3d113d264251653f831227998c8a6f',1,'Bond']]]
 ];

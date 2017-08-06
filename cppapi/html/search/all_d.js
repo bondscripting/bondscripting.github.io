@@ -1,15 +1,12 @@
 var searchData=
 [
-  ['namedinitializer',['NamedInitializer',['../class_bond_1_1_named_initializer.html',1,'Bond']]],
-  ['namedinitializer',['NamedInitializer',['../class_bond_1_1_named_initializer.html#a3805386f0089fc90481d50175f0bba01',1,'Bond::NamedInitializer']]],
-  ['namespacedefinition',['NamespaceDefinition',['../class_bond_1_1_namespace_definition.html',1,'Bond']]],
-  ['namespacedefinition',['NamespaceDefinition',['../class_bond_1_1_namespace_definition.html#ab1708f92e74a74cfbdff140716fbfb0c',1,'Bond::NamespaceDefinition']]],
+  ['namedinitializer',['NamedInitializer',['../class_bond_1_1_named_initializer.html',1,'Bond::NamedInitializer'],['../class_bond_1_1_named_initializer.html#a3805386f0089fc90481d50175f0bba01',1,'Bond::NamedInitializer::NamedInitializer()']]],
+  ['namespacedefinition',['NamespaceDefinition',['../class_bond_1_1_namespace_definition.html',1,'Bond::NamespaceDefinition'],['../class_bond_1_1_namespace_definition.html#ab1708f92e74a74cfbdff140716fbfb0c',1,'Bond::NamespaceDefinition::NamespaceDefinition()']]],
   ['native_5ffunction_5fdefinition',['NATIVE_FUNCTION_DEFINITION',['../class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4ca0e9a861d7d8a386107590bf055d35b13',1,'Bond::CompilerError']]],
   ['native_5fstruct_5fis_5fnot_5fdefined',['NATIVE_STRUCT_IS_NOT_DEFINED',['../class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4ca263066b2019c5beb2bb00d695e58c870',1,'Bond::CompilerError']]],
   ['nativebindingcollection',['NativeBindingCollection',['../struct_bond_1_1_native_binding_collection.html',1,'Bond']]],
   ['nativebindinggenerator',['NativeBindingGenerator',['../class_bond_1_1_native_binding_generator.html',1,'Bond']]],
-  ['nativeblock',['NativeBlock',['../class_bond_1_1_native_block.html',1,'Bond']]],
-  ['nativeblock',['NativeBlock',['../class_bond_1_1_native_block.html#a3e269de1bfe8f8802d916aef21198470',1,'Bond::NativeBlock']]],
+  ['nativeblock',['NativeBlock',['../class_bond_1_1_native_block.html',1,'Bond::NativeBlock'],['../class_bond_1_1_native_block.html#a3e269de1bfe8f8802d916aef21198470',1,'Bond::NativeBlock::NativeBlock()']]],
   ['nativefunction',['NativeFunction',['../namespace_bond.html#a21baebd4e9c62553dd8fd839ce8a0431',1,'Bond']]],
   ['nativefunctionbinding',['NativeFunctionBinding',['../struct_bond_1_1_native_function_binding.html',1,'Bond']]],
   ['next',['Next',['../class_bond_1_1_char_stream.html#a32376af2a197854880eea5942618defb',1,'Bond::CharStream::Next()'],['../class_bond_1_1_token_stream.html#a61388c2bb27aa2048194e2a8bea0e0ae',1,'Bond::TokenStream::Next()']]],

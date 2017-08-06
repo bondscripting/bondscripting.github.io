@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['objectdeallocator',['ObjectDeallocator',['../struct_bond_1_1_allocator_1_1_object_deallocator.html',1,'Bond::Allocator']]],
-  ['objectdeallocator',['ObjectDeallocator',['../struct_bond_1_1_allocator_1_1_object_deallocator.html#adf64bfd17666ad58c8196e83b1ab5dcf',1,'Bond::Allocator::ObjectDeallocator']]],
-  ['objecthandle',['ObjectHandle',['../class_bond_1_1_allocator_1_1_object_handle.html',1,'Bond::Allocator']]],
-  ['objecthandle',['ObjectHandle',['../class_bond_1_1_allocator_1_1_object_handle.html#adf70115da13df44f3ec6182c92ed1757',1,'Bond::Allocator::ObjectHandle::ObjectHandle(Allocator *allocator=nullptr, T *ptr=nullptr)'],['../class_bond_1_1_allocator_1_1_object_handle.html#aa93d77fe169ae7bfbf990f3d322fe7d8',1,'Bond::Allocator::ObjectHandle::ObjectHandle(Allocator &amp;allocator, T *ptr=nullptr)'],['../class_bond_1_1_allocator_1_1_object_handle.html#ad6a18cbb727d8f328812e569d92281f9',1,'Bond::Allocator::ObjectHandle::ObjectHandle(ObjectHandle &amp;&amp;other)']]],
+  ['objectdeallocator',['ObjectDeallocator',['../struct_bond_1_1_allocator_1_1_object_deallocator.html',1,'Bond::Allocator::ObjectDeallocator&lt; T &gt;'],['../struct_bond_1_1_allocator_1_1_object_deallocator.html#adf64bfd17666ad58c8196e83b1ab5dcf',1,'Bond::Allocator::ObjectDeallocator::ObjectDeallocator()']]],
+  ['objecthandle',['ObjectHandle',['../class_bond_1_1_allocator_1_1_object_handle.html',1,'Bond::Allocator::ObjectHandle&lt; T &gt;'],['../class_bond_1_1_allocator_1_1_object_handle.html#adf70115da13df44f3ec6182c92ed1757',1,'Bond::Allocator::ObjectHandle::ObjectHandle(Allocator *allocator=nullptr, T *ptr=nullptr)'],['../class_bond_1_1_allocator_1_1_object_handle.html#aa93d77fe169ae7bfbf990f3d322fe7d8',1,'Bond::Allocator::ObjectHandle::ObjectHandle(Allocator &amp;allocator, T *ptr=nullptr)'],['../class_bond_1_1_allocator_1_1_object_handle.html#ad6a18cbb727d8f328812e569d92281f9',1,'Bond::Allocator::ObjectHandle::ObjectHandle(ObjectHandle &amp;&amp;other)']]],
   ['objecthandle_3c_20collectable_20_3e',['ObjectHandle&lt; Collectable &gt;',['../class_bond_1_1_allocator_1_1_object_handle.html',1,'Bond::Allocator']]],
   ['obrace',['OBRACE',['../class_bond_1_1_token.html#a6d09a1144b5a79476ae9c8056728362fa73bc738084e3e058230a4e716fa93854',1,'Bond::Token']]],
   ['obracket',['OBRACKET',['../class_bond_1_1_token.html#a6d09a1144b5a79476ae9c8056728362fa65d36a4eafc03c00c11335144e77ae84',1,'Bond::Token']]],
@@ -329,7 +327,6 @@ var searchData=
   ['outputstream_5f_5fsetwidth',['OutputStream__SetWidth',['../namespace_bond.html#afa8d780e972d57c3079b3cc85b88235b',1,'Bond']]],
   ['outputstream_5f_5funsetflags',['OutputStream__UnsetFlags',['../namespace_bond.html#a08fd6e07075be3a7e295c7a5e45f04d1',1,'Bond']]],
   ['outputstream_5f_5fwrite',['OutputStream__Write',['../namespace_bond.html#a009e614a421311375d968f6fe06ec156',1,'Bond']]],
-  ['outputstreamadaptor',['OutputStreamAdaptor',['../class_bond_1_1_output_stream_adaptor.html#a63cb211ad71921ed29a21ff4901496d9',1,'Bond::OutputStreamAdaptor']]],
-  ['outputstreamadaptor',['OutputStreamAdaptor',['../class_bond_1_1_output_stream_adaptor.html',1,'Bond']]],
+  ['outputstreamadaptor',['OutputStreamAdaptor',['../class_bond_1_1_output_stream_adaptor.html',1,'Bond::OutputStreamAdaptor'],['../class_bond_1_1_output_stream_adaptor.html#a63cb211ad71921ed29a21ff4901496d9',1,'Bond::OutputStreamAdaptor::OutputStreamAdaptor()']]],
   ['outputstreamhandle',['OutputStreamHandle',['../group__io.html#ga68173a5e6d6425a9194cfc319b70863c',1,'Bond']]]
 ];
