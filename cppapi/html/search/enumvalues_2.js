@@ -17,5 +17,7 @@ var searchData=
   ['const_5fstring',['CONST_STRING',['../class_bond_1_1_token.html#a6d09a1144b5a79476ae9c8056728362faf499ba5ae51044a915d66c17daff3609',1,'Bond::Token']]],
   ['const_5fuint',['CONST_UINT',['../class_bond_1_1_token.html#a6d09a1144b5a79476ae9c8056728362fac526ec3c57a1aa7274c9ea4399f63745',1,'Bond::Token']]],
   ['const_5fulong',['CONST_ULONG',['../class_bond_1_1_token.html#a6d09a1144b5a79476ae9c8056728362fa010f7f2ad88dc0b97fb018a2b092d0a2',1,'Bond::Token']]],
+  ['constant_5ffolding_5foff',['CONSTANT_FOLDING_OFF',['../class_bond_1_1_pretty_printer.html#a027fa2ab2228a460358a9abfb8a04f25a4165c9b17952a29fa89276f74fe7e24d',1,'Bond::PrettyPrinter']]],
+  ['constant_5ffolding_5fon',['CONSTANT_FOLDING_ON',['../class_bond_1_1_pretty_printer.html#a027fa2ab2228a460358a9abfb8a04f25a124ebfa13f56e53ad511643748c1e44f',1,'Bond::PrettyPrinter']]],
   ['cparen',['CPAREN',['../class_bond_1_1_token.html#a6d09a1144b5a79476ae9c8056728362faa0b914a566a6ec5bc2f8398ce273d4b3',1,'Bond::Token']]]
 ];

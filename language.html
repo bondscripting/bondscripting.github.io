@@ -81,6 +81,8 @@
 <li class="toc_h4"><a href="#for_statements"><span class="token">for</span> Statements</a></li>
 <li class="toc_h4"><a href="#jump_statements">Jump Statements</a></li>
 <li class="toc_h3"><a href="#functions">Functions</a></li>
+<li class="toc_h4"><a href="#function_definitions">Function Definitions</a></li>
+<li class="toc_h4"><a href="#function_calls">Function Calls</a></li>
 <li class="toc_h3"><a href="#data_types">Data Types</a></li>
 <li class="toc_h4"><a href="#enum_types">Enumerated Types</a></li>
 <li class="toc_h4"><a href="#array_types">Array Types</a></li>
@@ -189,7 +191,7 @@ int[2][3] GLOBAL_VARIABLE = {{1, 2, 3}, {4, 5, 6}};       // Error</pre>
 6
 7
 8</pre>
-<pre class="code">// This is a Hello World program written in Bond.
+<pre class="code" id="hello_world">// This is a Hello World program written in Bond.
 include &quot;io.bond&quot;;
 
 int main()
@@ -215,7 +217,7 @@ int main()
 <dd>Blank lines have no effect on the program, but do help to organize code and improve readability.</dd>
 
 <dt>Line 4: <span class="token">int main()</span></dt>
-<dd>This line begins the declaration of a function whose name is <span class="token">main</span>. A function encapsulates the code that performs a specific task or operation. Functions are covered in greater detail in the <a href="#primitive_types">Functions</a> section later.
+<dd>This line begins the declaration of a function whose name is <span class="token">main</span>. A function encapsulates the code that performs a specific task or operation. Functions are covered in greater detail in the <a href="#functions">Functions</a> section later.
 
 <p>A function declaration specifies a return type (i.e. what kind of result the function produces; in this case <span class="token">int</span>), a name (<span class="token">main</span>), and a parameter list enclosed in parentheses (i.e. the operands of the operation performed by the function). This example does not require any parameters.</p>
 
@@ -1084,6 +1086,32 @@ b is: 6</pre>
 <p>If a continue or break statement appears within nested loops, its effect applies only to the innermost loop. It is an error to use a continue statement outside the body of a loop or to use a continue statement outside the body of a loop or a switch statement.</p>
 
 <h3 id="functions">Functions</h3>
+<p>A function is a sequence of statements that perform a specific task or operation, which is defined once but can be called from multiple locations in a program. Functions therefore promote code reuse by not requiring the operation to be reimplemented in all of the locations where it needs to be performed. Functions also help to provide abstraction and to keep code concise. One does not need to be exposed to a function's implementation details when calling it, only its name, inputs and what type of result it outputs need to be known. In Bond, all executable code is encapsulated in functions.</p>
+
+<h4 id="function_definitions">Function Definitions</h4>
+<p>Thus far we have only seen one example of a function definition in the Hello World program. Now we will take a detailed look at the general form of a function definition:</p>
+
+<pre class="code">return_type function_name ( param_type1 param_name1, param_type2 param_name2 … )
+{
+	statements
+}</pre>
+
+<p>The first element of a function definition is its return type. When a function performs work and returns a result, the return type specifies the type of value that is returned. If the function does not return a value, then the return type should be specified using the <span class="token">void</token> keyword.</p>
+
+<p>The next element of a function definition is its name. As with variable names, the name must be a valid identifier that is not a reserved keyword. A function's name is used to call it to when it is needed to perform work.</p>
+
+<p>Following the name is a parameter list. The parameter list is a comma separated list of variable declarations enclosed in parentheses. Each parameter holds a value passed to the function as one of its inputs. The parameter list may be empty if the function requires no inputs, however, the parentheses are not optional.</p>
+
+<p>The final part of a function definition is the body. The body is a code block enclosed in curly braces, as we saw in the <a href="#compound_statements">Compound Statements</a> section, that contains all of the statements that perform the function's work.</p>
+
+<p>Functions that return a value must end with a return statement. A return statement consists of the return keyword followed by an expression whose value is returned to the caller. The type of the expression must match the function's return type.</p>
+
+<pre class="code">double Square(double x)
+{
+	return x * x;
+}</pre>
+
+<h4 id="function_calls">Function Calls</h4>
 
 <h3 id="data_types">Data Types</h3>
 <p>Bond is a statically typed language, so every variable and expression has a type known at compile time.</p>

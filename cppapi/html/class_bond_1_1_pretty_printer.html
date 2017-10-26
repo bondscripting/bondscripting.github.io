@@ -82,6 +82,7 @@ $(document).ready(function(){initNavTree('class_bond_1_1_pretty_printer.html',''
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="class_bond_1_1_pretty_printer-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -91,16 +92,64 @@ $(document).ready(function(){initNavTree('class_bond_1_1_pretty_printer.html',''
 
 <p><code>#include &lt;bond/tools/prettyprinter.h&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a4bf8afc0ab5da1e15331fca1efb2ee9f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_pretty_printer.html#a4bf8afc0ab5da1e15331fca1efb2ee9f">Verbosity</a> { <a class="el" href="class_bond_1_1_pretty_printer.html#a4bf8afc0ab5da1e15331fca1efb2ee9fad75466fb9f90c5bcd409c6145e74aeba">VERBOSITY_NORMAL</a>, 
+<a class="el" href="class_bond_1_1_pretty_printer.html#a4bf8afc0ab5da1e15331fca1efb2ee9fab85309144194437bd97db7a91a197f39">VERBOSITY_MINIMAL</a>
+ }</td></tr>
+<tr class="separator:a4bf8afc0ab5da1e15331fca1efb2ee9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a027fa2ab2228a460358a9abfb8a04f25"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_pretty_printer.html#a027fa2ab2228a460358a9abfb8a04f25">ConstantFolding</a> { <a class="el" href="class_bond_1_1_pretty_printer.html#a027fa2ab2228a460358a9abfb8a04f25a4165c9b17952a29fa89276f74fe7e24d">CONSTANT_FOLDING_OFF</a>, 
+<a class="el" href="class_bond_1_1_pretty_printer.html#a027fa2ab2228a460358a9abfb8a04f25a124ebfa13f56e53ad511643748c1e44f">CONSTANT_FOLDING_ON</a>
+ }</td></tr>
+<tr class="separator:a027fa2ab2228a460358a9abfb8a04f25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2bd2c854c8b3c0afbd961c1fef67eaa5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_pretty_printer.html#a2bd2c854c8b3c0afbd961c1fef67eaa5">Print</a> (const <a class="el" href="class_bond_1_1_parse_node.html">ParseNode</a> *parseNode, <a class="el" href="class_bond_1_1_output_stream.html">OutputStream</a> &amp;stream, bool printFoldedConstants=false)</td></tr>
-<tr class="separator:a2bd2c854c8b3c0afbd961c1fef67eaa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad54a48b524eb8f355efbcd49660a6c15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_pretty_printer.html#ad54a48b524eb8f355efbcd49660a6c15">PrintList</a> (const <a class="el" href="class_bond_1_1_list_parse_node.html">ListParseNode</a> *listNode, <a class="el" href="class_bond_1_1_output_stream.html">OutputStream</a> &amp;stream, bool printFoldedConstants=false)</td></tr>
-<tr class="separator:ad54a48b524eb8f355efbcd49660a6c15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d540737f5b93561f9be3c1bb81e0618"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_pretty_printer.html#a7d540737f5b93561f9be3c1bb81e0618">Print</a> (const <a class="el" href="class_bond_1_1_parse_node.html">ParseNode</a> *parseNode, <a class="el" href="class_bond_1_1_output_stream.html">OutputStream</a> &amp;stream, <a class="el" href="class_bond_1_1_pretty_printer.html#a4bf8afc0ab5da1e15331fca1efb2ee9f">Verbosity</a> verbosity=<a class="el" href="class_bond_1_1_pretty_printer.html#a4bf8afc0ab5da1e15331fca1efb2ee9fad75466fb9f90c5bcd409c6145e74aeba">VERBOSITY_NORMAL</a>, <a class="el" href="class_bond_1_1_pretty_printer.html#a027fa2ab2228a460358a9abfb8a04f25">ConstantFolding</a> folding=<a class="el" href="class_bond_1_1_pretty_printer.html#a027fa2ab2228a460358a9abfb8a04f25a4165c9b17952a29fa89276f74fe7e24d">CONSTANT_FOLDING_OFF</a>) const</td></tr>
+<tr class="separator:a7d540737f5b93561f9be3c1bb81e0618"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ddc65a0e41c50d03f3c27138964e0bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_pretty_printer.html#a4ddc65a0e41c50d03f3c27138964e0bf">PrintList</a> (const <a class="el" href="class_bond_1_1_list_parse_node.html">ListParseNode</a> *listNode, <a class="el" href="class_bond_1_1_output_stream.html">OutputStream</a> &amp;stream, <a class="el" href="class_bond_1_1_pretty_printer.html#a4bf8afc0ab5da1e15331fca1efb2ee9f">Verbosity</a> verbosity=<a class="el" href="class_bond_1_1_pretty_printer.html#a4bf8afc0ab5da1e15331fca1efb2ee9fad75466fb9f90c5bcd409c6145e74aeba">VERBOSITY_NORMAL</a>, <a class="el" href="class_bond_1_1_pretty_printer.html#a027fa2ab2228a460358a9abfb8a04f25">ConstantFolding</a> folding=<a class="el" href="class_bond_1_1_pretty_printer.html#a027fa2ab2228a460358a9abfb8a04f25a4165c9b17952a29fa89276f74fe7e24d">CONSTANT_FOLDING_OFF</a>) const</td></tr>
+<tr class="separator:a4ddc65a0e41c50d03f3c27138964e0bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a027fa2ab2228a460358a9abfb8a04f25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a027fa2ab2228a460358a9abfb8a04f25">&#9670;&nbsp;</a></span>ConstantFolding</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_bond_1_1_pretty_printer.html#a027fa2ab2228a460358a9abfb8a04f25">Bond::PrettyPrinter::ConstantFolding</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a027fa2ab2228a460358a9abfb8a04f25a4165c9b17952a29fa89276f74fe7e24d"></a>CONSTANT_FOLDING_OFF&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a027fa2ab2228a460358a9abfb8a04f25a124ebfa13f56e53ad511643748c1e44f"></a>CONSTANT_FOLDING_ON&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a4bf8afc0ab5da1e15331fca1efb2ee9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bf8afc0ab5da1e15331fca1efb2ee9f">&#9670;&nbsp;</a></span>Verbosity</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_bond_1_1_pretty_printer.html#a4bf8afc0ab5da1e15331fca1efb2ee9f">Bond::PrettyPrinter::Verbosity</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a4bf8afc0ab5da1e15331fca1efb2ee9fad75466fb9f90c5bcd409c6145e74aeba"></a>VERBOSITY_NORMAL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a4bf8afc0ab5da1e15331fca1efb2ee9fab85309144194437bd97db7a91a197f39"></a>VERBOSITY_MINIMAL&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a2bd2c854c8b3c0afbd961c1fef67eaa5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2bd2c854c8b3c0afbd961c1fef67eaa5">&#9670;&nbsp;</a></span>Print()</h2>
+<a id="a7d540737f5b93561f9be3c1bb81e0618"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d540737f5b93561f9be3c1bb81e0618">&#9670;&nbsp;</a></span>Print()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -120,21 +169,27 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>printFoldedConstants</em> = <code>false</code>&#160;</td>
+          <td class="paramtype"><a class="el" href="class_bond_1_1_pretty_printer.html#a4bf8afc0ab5da1e15331fca1efb2ee9f">Verbosity</a>&#160;</td>
+          <td class="paramname"><em>verbosity</em> = <code><a class="el" href="class_bond_1_1_pretty_printer.html#a4bf8afc0ab5da1e15331fca1efb2ee9fad75466fb9f90c5bcd409c6145e74aeba">VERBOSITY_NORMAL</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_bond_1_1_pretty_printer.html#a027fa2ab2228a460358a9abfb8a04f25">ConstantFolding</a>&#160;</td>
+          <td class="paramname"><em>folding</em> = <code><a class="el" href="class_bond_1_1_pretty_printer.html#a027fa2ab2228a460358a9abfb8a04f25a4165c9b17952a29fa89276f74fe7e24d">CONSTANT_FOLDING_OFF</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ad54a48b524eb8f355efbcd49660a6c15"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad54a48b524eb8f355efbcd49660a6c15">&#9670;&nbsp;</a></span>PrintList()</h2>
+<a id="a4ddc65a0e41c50d03f3c27138964e0bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ddc65a0e41c50d03f3c27138964e0bf">&#9670;&nbsp;</a></span>PrintList()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -154,13 +209,19 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>printFoldedConstants</em> = <code>false</code>&#160;</td>
+          <td class="paramtype"><a class="el" href="class_bond_1_1_pretty_printer.html#a4bf8afc0ab5da1e15331fca1efb2ee9f">Verbosity</a>&#160;</td>
+          <td class="paramname"><em>verbosity</em> = <code><a class="el" href="class_bond_1_1_pretty_printer.html#a4bf8afc0ab5da1e15331fca1efb2ee9fad75466fb9f90c5bcd409c6145e74aeba">VERBOSITY_NORMAL</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_bond_1_1_pretty_printer.html#a027fa2ab2228a460358a9abfb8a04f25">ConstantFolding</a>&#160;</td>
+          <td class="paramname"><em>folding</em> = <code><a class="el" href="class_bond_1_1_pretty_printer.html#a027fa2ab2228a460358a9abfb8a04f25a4165c9b17952a29fa89276f74fe7e24d">CONSTANT_FOLDING_OFF</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
