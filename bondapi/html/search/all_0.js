@@ -2,6 +2,8 @@ var searchData=
 [
   ['acos',['Acos',['../group__math.html#gae9d995dff05e2d86107c635e85258165',1,'Bond']]],
   ['acosf',['Acosf',['../group__math.html#gaf9f551bf51d1df9f1930966a9a122d32',1,'Bond']]],
+  ['acosh',['Acosh',['../group__math.html#ga63dd8333106401d4c7e0b79cfb26b833',1,'Bond']]],
+  ['acoshf',['Acoshf',['../group__math.html#ga08ad44967852de212cb48849ef1a95a2',1,'Bond']]],
   ['addoffset',['AddOffset',['../struct_bond_1_1_input_stream.html#a4ba4921626ee4f81ebc972087d28fb87',1,'Bond::InputStream::AddOffset()'],['../struct_bond_1_1_output_stream.html#a46027ab7af4d90389b7862e7cda4ee3e',1,'Bond::OutputStream::AddOffset()']]],
   ['allocate',['Allocate',['../group__memory.html#gaa84e5c3f80fd1c252e8e6b0b403224eb',1,'Bond']]],
   ['allocatealigned',['AllocateAligned',['../group__memory.html#ga2629e17d9addc8bd8d0f88e2312c4787',1,'Bond']]],
@@ -11,8 +13,12 @@ var searchData=
   ['allocatewithcollector',['AllocateWithCollector',['../group__memory.html#gaefdc7b254475f23a79faf740e615a1ac',1,'Bond']]],
   ['asin',['Asin',['../group__math.html#ga8d8fc943911a355e3c733a01f7f69e94',1,'Bond']]],
   ['asinf',['Asinf',['../group__math.html#ga5df0a0fd51e8d01a18a24c75c3ca7a45',1,'Bond']]],
+  ['asinh',['Asinh',['../group__math.html#ga378464c56f6044dd6c5b962f06e52b7c',1,'Bond']]],
+  ['asinhf',['Asinhf',['../group__math.html#gaf3722ce3658acd8e61e06a46aa6f9fcc',1,'Bond']]],
   ['atan',['Atan',['../group__math.html#ga500b8f147c153e492b755d7925a91d3b',1,'Bond']]],
   ['atan2',['Atan2',['../group__math.html#ga8d493dedc70c20f1ef6bdecc3493837e',1,'Bond']]],
   ['atan2f',['Atan2f',['../group__math.html#gaa4634e242231d9332ab47184296b6d17',1,'Bond']]],
-  ['atanf',['Atanf',['../group__math.html#gacb5ba7f21f18cc9c5928bfe129c7542b',1,'Bond']]]
+  ['atanf',['Atanf',['../group__math.html#gacb5ba7f21f18cc9c5928bfe129c7542b',1,'Bond']]],
+  ['atanh',['Atanh',['../group__math.html#gabef3bacf47906ed242110469ba5a398c',1,'Bond']]],
+  ['atanhf',['Atanhf',['../group__math.html#ga31cb63eb817c0a260d35498ba9a264c8',1,'Bond']]]
 ];
