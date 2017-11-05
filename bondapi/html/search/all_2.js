@@ -1,11 +1,15 @@
 var searchData=
 [
+  ['cbrt',['Cbrt',['../group__math.html#gaace676f5005baa630e48b40613117810',1,'Bond']]],
+  ['cbrtf',['Cbrtf',['../group__math.html#gac49a32ea32063a08dd17a6d51487eb9e',1,'Bond']]],
   ['ceil',['Ceil',['../group__math.html#gaf2fcc312f766c2506adc717f5c7cb28c',1,'Bond']]],
   ['ceilf',['Ceilf',['../group__math.html#gadb5335f41ae0d551bf7e4a2cf95a0aa3',1,'Bond']]],
   ['clearflags',['ClearFlags',['../struct_bond_1_1_input_stream.html#a4823ddc313d22ff8c5f147e0d4d093ee',1,'Bond::InputStream::ClearFlags()'],['../struct_bond_1_1_output_stream.html#aa31dc12ccbc9c5ffbd6184bb4376c90f',1,'Bond::OutputStream::ClearFlags()']]],
   ['close',['Close',['../struct_bond_1_1_input_stream.html#a7f00809408db03f990d80f031a24b580',1,'Bond::InputStream::Close()'],['../struct_bond_1_1_output_stream.html#a6befc82efb0871d24526fb5ad816bdcd',1,'Bond::OutputStream::Close()']]],
   ['collector',['Collector',['../struct_bond_1_1_collector.html',1,'Bond']]],
   ['constants',['Constants',['../namespace_bond_1_1_i_o.html#aae3188d0b70931e09bd2ec1b9056c206',1,'Bond::IO']]],
+  ['copysign',['CopySign',['../group__math.html#gaf49c8070282f5712afe71a11da777161',1,'Bond']]],
+  ['copysignf',['CopySignf',['../group__math.html#ga3081cf71c5d52c42655d891ef4600b36',1,'Bond']]],
   ['cos',['Cos',['../group__math.html#ga189141dc8677dc123894123ff0d6fdb5',1,'Bond']]],
   ['cosf',['Cosf',['../group__math.html#ga52fcc010006f5f127f412cd2f63ce465',1,'Bond']]],
   ['cosh',['Cosh',['../group__math.html#ga19ec7abdf0b03f84d3a826d52e43763c',1,'Bond']]],

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['nan',['NAN',['../group__math.html#ga0814a3b255185f6db16e382f467b5514',1,'Bond']]],
-  ['nan_5ff',['NAN_F',['../group__math.html#ga69a0bc459ead434359b021184b47e219',1,'Bond']]]
+  ['nan',['NaN',['../group__math.html#ga8ce2ea11fff770e2adca05a6a51cbd78',1,'Bond']]],
+  ['nanf',['NaNf',['../group__math.html#ga86c49fcca5b24b2afbc6deef1b63ddf5',1,'Bond']]]
 ];

@@ -1,9 +1,15 @@
 var searchData=
 [
-  ['ldexp',['Ldexp',['../group__math.html#ga1b4483733264a917406794cd81a2dab2',1,'Bond']]],
-  ['ldexpf',['Ldexpf',['../group__math.html#ga015b9ca89655b4169597b7843e59a512',1,'Bond']]],
-  ['log',['Log',['../group__math.html#ga31163e042d38713a693493ab76ae2270',1,'Bond']]],
-  ['log10',['Log10',['../group__math.html#gaa8fad0ad369c5fc719648e5364de0092',1,'Bond']]],
-  ['log10f',['Log10f',['../group__math.html#ga45f2ff3560691ab8150a1a3cf64d21f2',1,'Bond']]],
-  ['logf',['Logf',['../group__math.html#ga81738b1d4fe1023685516ac8e01c046f',1,'Bond']]]
+  ['isalnum',['IsAlnum',['../group__type.html#ga422ab07f380ecd2aa0e5f3b0cc5e7f4c',1,'Bond']]],
+  ['isalpha',['IsAlpha',['../group__type.html#ga4441fa3bf132057a89a0c73ba68d3bfb',1,'Bond']]],
+  ['iscntrl',['IsCntrl',['../group__type.html#ga206b80bea4a77d55a19158a67a78eea9',1,'Bond']]],
+  ['isdigit',['IsDigit',['../group__type.html#ga5d51589e770824f00db48f1b1df493fb',1,'Bond']]],
+  ['iseof',['IsEof',['../struct_bond_1_1_input_stream.html#a681da0d427faf115bea43c52989a00c3',1,'Bond::InputStream::IsEof()'],['../struct_bond_1_1_output_stream.html#aebb8a6ef9d37994906809e5e88700955',1,'Bond::OutputStream::IsEof()']]],
+  ['isgraph',['IsGraph',['../group__type.html#ga0fbe7de467c86e3085d93935ea6e6d6d',1,'Bond']]],
+  ['islower',['IsLower',['../group__type.html#gac826ddac257ccceb17f8cb841ed8b949',1,'Bond']]],
+  ['isprint',['IsPrint',['../group__type.html#ga5e678280e226718482c3eb68ca4e64af',1,'Bond']]],
+  ['ispunct',['IsPunct',['../group__type.html#ga83cbcea3205cff24ac2db95d9267f5b5',1,'Bond']]],
+  ['isspace',['IsSpace',['../group__type.html#gadbfdf9ee11555b3379f1a2f87f3fa2ee',1,'Bond']]],
+  ['isupper',['IsUpper',['../group__type.html#ga340184b198b66a0caf1e118f78612734',1,'Bond']]],
+  ['isxdigit',['IsXDigit',['../group__type.html#ga486bbf3a09d19f4ef00d7904a48f0fab',1,'Bond']]]
 ];
