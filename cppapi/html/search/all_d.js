@@ -2,6 +2,8 @@ var searchData=
 [
   ['namedinitializer',['NamedInitializer',['../class_bond_1_1_named_initializer.html',1,'Bond::NamedInitializer'],['../class_bond_1_1_named_initializer.html#a3805386f0089fc90481d50175f0bba01',1,'Bond::NamedInitializer::NamedInitializer()']]],
   ['namespacedefinition',['NamespaceDefinition',['../class_bond_1_1_namespace_definition.html',1,'Bond::NamespaceDefinition'],['../class_bond_1_1_namespace_definition.html#ab1708f92e74a74cfbdff140716fbfb0c',1,'Bond::NamespaceDefinition::NamespaceDefinition()']]],
+  ['nan',['NaN',['../namespace_bond.html#ab1616d2ffb8945680beb71c8bb99c3ca',1,'Bond']]],
+  ['nanf',['NaNf',['../namespace_bond.html#a8a6bd972ac20ba771f15816cbd0ab983',1,'Bond']]],
   ['native_5ffunction_5fdefinition',['NATIVE_FUNCTION_DEFINITION',['../class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4ca0e9a861d7d8a386107590bf055d35b13',1,'Bond::CompilerError']]],
   ['native_5fstruct_5fis_5fnot_5fdefined',['NATIVE_STRUCT_IS_NOT_DEFINED',['../class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4ca263066b2019c5beb2bb00d695e58c870',1,'Bond::CompilerError']]],
   ['nativebindingcollection',['NativeBindingCollection',['../struct_bond_1_1_native_binding_collection.html',1,'Bond']]],

@@ -6,7 +6,7 @@ var searchData=
   ['isalpha',['IsAlpha',['../group__type.html#ga4441fa3bf132057a89a0c73ba68d3bfb',1,'Bond']]],
   ['iscntrl',['IsCntrl',['../group__type.html#ga206b80bea4a77d55a19158a67a78eea9',1,'Bond']]],
   ['isdigit',['IsDigit',['../group__type.html#ga5d51589e770824f00db48f1b1df493fb',1,'Bond']]],
-  ['iseof',['IsEof',['../struct_bond_1_1_input_stream.html#a681da0d427faf115bea43c52989a00c3',1,'Bond::InputStream::IsEof()'],['../struct_bond_1_1_output_stream.html#aebb8a6ef9d37994906809e5e88700955',1,'Bond::OutputStream::IsEof()']]],
+  ['iseof',['IsEof',['../struct_bond_1_1_input_stream.html#a7b4a6a98df7520820f3045d78b9d115e',1,'Bond::InputStream::IsEof()'],['../struct_bond_1_1_output_stream.html#ae619523b76d1d7b4d7797d106fd6cc9a',1,'Bond::OutputStream::IsEof()']]],
   ['isgraph',['IsGraph',['../group__type.html#ga0fbe7de467c86e3085d93935ea6e6d6d',1,'Bond']]],
   ['islower',['IsLower',['../group__type.html#gac826ddac257ccceb17f8cb841ed8b949',1,'Bond']]],
   ['isprint',['IsPrint',['../group__type.html#ga5e678280e226718482c3eb68ca4e64af',1,'Bond']]],

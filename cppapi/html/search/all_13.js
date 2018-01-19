@@ -20,6 +20,8 @@ var searchData=
   ['translationunit',['TranslationUnit',['../class_bond_1_1_translation_unit.html',1,'Bond::TranslationUnit'],['../class_bond_1_1_translation_unit.html#aade34a2cacfb737936b3f5e4b9d72f69',1,'Bond::TranslationUnit::TranslationUnit()']]],
   ['traverse',['Traverse',['../class_bond_1_1_parse_node_traverser.html#a2d021e676343ee3b903a2db40b1aa116',1,'Bond::ParseNodeTraverser::Traverse(ParseNode *parseNode)'],['../class_bond_1_1_parse_node_traverser.html#ac1e4819b8f27b1749d84b82ca3556cda',1,'Bond::ParseNodeTraverser::Traverse(const ParseNode *parseNode)']]],
   ['traverselist',['TraverseList',['../class_bond_1_1_parse_node_traverser.html#a0eb904787ebfbb1721786544acef701c',1,'Bond::ParseNodeTraverser::TraverseList(ListParseNode *listNode)'],['../class_bond_1_1_parse_node_traverser.html#a99f1039481c2b85ea1041dcf2385f75c',1,'Bond::ParseNodeTraverser::TraverseList(const ListParseNode *listNode)']]],
+  ['trunc',['Trunc',['../namespace_bond.html#a3101aea16c472e38c17b5f7b45b579a4',1,'Bond']]],
+  ['truncf',['Truncf',['../namespace_bond.html#aba6e01546beed4de71ea921a2a5a8015',1,'Bond']]],
   ['tryparsedouble',['TryParseDouble',['../namespace_bond.html#aa73b7b669d4cb7b6166e4c24a77af8c1',1,'Bond']]],
   ['tryparsefloat',['TryParseFloat',['../namespace_bond.html#a891e0ad311892b304ebd49378b128397',1,'Bond']]],
   ['tryparseint',['TryParseInt',['../namespace_bond.html#a6d60ca04104e945a8dfa826565c75dc8',1,'Bond']]],

@@ -1,13 +1,15 @@
 var struct_bond_1_1_input_stream =
 [
     [ "AddOffset", "struct_bond_1_1_input_stream.html#a4ba4921626ee4f81ebc972087d28fb87", null ],
-    [ "ClearFlags", "struct_bond_1_1_input_stream.html#a4823ddc313d22ff8c5f147e0d4d093ee", null ],
+    [ "ClearError", "struct_bond_1_1_input_stream.html#a77a1a95c777f7bcd30e12668c689f1b6", null ],
+    [ "ClearFlags", "struct_bond_1_1_input_stream.html#a12fb8e9102ea50f1df1d765a7ffb3e87", null ],
     [ "Close", "struct_bond_1_1_input_stream.html#a7f00809408db03f990d80f031a24b580", null ],
     [ "Get", "struct_bond_1_1_input_stream.html#aa8f5b336124cb1c1b1a747807493b7b2", null ],
     [ "GetEndPosition", "struct_bond_1_1_input_stream.html#a972dd8ee326e9b12fe4ae307290edce7", null ],
     [ "GetFlags", "struct_bond_1_1_input_stream.html#abd3d1b1ad0242cd153238a0f529c0696", null ],
     [ "GetPosition", "struct_bond_1_1_input_stream.html#a4c79ccdd389b0b6f2fbbd22313dfb657", null ],
-    [ "IsEof", "struct_bond_1_1_input_stream.html#a681da0d427faf115bea43c52989a00c3", null ],
+    [ "HasError", "struct_bond_1_1_input_stream.html#a0cb232f04432e1dcbcebc5cf51e0ef7a", null ],
+    [ "IsEof", "struct_bond_1_1_input_stream.html#a7b4a6a98df7520820f3045d78b9d115e", null ],
     [ "Read", "struct_bond_1_1_input_stream.html#aeec9087b4e22e5a53c99d40439dc46e9", null ],
     [ "ScanB", "struct_bond_1_1_input_stream.html#af36dfc00416210d43849344118944a58", null ],
     [ "ScanC", "struct_bond_1_1_input_stream.html#a6437c2d6e9ea312ea9f50e4c4d87fc8f", null ],

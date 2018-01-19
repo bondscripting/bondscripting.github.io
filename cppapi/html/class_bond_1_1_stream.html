@@ -138,6 +138,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a792ecc29f09dd22a4136d42ca1cd31a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8fcd71aa49b1ad2370a435c435c6344"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stream.html#ac8fcd71aa49b1ad2370a435c435c6344">IsEof</a> () const =0</td></tr>
 <tr class="separator:ac8fcd71aa49b1ad2370a435c435c6344"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dd39d528d8d3dae47635e10da8cfb77"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stream.html#a7dd39d528d8d3dae47635e10da8cfb77">HasError</a> () const =0</td></tr>
+<tr class="separator:a7dd39d528d8d3dae47635e10da8cfb77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7be46eaad9e3ad1223dd74c80e575dd7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stream.html#a7be46eaad9e3ad1223dd74c80e575dd7">ClearError</a> ()=0</td></tr>
+<tr class="separator:a7be46eaad9e3ad1223dd74c80e575dd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -231,6 +235,33 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a7be46eaad9e3ad1223dd74c80e575dd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7be46eaad9e3ad1223dd74c80e575dd7">&#9670;&nbsp;</a></span>ClearError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Bond::Stream::ClearError </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_bond_1_1_stdio_output_stream.html#a5ad84e00be93cf27b893aaabf7cf6b8b">Bond::StdioOutputStream</a>, <a class="el" href="class_bond_1_1_stdio_input_stream.html#a97fd71b8e29cdc5361d8f3b9d12ca0fe">Bond::StdioInputStream</a>, <a class="el" href="class_bond_1_1_memory_input_stream.html#a1f4bc920eb520aafafac4b9d4496bfc4">Bond::MemoryInputStream</a>, and <a class="el" href="class_bond_1_1_memory_output_stream.html#a2843e99189a13bdc7f940ebdce620587">Bond::MemoryOutputStream</a>.</p>
+
+</div>
+</div>
 <a id="a982f9804fba2e4c07a8c0677e7e8cc6a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a982f9804fba2e4c07a8c0677e7e8cc6a">&#9670;&nbsp;</a></span>Close()</h2>
 
@@ -309,6 +340,33 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="class_bond_1_1_stdio_output_stream.html#a2e294ebf9412a9d10204c54872394a7f">Bond::StdioOutputStream</a>, <a class="el" href="class_bond_1_1_stdio_input_stream.html#a03be47159b9b4eabe29c4678166101da">Bond::StdioInputStream</a>, <a class="el" href="class_bond_1_1_memory_input_stream.html#a9eaf5854e638506a9f2256dc864396e9">Bond::MemoryInputStream</a>, and <a class="el" href="class_bond_1_1_memory_output_stream.html#a6fb6f9dcdaae38d74c17d30793094579">Bond::MemoryOutputStream</a>.</p>
+
+</div>
+</div>
+<a id="a7dd39d528d8d3dae47635e10da8cfb77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dd39d528d8d3dae47635e10da8cfb77">&#9670;&nbsp;</a></span>HasError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Bond::Stream::HasError </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_bond_1_1_stdio_output_stream.html#a3daab285f6bb6a5bd4e3f9e55a2e1eaf">Bond::StdioOutputStream</a>, <a class="el" href="class_bond_1_1_stdio_input_stream.html#a0a7c2f274d8e0642f4c539c647b32fa1">Bond::StdioInputStream</a>, <a class="el" href="class_bond_1_1_memory_input_stream.html#ac50b39e604c5043aad46f88518e81f53">Bond::MemoryInputStream</a>, and <a class="el" href="class_bond_1_1_memory_output_stream.html#aa8ab2c941ebe5da84716faaefeecaae8">Bond::MemoryOutputStream</a>.</p>
 
 </div>
 </div>

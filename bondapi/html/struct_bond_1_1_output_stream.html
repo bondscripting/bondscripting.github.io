@@ -88,32 +88,47 @@ $(document).ready(function(){initNavTree('struct_bond_1_1_output_stream.html',''
 <div class="title">Bond::OutputStream Struct Reference<div class="ingroups"><a class="el" href="group__io.html">io.bond</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>An abstract interface for performing both unformatted and formatted output operations.  
+ <a href="struct_bond_1_1_output_stream.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6befc82efb0871d24526fb5ad816bdcd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_output_stream.html#a6befc82efb0871d24526fb5ad816bdcd">Close</a> ()</td></tr>
+<tr class="memdesc:a6befc82efb0871d24526fb5ad816bdcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flushes any unwritten output and closes the stream.  <a href="#a6befc82efb0871d24526fb5ad816bdcd">More...</a><br /></td></tr>
 <tr class="separator:a6befc82efb0871d24526fb5ad816bdcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8ff3d141f6bf73f3ac631de6c24c91e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_output_stream.html#ad8ff3d141f6bf73f3ac631de6c24c91e">Flush</a> ()</td></tr>
+<tr class="memdesc:ad8ff3d141f6bf73f3ac631de6c24c91e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flushes any unwritten output.  <a href="#ad8ff3d141f6bf73f3ac631de6c24c91e">More...</a><br /></td></tr>
 <tr class="separator:ad8ff3d141f6bf73f3ac631de6c24c91e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc715233684ddf578f7a88adba611225"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_bond_1_1_output_stream.html">OutputStream</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_output_stream.html#adc715233684ddf578f7a88adba611225">PrintStr</a> (const char *str)</td></tr>
+<tr class="memdesc:adc715233684ddf578f7a88adba611225"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a string of characters to the output stream. Writing stops at the first null character.  <a href="#adc715233684ddf578f7a88adba611225">More...</a><br /></td></tr>
 <tr class="separator:adc715233684ddf578f7a88adba611225"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bdd0910ef86bf60a0e0ea6309c87524"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_bond_1_1_output_stream.html">OutputStream</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_output_stream.html#a6bdd0910ef86bf60a0e0ea6309c87524">PrintB</a> (bool value)</td></tr>
+<tr class="memdesc:a6bdd0910ef86bf60a0e0ea6309c87524"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a formatted Boolean value to the output stream.  <a href="#a6bdd0910ef86bf60a0e0ea6309c87524">More...</a><br /></td></tr>
 <tr class="separator:a6bdd0910ef86bf60a0e0ea6309c87524"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5db6d46034e74c3c80f6b5b52465d0fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_bond_1_1_output_stream.html">OutputStream</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_output_stream.html#a5db6d46034e74c3c80f6b5b52465d0fe">PrintC</a> (char value)</td></tr>
+<tr class="memdesc:a5db6d46034e74c3c80f6b5b52465d0fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a single character to the output stream.  <a href="#a5db6d46034e74c3c80f6b5b52465d0fe">More...</a><br /></td></tr>
 <tr class="separator:a5db6d46034e74c3c80f6b5b52465d0fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15d17beb80c34acac3637057ea62c8f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_bond_1_1_output_stream.html">OutputStream</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_output_stream.html#a15d17beb80c34acac3637057ea62c8f5">PrintI</a> (int value)</td></tr>
+<tr class="memdesc:a15d17beb80c34acac3637057ea62c8f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a formatted int to the output stream.  <a href="#a15d17beb80c34acac3637057ea62c8f5">More...</a><br /></td></tr>
 <tr class="separator:a15d17beb80c34acac3637057ea62c8f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abca4a8f3e6800f6654add5b5e3522a87"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_bond_1_1_output_stream.html">OutputStream</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_output_stream.html#abca4a8f3e6800f6654add5b5e3522a87">PrintUI</a> (uint value)</td></tr>
+<tr class="memdesc:abca4a8f3e6800f6654add5b5e3522a87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a formatted uint to the output stream.  <a href="#abca4a8f3e6800f6654add5b5e3522a87">More...</a><br /></td></tr>
 <tr class="separator:abca4a8f3e6800f6654add5b5e3522a87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30dfadbca47faf2008a56db025723a5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_bond_1_1_output_stream.html">OutputStream</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_output_stream.html#a30dfadbca47faf2008a56db025723a5e">PrintL</a> (long value)</td></tr>
+<tr class="memdesc:a30dfadbca47faf2008a56db025723a5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a formatted long to the output stream.  <a href="#a30dfadbca47faf2008a56db025723a5e">More...</a><br /></td></tr>
 <tr class="separator:a30dfadbca47faf2008a56db025723a5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc3d94de77245e8d92a67b5524ee6a5a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_bond_1_1_output_stream.html">OutputStream</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_output_stream.html#acc3d94de77245e8d92a67b5524ee6a5a">PrintUL</a> (ulong value)</td></tr>
+<tr class="memdesc:acc3d94de77245e8d92a67b5524ee6a5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a formatted ulong to the output stream.  <a href="#acc3d94de77245e8d92a67b5524ee6a5a">More...</a><br /></td></tr>
 <tr class="separator:acc3d94de77245e8d92a67b5524ee6a5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3862e0b3091805750bdcaf0666d8a073"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_bond_1_1_output_stream.html">OutputStream</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_output_stream.html#a3862e0b3091805750bdcaf0666d8a073">PrintF</a> (float value)</td></tr>
+<tr class="memdesc:a3862e0b3091805750bdcaf0666d8a073"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a formatted float to the output stream.  <a href="#a3862e0b3091805750bdcaf0666d8a073">More...</a><br /></td></tr>
 <tr class="separator:a3862e0b3091805750bdcaf0666d8a073"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34f6a374176017ba58d7ad63abdb389d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_bond_1_1_output_stream.html">OutputStream</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_output_stream.html#a34f6a374176017ba58d7ad63abdb389d">PrintD</a> (double value)</td></tr>
+<tr class="memdesc:a34f6a374176017ba58d7ad63abdb389d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a formatted double to the output stream.  <a href="#a34f6a374176017ba58d7ad63abdb389d">More...</a><br /></td></tr>
 <tr class="separator:a34f6a374176017ba58d7ad63abdb389d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9336aec40e06cdf7b4ab22f6c1f8015b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_bond_1_1_output_stream.html">OutputStream</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_output_stream.html#a9336aec40e06cdf7b4ab22f6c1f8015b">Put</a> (uchar byte)</td></tr>
+<tr class="memdesc:a9336aec40e06cdf7b4ab22f6c1f8015b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a single unformatted byte to the output stream.  <a href="#a9336aec40e06cdf7b4ab22f6c1f8015b">More...</a><br /></td></tr>
 <tr class="separator:a9336aec40e06cdf7b4ab22f6c1f8015b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf411981302b79d29cc31c4153539692"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_bond_1_1_output_stream.html">OutputStream</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_output_stream.html#acf411981302b79d29cc31c4153539692">Write</a> (uchar *bytes, uint numBytes)</td></tr>
 <tr class="separator:acf411981302b79d29cc31c4153539692"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,10 +158,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad5426d2d60319fcd13ae9b99982d9a2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46027ab7af4d90389b7862e7cda4ee3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_output_stream.html#a46027ab7af4d90389b7862e7cda4ee3e">AddOffset</a> (int offset)</td></tr>
 <tr class="separator:a46027ab7af4d90389b7862e7cda4ee3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aebb8a6ef9d37994906809e5e88700955"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_output_stream.html#aebb8a6ef9d37994906809e5e88700955">IsEof</a> ()</td></tr>
-<tr class="separator:aebb8a6ef9d37994906809e5e88700955"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae619523b76d1d7b4d7797d106fd6cc9a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_output_stream.html#ae619523b76d1d7b4d7797d106fd6cc9a">IsEof</a> () const</td></tr>
+<tr class="separator:ae619523b76d1d7b4d7797d106fd6cc9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2da1a0d4d7969a1048011471e78967c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_output_stream.html#aa2da1a0d4d7969a1048011471e78967c">HasError</a> () const</td></tr>
+<tr class="separator:aa2da1a0d4d7969a1048011471e78967c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad11e5fece2b495ee4a880636d7ac6326"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_output_stream.html#ad11e5fece2b495ee4a880636d7ac6326">ClearError</a> ()</td></tr>
+<tr class="separator:ad11e5fece2b495ee4a880636d7ac6326"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>An abstract interface for performing both unformatted and formatted output operations. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a46027ab7af4d90389b7862e7cda4ee3e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a46027ab7af4d90389b7862e7cda4ee3e">&#9670;&nbsp;</a></span>AddOffset()</h2>
 
@@ -158,6 +179,23 @@ Public Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>offset</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad11e5fece2b495ee4a880636d7ac6326"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad11e5fece2b495ee4a880636d7ac6326">&#9670;&nbsp;</a></span>ClearError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Bond::OutputStream::ClearError </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -198,6 +236,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Flushes any unwritten output and closes the stream. </p>
+
 </div>
 </div>
 <a id="ad8ff3d141f6bf73f3ac631de6c24c91e"></a>
@@ -214,6 +254,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Flushes any unwritten output. </p>
 
 </div>
 </div>
@@ -302,8 +344,25 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aebb8a6ef9d37994906809e5e88700955"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aebb8a6ef9d37994906809e5e88700955">&#9670;&nbsp;</a></span>IsEof()</h2>
+<a id="aa2da1a0d4d7969a1048011471e78967c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2da1a0d4d7969a1048011471e78967c">&#9670;&nbsp;</a></span>HasError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Bond::OutputStream::HasError </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae619523b76d1d7b4d7797d106fd6cc9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae619523b76d1d7b4d7797d106fd6cc9a">&#9670;&nbsp;</a></span>IsEof()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -312,7 +371,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">bool Bond::OutputStream::IsEof </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -335,6 +394,15 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Writes a formatted Boolean value to the output stream. </p>
+<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a296b8578eeca2079b42b58321e73b44e" title="Read and write bool values as the strings &quot;true&quot; and &quot;false&quot;. ">IO::BoolAlpha</a> flag is set, the values true and false are written as the strings "true" and "false" respectively, otherwise they are written as the strings "0" and "1". </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The Boolean value to be written to the stream. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The stream on which this function was called. </dd></dl>
+
 </div>
 </div>
 <a id="a5db6d46034e74c3c80f6b5b52465d0fe"></a>
@@ -352,6 +420,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Writes a single character to the output stream. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The character to be written to the stream. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The stream on which this function was called. </dd></dl>
 
 </div>
 </div>
@@ -371,6 +448,15 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Writes a formatted double to the output stream. </p>
+<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a807aea6cf4ad41adf53655d50cf5dc90">IO::Fixed</a> or <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618adcda1375d258abf7c6264120558a3532">IO::Scientific</a> flag is set, the number is written in decimal notation or scientific notation respectively. If neither flag is set, the number is written in scientific notation if the exponent is less than -4 or greater than the precision, otherwise the number is written in decimal notation. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae7a9861470cfad343d3aa0b8fdf29b22">IO::Zero</a> flag is set, the value is zero padded to the left. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a983becf80d3cd5820e11b2d4be2e9406">IO::Left</a> flag is set, the value is left-justified instead of right-justified. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618aebbc41e42e8e159b2e41e285f5c9ac32">IO::ShowPoint</a> flag is set, a decimal point is always written. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The floating-point number to be written to the stream. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The stream on which this function was called. </dd></dl>
+
 </div>
 </div>
 <a id="a3862e0b3091805750bdcaf0666d8a073"></a>
@@ -388,6 +474,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Writes a formatted float to the output stream. </p>
+<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a807aea6cf4ad41adf53655d50cf5dc90">IO::Fixed</a> or <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618adcda1375d258abf7c6264120558a3532">IO::Scientific</a> flag is set, the number is written in decimal notation or scientific notation respectively. If neither flag is set, the number is written in scientific notation if the exponent is less than -4 or greater than the precision, otherwise the number is written in decimal notation. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae7a9861470cfad343d3aa0b8fdf29b22">IO::Zero</a> flag is set, the value is zero padded to the left. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a983becf80d3cd5820e11b2d4be2e9406">IO::Left</a> flag is set, the value is left-justified instead of right-justified. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618aebbc41e42e8e159b2e41e285f5c9ac32">IO::ShowPoint</a> flag is set, a decimal point is always written. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The floating-point number to be written to the stream. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The stream on which this function was called. </dd></dl>
 
 </div>
 </div>
@@ -407,6 +502,15 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Writes a formatted int to the output stream. </p>
+<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9" title="Read and write integral values in base 16. ">IO::Hex</a> or <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae158c14cc75a1751708c4c2fbae0f9bf" title="Read and write integral values in base 8. ">IO::Oct</a> flag is set, the integer is written in base 16 or 8 respectively, otherwise it is written in base 10. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a377607c20f5c8f330fd1f7c5e1096267">IO::ShowBase</a> flag is set in addition to <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9" title="Read and write integral values in base 16. ">IO::Hex</a>, the string "0x" is written before the number. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a377607c20f5c8f330fd1f7c5e1096267">IO::ShowBase</a> flag is set in addition to <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae158c14cc75a1751708c4c2fbae0f9bf" title="Read and write integral values in base 8. ">IO::Oct</a>, the string "0" is written before the number. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae7a9861470cfad343d3aa0b8fdf29b22">IO::Zero</a> flag is set, the value is zero padded to the left. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a983becf80d3cd5820e11b2d4be2e9406">IO::Left</a> flag is set, the value is left-justified instead of right-justified. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The integer to be written to the stream. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The stream on which this function was called. </dd></dl>
+
 </div>
 </div>
 <a id="a30dfadbca47faf2008a56db025723a5e"></a>
@@ -424,6 +528,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Writes a formatted long to the output stream. </p>
+<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9" title="Read and write integral values in base 16. ">IO::Hex</a> or <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae158c14cc75a1751708c4c2fbae0f9bf" title="Read and write integral values in base 8. ">IO::Oct</a> flag is set, the integer is written in base 16 or 8 respectively, otherwise it is written in base 10. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a377607c20f5c8f330fd1f7c5e1096267">IO::ShowBase</a> flag is set in addition to <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9" title="Read and write integral values in base 16. ">IO::Hex</a>, the string "0x" is written before the number. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a377607c20f5c8f330fd1f7c5e1096267">IO::ShowBase</a> flag is set in addition to <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae158c14cc75a1751708c4c2fbae0f9bf" title="Read and write integral values in base 8. ">IO::Oct</a>, the string "0" is written before the number. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae7a9861470cfad343d3aa0b8fdf29b22">IO::Zero</a> flag is set, the value is zero padded to the left. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a983becf80d3cd5820e11b2d4be2e9406">IO::Left</a> flag is set, the value is left-justified instead of right-justified. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The integer to be written to the stream. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The stream on which this function was called. </dd></dl>
 
 </div>
 </div>
@@ -443,6 +556,15 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Writes a string of characters to the output stream. Writing stops at the first null character. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>Pointer to a string of characters to be written to the stream. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The stream on which this function was called. </dd></dl>
+
 </div>
 </div>
 <a id="abca4a8f3e6800f6654add5b5e3522a87"></a>
@@ -460,6 +582,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Writes a formatted uint to the output stream. </p>
+<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9" title="Read and write integral values in base 16. ">IO::Hex</a> or <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae158c14cc75a1751708c4c2fbae0f9bf" title="Read and write integral values in base 8. ">IO::Oct</a> flag is set, the integer is written in base 16 or 8 respectively, otherwise it is written in base 10. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a377607c20f5c8f330fd1f7c5e1096267">IO::ShowBase</a> flag is set in addition to <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9" title="Read and write integral values in base 16. ">IO::Hex</a>, the string "0x" is written before the number. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a377607c20f5c8f330fd1f7c5e1096267">IO::ShowBase</a> flag is set in addition to <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae158c14cc75a1751708c4c2fbae0f9bf" title="Read and write integral values in base 8. ">IO::Oct</a>, the string "0" is written before the number. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae7a9861470cfad343d3aa0b8fdf29b22">IO::Zero</a> flag is set, the value is zero padded to the left. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a983becf80d3cd5820e11b2d4be2e9406">IO::Left</a> flag is set, the value is left-justified instead of right-justified. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The integer to be written to the stream. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The stream on which this function was called. </dd></dl>
 
 </div>
 </div>
@@ -479,6 +610,15 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Writes a formatted ulong to the output stream. </p>
+<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9" title="Read and write integral values in base 16. ">IO::Hex</a> or <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae158c14cc75a1751708c4c2fbae0f9bf" title="Read and write integral values in base 8. ">IO::Oct</a> flag is set, the integer is written in base 16 or 8 respectively, otherwise it is written in base 10. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a377607c20f5c8f330fd1f7c5e1096267">IO::ShowBase</a> flag is set in addition to <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9" title="Read and write integral values in base 16. ">IO::Hex</a>, the string "0x" is written before the number. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a377607c20f5c8f330fd1f7c5e1096267">IO::ShowBase</a> flag is set in addition to <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae158c14cc75a1751708c4c2fbae0f9bf" title="Read and write integral values in base 8. ">IO::Oct</a>, the string "0" is written before the number. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae7a9861470cfad343d3aa0b8fdf29b22">IO::Zero</a> flag is set, the value is zero padded to the left. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a983becf80d3cd5820e11b2d4be2e9406">IO::Left</a> flag is set, the value is left-justified instead of right-justified. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The integer to be written to the stream. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The stream on which this function was called. </dd></dl>
+
 </div>
 </div>
 <a id="a9336aec40e06cdf7b4ab22f6c1f8015b"></a>
@@ -496,6 +636,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Writes a single unformatted byte to the output stream. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">byte</td><td>The byte to be written to the stream. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The stream on which this function was called. </dd></dl>
 
 </div>
 </div>
@@ -632,6 +781,14 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bytes</td><td>Pointer to the array of bytes to be written to the stream. </td></tr>
+    <tr><td class="paramname">numBytes</td><td>The number of bytes to be written. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The stream on which this function was called. </dd></dl>
 
 </div>
 </div>

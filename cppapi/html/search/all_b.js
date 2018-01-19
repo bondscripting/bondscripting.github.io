@@ -20,6 +20,8 @@ var searchData=
   ['log',['Log',['../namespace_bond.html#a6fdaf38b41cbf17668059203138b968e',1,'Bond']]],
   ['log10',['Log10',['../namespace_bond.html#afe90e0660bdece54b026555bbc253f9d',1,'Bond']]],
   ['log10f',['Log10f',['../namespace_bond.html#a1c3928a4fbec1bc2f0a6725076b7fdba',1,'Bond']]],
+  ['log2',['Log2',['../namespace_bond.html#a1662e46aa76b24ef7cae41febc46fa99',1,'Bond']]],
+  ['log2f',['Log2f',['../namespace_bond.html#adf430a7348bed69acfb46c3663171788',1,'Bond']]],
   ['logf',['Logf',['../namespace_bond.html#ad4b48387522bf6d23dbb7c2f4e499833',1,'Bond']]],
   ['long_5finteger_5ftype_5fspecifiers_5ftypeset',['LONG_INTEGER_TYPE_SPECIFIERS_TYPESET',['../group__compiler.html#gaf0174c32866ace77edad0298bfdc48a7',1,'Bond']]],
   ['long_5ftoken',['LONG_TOKEN',['../group__compiler.html#ga0a3506f9eeebeefa561759d459945194',1,'Bond']]],

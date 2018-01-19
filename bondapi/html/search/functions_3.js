@@ -11,6 +11,6 @@ var searchData=
   ['freealigned',['FreeAligned',['../group__memory.html#ga8c52c5a12996d27c823cd8252909d5e3',1,'Bond']]],
   ['freeinputstream',['FreeInputStream',['../group__io.html#ga1d8210f39b161f69ac689a19da1f5f17',1,'Bond']]],
   ['freeoutputstream',['FreeOutputStream',['../group__io.html#gac37daf1daa2e7f35be70a4bd9a451a3c',1,'Bond']]],
-  ['frexp',['Frexp',['../group__math.html#ga2fa67027b87744125ba971808a2e524f',1,'Bond']]],
-  ['frexpf',['Frexpf',['../group__math.html#ga9bb73f9322fdc983bf42c700c5a31e0d',1,'Bond']]]
+  ['frexp',['Frexp',['../group__math.html#ga7d161587bd7d6328fedc0f7b58b71606',1,'Bond']]],
+  ['frexpf',['Frexpf',['../group__math.html#ga2268ae8404aacf3fa8ac0a6fadf83ba1',1,'Bond']]]
 ];

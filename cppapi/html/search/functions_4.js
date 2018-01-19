@@ -8,6 +8,8 @@ var searchData=
   ['enumerator',['Enumerator',['../class_bond_1_1_enumerator.html#a5ea6245f4e3560d076935a4f7a5b8945',1,'Bond::Enumerator']]],
   ['exception',['Exception',['../class_bond_1_1_exception.html#ae294ac00bbe8151e0667626215d7bb52',1,'Bond::Exception::Exception()'],['../class_bond_1_1_exception.html#a3858fb02ca2bba5fecd6e47258016de1',1,'Bond::Exception::Exception(const char *format,...)']]],
   ['exp',['Exp',['../namespace_bond.html#ab5dda50b194049f1941a83896665ecb6',1,'Bond']]],
+  ['exp2',['Exp2',['../namespace_bond.html#aba40ec426a01ac3194c7606b40c814f9',1,'Bond']]],
+  ['exp2f',['Exp2f',['../namespace_bond.html#a9d31a19e750ee0c3b5da29ef8616e379',1,'Bond']]],
   ['expandapitypemnemonic',['ExpandApiTypeMnemonic',['../namespace_bond.html#a2ab178bc4da4e3487ca96f8cda512e92',1,'Bond']]],
   ['expandbondtypemnemonic',['ExpandBondTypeMnemonic',['../namespace_bond.html#ada8467b85004f923d2b8fa9da6926d0b',1,'Bond']]],
   ['expf',['Expf',['../namespace_bond.html#a8eca1268b42b9a2b362f0f2fc1aca1f1',1,'Bond']]],
