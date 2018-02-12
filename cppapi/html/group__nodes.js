@@ -58,6 +58,7 @@ var group__nodes =
       [ "~TypeDescriptor", "class_bond_1_1_type_descriptor.html#a872edd063cdb5591a719d6f786e595ba", null ],
       [ "Accept", "class_bond_1_1_type_descriptor.html#a2b216a300204f9ea6e4257c8d9777afa", null ],
       [ "Accept", "class_bond_1_1_type_descriptor.html#ae269e3c6fb3acff8f8ce7b9fdadf9c75", null ],
+      [ "ClearConst", "class_bond_1_1_type_descriptor.html#a6d0be5a697748a46348f9d96c9e988e7", null ],
       [ "ClearLValue", "class_bond_1_1_type_descriptor.html#ae9f284887a8a4757de9b6360b3ebb29d", null ],
       [ "ConvertToArray", "class_bond_1_1_type_descriptor.html#afaedf3a2cd7d3ac7e4ed43e260f5251a", null ],
       [ "ConvertToPointerIntrinsic", "class_bond_1_1_type_descriptor.html#a20d4b5a27c7552217cc7153591d0ee6f", null ],
@@ -82,6 +83,7 @@ var group__nodes =
       [ "IsCharType", "class_bond_1_1_type_descriptor.html#a1fd00f36942a60f7461bb30f1e360193", null ],
       [ "IsConst", "class_bond_1_1_type_descriptor.html#ae857661f6e79032bf8ebc2c130ddb740", null ],
       [ "IsDefined", "class_bond_1_1_type_descriptor.html#ab98ec08d31854b4a2f01763c6e04f577", null ],
+      [ "IsImplicitlyConvertiblePointerType", "class_bond_1_1_type_descriptor.html#ae0fc49d5c9ff6ebd612aff01acff1fc4", null ],
       [ "IsInstantiable", "class_bond_1_1_type_descriptor.html#a08193b4e15804bd27b96ac4121e5f33b", null ],
       [ "IsIntegerType", "class_bond_1_1_type_descriptor.html#ad9edf1b894654970478b8b95996f1774", null ],
       [ "IsLeast32IntegerType", "class_bond_1_1_type_descriptor.html#aa4b9b022f075df910ef64074ef9c071f", null ],
@@ -97,6 +99,7 @@ var group__nodes =
       [ "IsStructType", "class_bond_1_1_type_descriptor.html#afadcc5623bf882b528aa5a7ff99c0365", null ],
       [ "IsUnaddressableLValue", "class_bond_1_1_type_descriptor.html#a4eddd58d79bbc079c92fec2df09490b7", null ],
       [ "IsValueType", "class_bond_1_1_type_descriptor.html#a21edc684c14f0360ce9f229611415aad", null ],
+      [ "IsVoidPointerType", "class_bond_1_1_type_descriptor.html#a51f873b40aabfbb9ec8519316d89385e", null ],
       [ "IsVoidType", "class_bond_1_1_type_descriptor.html#aaf1df0123ffa12983dbae0f484de26f6", null ],
       [ "SetAddressable", "class_bond_1_1_type_descriptor.html#a527bf31b3699bd2dbbf2bceb453744b3", null ],
       [ "SetConst", "class_bond_1_1_type_descriptor.html#abb95547ff863f855ac7bdd9042d2666d", null ],
@@ -192,12 +195,12 @@ var group__nodes =
       [ "GetEnumeratorList", "class_bond_1_1_enum_declaration.html#a104c46bf30075be8251db1dd419e35e0", null ],
       [ "GetName", "class_bond_1_1_enum_declaration.html#a956c0429d45ab68beab4cde59985b143", null ],
       [ "GetSymbolType", "class_bond_1_1_enum_declaration.html#ac595969f165b488762784f945624b31e", null ],
-      [ "GetTypeDescriptor", "class_bond_1_1_enum_declaration.html#a0db4bf6e9ec91bdaeb21a8e250cf1418", null ],
-      [ "GetTypeDescriptor", "class_bond_1_1_enum_declaration.html#a1f356e00a2edc40c70f1def10c6a88ec", null ],
+      [ "GetTypeDescriptor", "class_bond_1_1_enum_declaration.html#a77754f38a6fa5e1d17790faee54fb04d", null ],
+      [ "GetTypeDescriptor", "class_bond_1_1_enum_declaration.html#a6e862842d4414ca6c55441f2118339ca", null ],
       [ "SetEnumeratorList", "class_bond_1_1_enum_declaration.html#ab81f009a4d075626922afbd7075c4949", null ]
     ] ],
     [ "Enumerator", "class_bond_1_1_enumerator.html", [
-      [ "Enumerator", "class_bond_1_1_enumerator.html#a5ea6245f4e3560d076935a4f7a5b8945", null ],
+      [ "Enumerator", "class_bond_1_1_enumerator.html#aabcf71540ad2bb6090536ed49d4be2dc", null ],
       [ "~Enumerator", "class_bond_1_1_enumerator.html#a983a8d438d0265b81d2ef353055d02ed", null ],
       [ "Accept", "class_bond_1_1_enumerator.html#a36d88fb98affe398222d4951c9805fe6", null ],
       [ "Accept", "class_bond_1_1_enumerator.html#a256bb645feb75e9407749ccc678e6037", null ],
@@ -320,7 +323,7 @@ var group__nodes =
       [ "GetExpression", "class_bond_1_1_initializer.html#a615febc7beeb8f28accfa3ef1009c335", null ],
       [ "GetInitializerList", "class_bond_1_1_initializer.html#a0df9265014686b1be6fc32bba2a0a187", null ],
       [ "GetInitializerList", "class_bond_1_1_initializer.html#a7d2dc1ac3809845595728d35e34b1ef8", null ],
-      [ "GetTypeDescriptor", "class_bond_1_1_initializer.html#a0031172ab5f24949b6bb24486b2acb5d", null ],
+      [ "GetTypeDescriptor", "class_bond_1_1_initializer.html#aa8498a809e3499dc023c6f35013fec1f", null ],
       [ "IsResolved", "class_bond_1_1_initializer.html#a74ae0b90abf83854cc0e24aa0be1b782", null ],
       [ "SetTypeDescriptor", "class_bond_1_1_initializer.html#a8258530415f73e893bab59c1192e0680", null ]
     ] ],
@@ -466,7 +469,7 @@ var group__nodes =
       [ "Expression", "class_bond_1_1_expression.html#a563002611966ae95fc2c5c4defeca83d", null ],
       [ "GetTypeAndValue", "class_bond_1_1_expression.html#a292f5dcf3990a95a5eceab6459ed65c6", null ],
       [ "GetTypeAndValue", "class_bond_1_1_expression.html#ac33af03e00d9caa0f4d14a42f086ffc8", null ],
-      [ "GetTypeDescriptor", "class_bond_1_1_expression.html#a455684779e26e8287844783728bca13b", null ],
+      [ "GetTypeDescriptor", "class_bond_1_1_expression.html#ae8c17ac1df0e8e1f14182faac6cdbd52", null ],
       [ "SetTypeDescriptor", "class_bond_1_1_expression.html#afb521f7b45df1369c5a1ac171d2c6064", null ]
     ] ],
     [ "ExpressionStatement", "class_bond_1_1_expression_statement.html", [

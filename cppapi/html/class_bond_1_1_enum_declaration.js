@@ -8,7 +8,7 @@ var class_bond_1_1_enum_declaration =
     [ "GetEnumeratorList", "class_bond_1_1_enum_declaration.html#a104c46bf30075be8251db1dd419e35e0", null ],
     [ "GetName", "class_bond_1_1_enum_declaration.html#a956c0429d45ab68beab4cde59985b143", null ],
     [ "GetSymbolType", "class_bond_1_1_enum_declaration.html#ac595969f165b488762784f945624b31e", null ],
-    [ "GetTypeDescriptor", "class_bond_1_1_enum_declaration.html#a0db4bf6e9ec91bdaeb21a8e250cf1418", null ],
-    [ "GetTypeDescriptor", "class_bond_1_1_enum_declaration.html#a1f356e00a2edc40c70f1def10c6a88ec", null ],
+    [ "GetTypeDescriptor", "class_bond_1_1_enum_declaration.html#a77754f38a6fa5e1d17790faee54fb04d", null ],
+    [ "GetTypeDescriptor", "class_bond_1_1_enum_declaration.html#a6e862842d4414ca6c55441f2118339ca", null ],
     [ "SetEnumeratorList", "class_bond_1_1_enum_declaration.html#ab81f009a4d075626922afbd7075c4949", null ]
 ];
