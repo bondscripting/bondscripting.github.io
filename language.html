@@ -1114,9 +1114,7 @@ b is: 6</pre>
 <h4 id="function_calls">Function Calls</h4>
 
 <h3 id="data_types">Data Types</h3>
-<p>Bond is a statically typed language, so every variable and expression has a type known at compile time.</p>
-
-<p>Bond is also intended to be a strongly typed language, however, at the moment it is rather weakly typed. The compiler allows the conversion of any numerical type to any other numerical type without an explicit cast, either through assignment or the usual arithmetic conversions, even if it could result in a loss of data. The compiler also allows the conversion of any pointer type to any other pointer type without an explicit cast. These loopholes in the type checking system are expected to be closed in the future.</p>
+<p>Bond is a statically typed language, so every variable and expression has a type known at compile time. Bond is also strongly typed, meaning that values of one type will not be implicitly converted to another type (e.g. during a variable assignment or when passing an argument to a function) if it could lead to a loss of data. An example where a loss of data could occur is when a numeric value of one type is converted to another, such as the loss of the fractional part of a floating-point number in a conversion to an <span class="token">int</span>, or the truncation of an <span class="token">int</span> to a <span class="token">short</span>. Such conversions are allowed, however, the programmer is required to use an explicit cast to demonstrate intent, otherwise the compiler will generate an error.</p>
 
 <p>We have already seen the primitive types for storing simple values, however, Bond's type system supports several others.</p>
 
