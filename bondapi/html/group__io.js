@@ -12,7 +12,7 @@ var group__io =
       [ "GetPosition", "struct_bond_1_1_input_stream.html#a4c79ccdd389b0b6f2fbbd22313dfb657", null ],
       [ "HasError", "struct_bond_1_1_input_stream.html#a0cb232f04432e1dcbcebc5cf51e0ef7a", null ],
       [ "IsEof", "struct_bond_1_1_input_stream.html#a7b4a6a98df7520820f3045d78b9d115e", null ],
-      [ "Read", "struct_bond_1_1_input_stream.html#aeec9087b4e22e5a53c99d40439dc46e9", null ],
+      [ "Read", "struct_bond_1_1_input_stream.html#a572dd18493a0800413932ae53b93e590", null ],
       [ "ScanB", "struct_bond_1_1_input_stream.html#af36dfc00416210d43849344118944a58", null ],
       [ "ScanC", "struct_bond_1_1_input_stream.html#a6437c2d6e9ea312ea9f50e4c4d87fc8f", null ],
       [ "ScanD", "struct_bond_1_1_input_stream.html#a0c141e21e0a02e7ef167476bdae90205", null ],
@@ -56,7 +56,7 @@ var group__io =
       [ "SetPrecision", "struct_bond_1_1_output_stream.html#aa7040c79ab1525e54d00b3484a9995cb", null ],
       [ "SetWidth", "struct_bond_1_1_output_stream.html#a10623b5ecb83e657cf230c2457f386f8", null ],
       [ "UnsetFlags", "struct_bond_1_1_output_stream.html#af93d6ce7d5fe37597c5f1fc1339160eb", null ],
-      [ "Write", "struct_bond_1_1_output_stream.html#acf411981302b79d29cc31c4153539692", null ]
+      [ "Write", "struct_bond_1_1_output_stream.html#a40bece402f44631d32cfd20fdf6dc490", null ]
     ] ],
     [ "CreateInputStream", "group__io.html#ga03f07a7a18d800b5ef709e0120b5a8a3", null ],
     [ "CreateInputStreamCollected", "group__io.html#ga3b925966bd05160e083afb0b24bd7025", null ],

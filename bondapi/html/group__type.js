@@ -2,6 +2,7 @@ var group__type =
 [
     [ "IsAlnum", "group__type.html#ga422ab07f380ecd2aa0e5f3b0cc5e7f4c", null ],
     [ "IsAlpha", "group__type.html#ga4441fa3bf132057a89a0c73ba68d3bfb", null ],
+    [ "IsBlank", "group__type.html#gad30d0c220315f18f0bd3b3a4d6a8b9cf", null ],
     [ "IsCntrl", "group__type.html#ga206b80bea4a77d55a19158a67a78eea9", null ],
     [ "IsDigit", "group__type.html#ga5d51589e770824f00db48f1b1df493fb", null ],
     [ "IsGraph", "group__type.html#ga0fbe7de467c86e3085d93935ea6e6d6d", null ],

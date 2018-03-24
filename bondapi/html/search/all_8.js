@@ -4,6 +4,7 @@ var searchData=
   ['io_2ebond',['io.bond',['../group__io.html',1,'']]],
   ['isalnum',['IsAlnum',['../group__type.html#ga422ab07f380ecd2aa0e5f3b0cc5e7f4c',1,'Bond']]],
   ['isalpha',['IsAlpha',['../group__type.html#ga4441fa3bf132057a89a0c73ba68d3bfb',1,'Bond']]],
+  ['isblank',['IsBlank',['../group__type.html#gad30d0c220315f18f0bd3b3a4d6a8b9cf',1,'Bond']]],
   ['iscntrl',['IsCntrl',['../group__type.html#ga206b80bea4a77d55a19158a67a78eea9',1,'Bond']]],
   ['isdigit',['IsDigit',['../group__type.html#ga5d51589e770824f00db48f1b1df493fb',1,'Bond']]],
   ['iseof',['IsEof',['../struct_bond_1_1_input_stream.html#a7b4a6a98df7520820f3045d78b9d115e',1,'Bond::InputStream::IsEof()'],['../struct_bond_1_1_output_stream.html#ae619523b76d1d7b4d7797d106fd6cc9a',1,'Bond::OutputStream::IsEof()']]],

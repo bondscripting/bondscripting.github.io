@@ -10,7 +10,7 @@ var struct_bond_1_1_input_stream =
     [ "GetPosition", "struct_bond_1_1_input_stream.html#a4c79ccdd389b0b6f2fbbd22313dfb657", null ],
     [ "HasError", "struct_bond_1_1_input_stream.html#a0cb232f04432e1dcbcebc5cf51e0ef7a", null ],
     [ "IsEof", "struct_bond_1_1_input_stream.html#a7b4a6a98df7520820f3045d78b9d115e", null ],
-    [ "Read", "struct_bond_1_1_input_stream.html#aeec9087b4e22e5a53c99d40439dc46e9", null ],
+    [ "Read", "struct_bond_1_1_input_stream.html#a572dd18493a0800413932ae53b93e590", null ],
     [ "ScanB", "struct_bond_1_1_input_stream.html#af36dfc00416210d43849344118944a58", null ],
     [ "ScanC", "struct_bond_1_1_input_stream.html#a6437c2d6e9ea312ea9f50e4c4d87fc8f", null ],
     [ "ScanD", "struct_bond_1_1_input_stream.html#a0c141e21e0a02e7ef167476bdae90205", null ],
