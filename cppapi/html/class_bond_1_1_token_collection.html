@@ -108,12 +108,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5d9c99f5e1046e002ff550fd8a03cb9d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_bond_1_1_token_stream.html">TokenStream</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_token_collection.html#a5d9c99f5e1046e002ff550fd8a03cb9d">GetTokenStream</a> () const</td></tr>
 <tr class="memdesc:a5d9c99f5e1046e002ff550fd8a03cb9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a <a class="el" href="class_bond_1_1_token_stream.html" title="An iterator over the contents of a TokenCollection. ">TokenStream</a> object to iterate over the contents of the collection.  <a href="#a5d9c99f5e1046e002ff550fd8a03cb9d">More...</a><br /></td></tr>
 <tr class="separator:a5d9c99f5e1046e002ff550fd8a03cb9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72767265dd603d8f902c027013609429"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_bond_1_1_token_collection.html">TokenCollection</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_token_collection.html#a72767265dd603d8f902c027013609429">GetNextCollection</a> () const</td></tr>
-<tr class="memdesc:a72767265dd603d8f902c027013609429"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the next daisy-chained <a class="el" href="class_bond_1_1_token_collection.html" title="An ordered immutable collection of Tokens. ">TokenCollection</a>.  <a href="#a72767265dd603d8f902c027013609429">More...</a><br /></td></tr>
-<tr class="separator:a72767265dd603d8f902c027013609429"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a859bc87f906aedfef4def9bf4b02b5c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_token_collection.html#a859bc87f906aedfef4def9bf4b02b5c2">SetNextCollection</a> (<a class="el" href="class_bond_1_1_token_collection.html">TokenCollection</a> *tokenCollection)</td></tr>
-<tr class="memdesc:a859bc87f906aedfef4def9bf4b02b5c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the next daisy-chained <a class="el" href="class_bond_1_1_token_collection.html" title="An ordered immutable collection of Tokens. ">TokenCollection</a>.  <a href="#a859bc87f906aedfef4def9bf4b02b5c2">More...</a><br /></td></tr>
-<tr class="separator:a859bc87f906aedfef4def9bf4b02b5c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An ordered immutable collection of Tokens. </p>
@@ -165,33 +159,6 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a72767265dd603d8f902c027013609429"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72767265dd603d8f902c027013609429">&#9670;&nbsp;</a></span>GetNextCollection()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_bond_1_1_token_collection.html">TokenCollection</a>* Bond::TokenCollection::GetNextCollection </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the next daisy-chained <a class="el" href="class_bond_1_1_token_collection.html" title="An ordered immutable collection of Tokens. ">TokenCollection</a>. </p>
-
-</div>
-</div>
 <a id="a5d9c99f5e1046e002ff550fd8a03cb9d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5d9c99f5e1046e002ff550fd8a03cb9d">&#9670;&nbsp;</a></span>GetTokenStream()</h2>
 
@@ -216,34 +183,6 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns a <a class="el" href="class_bond_1_1_token_stream.html" title="An iterator over the contents of a TokenCollection. ">TokenStream</a> object to iterate over the contents of the collection. </p>
-
-</div>
-</div>
-<a id="a859bc87f906aedfef4def9bf4b02b5c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a859bc87f906aedfef4def9bf4b02b5c2">&#9670;&nbsp;</a></span>SetNextCollection()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Bond::TokenCollection::SetNextCollection </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_bond_1_1_token_collection.html">TokenCollection</a> *&#160;</td>
-          <td class="paramname"><em>tokenCollection</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the next daisy-chained <a class="el" href="class_bond_1_1_token_collection.html" title="An ordered immutable collection of Tokens. ">TokenCollection</a>. </p>
 
 </div>
 </div>

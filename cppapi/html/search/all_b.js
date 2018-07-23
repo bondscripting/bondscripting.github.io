@@ -25,5 +25,6 @@ var searchData=
   ['logf',['Logf',['../namespace_bond.html#ad4b48387522bf6d23dbb7c2f4e499833',1,'Bond']]],
   ['long_5finteger_5ftype_5fspecifiers_5ftypeset',['LONG_INTEGER_TYPE_SPECIFIERS_TYPESET',['../group__compiler.html#gaf0174c32866ace77edad0298bfdc48a7',1,'Bond']]],
   ['long_5ftoken',['LONG_TOKEN',['../group__compiler.html#ga0a3506f9eeebeefa561759d459945194',1,'Bond']]],
-  ['long_5ftype_5fspecifier',['LONG_TYPE_SPECIFIER',['../group__nodes.html#gae323adbb316e4f861916b86545bb7b63',1,'Bond']]]
+  ['long_5ftype_5fspecifier',['LONG_TYPE_SPECIFIER',['../group__nodes.html#gae323adbb316e4f861916b86545bb7b63',1,'Bond']]],
+  ['lossy_5fconversion',['LOSSY_CONVERSION',['../class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4caeb2fee3cee36a99ebc193a7dc33b01d4',1,'Bond::CompilerError']]]
 ];

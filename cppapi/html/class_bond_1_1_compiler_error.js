@@ -86,6 +86,7 @@ var class_bond_1_1_compiler_error =
       [ "INVALID_BREAK", "class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4ca8a3809947a2d3dfc159df2c1309b4bc4", null ],
       [ "INVALID_CONTINUE", "class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4cae642874329dac775739d7e830f0c25ce", null ],
       [ "UNREACHABLE_CODE", "class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4cac7584a672b278e2d5eaddab0fd0e2317", null ],
+      [ "LOSSY_CONVERSION", "class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4caeb2fee3cee36a99ebc193a7dc33b01d4", null ],
       [ "VALUE32_TABLE_OVERFLOW", "class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4ca5a35cc1a4ef6974c0001751383754425", null ],
       [ "VALUE64_TABLE_OVERFLOW", "class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4cad64add9d375e92d456679fe8093f769f", null ],
       [ "STRING_TABLE_OVERFLOW", "class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4ca4a0e167207f8ab04eca756da779b4a00", null ],
