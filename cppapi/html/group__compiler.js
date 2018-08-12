@@ -102,6 +102,7 @@ var group__compiler =
         [ "INVALID_BREAK", "class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4ca8a3809947a2d3dfc159df2c1309b4bc4", null ],
         [ "INVALID_CONTINUE", "class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4cae642874329dac775739d7e830f0c25ce", null ],
         [ "UNREACHABLE_CODE", "class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4cac7584a672b278e2d5eaddab0fd0e2317", null ],
+        [ "LOSSY_CONVERSION", "class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4caeb2fee3cee36a99ebc193a7dc33b01d4", null ],
         [ "VALUE32_TABLE_OVERFLOW", "class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4ca5a35cc1a4ef6974c0001751383754425", null ],
         [ "VALUE64_TABLE_OVERFLOW", "class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4cad64add9d375e92d456679fe8093f769f", null ],
         [ "STRING_TABLE_OVERFLOW", "class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4ca4a0e167207f8ab04eca756da779b4a00", null ],
@@ -658,9 +659,7 @@ var group__compiler =
     ] ],
     [ "TokenCollection", "class_bond_1_1_token_collection.html", [
       [ "TokenCollection", "class_bond_1_1_token_collection.html#a7d60fd7504972754b8bff7cbe41cdfdf", null ],
-      [ "GetNextCollection", "class_bond_1_1_token_collection.html#a72767265dd603d8f902c027013609429", null ],
-      [ "GetTokenStream", "class_bond_1_1_token_collection.html#a5d9c99f5e1046e002ff550fd8a03cb9d", null ],
-      [ "SetNextCollection", "class_bond_1_1_token_collection.html#a859bc87f906aedfef4def9bf4b02b5c2", null ]
+      [ "GetTokenStream", "class_bond_1_1_token_collection.html#a5d9c99f5e1046e002ff550fd8a03cb9d", null ]
     ] ],
     [ "TypeAndValue", "class_bond_1_1_type_and_value.html", [
       [ "TypeAndValue", "class_bond_1_1_type_and_value.html#ac0fcc47171b60001da16e8819b807186", null ],
@@ -701,11 +700,12 @@ var group__compiler =
     [ "AreSameTypes", "group__compiler.html#ga8da2d7c5b201b858392855597c958974", null ],
     [ "CastNode", "group__compiler.html#ga1d8232af396aba45c2e7119741216d17", null ],
     [ "CastNode", "group__compiler.html#ga921a422c6036673112de7d21867b67dc", null ],
-    [ "CastValue", "group__compiler.html#ga64e2ca011795c0feff2673598cb883a9", null ],
-    [ "CastValue", "group__compiler.html#ga3c1471a46fd6f996ea01c63b0928b0ce", null ],
+    [ "CastValue", "group__compiler.html#ga48df44e721fbe79d6d326bca4f18c4d9", null ],
+    [ "CastValue", "group__compiler.html#gaefbd8a4c5ef01657c32e2a34dd2511c6", null ],
     [ "CombineOperandTypes", "group__compiler.html#gab36ffd20d085305e7ac53549714d0d24", null ],
     [ "GetLength", "group__compiler.html#ga60b58a6d92a8dd0542204be19988f4fb", null ],
     [ "InsertNode", "group__compiler.html#ga226785745e4e5cd09091130189178c8d", null ],
+    [ "IsLossyConversion", "group__compiler.html#gadb2bc3221e9166bbc0d5f08dfcd2b051", null ],
     [ "IsNegativeIntegerConstant", "group__compiler.html#ga511a079045da4bca0edb4ed9014f5a93", null ],
     [ "NextNode", "group__compiler.html#gae4713e23eb11be341e531037a370c14e", null ],
     [ "PromoteType", "group__compiler.html#ga8d7e2aa79dfc39b392744aebc3fb9f32", null ],

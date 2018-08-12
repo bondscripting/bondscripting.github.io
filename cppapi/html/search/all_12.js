@@ -39,7 +39,6 @@ var searchData=
   ['setmemberfunctionlist',['SetMemberFunctionList',['../class_bond_1_1_struct_declaration.html#addc8ea6f9c60789c0b5d098ffc5a3ed9',1,'Bond::StructDeclaration']]],
   ['setmembervariablelist',['SetMemberVariableList',['../class_bond_1_1_struct_declaration.html#a2a7ec871092f32208fd77a14969d2790',1,'Bond::StructDeclaration']]],
   ['setminmatch',['SetMinMatch',['../class_bond_1_1_switch_statement.html#adaeeb21a638cbdc99e44955e55e50545',1,'Bond::SwitchStatement']]],
-  ['setnextcollection',['SetNextCollection',['../class_bond_1_1_token_collection.html#a859bc87f906aedfef4def9bf4b02b5c2',1,'Bond::TokenCollection']]],
   ['setnextnode',['SetNextNode',['../class_bond_1_1_list_parse_node.html#a631c04c65ff24ec65a51af71a1bed5a2',1,'Bond::ListParseNode']]],
   ['setnummatches',['SetNumMatches',['../class_bond_1_1_switch_statement.html#a37d5c7cf1a49d24874ad85ef609ea32a',1,'Bond::SwitchStatement']]],
   ['setnumreservedjumptargetids',['SetNumReservedJumpTargetIds',['../class_bond_1_1_function_definition.html#a6a7f32e1ebd5a1e352ac377da683e9b4',1,'Bond::FunctionDefinition']]],

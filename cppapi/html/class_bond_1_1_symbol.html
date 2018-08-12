@@ -137,8 +137,8 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a61b5e84991bae8a60edb4af528ef29bd"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_symbol.html#a61b5e84991bae8a60edb4af528ef29bd">~Symbol</a> ()</td></tr>
 <tr class="separator:a61b5e84991bae8a60edb4af528ef29bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3901e4ebd257327cedf9b2fa07a4f79c"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="class_bond_1_1_token.html">Token</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_symbol.html#a3901e4ebd257327cedf9b2fa07a4f79c">GetContextToken</a> () const</td></tr>
-<tr class="separator:a3901e4ebd257327cedf9b2fa07a4f79c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab050fa3fcd60d7f4880767f6633f0d95"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="class_bond_1_1_token.html">Token</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_symbol.html#ab050fa3fcd60d7f4880767f6633f0d95">GetContextToken</a> () const override</td></tr>
+<tr class="separator:ab050fa3fcd60d7f4880767f6633f0d95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94935a4c6ffd49963bad4272b0fd2227"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_bond_1_1_symbol.html#a37116ce688af2562fa23a3b40612faed">SymbolType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_symbol.html#a94935a4c6ffd49963bad4272b0fd2227">GetSymbolType</a> () const =0</td></tr>
 <tr class="separator:a94935a4c6ffd49963bad4272b0fd2227"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5cd77cc41de2b7476e5e21713f1fce66"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="class_bond_1_1_token.html">Token</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_symbol.html#a5cd77cc41de2b7476e5e21713f1fce66">GetName</a> () const</td></tr>
@@ -402,8 +402,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a3901e4ebd257327cedf9b2fa07a4f79c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3901e4ebd257327cedf9b2fa07a4f79c">&#9670;&nbsp;</a></span>GetContextToken()</h2>
+<a id="ab050fa3fcd60d7f4880767f6633f0d95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab050fa3fcd60d7f4880767f6633f0d95">&#9670;&nbsp;</a></span>GetContextToken()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -420,14 +420,14 @@ Protected Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="class_bond_1_1_parse_node.html#a9e71f81d2f8884205e8adb291e266fde">Bond::ParseNode</a>.</p>
 
-<p>Reimplemented in <a class="el" href="class_bond_1_1_for_statement.html#a7a6223aa4609962e2a733799a451c148">Bond::ForStatement</a>.</p>
+<p>Reimplemented in <a class="el" href="class_bond_1_1_for_statement.html#a1a8e0dca5c554e1e6b4ae9fa48be353f">Bond::ForStatement</a>.</p>
 
 </div>
 </div>
@@ -454,7 +454,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_bond_1_1_named_initializer.html#af33fc9a95e6acc278883df856b14c617">Bond::NamedInitializer</a>, <a class="el" href="class_bond_1_1_parameter.html#a2000019449e1e791b19d5f5dd17ed9d6">Bond::Parameter</a>, <a class="el" href="class_bond_1_1_function_definition.html#adf0ff6bb3cc3604c6c1f91c76b528ea5">Bond::FunctionDefinition</a>, <a class="el" href="class_bond_1_1_struct_declaration.html#aceacc8ce72427609d582454bb2d5ee24">Bond::StructDeclaration</a>, <a class="el" href="class_bond_1_1_enumerator.html#ab23b92fae4a8f969459e77b2cb174246">Bond::Enumerator</a>, <a class="el" href="class_bond_1_1_enum_declaration.html#a956c0429d45ab68beab4cde59985b143">Bond::EnumDeclaration</a>, and <a class="el" href="class_bond_1_1_namespace_definition.html#ad190f5a817d9911fee39835fa2e9e564">Bond::NamespaceDefinition</a>.</p>
+<p>Reimplemented in <a class="el" href="class_bond_1_1_named_initializer.html#a0b88047c7ff1c2e5a9d4453019424775">Bond::NamedInitializer</a>, <a class="el" href="class_bond_1_1_parameter.html#a8c6bb877c5b6ff33bc48cecc01250ebc">Bond::Parameter</a>, <a class="el" href="class_bond_1_1_function_definition.html#a5700c69c90c145f9ab3788eaebeae76a">Bond::FunctionDefinition</a>, <a class="el" href="class_bond_1_1_struct_declaration.html#aeacf20116dd0aea0943a559905db8470">Bond::StructDeclaration</a>, <a class="el" href="class_bond_1_1_enumerator.html#a0fa3ed6ec3e81f0da0fcbcb16b18496e">Bond::Enumerator</a>, <a class="el" href="class_bond_1_1_enum_declaration.html#a37ab5aaa2a6f53696e313f4c6f4eba37">Bond::EnumDeclaration</a>, and <a class="el" href="class_bond_1_1_namespace_definition.html#a3d2c077f54c3cb78f5f58b0f710c42a6">Bond::NamespaceDefinition</a>.</p>
 
 </div>
 </div>
@@ -531,7 +531,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_bond_1_1_for_statement.html#a66d4bc1f38f465615021372b86368e81">Bond::ForStatement</a>, <a class="el" href="class_bond_1_1_switch_section.html#a92c9b422c74bf989869deb1249c3bf9d">Bond::SwitchSection</a>, <a class="el" href="class_bond_1_1_compound_statement.html#a747ffa5b0895c77c7f0a050a8451ce56">Bond::CompoundStatement</a>, <a class="el" href="class_bond_1_1_named_initializer.html#a1c978aa92302da140e93ffcdf0e60cc4">Bond::NamedInitializer</a>, <a class="el" href="class_bond_1_1_parameter.html#adf2ad65d61b7f256938428e3fde27ffc">Bond::Parameter</a>, <a class="el" href="class_bond_1_1_function_definition.html#a2083c1304454b1a14692519f3ad8afa5">Bond::FunctionDefinition</a>, <a class="el" href="class_bond_1_1_struct_declaration.html#a901cf392b87e4c25806548332a948384">Bond::StructDeclaration</a>, <a class="el" href="class_bond_1_1_enumerator.html#a07f77d353f4461c2722efaa65612bb0c">Bond::Enumerator</a>, <a class="el" href="class_bond_1_1_enum_declaration.html#ac595969f165b488762784f945624b31e">Bond::EnumDeclaration</a>, and <a class="el" href="class_bond_1_1_namespace_definition.html#afa5b45ef27c82eac95de4ec0e44b347c">Bond::NamespaceDefinition</a>.</p>
+<p>Implemented in <a class="el" href="class_bond_1_1_for_statement.html#a87d51de270ecc4437439d6fd3aca14d8">Bond::ForStatement</a>, <a class="el" href="class_bond_1_1_switch_section.html#a1a7c52045b6f14029380233dae22b84f">Bond::SwitchSection</a>, <a class="el" href="class_bond_1_1_compound_statement.html#aa0daa37d2d91d30c6351dc7cc0b22438">Bond::CompoundStatement</a>, <a class="el" href="class_bond_1_1_named_initializer.html#ad97a83ca06a7bf70e7af3f1a01a828d6">Bond::NamedInitializer</a>, <a class="el" href="class_bond_1_1_parameter.html#a943122b9ec66a31ba736b9a6ddb39251">Bond::Parameter</a>, <a class="el" href="class_bond_1_1_function_definition.html#a77e65478e05587e890fac7a2b30cae4a">Bond::FunctionDefinition</a>, <a class="el" href="class_bond_1_1_struct_declaration.html#ade23da8d0ece9019c38ab0eda5a89fe6">Bond::StructDeclaration</a>, <a class="el" href="class_bond_1_1_enumerator.html#aae8e3b3b1d99f9b5ec64c0561e13b607">Bond::Enumerator</a>, <a class="el" href="class_bond_1_1_enum_declaration.html#a4cb1932b775d989547fe3fd0479a7833">Bond::EnumDeclaration</a>, and <a class="el" href="class_bond_1_1_namespace_definition.html#af6952a946fda7b095ac4682ea0fa1538">Bond::NamespaceDefinition</a>.</p>
 
 </div>
 </div>
@@ -558,7 +558,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_bond_1_1_named_initializer.html#a56e773369a0d78e7dc148fc9ae9e8bc0">Bond::NamedInitializer</a>, <a class="el" href="class_bond_1_1_parameter.html#a49976b6899f6a11a8dcaa6cb59ae2e49">Bond::Parameter</a>, <a class="el" href="class_bond_1_1_function_definition.html#a93567bdf3c18593786fc28c4081579b8">Bond::FunctionDefinition</a>, and <a class="el" href="class_bond_1_1_enumerator.html#a7a777f4595ddfca20fb95c36f84f912f">Bond::Enumerator</a>.</p>
+<p>Reimplemented in <a class="el" href="class_bond_1_1_named_initializer.html#a041710d3e3ff1f1686cbcc8e977fa631">Bond::NamedInitializer</a>, <a class="el" href="class_bond_1_1_parameter.html#afc7ba86fa0c84aed68e16e7137b73b87">Bond::Parameter</a>, <a class="el" href="class_bond_1_1_function_definition.html#a93c81e5a2321ba3bf53edaeaa3fcc0e3">Bond::FunctionDefinition</a>, and <a class="el" href="class_bond_1_1_enumerator.html#af16fe56ff3b952d7b4b47ca0724d12cd">Bond::Enumerator</a>.</p>
 
 </div>
 </div>
@@ -585,7 +585,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_bond_1_1_named_initializer.html#a7b68e5020bdb158fab35cbbfacfb7344">Bond::NamedInitializer</a>, <a class="el" href="class_bond_1_1_parameter.html#aacd7a876649c373c4d96213b130182c9">Bond::Parameter</a>, <a class="el" href="class_bond_1_1_function_definition.html#aed4315f0b8e38578d502a8bba99429c2">Bond::FunctionDefinition</a>, and <a class="el" href="class_bond_1_1_enumerator.html#aad88f21017a8fe17fdd2d2aee9e2075a">Bond::Enumerator</a>.</p>
+<p>Reimplemented in <a class="el" href="class_bond_1_1_named_initializer.html#abcf3e9fbb50c5e5bf02986318c8ab455">Bond::NamedInitializer</a>, <a class="el" href="class_bond_1_1_parameter.html#acbae3b70e8717761eff0a0f3dbc84193">Bond::Parameter</a>, <a class="el" href="class_bond_1_1_function_definition.html#a0703c82407ac043eafbd31366f01a837">Bond::FunctionDefinition</a>, and <a class="el" href="class_bond_1_1_enumerator.html#adc3e2037a0945255ee6f1495839aa1b7">Bond::Enumerator</a>.</p>
 
 </div>
 </div>
@@ -655,7 +655,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_bond_1_1_struct_declaration.html#ae2b5b66e3af65ed7d94179705c20ccb6">Bond::StructDeclaration</a>.</p>
+<p>Reimplemented in <a class="el" href="class_bond_1_1_struct_declaration.html#a4d8670b00b6518130b5f4aa14c9ee83e">Bond::StructDeclaration</a>.</p>
 
 </div>
 </div>

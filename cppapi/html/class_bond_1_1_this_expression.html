@@ -114,12 +114,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad249cd51bccf2ebdeafaf1aed09c50c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34560a8d0c0e5c5093419f094ca90a2c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_this_expression.html#a34560a8d0c0e5c5093419f094ca90a2c">~ThisExpression</a> ()</td></tr>
 <tr class="separator:a34560a8d0c0e5c5093419f094ca90a2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a371d7ffdefa95228c267646c1908e304"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_this_expression.html#a371d7ffdefa95228c267646c1908e304">Accept</a> (<a class="el" href="class_bond_1_1_parse_node_visitor.html">ParseNodeVisitor</a> &amp;visitor)</td></tr>
-<tr class="separator:a371d7ffdefa95228c267646c1908e304"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64c0e96e432885d55685b217b85a3ee4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_this_expression.html#a64c0e96e432885d55685b217b85a3ee4">Accept</a> (<a class="el" href="class_bond_1_1_parse_node_visitor.html">ParseNodeVisitor</a> &amp;visitor) const</td></tr>
-<tr class="separator:a64c0e96e432885d55685b217b85a3ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf485fad6c6dbb068915439c2a3c422f"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="class_bond_1_1_token.html">Token</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_this_expression.html#acf485fad6c6dbb068915439c2a3c422f">GetContextToken</a> () const</td></tr>
-<tr class="separator:acf485fad6c6dbb068915439c2a3c422f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31679b4034dc775e38b862d8f86bfade"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_this_expression.html#a31679b4034dc775e38b862d8f86bfade">Accept</a> (<a class="el" href="class_bond_1_1_parse_node_visitor.html">ParseNodeVisitor</a> &amp;visitor) override</td></tr>
+<tr class="separator:a31679b4034dc775e38b862d8f86bfade"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb9533af49698915cfb6782b573190bd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_this_expression.html#adb9533af49698915cfb6782b573190bd">Accept</a> (<a class="el" href="class_bond_1_1_parse_node_visitor.html">ParseNodeVisitor</a> &amp;visitor) const override</td></tr>
+<tr class="separator:adb9533af49698915cfb6782b573190bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d4d231d7b41d5df88d90576f9f20f09"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="class_bond_1_1_token.html">Token</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_this_expression.html#a6d4d231d7b41d5df88d90576f9f20f09">GetContextToken</a> () const override</td></tr>
+<tr class="separator:a6d4d231d7b41d5df88d90576f9f20f09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_bond_1_1_expression"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_bond_1_1_expression')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_bond_1_1_expression.html">Bond::Expression</a></td></tr>
 <tr class="memitem:a1494c1abbd56f1dda75e6b7f28b39241 inherit pub_methods_class_bond_1_1_expression"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_expression.html#a1494c1abbd56f1dda75e6b7f28b39241">~Expression</a> ()</td></tr>
 <tr class="separator:a1494c1abbd56f1dda75e6b7f28b39241 inherit pub_methods_class_bond_1_1_expression"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -176,7 +176,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -209,8 +209,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a371d7ffdefa95228c267646c1908e304"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a371d7ffdefa95228c267646c1908e304">&#9670;&nbsp;</a></span>Accept() <span class="overload">[1/2]</span></h2>
+<a id="a31679b4034dc775e38b862d8f86bfade"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31679b4034dc775e38b862d8f86bfade">&#9670;&nbsp;</a></span>Accept() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -228,7 +228,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -237,8 +237,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a64c0e96e432885d55685b217b85a3ee4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64c0e96e432885d55685b217b85a3ee4">&#9670;&nbsp;</a></span>Accept() <span class="overload">[2/2]</span></h2>
+<a id="adb9533af49698915cfb6782b573190bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb9533af49698915cfb6782b573190bd">&#9670;&nbsp;</a></span>Accept() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -256,7 +256,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -265,8 +265,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="acf485fad6c6dbb068915439c2a3c422f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf485fad6c6dbb068915439c2a3c422f">&#9670;&nbsp;</a></span>GetContextToken()</h2>
+<a id="a6d4d231d7b41d5df88d90576f9f20f09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d4d231d7b41d5df88d90576f9f20f09">&#9670;&nbsp;</a></span>GetContextToken()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -283,7 +283,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
