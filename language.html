@@ -403,6 +403,8 @@ x = x + 1;
 
 // The value of x is now 1.</pre>
 
+<p>The value assigned to a variable must be of an appropriate type, meaning that it has exactly the same type as the variable or that converting a numerical value from one type to another would not lead to a loss of data. For example, assigning a value of type <span class="token">double</span> to a variable of type <span class="token">int</span> would truncate the fractional part of the value, a value of type <span class="token">int</span> cannot fit into a <span class="token">short</span> since the latter's range is smaller, and an <span class="token">int</span> would lose its sign when assigned to a <span class="token">uint</span>. Conversely, assigning an <span class="token">int</span> to a <span class="token">double</span> and a <span class="token">short</span> to an <span class="token">int</span> are both acceptable since they are lossless operations. Assigning a <span class="token">uint</span> to an <span class="token">int</span> remains unsafe since both types can represent values that cannot be represented by the other.</p>
+
 <p>A variable declared with the keyword <span class="token">const</span> cannot have its value changed after it has been initialized.</p>
 
 <pre class="code">const double PI = 3.14159;
@@ -1065,7 +1067,7 @@ b is: 7</pre>
 
 <pre class="code">int a = 0;
 int b = 0;
-for (int i = 0; i < 10; ++i)
+for (int i = 0; i &lt; 10; ++i)
 {
     ++a;
     if ((i % 3) == 0)
@@ -1093,10 +1095,10 @@ b is: 6</pre>
 
 <pre class="code">return_type function_name ( param_type1 param_name1, param_type2 param_name2 … )
 {
-	statements
+    statements
 }</pre>
 
-<p>The first element of a function definition is its return type. When a function performs work and returns a result, the return type specifies the type of value that is returned. If the function does not return a value, then the return type should be specified using the <span class="token">void</token> keyword.</p>
+<p>The first element of a function definition is its return type. When a function performs work and returns a result, the return type specifies the type of value that is returned. If the function does not return a value, then the return type should be specified using the <span class="token">void</span> keyword.</p>
 
 <p>The next element of a function definition is its name. As with variable names, the name must be a valid identifier that is not a reserved keyword. A function's name is used to call it to when it is needed to perform work.</p>
 
@@ -1106,12 +1108,73 @@ b is: 6</pre>
 
 <p>Functions that return a value must end with a return statement. A return statement consists of the return keyword followed by an expression whose value is returned to the caller. The type of the expression must match the function's return type.</p>
 
-<pre class="code">double Square(double x)
+<pre class="code">// A trivial example of a function with no parameters.
+double GetThreePointNine()
 {
-	return x * x;
+    return 3.9f;
+}
+
+// A function with a single parameter.
+double Square(double x)
+{
+    return x * x;
+}
+
+// A function with two parameters.
+double Multiply(double x, double y)
+{
+    return x * y;
+}
+
+// A function with multiple return paths.
+double Max(double x, double y)
+{
+    if (x &gt; y)
+    {
+        return x;
+    }
+    return y;
 }</pre>
 
 <h4 id="function_calls">Function Calls</h4>
+<p>While a function definition specifies what a function does, a function call is an expression that invokes the function to perform work. When a function is called, program execution transfers from the call site to the top of the function and continues until the bottom of the function or a return statement is reached. When finished, program execution returns to the call site and the function's return value becomes the value of the function call expression.</p>
+
+<p>In code, a function call consist of the function's name followed by an argument list in parentheses. The argument list is a list of comma separated values that are assigned to the parameters in the function's parameter list. As with assigning a value to variable, the type of a function argument must be compatible with the type of the parameter to which it is assigned. Even if the called function has no parameters, the parentheses are not optional.</p>
+
+<pre class="code">double value = GetThreePointNine();
+double valueTimesTwo = Multiply(value, 2.0);</pre>
+
+<p>Since the value of function arguments are copied into their respective parameters which are variables local to a function, a function cannot modify the arguments, only its local copies of them.</p>
+
+<pre class="code">void AssignToParameter(int value)
+{
+    // This only modifies our local copy of the argument assigned to the parameter named value.
+    value = 3;
+}
+
+void TryToModifyAFunctionArgument()
+{
+    int a = 1;
+    AssignToParameter(a);
+
+    // b is assigned the value 1 since a was not modified by the function call.
+    int b = a;
+}</pre>
+
+<p>To give functions the ability to modify data, pointers can be passed as function arguments. This topic is covered in the <a href="#pointer_types">Pointer Types</a> section.</p>
+
+<p>Function calls can appear anywhere that an expression is expected. Functions can call other functions, and can also call themselves in a pattern known as recursion. To end the recursion, recursive functions must test a base case.</p>
+
+<pre class="code">int Factorial(int n)
+{
+    // Test for the base case to end the recursion.
+    if (n &lt;= 1)
+    {
+        return 1;
+    }
+    // Otherwise, recurse.
+    return n * Factorial(n - 1);
+}</pre>
 
 <h3 id="data_types">Data Types</h3>
 <p>Bond is a statically typed language, so every variable and expression has a type known at compile time. Bond is also strongly typed, meaning that values of one type will not be implicitly converted to another type (e.g. during a variable assignment or when passing an argument to a function) if it could lead to a loss of data. An example where a loss of data could occur is when a numeric value of one type is converted to another, such as the loss of the fractional part of a floating-point number in a conversion to an <span class="token">int</span>, or the truncation of an <span class="token">int</span> to a <span class="token">short</span>. Such conversions are allowed, however, the programmer is required to use an explicit cast to demonstrate intent, otherwise the compiler will generate an error.</p>
