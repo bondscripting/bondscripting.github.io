@@ -1,7 +1,6 @@
 var searchData=
 [
   ['semanticanalyzer',['SemanticAnalyzer',['../class_bond_1_1_semantic_analyzer.html',1,'Bond']]],
-  ['simplestring',['SimpleString',['../class_bond_1_1_simple_string.html',1,'Bond']]],
   ['stackframe',['StackFrame',['../class_bond_1_1_stack_frame.html',1,'Bond']]],
   ['stderroutputstream',['StdErrOutputStream',['../class_bond_1_1_std_err_output_stream.html',1,'Bond']]],
   ['stdininputstream',['StdInInputStream',['../class_bond_1_1_std_in_input_stream.html',1,'Bond']]],
@@ -13,6 +12,7 @@ var searchData=
   ['stream',['Stream',['../class_bond_1_1_stream.html',1,'Bond']]],
   ['streamfactory',['StreamFactory',['../class_bond_1_1_stream_factory.html',1,'Bond']]],
   ['streampos',['StreamPos',['../struct_bond_1_1_stream_pos.html',1,'Bond']]],
+  ['stringview',['StringView',['../class_bond_1_1_string_view.html',1,'Bond']]],
   ['structdeclaration',['StructDeclaration',['../class_bond_1_1_struct_declaration.html',1,'Bond']]],
   ['switchlabel',['SwitchLabel',['../class_bond_1_1_switch_label.html',1,'Bond']]],
   ['switchsection',['SwitchSection',['../class_bond_1_1_switch_section.html',1,'Bond']]],

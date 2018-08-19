@@ -109,12 +109,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a85bbaf5a12f77a32943fbfaa27ba94ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34da6cac0bc72c7b0e220682eaaf331e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_bond_1_1_front_end.html">FrontEnd</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_front_end.html#a34da6cac0bc72c7b0e220682eaaf331e">operator=</a> (const <a class="el" href="class_bond_1_1_front_end.html">FrontEnd</a> &amp;other)=delete</td></tr>
 <tr class="separator:a34da6cac0bc72c7b0e220682eaaf331e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8791e6e2edd528285f6163c156eb6cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_front_end.html#af8791e6e2edd528285f6163c156eb6cd">AddInputFile</a> (const <a class="el" href="class_bond_1_1_simple_string.html">SimpleString</a> &amp;inputFileName)</td></tr>
-<tr class="memdesc:af8791e6e2edd528285f6163c156eb6cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the name of a <a class="el" href="namespace_bond.html">Bond</a> source file to the input file list.  <a href="#af8791e6e2edd528285f6163c156eb6cd">More...</a><br /></td></tr>
-<tr class="separator:af8791e6e2edd528285f6163c156eb6cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a578cc6d3da6c0e851c3c37beb3f0a913"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_front_end.html#a578cc6d3da6c0e851c3c37beb3f0a913">ContainsInputFile</a> (const <a class="el" href="class_bond_1_1_simple_string.html">SimpleString</a> &amp;inputFileName)</td></tr>
-<tr class="memdesc:a578cc6d3da6c0e851c3c37beb3f0a913"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the given file name exists in the input file list..  <a href="#a578cc6d3da6c0e851c3c37beb3f0a913">More...</a><br /></td></tr>
-<tr class="separator:a578cc6d3da6c0e851c3c37beb3f0a913"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb36056168a366cfaf12e959f8a502b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_front_end.html#acb36056168a366cfaf12e959f8a502b5">AddInputFile</a> (const <a class="el" href="class_bond_1_1_string_view.html">StringView</a> &amp;inputFileName)</td></tr>
+<tr class="memdesc:acb36056168a366cfaf12e959f8a502b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the name of a <a class="el" href="namespace_bond.html">Bond</a> source file to the input file list.  <a href="#acb36056168a366cfaf12e959f8a502b5">More...</a><br /></td></tr>
+<tr class="separator:acb36056168a366cfaf12e959f8a502b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a090af3eeba8ef7257af6bf67a79dac09"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_front_end.html#a090af3eeba8ef7257af6bf67a79dac09">ContainsInputFile</a> (const <a class="el" href="class_bond_1_1_string_view.html">StringView</a> &amp;inputFileName)</td></tr>
+<tr class="memdesc:a090af3eeba8ef7257af6bf67a79dac09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the given file name exists in the input file list..  <a href="#a090af3eeba8ef7257af6bf67a79dac09">More...</a><br /></td></tr>
+<tr class="separator:a090af3eeba8ef7257af6bf67a79dac09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a170c4012697130fc4192909fef6f28b3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_bond_1_1_translation_unit.html">TranslationUnit</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_front_end.html#a170c4012697130fc4192909fef6f28b3">Analyze</a> ()</td></tr>
 <tr class="memdesc:a170c4012697130fc4192909fef6f28b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs loading, parsing and semantic analysis of all source files in the input file list, as well as those files referenced via include directives. returns A parse tree of ParseNodes rooted with a list of TranslationUnits.  <a href="#a170c4012697130fc4192909fef6f28b3">More...</a><br /></td></tr>
 <tr class="separator:a170c4012697130fc4192909fef6f28b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -230,8 +230,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="af8791e6e2edd528285f6163c156eb6cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8791e6e2edd528285f6163c156eb6cd">&#9670;&nbsp;</a></span>AddInputFile()</h2>
+<a id="acb36056168a366cfaf12e959f8a502b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb36056168a366cfaf12e959f8a502b5">&#9670;&nbsp;</a></span>AddInputFile()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -239,7 +239,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void Bond::FrontEnd::AddInputFile </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_bond_1_1_simple_string.html">SimpleString</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_bond_1_1_string_view.html">StringView</a> &amp;&#160;</td>
           <td class="paramname"><em>inputFileName</em></td><td>)</td>
           <td></td>
         </tr>
@@ -249,7 +249,7 @@ Public Member Functions</h2></td></tr>
 <p>Adds the name of a <a class="el" href="namespace_bond.html">Bond</a> source file to the input file list. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">inputFileName</td><td>The name of the file to be loaded. Since SimpleStrings are not deep copied, the lifetime of the string must at last span the lifetime of the <a class="el" href="class_bond_1_1_front_end.html" title="A compiler front end for the Bond scripting language. ">FrontEnd</a>. </td></tr>
+    <tr><td class="paramname">inputFileName</td><td>The name of the file to be loaded. Since StringViews are not deep copied, the lifetime of the string must at least span the lifetime of the <a class="el" href="class_bond_1_1_front_end.html" title="A compiler front end for the Bond scripting language. ">FrontEnd</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -275,8 +275,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a578cc6d3da6c0e851c3c37beb3f0a913"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a578cc6d3da6c0e851c3c37beb3f0a913">&#9670;&nbsp;</a></span>ContainsInputFile()</h2>
+<a id="a090af3eeba8ef7257af6bf67a79dac09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a090af3eeba8ef7257af6bf67a79dac09">&#9670;&nbsp;</a></span>ContainsInputFile()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -284,7 +284,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">bool Bond::FrontEnd::ContainsInputFile </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_bond_1_1_simple_string.html">SimpleString</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_bond_1_1_string_view.html">StringView</a> &amp;&#160;</td>
           <td class="paramname"><em>inputFileName</em></td><td>)</td>
           <td></td>
         </tr>

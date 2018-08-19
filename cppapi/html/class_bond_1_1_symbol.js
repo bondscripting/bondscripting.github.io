@@ -10,8 +10,8 @@ var class_bond_1_1_symbol =
     ] ],
     [ "~Symbol", "class_bond_1_1_symbol.html#a61b5e84991bae8a60edb4af528ef29bd", null ],
     [ "Symbol", "class_bond_1_1_symbol.html#a16d85fe8a9094681f443028b875ec022", null ],
-    [ "FindSymbol", "class_bond_1_1_symbol.html#a142e4b0ce8616d968fb20589aca9a4d7", null ],
-    [ "FindSymbol", "class_bond_1_1_symbol.html#a7f882f0a62e7eb72fb8b720a12055fd1", null ],
+    [ "FindSymbol", "class_bond_1_1_symbol.html#a838a3f3d2787578c3ab04888e39d21ac", null ],
+    [ "FindSymbol", "class_bond_1_1_symbol.html#ac7441db62a061b215fead7215147c979", null ],
     [ "FindSymbol", "class_bond_1_1_symbol.html#aee0def961766006af2b32a4c374679e8", null ],
     [ "FindSymbol", "class_bond_1_1_symbol.html#a93346a0b754f4af8ff13dc528c006fcf", null ],
     [ "FindSymbol", "class_bond_1_1_symbol.html#a8d7f54079521b1aecff3bac9a5811f85", null ],
@@ -27,6 +27,6 @@ var class_bond_1_1_symbol =
     [ "IsAnonymous", "class_bond_1_1_symbol.html#a75e4c9dff783454b2f3f36c09979559b", null ],
     [ "IsResolved", "class_bond_1_1_symbol.html#a78296d8395bc00e5f5d6ba9eaa341bfe", null ],
     [ "IsTypeDefinition", "class_bond_1_1_symbol.html#a63f5d9711d29dbfb77e22c7f7a8d9346", null ],
-    [ "Matches", "class_bond_1_1_symbol.html#a83a354f5dbb3ee43e53474e53e607b3e", null ],
+    [ "Matches", "class_bond_1_1_symbol.html#a3efa23777ea775819738eebef8687850", null ],
     [ "SetParentSymbol", "class_bond_1_1_symbol.html#a011ca3eea92cb34309d14b4c5a71b364", null ]
 ];

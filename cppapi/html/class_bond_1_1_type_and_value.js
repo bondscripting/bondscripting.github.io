@@ -9,7 +9,7 @@ var class_bond_1_1_type_and_value =
     [ "GetFloatValue", "class_bond_1_1_type_and_value.html#a7aac2ecdfc5cc5eee962ff4c169fcc99", null ],
     [ "GetIntValue", "class_bond_1_1_type_and_value.html#ac1853c62281ca26915ab2265dac82d97", null ],
     [ "GetLongValue", "class_bond_1_1_type_and_value.html#a4734ef1f8a1f8f21a25b1dadc5ad5d34", null ],
-    [ "GetStringValue", "class_bond_1_1_type_and_value.html#a263ec82d5f077d7589e6c1baeda35bb6", null ],
+    [ "GetStringValue", "class_bond_1_1_type_and_value.html#afa83b95e179c2a95a26598ba557cb825", null ],
     [ "GetTypeDescriptor", "class_bond_1_1_type_and_value.html#ab19380e0766518e115118dbaeb264079", null ],
     [ "GetTypeDescriptor", "class_bond_1_1_type_and_value.html#aff0fcbd5a0b85388b61d21196e8135db", null ],
     [ "GetUIntValue", "class_bond_1_1_type_and_value.html#a7439cedc5320197c056639f598bd3dbe", null ],

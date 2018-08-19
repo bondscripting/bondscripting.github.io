@@ -149,11 +149,13 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_constant_table.html">ConstantTable</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_data_chunk.html">DataChunk</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_data_chunk_index.html">DataChunkIndex</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_data_entry.html">DataEntry</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_data_view.html">DataView</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An object that encapsulates a pointer to a contiguous blob of binary data and a count of the number of bytes of data.  <a href="struct_bond_1_1_data_view.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_data_view_index.html">DataViewIndex</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An object that encapsulates an array of named constant <a class="el" href="struct_bond_1_1_data_view.html" title="An object that encapsulates a pointer to a contiguous blob of binary data and a count of the number o...">DataView</a> objects.  <a href="struct_bond_1_1_data_view_index.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_declarative_statement.html">DeclarativeStatement</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -219,7 +221,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A concrete implementation of OuputStream that performs ouput operations to an in-memory buffer.  <a href="class_bond_1_1_memory_output_stream.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_memory_stream_factory.html">MemoryStreamFactory</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A concrete implementation of <a class="el" href="class_bond_1_1_stream_factory.html" title="An abstract interface for creating file streams without being coupled to any particular concrete type...">StreamFactory</a> that instantiates MemoryInputStreams for a collection of DataChunks.  <a href="class_bond_1_1_memory_stream_factory.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A concrete implementation of <a class="el" href="class_bond_1_1_stream_factory.html" title="An abstract interface for creating file streams without being coupled to any particular concrete type...">StreamFactory</a> that instantiates MemoryInputStreams for a fixed collection of DataViews.  <a href="class_bond_1_1_memory_stream_factory.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_named_initializer.html">NamedInitializer</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -284,8 +286,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_semantic_analyzer.html">SemanticAnalyzer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A semantic analyzer for a parse tree generated from the <a class="el" href="namespace_bond.html">Bond</a> scripting language.  <a href="class_bond_1_1_semantic_analyzer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_simple_string.html">SimpleString</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_stack_frame.html">StackFrame</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_std_err_output_stream.html">StdErrOutputStream</a></td></tr>
@@ -314,6 +314,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_stream_pos.html">StreamPos</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A POD struct to contain the index, line and column of a token in source code.  <a href="struct_bond_1_1_stream_pos.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_string_view.html">StringView</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A wrapper around a constant array of chars (a.k.a. a constant C-style string).  <a href="class_bond_1_1_string_view.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_struct_declaration.html">StructDeclaration</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1273,8 +1276,8 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a020f3dbe1f80ec7e69d7048ee7f663f0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_bond_1_1_data_chunk_index.html">DataChunkIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#a020f3dbe1f80ec7e69d7048ee7f663f0">INCLUDE_FILE_INDEX</a></td></tr>
-<tr class="separator:a020f3dbe1f80ec7e69d7048ee7f663f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b7c96db9f24be91453c2b72dfaf3f8e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_bond_1_1_data_view_index.html">DataViewIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#a6b7c96db9f24be91453c2b72dfaf3f8e">INCLUDE_FILE_INDEX</a></td></tr>
+<tr class="separator:a6b7c96db9f24be91453c2b72dfaf3f8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15c419622e488dd254d34fe34f808b62"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_bond_1_1_native_binding_collection.html">Bond::NativeBindingCollection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#a15c419622e488dd254d34fe34f808b62">IO_BINDING_COLLECTION</a></td></tr>
 <tr class="separator:a15c419622e488dd254d34fe34f808b62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7bce143e41322e0afae37a93e9bd851"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_bond_1_1_native_binding_collection.html">Bond::NativeBindingCollection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#ab7bce143e41322e0afae37a93e9bd851">MATH_BINDING_COLLECTION</a></td></tr>
@@ -5892,14 +5895,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a020f3dbe1f80ec7e69d7048ee7f663f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a020f3dbe1f80ec7e69d7048ee7f663f0">&#9670;&nbsp;</a></span>INCLUDE_FILE_INDEX</h2>
+<a id="a6b7c96db9f24be91453c2b72dfaf3f8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b7c96db9f24be91453c2b72dfaf3f8e">&#9670;&nbsp;</a></span>INCLUDE_FILE_INDEX</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="struct_bond_1_1_data_chunk_index.html">DataChunkIndex</a> Bond::INCLUDE_FILE_INDEX</td>
+          <td class="memname">const <a class="el" href="struct_bond_1_1_data_view_index.html">DataViewIndex</a> Bond::INCLUDE_FILE_INDEX</td>
         </tr>
       </table>
 </div><div class="memdoc">

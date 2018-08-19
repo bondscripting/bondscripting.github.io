@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['datachunk',['DataChunk',['../struct_bond_1_1_data_chunk.html',1,'Bond::DataChunk'],['../struct_bond_1_1_data_chunk.html#af74271a982eeed907075668c87f6b4de',1,'Bond::DataChunk::DataChunk()'],['../struct_bond_1_1_data_chunk.html#abc11c178f6c429bd430ad7e87b731df0',1,'Bond::DataChunk::DataChunk(const void *data, size_t length)'],['../struct_bond_1_1_data_chunk.html#abd461f462c4bdb55793bee9d3e3cf76e',1,'Bond::DataChunk::DataChunk(const DataChunk &amp;other)=default']]],
-  ['datachunkindex',['DataChunkIndex',['../struct_bond_1_1_data_chunk_index.html',1,'Bond::DataChunkIndex'],['../struct_bond_1_1_data_chunk_index.html#ab80103bda5b9bf7577010b4da1d70799',1,'Bond::DataChunkIndex::DataChunkIndex()']]],
   ['dataentry',['DataEntry',['../struct_bond_1_1_data_entry.html',1,'Bond']]],
+  ['dataview',['DataView',['../struct_bond_1_1_data_view.html',1,'Bond::DataView'],['../struct_bond_1_1_data_view.html#a78a923d1bff8a5420b6d386d2b2193a7',1,'Bond::DataView::DataView()'],['../struct_bond_1_1_data_view.html#a6bb80c28bc9dfcea8c1359d50caa7354',1,'Bond::DataView::DataView(const void *data, size_t length)'],['../struct_bond_1_1_data_view.html#a1eb8cd77564ad0576da327727f0b23bd',1,'Bond::DataView::DataView(const DataView &amp;other)=default']]],
+  ['dataviewindex',['DataViewIndex',['../struct_bond_1_1_data_view_index.html',1,'Bond::DataViewIndex'],['../struct_bond_1_1_data_view_index.html#ac881e449bf6bec7f9a5820675b795292',1,'Bond::DataViewIndex::DataViewIndex()']]],
   ['deallocator',['Deallocator',['../struct_bond_1_1_allocator_1_1_deallocator.html',1,'Bond::Allocator::Deallocator&lt; T &gt;'],['../struct_bond_1_1_allocator_1_1_deallocator.html#a224328f3ddcf2ee4c61def0ff391b57c',1,'Bond::Allocator::Deallocator::Deallocator()']]],
   ['dec',['Dec',['../namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a7dcac6c8fd112841d484de37ae390c62',1,'Bond::IO']]],
   ['declaration_5fdelimiters_5ftypeset',['DECLARATION_DELIMITERS_TYPESET',['../group__compiler.html#ga8ac741c1ed3a1a7c22280bb60d6d5cf5',1,'Bond']]],

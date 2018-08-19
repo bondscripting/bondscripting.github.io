@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Bond: Bond::DataChunk Struct Reference</title>
+<title>Bond: Bond::DataView Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -68,7 +68,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('struct_bond_1_1_data_chunk.html','');});
+$(document).ready(function(){initNavTree('struct_bond_1_1_data_view.html','');});
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -90,35 +90,41 @@ $(document).ready(function(){initNavTree('struct_bond_1_1_data_chunk.html','');}
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="struct_bond_1_1_data_chunk-members.html">List of all members</a>  </div>
+<a href="struct_bond_1_1_data_view-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Bond::DataChunk Struct Reference</div>  </div>
+<div class="title">Bond::DataView Struct Reference<div class="ingroups"><a class="el" href="group__types.html">Types</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;bond/types/datachunk.h&gt;</code></p>
+<p>An object that encapsulates a pointer to a contiguous blob of binary data and a count of the number of bytes of data.  
+ <a href="struct_bond_1_1_data_view.html#details">More...</a></p>
+
+<p><code>#include &lt;bond/types/dataview.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af74271a982eeed907075668c87f6b4de"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_data_chunk.html#af74271a982eeed907075668c87f6b4de">DataChunk</a> ()</td></tr>
-<tr class="separator:af74271a982eeed907075668c87f6b4de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc11c178f6c429bd430ad7e87b731df0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_data_chunk.html#abc11c178f6c429bd430ad7e87b731df0">DataChunk</a> (const void *data, size_t length)</td></tr>
-<tr class="separator:abc11c178f6c429bd430ad7e87b731df0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd461f462c4bdb55793bee9d3e3cf76e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_data_chunk.html#abd461f462c4bdb55793bee9d3e3cf76e">DataChunk</a> (const <a class="el" href="struct_bond_1_1_data_chunk.html">DataChunk</a> &amp;other)=default</td></tr>
-<tr class="separator:abd461f462c4bdb55793bee9d3e3cf76e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c4845b64aa75d30263a19bf601003e3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_data_chunk.html#a7c4845b64aa75d30263a19bf601003e3">operator==</a> (const <a class="el" href="struct_bond_1_1_data_chunk.html">DataChunk</a> &amp;other) const</td></tr>
-<tr class="separator:a7c4845b64aa75d30263a19bf601003e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78a923d1bff8a5420b6d386d2b2193a7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_data_view.html#a78a923d1bff8a5420b6d386d2b2193a7">DataView</a> ()</td></tr>
+<tr class="separator:a78a923d1bff8a5420b6d386d2b2193a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bb80c28bc9dfcea8c1359d50caa7354"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_data_view.html#a6bb80c28bc9dfcea8c1359d50caa7354">DataView</a> (const void *data, size_t length)</td></tr>
+<tr class="separator:a6bb80c28bc9dfcea8c1359d50caa7354"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1eb8cd77564ad0576da327727f0b23bd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_data_view.html#a1eb8cd77564ad0576da327727f0b23bd">DataView</a> (const <a class="el" href="struct_bond_1_1_data_view.html">DataView</a> &amp;other)=default</td></tr>
+<tr class="separator:a1eb8cd77564ad0576da327727f0b23bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd75a37a2ab0a7215511af16d35d1316"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_data_view.html#abd75a37a2ab0a7215511af16d35d1316">operator==</a> (const <a class="el" href="struct_bond_1_1_data_view.html">DataView</a> &amp;other) const</td></tr>
+<tr class="separator:abd75a37a2ab0a7215511af16d35d1316"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a56c49df35d0203b37ea8c56020fefaa2"><td class="memItemLeft" align="right" valign="top">const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_data_chunk.html#a56c49df35d0203b37ea8c56020fefaa2">mData</a></td></tr>
-<tr class="separator:a56c49df35d0203b37ea8c56020fefaa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11fc0962ccb7a5df7aad2cb4d7f1bd5a"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_data_chunk.html#a11fc0962ccb7a5df7aad2cb4d7f1bd5a">mLength</a></td></tr>
-<tr class="separator:a11fc0962ccb7a5df7aad2cb4d7f1bd5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a404260ee12d6d1c93ad20bfc38beaf48"><td class="memItemLeft" align="right" valign="top">const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_data_view.html#a404260ee12d6d1c93ad20bfc38beaf48">mData</a></td></tr>
+<tr class="separator:a404260ee12d6d1c93ad20bfc38beaf48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3bde06b78ee8f4b2c97eb891533cc14"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_data_view.html#ad3bde06b78ee8f4b2c97eb891533cc14">mLength</a></td></tr>
+<tr class="separator:ad3bde06b78ee8f4b2c97eb891533cc14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="af74271a982eeed907075668c87f6b4de"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af74271a982eeed907075668c87f6b4de">&#9670;&nbsp;</a></span>DataChunk() <span class="overload">[1/3]</span></h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>An object that encapsulates a pointer to a contiguous blob of binary data and a count of the number of bytes of data. </p>
+<p><a class="el" href="struct_bond_1_1_data_view.html" title="An object that encapsulates a pointer to a contiguous blob of binary data and a count of the number o...">DataView</a> does not perform any allocations; it contains a pointer to an existing block of memory whose lifetime must superseed that of the <a class="el" href="struct_bond_1_1_data_view.html" title="An object that encapsulates a pointer to a contiguous blob of binary data and a count of the number o...">DataView</a>. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a78a923d1bff8a5420b6d386d2b2193a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78a923d1bff8a5420b6d386d2b2193a7">&#9670;&nbsp;</a></span>DataView() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -127,7 +133,7 @@ Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Bond::DataChunk::DataChunk </td>
+          <td class="memname">Bond::DataView::DataView </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -142,8 +148,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="abc11c178f6c429bd430ad7e87b731df0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc11c178f6c429bd430ad7e87b731df0">&#9670;&nbsp;</a></span>DataChunk() <span class="overload">[2/3]</span></h2>
+<a id="a6bb80c28bc9dfcea8c1359d50caa7354"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bb80c28bc9dfcea8c1359d50caa7354">&#9670;&nbsp;</a></span>DataView() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -152,7 +158,7 @@ Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Bond::DataChunk::DataChunk </td>
+          <td class="memname">Bond::DataView::DataView </td>
           <td>(</td>
           <td class="paramtype">const void *&#160;</td>
           <td class="paramname"><em>data</em>, </td>
@@ -178,8 +184,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="abd461f462c4bdb55793bee9d3e3cf76e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd461f462c4bdb55793bee9d3e3cf76e">&#9670;&nbsp;</a></span>DataChunk() <span class="overload">[3/3]</span></h2>
+<a id="a1eb8cd77564ad0576da327727f0b23bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1eb8cd77564ad0576da327727f0b23bd">&#9670;&nbsp;</a></span>DataView() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -188,9 +194,9 @@ Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Bond::DataChunk::DataChunk </td>
+          <td class="memname">Bond::DataView::DataView </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_bond_1_1_data_chunk.html">DataChunk</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="struct_bond_1_1_data_view.html">DataView</a> &amp;&#160;</td>
           <td class="paramname"><em>other</em></td><td>)</td>
           <td></td>
         </tr>
@@ -205,8 +211,8 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a7c4845b64aa75d30263a19bf601003e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7c4845b64aa75d30263a19bf601003e3">&#9670;&nbsp;</a></span>operator==()</h2>
+<a id="abd75a37a2ab0a7215511af16d35d1316"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd75a37a2ab0a7215511af16d35d1316">&#9670;&nbsp;</a></span>operator==()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -215,9 +221,9 @@ Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Bond::DataChunk::operator== </td>
+          <td class="memname">bool Bond::DataView::operator== </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_bond_1_1_data_chunk.html">DataChunk</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="struct_bond_1_1_data_view.html">DataView</a> &amp;&#160;</td>
           <td class="paramname"><em>other</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -232,28 +238,28 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a56c49df35d0203b37ea8c56020fefaa2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a56c49df35d0203b37ea8c56020fefaa2">&#9670;&nbsp;</a></span>mData</h2>
+<a id="a404260ee12d6d1c93ad20bfc38beaf48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a404260ee12d6d1c93ad20bfc38beaf48">&#9670;&nbsp;</a></span>mData</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const void* Bond::DataChunk::mData</td>
+          <td class="memname">const void* Bond::DataView::mData</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a11fc0962ccb7a5df7aad2cb4d7f1bd5a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11fc0962ccb7a5df7aad2cb4d7f1bd5a">&#9670;&nbsp;</a></span>mLength</h2>
+<a id="ad3bde06b78ee8f4b2c97eb891533cc14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3bde06b78ee8f4b2c97eb891533cc14">&#9670;&nbsp;</a></span>mLength</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">size_t Bond::DataChunk::mLength</td>
+          <td class="memname">size_t Bond::DataView::mLength</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -261,7 +267,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>include/bond/types/datachunk.h</li>
+<li>include/bond/types/dataview.h</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -269,7 +275,7 @@ Public Attributes</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespace_bond.html">Bond</a></li><li class="navelem"><a class="el" href="struct_bond_1_1_data_chunk.html">DataChunk</a></li>
+    <li class="navelem"><a class="el" href="namespace_bond.html">Bond</a></li><li class="navelem"><a class="el" href="struct_bond_1_1_data_view.html">DataView</a></li>
     <li class="footer"></li>
   </ul>
 </div>

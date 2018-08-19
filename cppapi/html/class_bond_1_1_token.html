@@ -242,9 +242,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a02fc7a1aa886a0564b1d12480d605dd2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_token.html#a02fc7a1aa886a0564b1d12480d605dd2">Token</a> (const <a class="el" href="struct_bond_1_1_stream_pos.html">StreamPos</a> &amp;startPos, const <a class="el" href="struct_bond_1_1_stream_pos.html">StreamPos</a> &amp;endPos, const <a class="el" href="union_bond_1_1_value.html">Value</a> &amp;value, const char *text, const char *fileName, <a class="el" href="class_bond_1_1_token.html#a6d09a1144b5a79476ae9c8056728362f">TokenType</a> tokenType, short annotations=0)</td></tr>
 <tr class="memdesc:a02fc7a1aa886a0564b1d12480d605dd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a fully described token.  <a href="#a02fc7a1aa886a0564b1d12480d605dd2">More...</a><br /></td></tr>
 <tr class="separator:a02fc7a1aa886a0564b1d12480d605dd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a445f08453cc9eda3c700f8f75bb6af0b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_bond_1_1_simple_string.html">SimpleString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_token.html#a445f08453cc9eda3c700f8f75bb6af0b">GetText</a> () const</td></tr>
-<tr class="memdesc:a445f08453cc9eda3c700f8f75bb6af0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the text that forms the token as it appears in the <a class="el" href="namespace_bond.html">Bond</a> source.  <a href="#a445f08453cc9eda3c700f8f75bb6af0b">More...</a><br /></td></tr>
-<tr class="separator:a445f08453cc9eda3c700f8f75bb6af0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a288a0ed9aed4f36cb3051d1638ef82a0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_bond_1_1_string_view.html">StringView</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_token.html#a288a0ed9aed4f36cb3051d1638ef82a0">GetText</a> () const</td></tr>
+<tr class="memdesc:a288a0ed9aed4f36cb3051d1638ef82a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the text that forms the token as it appears in the <a class="el" href="namespace_bond.html">Bond</a> source.  <a href="#a288a0ed9aed4f36cb3051d1638ef82a0">More...</a><br /></td></tr>
+<tr class="separator:a288a0ed9aed4f36cb3051d1638ef82a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab7c917ae5a1929a7c28efc634c46f45"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_token.html#aab7c917ae5a1929a7c28efc634c46f45">GetRawText</a> () const</td></tr>
 <tr class="memdesc:aab7c917ae5a1929a7c28efc634c46f45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like GetText, but returns the text as a C-style string. The text may be truncated if it contains a null character.  <a href="#aab7c917ae5a1929a7c28efc634c46f45">More...</a><br /></td></tr>
 <tr class="separator:aab7c917ae5a1929a7c28efc634c46f45"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -329,15 +329,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aadec59a2f0b1e1e6dca32de3cc21f747"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_token.html#aadec59a2f0b1e1e6dca32de3cc21f747">SetDoubleValue</a> (double value)</td></tr>
 <tr class="memdesc:aadec59a2f0b1e1e6dca32de3cc21f747"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns the floating point value of the <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords, identifiers, literal constants and operators). ">Token</a>. Valid only for Tokens of type <code>CONST_DOUBLE</code>.  <a href="#aadec59a2f0b1e1e6dca32de3cc21f747">More...</a><br /></td></tr>
 <tr class="separator:aadec59a2f0b1e1e6dca32de3cc21f747"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2f18fd5973eba9d5f620d4415ee4ee9"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_bond_1_1_simple_string.html">SimpleString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_token.html#ac2f18fd5973eba9d5f620d4415ee4ee9">GetStringValue</a> () const</td></tr>
-<tr class="memdesc:ac2f18fd5973eba9d5f620d4415ee4ee9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the string value of the <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords, identifiers, literal constants and operators). ">Token</a>. Valid only for Tokens of type <code>CONST_STRING</code>.  <a href="#ac2f18fd5973eba9d5f620d4415ee4ee9">More...</a><br /></td></tr>
-<tr class="separator:ac2f18fd5973eba9d5f620d4415ee4ee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c2539a5a52f26685d7713431ebdbcee"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_bond_1_1_string_view.html">StringView</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_token.html#a4c2539a5a52f26685d7713431ebdbcee">GetStringValue</a> () const</td></tr>
+<tr class="memdesc:a4c2539a5a52f26685d7713431ebdbcee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the string value of the <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords, identifiers, literal constants and operators). ">Token</a>. Valid only for Tokens of type <code>CONST_STRING</code>.  <a href="#a4c2539a5a52f26685d7713431ebdbcee">More...</a><br /></td></tr>
+<tr class="separator:a4c2539a5a52f26685d7713431ebdbcee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25d5844dd6bb8c5d6a5b021065c60100"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_token.html#a25d5844dd6bb8c5d6a5b021065c60100">GetStringLength</a> () const</td></tr>
-<tr class="memdesc:a25d5844dd6bb8c5d6a5b021065c60100"><td class="mdescLeft">&#160;</td><td class="mdescRight">A short-hand for <a class="el" href="class_bond_1_1_token.html#ac2f18fd5973eba9d5f620d4415ee4ee9" title="Returns the string value of the Token. Valid only for Tokens of type CONST_STRING. ">GetStringValue()</a>.<a class="el" href="group__compiler.html#ga60b58a6d92a8dd0542204be19988f4fb" title="Counts and returns the length of a list of ListParseNodes. ">GetLength()</a>.  <a href="#a25d5844dd6bb8c5d6a5b021065c60100">More...</a><br /></td></tr>
+<tr class="memdesc:a25d5844dd6bb8c5d6a5b021065c60100"><td class="mdescLeft">&#160;</td><td class="mdescRight">A short-hand for <a class="el" href="class_bond_1_1_token.html#a4c2539a5a52f26685d7713431ebdbcee" title="Returns the string value of the Token. Valid only for Tokens of type CONST_STRING. ">GetStringValue()</a>.<a class="el" href="group__compiler.html#ga60b58a6d92a8dd0542204be19988f4fb" title="Counts and returns the length of a list of ListParseNodes. ">GetLength()</a>.  <a href="#a25d5844dd6bb8c5d6a5b021065c60100">More...</a><br /></td></tr>
 <tr class="separator:a25d5844dd6bb8c5d6a5b021065c60100"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfff6cc6609ccc87541e568d1c823680"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_token.html#adfff6cc6609ccc87541e568d1c823680">SetStringValue</a> (const <a class="el" href="class_bond_1_1_simple_string.html">SimpleString</a> &amp;str)</td></tr>
-<tr class="memdesc:adfff6cc6609ccc87541e568d1c823680"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns the string value of the <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords, identifiers, literal constants and operators). ">Token</a>. Valid only for Tokens of type <code>CONST_STRING</code>.  <a href="#adfff6cc6609ccc87541e568d1c823680">More...</a><br /></td></tr>
-<tr class="separator:adfff6cc6609ccc87541e568d1c823680"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfb609adcad682f225a193231f79834e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_token.html#abfb609adcad682f225a193231f79834e">SetStringValue</a> (const <a class="el" href="class_bond_1_1_string_view.html">StringView</a> &amp;str)</td></tr>
+<tr class="memdesc:abfb609adcad682f225a193231f79834e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns the string value of the <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords, identifiers, literal constants and operators). ">Token</a>. Valid only for Tokens of type <code>CONST_STRING</code>.  <a href="#abfb609adcad682f225a193231f79834e">More...</a><br /></td></tr>
+<tr class="separator:abfb609adcad682f225a193231f79834e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad68f7eb14e0e8e9138748f80b67ffcca"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_token.html#ad68f7eb14e0e8e9138748f80b67ffcca">GetTokenName</a> () const</td></tr>
 <tr class="memdesc:ad68f7eb14e0e8e9138748f80b67ffcca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a descriptive name for the token's type.  <a href="#ad68f7eb14e0e8e9138748f80b67ffcca">More...</a><br /></td></tr>
 <tr class="separator:ad68f7eb14e0e8e9138748f80b67ffcca"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -932,12 +932,12 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>A short-hand for <a class="el" href="class_bond_1_1_token.html#ac2f18fd5973eba9d5f620d4415ee4ee9" title="Returns the string value of the Token. Valid only for Tokens of type CONST_STRING. ">GetStringValue()</a>.<a class="el" href="group__compiler.html#ga60b58a6d92a8dd0542204be19988f4fb" title="Counts and returns the length of a list of ListParseNodes. ">GetLength()</a>. </p>
+<p>A short-hand for <a class="el" href="class_bond_1_1_token.html#a4c2539a5a52f26685d7713431ebdbcee" title="Returns the string value of the Token. Valid only for Tokens of type CONST_STRING. ">GetStringValue()</a>.<a class="el" href="group__compiler.html#ga60b58a6d92a8dd0542204be19988f4fb" title="Counts and returns the length of a list of ListParseNodes. ">GetLength()</a>. </p>
 
 </div>
 </div>
-<a id="ac2f18fd5973eba9d5f620d4415ee4ee9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2f18fd5973eba9d5f620d4415ee4ee9">&#9670;&nbsp;</a></span>GetStringValue()</h2>
+<a id="a4c2539a5a52f26685d7713431ebdbcee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c2539a5a52f26685d7713431ebdbcee">&#9670;&nbsp;</a></span>GetStringValue()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -946,7 +946,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_simple_string.html">SimpleString</a> Bond::Token::GetStringValue </td>
+          <td class="memname">const <a class="el" href="class_bond_1_1_string_view.html">StringView</a> Bond::Token::GetStringValue </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -963,8 +963,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a445f08453cc9eda3c700f8f75bb6af0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a445f08453cc9eda3c700f8f75bb6af0b">&#9670;&nbsp;</a></span>GetText()</h2>
+<a id="a288a0ed9aed4f36cb3051d1638ef82a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a288a0ed9aed4f36cb3051d1638ef82a0">&#9670;&nbsp;</a></span>GetText()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -973,7 +973,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_simple_string.html">SimpleString</a>&amp; Bond::Token::GetText </td>
+          <td class="memname">const <a class="el" href="class_bond_1_1_string_view.html">StringView</a>&amp; Bond::Token::GetText </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1397,8 +1397,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="adfff6cc6609ccc87541e568d1c823680"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adfff6cc6609ccc87541e568d1c823680">&#9670;&nbsp;</a></span>SetStringValue()</h2>
+<a id="abfb609adcad682f225a193231f79834e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfb609adcad682f225a193231f79834e">&#9670;&nbsp;</a></span>SetStringValue()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1406,7 +1406,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void Bond::Token::SetStringValue </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_bond_1_1_simple_string.html">SimpleString</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_bond_1_1_string_view.html">StringView</a> &amp;&#160;</td>
           <td class="paramname"><em>str</em></td><td>)</td>
           <td></td>
         </tr>

@@ -20,9 +20,9 @@ var hierarchy =
     [ "Bond::CompilerErrorBuffer", "class_bond_1_1_compiler_error_buffer.html", null ],
     [ "Bond::ConstantTable", "struct_bond_1_1_constant_table.html", null ],
     [ "Bond::AutoStack< ValueType >::ConstIterator", "class_bond_1_1_auto_stack_1_1_const_iterator.html", null ],
-    [ "Bond::DataChunk", "struct_bond_1_1_data_chunk.html", null ],
-    [ "Bond::DataChunkIndex", "struct_bond_1_1_data_chunk_index.html", null ],
     [ "Bond::DataEntry", "struct_bond_1_1_data_entry.html", null ],
+    [ "Bond::DataView", "struct_bond_1_1_data_view.html", null ],
+    [ "Bond::DataViewIndex", "struct_bond_1_1_data_view_index.html", null ],
     [ "Bond::Allocator::Deallocator< T >", "struct_bond_1_1_allocator_1_1_deallocator.html", null ],
     [ "Bond::Disassembler", "class_bond_1_1_disassembler.html", null ],
     [ "Element", null, [
@@ -106,7 +106,6 @@ var hierarchy =
     [ "Bond::CboValidator::Result", "struct_bond_1_1_cbo_validator_1_1_result.html", null ],
     [ "Bond::ReturnSignature", "struct_bond_1_1_return_signature.html", null ],
     [ "Bond::SemanticAnalyzer", "class_bond_1_1_semantic_analyzer.html", null ],
-    [ "Bond::SimpleString", "class_bond_1_1_simple_string.html", null ],
     [ "Bond::StackFrame", "class_bond_1_1_stack_frame.html", null ],
     [ "Bond::StdioFileHandle", "class_bond_1_1_stdio_file_handle.html", null ],
     [ "Bond::Stream", "class_bond_1_1_stream.html", [
@@ -129,6 +128,7 @@ var hierarchy =
       [ "Bond::StdioStreamFactory", "class_bond_1_1_stdio_stream_factory.html", null ]
     ] ],
     [ "Bond::StreamPos", "struct_bond_1_1_stream_pos.html", null ],
+    [ "Bond::StringView", "class_bond_1_1_string_view.html", null ],
     [ "Bond::SymbolTable", "class_bond_1_1_symbol_table.html", null ],
     [ "Bond::Token", "class_bond_1_1_token.html", null ],
     [ "Bond::TokenCollection", "class_bond_1_1_token_collection.html", null ],

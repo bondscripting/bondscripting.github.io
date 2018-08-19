@@ -95,7 +95,7 @@ $(document).ready(function(){initNavTree('class_bond_1_1_memory_stream_factory.h
 </div><!--header-->
 <div class="contents">
 
-<p>A concrete implementation of <a class="el" href="class_bond_1_1_stream_factory.html" title="An abstract interface for creating file streams without being coupled to any particular concrete type...">StreamFactory</a> that instantiates MemoryInputStreams for a collection of DataChunks.  
+<p>A concrete implementation of <a class="el" href="class_bond_1_1_stream_factory.html" title="An abstract interface for creating file streams without being coupled to any particular concrete type...">StreamFactory</a> that instantiates MemoryInputStreams for a fixed collection of DataViews.  
  <a href="class_bond_1_1_memory_stream_factory.html#details">More...</a></p>
 
 <p><code>#include &lt;bond/io/memorystreamfactory.h&gt;</code></p>
@@ -111,8 +111,8 @@ Inheritance diagram for Bond::MemoryStreamFactory:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8cf6bc1b18bc59af2273013b66a9d4bc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_memory_stream_factory.html#a8cf6bc1b18bc59af2273013b66a9d4bc">MemoryStreamFactory</a> (<a class="el" href="class_bond_1_1_allocator.html">Allocator</a> &amp;allocator, const <a class="el" href="struct_bond_1_1_data_chunk_index.html">DataChunkIndex</a> &amp;index, <a class="el" href="class_bond_1_1_stream_factory.html">StreamFactory</a> *delegateFactory=nullptr, bool throwOnFailure=true)</td></tr>
-<tr class="separator:a8cf6bc1b18bc59af2273013b66a9d4bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefacd45a2017b7927793dd266563fcd5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_memory_stream_factory.html#aefacd45a2017b7927793dd266563fcd5">MemoryStreamFactory</a> (<a class="el" href="class_bond_1_1_allocator.html">Allocator</a> &amp;allocator, const <a class="el" href="struct_bond_1_1_data_view_index.html">DataViewIndex</a> &amp;index, <a class="el" href="class_bond_1_1_stream_factory.html">StreamFactory</a> *delegateFactory=nullptr, bool throwOnFailure=true)</td></tr>
+<tr class="separator:aefacd45a2017b7927793dd266563fcd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5fc3c499ab034e4c8aee3f71fff0c50"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_memory_stream_factory.html#ae5fc3c499ab034e4c8aee3f71fff0c50">~MemoryStreamFactory</a> ()</td></tr>
 <tr class="separator:ae5fc3c499ab034e4c8aee3f71fff0c50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76f26b3e3b3bd3963e6e3c9672d8ba43"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__io.html#ga37b72a5672b81b2727ba53b4ffbe47f8">InputStreamHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_memory_stream_factory.html#a76f26b3e3b3bd3963e6e3c9672d8ba43">CreateInputStream</a> (const char *fileName) override</td></tr>
@@ -128,10 +128,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0dfcffed7d47ba4643581e079b882c87 inherit pub_methods_class_bond_1_1_stream_factory"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A concrete implementation of <a class="el" href="class_bond_1_1_stream_factory.html" title="An abstract interface for creating file streams without being coupled to any particular concrete type...">StreamFactory</a> that instantiates MemoryInputStreams for a collection of DataChunks. </p>
+<div class="textblock"><p>A concrete implementation of <a class="el" href="class_bond_1_1_stream_factory.html" title="An abstract interface for creating file streams without being coupled to any particular concrete type...">StreamFactory</a> that instantiates MemoryInputStreams for a fixed collection of DataViews. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a8cf6bc1b18bc59af2273013b66a9d4bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8cf6bc1b18bc59af2273013b66a9d4bc">&#9670;&nbsp;</a></span>MemoryStreamFactory()</h2>
+<a id="aefacd45a2017b7927793dd266563fcd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefacd45a2017b7927793dd266563fcd5">&#9670;&nbsp;</a></span>MemoryStreamFactory()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -148,7 +148,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="struct_bond_1_1_data_chunk_index.html">DataChunkIndex</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="struct_bond_1_1_data_view_index.html">DataViewIndex</a> &amp;&#160;</td>
           <td class="paramname"><em>index</em>, </td>
         </tr>
         <tr>
