@@ -21,8 +21,8 @@ var hierarchy =
     [ "Bond::ConstantTable", "struct_bond_1_1_constant_table.html", null ],
     [ "Bond::AutoStack< ValueType >::ConstIterator", "class_bond_1_1_auto_stack_1_1_const_iterator.html", null ],
     [ "Bond::DataEntry", "struct_bond_1_1_data_entry.html", null ],
-    [ "Bond::DataView", "struct_bond_1_1_data_view.html", null ],
-    [ "Bond::DataViewIndex", "struct_bond_1_1_data_view_index.html", null ],
+    [ "Bond::DataView", "class_bond_1_1_data_view.html", null ],
+    [ "Bond::DataViewIndex", "class_bond_1_1_data_view_index.html", null ],
     [ "Bond::Allocator::Deallocator< T >", "struct_bond_1_1_allocator_1_1_deallocator.html", null ],
     [ "Bond::Disassembler", "class_bond_1_1_disassembler.html", null ],
     [ "Element", null, [

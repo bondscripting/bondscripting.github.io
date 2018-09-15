@@ -151,11 +151,11 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_data_entry.html">DataEntry</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_data_view.html">DataView</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An object that encapsulates a pointer to a contiguous blob of binary data and a count of the number of bytes of data.  <a href="struct_bond_1_1_data_view.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_data_view.html">DataView</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An immutable object that encapsulates a pointer to a constant contiguous block of memory representing arbitrary binary data and a count of the number of bytes of data.  <a href="class_bond_1_1_data_view.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bond_1_1_data_view_index.html">DataViewIndex</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An object that encapsulates an array of named constant <a class="el" href="struct_bond_1_1_data_view.html" title="An object that encapsulates a pointer to a contiguous blob of binary data and a count of the number o...">DataView</a> objects.  <a href="struct_bond_1_1_data_view_index.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_data_view_index.html">DataViewIndex</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An immutable object that encapsulates an array of named constant <a class="el" href="class_bond_1_1_data_view.html" title="An immutable object that encapsulates a pointer to a constant contiguous block of memory representing...">DataView</a> objects.  <a href="class_bond_1_1_data_view_index.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_declarative_statement.html">DeclarativeStatement</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -278,6 +278,7 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_qualified_identifier.html">QualifiedIdentifier</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_qualified_name.html">QualifiedName</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An immutable wrapper around a constant array of C-style strings to represent the fully qualified name of a symbol in compiled <a class="el" href="namespace_bond.html">Bond</a> bytecode.  <a href="class_bond_1_1_qualified_name.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_resolved_switch_label.html">ResolvedSwitchLabel</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -316,7 +317,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A POD struct to contain the index, line and column of a token in source code.  <a href="struct_bond_1_1_stream_pos.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_string_view.html">StringView</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A wrapper around a constant array of chars (a.k.a. a constant C-style string).  <a href="class_bond_1_1_string_view.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An immutable wrapper around a constant array of chars (a.k.a. a constant C-style string).  <a href="class_bond_1_1_string_view.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_struct_declaration.html">StructDeclaration</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1276,7 +1277,7 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a6b7c96db9f24be91453c2b72dfaf3f8e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_bond_1_1_data_view_index.html">DataViewIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#a6b7c96db9f24be91453c2b72dfaf3f8e">INCLUDE_FILE_INDEX</a></td></tr>
+<tr class="memitem:a6b7c96db9f24be91453c2b72dfaf3f8e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_bond_1_1_data_view_index.html">DataViewIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#a6b7c96db9f24be91453c2b72dfaf3f8e">INCLUDE_FILE_INDEX</a></td></tr>
 <tr class="separator:a6b7c96db9f24be91453c2b72dfaf3f8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15c419622e488dd254d34fe34f808b62"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_bond_1_1_native_binding_collection.html">Bond::NativeBindingCollection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_bond.html#a15c419622e488dd254d34fe34f808b62">IO_BINDING_COLLECTION</a></td></tr>
 <tr class="separator:a15c419622e488dd254d34fe34f808b62"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -5902,7 +5903,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="struct_bond_1_1_data_view_index.html">DataViewIndex</a> Bond::INCLUDE_FILE_INDEX</td>
+          <td class="memname">const <a class="el" href="class_bond_1_1_data_view_index.html">DataViewIndex</a> Bond::INCLUDE_FILE_INDEX</td>
         </tr>
       </table>
 </div><div class="memdoc">

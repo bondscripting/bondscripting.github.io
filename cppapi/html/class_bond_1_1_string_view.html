@@ -95,7 +95,7 @@ $(document).ready(function(){initNavTree('class_bond_1_1_string_view.html','');}
 </div><!--header-->
 <div class="contents">
 
-<p>A wrapper around a constant array of chars (a.k.a. a constant C-style string).  
+<p>An immutable wrapper around a constant array of chars (a.k.a. a constant C-style string).  
  <a href="class_bond_1_1_string_view.html#details">More...</a></p>
 
 <p><code>#include &lt;bond/types/stringview.h&gt;</code></p>
@@ -103,13 +103,13 @@ $(document).ready(function(){initNavTree('class_bond_1_1_string_view.html','');}
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a124bc63fadd4fc18497d37be1d7c3fdb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_string_view.html#a124bc63fadd4fc18497d37be1d7c3fdb">StringView</a> ()</td></tr>
-<tr class="memdesc:a124bc63fadd4fc18497d37be1d7c3fdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an empty <a class="el" href="class_bond_1_1_string_view.html" title="A wrapper around a constant array of chars (a.k.a. a constant C-style string). ">StringView</a> object. After construction, <a class="el" href="class_bond_1_1_string_view.html#a70c126342af96c83695f93a97d08c74d" title="Returns the pointer to the array of characters over which the view has been created. ">GetString()</a> returns nullptr and <a class="el" href="class_bond_1_1_string_view.html#aba98c367b64957f55765973a088f735a" title="Returns the number of characters in the view. ">GetLength()</a> returns 0.  <a href="#a124bc63fadd4fc18497d37be1d7c3fdb">More...</a><br /></td></tr>
+<tr class="memdesc:a124bc63fadd4fc18497d37be1d7c3fdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an empty <a class="el" href="class_bond_1_1_string_view.html" title="An immutable wrapper around a constant array of chars (a.k.a. a constant C-style string). ">StringView</a> object. After construction, <a class="el" href="class_bond_1_1_string_view.html#a70c126342af96c83695f93a97d08c74d" title="Returns the pointer to the array of characters over which the view has been created. ">GetString()</a> returns nullptr and <a class="el" href="class_bond_1_1_string_view.html#aba98c367b64957f55765973a088f735a" title="Returns the number of characters in the view. ">GetLength()</a> returns 0.  <a href="#a124bc63fadd4fc18497d37be1d7c3fdb">More...</a><br /></td></tr>
 <tr class="separator:a124bc63fadd4fc18497d37be1d7c3fdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac768f210241093f456087e6c0b14cd89"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_string_view.html#ac768f210241093f456087e6c0b14cd89">StringView</a> (const char *str)</td></tr>
-<tr class="memdesc:ac768f210241093f456087e6c0b14cd89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_bond_1_1_string_view.html" title="A wrapper around a constant array of chars (a.k.a. a constant C-style string). ">StringView</a> over the given null-terminated C-style string.  <a href="#ac768f210241093f456087e6c0b14cd89">More...</a><br /></td></tr>
+<tr class="memdesc:ac768f210241093f456087e6c0b14cd89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_bond_1_1_string_view.html" title="An immutable wrapper around a constant array of chars (a.k.a. a constant C-style string). ">StringView</a> over the given null-terminated C-style string.  <a href="#ac768f210241093f456087e6c0b14cd89">More...</a><br /></td></tr>
 <tr class="separator:ac768f210241093f456087e6c0b14cd89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af032bd7f49a83fa564a39b7486a810f7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_string_view.html#af032bd7f49a83fa564a39b7486a810f7">StringView</a> (const char *str, size_t length)</td></tr>
-<tr class="memdesc:af032bd7f49a83fa564a39b7486a810f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_bond_1_1_string_view.html" title="A wrapper around a constant array of chars (a.k.a. a constant C-style string). ">StringView</a> over the given array of characters that may contain null characters.  <a href="#af032bd7f49a83fa564a39b7486a810f7">More...</a><br /></td></tr>
+<tr class="memdesc:af032bd7f49a83fa564a39b7486a810f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_bond_1_1_string_view.html" title="An immutable wrapper around a constant array of chars (a.k.a. a constant C-style string). ">StringView</a> over the given array of characters that may contain null characters.  <a href="#af032bd7f49a83fa564a39b7486a810f7">More...</a><br /></td></tr>
 <tr class="separator:af032bd7f49a83fa564a39b7486a810f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70c126342af96c83695f93a97d08c74d"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_string_view.html#a70c126342af96c83695f93a97d08c74d">GetString</a> () const</td></tr>
 <tr class="memdesc:a70c126342af96c83695f93a97d08c74d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the pointer to the array of characters over which the view has been created.  <a href="#a70c126342af96c83695f93a97d08c74d">More...</a><br /></td></tr>
@@ -124,15 +124,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a84c176609280b6c6f9e2ebe9bc207b7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the characters of the view to the provided output stream.  <a href="#a84c176609280b6c6f9e2ebe9bc207b7e">More...</a><br /></td></tr>
 <tr class="separator:a84c176609280b6c6f9e2ebe9bc207b7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4cecfd00ffab05410e9da165ec4ff56"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_string_view.html#ae4cecfd00ffab05410e9da165ec4ff56">operator==</a> (const <a class="el" href="class_bond_1_1_string_view.html">StringView</a> &amp;other) const</td></tr>
-<tr class="memdesc:ae4cecfd00ffab05410e9da165ec4ff56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the <a class="el" href="class_bond_1_1_string_view.html" title="A wrapper around a constant array of chars (a.k.a. a constant C-style string). ">StringView</a> is lexicographically equal to the one passed in.  <a href="#ae4cecfd00ffab05410e9da165ec4ff56">More...</a><br /></td></tr>
+<tr class="memdesc:ae4cecfd00ffab05410e9da165ec4ff56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the <a class="el" href="class_bond_1_1_string_view.html" title="An immutable wrapper around a constant array of chars (a.k.a. a constant C-style string). ">StringView</a> is lexicographically equal to the one passed in.  <a href="#ae4cecfd00ffab05410e9da165ec4ff56">More...</a><br /></td></tr>
 <tr class="separator:ae4cecfd00ffab05410e9da165ec4ff56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27ad1a8879059a44226005335715224d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_string_view.html#a27ad1a8879059a44226005335715224d">operator&lt;</a> (const <a class="el" href="class_bond_1_1_string_view.html">StringView</a> &amp;other) const</td></tr>
-<tr class="memdesc:a27ad1a8879059a44226005335715224d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the <a class="el" href="class_bond_1_1_string_view.html" title="A wrapper around a constant array of chars (a.k.a. a constant C-style string). ">StringView</a> is lexicographically less than the one passed in.  <a href="#a27ad1a8879059a44226005335715224d">More...</a><br /></td></tr>
+<tr class="memdesc:a27ad1a8879059a44226005335715224d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the <a class="el" href="class_bond_1_1_string_view.html" title="An immutable wrapper around a constant array of chars (a.k.a. a constant C-style string). ">StringView</a> is lexicographically less than the one passed in.  <a href="#a27ad1a8879059a44226005335715224d">More...</a><br /></td></tr>
 <tr class="separator:a27ad1a8879059a44226005335715224d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A wrapper around a constant array of chars (a.k.a. a constant C-style string). </p>
-<p><a class="el" href="class_bond_1_1_string_view.html" title="A wrapper around a constant array of chars (a.k.a. a constant C-style string). ">StringView</a> can handle strings with embeded null characters as well as non-null terminated strings. It also provides some comparison operators, making it useful for storing in containers. <a class="el" href="class_bond_1_1_string_view.html" title="A wrapper around a constant array of chars (a.k.a. a constant C-style string). ">StringView</a> does not perform any allocations; it references an existing string whose lifetime must superseed that of the <a class="el" href="class_bond_1_1_string_view.html" title="A wrapper around a constant array of chars (a.k.a. a constant C-style string). ">StringView</a>.</p>
+<div class="textblock"><p>An immutable wrapper around a constant array of chars (a.k.a. a constant C-style string). </p>
+<p><a class="el" href="class_bond_1_1_string_view.html" title="An immutable wrapper around a constant array of chars (a.k.a. a constant C-style string). ">StringView</a> can handle strings with embeded null characters as well as non-null terminated strings. It also provides some comparison operators, making it useful for storing in containers. <a class="el" href="class_bond_1_1_string_view.html" title="An immutable wrapper around a constant array of chars (a.k.a. a constant C-style string). ">StringView</a> does not perform any allocations; it references an existing string whose lifetime must superseed that of the <a class="el" href="class_bond_1_1_string_view.html" title="An immutable wrapper around a constant array of chars (a.k.a. a constant C-style string). ">StringView</a>.</p>
 <p>This class is a candidate for replacement by std::string_view. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a124bc63fadd4fc18497d37be1d7c3fdb"></a>
@@ -158,7 +158,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Constructs an empty <a class="el" href="class_bond_1_1_string_view.html" title="A wrapper around a constant array of chars (a.k.a. a constant C-style string). ">StringView</a> object. After construction, <a class="el" href="class_bond_1_1_string_view.html#a70c126342af96c83695f93a97d08c74d" title="Returns the pointer to the array of characters over which the view has been created. ">GetString()</a> returns nullptr and <a class="el" href="class_bond_1_1_string_view.html#aba98c367b64957f55765973a088f735a" title="Returns the number of characters in the view. ">GetLength()</a> returns 0. </p>
+<p>Constructs an empty <a class="el" href="class_bond_1_1_string_view.html" title="An immutable wrapper around a constant array of chars (a.k.a. a constant C-style string). ">StringView</a> object. After construction, <a class="el" href="class_bond_1_1_string_view.html#a70c126342af96c83695f93a97d08c74d" title="Returns the pointer to the array of characters over which the view has been created. ">GetString()</a> returns nullptr and <a class="el" href="class_bond_1_1_string_view.html#aba98c367b64957f55765973a088f735a" title="Returns the number of characters in the view. ">GetLength()</a> returns 0. </p>
 
 </div>
 </div>
@@ -186,7 +186,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Constructs a <a class="el" href="class_bond_1_1_string_view.html" title="A wrapper around a constant array of chars (a.k.a. a constant C-style string). ">StringView</a> over the given null-terminated C-style string. </p>
+<p>Constructs a <a class="el" href="class_bond_1_1_string_view.html" title="An immutable wrapper around a constant array of chars (a.k.a. a constant C-style string). ">StringView</a> over the given null-terminated C-style string. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">str</td><td>The C-style string over which the view is created. </td></tr>
@@ -230,7 +230,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Constructs a <a class="el" href="class_bond_1_1_string_view.html" title="A wrapper around a constant array of chars (a.k.a. a constant C-style string). ">StringView</a> over the given array of characters that may contain null characters. </p>
+<p>Constructs a <a class="el" href="class_bond_1_1_string_view.html" title="An immutable wrapper around a constant array of chars (a.k.a. a constant C-style string). ">StringView</a> over the given array of characters that may contain null characters. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">str</td><td>The array of characters over which the view is created. </td></tr>
@@ -347,10 +347,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns whether the <a class="el" href="class_bond_1_1_string_view.html" title="A wrapper around a constant array of chars (a.k.a. a constant C-style string). ">StringView</a> is lexicographically less than the one passed in. </p>
+<p>Returns whether the <a class="el" href="class_bond_1_1_string_view.html" title="An immutable wrapper around a constant array of chars (a.k.a. a constant C-style string). ">StringView</a> is lexicographically less than the one passed in. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">other</td><td>The <a class="el" href="class_bond_1_1_string_view.html" title="A wrapper around a constant array of chars (a.k.a. a constant C-style string). ">StringView</a> against which this one is compared. </td></tr>
+    <tr><td class="paramname">other</td><td>The <a class="el" href="class_bond_1_1_string_view.html" title="An immutable wrapper around a constant array of chars (a.k.a. a constant C-style string). ">StringView</a> against which this one is compared. </td></tr>
   </table>
   </dd>
 </dl>
@@ -381,10 +381,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns whether the <a class="el" href="class_bond_1_1_string_view.html" title="A wrapper around a constant array of chars (a.k.a. a constant C-style string). ">StringView</a> is lexicographically equal to the one passed in. </p>
+<p>Returns whether the <a class="el" href="class_bond_1_1_string_view.html" title="An immutable wrapper around a constant array of chars (a.k.a. a constant C-style string). ">StringView</a> is lexicographically equal to the one passed in. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">other</td><td>The <a class="el" href="class_bond_1_1_string_view.html" title="A wrapper around a constant array of chars (a.k.a. a constant C-style string). ">StringView</a> against which this one is compared. </td></tr>
+    <tr><td class="paramname">other</td><td>The <a class="el" href="class_bond_1_1_string_view.html" title="An immutable wrapper around a constant array of chars (a.k.a. a constant C-style string). ">StringView</a> against which this one is compared. </td></tr>
   </table>
   </dd>
 </dl>
@@ -410,7 +410,7 @@ Public Member Functions</h2></td></tr>
 <p>Writes the characters of the view to the provided output stream. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">stream</td><td>The stream to which the characters of the <a class="el" href="class_bond_1_1_string_view.html" title="A wrapper around a constant array of chars (a.k.a. a constant C-style string). ">StringView</a> are written. </td></tr>
+    <tr><td class="paramname">stream</td><td>The stream to which the characters of the <a class="el" href="class_bond_1_1_string_view.html" title="An immutable wrapper around a constant array of chars (a.k.a. a constant C-style string). ">StringView</a> are written. </td></tr>
   </table>
   </dd>
 </dl>

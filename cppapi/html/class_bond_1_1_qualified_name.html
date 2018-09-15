@@ -91,36 +91,52 @@ $(document).ready(function(){initNavTree('class_bond_1_1_qualified_name.html',''
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="class_bond_1_1_qualified_name-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Bond::QualifiedName Class Reference</div>  </div>
+<div class="title">Bond::QualifiedName Class Reference<div class="ingroups"><a class="el" href="group__types.html">Types</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>An immutable wrapper around a constant array of C-style strings to represent the fully qualified name of a symbol in compiled <a class="el" href="namespace_bond.html">Bond</a> bytecode.  
+ <a href="class_bond_1_1_qualified_name.html#details">More...</a></p>
 
 <p><code>#include &lt;bond/types/qualifiedname.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a42060719457fb926d11395314883434a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_qualified_name.html#a42060719457fb926d11395314883434a">QualifiedName</a> ()</td></tr>
+<tr class="memdesc:a42060719457fb926d11395314883434a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an empty <a class="el" href="class_bond_1_1_qualified_name.html" title="An immutable wrapper around a constant array of C-style strings to represent the fully qualified name...">QualifiedName</a>. After construction, GetElement(0) returns nullptr.  <a href="#a42060719457fb926d11395314883434a">More...</a><br /></td></tr>
 <tr class="separator:a42060719457fb926d11395314883434a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2effca5bd267e9ac18ef687af559a8f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_qualified_name.html#ac2effca5bd267e9ac18ef687af559a8f">QualifiedName</a> (const char *const *elements)</td></tr>
+<tr class="memdesc:ac2effca5bd267e9ac18ef687af559a8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_bond_1_1_qualified_name.html" title="An immutable wrapper around a constant array of C-style strings to represent the fully qualified name...">QualifiedName</a> with the given array of C-style strings.  <a href="#ac2effca5bd267e9ac18ef687af559a8f">More...</a><br /></td></tr>
 <tr class="separator:ac2effca5bd267e9ac18ef687af559a8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95bd50e3d917fa73ebe41f6aa83ba6f5"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_qualified_name.html#a95bd50e3d917fa73ebe41f6aa83ba6f5">GetElement</a> (size_t i) const</td></tr>
+<tr class="memdesc:a95bd50e3d917fa73ebe41f6aa83ba6f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the string at the given index in the array of qualified name elements.  <a href="#a95bd50e3d917fa73ebe41f6aa83ba6f5">More...</a><br /></td></tr>
 <tr class="separator:a95bd50e3d917fa73ebe41f6aa83ba6f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a761b98e0777a67d74c5005226af71b59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_qualified_name.html#a761b98e0777a67d74c5005226af71b59">PrintTo</a> (<a class="el" href="class_bond_1_1_output_stream.html">OutputStream</a> &amp;stream) const</td></tr>
+<tr class="memdesc:a761b98e0777a67d74c5005226af71b59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the qualified name to the provided output stream with the elements separated by a '.' character.  <a href="#a761b98e0777a67d74c5005226af71b59">More...</a><br /></td></tr>
 <tr class="separator:a761b98e0777a67d74c5005226af71b59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a039cff7d684787018321ad02dd3090ae"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_qualified_name.html#a039cff7d684787018321ad02dd3090ae">Compare</a> (const <a class="el" href="class_bond_1_1_qualified_name.html">QualifiedName</a> &amp;other) const</td></tr>
+<tr class="memdesc:a039cff7d684787018321ad02dd3090ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does an element-wise lexicographic comparison of this <a class="el" href="class_bond_1_1_qualified_name.html" title="An immutable wrapper around a constant array of C-style strings to represent the fully qualified name...">QualifiedName</a> with another one.  <a href="#a039cff7d684787018321ad02dd3090ae">More...</a><br /></td></tr>
 <tr class="separator:a039cff7d684787018321ad02dd3090ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79f90fe256812212515f1af82d6a030b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_qualified_name.html#a79f90fe256812212515f1af82d6a030b">Compare</a> (const char *other) const</td></tr>
+<tr class="memdesc:a79f90fe256812212515f1af82d6a030b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does an element-wise lexicographic comparison of this <a class="el" href="class_bond_1_1_qualified_name.html" title="An immutable wrapper around a constant array of C-style strings to represent the fully qualified name...">QualifiedName</a> with a string.  <a href="#a79f90fe256812212515f1af82d6a030b">More...</a><br /></td></tr>
 <tr class="separator:a79f90fe256812212515f1af82d6a030b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c83e7814d3d8d422a904e1abc0bad66"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_qualified_name.html#a7c83e7814d3d8d422a904e1abc0bad66">operator==</a> (const <a class="el" href="class_bond_1_1_qualified_name.html">QualifiedName</a> &amp;other) const</td></tr>
+<tr class="memdesc:a7c83e7814d3d8d422a904e1abc0bad66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does an element-wise lexicographic comparison of this <a class="el" href="class_bond_1_1_qualified_name.html" title="An immutable wrapper around a constant array of C-style strings to represent the fully qualified name...">QualifiedName</a> with another one and returns whether they are equal.  <a href="#a7c83e7814d3d8d422a904e1abc0bad66">More...</a><br /></td></tr>
 <tr class="separator:a7c83e7814d3d8d422a904e1abc0bad66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade75c316e373cda92fe3db375ddd2703"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_qualified_name.html#ade75c316e373cda92fe3db375ddd2703">operator==</a> (const char *other) const</td></tr>
+<tr class="memdesc:ade75c316e373cda92fe3db375ddd2703"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does an element-wise lexicographic comparison of this <a class="el" href="class_bond_1_1_qualified_name.html" title="An immutable wrapper around a constant array of C-style strings to represent the fully qualified name...">QualifiedName</a> with a string. and returns whether they are equal.  <a href="#ade75c316e373cda92fe3db375ddd2703">More...</a><br /></td></tr>
 <tr class="separator:ade75c316e373cda92fe3db375ddd2703"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf81a8914568b7dfb85f92959249d34e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_qualified_name.html#acf81a8914568b7dfb85f92959249d34e">operator&lt;</a> (const <a class="el" href="class_bond_1_1_qualified_name.html">QualifiedName</a> &amp;other) const</td></tr>
+<tr class="memdesc:acf81a8914568b7dfb85f92959249d34e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does an element-wise lexicographic comparison of this <a class="el" href="class_bond_1_1_qualified_name.html" title="An immutable wrapper around a constant array of C-style strings to represent the fully qualified name...">QualifiedName</a> with another one and returns whether this one is less.  <a href="#acf81a8914568b7dfb85f92959249d34e">More...</a><br /></td></tr>
 <tr class="separator:acf81a8914568b7dfb85f92959249d34e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89c52a8da1b70a786e4ed906b3342216"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_qualified_name.html#a89c52a8da1b70a786e4ed906b3342216">operator&lt;</a> (const char *other) const</td></tr>
+<tr class="memdesc:a89c52a8da1b70a786e4ed906b3342216"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does an element-wise lexicographic comparison of this <a class="el" href="class_bond_1_1_qualified_name.html" title="An immutable wrapper around a constant array of C-style strings to represent the fully qualified name...">QualifiedName</a> with a string. and returns whether this one is less.  <a href="#a89c52a8da1b70a786e4ed906b3342216">More...</a><br /></td></tr>
 <tr class="separator:a89c52a8da1b70a786e4ed906b3342216"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>An immutable wrapper around a constant array of C-style strings to represent the fully qualified name of a symbol in compiled <a class="el" href="namespace_bond.html">Bond</a> bytecode. </p>
+<p>The number of elements in the wrapped array is not stored; instead, the array must be terminated with a nullptr. <a class="el" href="class_bond_1_1_qualified_name.html" title="An immutable wrapper around a constant array of C-style strings to represent the fully qualified name...">QualifiedName</a> does not perform any allocations; it contains a pointer to an existing array of strings whose lifetime must superseed that of the <a class="el" href="class_bond_1_1_qualified_name.html" title="An immutable wrapper around a constant array of C-style strings to represent the fully qualified name...">QualifiedName</a>. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a42060719457fb926d11395314883434a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a42060719457fb926d11395314883434a">&#9670;&nbsp;</a></span>QualifiedName() <span class="overload">[1/2]</span></h2>
 
@@ -143,6 +159,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Constructs an empty <a class="el" href="class_bond_1_1_qualified_name.html" title="An immutable wrapper around a constant array of C-style strings to represent the fully qualified name...">QualifiedName</a>. After construction, GetElement(0) returns nullptr. </p>
 
 </div>
 </div>
@@ -170,6 +188,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Constructs a <a class="el" href="class_bond_1_1_qualified_name.html" title="An immutable wrapper around a constant array of C-style strings to represent the fully qualified name...">QualifiedName</a> with the given array of C-style strings. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">elements</td><td>Pointer to an array of string which are the elements of the qualified name. The last element of the array must be nullptr. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -189,6 +215,15 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Does an element-wise lexicographic comparison of this <a class="el" href="class_bond_1_1_qualified_name.html" title="An immutable wrapper around a constant array of C-style strings to represent the fully qualified name...">QualifiedName</a> with another one. </p>
+<p>The algorithm iterates over each element of both QualifiedNames and calls strcmp() for each pair of elements. If strcmp() returns a non-zero value, that value is returned immediately. If the end of this <a class="el" href="class_bond_1_1_qualified_name.html" title="An immutable wrapper around a constant array of C-style strings to represent the fully qualified name...">QualifiedName</a> is reached first, a negative value is returned. If the end of the other <a class="el" href="class_bond_1_1_qualified_name.html" title="An immutable wrapper around a constant array of C-style strings to represent the fully qualified name...">QualifiedName</a> is reached first, a positive value is returned. If the end of both is reached at the same time, the value 0 is returned. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The <a class="el" href="class_bond_1_1_qualified_name.html" title="An immutable wrapper around a constant array of C-style strings to represent the fully qualified name...">QualifiedName</a> against which this one is compared. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A negative value, positive value or 0 if this <a class="el" href="class_bond_1_1_qualified_name.html" title="An immutable wrapper around a constant array of C-style strings to represent the fully qualified name...">QualifiedName</a> is lexicographically less than greater than or equal to the other one. </dd></dl>
+
 </div>
 </div>
 <a id="a79f90fe256812212515f1af82d6a030b"></a>
@@ -206,6 +241,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Does an element-wise lexicographic comparison of this <a class="el" href="class_bond_1_1_qualified_name.html" title="An immutable wrapper around a constant array of C-style strings to represent the fully qualified name...">QualifiedName</a> with a string. </p>
+<p>This function returns the same value that the other overload of this function would return if the string passed in were to be treated as a <a class="el" href="class_bond_1_1_qualified_name.html" title="An immutable wrapper around a constant array of C-style strings to represent the fully qualified name...">QualifiedName</a> whose elements are separated by the '.' character. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The string against which this <a class="el" href="class_bond_1_1_qualified_name.html" title="An immutable wrapper around a constant array of C-style strings to represent the fully qualified name...">QualifiedName</a> is compared. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A negative value, positive value or 0 if this <a class="el" href="class_bond_1_1_qualified_name.html" title="An immutable wrapper around a constant array of C-style strings to represent the fully qualified name...">QualifiedName</a> is lexicographically less than greater than or equal to the other one. </dd></dl>
 
 </div>
 </div>
@@ -233,6 +277,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the string at the given index in the array of qualified name elements. </p>
+<p>It it safe to call this function with the values in the range [0-n] where n is the first value for which this function returns nullptr. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>The index of the element to be retrieved. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="acf81a8914568b7dfb85f92959249d34e"></a>
@@ -258,6 +310,15 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Does an element-wise lexicographic comparison of this <a class="el" href="class_bond_1_1_qualified_name.html" title="An immutable wrapper around a constant array of C-style strings to represent the fully qualified name...">QualifiedName</a> with another one and returns whether this one is less. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The <a class="el" href="class_bond_1_1_qualified_name.html" title="An immutable wrapper around a constant array of C-style strings to represent the fully qualified name...">QualifiedName</a> against which this one is compared. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The result of the expression: <code>Compare(other) &lt; 0</code>. </dd></dl>
 
 </div>
 </div>
@@ -285,6 +346,15 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Does an element-wise lexicographic comparison of this <a class="el" href="class_bond_1_1_qualified_name.html" title="An immutable wrapper around a constant array of C-style strings to represent the fully qualified name...">QualifiedName</a> with a string. and returns whether this one is less. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The string against which this <a class="el" href="class_bond_1_1_qualified_name.html" title="An immutable wrapper around a constant array of C-style strings to represent the fully qualified name...">QualifiedName</a> is compared. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The result of the expression: <code>Compare(other) &lt; 0</code>. </dd></dl>
+
 </div>
 </div>
 <a id="a7c83e7814d3d8d422a904e1abc0bad66"></a>
@@ -310,6 +380,15 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Does an element-wise lexicographic comparison of this <a class="el" href="class_bond_1_1_qualified_name.html" title="An immutable wrapper around a constant array of C-style strings to represent the fully qualified name...">QualifiedName</a> with another one and returns whether they are equal. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The <a class="el" href="class_bond_1_1_qualified_name.html" title="An immutable wrapper around a constant array of C-style strings to represent the fully qualified name...">QualifiedName</a> against which this one is compared. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The result of the expression: <code>Compare(other) == 0</code>. </dd></dl>
 
 </div>
 </div>
@@ -337,6 +416,15 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Does an element-wise lexicographic comparison of this <a class="el" href="class_bond_1_1_qualified_name.html" title="An immutable wrapper around a constant array of C-style strings to represent the fully qualified name...">QualifiedName</a> with a string. and returns whether they are equal. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The string against which this <a class="el" href="class_bond_1_1_qualified_name.html" title="An immutable wrapper around a constant array of C-style strings to represent the fully qualified name...">QualifiedName</a> is compared. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The result of the expression: <code>Compare(other) == 0</code>. </dd></dl>
+
 </div>
 </div>
 <a id="a761b98e0777a67d74c5005226af71b59"></a>
@@ -354,6 +442,14 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Writes the qualified name to the provided output stream with the elements separated by a '.' character. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stream</td><td>The stream to which the characters are written. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
