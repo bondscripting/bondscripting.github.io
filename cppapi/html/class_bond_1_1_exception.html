@@ -92,27 +92,36 @@ $(document).ready(function(){initNavTree('class_bond_1_1_exception.html','');});
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="class_bond_1_1_exception-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Bond::Exception Class Reference</div>  </div>
+<div class="title">Bond::Exception Class Reference<div class="ingroups"><a class="el" href="group__systems.html">Systems</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="class_bond_1_1_exception.html" title="Exception thrown for all types of errors in the Bond Runtime Library. ">Exception</a> thrown for all types of errors in the <a class="el" href="namespace_bond.html">Bond</a> Runtime Library.  
+ <a href="class_bond_1_1_exception.html#details">More...</a></p>
 
 <p><code>#include &lt;bond/systems/exception.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae294ac00bbe8151e0667626215d7bb52"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_exception.html#ae294ac00bbe8151e0667626215d7bb52">Exception</a> ()</td></tr>
+<tr class="memdesc:ae294ac00bbe8151e0667626215d7bb52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <a class="el" href="class_bond_1_1_exception.html" title="Exception thrown for all types of errors in the Bond Runtime Library. ">Exception</a> with an empty message.  <a href="#ae294ac00bbe8151e0667626215d7bb52">More...</a><br /></td></tr>
 <tr class="separator:ae294ac00bbe8151e0667626215d7bb52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3858fb02ca2bba5fecd6e47258016de1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_exception.html#a3858fb02ca2bba5fecd6e47258016de1">Exception</a> (const char *format,...)</td></tr>
+<tr class="memdesc:a3858fb02ca2bba5fecd6e47258016de1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <a class="el" href="class_bond_1_1_exception.html" title="Exception thrown for all types of errors in the Bond Runtime Library. ">Exception</a> with a formatted message. The arguments are forwarded to vsnprintf to write the message to the encapsulated error message buffer.  <a href="#a3858fb02ca2bba5fecd6e47258016de1">More...</a><br /></td></tr>
 <tr class="separator:a3858fb02ca2bba5fecd6e47258016de1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ef76f97b9c62c4fa537a592ff5840a1"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_exception.html#a2ef76f97b9c62c4fa537a592ff5840a1">GetMessage</a> () const</td></tr>
+<tr class="memdesc:a2ef76f97b9c62c4fa537a592ff5840a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the encapsulated error message.  <a href="#a2ef76f97b9c62c4fa537a592ff5840a1">More...</a><br /></td></tr>
 <tr class="separator:a2ef76f97b9c62c4fa537a592ff5840a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a4b84820f484200ee7cfcf4a657c00119"><td class="memItemLeft" align="right" valign="top">static const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_exception.html#a4b84820f484200ee7cfcf4a657c00119">MESSAGE_BUFFER_LENGTH</a> = 2048</td></tr>
+<tr class="memdesc:a4b84820f484200ee7cfcf4a657c00119"><td class="mdescLeft">&#160;</td><td class="mdescRight">Length of the buffer for the encapsulated error message.  <a href="#a4b84820f484200ee7cfcf4a657c00119">More...</a><br /></td></tr>
 <tr class="separator:a4b84820f484200ee7cfcf4a657c00119"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="class_bond_1_1_exception.html" title="Exception thrown for all types of errors in the Bond Runtime Library. ">Exception</a> thrown for all types of errors in the <a class="el" href="namespace_bond.html">Bond</a> Runtime Library. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae294ac00bbe8151e0667626215d7bb52"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae294ac00bbe8151e0667626215d7bb52">&#9670;&nbsp;</a></span>Exception() <span class="overload">[1/2]</span></h2>
 
@@ -135,6 +144,8 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Constructs an <a class="el" href="class_bond_1_1_exception.html" title="Exception thrown for all types of errors in the Bond Runtime Library. ">Exception</a> with an empty message. </p>
 
 </div>
 </div>
@@ -164,6 +175,8 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Constructs an <a class="el" href="class_bond_1_1_exception.html" title="Exception thrown for all types of errors in the Bond Runtime Library. ">Exception</a> with a formatted message. The arguments are forwarded to vsnprintf to write the message to the encapsulated error message buffer. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -190,6 +203,8 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the encapsulated error message. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -212,6 +227,8 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Length of the buffer for the encapsulated error message. </p>
 
 </div>
 </div>

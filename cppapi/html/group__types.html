@@ -88,7 +88,10 @@ $(document).ready(function(){initNavTree('group__types.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Types</div>  </div>
 </div><!--header-->
@@ -111,9 +114,1014 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bond_1_1_string_view.html">Bond::StringView</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An immutable wrapper around a constant array of chars (a.k.a. a constant C-style string).  <a href="class_bond_1_1_string_view.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="union_bond_1_1_value.html">Bond::Value</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Union of all value types representable by a <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords, identifiers, literal constants and operators). ">Token</a> in the <a class="el" href="namespace_bond.html">Bond</a> compiler.  <a href="union_bond_1_1_value.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="union_bond_1_1_value16.html">Bond::Value16</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Union of all 16 bit value types used within the <a class="el" href="namespace_bond.html">Bond</a> compiler, the CBO file format, and the <a class="el" href="namespace_bond.html">Bond</a> Virtual Machine.  <a href="union_bond_1_1_value16.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="union_bond_1_1_value32.html">Bond::Value32</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Union of all 32 bit value types used within the <a class="el" href="namespace_bond.html">Bond</a> compiler, the CBO file format, and the <a class="el" href="namespace_bond.html">Bond</a> Virtual Machine.  <a href="union_bond_1_1_value32.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="union_bond_1_1_value64.html">Bond::Value64</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Union of all 64 bit value types used within the <a class="el" href="namespace_bond.html">Bond</a> compiler, the CBO file format, and the <a class="el" href="namespace_bond.html">Bond</a> Virtual Machine.  <a href="union_bond_1_1_value64.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga753b1436366d6951f6dc48087cf3b7bb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__types.html#ga753b1436366d6951f6dc48087cf3b7bb">BOND_OPCODE_LIST</a></td></tr>
+<tr class="separator:ga753b1436366d6951f6dc48087cf3b7bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ga557394428c2bb1199d13db3825d0c0f6"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__types.html#ga557394428c2bb1199d13db3825d0c0f6">Bond::OpCode</a> { <br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ab89f4ca4eb1b7e579b96eb750e177b2e">Bond::OPCODE_NOP</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6aae1b6ea4732a98775f59a8fe1dbf91c2">Bond::OPCODE_CONSTC</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6aa7274bd0b494037900a6b1cf231b2322">Bond::OPCODE_CONSTUC</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a1c9d0c6c9f48bfd599225b69766c2d8e">Bond::OPCODE_CONSTS</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a4ed1237ebd0e0787ec963bd7b6c6658a">Bond::OPCODE_CONSTUS</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a73499df142685043a6bc520c52f5eb86">Bond::OPCODE_CONST32</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a08d2cc9ef61bb3b620fd87324f341807">Bond::OPCODE_CONST64</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ad0108ff3af6f8450bc0a56a11a585cac">Bond::OPCODE_CONSTI_N2</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a2de5714a3ee5fcfc1a9fd0710042b91f">Bond::OPCODE_CONSTI_N1</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a16edde01420062e48299e7412c9f2392">Bond::OPCODE_CONSTI_0</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6abffc0ddd62fb6c4fa90e4b3fd2b75a59">Bond::OPCODE_CONSTI_1</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a978ed72a30c9bac505b9b2e212c085ce">Bond::OPCODE_CONSTI_2</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a1bc68c6364cc0fe03718a8f2a5385cfe">Bond::OPCODE_CONSTI_3</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ab7dccdf40291b20bfe5baddab6517775">Bond::OPCODE_CONSTI_4</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a91a00deb04bcbc73dfe1bc1aef823948">Bond::OPCODE_CONSTI_8</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a55a8c4104a72ddb7dcb53f5a2fe4dc9c">Bond::OPCODE_CONSTL_N2</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6af2cb7c52f15c7a56d9482a520523cb42">Bond::OPCODE_CONSTL_N1</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a1f797507e1b10336ccbb8842a7e8302b">Bond::OPCODE_CONSTL_0</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a3d490dfa56fd33ff34c68961031ed2ca">Bond::OPCODE_CONSTL_1</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6acaa7a3ffe3060b71632ad893f1d82ef3">Bond::OPCODE_CONSTL_2</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a9192572fe2973e161354d0518eebf59f">Bond::OPCODE_CONSTL_3</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a55135a92b9b50bc8722603ba705d01d8">Bond::OPCODE_CONSTL_4</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6affa1c9787856ee90612ca3488b1cca27">Bond::OPCODE_CONSTL_8</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a49ef47b28f2280e5d1773fc675353563">Bond::OPCODE_CONSTF_N2</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a264c1a91ff24b5039d3813405dfeb0ce">Bond::OPCODE_CONSTF_N1</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a1598b06c61f0daa71b00c4f1b20ddd45">Bond::OPCODE_CONSTF_NH</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ac02760a54577bdb81a75f5a4fc08fb02">Bond::OPCODE_CONSTF_0</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ad9777ab6a06bc2acfd4c152dd3017fad">Bond::OPCODE_CONSTF_H</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6acfedaa7a815452f6b4a83590821c1387">Bond::OPCODE_CONSTF_1</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a973313923c8b921ab8677e741d30f994">Bond::OPCODE_CONSTF_2</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ac943824ea330a2a7da1e95838c84fbd9">Bond::OPCODE_CONSTD_N2</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a564e433e6a44d3776bf2ef75b8c308fc">Bond::OPCODE_CONSTD_N1</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a68a0c865138f5e4755a7dca6472bd30c">Bond::OPCODE_CONSTD_NH</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a22fd9d7a18de87592a4e192d8918d4ac">Bond::OPCODE_CONSTD_0</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a172eabc26bee301cd325ba37c08373e7">Bond::OPCODE_CONSTD_H</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a54ca17244a1f4cec59cbad239449c125">Bond::OPCODE_CONSTD_1</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a86eced4a6440918cc80701fd52925132">Bond::OPCODE_CONSTD_2</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6aa7604cac3f3826d3e947b0b4dd0bb36f">Bond::OPCODE_LOADFP</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a8900959c4279ab879ccff7f6f183bc71">Bond::OPCODE_LOADFPW</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6aafdabd06627d01b2a0f94644fd763d62">Bond::OPCODE_LOADEA</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a9fa6b2dcbc920d6e048ac4a5021f8169">Bond::OPCODE_LOADSTR</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a760d7e84cd3b6fb6585eaa4b9603c613">Bond::OPCODE_LOADC</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a1176476428b8a7a1d30727aab5fc481f">Bond::OPCODE_LOADUC</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a4497965bdcdb40b505422bf6637c906d">Bond::OPCODE_LOADS</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a27ab47f2efa9d32fc04ab33e3914c6e9">Bond::OPCODE_LOADUS</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a88377ee7fee5152809836611da842c7e">Bond::OPCODE_LOAD32</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a1bcfb79a18a514df80989e395644be5c">Bond::OPCODE_LOAD64</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a735c4146ba6dc252e352de390345e5b4">Bond::OPCODE_LOADMEMW</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6aac5e4a7a19e1e95aa596176c4ca26e10">Bond::OPCODE_STOREC</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a41d03e796781d0bb63930c3098bce599">Bond::OPCODE_STORES</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a943081c8ebe8f8120da09bae81683ae7">Bond::OPCODE_STORE32</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a34f84f94f59e714474cff459630255ab">Bond::OPCODE_STORE64</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a704bf27abe815a5c1506166b6da7ee62">Bond::OPCODE_PUSHC</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a0f2919e8543f142b013ec580d475a280">Bond::OPCODE_PUSHCW</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ac1a9ebabc1cf6be2bf790959d9a6685b">Bond::OPCODE_PUSHUC</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a29812754363703b6933983295ae9bf2c">Bond::OPCODE_PUSHUCW</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ad79ad734053e7e7d9d8ec6361e321df5">Bond::OPCODE_PUSHS</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a01745c7ea0fd5e7483c9b4afbd3ff11d">Bond::OPCODE_PUSHSW</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a0efc4226ca8c5dda8b860c068031d8ca">Bond::OPCODE_PUSHUS</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a89065e3aaed005e5305ac2c8c8b27d96">Bond::OPCODE_PUSHUSW</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a10ab47c3e99b5ec9bf8d3e4d2936edba">Bond::OPCODE_PUSH32</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ab7ee1337347a1b54eaf594dba51c42dd">Bond::OPCODE_PUSH32W</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ac8a3937790238dc1bfae38f2ce73e9dd">Bond::OPCODE_PUSH32_P0</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a2d8a03637f3d2b6b8d274585502128fb">Bond::OPCODE_PUSH32_P1</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ad0c54c2ae8b9428e0940914988141630">Bond::OPCODE_PUSH32_P2</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a13a9f64734d0fdbd2dfcce7aea37fbee">Bond::OPCODE_PUSH32_P3</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a9edc5682a109f268d293cdbecbd6f01f">Bond::OPCODE_PUSH32_L0</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a54713a15bbce1821d804e6ae41466265">Bond::OPCODE_PUSH32_L1</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a52fc1860444a7ca3ab79d0c5cc84f32c">Bond::OPCODE_PUSH32_L2</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ad552da3d5fad300a8f53f8b3420e6edc">Bond::OPCODE_PUSH32_L3</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a0731cad1af5049eb53888a58ff42e7dd">Bond::OPCODE_PUSH64</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6af9d480ffcc722d4454a1abaa8a530c9f">Bond::OPCODE_PUSH64W</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a283212796472c93124b8343040b5a038">Bond::OPCODE_PUSH64_P0</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a80926e4fbd2c73507ae4229521d4cd65">Bond::OPCODE_PUSH64_P1</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a42c8455a6734e1db2bc70f67a3a4a4e3">Bond::OPCODE_PUSH64_P2</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6af65043807bbb122613fc89373670fd63">Bond::OPCODE_PUSH64_P3</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a07ecf9ac1c2e3465de4570a512ea8528">Bond::OPCODE_PUSH64_L0</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a324f7a906162a43c84f624875b88bc44">Bond::OPCODE_PUSH64_L1</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6af4f1c41d8f781fb73d434b2cba4b4161">Bond::OPCODE_PUSH64_L2</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6af43d98ae29da4fe0490159fce5c1fb1a">Bond::OPCODE_PUSH64_L3</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6af2221342b5f39d7346ecbd932380d961">Bond::OPCODE_POP</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ae52f1b8c455bf3e1ab7a6bae4c8e7fec">Bond::OPCODE_POPC</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6aff4880a0ae5973a3fe0a1d48b296672c">Bond::OPCODE_POPCW</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ab8be9e9e28b1338fd88abf49a043db22">Bond::OPCODE_POPS</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a6cc5f8f2d10773c98c45e3d5d832aff5">Bond::OPCODE_POPSW</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a3bbe92018a9583eef7f28d515a1e19b2">Bond::OPCODE_POP32</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ab0f85fbdd60cf9d6d9d5af6eb58749e6">Bond::OPCODE_POP32W</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ae8e487e3dd972c3bd371655f62a658f1">Bond::OPCODE_POP32_P0</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a5607ef5bf34bde717b4f755e98a1942c">Bond::OPCODE_POP32_P1</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a3aba9827da6a64b2a491c1d67a35f6cc">Bond::OPCODE_POP32_P2</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a9010ad4e781b78e6b4d5c5b9add8e7dc">Bond::OPCODE_POP32_P3</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a4171139aa7092970f3d247a13612aa38">Bond::OPCODE_POP32_L0</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ae33246292de563c980f7e0c6fe742751">Bond::OPCODE_POP32_L1</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a877d7036b7c342353fb5ccc5a8f52e73">Bond::OPCODE_POP32_L2</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6aa2bc51af3372591c137a2889b85d7233">Bond::OPCODE_POP32_L3</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ad926032ca17ddd6b324a492a67d6ad71">Bond::OPCODE_POP64</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ade09eca40c692952a24165ce2191d5b7">Bond::OPCODE_POP64W</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a865bc04df55f822e77d36dc5dfa027de">Bond::OPCODE_POP64_P0</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a383b9ece8ee77865c54341b068ed22a1">Bond::OPCODE_POP64_P1</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ab14c329bb8538c972a4b23b08ce63971">Bond::OPCODE_POP64_P2</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a26b7ffe0a27453f3ded6c0ba3087c7b8">Bond::OPCODE_POP64_P3</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a7e8ca370cdca7318304b17f016f34354">Bond::OPCODE_POP64_L0</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a799458384c86c02d67b09a2860f2e9b9">Bond::OPCODE_POP64_L1</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a80bb9cf396328361ec77954607fdc4ec">Bond::OPCODE_POP64_L2</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a4cf94e9b6b8f2489a1cffeb24cc6c5ef">Bond::OPCODE_POP64_L3</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ab6e9efffb7cb57f43db9459cc66848dd">Bond::OPCODE_MEMCOPYW</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a95178c351e18ec89f0e4d76b6c004a77">Bond::OPCODE_MEMZEROW</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6aca4aed31a7bf9b2d20eb0db7dc562f2e">Bond::OPCODE_DUP</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a3f75df975e2723d42222022cee1af4ca">Bond::OPCODE_DUPINS</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6aa85579b6a897bd7a040ae3ef8c80bab5">Bond::OPCODE_SWAP</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a3fa7353d11e2da19b04339f1db4ae245">Bond::OPCODE_ITOC</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a1a90be8b65eb805dd3d26d1cb82e83ef">Bond::OPCODE_UITOUC</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a211b40eeebbead29addd84a345a68bdf">Bond::OPCODE_ITOS</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a7f5d645ed980d61a5892e552e5ddb0e5">Bond::OPCODE_UITOUS</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a8cfa022898c2185c812c2111ad6f545b">Bond::OPCODE_ITOL</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6acb584e4ad8791358941ecf238894ec66">Bond::OPCODE_UITOUL</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ad82d27d2f95448ff9d0ff132ffeea4d1">Bond::OPCODE_ITOF</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6aff4bf2909007cec71e26481ab9950ffd">Bond::OPCODE_UITOF</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a556832d81bd5c6f76df0b76e10fafd00">Bond::OPCODE_ITOD</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ac5d9da5165daec0e2f68134fbd248f5c">Bond::OPCODE_UITOD</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a784af2fcaa9160f704a1f4d7b95e9399">Bond::OPCODE_LTOI</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a016472e6e35dcc92674d77838c50d42d">Bond::OPCODE_LTOF</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a5098b69013726d9c7a4099574af36474">Bond::OPCODE_ULTOF</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6aae51705e82c9a956353956b4d1c294fa">Bond::OPCODE_LTOD</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6aa0ccc786aa3c9c664c34d71885d40f5b">Bond::OPCODE_ULTOD</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a9675f1f08b4815dad963904c9c3ffb78">Bond::OPCODE_FTOI</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6abc1f1501a6d2e538ea082440bbfda972">Bond::OPCODE_FTOUI</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a80c49b07a38c9417f966a535ae8631e4">Bond::OPCODE_FTOL</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6afaceea698d19abc469cdbf33c19d532d">Bond::OPCODE_FTOUL</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ac1a28cb5eeb96cdfaf183ca0be222d16">Bond::OPCODE_FTOD</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a8cb31bcd9eb772b1395074118c6a8204">Bond::OPCODE_DTOI</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a83acba0772270f7bdbbbf3009b4a6926">Bond::OPCODE_DTOUI</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ad117e5f454d809e7cf5d02681018404c">Bond::OPCODE_DTOL</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a72d8416cd5abda0a18c576b618af8e37">Bond::OPCODE_DTOUL</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6af3b14211361c4e89071d9dc8a4f31779">Bond::OPCODE_DTOF</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ad187f4c899b46a86ed27d1e00068eb99">Bond::OPCODE_PTROFF</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a6a0354a6434ea828196294d79adaf471">Bond::OPCODE_PTRDIFF</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a0cedaa9edf74facfa62de289d9f4e702">Bond::OPCODE_INCI</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a751154513f473a99686122b1a012b302">Bond::OPCODE_INCL</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a411810dd47b783a82267df6dce7bc9c6">Bond::OPCODE_ADDI</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a35b92fe69157faae509d27c46bd4586e">Bond::OPCODE_ADDL</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6abd43eee4c2af64074eddfb46a14bd0cc">Bond::OPCODE_ADDF</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ad58a15d813bc2321ee6817150f62f374">Bond::OPCODE_ADDD</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a6b3881679915556ca094076cf86e0c41">Bond::OPCODE_SUBI</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a03960b19ef41e54a966235bb64d02bdd">Bond::OPCODE_SUBL</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a3fac46e6d3fb5ebb0e52111602180d8b">Bond::OPCODE_SUBF</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6aaee25bc85804a198b9cb80e9e72eee27">Bond::OPCODE_SUBD</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6abae27ddd635904bab6ed8bc26e1e2a30">Bond::OPCODE_MULI</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6af467ed18b2e254858ff1f8ceaa437162">Bond::OPCODE_MULUI</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6acadc3609872b8adbc5ad6c3e44ae9bf4">Bond::OPCODE_MULL</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ab67fc4a1d8ae6fae412492e883fbe2b5">Bond::OPCODE_MULUL</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a88d8410b70f79b39ecdcea3cbdc97314">Bond::OPCODE_MULF</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6affb3d6e63ff33cc8f6b675096ee0c9a6">Bond::OPCODE_MULD</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a212c706ba3505148721f14130f3f0442">Bond::OPCODE_DIVI</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ab2fa3c128eaf75a9f740a9185bf3aa4c">Bond::OPCODE_DIVUI</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a2187c9cce121504d8655322316639a18">Bond::OPCODE_DIVL</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a876d77ba82eede320baa3f4ace65623e">Bond::OPCODE_DIVUL</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ad07e0f87c9863017ac962e8223044225">Bond::OPCODE_DIVF</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ac77ef5fca50ed3a4d1e1627cf9e6ccb8">Bond::OPCODE_DIVD</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a0da8378be4faf5517ff3221bd87ca585">Bond::OPCODE_REMI</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ad54df7d8857d8c41837f9302a647e0d2">Bond::OPCODE_REMUI</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6aafc29c6ef130cafee989b7ebfeb7fbee">Bond::OPCODE_REML</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a2af9162c487827728674a6ae5a673a36">Bond::OPCODE_REMUL</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ae9b79473d904b718adfc9b3c8f4238f4">Bond::OPCODE_LSHI</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ab76ba2b7df2edbf6e3d22422d6a06531">Bond::OPCODE_LSHL</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a4a1c36f6e448f59cfe0cce1e71ec0ffe">Bond::OPCODE_RSHI</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6abf97670a032f76d4bb5edb6b675e14ab">Bond::OPCODE_RSHUI</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6add830b82f0d5b6b884d330a32cd70ca6">Bond::OPCODE_RSHL</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a6c9191451ac00375e2da6176bdc4ade3">Bond::OPCODE_RSHUL</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6aad2e9478426e2f65dd20143ca5cdc5e1">Bond::OPCODE_ANDI</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a25907fa39c796e493662f97785155f66">Bond::OPCODE_ANDL</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a6c08f66351d7dc90bb74ad522a7738a4">Bond::OPCODE_ORI</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6aa91528f020f2bd53f8453a76c32621d4">Bond::OPCODE_ORL</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6aaba3408ce72f867506a107e31b05ec21">Bond::OPCODE_XORI</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6aab2ae3428e304dd020fac53337acc64f">Bond::OPCODE_XORL</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a47b074d4dfb2eb735f2173aabd1a644f">Bond::OPCODE_NEGI</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6adbbe7d564ef678abd3cec4263561f212">Bond::OPCODE_NEGL</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6aa732a944ffbe97a4e2b96c4c32a96083">Bond::OPCODE_NEGF</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a11e41c9a5280154f8ceeffcb5d6c56b7">Bond::OPCODE_NEGD</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ac3fb9625278144557308999fb7334abd">Bond::OPCODE_NOT</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a6b0cd2421b2b347716bc5f1d32fd7f83">Bond::OPCODE_CMPEQI</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6aa9b4231115b7f266f8375b3f9a2d738b">Bond::OPCODE_CMPEQL</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a3e2ff9f6b912a524e2bde3d8d2fa2143">Bond::OPCODE_CMPEQF</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6acd1db757ec00500c09fe862470f88ad6">Bond::OPCODE_CMPEQD</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a366329815c8a793635b6e603123672e1">Bond::OPCODE_CMPNEQI</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a3782960948b1f69b62e2234c2d0e46f5">Bond::OPCODE_CMPNEQL</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a1002db793839f8121dcc19ac8e0f013b">Bond::OPCODE_CMPNEQF</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a37b30f8ce9e4ad7d4aab23465b878bd6">Bond::OPCODE_CMPNEQD</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a47a6b93d7b01d6414ee2d8f78173c7c4">Bond::OPCODE_CMPLTI</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a3e8e333c7a56e47122506962b8129549">Bond::OPCODE_CMPLTUI</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a7c988461d50055ef7fbf37ead3ae6a81">Bond::OPCODE_CMPLTL</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a8d3904ce537c7744d8817233e1a54bc0">Bond::OPCODE_CMPLTUL</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ab430c5b747578bb3bd757a252394ec74">Bond::OPCODE_CMPLTF</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ac892d530cfcc30f8d2b6a5fbe75cb261">Bond::OPCODE_CMPLTD</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a3a5fcd67e38acfb42cfbe59c1bf3d7e6">Bond::OPCODE_CMPLEI</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ae2b3804178d0227fdd2718e2910f4d86">Bond::OPCODE_CMPLEUI</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a9ed6c3363b159c3e2c1624b2b2cbad52">Bond::OPCODE_CMPLEL</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6aef03e285590f50f99e22c1d46bffa208">Bond::OPCODE_CMPLEUL</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a81e91d05a11a71f5299d4bbbcd738714">Bond::OPCODE_CMPLEF</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a738c39e96c7e0ad3b90db5e38dcae58e">Bond::OPCODE_CMPLED</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6aca46cea2741977408f7d0ec29c01daa2">Bond::OPCODE_CMPGTI</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6aa117ff7698fa125f0be246eaf17028df">Bond::OPCODE_CMPGTUI</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a82ef0d0ee333d3c816fedd187301a808">Bond::OPCODE_CMPGTL</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a7cc1591137375ef413d05cb7f33d9322">Bond::OPCODE_CMPGTUL</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a7ad393b2816feef56d327577ec8bc7f8">Bond::OPCODE_CMPGTF</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a81b7d71aafbe128e9d8702fac2d31201">Bond::OPCODE_CMPGTD</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a32360323c2d27661e24a81ee940f9e02">Bond::OPCODE_CMPGEI</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6afdd6873aabd4f2cbed79c4aa5a61ec2c">Bond::OPCODE_CMPGEUI</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a307ce4865b849c7be523133f4e108881">Bond::OPCODE_CMPGEL</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6aadf217f5274b740f7e6cc551a5a57d54">Bond::OPCODE_CMPGEUL</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6adcff43b5ad1b8eec74801a522c42a349">Bond::OPCODE_CMPGEF</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6add7683b17c4611e69d5d0759d68e7367">Bond::OPCODE_CMPGED</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a5b6abd76abca906104622d1d9114ebc2">Bond::OPCODE_BRZ</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a073a87b7a23be17cfb315f85a7ecf94b">Bond::OPCODE_BRZW</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a735f16c9fd9ee8edd6614c747af0fcd8">Bond::OPCODE_BRNZ</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a7cc7752793c48119497556f7fc6ba14b">Bond::OPCODE_BRNZW</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ad6959440752d19a3905f2fdfab7a8354">Bond::OPCODE_NBRZ</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a22bb4eb2f0a63238a17c8d78692e95d3">Bond::OPCODE_NBRZW</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a35b09bacb0021c8f8b5228fe87812f4a">Bond::OPCODE_NBRNZ</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a1136ec3c9eb2d0e20bc4df48c7f4cc6a">Bond::OPCODE_NBRNZW</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6abd7b53fe344df169c4cc1cdae978509c">Bond::OPCODE_IFZ</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ac774973e02556b8e53ce365d6fb773f7">Bond::OPCODE_IFZW</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a9a72f58139082b69039d397f1bd6d060">Bond::OPCODE_IFNZ</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6ab4db77c52d69fa466473c9cfb9c21967">Bond::OPCODE_IFNZW</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a14f6866ca9e90efdc723af10151cf526">Bond::OPCODE_GOTO</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6aaa26cadc36a19d2beb7ffa33c049a6f6">Bond::OPCODE_GOTOW</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a9e71045e0ebbcc890b939079c7c9d830">Bond::OPCODE_LOOKUPSWITCH</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a6ad85e85e7b1a05e16d5c06cdd4d52e1">Bond::OPCODE_TABLESWITCH</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a0265d829bcbec109b9cb7f4c55936510">Bond::OPCODE_INVOKE</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a0754dbc09273164677e9da80f58dc0dd">Bond::OPCODE_RETURN</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6af5f973e715b442d4eba352a54e437a87">Bond::OPCODE_RETURN32</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a81610495cc1ddc7f3549122b19bcf3c0">Bond::OPCODE_RETURN64</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a9e80fad8bd78803f936c99a59acf9958">Bond::OPCODE_RETURNMEMW</a>, 
+<a class="el" href="group__types.html#gga557394428c2bb1199d13db3825d0c0f6a86d97ced0b03966534c9178477bef5fd">Bond::OPCODE_MAX</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ga557394428c2bb1199d13db3825d0c0f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration of all opcodes in the <a class="el" href="namespace_bond.html">Bond</a> Virtual Machine instruction set.  <a href="group__types.html#ga557394428c2bb1199d13db3825d0c0f6">More...</a><br /></td></tr>
+<tr class="separator:ga557394428c2bb1199d13db3825d0c0f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2490c24df3d969eccdecb7ea1150c4cc"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__types.html#ga2490c24df3d969eccdecb7ea1150c4cc">Bond::OpCodeParam</a> { <br />
+&#160;&#160;<a class="el" href="group__types.html#gga2490c24df3d969eccdecb7ea1150c4cca3779dd9f522684de361b2442d7eaaafa">Bond::OC_PARAM_NONE</a>, 
+<a class="el" href="group__types.html#gga2490c24df3d969eccdecb7ea1150c4cca344e2c87ebf91023466effd122aeceec">Bond::OC_PARAM_CHAR</a>, 
+<a class="el" href="group__types.html#gga2490c24df3d969eccdecb7ea1150c4cca64e8fcf7605acb8a6cc546cc735260cf">Bond::OC_PARAM_UCHAR</a>, 
+<a class="el" href="group__types.html#gga2490c24df3d969eccdecb7ea1150c4ccae43eb7226eec1400569d909e12f8584b">Bond::OC_PARAM_UCHAR_CHAR</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga2490c24df3d969eccdecb7ea1150c4ccaf1ad558c571772be73f71bcb060a1a43">Bond::OC_PARAM_SHORT</a>, 
+<a class="el" href="group__types.html#gga2490c24df3d969eccdecb7ea1150c4cca68a518761a635c7784dfb3fc4bf836c9">Bond::OC_PARAM_USHORT</a>, 
+<a class="el" href="group__types.html#gga2490c24df3d969eccdecb7ea1150c4cca0d2c8543da6f347e6ac9ed89030dc9fe">Bond::OC_PARAM_INT</a>, 
+<a class="el" href="group__types.html#gga2490c24df3d969eccdecb7ea1150c4ccafe2c3fb03b81318238ec8358c7ec0ab8">Bond::OC_PARAM_VAL32</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga2490c24df3d969eccdecb7ea1150c4ccab5b59e5b1efc165fa96c63d340db1eda">Bond::OC_PARAM_VAL64</a>, 
+<a class="el" href="group__types.html#gga2490c24df3d969eccdecb7ea1150c4cca0dfdea159a1caceea9608fc438f631c6">Bond::OC_PARAM_OFF16</a>, 
+<a class="el" href="group__types.html#gga2490c24df3d969eccdecb7ea1150c4cca1547c157ab2f594ccb8f80ef9c89923d">Bond::OC_PARAM_OFF32</a>, 
+<a class="el" href="group__types.html#gga2490c24df3d969eccdecb7ea1150c4cca33bc4f69f2dbbba0031539fd770bda46">Bond::OC_PARAM_STRING</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__types.html#gga2490c24df3d969eccdecb7ea1150c4cca75c63dae57e4961aa8d1757c88f4789c">Bond::OC_PARAM_NAME</a>, 
+<a class="el" href="group__types.html#gga2490c24df3d969eccdecb7ea1150c4ccab28fb25a575604c44cd47b06678c2d65">Bond::OC_PARAM_LOOKUPSWITCH</a>, 
+<a class="el" href="group__types.html#gga2490c24df3d969eccdecb7ea1150c4cca28df9d91823552ba53410d09cb65fc4c">Bond::OC_PARAM_TABLESWITCH</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ga2490c24df3d969eccdecb7ea1150c4cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration describing all combinations of parameter types for the instructions in the <a class="el" href="namespace_bond.html">Bond</a> Virtual Machine instruction set.  <a href="group__types.html#ga2490c24df3d969eccdecb7ea1150c4cc">More...</a><br /></td></tr>
+<tr class="separator:ga2490c24df3d969eccdecb7ea1150c4cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga41ff58c35c71387ff5113e12ca809a76"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__types.html#ga41ff58c35c71387ff5113e12ca809a76">Bond::GetOpCodeMnemonic</a> (<a class="el" href="group__types.html#ga557394428c2bb1199d13db3825d0c0f6">OpCode</a> opCode)</td></tr>
+<tr class="memdesc:ga41ff58c35c71387ff5113e12ca809a76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string representation of the given opcode.  <a href="group__types.html#ga41ff58c35c71387ff5113e12ca809a76">More...</a><br /></td></tr>
+<tr class="separator:ga41ff58c35c71387ff5113e12ca809a76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga88242ea393f502a775234dcb09ccd8d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__types.html#ga2490c24df3d969eccdecb7ea1150c4cc">OpCodeParam</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__types.html#ga88242ea393f502a775234dcb09ccd8d7">Bond::GetOpCodeParamType</a> (<a class="el" href="group__types.html#ga557394428c2bb1199d13db3825d0c0f6">OpCode</a> opCode)</td></tr>
+<tr class="memdesc:ga88242ea393f502a775234dcb09ccd8d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a value of the OpCodeParam enumeration describing the parameter types for the given opcode.  <a href="group__types.html#ga88242ea393f502a775234dcb09ccd8d7">More...</a><br /></td></tr>
+<tr class="separator:ga88242ea393f502a775234dcb09ccd8d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3186af69ba26130f18ae6517e6f3f05b"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__types.html#ga3186af69ba26130f18ae6517e6f3f05b">Bond::GetStackDelta</a> (<a class="el" href="group__types.html#ga557394428c2bb1199d13db3825d0c0f6">OpCode</a> opCode)</td></tr>
+<tr class="memdesc:ga3186af69ba26130f18ae6517e6f3f05b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the how much the given opcode moves the stack pointer in multiples of BOND_SLOT_SIZE bytes.  <a href="group__types.html#ga3186af69ba26130f18ae6517e6f3f05b">More...</a><br /></td></tr>
+<tr class="separator:ga3186af69ba26130f18ae6517e6f3f05b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga05d5edf492ec8cad97d0d8209d1ae388"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__types.html#ga05d5edf492ec8cad97d0d8209d1ae388">Bond::StringLength</a> (const char *str)</td></tr>
+<tr class="memdesc:ga05d5edf492ec8cad97d0d8209d1ae388"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the result of the expression: <code>(str == nullptr) ? 0 : strlen(str)</code>.  <a href="group__types.html#ga05d5edf492ec8cad97d0d8209d1ae388">More...</a><br /></td></tr>
+<tr class="separator:ga05d5edf492ec8cad97d0d8209d1ae388"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad041fef14b9592f04db57c3d3689b3bf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__types.html#gad041fef14b9592f04db57c3d3689b3bf">Bond::StringEqual</a> (const char *str1, const char *str2, size_t length)</td></tr>
+<tr class="memdesc:gad041fef14b9592f04db57c3d3689b3bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether two strings of the same specified length are equal. The strings may have embedded null characters.  <a href="group__types.html#gad041fef14b9592f04db57c3d3689b3bf">More...</a><br /></td></tr>
+<tr class="separator:gad041fef14b9592f04db57c3d3689b3bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga952de8538bdc6dcad42e7bb2bdbfee20"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__types.html#ga952de8538bdc6dcad42e7bb2bdbfee20">Bond::StringEqual</a> (const char *str1, size_t length1, const char *str2, size_t length2)</td></tr>
+<tr class="memdesc:ga952de8538bdc6dcad42e7bb2bdbfee20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether two strings of specified lengths are equal. The strings may have embedded null characters.  <a href="group__types.html#ga952de8538bdc6dcad42e7bb2bdbfee20">More...</a><br /></td></tr>
+<tr class="separator:ga952de8538bdc6dcad42e7bb2bdbfee20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2aaa3ec968ed505b59a7475adf4149ad"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__types.html#ga2aaa3ec968ed505b59a7475adf4149ad">Bond::StringCompare</a> (const char *str1, size_t length1, const char *str2, size_t length2)</td></tr>
+<tr class="memdesc:ga2aaa3ec968ed505b59a7475adf4149ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two strings of specified lengths and returns a negative value, zero, or positive value if the first string is less than, equal to, or greater than the second.  <a href="group__types.html#ga2aaa3ec968ed505b59a7475adf4149ad">More...</a><br /></td></tr>
+<tr class="separator:ga2aaa3ec968ed505b59a7475adf4149ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9f55fa87c6b684715a369dbc50090eda"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__types.html#ga9f55fa87c6b684715a369dbc50090eda">Bond::operator&lt;</a> (const <a class="el" href="union_bond_1_1_value16.html">Value16</a> &amp;a, const <a class="el" href="union_bond_1_1_value16.html">Value16</a> &amp;b)</td></tr>
+<tr class="memdesc:ga9f55fa87c6b684715a369dbc50090eda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the result of the expression: <code>a.mUShort &lt; b.mUShort</code>.  <a href="group__types.html#ga9f55fa87c6b684715a369dbc50090eda">More...</a><br /></td></tr>
+<tr class="separator:ga9f55fa87c6b684715a369dbc50090eda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga99af6153ceab4fc4dbf201baee72fb57"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__types.html#ga99af6153ceab4fc4dbf201baee72fb57">Bond::operator&lt;</a> (const <a class="el" href="union_bond_1_1_value32.html">Value32</a> &amp;a, const <a class="el" href="union_bond_1_1_value32.html">Value32</a> &amp;b)</td></tr>
+<tr class="memdesc:ga99af6153ceab4fc4dbf201baee72fb57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the result of the expression: <code>a.mUInt &lt; b.mUInt</code>.  <a href="group__types.html#ga99af6153ceab4fc4dbf201baee72fb57">More...</a><br /></td></tr>
+<tr class="separator:ga99af6153ceab4fc4dbf201baee72fb57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga91c58667f1fcc96d3144edbdfc53422c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__types.html#ga91c58667f1fcc96d3144edbdfc53422c">Bond::operator&lt;</a> (const <a class="el" href="union_bond_1_1_value64.html">Value64</a> &amp;a, const <a class="el" href="union_bond_1_1_value64.html">Value64</a> &amp;b)</td></tr>
+<tr class="memdesc:ga91c58667f1fcc96d3144edbdfc53422c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the result of the expression: <code>a.mULong &lt; b.mULong</code>.  <a href="group__types.html#ga91c58667f1fcc96d3144edbdfc53422c">More...</a><br /></td></tr>
+<tr class="separator:ga91c58667f1fcc96d3144edbdfc53422c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Various basic types used throughout the <a class="el" href="namespace_bond.html">Bond</a> Runtime Library. </p>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga753b1436366d6951f6dc48087cf3b7bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga753b1436366d6951f6dc48087cf3b7bb">&#9670;&nbsp;</a></span>BOND_OPCODE_LIST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BOND_OPCODE_LIST</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ga557394428c2bb1199d13db3825d0c0f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga557394428c2bb1199d13db3825d0c0f6">&#9670;&nbsp;</a></span>OpCode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__types.html#ga557394428c2bb1199d13db3825d0c0f6">Bond::OpCode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enumeration of all opcodes in the <a class="el" href="namespace_bond.html">Bond</a> Virtual Machine instruction set. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ab89f4ca4eb1b7e579b96eb750e177b2e"></a>OPCODE_NOP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6aae1b6ea4732a98775f59a8fe1dbf91c2"></a>OPCODE_CONSTC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6aa7274bd0b494037900a6b1cf231b2322"></a>OPCODE_CONSTUC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a1c9d0c6c9f48bfd599225b69766c2d8e"></a>OPCODE_CONSTS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a4ed1237ebd0e0787ec963bd7b6c6658a"></a>OPCODE_CONSTUS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a73499df142685043a6bc520c52f5eb86"></a>OPCODE_CONST32&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a08d2cc9ef61bb3b620fd87324f341807"></a>OPCODE_CONST64&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ad0108ff3af6f8450bc0a56a11a585cac"></a>OPCODE_CONSTI_N2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a2de5714a3ee5fcfc1a9fd0710042b91f"></a>OPCODE_CONSTI_N1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a16edde01420062e48299e7412c9f2392"></a>OPCODE_CONSTI_0&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6abffc0ddd62fb6c4fa90e4b3fd2b75a59"></a>OPCODE_CONSTI_1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a978ed72a30c9bac505b9b2e212c085ce"></a>OPCODE_CONSTI_2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a1bc68c6364cc0fe03718a8f2a5385cfe"></a>OPCODE_CONSTI_3&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ab7dccdf40291b20bfe5baddab6517775"></a>OPCODE_CONSTI_4&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a91a00deb04bcbc73dfe1bc1aef823948"></a>OPCODE_CONSTI_8&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a55a8c4104a72ddb7dcb53f5a2fe4dc9c"></a>OPCODE_CONSTL_N2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6af2cb7c52f15c7a56d9482a520523cb42"></a>OPCODE_CONSTL_N1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a1f797507e1b10336ccbb8842a7e8302b"></a>OPCODE_CONSTL_0&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a3d490dfa56fd33ff34c68961031ed2ca"></a>OPCODE_CONSTL_1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6acaa7a3ffe3060b71632ad893f1d82ef3"></a>OPCODE_CONSTL_2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a9192572fe2973e161354d0518eebf59f"></a>OPCODE_CONSTL_3&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a55135a92b9b50bc8722603ba705d01d8"></a>OPCODE_CONSTL_4&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6affa1c9787856ee90612ca3488b1cca27"></a>OPCODE_CONSTL_8&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a49ef47b28f2280e5d1773fc675353563"></a>OPCODE_CONSTF_N2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a264c1a91ff24b5039d3813405dfeb0ce"></a>OPCODE_CONSTF_N1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a1598b06c61f0daa71b00c4f1b20ddd45"></a>OPCODE_CONSTF_NH&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ac02760a54577bdb81a75f5a4fc08fb02"></a>OPCODE_CONSTF_0&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ad9777ab6a06bc2acfd4c152dd3017fad"></a>OPCODE_CONSTF_H&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6acfedaa7a815452f6b4a83590821c1387"></a>OPCODE_CONSTF_1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a973313923c8b921ab8677e741d30f994"></a>OPCODE_CONSTF_2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ac943824ea330a2a7da1e95838c84fbd9"></a>OPCODE_CONSTD_N2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a564e433e6a44d3776bf2ef75b8c308fc"></a>OPCODE_CONSTD_N1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a68a0c865138f5e4755a7dca6472bd30c"></a>OPCODE_CONSTD_NH&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a22fd9d7a18de87592a4e192d8918d4ac"></a>OPCODE_CONSTD_0&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a172eabc26bee301cd325ba37c08373e7"></a>OPCODE_CONSTD_H&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a54ca17244a1f4cec59cbad239449c125"></a>OPCODE_CONSTD_1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a86eced4a6440918cc80701fd52925132"></a>OPCODE_CONSTD_2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6aa7604cac3f3826d3e947b0b4dd0bb36f"></a>OPCODE_LOADFP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a8900959c4279ab879ccff7f6f183bc71"></a>OPCODE_LOADFPW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6aafdabd06627d01b2a0f94644fd763d62"></a>OPCODE_LOADEA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a9fa6b2dcbc920d6e048ac4a5021f8169"></a>OPCODE_LOADSTR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a760d7e84cd3b6fb6585eaa4b9603c613"></a>OPCODE_LOADC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a1176476428b8a7a1d30727aab5fc481f"></a>OPCODE_LOADUC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a4497965bdcdb40b505422bf6637c906d"></a>OPCODE_LOADS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a27ab47f2efa9d32fc04ab33e3914c6e9"></a>OPCODE_LOADUS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a88377ee7fee5152809836611da842c7e"></a>OPCODE_LOAD32&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a1bcfb79a18a514df80989e395644be5c"></a>OPCODE_LOAD64&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a735c4146ba6dc252e352de390345e5b4"></a>OPCODE_LOADMEMW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6aac5e4a7a19e1e95aa596176c4ca26e10"></a>OPCODE_STOREC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a41d03e796781d0bb63930c3098bce599"></a>OPCODE_STORES&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a943081c8ebe8f8120da09bae81683ae7"></a>OPCODE_STORE32&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a34f84f94f59e714474cff459630255ab"></a>OPCODE_STORE64&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a704bf27abe815a5c1506166b6da7ee62"></a>OPCODE_PUSHC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a0f2919e8543f142b013ec580d475a280"></a>OPCODE_PUSHCW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ac1a9ebabc1cf6be2bf790959d9a6685b"></a>OPCODE_PUSHUC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a29812754363703b6933983295ae9bf2c"></a>OPCODE_PUSHUCW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ad79ad734053e7e7d9d8ec6361e321df5"></a>OPCODE_PUSHS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a01745c7ea0fd5e7483c9b4afbd3ff11d"></a>OPCODE_PUSHSW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a0efc4226ca8c5dda8b860c068031d8ca"></a>OPCODE_PUSHUS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a89065e3aaed005e5305ac2c8c8b27d96"></a>OPCODE_PUSHUSW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a10ab47c3e99b5ec9bf8d3e4d2936edba"></a>OPCODE_PUSH32&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ab7ee1337347a1b54eaf594dba51c42dd"></a>OPCODE_PUSH32W&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ac8a3937790238dc1bfae38f2ce73e9dd"></a>OPCODE_PUSH32_P0&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a2d8a03637f3d2b6b8d274585502128fb"></a>OPCODE_PUSH32_P1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ad0c54c2ae8b9428e0940914988141630"></a>OPCODE_PUSH32_P2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a13a9f64734d0fdbd2dfcce7aea37fbee"></a>OPCODE_PUSH32_P3&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a9edc5682a109f268d293cdbecbd6f01f"></a>OPCODE_PUSH32_L0&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a54713a15bbce1821d804e6ae41466265"></a>OPCODE_PUSH32_L1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a52fc1860444a7ca3ab79d0c5cc84f32c"></a>OPCODE_PUSH32_L2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ad552da3d5fad300a8f53f8b3420e6edc"></a>OPCODE_PUSH32_L3&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a0731cad1af5049eb53888a58ff42e7dd"></a>OPCODE_PUSH64&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6af9d480ffcc722d4454a1abaa8a530c9f"></a>OPCODE_PUSH64W&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a283212796472c93124b8343040b5a038"></a>OPCODE_PUSH64_P0&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a80926e4fbd2c73507ae4229521d4cd65"></a>OPCODE_PUSH64_P1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a42c8455a6734e1db2bc70f67a3a4a4e3"></a>OPCODE_PUSH64_P2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6af65043807bbb122613fc89373670fd63"></a>OPCODE_PUSH64_P3&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a07ecf9ac1c2e3465de4570a512ea8528"></a>OPCODE_PUSH64_L0&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a324f7a906162a43c84f624875b88bc44"></a>OPCODE_PUSH64_L1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6af4f1c41d8f781fb73d434b2cba4b4161"></a>OPCODE_PUSH64_L2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6af43d98ae29da4fe0490159fce5c1fb1a"></a>OPCODE_PUSH64_L3&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6af2221342b5f39d7346ecbd932380d961"></a>OPCODE_POP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ae52f1b8c455bf3e1ab7a6bae4c8e7fec"></a>OPCODE_POPC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6aff4880a0ae5973a3fe0a1d48b296672c"></a>OPCODE_POPCW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ab8be9e9e28b1338fd88abf49a043db22"></a>OPCODE_POPS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a6cc5f8f2d10773c98c45e3d5d832aff5"></a>OPCODE_POPSW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a3bbe92018a9583eef7f28d515a1e19b2"></a>OPCODE_POP32&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ab0f85fbdd60cf9d6d9d5af6eb58749e6"></a>OPCODE_POP32W&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ae8e487e3dd972c3bd371655f62a658f1"></a>OPCODE_POP32_P0&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a5607ef5bf34bde717b4f755e98a1942c"></a>OPCODE_POP32_P1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a3aba9827da6a64b2a491c1d67a35f6cc"></a>OPCODE_POP32_P2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a9010ad4e781b78e6b4d5c5b9add8e7dc"></a>OPCODE_POP32_P3&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a4171139aa7092970f3d247a13612aa38"></a>OPCODE_POP32_L0&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ae33246292de563c980f7e0c6fe742751"></a>OPCODE_POP32_L1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a877d7036b7c342353fb5ccc5a8f52e73"></a>OPCODE_POP32_L2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6aa2bc51af3372591c137a2889b85d7233"></a>OPCODE_POP32_L3&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ad926032ca17ddd6b324a492a67d6ad71"></a>OPCODE_POP64&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ade09eca40c692952a24165ce2191d5b7"></a>OPCODE_POP64W&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a865bc04df55f822e77d36dc5dfa027de"></a>OPCODE_POP64_P0&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a383b9ece8ee77865c54341b068ed22a1"></a>OPCODE_POP64_P1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ab14c329bb8538c972a4b23b08ce63971"></a>OPCODE_POP64_P2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a26b7ffe0a27453f3ded6c0ba3087c7b8"></a>OPCODE_POP64_P3&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a7e8ca370cdca7318304b17f016f34354"></a>OPCODE_POP64_L0&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a799458384c86c02d67b09a2860f2e9b9"></a>OPCODE_POP64_L1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a80bb9cf396328361ec77954607fdc4ec"></a>OPCODE_POP64_L2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a4cf94e9b6b8f2489a1cffeb24cc6c5ef"></a>OPCODE_POP64_L3&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ab6e9efffb7cb57f43db9459cc66848dd"></a>OPCODE_MEMCOPYW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a95178c351e18ec89f0e4d76b6c004a77"></a>OPCODE_MEMZEROW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6aca4aed31a7bf9b2d20eb0db7dc562f2e"></a>OPCODE_DUP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a3f75df975e2723d42222022cee1af4ca"></a>OPCODE_DUPINS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6aa85579b6a897bd7a040ae3ef8c80bab5"></a>OPCODE_SWAP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a3fa7353d11e2da19b04339f1db4ae245"></a>OPCODE_ITOC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a1a90be8b65eb805dd3d26d1cb82e83ef"></a>OPCODE_UITOUC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a211b40eeebbead29addd84a345a68bdf"></a>OPCODE_ITOS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a7f5d645ed980d61a5892e552e5ddb0e5"></a>OPCODE_UITOUS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a8cfa022898c2185c812c2111ad6f545b"></a>OPCODE_ITOL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6acb584e4ad8791358941ecf238894ec66"></a>OPCODE_UITOUL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ad82d27d2f95448ff9d0ff132ffeea4d1"></a>OPCODE_ITOF&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6aff4bf2909007cec71e26481ab9950ffd"></a>OPCODE_UITOF&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a556832d81bd5c6f76df0b76e10fafd00"></a>OPCODE_ITOD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ac5d9da5165daec0e2f68134fbd248f5c"></a>OPCODE_UITOD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a784af2fcaa9160f704a1f4d7b95e9399"></a>OPCODE_LTOI&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a016472e6e35dcc92674d77838c50d42d"></a>OPCODE_LTOF&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a5098b69013726d9c7a4099574af36474"></a>OPCODE_ULTOF&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6aae51705e82c9a956353956b4d1c294fa"></a>OPCODE_LTOD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6aa0ccc786aa3c9c664c34d71885d40f5b"></a>OPCODE_ULTOD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a9675f1f08b4815dad963904c9c3ffb78"></a>OPCODE_FTOI&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6abc1f1501a6d2e538ea082440bbfda972"></a>OPCODE_FTOUI&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a80c49b07a38c9417f966a535ae8631e4"></a>OPCODE_FTOL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6afaceea698d19abc469cdbf33c19d532d"></a>OPCODE_FTOUL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ac1a28cb5eeb96cdfaf183ca0be222d16"></a>OPCODE_FTOD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a8cb31bcd9eb772b1395074118c6a8204"></a>OPCODE_DTOI&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a83acba0772270f7bdbbbf3009b4a6926"></a>OPCODE_DTOUI&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ad117e5f454d809e7cf5d02681018404c"></a>OPCODE_DTOL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a72d8416cd5abda0a18c576b618af8e37"></a>OPCODE_DTOUL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6af3b14211361c4e89071d9dc8a4f31779"></a>OPCODE_DTOF&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ad187f4c899b46a86ed27d1e00068eb99"></a>OPCODE_PTROFF&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a6a0354a6434ea828196294d79adaf471"></a>OPCODE_PTRDIFF&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a0cedaa9edf74facfa62de289d9f4e702"></a>OPCODE_INCI&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a751154513f473a99686122b1a012b302"></a>OPCODE_INCL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a411810dd47b783a82267df6dce7bc9c6"></a>OPCODE_ADDI&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a35b92fe69157faae509d27c46bd4586e"></a>OPCODE_ADDL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6abd43eee4c2af64074eddfb46a14bd0cc"></a>OPCODE_ADDF&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ad58a15d813bc2321ee6817150f62f374"></a>OPCODE_ADDD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a6b3881679915556ca094076cf86e0c41"></a>OPCODE_SUBI&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a03960b19ef41e54a966235bb64d02bdd"></a>OPCODE_SUBL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a3fac46e6d3fb5ebb0e52111602180d8b"></a>OPCODE_SUBF&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6aaee25bc85804a198b9cb80e9e72eee27"></a>OPCODE_SUBD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6abae27ddd635904bab6ed8bc26e1e2a30"></a>OPCODE_MULI&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6af467ed18b2e254858ff1f8ceaa437162"></a>OPCODE_MULUI&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6acadc3609872b8adbc5ad6c3e44ae9bf4"></a>OPCODE_MULL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ab67fc4a1d8ae6fae412492e883fbe2b5"></a>OPCODE_MULUL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a88d8410b70f79b39ecdcea3cbdc97314"></a>OPCODE_MULF&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6affb3d6e63ff33cc8f6b675096ee0c9a6"></a>OPCODE_MULD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a212c706ba3505148721f14130f3f0442"></a>OPCODE_DIVI&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ab2fa3c128eaf75a9f740a9185bf3aa4c"></a>OPCODE_DIVUI&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a2187c9cce121504d8655322316639a18"></a>OPCODE_DIVL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a876d77ba82eede320baa3f4ace65623e"></a>OPCODE_DIVUL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ad07e0f87c9863017ac962e8223044225"></a>OPCODE_DIVF&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ac77ef5fca50ed3a4d1e1627cf9e6ccb8"></a>OPCODE_DIVD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a0da8378be4faf5517ff3221bd87ca585"></a>OPCODE_REMI&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ad54df7d8857d8c41837f9302a647e0d2"></a>OPCODE_REMUI&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6aafc29c6ef130cafee989b7ebfeb7fbee"></a>OPCODE_REML&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a2af9162c487827728674a6ae5a673a36"></a>OPCODE_REMUL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ae9b79473d904b718adfc9b3c8f4238f4"></a>OPCODE_LSHI&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ab76ba2b7df2edbf6e3d22422d6a06531"></a>OPCODE_LSHL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a4a1c36f6e448f59cfe0cce1e71ec0ffe"></a>OPCODE_RSHI&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6abf97670a032f76d4bb5edb6b675e14ab"></a>OPCODE_RSHUI&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6add830b82f0d5b6b884d330a32cd70ca6"></a>OPCODE_RSHL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a6c9191451ac00375e2da6176bdc4ade3"></a>OPCODE_RSHUL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6aad2e9478426e2f65dd20143ca5cdc5e1"></a>OPCODE_ANDI&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a25907fa39c796e493662f97785155f66"></a>OPCODE_ANDL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a6c08f66351d7dc90bb74ad522a7738a4"></a>OPCODE_ORI&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6aa91528f020f2bd53f8453a76c32621d4"></a>OPCODE_ORL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6aaba3408ce72f867506a107e31b05ec21"></a>OPCODE_XORI&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6aab2ae3428e304dd020fac53337acc64f"></a>OPCODE_XORL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a47b074d4dfb2eb735f2173aabd1a644f"></a>OPCODE_NEGI&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6adbbe7d564ef678abd3cec4263561f212"></a>OPCODE_NEGL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6aa732a944ffbe97a4e2b96c4c32a96083"></a>OPCODE_NEGF&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a11e41c9a5280154f8ceeffcb5d6c56b7"></a>OPCODE_NEGD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ac3fb9625278144557308999fb7334abd"></a>OPCODE_NOT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a6b0cd2421b2b347716bc5f1d32fd7f83"></a>OPCODE_CMPEQI&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6aa9b4231115b7f266f8375b3f9a2d738b"></a>OPCODE_CMPEQL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a3e2ff9f6b912a524e2bde3d8d2fa2143"></a>OPCODE_CMPEQF&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6acd1db757ec00500c09fe862470f88ad6"></a>OPCODE_CMPEQD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a366329815c8a793635b6e603123672e1"></a>OPCODE_CMPNEQI&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a3782960948b1f69b62e2234c2d0e46f5"></a>OPCODE_CMPNEQL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a1002db793839f8121dcc19ac8e0f013b"></a>OPCODE_CMPNEQF&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a37b30f8ce9e4ad7d4aab23465b878bd6"></a>OPCODE_CMPNEQD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a47a6b93d7b01d6414ee2d8f78173c7c4"></a>OPCODE_CMPLTI&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a3e8e333c7a56e47122506962b8129549"></a>OPCODE_CMPLTUI&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a7c988461d50055ef7fbf37ead3ae6a81"></a>OPCODE_CMPLTL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a8d3904ce537c7744d8817233e1a54bc0"></a>OPCODE_CMPLTUL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ab430c5b747578bb3bd757a252394ec74"></a>OPCODE_CMPLTF&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ac892d530cfcc30f8d2b6a5fbe75cb261"></a>OPCODE_CMPLTD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a3a5fcd67e38acfb42cfbe59c1bf3d7e6"></a>OPCODE_CMPLEI&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ae2b3804178d0227fdd2718e2910f4d86"></a>OPCODE_CMPLEUI&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a9ed6c3363b159c3e2c1624b2b2cbad52"></a>OPCODE_CMPLEL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6aef03e285590f50f99e22c1d46bffa208"></a>OPCODE_CMPLEUL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a81e91d05a11a71f5299d4bbbcd738714"></a>OPCODE_CMPLEF&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a738c39e96c7e0ad3b90db5e38dcae58e"></a>OPCODE_CMPLED&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6aca46cea2741977408f7d0ec29c01daa2"></a>OPCODE_CMPGTI&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6aa117ff7698fa125f0be246eaf17028df"></a>OPCODE_CMPGTUI&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a82ef0d0ee333d3c816fedd187301a808"></a>OPCODE_CMPGTL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a7cc1591137375ef413d05cb7f33d9322"></a>OPCODE_CMPGTUL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a7ad393b2816feef56d327577ec8bc7f8"></a>OPCODE_CMPGTF&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a81b7d71aafbe128e9d8702fac2d31201"></a>OPCODE_CMPGTD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a32360323c2d27661e24a81ee940f9e02"></a>OPCODE_CMPGEI&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6afdd6873aabd4f2cbed79c4aa5a61ec2c"></a>OPCODE_CMPGEUI&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a307ce4865b849c7be523133f4e108881"></a>OPCODE_CMPGEL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6aadf217f5274b740f7e6cc551a5a57d54"></a>OPCODE_CMPGEUL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6adcff43b5ad1b8eec74801a522c42a349"></a>OPCODE_CMPGEF&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6add7683b17c4611e69d5d0759d68e7367"></a>OPCODE_CMPGED&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a5b6abd76abca906104622d1d9114ebc2"></a>OPCODE_BRZ&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a073a87b7a23be17cfb315f85a7ecf94b"></a>OPCODE_BRZW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a735f16c9fd9ee8edd6614c747af0fcd8"></a>OPCODE_BRNZ&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a7cc7752793c48119497556f7fc6ba14b"></a>OPCODE_BRNZW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ad6959440752d19a3905f2fdfab7a8354"></a>OPCODE_NBRZ&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a22bb4eb2f0a63238a17c8d78692e95d3"></a>OPCODE_NBRZW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a35b09bacb0021c8f8b5228fe87812f4a"></a>OPCODE_NBRNZ&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a1136ec3c9eb2d0e20bc4df48c7f4cc6a"></a>OPCODE_NBRNZW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6abd7b53fe344df169c4cc1cdae978509c"></a>OPCODE_IFZ&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ac774973e02556b8e53ce365d6fb773f7"></a>OPCODE_IFZW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a9a72f58139082b69039d397f1bd6d060"></a>OPCODE_IFNZ&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ab4db77c52d69fa466473c9cfb9c21967"></a>OPCODE_IFNZW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a14f6866ca9e90efdc723af10151cf526"></a>OPCODE_GOTO&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6aaa26cadc36a19d2beb7ffa33c049a6f6"></a>OPCODE_GOTOW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a9e71045e0ebbcc890b939079c7c9d830"></a>OPCODE_LOOKUPSWITCH&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a6ad85e85e7b1a05e16d5c06cdd4d52e1"></a>OPCODE_TABLESWITCH&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a0265d829bcbec109b9cb7f4c55936510"></a>OPCODE_INVOKE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a0754dbc09273164677e9da80f58dc0dd"></a>OPCODE_RETURN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6af5f973e715b442d4eba352a54e437a87"></a>OPCODE_RETURN32&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a81610495cc1ddc7f3549122b19bcf3c0"></a>OPCODE_RETURN64&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a9e80fad8bd78803f936c99a59acf9958"></a>OPCODE_RETURNMEMW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a86d97ced0b03966534c9178477bef5fd"></a>OPCODE_MAX&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga2490c24df3d969eccdecb7ea1150c4cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2490c24df3d969eccdecb7ea1150c4cc">&#9670;&nbsp;</a></span>OpCodeParam</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__types.html#ga2490c24df3d969eccdecb7ea1150c4cc">Bond::OpCodeParam</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enumeration describing all combinations of parameter types for the instructions in the <a class="el" href="namespace_bond.html">Bond</a> Virtual Machine instruction set. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4cca3779dd9f522684de361b2442d7eaaafa"></a>OC_PARAM_NONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4cca344e2c87ebf91023466effd122aeceec"></a>OC_PARAM_CHAR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4cca64e8fcf7605acb8a6cc546cc735260cf"></a>OC_PARAM_UCHAR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4ccae43eb7226eec1400569d909e12f8584b"></a>OC_PARAM_UCHAR_CHAR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4ccaf1ad558c571772be73f71bcb060a1a43"></a>OC_PARAM_SHORT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4cca68a518761a635c7784dfb3fc4bf836c9"></a>OC_PARAM_USHORT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4cca0d2c8543da6f347e6ac9ed89030dc9fe"></a>OC_PARAM_INT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4ccafe2c3fb03b81318238ec8358c7ec0ab8"></a>OC_PARAM_VAL32&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4ccab5b59e5b1efc165fa96c63d340db1eda"></a>OC_PARAM_VAL64&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4cca0dfdea159a1caceea9608fc438f631c6"></a>OC_PARAM_OFF16&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4cca1547c157ab2f594ccb8f80ef9c89923d"></a>OC_PARAM_OFF32&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4cca33bc4f69f2dbbba0031539fd770bda46"></a>OC_PARAM_STRING&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4cca75c63dae57e4961aa8d1757c88f4789c"></a>OC_PARAM_NAME&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4ccab28fb25a575604c44cd47b06678c2d65"></a>OC_PARAM_LOOKUPSWITCH&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4cca28df9d91823552ba53410d09cb65fc4c"></a>OC_PARAM_TABLESWITCH&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga41ff58c35c71387ff5113e12ca809a76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga41ff58c35c71387ff5113e12ca809a76">&#9670;&nbsp;</a></span>GetOpCodeMnemonic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* Bond::GetOpCodeMnemonic </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__types.html#ga557394428c2bb1199d13db3825d0c0f6">OpCode</a>&#160;</td>
+          <td class="paramname"><em>opCode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a string representation of the given opcode. </p>
+
+</div>
+</div>
+<a id="ga88242ea393f502a775234dcb09ccd8d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga88242ea393f502a775234dcb09ccd8d7">&#9670;&nbsp;</a></span>GetOpCodeParamType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__types.html#ga2490c24df3d969eccdecb7ea1150c4cc">OpCodeParam</a> Bond::GetOpCodeParamType </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__types.html#ga557394428c2bb1199d13db3825d0c0f6">OpCode</a>&#160;</td>
+          <td class="paramname"><em>opCode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a value of the OpCodeParam enumeration describing the parameter types for the given opcode. </p>
+
+</div>
+</div>
+<a id="ga3186af69ba26130f18ae6517e6f3f05b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3186af69ba26130f18ae6517e6f3f05b">&#9670;&nbsp;</a></span>GetStackDelta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t Bond::GetStackDelta </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__types.html#ga557394428c2bb1199d13db3825d0c0f6">OpCode</a>&#160;</td>
+          <td class="paramname"><em>opCode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the how much the given opcode moves the stack pointer in multiples of BOND_SLOT_SIZE bytes. </p>
+
+</div>
+</div>
+<a id="ga9f55fa87c6b684715a369dbc50090eda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9f55fa87c6b684715a369dbc50090eda">&#9670;&nbsp;</a></span>operator&lt;() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Bond::operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="union_bond_1_1_value16.html">Value16</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="union_bond_1_1_value16.html">Value16</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the result of the expression: <code>a.mUShort &lt; b.mUShort</code>. </p>
+
+</div>
+</div>
+<a id="ga99af6153ceab4fc4dbf201baee72fb57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga99af6153ceab4fc4dbf201baee72fb57">&#9670;&nbsp;</a></span>operator&lt;() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Bond::operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="union_bond_1_1_value32.html">Value32</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="union_bond_1_1_value32.html">Value32</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the result of the expression: <code>a.mUInt &lt; b.mUInt</code>. </p>
+
+</div>
+</div>
+<a id="ga91c58667f1fcc96d3144edbdfc53422c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga91c58667f1fcc96d3144edbdfc53422c">&#9670;&nbsp;</a></span>operator&lt;() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Bond::operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="union_bond_1_1_value64.html">Value64</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="union_bond_1_1_value64.html">Value64</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the result of the expression: <code>a.mULong &lt; b.mULong</code>. </p>
+
+</div>
+</div>
+<a id="ga2aaa3ec968ed505b59a7475adf4149ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2aaa3ec968ed505b59a7475adf4149ad">&#9670;&nbsp;</a></span>StringCompare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Bond::StringCompare </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>str1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>length1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>str2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>length2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compares two strings of specified lengths and returns a negative value, zero, or positive value if the first string is less than, equal to, or greater than the second. </p>
+
+</div>
+</div>
+<a id="gad041fef14b9592f04db57c3d3689b3bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad041fef14b9592f04db57c3d3689b3bf">&#9670;&nbsp;</a></span>StringEqual() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Bond::StringEqual </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>str1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>str2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns whether two strings of the same specified length are equal. The strings may have embedded null characters. </p>
+
+</div>
+</div>
+<a id="ga952de8538bdc6dcad42e7bb2bdbfee20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga952de8538bdc6dcad42e7bb2bdbfee20">&#9670;&nbsp;</a></span>StringEqual() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Bond::StringEqual </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>str1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>length1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>str2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>length2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns whether two strings of specified lengths are equal. The strings may have embedded null characters. </p>
+
+</div>
+</div>
+<a id="ga05d5edf492ec8cad97d0d8209d1ae388"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga05d5edf492ec8cad97d0d8209d1ae388">&#9670;&nbsp;</a></span>StringLength()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t Bond::StringLength </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the result of the expression: <code>(str == nullptr) ? 0 : strlen(str)</code>. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 

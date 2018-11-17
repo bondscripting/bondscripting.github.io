@@ -79,5 +79,10 @@ var group__systems =
       [ "Free", "class_bond_1_1_default_allocator.html#a76c6205b27523ee05eb5a3824d1d9e01", null ],
       [ "FreeAligned", "class_bond_1_1_default_allocator.html#aff539565827a26b13ab7e7ed5923941a", null ],
       [ "GetNumAllocations", "class_bond_1_1_default_allocator.html#a6cda81cd2c8b211351092c572690438b", null ]
+    ] ],
+    [ "Exception", "class_bond_1_1_exception.html", [
+      [ "Exception", "class_bond_1_1_exception.html#ae294ac00bbe8151e0667626215d7bb52", null ],
+      [ "Exception", "class_bond_1_1_exception.html#a3858fb02ca2bba5fecd6e47258016de1", null ],
+      [ "GetMessage", "class_bond_1_1_exception.html#a2ef76f97b9c62c4fa537a592ff5840a1", null ]
     ] ]
 ];
