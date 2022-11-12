@@ -1,18 +1,18 @@
 var group__io =
 [
-    [ "InputStream", "class_bond_1_1_input_stream.html", [
+    [ "Bond::InputStream", "class_bond_1_1_input_stream.html", [
       [ "~InputStream", "class_bond_1_1_input_stream.html#a9463811973236acbf3f07a642da03649", null ],
+      [ "Read", "class_bond_1_1_input_stream.html#a558de5cdf47d15b87dd95d1190688f3f", null ],
       [ "Read", "class_bond_1_1_input_stream.html#a685b3338bb49beeed21f7b0581584d0f", null ],
       [ "Read", "class_bond_1_1_input_stream.html#af7b215ecc1d113cea45c5c4a11c775a2", null ],
-      [ "Read", "class_bond_1_1_input_stream.html#a558de5cdf47d15b87dd95d1190688f3f", null ],
       [ "Scan", "class_bond_1_1_input_stream.html#a37123879cbaa867d975653221a9e6d4f", null ],
       [ "VScan", "class_bond_1_1_input_stream.html#af635f7445e7f02e4b7dd70b1ab116a91", null ]
     ] ],
-    [ "InputStreamAdaptor", "class_bond_1_1_input_stream_adaptor.html", [
+    [ "Bond::InputStreamAdaptor", "class_bond_1_1_input_stream_adaptor.html", [
       [ "InputStreamAdaptor", "class_bond_1_1_input_stream_adaptor.html#af495c3b567b308efa59146b454cdd08f", null ],
       [ "ClearFlags", "class_bond_1_1_input_stream_adaptor.html#a0471550cbff3bb9352be9ec2ef1de837", null ],
       [ "GetFlags", "class_bond_1_1_input_stream_adaptor.html#a8d87eae25142292a929b78e9e1b065d4", null ],
-      [ "GetStream", "class_bond_1_1_input_stream_adaptor.html#a5f889e7086e25c567a36fe11ef426f2b", null ],
+      [ "GetStream", "class_bond_1_1_input_stream_adaptor.html#a373fb145ec08934a9dedca59f8a5e3a6", null ],
       [ "ScanBool", "class_bond_1_1_input_stream_adaptor.html#a3d72dd895c5a3b1e5639d224b5c77cce", null ],
       [ "ScanChar", "class_bond_1_1_input_stream_adaptor.html#ae902d9f5424e378c108ac19aa4da520f", null ],
       [ "ScanDouble", "class_bond_1_1_input_stream_adaptor.html#a008c388a6dfa26fac7f5d07d6152047c", null ],
@@ -24,7 +24,7 @@ var group__io =
       [ "SetFlags", "class_bond_1_1_input_stream_adaptor.html#a12033abe037674088f9fc1bd95ee0ef1", null ],
       [ "UnsetFlags", "class_bond_1_1_input_stream_adaptor.html#a776e1840ccec128f9aa0a9f9d34aae97", null ]
     ] ],
-    [ "MemoryInputStream", "class_bond_1_1_memory_input_stream.html", [
+    [ "Bond::MemoryInputStream", "class_bond_1_1_memory_input_stream.html", [
       [ "MemoryInputStream", "class_bond_1_1_memory_input_stream.html#ae5247182e3c432e465a57b7ccca2feb9", null ],
       [ "~MemoryInputStream", "class_bond_1_1_memory_input_stream.html#a44e6d19338f3cf4fdf24c46faf2787e6", null ],
       [ "AddOffset", "class_bond_1_1_memory_input_stream.html#a429f202d47402f128097cfb68cd63e28", null ],
@@ -33,13 +33,13 @@ var group__io =
       [ "GetPosition", "class_bond_1_1_memory_input_stream.html#a9eaf5854e638506a9f2256dc864396e9", null ],
       [ "HasError", "class_bond_1_1_memory_input_stream.html#ac50b39e604c5043aad46f88518e81f53", null ],
       [ "IsEof", "class_bond_1_1_memory_input_stream.html#ae53b5e22de76f135bc6e06e47b927f62", null ],
-      [ "Read", "class_bond_1_1_memory_input_stream.html#a1fea24f6bd640e12ebe8d9ab717d381f", null ],
       [ "Read", "class_bond_1_1_memory_input_stream.html#af1c4095fd2ebadc8c5d36de3c70614fc", null ],
+      [ "Read", "class_bond_1_1_memory_input_stream.html#a1fea24f6bd640e12ebe8d9ab717d381f", null ],
       [ "SetPosition", "class_bond_1_1_memory_input_stream.html#a8cfffb2c091c4a061c36e5a4ad7307c5", null ],
       [ "SetPositionFromEnd", "class_bond_1_1_memory_input_stream.html#af858b6064d7a3dc6a2364db166725714", null ],
       [ "VScan", "class_bond_1_1_memory_input_stream.html#a07a6f00eecf1caa0cc242200242d7b1e", null ]
     ] ],
-    [ "MemoryOutputStream", "class_bond_1_1_memory_output_stream.html", [
+    [ "Bond::MemoryOutputStream", "class_bond_1_1_memory_output_stream.html", [
       [ "MemoryOutputStream", "class_bond_1_1_memory_output_stream.html#a55dc594cb0f06e062b98d70fb929c794", null ],
       [ "~MemoryOutputStream", "class_bond_1_1_memory_output_stream.html#aeccdc4be8f528bd1fa42c508da85174a", null ],
       [ "AddOffset", "class_bond_1_1_memory_output_stream.html#abfd06c7b2d832f4d56dc1730b7ac614f", null ],
@@ -54,14 +54,14 @@ var group__io =
       [ "Write", "class_bond_1_1_memory_output_stream.html#ad6a887ac62a938a409bcf2788bc8d3e8", null ],
       [ "Write", "class_bond_1_1_memory_output_stream.html#a325e19eefc0fc08175f87d32ba15c085", null ]
     ] ],
-    [ "MemoryStreamFactory", "class_bond_1_1_memory_stream_factory.html", [
+    [ "Bond::MemoryStreamFactory", "class_bond_1_1_memory_stream_factory.html", [
       [ "MemoryStreamFactory", "class_bond_1_1_memory_stream_factory.html#aefacd45a2017b7927793dd266563fcd5", null ],
       [ "~MemoryStreamFactory", "class_bond_1_1_memory_stream_factory.html#ae5fc3c499ab034e4c8aee3f71fff0c50", null ],
       [ "CreateInputStream", "class_bond_1_1_memory_stream_factory.html#a76f26b3e3b3bd3963e6e3c9672d8ba43", null ],
       [ "CreateOutputStream", "class_bond_1_1_memory_stream_factory.html#a879348ec44c972746f5a1dfdb29a5087", null ],
       [ "SetDelegateFactory", "class_bond_1_1_memory_stream_factory.html#a3ab2fb1714b93174416e50bb07579b5b", null ]
     ] ],
-    [ "OutputStream", "class_bond_1_1_output_stream.html", [
+    [ "Bond::OutputStream", "class_bond_1_1_output_stream.html", [
       [ "~OutputStream", "class_bond_1_1_output_stream.html#ae7397df53cce0ddc6a4ef7ca436a8984", null ],
       [ "Flush", "class_bond_1_1_output_stream.html#a09b23a084136be412667db989a3d4790", null ],
       [ "Print", "class_bond_1_1_output_stream.html#ac7a47879c322d92f2e1f8ce546cc524c", null ],
@@ -69,40 +69,40 @@ var group__io =
       [ "Write", "class_bond_1_1_output_stream.html#a4341cfc0c16a7e07cdaa9fe186d1b911", null ],
       [ "Write", "class_bond_1_1_output_stream.html#a080b4c34941f762298c4bfc3c97e1e60", null ]
     ] ],
-    [ "OutputStreamAdaptor", "class_bond_1_1_output_stream_adaptor.html", [
+    [ "Bond::OutputStreamAdaptor", "class_bond_1_1_output_stream_adaptor.html", [
       [ "OutputStreamAdaptor", "class_bond_1_1_output_stream_adaptor.html#a63cb211ad71921ed29a21ff4901496d9", null ],
       [ "ClearFlags", "class_bond_1_1_output_stream_adaptor.html#a9c0e0e0fc2f3177801c329944e703e53", null ],
       [ "GetFlags", "class_bond_1_1_output_stream_adaptor.html#a4556002e60f26a71c3e6f17b3d256f83", null ],
       [ "GetPrecision", "class_bond_1_1_output_stream_adaptor.html#ad1328defee5b82213bed818895416d32", null ],
-      [ "GetStream", "class_bond_1_1_output_stream_adaptor.html#ac994ae1b42b7d62055b453c00ea6fd00", null ],
+      [ "GetStream", "class_bond_1_1_output_stream_adaptor.html#a41372a3c3597dcd30b0117f11df41ad0", null ],
       [ "GetWidth", "class_bond_1_1_output_stream_adaptor.html#a4c4a4b3f9f2c70b5dd8bea669f6c48ac", null ],
-      [ "Print", "class_bond_1_1_output_stream_adaptor.html#a930efca55317508e004bfa323295cb2a", null ],
       [ "Print", "class_bond_1_1_output_stream_adaptor.html#ad7aa40d2f24917bc0467e22bd070ef45", null ],
       [ "Print", "class_bond_1_1_output_stream_adaptor.html#adb6217cca3be9fe435fe8ceb581e8906", null ],
-      [ "Print", "class_bond_1_1_output_stream_adaptor.html#ac64895f0cc640d72382c1a9acbe1516f", null ],
-      [ "Print", "class_bond_1_1_output_stream_adaptor.html#adacb895ecddf0a3b05dad3943f00760c", null ],
-      [ "Print", "class_bond_1_1_output_stream_adaptor.html#a14513b8bfa644c59d925a8cce218544d", null ],
-      [ "Print", "class_bond_1_1_output_stream_adaptor.html#ab07d92dab5fbdd26ff5cf0a5c8d267f0", null ],
+      [ "Print", "class_bond_1_1_output_stream_adaptor.html#a930efca55317508e004bfa323295cb2a", null ],
       [ "Print", "class_bond_1_1_output_stream_adaptor.html#af556a4f3c627c00592860fd126404818", null ],
+      [ "Print", "class_bond_1_1_output_stream_adaptor.html#ac64895f0cc640d72382c1a9acbe1516f", null ],
+      [ "Print", "class_bond_1_1_output_stream_adaptor.html#a14513b8bfa644c59d925a8cce218544d", null ],
+      [ "Print", "class_bond_1_1_output_stream_adaptor.html#adacb895ecddf0a3b05dad3943f00760c", null ],
+      [ "Print", "class_bond_1_1_output_stream_adaptor.html#ab07d92dab5fbdd26ff5cf0a5c8d267f0", null ],
       [ "SetFlags", "class_bond_1_1_output_stream_adaptor.html#a78c8d0554cd6bd6ee2c545a7eacb1300", null ],
       [ "SetPrecision", "class_bond_1_1_output_stream_adaptor.html#aad529f444b3493b2df7a6196af2e69dc", null ],
       [ "SetWidth", "class_bond_1_1_output_stream_adaptor.html#a999252cfe9ff3630ba1e67aa8f831bb4", null ],
       [ "UnsetFlags", "class_bond_1_1_output_stream_adaptor.html#a8cd3cc0dbe0976767fbdebe4f04bdeb0", null ]
     ] ],
-    [ "StdioFileHandle", "class_bond_1_1_stdio_file_handle.html", [
+    [ "Bond::StdioFileHandle", "class_bond_1_1_stdio_file_handle.html", [
       [ "StdioFileHandle", "class_bond_1_1_stdio_file_handle.html#aa7f92317d81a19d195b37ceba279f724", null ],
       [ "StdioFileHandle", "class_bond_1_1_stdio_file_handle.html#a8345ee7f92a7a5486e2f8f56ef4ae09c", null ],
       [ "StdioFileHandle", "class_bond_1_1_stdio_file_handle.html#aa8f82c2e0c7574a55f77a2b56155aefd", null ],
       [ "StdioFileHandle", "class_bond_1_1_stdio_file_handle.html#a298dd2ecba1c2cf29e442f6f3413d809", null ],
       [ "~StdioFileHandle", "class_bond_1_1_stdio_file_handle.html#a40b82172d16c145e31faf587dce4aa2e", null ],
       [ "StdioFileHandle", "class_bond_1_1_stdio_file_handle.html#ad91d77c2cfd4ea6810db91b6f48e25fb", null ],
-      [ "GetFile", "class_bond_1_1_stdio_file_handle.html#a850a156b7add82981c33bb04429b6988", null ],
+      [ "GetFile", "class_bond_1_1_stdio_file_handle.html#a05efa8abd60da5553ec10657ddb13e92", null ],
       [ "IsBound", "class_bond_1_1_stdio_file_handle.html#ae4932cd8c3c674cda6546c9f7e637ade", null ],
-      [ "operator=", "class_bond_1_1_stdio_file_handle.html#a25f7ec0589cb14c4e3cc61e5b82d602f", null ],
-      [ "operator=", "class_bond_1_1_stdio_file_handle.html#a40c30953f27f2f4d855df6993a429ebb", null ],
-      [ "operator=", "class_bond_1_1_stdio_file_handle.html#ab701307ae56c1ccdff56720e6113ad25", null ]
+      [ "operator=", "class_bond_1_1_stdio_file_handle.html#ae0d9c5092a72e73e5843b93d3be5b823", null ],
+      [ "operator=", "class_bond_1_1_stdio_file_handle.html#a59dff11ddfa25693f424a87f15ed43f6", null ],
+      [ "operator=", "class_bond_1_1_stdio_file_handle.html#af16f8c9e2d3c20f2ef1a3616bf169de2", null ]
     ] ],
-    [ "StdioInputStream", "class_bond_1_1_stdio_input_stream.html", [
+    [ "Bond::StdioInputStream", "class_bond_1_1_stdio_input_stream.html", [
       [ "StdioInputStream", "class_bond_1_1_stdio_input_stream.html#a8676a9f3a821500f42c1ebc67b430e7e", null ],
       [ "StdioInputStream", "class_bond_1_1_stdio_input_stream.html#a06992fd717ccafe223108b407a91aaea", null ],
       [ "StdioInputStream", "class_bond_1_1_stdio_input_stream.html#a66bd5b0c87cbd9c4789402e6388f4288", null ],
@@ -117,15 +117,15 @@ var group__io =
       [ "HasError", "class_bond_1_1_stdio_input_stream.html#a0a7c2f274d8e0642f4c539c647b32fa1", null ],
       [ "IsBound", "class_bond_1_1_stdio_input_stream.html#a2adefdd5a78ece3a86225bbcb29be7df", null ],
       [ "IsEof", "class_bond_1_1_stdio_input_stream.html#aacc72dd7ad2cae307dfc82f291d536ba", null ],
-      [ "operator=", "class_bond_1_1_stdio_input_stream.html#a07f3e9acf0a562124e597ac7158b4998", null ],
-      [ "operator=", "class_bond_1_1_stdio_input_stream.html#a133b5442ab735fae0c26792df6531107", null ],
-      [ "Read", "class_bond_1_1_stdio_input_stream.html#a7aaf67fa0a564948cbc80c9a91a9e652", null ],
+      [ "operator=", "class_bond_1_1_stdio_input_stream.html#a6844c1b983edcdf46f4a485659e70700", null ],
+      [ "operator=", "class_bond_1_1_stdio_input_stream.html#a8f33d12cc3fcfc3078cda25eca3565ac", null ],
       [ "Read", "class_bond_1_1_stdio_input_stream.html#a977b35c606aae8cfc5918416242a9b73", null ],
+      [ "Read", "class_bond_1_1_stdio_input_stream.html#a7aaf67fa0a564948cbc80c9a91a9e652", null ],
       [ "SetPosition", "class_bond_1_1_stdio_input_stream.html#a21ce2dd85fbd19bb2b272bab8fc89dd2", null ],
       [ "SetPositionFromEnd", "class_bond_1_1_stdio_input_stream.html#a55fa17cbe5681116f03dac43e5610348", null ],
       [ "VScan", "class_bond_1_1_stdio_input_stream.html#a9c4776b8bd94e1ac73a6188df3f246c8", null ]
     ] ],
-    [ "StdioOutputStream", "class_bond_1_1_stdio_output_stream.html", [
+    [ "Bond::StdioOutputStream", "class_bond_1_1_stdio_output_stream.html", [
       [ "StdioOutputStream", "class_bond_1_1_stdio_output_stream.html#a48775a2edb830a60baa3030443e6f3ef", null ],
       [ "StdioOutputStream", "class_bond_1_1_stdio_output_stream.html#afb6bfebe475af15521eca7e37327402e", null ],
       [ "StdioOutputStream", "class_bond_1_1_stdio_output_stream.html#a87131c3847aea56c5e0aad1a1da9791e", null ],
@@ -141,15 +141,15 @@ var group__io =
       [ "HasError", "class_bond_1_1_stdio_output_stream.html#a3daab285f6bb6a5bd4e3f9e55a2e1eaf", null ],
       [ "IsBound", "class_bond_1_1_stdio_output_stream.html#a2432a9456116ff7ae081971434f44792", null ],
       [ "IsEof", "class_bond_1_1_stdio_output_stream.html#ad1a0fab08739bec4af117a654330e1ab", null ],
-      [ "operator=", "class_bond_1_1_stdio_output_stream.html#afae0369682c62ad89ad73911da3ab23f", null ],
-      [ "operator=", "class_bond_1_1_stdio_output_stream.html#ad824f46517d68fd484958e5bd23b1936", null ],
+      [ "operator=", "class_bond_1_1_stdio_output_stream.html#a8bb8580c8b43c0f1101c82b540eb2cb1", null ],
+      [ "operator=", "class_bond_1_1_stdio_output_stream.html#a41250b1ae8235ac3b228f0a2a2ff847b", null ],
       [ "SetPosition", "class_bond_1_1_stdio_output_stream.html#ae60681dc6a7cb4a96a70eb3566cd6dc8", null ],
       [ "SetPositionFromEnd", "class_bond_1_1_stdio_output_stream.html#a75cd7b84f24c93dfa651a34f244af7f5", null ],
       [ "VPrint", "class_bond_1_1_stdio_output_stream.html#ac073a6ff9709aca5f019f523120ff5ed", null ],
-      [ "Write", "class_bond_1_1_stdio_output_stream.html#a05ab7d1bb0a8c65d71ce10db6799abb4", null ],
-      [ "Write", "class_bond_1_1_stdio_output_stream.html#af26e823f6f65914c27ecdd18ae7bf05e", null ]
+      [ "Write", "class_bond_1_1_stdio_output_stream.html#af26e823f6f65914c27ecdd18ae7bf05e", null ],
+      [ "Write", "class_bond_1_1_stdio_output_stream.html#a05ab7d1bb0a8c65d71ce10db6799abb4", null ]
     ] ],
-    [ "StdioStreamFactory", "class_bond_1_1_stdio_stream_factory.html", [
+    [ "Bond::StdioStreamFactory", "class_bond_1_1_stdio_stream_factory.html", [
       [ "StdioStreamFactory", "class_bond_1_1_stdio_stream_factory.html#a383f324b7ce8a7c2fb987d09daf0e048", null ],
       [ "~StdioStreamFactory", "class_bond_1_1_stdio_stream_factory.html#a6694bbc8d3db6d9a0a7c1bd58d89c89e", null ],
       [ "CreateInputStream", "class_bond_1_1_stdio_stream_factory.html#af765a5ae21db0d37d23ae0341f0e9777", null ],
@@ -157,7 +157,7 @@ var group__io =
       [ "SetDelegateFactory", "class_bond_1_1_stdio_stream_factory.html#a0ccd1e9d5a7a55c234562f9656b99198", null ],
       [ "SetRootPath", "class_bond_1_1_stdio_stream_factory.html#a0259b72a76cecd87343a254afc4fbd5e", null ]
     ] ],
-    [ "Stream", "class_bond_1_1_stream.html", [
+    [ "Bond::Stream", "class_bond_1_1_stream.html", [
       [ "off_t", "class_bond_1_1_stream.html#a6314350315fb68539f436be332b8419d", null ],
       [ "pos_t", "class_bond_1_1_stream.html#a489b6b37c5ef8c0101dbee13bb83acd7", null ],
       [ "~Stream", "class_bond_1_1_stream.html#a655ad666aaf7d5771d4fb4f2f4a84e3c", null ],
@@ -171,11 +171,11 @@ var group__io =
       [ "SetPosition", "class_bond_1_1_stream.html#abc8c5408aaae3ffe731bc6e4f4414d36", null ],
       [ "SetPositionFromEnd", "class_bond_1_1_stream.html#ac8b7ccb707a2e8ea06f12f8fbcfa2748", null ]
     ] ],
-    [ "StreamFactory", "class_bond_1_1_stream_factory.html", [
+    [ "Bond::StreamFactory", "class_bond_1_1_stream_factory.html", [
       [ "~StreamFactory", "class_bond_1_1_stream_factory.html#a0dfcffed7d47ba4643581e079b882c87", null ],
       [ "CreateInputStream", "class_bond_1_1_stream_factory.html#adfa35fa12b772b748c5aaa65c9541691", null ],
       [ "CreateOutputStream", "class_bond_1_1_stream_factory.html#ac8b88c2fa27215b5ee7d99a334a76673", null ]
     ] ],
-    [ "InputStreamHandle", "group__io.html#ga37b72a5672b81b2727ba53b4ffbe47f8", null ],
-    [ "OutputStreamHandle", "group__io.html#ga68173a5e6d6425a9194cfc319b70863c", null ]
+    [ "Bond::InputStreamHandle", "group__io.html#ga37b72a5672b81b2727ba53b4ffbe47f8", null ],
+    [ "Bond::OutputStreamHandle", "group__io.html#ga68173a5e6d6425a9194cfc319b70863c", null ]
 ];

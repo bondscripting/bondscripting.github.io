@@ -7,7 +7,7 @@ var class_bond_1_1_invocation_stack_frame =
     [ "InvocationStackFrame", "class_bond_1_1_invocation_stack_frame.html#ae756aba43350fd9d4829c37006cd9254", null ],
     [ "InvocationStackFrame", "class_bond_1_1_invocation_stack_frame.html#aa9de296917ad603a3842672afcc5f66f", null ],
     [ "Call", "class_bond_1_1_invocation_stack_frame.html#a8d2f2a683dbf969aab9457070a5c7367", null ],
-    [ "operator=", "class_bond_1_1_invocation_stack_frame.html#ad2161121f102a4d14859a5d8898a21e5", null ],
+    [ "operator=", "class_bond_1_1_invocation_stack_frame.html#a38eb45ed32190c17e95c85b99e20119c", null ],
     [ "PushArg", "class_bond_1_1_invocation_stack_frame.html#a61e84638cbec5942a89b83ce8341381e", null ],
     [ "PushArgs", "class_bond_1_1_invocation_stack_frame.html#a9f62cecac011c47574bb37530644e551", null ],
     [ "PushArgs", "class_bond_1_1_invocation_stack_frame.html#a319cd4d8861c8e5a1d79d024484c68f7", null ]

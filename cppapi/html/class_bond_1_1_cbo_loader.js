@@ -7,5 +7,5 @@ var class_bond_1_1_cbo_loader =
     [ "AddCboFile", "class_bond_1_1_cbo_loader.html#ae8b9bb8278c43edcbb4aec60cf3d53d7", null ],
     [ "AddNativeBinding", "class_bond_1_1_cbo_loader.html#a3d4828d0535e3c49e2e7996b29f0af04", null ],
     [ "Load", "class_bond_1_1_cbo_loader.html#a7ebce48d9271823d7b4180238050c946", null ],
-    [ "operator=", "class_bond_1_1_cbo_loader.html#a5feee0481e65fa5e7299ee694816ba30", null ]
+    [ "operator=", "class_bond_1_1_cbo_loader.html#a9da05f8b6a830c3eaa3e7424b359e12a", null ]
 ];

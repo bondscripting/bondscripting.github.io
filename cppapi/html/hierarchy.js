@@ -25,10 +25,10 @@ var hierarchy =
     [ "Bond::DataViewIndex", "class_bond_1_1_data_view_index.html", null ],
     [ "Bond::Allocator::Deallocator< T >", "struct_bond_1_1_allocator_1_1_deallocator.html", null ],
     [ "Bond::Disassembler", "class_bond_1_1_disassembler.html", null ],
-    [ "Element", null, [
+    [ "Bond::AutoStack< ValueType >::Element", "class_bond_1_1_auto_stack_1_1_element.html", null ],
+    [ "StackFrames::Element", null, [
       [ "Bond::InvocationStackFrame", "class_bond_1_1_invocation_stack_frame.html", null ]
     ] ],
-    [ "Bond::AutoStack< ValueType >::Element", "class_bond_1_1_auto_stack_1_1_element.html", null ],
     [ "Bond::Exception", "class_bond_1_1_exception.html", null ],
     [ "Bond::FrontEnd", "class_bond_1_1_front_end.html", null ],
     [ "Bond::Function", "struct_bond_1_1_function.html", null ],
@@ -128,7 +128,6 @@ var hierarchy =
       [ "Bond::StdioStreamFactory", "class_bond_1_1_stdio_stream_factory.html", null ]
     ] ],
     [ "Bond::StreamPos", "struct_bond_1_1_stream_pos.html", null ],
-    [ "Bond::StringView", "class_bond_1_1_string_view.html", null ],
     [ "Bond::SymbolTable", "class_bond_1_1_symbol_table.html", null ],
     [ "Bond::Token", "class_bond_1_1_token.html", null ],
     [ "Bond::TokenCollection", "class_bond_1_1_token_collection.html", null ],
@@ -136,12 +135,12 @@ var hierarchy =
     [ "Bond::TokenTypeSet", "class_bond_1_1_token_type_set.html", null ],
     [ "Bond::TypeAndValue", "class_bond_1_1_type_and_value.html", null ],
     [ "unique_ptr", null, [
+      [ "Bond::Allocator::Handle< uint8_t >", "class_bond_1_1_allocator_1_1_handle.html", null ],
+      [ "Bond::Allocator::ObjectHandle< Collectable >", "class_bond_1_1_allocator_1_1_object_handle.html", null ],
       [ "Bond::Allocator::AlignedHandle< T >", "class_bond_1_1_allocator_1_1_aligned_handle.html", null ],
       [ "Bond::Allocator::AlignedObjectHandle< T >", "class_bond_1_1_allocator_1_1_aligned_object_handle.html", null ],
       [ "Bond::Allocator::Handle< T >", "class_bond_1_1_allocator_1_1_handle.html", null ],
-      [ "Bond::Allocator::ObjectHandle< T >", "class_bond_1_1_allocator_1_1_object_handle.html", null ],
-      [ "Bond::Allocator::Handle< uint8_t >", "class_bond_1_1_allocator_1_1_handle.html", null ],
-      [ "Bond::Allocator::ObjectHandle< Collectable >", "class_bond_1_1_allocator_1_1_object_handle.html", null ]
+      [ "Bond::Allocator::ObjectHandle< T >", "class_bond_1_1_allocator_1_1_object_handle.html", null ]
     ] ],
     [ "Bond::Value", "union_bond_1_1_value.html", null ],
     [ "Bond::Value16", "union_bond_1_1_value16.html", null ],

@@ -2,7 +2,7 @@ var struct_bond_1_1_input_stream =
 [
     [ "AddOffset", "struct_bond_1_1_input_stream.html#a4ba4921626ee4f81ebc972087d28fb87", null ],
     [ "ClearError", "struct_bond_1_1_input_stream.html#a77a1a95c777f7bcd30e12668c689f1b6", null ],
-    [ "ClearFlags", "struct_bond_1_1_input_stream.html#a12fb8e9102ea50f1df1d765a7ffb3e87", null ],
+    [ "ClearFlags", "struct_bond_1_1_input_stream.html#a260ac15beb5a250a56f2a3dfd503c8e8", null ],
     [ "Close", "struct_bond_1_1_input_stream.html#a7f00809408db03f990d80f031a24b580", null ],
     [ "Get", "struct_bond_1_1_input_stream.html#aa8f5b336124cb1c1b1a747807493b7b2", null ],
     [ "GetEndPosition", "struct_bond_1_1_input_stream.html#a972dd8ee326e9b12fe4ae307290edce7", null ],
@@ -20,8 +20,8 @@ var struct_bond_1_1_input_stream =
     [ "ScanStr", "struct_bond_1_1_input_stream.html#a32bcbdac74cd56824a8d687f72640f34", null ],
     [ "ScanUI", "struct_bond_1_1_input_stream.html#ab19ce53f4adbeff3f28c3a1759a4b453", null ],
     [ "ScanUL", "struct_bond_1_1_input_stream.html#a5409cb3a8ac7162261bf7e90ff244167", null ],
-    [ "SetFlags", "struct_bond_1_1_input_stream.html#ae8c63aa1f4eddf45e8deb5a50ac5d1bf", null ],
+    [ "SetFlags", "struct_bond_1_1_input_stream.html#ad17dcce8ee4250d6eb330f9f850ec008", null ],
     [ "SetPosition", "struct_bond_1_1_input_stream.html#a6140b9002ff69459bcbe3391c4e200e8", null ],
     [ "SetPositionFromEnd", "struct_bond_1_1_input_stream.html#abd9e02f8be57e475712af72eef0b1656", null ],
-    [ "UnsetFlags", "struct_bond_1_1_input_stream.html#a0bac22ef7bbece6300acf53af5acca9f", null ]
+    [ "UnsetFlags", "struct_bond_1_1_input_stream.html#a31a7257639560cb18de3b6143c2aec63", null ]
 ];

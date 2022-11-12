@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['unsetflags',['UnsetFlags',['../struct_bond_1_1_input_stream.html#a0bac22ef7bbece6300acf53af5acca9f',1,'Bond::InputStream::UnsetFlags()'],['../struct_bond_1_1_output_stream.html#af93d6ce7d5fe37597c5f1fc1339160eb',1,'Bond::OutputStream::UnsetFlags()']]]
+  ['unsetflags_0',['UnsetFlags',['../struct_bond_1_1_input_stream.html#a31a7257639560cb18de3b6143c2aec63',1,'Bond::InputStream::UnsetFlags()'],['../struct_bond_1_1_output_stream.html#aa33ecb2e4dc74a049b6ae6d52e13e1bf',1,'Bond::OutputStream::UnsetFlags()']]]
 ];

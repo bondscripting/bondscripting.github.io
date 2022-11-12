@@ -11,11 +11,10 @@ var class_bond_1_1_auto_stack =
     [ "Contains", "class_bond_1_1_auto_stack.html#a66ca0c9c44ac9c9c1c0586c105961b06", null ],
     [ "end", "class_bond_1_1_auto_stack.html#a5a23832bb6b33dfb78c340e1e5d03cc8", null ],
     [ "end", "class_bond_1_1_auto_stack.html#ac69e489ac6c50192e3e272383376409e", null ],
-    [ "GetTop", "class_bond_1_1_auto_stack.html#ae53396c97fcc117375d91fc3e537aac3", null ],
-    [ "GetTop", "class_bond_1_1_auto_stack.html#a0d223e6155ad2eda01f07f2a19f22a5f", null ],
+    [ "GetTop", "class_bond_1_1_auto_stack.html#a1053dafaf36859754bdcd616e8a930b8", null ],
+    [ "GetTop", "class_bond_1_1_auto_stack.html#a519365a0f53027710df5d7bbd21e1c59", null ],
     [ "IsEmpty", "class_bond_1_1_auto_stack.html#a27ce76a1366394c0419f777e89ddcd89", null ],
-    [ "Pop", "class_bond_1_1_auto_stack.html#a6d12198072c32f9a05d53902de353882", null ],
-    [ "Push", "class_bond_1_1_auto_stack.html#a14d3b2b1e7b594ef464594ef724b879d", null ],
+    [ "Push", "class_bond_1_1_auto_stack.html#a52b77ae049a1fdd978e35ede91f614a7", null ],
     [ "SetTop", "class_bond_1_1_auto_stack.html#a3c8cd3bfd0e9ff3e0a0309cd2cfe70f6", null ],
     [ "SetTop", "class_bond_1_1_auto_stack.html#a85bc75be2463bb4d88472fcf71ff7a49", null ]
 ];

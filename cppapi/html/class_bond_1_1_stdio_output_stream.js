@@ -15,11 +15,11 @@ var class_bond_1_1_stdio_output_stream =
     [ "HasError", "class_bond_1_1_stdio_output_stream.html#a3daab285f6bb6a5bd4e3f9e55a2e1eaf", null ],
     [ "IsBound", "class_bond_1_1_stdio_output_stream.html#a2432a9456116ff7ae081971434f44792", null ],
     [ "IsEof", "class_bond_1_1_stdio_output_stream.html#ad1a0fab08739bec4af117a654330e1ab", null ],
-    [ "operator=", "class_bond_1_1_stdio_output_stream.html#afae0369682c62ad89ad73911da3ab23f", null ],
-    [ "operator=", "class_bond_1_1_stdio_output_stream.html#ad824f46517d68fd484958e5bd23b1936", null ],
+    [ "operator=", "class_bond_1_1_stdio_output_stream.html#a8bb8580c8b43c0f1101c82b540eb2cb1", null ],
+    [ "operator=", "class_bond_1_1_stdio_output_stream.html#a41250b1ae8235ac3b228f0a2a2ff847b", null ],
     [ "SetPosition", "class_bond_1_1_stdio_output_stream.html#ae60681dc6a7cb4a96a70eb3566cd6dc8", null ],
     [ "SetPositionFromEnd", "class_bond_1_1_stdio_output_stream.html#a75cd7b84f24c93dfa651a34f244af7f5", null ],
     [ "VPrint", "class_bond_1_1_stdio_output_stream.html#ac073a6ff9709aca5f019f523120ff5ed", null ],
-    [ "Write", "class_bond_1_1_stdio_output_stream.html#a05ab7d1bb0a8c65d71ce10db6799abb4", null ],
-    [ "Write", "class_bond_1_1_stdio_output_stream.html#af26e823f6f65914c27ecdd18ae7bf05e", null ]
+    [ "Write", "class_bond_1_1_stdio_output_stream.html#af26e823f6f65914c27ecdd18ae7bf05e", null ],
+    [ "Write", "class_bond_1_1_stdio_output_stream.html#a05ab7d1bb0a8c65d71ce10db6799abb4", null ]
 ];
