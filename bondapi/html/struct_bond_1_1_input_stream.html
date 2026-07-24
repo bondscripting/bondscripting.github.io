@@ -211,7 +211,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7b4a6a98df7520820f3045d78b9d115e" id="r_a7b4a6a98df7520820f3045d78b9d115e"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a7b4a6a98df7520820f3045d78b9d115e">IsEof</a> () const</td></tr>
 <tr class="memdesc:a7b4a6a98df7520820f3045d78b9d115e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the end of the stream has been reached.  <br /></td></tr>
 <tr class="memitem:a0cb232f04432e1dcbcebc5cf51e0ef7a" id="r_a0cb232f04432e1dcbcebc5cf51e0ef7a"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a0cb232f04432e1dcbcebc5cf51e0ef7a">HasError</a> () const</td></tr>
-<tr class="memdesc:a0cb232f04432e1dcbcebc5cf51e0ef7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether an error has occured during an input operation.  <br /></td></tr>
+<tr class="memdesc:a0cb232f04432e1dcbcebc5cf51e0ef7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether an error has occurred during an input operation.  <br /></td></tr>
 <tr class="memitem:a77a1a95c777f7bcd30e12668c689f1b6" id="r_a77a1a95c777f7bcd30e12668c689f1b6"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a77a1a95c777f7bcd30e12668c689f1b6">ClearError</a> ()</td></tr>
 <tr class="memdesc:a77a1a95c777f7bcd30e12668c689f1b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the error flag.  <br /></td></tr>
 </table>
@@ -394,7 +394,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns whether an error has occured during an input operation. </p>
+<p>Returns whether an error has occurred during an input operation. </p>
 
 </div>
 </div>
@@ -464,7 +464,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reads and returns a formatted Boolean value from the input stream. </p>
-<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a296b8578eeca2079b42b58321e73b44e" title="Read and write bool values as the strings &quot;true&quot; and &quot;false&quot;.">IO::BoolAlpha</a> flag is set, an attempt is made to read the strings "true" or "false", otherwise an integer is read. If a non-zero value, or the string "true" is read, the value true is returned. If no input that could be interpreted as a bool is read, <a class="el" href="#a0cb232f04432e1dcbcebc5cf51e0ef7a" title="Returns whether an error has occured during an input operation.">HasError()</a> returns true. </p>
+<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a296b8578eeca2079b42b58321e73b44e" title="Read and write bool values as the strings &quot;true&quot; and &quot;false&quot;.">IO::BoolAlpha</a> flag is set, an attempt is made to read the strings "true" or "false", otherwise an integer is read. If a non-zero value, or the string "true" is read, the value true is returned. If no input that could be interpreted as a bool is read, <a class="el" href="#a0cb232f04432e1dcbcebc5cf51e0ef7a" title="Returns whether an error has occurred during an input operation.">HasError()</a> returns true. </p>
 
 </div>
 </div>
@@ -503,7 +503,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reads and returns a formatted floating-point number as a double from the input stream. </p>
-<p>If no input that could be interpreted as a floating-point number is read, <a class="el" href="#a0cb232f04432e1dcbcebc5cf51e0ef7a" title="Returns whether an error has occured during an input operation.">HasError()</a> returns true. </p>
+<p>If no input that could be interpreted as a floating-point number is read, <a class="el" href="#a0cb232f04432e1dcbcebc5cf51e0ef7a" title="Returns whether an error has occurred during an input operation.">HasError()</a> returns true. </p>
 
 </div>
 </div>
@@ -523,7 +523,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reads and returns a formatted floating-point number as a float from the input stream. </p>
-<p>If no input that could be interpreted as a floating-point number is read, <a class="el" href="#a0cb232f04432e1dcbcebc5cf51e0ef7a" title="Returns whether an error has occured during an input operation.">HasError()</a> returns true. </p>
+<p>If no input that could be interpreted as a floating-point number is read, <a class="el" href="#a0cb232f04432e1dcbcebc5cf51e0ef7a" title="Returns whether an error has occurred during an input operation.">HasError()</a> returns true. </p>
 
 </div>
 </div>
@@ -543,7 +543,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reads and returns a formatted integer as an int from the input stream. </p>
-<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a7dcac6c8fd112841d484de37ae390c62" title="Read and write integers in base 10.">IO::Dec</a>, <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9" title="Read and write integers in base 16.">IO::Hex</a> or <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae158c14cc75a1751708c4c2fbae0f9bf" title="Read and write integers in base 8.">IO::Oct</a> flag is set, the integer is read in base 10, 16 or 8 respectively. If none of those flags are set, the integer is read in base 16 if it begins with 0x, in base 8 if it begins with 0, or in base 10 otherwise. If no input that could be interpreted as an integer is read, <a class="el" href="#a0cb232f04432e1dcbcebc5cf51e0ef7a" title="Returns whether an error has occured during an input operation.">HasError()</a> returns true. </p>
+<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a7dcac6c8fd112841d484de37ae390c62" title="Read and write integers in base 10.">IO::Dec</a>, <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9" title="Read and write integers in base 16.">IO::Hex</a> or <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae158c14cc75a1751708c4c2fbae0f9bf" title="Read and write integers in base 8.">IO::Oct</a> flag is set, the integer is read in base 10, 16 or 8 respectively. If none of those flags are set, the integer is read in base 16 if it begins with 0x, in base 8 if it begins with 0, or in base 10 otherwise. If no input that could be interpreted as an integer is read, <a class="el" href="#a0cb232f04432e1dcbcebc5cf51e0ef7a" title="Returns whether an error has occurred during an input operation.">HasError()</a> returns true. </p>
 
 </div>
 </div>
@@ -563,7 +563,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reads and returns a formatted integer as a long from the input stream. </p>
-<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a7dcac6c8fd112841d484de37ae390c62" title="Read and write integers in base 10.">IO::Dec</a>, <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9" title="Read and write integers in base 16.">IO::Hex</a> or <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae158c14cc75a1751708c4c2fbae0f9bf" title="Read and write integers in base 8.">IO::Oct</a> flag is set, the integer is read in base 10, 16 or 8 respectively. If none of those flags are set, the integer is read in base 16 if it begins with 0x, in base 8 if it begins with 0, or in base 10 otherwise. If no input that could be interpreted as an integer is read, <a class="el" href="#a0cb232f04432e1dcbcebc5cf51e0ef7a" title="Returns whether an error has occured during an input operation.">HasError()</a> returns true. </p>
+<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a7dcac6c8fd112841d484de37ae390c62" title="Read and write integers in base 10.">IO::Dec</a>, <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9" title="Read and write integers in base 16.">IO::Hex</a> or <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae158c14cc75a1751708c4c2fbae0f9bf" title="Read and write integers in base 8.">IO::Oct</a> flag is set, the integer is read in base 10, 16 or 8 respectively. If none of those flags are set, the integer is read in base 16 if it begins with 0x, in base 8 if it begins with 0, or in base 10 otherwise. If no input that could be interpreted as an integer is read, <a class="el" href="#a0cb232f04432e1dcbcebc5cf51e0ef7a" title="Returns whether an error has occurred during an input operation.">HasError()</a> returns true. </p>
 
 </div>
 </div>
@@ -613,7 +613,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reads and returns a formatted unsigned integer as a uint from the input stream. </p>
-<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a7dcac6c8fd112841d484de37ae390c62" title="Read and write integers in base 10.">IO::Dec</a>, <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9" title="Read and write integers in base 16.">IO::Hex</a> or <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae158c14cc75a1751708c4c2fbae0f9bf" title="Read and write integers in base 8.">IO::Oct</a> flag is set, the integer is read in base 10, 16 or 8 respectively. If none of those flags are set, the integer is read in base 16 if it begins with 0x, in base 8 if it begins with 0, or in base 10 otherwise. If no input that could be interpreted as an integer is read, <a class="el" href="#a0cb232f04432e1dcbcebc5cf51e0ef7a" title="Returns whether an error has occured during an input operation.">HasError()</a> returns true. </p>
+<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a7dcac6c8fd112841d484de37ae390c62" title="Read and write integers in base 10.">IO::Dec</a>, <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9" title="Read and write integers in base 16.">IO::Hex</a> or <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae158c14cc75a1751708c4c2fbae0f9bf" title="Read and write integers in base 8.">IO::Oct</a> flag is set, the integer is read in base 10, 16 or 8 respectively. If none of those flags are set, the integer is read in base 16 if it begins with 0x, in base 8 if it begins with 0, or in base 10 otherwise. If no input that could be interpreted as an integer is read, <a class="el" href="#a0cb232f04432e1dcbcebc5cf51e0ef7a" title="Returns whether an error has occurred during an input operation.">HasError()</a> returns true. </p>
 
 </div>
 </div>
@@ -633,7 +633,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reads and returns a formatted unsigned integer as a ulong from the input stream. </p>
-<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a7dcac6c8fd112841d484de37ae390c62" title="Read and write integers in base 10.">IO::Dec</a>, <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9" title="Read and write integers in base 16.">IO::Hex</a> or <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae158c14cc75a1751708c4c2fbae0f9bf" title="Read and write integers in base 8.">IO::Oct</a> flag is set, the integer is read in base 10, 16 or 8 respectively. If none of those flags are set, the integer is read in base 16 if it begins with 0x, in base 8 if it begins with 0, or in base 10 otherwise. If no input that could be interpreted as an integer is read, <a class="el" href="#a0cb232f04432e1dcbcebc5cf51e0ef7a" title="Returns whether an error has occured during an input operation.">HasError()</a> returns true. </p>
+<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a7dcac6c8fd112841d484de37ae390c62" title="Read and write integers in base 10.">IO::Dec</a>, <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9" title="Read and write integers in base 16.">IO::Hex</a> or <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae158c14cc75a1751708c4c2fbae0f9bf" title="Read and write integers in base 8.">IO::Oct</a> flag is set, the integer is read in base 10, 16 or 8 respectively. If none of those flags are set, the integer is read in base 16 if it begins with 0x, in base 8 if it begins with 0, or in base 10 otherwise. If no input that could be interpreted as an integer is read, <a class="el" href="#a0cb232f04432e1dcbcebc5cf51e0ef7a" title="Returns whether an error has occurred during an input operation.">HasError()</a> returns true. </p>
 
 </div>
 </div>
