@@ -1,7 +1,7 @@
 var searchData=
 [
   ['dataentry_0',['DataEntry',['../struct_bond_1_1_data_entry.html',1,'Bond']]],
-  ['dataview_1',['DataView',['../class_bond_1_1_data_view.html',1,'Bond::DataView'],['../class_bond_1_1_data_view.html#a1eb8cd77564ad0576da327727f0b23bd',1,'Bond::DataView::DataView(const DataView &amp;other)=default'],['../class_bond_1_1_data_view.html#a6bb80c28bc9dfcea8c1359d50caa7354',1,'Bond::DataView::DataView(const void *data, size_t length)'],['../class_bond_1_1_data_view.html#a78a923d1bff8a5420b6d386d2b2193a7',1,'Bond::DataView::DataView()']]],
+  ['dataview_1',['DataView',['../class_bond_1_1_data_view.html',1,'Bond::DataView'],['../class_bond_1_1_data_view.html#a78a923d1bff8a5420b6d386d2b2193a7',1,'Bond::DataView::DataView()'],['../class_bond_1_1_data_view.html#a6bb80c28bc9dfcea8c1359d50caa7354',1,'Bond::DataView::DataView(const void *data, size_t length)'],['../class_bond_1_1_data_view.html#a1eb8cd77564ad0576da327727f0b23bd',1,'Bond::DataView::DataView(const DataView &amp;other)=default']]],
   ['dataviewindex_2',['DataViewIndex',['../class_bond_1_1_data_view_index.html',1,'Bond::DataViewIndex'],['../class_bond_1_1_data_view_index.html#ac881e449bf6bec7f9a5820675b795292',1,'Bond::DataViewIndex::DataViewIndex()']]],
   ['deallocator_3',['Deallocator',['../struct_bond_1_1_allocator_1_1_deallocator.html',1,'Bond::Allocator::Deallocator&lt; T &gt;'],['../struct_bond_1_1_allocator_1_1_deallocator.html#a224328f3ddcf2ee4c61def0ff391b57c',1,'Bond::Allocator::Deallocator::Deallocator()']]],
   ['dec_4',['Dec',['../namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a7dcac6c8fd112841d484de37ae390c62',1,'Bond::IO']]],

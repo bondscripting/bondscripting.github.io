@@ -1,7 +1,7 @@
 var searchData=
 [
   ['inputstream_0',['InputStream',['../struct_bond_1_1_input_stream.html',1,'Bond']]],
-  ['io_2ebond_1',['io.bond',['../group__io.html',1,'']]],
+  ['io_20bond_1',['io.bond',['../group__io.html',1,'']]],
   ['isalnum_2',['IsAlnum',['../group__type.html#ga422ab07f380ecd2aa0e5f3b0cc5e7f4c',1,'Bond']]],
   ['isalpha_3',['IsAlpha',['../group__type.html#ga4441fa3bf132057a89a0c73ba68d3bfb',1,'Bond']]],
   ['isblank_4',['IsBlank',['../group__type.html#gad30d0c220315f18f0bd3b3a4d6a8b9cf',1,'Bond']]],

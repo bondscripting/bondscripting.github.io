@@ -1,6 +1,5 @@
 var group__io =
 [
-    [ "Bond::IO", "namespace_bond_1_1_i_o.html", null ],
     [ "Bond::InputStream", "struct_bond_1_1_input_stream.html", [
       [ "AddOffset", "struct_bond_1_1_input_stream.html#a4ba4921626ee4f81ebc972087d28fb87", null ],
       [ "ClearError", "struct_bond_1_1_input_stream.html#a77a1a95c777f7bcd30e12668c689f1b6", null ],

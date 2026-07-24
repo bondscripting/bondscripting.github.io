@@ -4,7 +4,7 @@ var searchData=
   ['cbrtf_1',['Cbrtf',['../group__math.html#gac49a32ea32063a08dd17a6d51487eb9e',1,'Bond']]],
   ['ceil_2',['Ceil',['../group__math.html#gaf2fcc312f766c2506adc717f5c7cb28c',1,'Bond']]],
   ['ceilf_3',['Ceilf',['../group__math.html#gadb5335f41ae0d551bf7e4a2cf95a0aa3',1,'Bond']]],
-  ['clearerror_4',['ClearError',['../struct_bond_1_1_output_stream.html#ad11e5fece2b495ee4a880636d7ac6326',1,'Bond::OutputStream::ClearError()'],['../struct_bond_1_1_input_stream.html#a77a1a95c777f7bcd30e12668c689f1b6',1,'Bond::InputStream::ClearError()']]],
+  ['clearerror_4',['ClearError',['../struct_bond_1_1_input_stream.html#a77a1a95c777f7bcd30e12668c689f1b6',1,'Bond::InputStream::ClearError()'],['../struct_bond_1_1_output_stream.html#ad11e5fece2b495ee4a880636d7ac6326',1,'Bond::OutputStream::ClearError()']]],
   ['clearflags_5',['ClearFlags',['../struct_bond_1_1_input_stream.html#a260ac15beb5a250a56f2a3dfd503c8e8',1,'Bond::InputStream::ClearFlags()'],['../struct_bond_1_1_output_stream.html#ad1ced9d412ef19e49f292ad21e3d4e61',1,'Bond::OutputStream::ClearFlags()']]],
   ['close_6',['Close',['../struct_bond_1_1_input_stream.html#a7f00809408db03f990d80f031a24b580',1,'Bond::InputStream::Close()'],['../struct_bond_1_1_output_stream.html#a6befc82efb0871d24526fb5ad816bdcd',1,'Bond::OutputStream::Close()']]],
   ['copysign_7',['CopySign',['../group__math.html#gaf49c8070282f5712afe71a11da777161',1,'Bond']]],

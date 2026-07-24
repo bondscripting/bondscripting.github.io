@@ -14,7 +14,7 @@ var group__nodes =
       [ "GetNextNode", "class_bond_1_1_list_parse_node.html#a2490c2fbc501b82858efae21f95c8922", null ],
       [ "SetNextNode", "class_bond_1_1_list_parse_node.html#a631c04c65ff24ec65a51af71a1bed5a2", null ]
     ] ],
-    [ "Bond::ParseNodeList< NodeType >", "class_bond_1_1_parse_node_list.html", [
+    [ "Bond::ParseNodeList&lt; NodeType &gt;", "class_bond_1_1_parse_node_list.html", [
       [ "ParseNodeList", "class_bond_1_1_parse_node_list.html#a0394db043b4a3ddab8972e632f12ba77", null ],
       [ "Append", "class_bond_1_1_parse_node_list.html#aabecefb2e1bd639b0425d3e030fc31af", null ],
       [ "GetHead", "class_bond_1_1_parse_node_list.html#a0e8204e423584c2ad40b18a834d35811", null ],

@@ -1,13 +1,13 @@
 var class_bond_1_1_allocator =
 [
-    [ "AlignedDeallocator", "struct_bond_1_1_allocator_1_1_aligned_deallocator.html", "struct_bond_1_1_allocator_1_1_aligned_deallocator" ],
-    [ "AlignedHandle", "class_bond_1_1_allocator_1_1_aligned_handle.html", "class_bond_1_1_allocator_1_1_aligned_handle" ],
-    [ "AlignedObjectDeallocator", "struct_bond_1_1_allocator_1_1_aligned_object_deallocator.html", "struct_bond_1_1_allocator_1_1_aligned_object_deallocator" ],
-    [ "AlignedObjectHandle", "class_bond_1_1_allocator_1_1_aligned_object_handle.html", "class_bond_1_1_allocator_1_1_aligned_object_handle" ],
     [ "Deallocator", "struct_bond_1_1_allocator_1_1_deallocator.html", "struct_bond_1_1_allocator_1_1_deallocator" ],
     [ "Handle", "class_bond_1_1_allocator_1_1_handle.html", "class_bond_1_1_allocator_1_1_handle" ],
+    [ "AlignedDeallocator", "struct_bond_1_1_allocator_1_1_aligned_deallocator.html", "struct_bond_1_1_allocator_1_1_aligned_deallocator" ],
+    [ "AlignedHandle", "class_bond_1_1_allocator_1_1_aligned_handle.html", "class_bond_1_1_allocator_1_1_aligned_handle" ],
     [ "ObjectDeallocator", "struct_bond_1_1_allocator_1_1_object_deallocator.html", "struct_bond_1_1_allocator_1_1_object_deallocator" ],
     [ "ObjectHandle", "class_bond_1_1_allocator_1_1_object_handle.html", "class_bond_1_1_allocator_1_1_object_handle" ],
+    [ "AlignedObjectDeallocator", "struct_bond_1_1_allocator_1_1_aligned_object_deallocator.html", "struct_bond_1_1_allocator_1_1_aligned_object_deallocator" ],
+    [ "AlignedObjectHandle", "class_bond_1_1_allocator_1_1_aligned_object_handle.html", "class_bond_1_1_allocator_1_1_aligned_object_handle" ],
     [ "~Allocator", "class_bond_1_1_allocator.html#a93fde48af1a8eedf3eb59ec6cbba4a94", null ],
     [ "Alloc", "class_bond_1_1_allocator.html#ae6fc41e19d69ca0e452baca6cc3ea6ef", null ],
     [ "Alloc", "class_bond_1_1_allocator.html#a701c14ddd9f69ee62c1cd04bae97f060", null ],

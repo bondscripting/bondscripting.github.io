@@ -1,12 +1,11 @@
 var hierarchy =
 [
-    [ "Bond::Allocator::AlignedDeallocator< T >", "struct_bond_1_1_allocator_1_1_aligned_deallocator.html", null ],
-    [ "Bond::Allocator::AlignedObjectDeallocator< T >", "struct_bond_1_1_allocator_1_1_aligned_object_deallocator.html", null ],
+    [ "Bond::Allocator::AlignedDeallocator&lt; T &gt;", "struct_bond_1_1_allocator_1_1_aligned_deallocator.html", null ],
+    [ "Bond::Allocator::AlignedObjectDeallocator&lt; T &gt;", "struct_bond_1_1_allocator_1_1_aligned_object_deallocator.html", null ],
     [ "Bond::Allocator", "class_bond_1_1_allocator.html", [
       [ "Bond::DefaultAllocator", "class_bond_1_1_default_allocator.html", null ]
     ] ],
-    [ "Bond::AutoStack< ValueType >", "class_bond_1_1_auto_stack.html", null ],
-    [ "Bond::AutoStack< StackFrame >", "class_bond_1_1_auto_stack.html", null ],
+    [ "Bond::AutoStack&lt; ValueType &gt;", "class_bond_1_1_auto_stack.html", null ],
     [ "Bond::CboLoader", "class_bond_1_1_cbo_loader.html", null ],
     [ "Bond::CboValidator", "class_bond_1_1_cbo_validator.html", null ],
     [ "Bond::CharStream", "class_bond_1_1_char_stream.html", null ],
@@ -19,26 +18,26 @@ var hierarchy =
     [ "Bond::CompilerError", "class_bond_1_1_compiler_error.html", null ],
     [ "Bond::CompilerErrorBuffer", "class_bond_1_1_compiler_error_buffer.html", null ],
     [ "Bond::ConstantTable", "struct_bond_1_1_constant_table.html", null ],
-    [ "Bond::AutoStack< ValueType >::ConstIterator", "class_bond_1_1_auto_stack_1_1_const_iterator.html", null ],
+    [ "Bond::AutoStack&lt; ValueType &gt;::ConstIterator", "class_bond_1_1_auto_stack_1_1_const_iterator.html", null ],
     [ "Bond::DataEntry", "struct_bond_1_1_data_entry.html", null ],
     [ "Bond::DataView", "class_bond_1_1_data_view.html", null ],
     [ "Bond::DataViewIndex", "class_bond_1_1_data_view_index.html", null ],
-    [ "Bond::Allocator::Deallocator< T >", "struct_bond_1_1_allocator_1_1_deallocator.html", null ],
+    [ "Bond::Allocator::Deallocator&lt; T &gt;", "struct_bond_1_1_allocator_1_1_deallocator.html", null ],
     [ "Bond::Disassembler", "class_bond_1_1_disassembler.html", null ],
-    [ "Bond::AutoStack< ValueType >::Element", "class_bond_1_1_auto_stack_1_1_element.html", null ],
-    [ "StackFrames::Element", null, [
+    [ "Bond::AutoStack&lt; ValueType &gt;::Element", "class_bond_1_1_auto_stack_1_1_element.html", null ],
+    [ "Bond::AutoStack&lt; StackFrame &gt;::Element", null, [
       [ "Bond::InvocationStackFrame", "class_bond_1_1_invocation_stack_frame.html", null ]
     ] ],
     [ "Bond::Exception", "class_bond_1_1_exception.html", null ],
     [ "Bond::FrontEnd", "class_bond_1_1_front_end.html", null ],
     [ "Bond::Function", "struct_bond_1_1_function.html", null ],
     [ "Bond::InputStreamAdaptor", "class_bond_1_1_input_stream_adaptor.html", null ],
-    [ "Bond::AutoStack< ValueType >::Iterator", "class_bond_1_1_auto_stack_1_1_iterator.html", null ],
+    [ "Bond::AutoStack&lt; ValueType &gt;::Iterator", "class_bond_1_1_auto_stack_1_1_iterator.html", null ],
     [ "Bond::Lexer", "class_bond_1_1_lexer.html", null ],
     [ "Bond::NativeBindingCollection", "struct_bond_1_1_native_binding_collection.html", null ],
     [ "Bond::NativeBindingGenerator", "class_bond_1_1_native_binding_generator.html", null ],
     [ "Bond::NativeFunctionBinding", "struct_bond_1_1_native_function_binding.html", null ],
-    [ "Bond::Allocator::ObjectDeallocator< T >", "struct_bond_1_1_allocator_1_1_object_deallocator.html", null ],
+    [ "Bond::Allocator::ObjectDeallocator&lt; T &gt;", "struct_bond_1_1_allocator_1_1_object_deallocator.html", null ],
     [ "Bond::OutputStreamAdaptor", "class_bond_1_1_output_stream_adaptor.html", null ],
     [ "Bond::ParamListSignature", "struct_bond_1_1_param_list_signature.html", null ],
     [ "Bond::ParamSignature", "struct_bond_1_1_param_signature.html", null ],
@@ -90,7 +89,7 @@ var hierarchy =
       [ "Bond::TypeSpecifier", "class_bond_1_1_type_specifier.html", null ]
     ] ],
     [ "Bond::ParseNodeCount", "struct_bond_1_1_parse_node_count.html", null ],
-    [ "Bond::ParseNodeList< NodeType >", "class_bond_1_1_parse_node_list.html", null ],
+    [ "Bond::ParseNodeList&lt; NodeType &gt;", "class_bond_1_1_parse_node_list.html", null ],
     [ "Bond::ParseNodeVisitor", "class_bond_1_1_parse_node_visitor.html", [
       [ "Bond::ParseNodeTraverser", "class_bond_1_1_parse_node_traverser.html", [
         [ "Bond::ParseNodeCounter", "class_bond_1_1_parse_node_counter.html", null ]
@@ -135,7 +134,12 @@ var hierarchy =
     [ "Bond::TokenTypeSet", "class_bond_1_1_token_type_set.html", null ],
     [ "Bond::TypeAndValue", "class_bond_1_1_type_and_value.html", null ],
     [ "unique_ptr", null, [
+      [ "Bond::Allocator::AlignedHandle< const CodeSegment >", "class_bond_1_1_allocator_1_1_aligned_handle.html", null ],
+      [ "Bond::Allocator::Handle< const TokenCollection >", "class_bond_1_1_allocator_1_1_handle.html", null ],
       [ "Bond::Allocator::Handle< uint8_t >", "class_bond_1_1_allocator_1_1_handle.html", null ],
+      [ "Bond::Allocator::ObjectHandle< ParseNode >", "class_bond_1_1_allocator_1_1_object_handle.html", null ],
+      [ "Bond::Allocator::ObjectHandle< InputStream >", "class_bond_1_1_allocator_1_1_object_handle.html", null ],
+      [ "Bond::Allocator::ObjectHandle< OutputStream >", "class_bond_1_1_allocator_1_1_object_handle.html", null ],
       [ "Bond::Allocator::ObjectHandle< Collectable >", "class_bond_1_1_allocator_1_1_object_handle.html", null ],
       [ "Bond::Allocator::AlignedHandle< T >", "class_bond_1_1_allocator_1_1_aligned_handle.html", null ],
       [ "Bond::Allocator::AlignedObjectHandle< T >", "class_bond_1_1_allocator_1_1_aligned_object_handle.html", null ],

@@ -4,7 +4,7 @@ var group__vm =
       [ "~Collectable", "class_bond_1_1_collectable.html#adab23fd61fce9b2e8d73c944bb36e45e", null ],
       [ "mNext", "class_bond_1_1_collectable.html#a492e767f05eb30d9d2d47236c667bb03", null ]
     ] ],
-    [ "Bond::WrapperCollectable< T >", "class_bond_1_1_wrapper_collectable.html", [
+    [ "Bond::WrapperCollectable&lt; T &gt;", "class_bond_1_1_wrapper_collectable.html", [
       [ "ContentType", "class_bond_1_1_wrapper_collectable.html#abbb8325a3e1260d15d0ed21937517d51", null ],
       [ "WrapperCollectable", "class_bond_1_1_wrapper_collectable.html#ac162e087b0be17fa738113a70efca8d5", null ],
       [ "~WrapperCollectable", "class_bond_1_1_wrapper_collectable.html#ae8cd45f559417b239afdbc30f4cddd72", null ],

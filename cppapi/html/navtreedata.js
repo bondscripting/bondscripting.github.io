@@ -25,7 +25,7 @@
 var NAVTREE =
 [
   [ "Bond", "index.html", [
-    [ "Modules", "modules.html", "modules" ],
+    [ "Topics", "topics.html", "topics" ],
     [ "Namespace Members", "namespacemembers.html", [
       [ "All", "namespacemembers.html", "namespacemembers_dup" ],
       [ "Functions", "namespacemembers_func.html", "namespacemembers_func" ],
@@ -45,7 +45,7 @@ var NAVTREE =
         [ "Typedefs", "functions_type.html", null ],
         [ "Enumerations", "functions_enum.html", null ],
         [ "Enumerator", "functions_eval.html", null ],
-        [ "Related Functions", "functions_rela.html", null ]
+        [ "Related Symbols", "functions_rela.html", null ]
       ] ]
     ] ]
   ] ]
@@ -62,8 +62,9 @@ var NAVTREEINDEX =
 "class_bond_1_1_type_and_value.html#a3ad61143933ea8c8796085df478e54ad",
 "group__compiler.html#ga97c8cedea226a5156be5989588b0e3fa",
 "group__types.html#gga557394428c2bb1199d13db3825d0c0f6aa85579b6a897bd7a040ae3ef8c80bab5",
-"struct_bond_1_1_parse_node_count.html#aaffd1a4faa46ae50323d819373a16132"
+"struct_bond_1_1_parse_node_count.html#ab0011fb4bd5759ef734c5cd8815d9431"
 ];
 
-var SYNCONMSG = 'click to disable panel synchronisation';
-var SYNCOFFMSG = 'click to enable panel synchronisation';
+const SYNCONMSG = 'click to disable panel synchronization';
+const SYNCOFFMSG = 'click to enable panel synchronization';
+const LISTOFALLMEMBERS = 'List of all members';

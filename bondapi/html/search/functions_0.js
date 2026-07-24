@@ -4,7 +4,7 @@ var searchData=
   ['acosf_1',['Acosf',['../group__math.html#gaf9f551bf51d1df9f1930966a9a122d32',1,'Bond']]],
   ['acosh_2',['Acosh',['../group__math.html#ga63dd8333106401d4c7e0b79cfb26b833',1,'Bond']]],
   ['acoshf_3',['Acoshf',['../group__math.html#ga08ad44967852de212cb48849ef1a95a2',1,'Bond']]],
-  ['addoffset_4',['AddOffset',['../struct_bond_1_1_output_stream.html#a46027ab7af4d90389b7862e7cda4ee3e',1,'Bond::OutputStream::AddOffset()'],['../struct_bond_1_1_input_stream.html#a4ba4921626ee4f81ebc972087d28fb87',1,'Bond::InputStream::AddOffset()']]],
+  ['addoffset_4',['AddOffset',['../struct_bond_1_1_input_stream.html#a4ba4921626ee4f81ebc972087d28fb87',1,'Bond::InputStream::AddOffset()'],['../struct_bond_1_1_output_stream.html#a46027ab7af4d90389b7862e7cda4ee3e',1,'Bond::OutputStream::AddOffset()']]],
   ['allocate_5',['Allocate',['../group__memory.html#ga49d97858c63abd9454f3ef8dacdcf2b8',1,'Bond']]],
   ['allocatealigned_6',['AllocateAligned',['../group__memory.html#ga4e8314acd3beb9bf5e04383819dbaae7',1,'Bond']]],
   ['allocatealignedcollected_7',['AllocateAlignedCollected',['../group__memory.html#gaa1260bf89fe5e428a91a4692ec465cfa',1,'Bond']]],

@@ -3,30 +3,6 @@ var group__systems =
     [ "Endian", "group__endian.html", "group__endian" ],
     [ "Math", "group__math.html", "group__math" ],
     [ "Bond::Allocator", "class_bond_1_1_allocator.html", [
-      [ "AlignedDeallocator", "struct_bond_1_1_allocator_1_1_aligned_deallocator.html", [
-        [ "AlignedDeallocator", "struct_bond_1_1_allocator_1_1_aligned_deallocator.html#aa9f25ccc80b204b31c2fe1534d5447cd", null ],
-        [ "operator()", "struct_bond_1_1_allocator_1_1_aligned_deallocator.html#a5ae12c431b774017d37e622a53a2eee5", null ],
-        [ "mAllocator", "struct_bond_1_1_allocator_1_1_aligned_deallocator.html#ae4627749a1bed5da2cc00cf1f0b87ade", null ]
-      ] ],
-      [ "AlignedHandle", "class_bond_1_1_allocator_1_1_aligned_handle.html", [
-        [ "AlignedHandle", "class_bond_1_1_allocator_1_1_aligned_handle.html#a9e06201d74bc97fb36968b3accba945a", null ],
-        [ "AlignedHandle", "class_bond_1_1_allocator_1_1_aligned_handle.html#aba7d0ad9f983cfb0a4ea4c7a730aec75", null ],
-        [ "AlignedHandle", "class_bond_1_1_allocator_1_1_aligned_handle.html#a3af4738712b7e8572706c8100843b5cf", null ],
-        [ "operator AlignedHandle< U >", "class_bond_1_1_allocator_1_1_aligned_handle.html#a058742ac71f3d4ca6d8c2535b15af24e", null ],
-        [ "operator=", "class_bond_1_1_allocator_1_1_aligned_handle.html#a772c84ad901def0bbb3c44631ce28a3b", null ]
-      ] ],
-      [ "AlignedObjectDeallocator", "struct_bond_1_1_allocator_1_1_aligned_object_deallocator.html", [
-        [ "AlignedObjectDeallocator", "struct_bond_1_1_allocator_1_1_aligned_object_deallocator.html#ade1f7f53aa017870b32cc36aed815fb1", null ],
-        [ "operator()", "struct_bond_1_1_allocator_1_1_aligned_object_deallocator.html#aa024e045f42471cbd94d8f352254ee6f", null ],
-        [ "mAllocator", "struct_bond_1_1_allocator_1_1_aligned_object_deallocator.html#a0d36248418e19d99419c4453d9a1ef90", null ]
-      ] ],
-      [ "AlignedObjectHandle", "class_bond_1_1_allocator_1_1_aligned_object_handle.html", [
-        [ "AlignedObjectHandle", "class_bond_1_1_allocator_1_1_aligned_object_handle.html#acb3a8eb5ad8ab3f4d25e047c08633150", null ],
-        [ "AlignedObjectHandle", "class_bond_1_1_allocator_1_1_aligned_object_handle.html#a8679edc9fdd8b007c40962bd91bcd0db", null ],
-        [ "AlignedObjectHandle", "class_bond_1_1_allocator_1_1_aligned_object_handle.html#aaff0094094e063bdba2a88b3d205b62e", null ],
-        [ "operator AlignedObjectHandle< U >", "class_bond_1_1_allocator_1_1_aligned_object_handle.html#a5085fda87c8de3f7714ff0080f7c2799", null ],
-        [ "operator=", "class_bond_1_1_allocator_1_1_aligned_object_handle.html#a5cc05fefec93b1a8984d120158d4d5af", null ]
-      ] ],
       [ "Deallocator", "struct_bond_1_1_allocator_1_1_deallocator.html", [
         [ "Deallocator", "struct_bond_1_1_allocator_1_1_deallocator.html#a224328f3ddcf2ee4c61def0ff391b57c", null ],
         [ "operator()", "struct_bond_1_1_allocator_1_1_deallocator.html#ac2277fd540e62702ef7f7c78505e720e", null ],
@@ -39,6 +15,18 @@ var group__systems =
         [ "operator Handle< U >", "class_bond_1_1_allocator_1_1_handle.html#afb7aa531081f7484459394a18cc7873f", null ],
         [ "operator=", "class_bond_1_1_allocator_1_1_handle.html#a132c786caf9f2d1996b7c6641f5cd71d", null ]
       ] ],
+      [ "AlignedDeallocator", "struct_bond_1_1_allocator_1_1_aligned_deallocator.html", [
+        [ "AlignedDeallocator", "struct_bond_1_1_allocator_1_1_aligned_deallocator.html#aa9f25ccc80b204b31c2fe1534d5447cd", null ],
+        [ "operator()", "struct_bond_1_1_allocator_1_1_aligned_deallocator.html#a5ae12c431b774017d37e622a53a2eee5", null ],
+        [ "mAllocator", "struct_bond_1_1_allocator_1_1_aligned_deallocator.html#ae4627749a1bed5da2cc00cf1f0b87ade", null ]
+      ] ],
+      [ "AlignedHandle", "class_bond_1_1_allocator_1_1_aligned_handle.html", [
+        [ "AlignedHandle", "class_bond_1_1_allocator_1_1_aligned_handle.html#a9e06201d74bc97fb36968b3accba945a", null ],
+        [ "AlignedHandle", "class_bond_1_1_allocator_1_1_aligned_handle.html#aba7d0ad9f983cfb0a4ea4c7a730aec75", null ],
+        [ "AlignedHandle", "class_bond_1_1_allocator_1_1_aligned_handle.html#a3af4738712b7e8572706c8100843b5cf", null ],
+        [ "operator AlignedHandle< U >", "class_bond_1_1_allocator_1_1_aligned_handle.html#a058742ac71f3d4ca6d8c2535b15af24e", null ],
+        [ "operator=", "class_bond_1_1_allocator_1_1_aligned_handle.html#a772c84ad901def0bbb3c44631ce28a3b", null ]
+      ] ],
       [ "ObjectDeallocator", "struct_bond_1_1_allocator_1_1_object_deallocator.html", [
         [ "ObjectDeallocator", "struct_bond_1_1_allocator_1_1_object_deallocator.html#adf64bfd17666ad58c8196e83b1ab5dcf", null ],
         [ "operator()", "struct_bond_1_1_allocator_1_1_object_deallocator.html#a029c608fdc0c425c7cbc29b43f33c100", null ],
@@ -50,6 +38,18 @@ var group__systems =
         [ "ObjectHandle", "class_bond_1_1_allocator_1_1_object_handle.html#ad6a18cbb727d8f328812e569d92281f9", null ],
         [ "operator ObjectHandle< U >", "class_bond_1_1_allocator_1_1_object_handle.html#aa6e102cd8af9202a0755448cf7a48470", null ],
         [ "operator=", "class_bond_1_1_allocator_1_1_object_handle.html#ac4e17550ee8ddcfe30d7beb7c122f93a", null ]
+      ] ],
+      [ "AlignedObjectDeallocator", "struct_bond_1_1_allocator_1_1_aligned_object_deallocator.html", [
+        [ "AlignedObjectDeallocator", "struct_bond_1_1_allocator_1_1_aligned_object_deallocator.html#ade1f7f53aa017870b32cc36aed815fb1", null ],
+        [ "operator()", "struct_bond_1_1_allocator_1_1_aligned_object_deallocator.html#aa024e045f42471cbd94d8f352254ee6f", null ],
+        [ "mAllocator", "struct_bond_1_1_allocator_1_1_aligned_object_deallocator.html#a0d36248418e19d99419c4453d9a1ef90", null ]
+      ] ],
+      [ "AlignedObjectHandle", "class_bond_1_1_allocator_1_1_aligned_object_handle.html", [
+        [ "AlignedObjectHandle", "class_bond_1_1_allocator_1_1_aligned_object_handle.html#acb3a8eb5ad8ab3f4d25e047c08633150", null ],
+        [ "AlignedObjectHandle", "class_bond_1_1_allocator_1_1_aligned_object_handle.html#a8679edc9fdd8b007c40962bd91bcd0db", null ],
+        [ "AlignedObjectHandle", "class_bond_1_1_allocator_1_1_aligned_object_handle.html#aaff0094094e063bdba2a88b3d205b62e", null ],
+        [ "operator AlignedObjectHandle< U >", "class_bond_1_1_allocator_1_1_aligned_object_handle.html#a5085fda87c8de3f7714ff0080f7c2799", null ],
+        [ "operator=", "class_bond_1_1_allocator_1_1_aligned_object_handle.html#a5cc05fefec93b1a8984d120158d4d5af", null ]
       ] ],
       [ "~Allocator", "class_bond_1_1_allocator.html#a93fde48af1a8eedf3eb59ec6cbba4a94", null ],
       [ "Alloc", "class_bond_1_1_allocator.html#ae6fc41e19d69ca0e452baca6cc3ea6ef", null ],
