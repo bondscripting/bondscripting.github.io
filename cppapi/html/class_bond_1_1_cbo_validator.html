@@ -157,22 +157,32 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_bond_1_1
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Bond::CboValidator Class Reference</div></div>
+  <div class="headertitle"><div class="title">Bond::CboValidator Class Reference<div class="ingroups"><a class="el" href="group__tools.html">Tools</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A validator for <a class="el" href="namespace_bond.html">Bond</a> CBO bytecode streams.  
+ <a href="#details">More...</a></p>
 
 <p><code>#include &lt;bond/tools/cbovalidator.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:Result" id="r_Result"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_bond_1_1_cbo_validator_1_1_result.html">Result</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Summary information produced during CBO validation.  <a href="struct_bond_1_1_cbo_validator_1_1_result.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a73d1f889e87d14f237ea5bcee883c744" id="r_a73d1f889e87d14f237ea5bcee883c744"><td class="memItemLeft"><a class="el" href="struct_bond_1_1_cbo_validator_1_1_result.html">Result</a>&#160;</td><td class="memItemRight"><a class="el" href="#a73d1f889e87d14f237ea5bcee883c744">Validate</a> (const void *byteCode, size_t length)</td></tr>
+<tr class="memdesc:a73d1f889e87d14f237ea5bcee883c744"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates CBO data from an in-memory byte buffer.  <br /></td></tr>
 <tr class="memitem:a776a5b9d339e9a4234be3ed395c19001" id="r_a776a5b9d339e9a4234be3ed395c19001"><td class="memItemLeft"><a class="el" href="struct_bond_1_1_cbo_validator_1_1_result.html">Result</a>&#160;</td><td class="memItemRight"><a class="el" href="#a776a5b9d339e9a4234be3ed395c19001">Validate</a> (<a class="el" href="class_bond_1_1_input_stream.html">InputStream</a> &amp;stream)</td></tr>
+<tr class="memdesc:a776a5b9d339e9a4234be3ed395c19001"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates CBO data from an input stream.  <br /></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A validator for <a class="el" href="namespace_bond.html">Bond</a> CBO bytecode streams. </p>
+<p>The <a class="el" href="class_bond_1_1_cbo_validator.html" title="A validator for Bond CBO bytecode streams.">CboValidator</a> verifies the structure of serialized CBO data and reports summary information about the validated contents.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_bond_1_1_input_stream.html" title="An abstract interface for performing both unformatted and formatted input operations.">InputStream</a> </dd></dl>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a73d1f889e87d14f237ea5bcee883c744" name="a73d1f889e87d14f237ea5bcee883c744"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a73d1f889e87d14f237ea5bcee883c744">&#9670;&#160;</a></span>Validate() <span class="overload">[1/2]</span></h2>
 
@@ -192,6 +202,16 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Validates CBO data from an in-memory byte buffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">byteCode</td><td>Pointer to the beginning of the byte buffer. </td></tr>
+    <tr><td class="paramname">length</td><td>The number of bytes in the buffer. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="struct_bond_1_1_cbo_validator_1_1_result.html" title="Summary information produced during CBO validation.">Result</a> containing decoded metadata and aggregate counts. </dd></dl>
+
 </div>
 </div>
 <a id="a776a5b9d339e9a4234be3ed395c19001" name="a776a5b9d339e9a4234be3ed395c19001"></a>
@@ -208,6 +228,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Validates CBO data from an input stream. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stream</td><td>Input stream containing CBO data. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="struct_bond_1_1_cbo_validator_1_1_result.html" title="Summary information produced during CBO validation.">Result</a> containing decoded metadata and aggregate counts. </dd></dl>
 
 </div>
 </div>

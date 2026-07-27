@@ -178,8 +178,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8679edc9fdd8b007c40962bd91bcd0db" id="r_a8679edc9fdd8b007c40962bd91bcd0db"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a8679edc9fdd8b007c40962bd91bcd0db">AlignedObjectHandle</a> (<a class="el" href="class_bond_1_1_allocator.html">Allocator</a> &amp;allocator, T *ptr=nullptr)</td></tr>
 <tr class="memitem:aaff0094094e063bdba2a88b3d205b62e" id="r_aaff0094094e063bdba2a88b3d205b62e"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aaff0094094e063bdba2a88b3d205b62e">AlignedObjectHandle</a> (AlignedObjectHandle &amp;&amp;other)</td></tr>
 <tr class="memitem:a5cc05fefec93b1a8984d120158d4d5af" id="r_a5cc05fefec93b1a8984d120158d4d5af"><td class="memItemLeft"><a class="el" href="#acb3a8eb5ad8ab3f4d25e047c08633150">AlignedObjectHandle</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a5cc05fefec93b1a8984d120158d4d5af">operator=</a> (<a class="el" href="#acb3a8eb5ad8ab3f4d25e047c08633150">AlignedObjectHandle</a> &amp;&amp;other)</td></tr>
-<tr class="memitem:a5085fda87c8de3f7714ff0080f7c2799" id="r_a5085fda87c8de3f7714ff0080f7c2799"><td class="memTemplParams" colspan="2">template&lt;typename U&gt; </td></tr>
-<tr class="memitem:a5085fda87c8de3f7714ff0080f7c2799 template"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a5085fda87c8de3f7714ff0080f7c2799">operator AlignedObjectHandle&lt; U &gt;</a> () &amp;&amp;</td></tr>
+<tr class="memitem:a29ec2301a1a3150766017a55284bb0a7" id="r_a29ec2301a1a3150766017a55284bb0a7"><td class="memTemplParams" colspan="2">template&lt;typename U, typename Bond::enable_if&lt; Bond::is_same&lt; U, T &gt;::value||Bond::has_virtual_destructor&lt; U &gt;::value, int &gt;::type = 0&gt; </td></tr>
+<tr class="memitem:a29ec2301a1a3150766017a55284bb0a7 template"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a29ec2301a1a3150766017a55284bb0a7">operator AlignedObjectHandle&lt; U &gt;</a> () &amp;&amp;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
@@ -275,15 +275,15 @@ template&lt;typename T&gt; </div>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a5085fda87c8de3f7714ff0080f7c2799" name="a5085fda87c8de3f7714ff0080f7c2799"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5085fda87c8de3f7714ff0080f7c2799">&#9670;&#160;</a></span>operator AlignedObjectHandle&lt; U &gt;()</h2>
+<a id="a29ec2301a1a3150766017a55284bb0a7" name="a29ec2301a1a3150766017a55284bb0a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29ec2301a1a3150766017a55284bb0a7">&#9670;&#160;</a></span>operator AlignedObjectHandle&lt; U &gt;()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T&gt; </div>
 <div class="memtemplate">
-template&lt;typename U&gt; </div>
+template&lt;typename U, typename Bond::enable_if&lt; Bond::is_same&lt; U, T &gt;::value||Bond::has_virtual_destructor&lt; U &gt;::value, int &gt;::type = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">

@@ -175,38 +175,52 @@ Inheritance diagram for Bond::Stream:</div>
 <area href="class_bond_1_1_output_stream.html" title="An abstract interface for performing both unformatted and formatted output operations." alt="Bond::OutputStream" shape="rect" coords="447,56,616,80"/>
 <area href="class_bond_1_1_memory_input_stream.html" title="A concrete implementation of InputStream that performs input operations from an in-memory buffer." alt="Bond::MemoryInputStream" shape="rect" coords="0,112,169,136"/>
 <area href="class_bond_1_1_stdio_input_stream.html" title="A concrete implementation of InputStream that performs input operations from a stdio FILE*." alt="Bond::StdioInputStream" shape="rect" coords="179,112,348,136"/>
-<area href="class_bond_1_1_memory_output_stream.html" title="A concrete implementation of OuputStream that performs ouput operations to an in-memory buffer." alt="Bond::MemoryOutputStream" shape="rect" coords="358,112,527,136"/>
-<area href="class_bond_1_1_stdio_output_stream.html" title="A concrete implementation of OuputStream that performs input operations to a stdio FILE*." alt="Bond::StdioOutputStream" shape="rect" coords="537,112,706,136"/>
-<area href="class_bond_1_1_std_in_input_stream.html" alt="Bond::StdInInputStream" shape="rect" coords="179,168,348,192"/>
-<area href="class_bond_1_1_std_err_output_stream.html" alt="Bond::StdErrOutputStream" shape="rect" coords="447,168,616,192"/>
-<area href="class_bond_1_1_std_out_output_stream.html" alt="Bond::StdOutOutputStream" shape="rect" coords="626,168,795,192"/>
+<area href="class_bond_1_1_memory_output_stream.html" title="A concrete implementation of OutputStream that performs output operations to an in-memory buffer." alt="Bond::MemoryOutputStream" shape="rect" coords="358,112,527,136"/>
+<area href="class_bond_1_1_stdio_output_stream.html" title="A concrete implementation of OutputStream that performs output operations to a stdio FILE*." alt="Bond::StdioOutputStream" shape="rect" coords="537,112,706,136"/>
+<area href="class_bond_1_1_std_in_input_stream.html" title="A concrete implementation of StdioInputStream bound to stdin." alt="Bond::StdInInputStream" shape="rect" coords="179,168,348,192"/>
+<area href="class_bond_1_1_std_err_output_stream.html" title="A concrete implementation of StdioOutputStream bound to stderr." alt="Bond::StdErrOutputStream" shape="rect" coords="447,168,616,192"/>
+<area href="class_bond_1_1_std_out_output_stream.html" title="A concrete implementation of StdioOutputStream bound to stdout." alt="Bond::StdOutOutputStream" shape="rect" coords="626,168,795,192"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a489b6b37c5ef8c0101dbee13bb83acd7" id="r_a489b6b37c5ef8c0101dbee13bb83acd7"><td class="memItemLeft">typedef long&#160;</td><td class="memItemRight"><a class="el" href="#a489b6b37c5ef8c0101dbee13bb83acd7">pos_t</a></td></tr>
+<tr class="memdesc:a489b6b37c5ef8c0101dbee13bb83acd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">A type used to represent absolute positions within a stream.  <br /></td></tr>
 <tr class="memitem:a6314350315fb68539f436be332b8419d" id="r_a6314350315fb68539f436be332b8419d"><td class="memItemLeft">typedef long&#160;</td><td class="memItemRight"><a class="el" href="#a6314350315fb68539f436be332b8419d">off_t</a></td></tr>
+<tr class="memdesc:a6314350315fb68539f436be332b8419d"><td class="mdescLeft">&#160;</td><td class="mdescRight">A type used to represent relative offsets within a stream.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a655ad666aaf7d5771d4fb4f2f4a84e3c" id="r_a655ad666aaf7d5771d4fb4f2f4a84e3c"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#a655ad666aaf7d5771d4fb4f2f4a84e3c">~Stream</a> ()</td></tr>
+<tr class="memdesc:a655ad666aaf7d5771d4fb4f2f4a84e3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys a <a class="el" href="class_bond_1_1_stream.html" title="A base interface for performing IO operations.">Stream</a> object.  <br /></td></tr>
 <tr class="memitem:a982f9804fba2e4c07a8c0677e7e8cc6a" id="r_a982f9804fba2e4c07a8c0677e7e8cc6a"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a982f9804fba2e4c07a8c0677e7e8cc6a">Close</a> ()</td></tr>
+<tr class="memdesc:a982f9804fba2e4c07a8c0677e7e8cc6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the stream.  <br /></td></tr>
 <tr class="memitem:a9c5b7b959d9bbae2697481e9e160d6af" id="r_a9c5b7b959d9bbae2697481e9e160d6af"><td class="memItemLeft">virtual <a class="el" href="#a489b6b37c5ef8c0101dbee13bb83acd7">pos_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9c5b7b959d9bbae2697481e9e160d6af">GetPosition</a> () const =0</td></tr>
+<tr class="memdesc:a9c5b7b959d9bbae2697481e9e160d6af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current position within the stream.  <br /></td></tr>
 <tr class="memitem:a1000cdc7765b7c33a2e4ed9273fb0e8e" id="r_a1000cdc7765b7c33a2e4ed9273fb0e8e"><td class="memItemLeft">virtual <a class="el" href="#a489b6b37c5ef8c0101dbee13bb83acd7">pos_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1000cdc7765b7c33a2e4ed9273fb0e8e">GetEndPosition</a> () const =0</td></tr>
+<tr class="memdesc:a1000cdc7765b7c33a2e4ed9273fb0e8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the end position of the stream.  <br /></td></tr>
 <tr class="memitem:abc8c5408aaae3ffe731bc6e4f4414d36" id="r_abc8c5408aaae3ffe731bc6e4f4414d36"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#abc8c5408aaae3ffe731bc6e4f4414d36">SetPosition</a> (<a class="el" href="#a6314350315fb68539f436be332b8419d">off_t</a> offset)=0</td></tr>
+<tr class="memdesc:abc8c5408aaae3ffe731bc6e4f4414d36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current position within the stream.  <br /></td></tr>
 <tr class="memitem:ac8b7ccb707a2e8ea06f12f8fbcfa2748" id="r_ac8b7ccb707a2e8ea06f12f8fbcfa2748"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ac8b7ccb707a2e8ea06f12f8fbcfa2748">SetPositionFromEnd</a> (<a class="el" href="#a6314350315fb68539f436be332b8419d">off_t</a> offset)=0</td></tr>
+<tr class="memdesc:ac8b7ccb707a2e8ea06f12f8fbcfa2748"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current position relative to the end of the stream.  <br /></td></tr>
 <tr class="memitem:a792ecc29f09dd22a4136d42ca1cd31a9" id="r_a792ecc29f09dd22a4136d42ca1cd31a9"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a792ecc29f09dd22a4136d42ca1cd31a9">AddOffset</a> (<a class="el" href="#a6314350315fb68539f436be332b8419d">off_t</a> offset)=0</td></tr>
+<tr class="memdesc:a792ecc29f09dd22a4136d42ca1cd31a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advances the current position by the given offset.  <br /></td></tr>
 <tr class="memitem:ac8fcd71aa49b1ad2370a435c435c6344" id="r_ac8fcd71aa49b1ad2370a435c435c6344"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#ac8fcd71aa49b1ad2370a435c435c6344">IsEof</a> () const =0</td></tr>
+<tr class="memdesc:ac8fcd71aa49b1ad2370a435c435c6344"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests whether the current position is at or beyond the end of the stream.  <br /></td></tr>
 <tr class="memitem:a7dd39d528d8d3dae47635e10da8cfb77" id="r_a7dd39d528d8d3dae47635e10da8cfb77"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a7dd39d528d8d3dae47635e10da8cfb77">HasError</a> () const =0</td></tr>
+<tr class="memdesc:a7dd39d528d8d3dae47635e10da8cfb77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests whether the stream is currently in an error state.  <br /></td></tr>
 <tr class="memitem:a7be46eaad9e3ad1223dd74c80e575dd7" id="r_a7be46eaad9e3ad1223dd74c80e575dd7"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a7be46eaad9e3ad1223dd74c80e575dd7">ClearError</a> ()=0</td></tr>
+<tr class="memdesc:a7be46eaad9e3ad1223dd74c80e575dd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the current error state of the stream.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a34e5305e69fc9e7f8c946cf05cbf4cfb" id="r_a34e5305e69fc9e7f8c946cf05cbf4cfb"><td class="memItemLeft">static const int&#160;</td><td class="memItemRight"><a class="el" href="#a34e5305e69fc9e7f8c946cf05cbf4cfb">Eof</a> = -1</td></tr>
+<tr class="memdesc:a34e5305e69fc9e7f8c946cf05cbf4cfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">A special value returned by single-byte input functions to indicate end of stream.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A base interface for performing <a class="el" href="namespace_bond_1_1_i_o.html">IO</a> operations. </p>
+<p><a class="el" href="class_bond_1_1_stream.html" title="A base interface for performing IO operations.">Stream</a> provides the common positioning and status operations shared by all <a class="el" href="namespace_bond.html">Bond</a> input and output streams. Concrete implementations may be backed by memory buffers, stdio FILE objects, or other storage mechanisms.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="class_bond_1_1_input_stream.html" title="An abstract interface for performing both unformatted and formatted input operations.">InputStream</a>, <a class="el" href="class_bond_1_1_output_stream.html" title="An abstract interface for performing both unformatted and formatted output operations.">OutputStream</a> </dd></dl>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
 <a id="a6314350315fb68539f436be332b8419d" name="a6314350315fb68539f436be332b8419d"></a>
@@ -221,6 +235,8 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>A type used to represent relative offsets within a stream. </p>
+
 </div>
 </div>
 <a id="a489b6b37c5ef8c0101dbee13bb83acd7" name="a489b6b37c5ef8c0101dbee13bb83acd7"></a>
@@ -234,6 +250,8 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>A type used to represent absolute positions within a stream. </p>
 
 </div>
 </div>
@@ -261,6 +279,8 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Destroys a <a class="el" href="class_bond_1_1_stream.html" title="A base interface for performing IO operations.">Stream</a> object. </p>
+
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
@@ -286,6 +306,14 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Advances the current position by the given offset. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">offset</td><td>The signed amount by which the current position should be adjusted. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implemented in <a class="el" href="class_bond_1_1_memory_input_stream.html#a429f202d47402f128097cfb68cd63e28">Bond::MemoryInputStream</a>, <a class="el" href="class_bond_1_1_memory_output_stream.html#abfd06c7b2d832f4d56dc1730b7ac614f">Bond::MemoryOutputStream</a>, <a class="el" href="class_bond_1_1_stdio_input_stream.html#aa9e47d9941dd15f77bc618af46bb62fd">Bond::StdioInputStream</a>, and <a class="el" href="class_bond_1_1_stdio_output_stream.html#a3d0f7d4082b2306093269db940c43e0e">Bond::StdioOutputStream</a>.</p>
 
@@ -314,6 +342,8 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Clears the current error state of the stream. </p>
+
 <p>Implemented in <a class="el" href="class_bond_1_1_memory_input_stream.html#a1f4bc920eb520aafafac4b9d4496bfc4">Bond::MemoryInputStream</a>, <a class="el" href="class_bond_1_1_memory_output_stream.html#a2843e99189a13bdc7f940ebdce620587">Bond::MemoryOutputStream</a>, <a class="el" href="class_bond_1_1_stdio_input_stream.html#a97fd71b8e29cdc5361d8f3b9d12ca0fe">Bond::StdioInputStream</a>, and <a class="el" href="class_bond_1_1_stdio_output_stream.html#a5ad84e00be93cf27b893aaabf7cf6b8b">Bond::StdioOutputStream</a>.</p>
 
 </div>
@@ -340,6 +370,9 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Closes the stream. </p>
+<p>The default implementation does nothing. Concrete stream implementations may override this function to release owned resources or detach from the underlying data source or sink. </p>
 
 <p>Reimplemented in <a class="el" href="class_bond_1_1_stdio_input_stream.html#a807a5f41a4994ef05822d23e5707e840">Bond::StdioInputStream</a>, and <a class="el" href="class_bond_1_1_stdio_output_stream.html#ae3e8c0f4a0d90f4439443fdea19f62a0">Bond::StdioOutputStream</a>.</p>
 
@@ -368,6 +401,9 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the end position of the stream. </p>
+<dl class="section return"><dt>Returns</dt><dd>The absolute position one past the last byte in the stream. </dd></dl>
+
 <p>Implemented in <a class="el" href="class_bond_1_1_memory_input_stream.html#a96b88bb7835d05e0aacf937a40b7f9c8">Bond::MemoryInputStream</a>, <a class="el" href="class_bond_1_1_memory_output_stream.html#a327ef6db13fa6380c3787dd4839ca52f">Bond::MemoryOutputStream</a>, <a class="el" href="class_bond_1_1_stdio_input_stream.html#affdf55d8097cd10feeb853e6af4eec7c">Bond::StdioInputStream</a>, and <a class="el" href="class_bond_1_1_stdio_output_stream.html#aa2e417750007224ec51b788fc329970c">Bond::StdioOutputStream</a>.</p>
 
 </div>
@@ -394,6 +430,9 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the current position within the stream. </p>
+<dl class="section return"><dt>Returns</dt><dd>The current absolute stream position. </dd></dl>
 
 <p>Implemented in <a class="el" href="class_bond_1_1_memory_input_stream.html#a9eaf5854e638506a9f2256dc864396e9">Bond::MemoryInputStream</a>, <a class="el" href="class_bond_1_1_memory_output_stream.html#a6fb6f9dcdaae38d74c17d30793094579">Bond::MemoryOutputStream</a>, <a class="el" href="class_bond_1_1_stdio_input_stream.html#a03be47159b9b4eabe29c4678166101da">Bond::StdioInputStream</a>, and <a class="el" href="class_bond_1_1_stdio_output_stream.html#a2e294ebf9412a9d10204c54872394a7f">Bond::StdioOutputStream</a>.</p>
 
@@ -422,6 +461,9 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Tests whether the stream is currently in an error state. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if an error has occurred on the underlying stream. </dd></dl>
+
 <p>Implemented in <a class="el" href="class_bond_1_1_memory_input_stream.html#ac50b39e604c5043aad46f88518e81f53">Bond::MemoryInputStream</a>, <a class="el" href="class_bond_1_1_memory_output_stream.html#aa8ab2c941ebe5da84716faaefeecaae8">Bond::MemoryOutputStream</a>, <a class="el" href="class_bond_1_1_stdio_input_stream.html#a0a7c2f274d8e0642f4c539c647b32fa1">Bond::StdioInputStream</a>, and <a class="el" href="class_bond_1_1_stdio_output_stream.html#a3daab285f6bb6a5bd4e3f9e55a2e1eaf">Bond::StdioOutputStream</a>.</p>
 
 </div>
@@ -448,6 +490,9 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Tests whether the current position is at or beyond the end of the stream. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if no more data can be read or written at the current position. </dd></dl>
 
 <p>Implemented in <a class="el" href="class_bond_1_1_memory_input_stream.html#ae53b5e22de76f135bc6e06e47b927f62">Bond::MemoryInputStream</a>, <a class="el" href="class_bond_1_1_memory_output_stream.html#a0206616c5dc6d0fd1841fe3fedec94a2">Bond::MemoryOutputStream</a>, <a class="el" href="class_bond_1_1_stdio_input_stream.html#aacc72dd7ad2cae307dfc82f291d536ba">Bond::StdioInputStream</a>, and <a class="el" href="class_bond_1_1_stdio_output_stream.html#ad1a0fab08739bec4af117a654330e1ab">Bond::StdioOutputStream</a>.</p>
 
@@ -476,6 +521,14 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sets the current position within the stream. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">offset</td><td>The absolute position to which the stream should be moved. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Implemented in <a class="el" href="class_bond_1_1_memory_input_stream.html#a8cfffb2c091c4a061c36e5a4ad7307c5">Bond::MemoryInputStream</a>, <a class="el" href="class_bond_1_1_memory_output_stream.html#a52a5be0ac186b4c575d32aa26e9568c3">Bond::MemoryOutputStream</a>, <a class="el" href="class_bond_1_1_stdio_input_stream.html#a21ce2dd85fbd19bb2b272bab8fc89dd2">Bond::StdioInputStream</a>, and <a class="el" href="class_bond_1_1_stdio_output_stream.html#ae60681dc6a7cb4a96a70eb3566cd6dc8">Bond::StdioOutputStream</a>.</p>
 
 </div>
@@ -503,6 +556,14 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sets the current position relative to the end of the stream. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">offset</td><td>The offset from the end position to which the stream should be moved. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Implemented in <a class="el" href="class_bond_1_1_memory_input_stream.html#af858b6064d7a3dc6a2364db166725714">Bond::MemoryInputStream</a>, <a class="el" href="class_bond_1_1_memory_output_stream.html#acb63c6e8adaa0b2474bf019b5e973483">Bond::MemoryOutputStream</a>, <a class="el" href="class_bond_1_1_stdio_input_stream.html#a55fa17cbe5681116f03dac43e5610348">Bond::StdioInputStream</a>, and <a class="el" href="class_bond_1_1_stdio_output_stream.html#a75cd7b84f24c93dfa651a34f244af7f5">Bond::StdioOutputStream</a>.</p>
 
 </div>
@@ -527,6 +588,8 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>A special value returned by single-byte input functions to indicate end of stream. </p>
 
 </div>
 </div>

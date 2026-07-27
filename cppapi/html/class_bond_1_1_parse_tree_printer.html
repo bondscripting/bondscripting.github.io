@@ -157,18 +157,27 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_bond_1_1
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Bond::ParseTreePrinter Class Reference</div></div>
+  <div class="headertitle"><div class="title">Bond::ParseTreePrinter Class Reference<div class="ingroups"><a class="el" href="group__tools.html">Tools</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A printer for <a class="el" href="namespace_bond.html">Bond</a> parse trees.  
+ <a href="#details">More...</a></p>
 
 <p><code>#include &lt;bond/tools/parsetreeprinter.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a91a64b602f0e2dd218bf8eed1ea8f16c" id="r_a91a64b602f0e2dd218bf8eed1ea8f16c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a91a64b602f0e2dd218bf8eed1ea8f16c">Print</a> (const <a class="el" href="class_bond_1_1_parse_node.html">ParseNode</a> *parseNode, <a class="el" href="class_bond_1_1_output_stream.html">OutputStream</a> &amp;stream)</td></tr>
+<tr class="memdesc:a91a64b602f0e2dd218bf8eed1ea8f16c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a parse tree rooted at a single parse node.  <br /></td></tr>
 <tr class="memitem:a4226d2ec4fcfa4cc2966c82e3b44f609" id="r_a4226d2ec4fcfa4cc2966c82e3b44f609"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4226d2ec4fcfa4cc2966c82e3b44f609">PrintList</a> (const <a class="el" href="class_bond_1_1_list_parse_node.html">ListParseNode</a> *listNode, <a class="el" href="class_bond_1_1_output_stream.html">OutputStream</a> &amp;stream)</td></tr>
+<tr class="memdesc:a4226d2ec4fcfa4cc2966c82e3b44f609"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a parse tree represented as a list of parse nodes.  <br /></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A printer for <a class="el" href="namespace_bond.html">Bond</a> parse trees. </p>
+<p><a class="el" href="class_bond_1_1_parse_tree_printer.html" title="A printer for Bond parse trees.">ParseTreePrinter</a> writes a structural representation of parsed <a class="el" href="namespace_bond.html">Bond</a> source code to an <a class="el" href="class_bond_1_1_output_stream.html" title="An abstract interface for performing both unformatted and formatted output operations.">OutputStream</a>.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_bond_1_1_parse_node.html">ParseNode</a>, <a class="el" href="class_bond_1_1_list_parse_node.html">ListParseNode</a>, <a class="el" href="class_bond_1_1_output_stream.html" title="An abstract interface for performing both unformatted and formatted output operations.">OutputStream</a> </dd></dl>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a91a64b602f0e2dd218bf8eed1ea8f16c" name="a91a64b602f0e2dd218bf8eed1ea8f16c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a91a64b602f0e2dd218bf8eed1ea8f16c">&#9670;&#160;</a></span>Print()</h2>
 
@@ -187,6 +196,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Prints a parse tree rooted at a single parse node. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parseNode</td><td>Root parse node to print. </td></tr>
+    <tr><td class="paramname">stream</td><td>Output stream receiving the parse tree text. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -208,6 +226,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Prints a parse tree represented as a list of parse nodes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">listNode</td><td>Head of the parse node list to print. </td></tr>
+    <tr><td class="paramname">stream</td><td>Output stream receiving the parse tree text. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

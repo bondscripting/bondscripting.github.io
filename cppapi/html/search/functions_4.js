@@ -1,8 +1,8 @@
 var searchData=
 [
   ['element_0',['Element',['../class_bond_1_1_auto_stack_1_1_element.html#ae7ae4beb9f556920dfe5c387d18a0d75',1,'Bond::AutoStack::Element::Element(AutoStack &amp;stack)'],['../class_bond_1_1_auto_stack_1_1_element.html#a64d87856304e52c41ba9d6248131be5a',1,'Bond::AutoStack::Element::Element(AutoStack &amp;stack, Args &amp;&amp;... args)'],['../class_bond_1_1_auto_stack_1_1_element.html#acdac1ae97091d81327e2e3bf835783b8',1,'Bond::AutoStack::Element::Element(const Element &amp;other)=delete']]],
-  ['encodepointersize_1',['EncodePointerSize',['../namespace_bond.html#af1b3e1c6f78fbf6062f96995f18ec866',1,'Bond']]],
-  ['encodesizeandtype_2',['EncodeSizeAndType',['../namespace_bond.html#afa2d779ed8fdb43635864158610dcd18',1,'Bond']]],
+  ['encodepointersize_1',['EncodePointerSize',['../group__tools.html#gaf1b3e1c6f78fbf6062f96995f18ec866',1,'Bond']]],
+  ['encodesizeandtype_2',['EncodeSizeAndType',['../group__tools.html#gafa2d779ed8fdb43635864158610dcd18',1,'Bond']]],
   ['end_3',['end',['../class_bond_1_1_auto_stack.html#a5a23832bb6b33dfb78c340e1e5d03cc8',1,'Bond::AutoStack::end()'],['../class_bond_1_1_auto_stack.html#ac69e489ac6c50192e3e272383376409e',1,'Bond::AutoStack::end() const']]],
   ['enumdeclaration_4',['EnumDeclaration',['../class_bond_1_1_enum_declaration.html#a670b74ce569c5680361e0809e6651b5b',1,'Bond::EnumDeclaration']]],
   ['enumerator_5',['Enumerator',['../class_bond_1_1_enumerator.html#aabcf71540ad2bb6090536ed49d4be2dc',1,'Bond::Enumerator']]],

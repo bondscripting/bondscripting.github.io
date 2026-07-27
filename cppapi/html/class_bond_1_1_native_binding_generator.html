@@ -157,17 +157,25 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_bond_1_1
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Bond::NativeBindingGenerator Class Reference</div></div>
+  <div class="headertitle"><div class="title">Bond::NativeBindingGenerator Class Reference<div class="ingroups"><a class="el" href="group__tools.html">Tools</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A generator for C++ native binding declarations and definitions.  
+ <a href="#details">More...</a></p>
 
 <p><code>#include &lt;bond/tools/nativebindinggenerator.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a89dbc8560b35021fc3427bd6e3603494" id="r_a89dbc8560b35021fc3427bd6e3603494"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a89dbc8560b35021fc3427bd6e3603494">Generate</a> (const <a class="el" href="class_bond_1_1_translation_unit.html">TranslationUnit</a> *translationUnitList, <a class="el" href="class_bond_1_1_output_stream.html">OutputStream</a> &amp;cppStream, <a class="el" href="class_bond_1_1_output_stream.html">OutputStream</a> &amp;hStream, const char *collectionName, const char *includeName)</td></tr>
+<tr class="memdesc:a89dbc8560b35021fc3427bd6e3603494"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates C++ native binding source and header output.  <br /></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A generator for C++ native binding declarations and definitions. </p>
+<p>The <a class="el" href="class_bond_1_1_native_binding_generator.html" title="A generator for C++ native binding declarations and definitions.">NativeBindingGenerator</a> scans parsed <a class="el" href="namespace_bond.html">Bond</a> translation units and emits C++ binding glue that allows <a class="el" href="namespace_bond.html">Bond</a> code to call native functions.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_bond_1_1_translation_unit.html">TranslationUnit</a>, <a class="el" href="class_bond_1_1_output_stream.html" title="An abstract interface for performing both unformatted and formatted output operations.">OutputStream</a> </dd></dl>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a89dbc8560b35021fc3427bd6e3603494" name="a89dbc8560b35021fc3427bd6e3603494"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a89dbc8560b35021fc3427bd6e3603494">&#9670;&#160;</a></span>Generate()</h2>
 
@@ -201,6 +209,18 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Generates C++ native binding source and header output. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">translationUnitList</td><td>Linked list of translation units to scan for native declarations. </td></tr>
+    <tr><td class="paramname">cppStream</td><td>Output stream receiving generated C++ source definitions. </td></tr>
+    <tr><td class="paramname">hStream</td><td>Output stream receiving generated C++ header declarations. </td></tr>
+    <tr><td class="paramname">collectionName</td><td>Identifier of the generated native binding collection. </td></tr>
+    <tr><td class="paramname">includeName</td><td>Include path written into the generated C++ source file for the header. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

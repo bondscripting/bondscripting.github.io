@@ -157,9 +157,12 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_bond_1_1
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Bond::ParseNodeCounter Class Reference</div></div>
+  <div class="headertitle"><div class="title">Bond::ParseNodeCounter Class Reference<div class="ingroups"><a class="el" href="group__tools.html">Tools</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A parse tree traverser that counts encountered parse nodes.  
+ <a href="#details">More...</a></p>
 
 <p><code>#include &lt;bond/tools/parsenodecounter.h&gt;</code></p>
 <div class="dynheader">
@@ -175,12 +178,20 @@ Inheritance diagram for Bond::ParseNodeCounter:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3e56e4e7e8a6dc69e3db69778deafd07" id="r_a3e56e4e7e8a6dc69e3db69778deafd07"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a3e56e4e7e8a6dc69e3db69778deafd07">ParseNodeCounter</a> ()</td></tr>
+<tr class="memdesc:a3e56e4e7e8a6dc69e3db69778deafd07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_bond_1_1_parse_node_counter.html" title="A parse tree traverser that counts encountered parse nodes.">ParseNodeCounter</a> with all counters initialized to zero.  <br /></td></tr>
 <tr class="memitem:a1475b7ad060eaa45076c97eb42a81f65" id="r_a1475b7ad060eaa45076c97eb42a81f65"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#a1475b7ad060eaa45076c97eb42a81f65">~ParseNodeCounter</a> ()</td></tr>
 <tr class="memitem:ae0b8212f5426bf8f15393c676a45dc95" id="r_ae0b8212f5426bf8f15393c676a45dc95"><td class="memItemLeft">const <a class="el" href="struct_bond_1_1_parse_node_count.html">ParseNodeCount</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ae0b8212f5426bf8f15393c676a45dc95">GetCount</a> () const</td></tr>
+<tr class="memdesc:ae0b8212f5426bf8f15393c676a45dc95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current parse node counters.  <br /></td></tr>
 <tr class="memitem:a36bc35e19cd20865c03211b61c7eaf72" id="r_a36bc35e19cd20865c03211b61c7eaf72"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a36bc35e19cd20865c03211b61c7eaf72">Count</a> (const <a class="el" href="class_bond_1_1_parse_node.html">ParseNode</a> *parseNode)</td></tr>
+<tr class="memdesc:a36bc35e19cd20865c03211b61c7eaf72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Traverses a parse tree and accumulates node counts.  <br /></td></tr>
 <tr class="memitem:a7f6f56e6774cc6fccde4b183c2785723" id="r_a7f6f56e6774cc6fccde4b183c2785723"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7f6f56e6774cc6fccde4b183c2785723">CountList</a> (const <a class="el" href="class_bond_1_1_list_parse_node.html">ListParseNode</a> *listNode)</td></tr>
+<tr class="memdesc:a7f6f56e6774cc6fccde4b183c2785723"><td class="mdescLeft">&#160;</td><td class="mdescRight">Traverses a linked list of parse nodes and accumulates node counts.  <br /></td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A parse tree traverser that counts encountered parse nodes. </p>
+<p><a class="el" href="class_bond_1_1_parse_node_counter.html" title="A parse tree traverser that counts encountered parse nodes.">ParseNodeCounter</a> traverses parse trees and increments counters in <a class="el" href="struct_bond_1_1_parse_node_count.html" title="A set of counters for Bond parse node types.">ParseNodeCount</a> for each parse node type visited.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="struct_bond_1_1_parse_node_count.html" title="A set of counters for Bond parse node types.">ParseNodeCount</a>, <a class="el" href="class_bond_1_1_parse_node_traverser.html" title="A concrete implementation of ParseNodeVisitor that, in addition to visiting a ParseNode,...">ParseNodeTraverser</a> </dd></dl>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3e56e4e7e8a6dc69e3db69778deafd07" name="a3e56e4e7e8a6dc69e3db69778deafd07"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3e56e4e7e8a6dc69e3db69778deafd07">&#9670;&#160;</a></span>ParseNodeCounter()</h2>
 
@@ -203,6 +214,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="class_bond_1_1_parse_node_counter.html" title="A parse tree traverser that counts encountered parse nodes.">ParseNodeCounter</a> with all counters initialized to zero. </p>
 
 </div>
 </div>
@@ -255,6 +268,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Traverses a parse tree and accumulates node counts. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parseNode</td><td>Root parse node to traverse. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a7f6f56e6774cc6fccde4b183c2785723" name="a7f6f56e6774cc6fccde4b183c2785723"></a>
@@ -280,6 +301,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Traverses a linked list of parse nodes and accumulates node counts. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">listNode</td><td>Head of the parse node list to traverse. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ae0b8212f5426bf8f15393c676a45dc95" name="ae0b8212f5426bf8f15393c676a45dc95"></a>
@@ -304,6 +333,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the current parse node counters. </p>
+<dl class="section return"><dt>Returns</dt><dd>The accumulated <a class="el" href="struct_bond_1_1_parse_node_count.html" title="A set of counters for Bond parse node types.">ParseNodeCount</a> values. </dd></dl>
 
 </div>
 </div>

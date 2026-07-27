@@ -173,50 +173,76 @@ Inheritance diagram for Bond::StdioInputStream:</div>
   <map id="Bond_3A_3AStdioInputStream_map" name="Bond_3A_3AStdioInputStream_map">
 <area href="class_bond_1_1_input_stream.html" title="An abstract interface for performing both unformatted and formatted input operations." alt="Bond::InputStream" shape="rect" coords="0,56,141,80"/>
 <area href="class_bond_1_1_stream.html" title="A base interface for performing IO operations." alt="Bond::Stream" shape="rect" coords="0,0,141,24"/>
-<area href="class_bond_1_1_std_in_input_stream.html" alt="Bond::StdInInputStream" shape="rect" coords="0,168,141,192"/>
+<area href="class_bond_1_1_std_in_input_stream.html" title="A concrete implementation of StdioInputStream bound to stdin." alt="Bond::StdInInputStream" shape="rect" coords="0,168,141,192"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8676a9f3a821500f42c1ebc67b430e7e" id="r_a8676a9f3a821500f42c1ebc67b430e7e"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a8676a9f3a821500f42c1ebc67b430e7e">StdioInputStream</a> (FILE *file)</td></tr>
+<tr class="memdesc:a8676a9f3a821500f42c1ebc67b430e7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_bond_1_1_stdio_input_stream.html" title="A concrete implementation of InputStream that performs input operations from a stdio FILE*.">StdioInputStream</a> object.  <br /></td></tr>
 <tr class="memitem:a06992fd717ccafe223108b407a91aaea" id="r_a06992fd717ccafe223108b407a91aaea"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a06992fd717ccafe223108b407a91aaea">StdioInputStream</a> (const char *fileName)</td></tr>
+<tr class="memdesc:a06992fd717ccafe223108b407a91aaea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_bond_1_1_stdio_input_stream.html" title="A concrete implementation of InputStream that performs input operations from a stdio FILE*.">StdioInputStream</a> object.  <br /></td></tr>
 <tr class="memitem:a66bd5b0c87cbd9c4789402e6388f4288" id="r_a66bd5b0c87cbd9c4789402e6388f4288"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a66bd5b0c87cbd9c4789402e6388f4288">StdioInputStream</a> (<a class="el" href="class_bond_1_1_stdio_file_handle.html">StdioFileHandle</a> &amp;&amp;handle)</td></tr>
+<tr class="memdesc:a66bd5b0c87cbd9c4789402e6388f4288"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_bond_1_1_stdio_input_stream.html" title="A concrete implementation of InputStream that performs input operations from a stdio FILE*.">StdioInputStream</a> object.  <br /></td></tr>
 <tr class="memitem:a50f246188b09bcfc2665c48ce568b50a" id="r_a50f246188b09bcfc2665c48ce568b50a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a50f246188b09bcfc2665c48ce568b50a">StdioInputStream</a> (StdioInputStream &amp;&amp;other)</td></tr>
+<tr class="memdesc:a50f246188b09bcfc2665c48ce568b50a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move-constructs a <a class="el" href="class_bond_1_1_stdio_input_stream.html" title="A concrete implementation of InputStream that performs input operations from a stdio FILE*.">StdioInputStream</a> object.  <br /></td></tr>
 <tr class="memitem:a890b5f1d13eed5db6183d23f4ec8ce5f" id="r_a890b5f1d13eed5db6183d23f4ec8ce5f"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#a890b5f1d13eed5db6183d23f4ec8ce5f">~StdioInputStream</a> ()</td></tr>
 <tr class="memitem:a1080d48b74da19cdca0ca42701bb6d94" id="r_a1080d48b74da19cdca0ca42701bb6d94"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a1080d48b74da19cdca0ca42701bb6d94">StdioInputStream</a> (const StdioInputStream &amp;other)=delete</td></tr>
 <tr class="memitem:a6844c1b983edcdf46f4a485659e70700" id="r_a6844c1b983edcdf46f4a485659e70700"><td class="memItemLeft"><a class="el" href="#a8676a9f3a821500f42c1ebc67b430e7e">StdioInputStream</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a6844c1b983edcdf46f4a485659e70700">operator=</a> (const <a class="el" href="#a8676a9f3a821500f42c1ebc67b430e7e">StdioInputStream</a> &amp;other)=delete</td></tr>
 <tr class="memitem:a8f33d12cc3fcfc3078cda25eca3565ac" id="r_a8f33d12cc3fcfc3078cda25eca3565ac"><td class="memItemLeft"><a class="el" href="#a8676a9f3a821500f42c1ebc67b430e7e">StdioInputStream</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a8f33d12cc3fcfc3078cda25eca3565ac">operator=</a> (<a class="el" href="#a8676a9f3a821500f42c1ebc67b430e7e">StdioInputStream</a> &amp;&amp;other)</td></tr>
 <tr class="memitem:a2adefdd5a78ece3a86225bbcb29be7df" id="r_a2adefdd5a78ece3a86225bbcb29be7df"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a2adefdd5a78ece3a86225bbcb29be7df">IsBound</a> () const</td></tr>
+<tr class="memdesc:a2adefdd5a78ece3a86225bbcb29be7df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests whether this stream is currently bound to a FILE object.  <br /></td></tr>
 <tr class="memitem:a807a5f41a4994ef05822d23e5707e840" id="r_a807a5f41a4994ef05822d23e5707e840"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a807a5f41a4994ef05822d23e5707e840">Close</a> () override</td></tr>
+<tr class="memdesc:a807a5f41a4994ef05822d23e5707e840"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the stream.  <br /></td></tr>
 <tr class="memitem:a9c4776b8bd94e1ac73a6188df3f246c8" id="r_a9c4776b8bd94e1ac73a6188df3f246c8"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a9c4776b8bd94e1ac73a6188df3f246c8">VScan</a> (const char *format, va_list argList) override</td></tr>
+<tr class="memdesc:a9c4776b8bd94e1ac73a6188df3f246c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads formatted input from the stream using a variable argument list.  <br /></td></tr>
 <tr class="memitem:a7aaf67fa0a564948cbc80c9a91a9e652" id="r_a7aaf67fa0a564948cbc80c9a91a9e652"><td class="memItemLeft">virtual size_t&#160;</td><td class="memItemRight"><a class="el" href="#a7aaf67fa0a564948cbc80c9a91a9e652">Read</a> (uint8_t *bytes, size_t numBytes) override</td></tr>
+<tr class="memdesc:a7aaf67fa0a564948cbc80c9a91a9e652"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a sequence of bytes from the stream.  <br /></td></tr>
 <tr class="memitem:a977b35c606aae8cfc5918416242a9b73" id="r_a977b35c606aae8cfc5918416242a9b73"><td class="memItemLeft">virtual int&#160;</td><td class="memItemRight"><a class="el" href="#a977b35c606aae8cfc5918416242a9b73">Read</a> () override</td></tr>
+<tr class="memdesc:a977b35c606aae8cfc5918416242a9b73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a single byte from the stream.  <br /></td></tr>
 <tr class="memitem:a03be47159b9b4eabe29c4678166101da" id="r_a03be47159b9b4eabe29c4678166101da"><td class="memItemLeft">virtual <a class="el" href="class_bond_1_1_stream.html#a489b6b37c5ef8c0101dbee13bb83acd7">pos_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a03be47159b9b4eabe29c4678166101da">GetPosition</a> () const override</td></tr>
+<tr class="memdesc:a03be47159b9b4eabe29c4678166101da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current position within the stream.  <br /></td></tr>
 <tr class="memitem:affdf55d8097cd10feeb853e6af4eec7c" id="r_affdf55d8097cd10feeb853e6af4eec7c"><td class="memItemLeft">virtual <a class="el" href="class_bond_1_1_stream.html#a489b6b37c5ef8c0101dbee13bb83acd7">pos_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#affdf55d8097cd10feeb853e6af4eec7c">GetEndPosition</a> () const override</td></tr>
+<tr class="memdesc:affdf55d8097cd10feeb853e6af4eec7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the end position of the stream.  <br /></td></tr>
 <tr class="memitem:a21ce2dd85fbd19bb2b272bab8fc89dd2" id="r_a21ce2dd85fbd19bb2b272bab8fc89dd2"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a21ce2dd85fbd19bb2b272bab8fc89dd2">SetPosition</a> (<a class="el" href="class_bond_1_1_stream.html#a6314350315fb68539f436be332b8419d">off_t</a> offset) override</td></tr>
+<tr class="memdesc:a21ce2dd85fbd19bb2b272bab8fc89dd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current position within the stream.  <br /></td></tr>
 <tr class="memitem:a55fa17cbe5681116f03dac43e5610348" id="r_a55fa17cbe5681116f03dac43e5610348"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a55fa17cbe5681116f03dac43e5610348">SetPositionFromEnd</a> (<a class="el" href="class_bond_1_1_stream.html#a6314350315fb68539f436be332b8419d">off_t</a> offset) override</td></tr>
+<tr class="memdesc:a55fa17cbe5681116f03dac43e5610348"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current position relative to the end of the stream.  <br /></td></tr>
 <tr class="memitem:aa9e47d9941dd15f77bc618af46bb62fd" id="r_aa9e47d9941dd15f77bc618af46bb62fd"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aa9e47d9941dd15f77bc618af46bb62fd">AddOffset</a> (<a class="el" href="class_bond_1_1_stream.html#a6314350315fb68539f436be332b8419d">off_t</a> offset) override</td></tr>
+<tr class="memdesc:aa9e47d9941dd15f77bc618af46bb62fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advances the current position by the given offset.  <br /></td></tr>
 <tr class="memitem:aacc72dd7ad2cae307dfc82f291d536ba" id="r_aacc72dd7ad2cae307dfc82f291d536ba"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#aacc72dd7ad2cae307dfc82f291d536ba">IsEof</a> () const override</td></tr>
+<tr class="memdesc:aacc72dd7ad2cae307dfc82f291d536ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests whether the current position is at or beyond the end of the stream.  <br /></td></tr>
 <tr class="memitem:a0a7c2f274d8e0642f4c539c647b32fa1" id="r_a0a7c2f274d8e0642f4c539c647b32fa1"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a0a7c2f274d8e0642f4c539c647b32fa1">HasError</a> () const override</td></tr>
+<tr class="memdesc:a0a7c2f274d8e0642f4c539c647b32fa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests whether the stream is currently in an error state.  <br /></td></tr>
 <tr class="memitem:a97fd71b8e29cdc5361d8f3b9d12ca0fe" id="r_a97fd71b8e29cdc5361d8f3b9d12ca0fe"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a97fd71b8e29cdc5361d8f3b9d12ca0fe">ClearError</a> () override</td></tr>
+<tr class="memdesc:a97fd71b8e29cdc5361d8f3b9d12ca0fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the current error state of the stream.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_bond_1_1_input_stream"><td colspan="2">Public Member Functions inherited from <a class="el" href="class_bond_1_1_input_stream.html">Bond::InputStream</a></td></tr>
 <tr class="memitem:a9463811973236acbf3f07a642da03649 pub_methods_class_bond_1_1_input_stream" id="r_a9463811973236acbf3f07a642da03649"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_input_stream.html#a9463811973236acbf3f07a642da03649">~InputStream</a> ()</td></tr>
+<tr class="memdesc:a9463811973236acbf3f07a642da03649 pub_methods_class_bond_1_1_input_stream"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys an <a class="el" href="class_bond_1_1_input_stream.html" title="An abstract interface for performing both unformatted and formatted input operations.">InputStream</a> object.  <br /></td></tr>
 <tr class="memitem:a37123879cbaa867d975653221a9e6d4f pub_methods_class_bond_1_1_input_stream" id="r_a37123879cbaa867d975653221a9e6d4f"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_input_stream.html#a37123879cbaa867d975653221a9e6d4f">Scan</a> (const char *format,...)</td></tr>
+<tr class="memdesc:a37123879cbaa867d975653221a9e6d4f pub_methods_class_bond_1_1_input_stream"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads formatted input from the stream.  <br /></td></tr>
 <tr class="memitem:a685b3338bb49beeed21f7b0581584d0f pub_methods_class_bond_1_1_input_stream" id="r_a685b3338bb49beeed21f7b0581584d0f"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_input_stream.html#a685b3338bb49beeed21f7b0581584d0f">Read</a> (char *bytes, size_t numBytes)</td></tr>
+<tr class="memdesc:a685b3338bb49beeed21f7b0581584d0f pub_methods_class_bond_1_1_input_stream"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a sequence of bytes from the stream into a character buffer.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_bond_1_1_stream"><td colspan="2">Public Member Functions inherited from <a class="el" href="class_bond_1_1_stream.html">Bond::Stream</a></td></tr>
 <tr class="memitem:a655ad666aaf7d5771d4fb4f2f4a84e3c pub_methods_class_bond_1_1_stream" id="r_a655ad666aaf7d5771d4fb4f2f4a84e3c"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_stream.html#a655ad666aaf7d5771d4fb4f2f4a84e3c">~Stream</a> ()</td></tr>
+<tr class="memdesc:a655ad666aaf7d5771d4fb4f2f4a84e3c pub_methods_class_bond_1_1_stream"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys a <a class="el" href="class_bond_1_1_stream.html" title="A base interface for performing IO operations.">Stream</a> object.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_types_class_bond_1_1_stream"><td colspan="2">Public Types inherited from <a class="el" href="class_bond_1_1_stream.html">Bond::Stream</a></td></tr>
 <tr class="memitem:a489b6b37c5ef8c0101dbee13bb83acd7 pub_types_class_bond_1_1_stream" id="r_a489b6b37c5ef8c0101dbee13bb83acd7"><td class="memItemLeft">typedef long&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_stream.html#a489b6b37c5ef8c0101dbee13bb83acd7">pos_t</a></td></tr>
+<tr class="memdesc:a489b6b37c5ef8c0101dbee13bb83acd7 pub_types_class_bond_1_1_stream"><td class="mdescLeft">&#160;</td><td class="mdescRight">A type used to represent absolute positions within a stream.  <br /></td></tr>
 <tr class="memitem:a6314350315fb68539f436be332b8419d pub_types_class_bond_1_1_stream" id="r_a6314350315fb68539f436be332b8419d"><td class="memItemLeft">typedef long&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_stream.html#a6314350315fb68539f436be332b8419d">off_t</a></td></tr>
+<tr class="memdesc:a6314350315fb68539f436be332b8419d pub_types_class_bond_1_1_stream"><td class="mdescLeft">&#160;</td><td class="mdescRight">A type used to represent relative offsets within a stream.  <br /></td></tr>
 <tr class="inherit_header pub_static_attribs_class_bond_1_1_stream"><td colspan="2">Static Public Attributes inherited from <a class="el" href="class_bond_1_1_stream.html">Bond::Stream</a></td></tr>
 <tr class="memitem:a34e5305e69fc9e7f8c946cf05cbf4cfb pub_static_attribs_class_bond_1_1_stream" id="r_a34e5305e69fc9e7f8c946cf05cbf4cfb"><td class="memItemLeft">static const int&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_stream.html#a34e5305e69fc9e7f8c946cf05cbf4cfb">Eof</a> = -1</td></tr>
+<tr class="memdesc:a34e5305e69fc9e7f8c946cf05cbf4cfb pub_static_attribs_class_bond_1_1_stream"><td class="mdescLeft">&#160;</td><td class="mdescRight">A special value returned by single-byte input functions to indicate end of stream.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A concrete implementation of <a class="el" href="class_bond_1_1_input_stream.html" title="An abstract interface for performing both unformatted and formatted input operations.">InputStream</a> that performs input operations from a stdio FILE*. </p>
+<p><a class="el" href="class_bond_1_1_stdio_input_stream.html" title="A concrete implementation of InputStream that performs input operations from a stdio FILE*.">StdioInputStream</a> adapts a C stdio FILE object to the <a class="el" href="class_bond_1_1_input_stream.html" title="An abstract interface for performing both unformatted and formatted input operations.">InputStream</a> interface. The stream may be bound either to an existing FILE pointer or to a file opened and owned through a <a class="el" href="class_bond_1_1_stdio_file_handle.html" title="A handle to a stdio FILE* to ensure that the file is properly disposed using RAII.">StdioFileHandle</a>.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_bond_1_1_input_stream.html" title="An abstract interface for performing both unformatted and formatted input operations.">InputStream</a>, <a class="el" href="class_bond_1_1_stdio_output_stream.html" title="A concrete implementation of OutputStream that performs output operations to a stdio FILE*.">StdioOutputStream</a> </dd></dl>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8676a9f3a821500f42c1ebc67b430e7e" name="a8676a9f3a821500f42c1ebc67b430e7e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8676a9f3a821500f42c1ebc67b430e7e">&#9670;&#160;</a></span>StdioInputStream() <span class="overload">[1/5]</span></h2>
@@ -240,6 +266,14 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="class_bond_1_1_stdio_input_stream.html" title="A concrete implementation of InputStream that performs input operations from a stdio FILE*.">StdioInputStream</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>The stdio FILE object from which input will be read. The file is not owned by the <a class="el" href="class_bond_1_1_stdio_input_stream.html" title="A concrete implementation of InputStream that performs input operations from a stdio FILE*.">StdioInputStream</a> unless it is later replaced by an owning handle. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -266,6 +300,14 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Constructs a <a class="el" href="class_bond_1_1_stdio_input_stream.html" title="A concrete implementation of InputStream that performs input operations from a stdio FILE*.">StdioInputStream</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileName</td><td>The name of the file to open for reading. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a66bd5b0c87cbd9c4789402e6388f4288" name="a66bd5b0c87cbd9c4789402e6388f4288"></a>
@@ -291,6 +333,14 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Constructs a <a class="el" href="class_bond_1_1_stdio_input_stream.html" title="A concrete implementation of InputStream that performs input operations from a stdio FILE*.">StdioInputStream</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>An owning file handle whose FILE object will be used for input operations. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a50f246188b09bcfc2665c48ce568b50a" name="a50f246188b09bcfc2665c48ce568b50a"></a>
@@ -315,6 +365,14 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Move-constructs a <a class="el" href="class_bond_1_1_stdio_input_stream.html" title="A concrete implementation of InputStream that performs input operations from a stdio FILE*.">StdioInputStream</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The <a class="el" href="class_bond_1_1_stdio_input_stream.html" title="A concrete implementation of InputStream that performs input operations from a stdio FILE*.">StdioInputStream</a> object from which resources will be moved. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -392,6 +450,14 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Advances the current position by the given offset. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">offset</td><td>The signed amount by which the current position should be adjusted. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Implements <a class="el" href="class_bond_1_1_stream.html#a792ecc29f09dd22a4136d42ca1cd31a9">Bond::Stream</a>.</p>
 
 </div>
@@ -418,6 +484,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Clears the current error state of the stream. </p>
 
 <p>Implements <a class="el" href="class_bond_1_1_stream.html#a7be46eaad9e3ad1223dd74c80e575dd7">Bond::Stream</a>.</p>
 
@@ -446,6 +514,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Closes the stream. </p>
+<p>The default implementation does nothing. Concrete stream implementations may override this function to release owned resources or detach from the underlying data source or sink. </p>
+
 <p>Reimplemented from <a class="el" href="class_bond_1_1_stream.html#a982f9804fba2e4c07a8c0677e7e8cc6a">Bond::Stream</a>.</p>
 
 </div>
@@ -472,6 +543,9 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the end position of the stream. </p>
+<dl class="section return"><dt>Returns</dt><dd>The absolute position one past the last byte in the stream. </dd></dl>
 
 <p>Implements <a class="el" href="class_bond_1_1_stream.html#a1000cdc7765b7c33a2e4ed9273fb0e8e">Bond::Stream</a>.</p>
 
@@ -500,6 +574,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the current position within the stream. </p>
+<dl class="section return"><dt>Returns</dt><dd>The current absolute stream position. </dd></dl>
+
 <p>Implements <a class="el" href="class_bond_1_1_stream.html#a9c5b7b959d9bbae2697481e9e160d6af">Bond::Stream</a>.</p>
 
 </div>
@@ -526,6 +603,9 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Tests whether the stream is currently in an error state. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if an error has occurred on the underlying stream. </dd></dl>
 
 <p>Implements <a class="el" href="class_bond_1_1_stream.html#a7dd39d528d8d3dae47635e10da8cfb77">Bond::Stream</a>.</p>
 
@@ -554,6 +634,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Tests whether this stream is currently bound to a FILE object. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if this stream is bound to a FILE object. </dd></dl>
+
 </div>
 </div>
 <a id="aacc72dd7ad2cae307dfc82f291d536ba" name="aacc72dd7ad2cae307dfc82f291d536ba"></a>
@@ -578,6 +661,9 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Tests whether the current position is at or beyond the end of the stream. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if no more data can be read or written at the current position. </dd></dl>
 
 <p>Implements <a class="el" href="class_bond_1_1_stream.html#ac8fcd71aa49b1ad2370a435c435c6344">Bond::Stream</a>.</p>
 
@@ -648,6 +734,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Reads a single byte from the stream. </p>
+<dl class="section return"><dt>Returns</dt><dd>The next byte in the stream, or <a class="el" href="class_bond_1_1_stream.html#a34e5305e69fc9e7f8c946cf05cbf4cfb" title="A special value returned by single-byte input functions to indicate end of stream.">Stream::Eof</a> if the end of the stream is reached. </dd></dl>
+
 <p>Implements <a class="el" href="class_bond_1_1_input_stream.html#a558de5cdf47d15b87dd95d1190688f3f">Bond::InputStream</a>.</p>
 
 </div>
@@ -679,6 +768,16 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Reads a sequence of bytes from the stream. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bytes</td><td>The destination buffer where the bytes will be written. </td></tr>
+    <tr><td class="paramname">numBytes</td><td>The maximum number of bytes to read. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of bytes actually read from the stream. </dd></dl>
+
 <p>Reimplemented from <a class="el" href="class_bond_1_1_input_stream.html#af7b215ecc1d113cea45c5c4a11c775a2">Bond::InputStream</a>.</p>
 
 </div>
@@ -706,6 +805,14 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sets the current position within the stream. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">offset</td><td>The absolute position to which the stream should be moved. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Implements <a class="el" href="class_bond_1_1_stream.html#abc8c5408aaae3ffe731bc6e4f4414d36">Bond::Stream</a>.</p>
 
 </div>
@@ -732,6 +839,14 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Sets the current position relative to the end of the stream. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">offset</td><td>The offset from the end position to which the stream should be moved. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="class_bond_1_1_stream.html#ac8b7ccb707a2e8ea06f12f8fbcfa2748">Bond::Stream</a>.</p>
 
@@ -763,6 +878,15 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Reads formatted input from the stream using a variable argument list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>A scanf-style format string describing the values to be read. </td></tr>
+    <tr><td class="paramname">argList</td><td>A variable argument list containing pointers to storage for the parsed values. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="class_bond_1_1_input_stream.html#af635f7445e7f02e4b7dd70b1ab116a91">Bond::InputStream</a>.</p>
 

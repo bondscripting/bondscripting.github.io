@@ -169,16 +169,29 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_bond_1_1
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa7f92317d81a19d195b37ceba279f724" id="r_aa7f92317d81a19d195b37ceba279f724"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa7f92317d81a19d195b37ceba279f724">StdioFileHandle</a> ()</td></tr>
+<tr class="memdesc:aa7f92317d81a19d195b37ceba279f724"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an empty handle that is not bound to a file.  <br /></td></tr>
 <tr class="memitem:a8345ee7f92a7a5486e2f8f56ef4ae09c" id="r_a8345ee7f92a7a5486e2f8f56ef4ae09c"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a8345ee7f92a7a5486e2f8f56ef4ae09c">StdioFileHandle</a> (FILE *file)</td></tr>
+<tr class="memdesc:a8345ee7f92a7a5486e2f8f56ef4ae09c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a handle that takes ownership of the given FILE pointer.  <br /></td></tr>
 <tr class="memitem:aa8f82c2e0c7574a55f77a2b56155aefd" id="r_aa8f82c2e0c7574a55f77a2b56155aefd"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa8f82c2e0c7574a55f77a2b56155aefd">StdioFileHandle</a> (const char *fileName, const char *mode)</td></tr>
-<tr class="memitem:a298dd2ecba1c2cf29e442f6f3413d809" id="r_a298dd2ecba1c2cf29e442f6f3413d809"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a298dd2ecba1c2cf29e442f6f3413d809">StdioFileHandle</a> (StdioFileHandle &amp;&amp;other)</td></tr>
+<tr class="memdesc:aa8f82c2e0c7574a55f77a2b56155aefd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens a file and constructs a handle that owns the resulting FILE pointer.  <br /></td></tr>
+<tr class="memitem:a417f7e99afbcdac3e8197cc349534730" id="r_a417f7e99afbcdac3e8197cc349534730"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a417f7e99afbcdac3e8197cc349534730">StdioFileHandle</a> (StdioFileHandle &amp;&amp;other) noexcept</td></tr>
+<tr class="memdesc:a417f7e99afbcdac3e8197cc349534730"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move-constructs a handle by transferring ownership from another handle.  <br /></td></tr>
 <tr class="memitem:a40b82172d16c145e31faf587dce4aa2e" id="r_a40b82172d16c145e31faf587dce4aa2e"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a40b82172d16c145e31faf587dce4aa2e">~StdioFileHandle</a> ()</td></tr>
-<tr class="memitem:af16f8c9e2d3c20f2ef1a3616bf169de2" id="r_af16f8c9e2d3c20f2ef1a3616bf169de2"><td class="memItemLeft"><a class="el" href="#aa7f92317d81a19d195b37ceba279f724">StdioFileHandle</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#af16f8c9e2d3c20f2ef1a3616bf169de2">operator=</a> (<a class="el" href="#aa7f92317d81a19d195b37ceba279f724">StdioFileHandle</a> &amp;&amp;other)</td></tr>
+<tr class="memdesc:a40b82172d16c145e31faf587dce4aa2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the handle and closes the owned file, if any.  <br /></td></tr>
+<tr class="memitem:a33b2fffb3e2803bac1066495516e15fc" id="r_a33b2fffb3e2803bac1066495516e15fc"><td class="memItemLeft"><a class="el" href="#aa7f92317d81a19d195b37ceba279f724">StdioFileHandle</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a33b2fffb3e2803bac1066495516e15fc">operator=</a> (<a class="el" href="#aa7f92317d81a19d195b37ceba279f724">StdioFileHandle</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="memdesc:a33b2fffb3e2803bac1066495516e15fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move-assigns by closing any currently owned file and taking ownership from another handle.  <br /></td></tr>
 <tr class="memitem:a59dff11ddfa25693f424a87f15ed43f6" id="r_a59dff11ddfa25693f424a87f15ed43f6"><td class="memItemLeft"><a class="el" href="#aa7f92317d81a19d195b37ceba279f724">StdioFileHandle</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a59dff11ddfa25693f424a87f15ed43f6">operator=</a> (FILE *file)</td></tr>
+<tr class="memdesc:a59dff11ddfa25693f424a87f15ed43f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rebinds the handle to the given FILE pointer.  <br /></td></tr>
 <tr class="memitem:ad91d77c2cfd4ea6810db91b6f48e25fb" id="r_ad91d77c2cfd4ea6810db91b6f48e25fb"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ad91d77c2cfd4ea6810db91b6f48e25fb">StdioFileHandle</a> (const StdioFileHandle &amp;other)=delete</td></tr>
 <tr class="memitem:ae0d9c5092a72e73e5843b93d3be5b823" id="r_ae0d9c5092a72e73e5843b93d3be5b823"><td class="memItemLeft"><a class="el" href="#aa7f92317d81a19d195b37ceba279f724">StdioFileHandle</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ae0d9c5092a72e73e5843b93d3be5b823">operator=</a> (const <a class="el" href="#aa7f92317d81a19d195b37ceba279f724">StdioFileHandle</a> &amp;other)=delete</td></tr>
-<tr class="memitem:a05efa8abd60da5553ec10657ddb13e92" id="r_a05efa8abd60da5553ec10657ddb13e92"><td class="memItemLeft">FILE *&#160;</td><td class="memItemRight"><a class="el" href="#a05efa8abd60da5553ec10657ddb13e92">GetFile</a> ()</td></tr>
+<tr class="memitem:ab124bc0f499483c4968f04b563c795e7" id="r_ab124bc0f499483c4968f04b563c795e7"><td class="memItemLeft">FILE *&#160;</td><td class="memItemRight"><a class="el" href="#ab124bc0f499483c4968f04b563c795e7">GetFile</a> () const</td></tr>
+<tr class="memdesc:ab124bc0f499483c4968f04b563c795e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the currently owned FILE pointer.  <br /></td></tr>
+<tr class="memitem:a7ed5fd3a25677e0ee2f9ab8477f100f1" id="r_a7ed5fd3a25677e0ee2f9ab8477f100f1"><td class="memItemLeft">FILE *&#160;</td><td class="memItemRight"><a class="el" href="#a7ed5fd3a25677e0ee2f9ab8477f100f1">Release</a> ()</td></tr>
+<tr class="memdesc:a7ed5fd3a25677e0ee2f9ab8477f100f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases ownership of the current FILE pointer without closing it.  <br /></td></tr>
+<tr class="memitem:a4c31098042c95d83cf414079aefff772" id="r_a4c31098042c95d83cf414079aefff772"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4c31098042c95d83cf414079aefff772">Reset</a> (FILE *file=nullptr)</td></tr>
+<tr class="memdesc:a4c31098042c95d83cf414079aefff772"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces the owned FILE pointer, closing the previously owned file if needed.  <br /></td></tr>
 <tr class="memitem:ae4932cd8c3c674cda6546c9f7e637ade" id="r_ae4932cd8c3c674cda6546c9f7e637ade"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ae4932cd8c3c674cda6546c9f7e637ade">IsBound</a> () const</td></tr>
+<tr class="memdesc:ae4932cd8c3c674cda6546c9f7e637ade"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether this handle currently owns a FILE pointer.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A handle to a stdio FILE* to ensure that the file is properly disposed using RAII. </p>
@@ -206,6 +219,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Constructs an empty handle that is not bound to a file. </p>
+
 </div>
 </div>
 <a id="a8345ee7f92a7a5486e2f8f56ef4ae09c" name="a8345ee7f92a7a5486e2f8f56ef4ae09c"></a>
@@ -230,6 +245,14 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Constructs a handle that takes ownership of the given FILE pointer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>Pointer to an open FILE object to be owned by this handle. May be null. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -260,10 +283,20 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Opens a file and constructs a handle that owns the resulting FILE pointer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileName</td><td>The path to the file to open. </td></tr>
+    <tr><td class="paramname">mode</td><td>The fopen mode string used to open the file. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section remark"><dt>Remarks</dt><dd>If fopen fails, the handle remains unbound. </dd></dl>
+
 </div>
 </div>
-<a id="a298dd2ecba1c2cf29e442f6f3413d809" name="a298dd2ecba1c2cf29e442f6f3413d809"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a298dd2ecba1c2cf29e442f6f3413d809">&#9670;&#160;</a></span>StdioFileHandle() <span class="overload">[4/5]</span></h2>
+<a id="a417f7e99afbcdac3e8197cc349534730" name="a417f7e99afbcdac3e8197cc349534730"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a417f7e99afbcdac3e8197cc349534730">&#9670;&#160;</a></span>StdioFileHandle() <span class="overload">[4/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -280,10 +313,19 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Move-constructs a handle by transferring ownership from another handle. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>Source handle whose ownership is transferred. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section remark"><dt>Remarks</dt><dd>After construction, other is left unbound. </dd></dl>
 
 </div>
 </div>
@@ -309,6 +351,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Destroys the handle and closes the owned file, if any. </p>
 
 </div>
 </div>
@@ -338,8 +382,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a05efa8abd60da5553ec10657ddb13e92" name="a05efa8abd60da5553ec10657ddb13e92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a05efa8abd60da5553ec10657ddb13e92">&#9670;&#160;</a></span>GetFile()</h2>
+<a id="ab124bc0f499483c4968f04b563c795e7" name="ab124bc0f499483c4968f04b563c795e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab124bc0f499483c4968f04b563c795e7">&#9670;&#160;</a></span>GetFile()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -351,7 +395,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">FILE * Bond::StdioFileHandle::GetFile </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -360,6 +404,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the currently owned FILE pointer. </p>
+<dl class="section return"><dt>Returns</dt><dd>The owned FILE pointer, or null if no file is bound. </dd></dl>
 
 </div>
 </div>
@@ -385,6 +432,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Indicates whether this handle currently owns a FILE pointer. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if a file is bound; otherwise false. </dd></dl>
 
 </div>
 </div>
@@ -436,10 +486,20 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Rebinds the handle to the given FILE pointer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>Pointer to an open FILE object to be owned by this handle. May be null. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to this handle. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Any previously owned file is closed first, unless file equals the currently owned pointer. </dd></dl>
+
 </div>
 </div>
-<a id="af16f8c9e2d3c20f2ef1a3616bf169de2" name="af16f8c9e2d3c20f2ef1a3616bf169de2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af16f8c9e2d3c20f2ef1a3616bf169de2">&#9670;&#160;</a></span>operator=() <span class="overload">[3/3]</span></h2>
+<a id="a33b2fffb3e2803bac1066495516e15fc" name="a33b2fffb3e2803bac1066495516e15fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33b2fffb3e2803bac1066495516e15fc">&#9670;&#160;</a></span>operator=() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -456,10 +516,83 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move-assigns by closing any currently owned file and taking ownership from another handle. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>Source handle whose ownership is transferred. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to this handle. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>After assignment, other is left unbound. </dd></dl>
+
+</div>
+</div>
+<a id="a7ed5fd3a25677e0ee2f9ab8477f100f1" name="a7ed5fd3a25677e0ee2f9ab8477f100f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ed5fd3a25677e0ee2f9ab8477f100f1">&#9670;&#160;</a></span>Release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FILE * Bond::StdioFileHandle::Release </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Releases ownership of the current FILE pointer without closing it. </p>
+<dl class="section return"><dt>Returns</dt><dd>The previously owned FILE pointer, or null if no file is bound. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>After this call, the handle is unbound and will not close the returned pointer. </dd></dl>
+
+</div>
+</div>
+<a id="a4c31098042c95d83cf414079aefff772" name="a4c31098042c95d83cf414079aefff772"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c31098042c95d83cf414079aefff772">&#9670;&#160;</a></span>Reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Bond::StdioFileHandle::Reset </td>
+          <td>(</td>
+          <td class="paramtype">FILE *</td>          <td class="paramname"><span class="paramname"><em>file</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Replaces the owned FILE pointer, closing the previously owned file if needed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>New FILE pointer to own. Defaults to null, which simply unbinds the handle. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section remark"><dt>Remarks</dt><dd>If file equals the currently owned pointer, no close is performed. </dd></dl>
 
 </div>
 </div>

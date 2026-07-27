@@ -157,21 +157,31 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_bond_1_1
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Bond::Disassembler Class Reference</div></div>
+  <div class="headertitle"><div class="title">Bond::Disassembler Class Reference<div class="ingroups"><a class="el" href="group__tools.html">Tools</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A disassembler for <a class="el" href="namespace_bond.html">Bond</a> bytecode and CBO streams.  
+ <a href="#details">More...</a></p>
 
 <p><code>#include &lt;bond/tools/disassembler.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae8816b32366a16afde4ef05abb7ef386" id="r_ae8816b32366a16afde4ef05abb7ef386"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ae8816b32366a16afde4ef05abb7ef386">Disassembler</a> (<a class="el" href="class_bond_1_1_allocator.html">Allocator</a> &amp;allocator)</td></tr>
+<tr class="memdesc:ae8816b32366a16afde4ef05abb7ef386"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_bond_1_1_disassembler.html" title="A disassembler for Bond bytecode and CBO streams.">Disassembler</a> object.  <br /></td></tr>
 <tr class="memitem:aadb8c265febab84f1c674c8304b119fd" id="r_aadb8c265febab84f1c674c8304b119fd"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aadb8c265febab84f1c674c8304b119fd">~Disassembler</a> ()</td></tr>
 <tr class="memitem:a81ce78f48b74ec9aa36693443639fbb0" id="r_a81ce78f48b74ec9aa36693443639fbb0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a81ce78f48b74ec9aa36693443639fbb0">Disassemble</a> (const void *byteCode, size_t length, <a class="el" href="class_bond_1_1_output_stream.html">OutputStream</a> &amp;outputStream)</td></tr>
+<tr class="memdesc:a81ce78f48b74ec9aa36693443639fbb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decodes the given bytecode buffer and writes disassembled output.  <br /></td></tr>
 <tr class="memitem:ae13479fff30f7f049a30696400fc4dad" id="r_ae13479fff30f7f049a30696400fc4dad"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae13479fff30f7f049a30696400fc4dad">Disassemble</a> (<a class="el" href="class_bond_1_1_input_stream.html">InputStream</a> &amp;cboStream, <a class="el" href="class_bond_1_1_output_stream.html">OutputStream</a> &amp;outputStream)</td></tr>
+<tr class="memdesc:ae13479fff30f7f049a30696400fc4dad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads bytecode from the given CBO stream and writes disassembled output.  <br /></td></tr>
 <tr class="memitem:a0c780b46a6c06c4ab5ddda93fc01805b" id="r_a0c780b46a6c06c4ab5ddda93fc01805b"><td class="memItemLeft"><a class="el" href="#ae8816b32366a16afde4ef05abb7ef386">Disassembler</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a0c780b46a6c06c4ab5ddda93fc01805b">operator=</a> (const <a class="el" href="#ae8816b32366a16afde4ef05abb7ef386">Disassembler</a> &amp;other)=delete</td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A disassembler for <a class="el" href="namespace_bond.html">Bond</a> bytecode and CBO streams. </p>
+<p>The <a class="el" href="class_bond_1_1_disassembler.html" title="A disassembler for Bond bytecode and CBO streams.">Disassembler</a> decodes <a class="el" href="namespace_bond.html">Bond</a> bytecode and writes a human-readable representation to an <a class="el" href="class_bond_1_1_output_stream.html" title="An abstract interface for performing both unformatted and formatted output operations.">OutputStream</a>. A single <a class="el" href="class_bond_1_1_disassembler.html" title="A disassembler for Bond bytecode and CBO streams.">Disassembler</a> can be reused to disassemble many bytecode buffers or CBO streams.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_bond_1_1_input_stream.html" title="An abstract interface for performing both unformatted and formatted input operations.">InputStream</a>, <a class="el" href="class_bond_1_1_output_stream.html" title="An abstract interface for performing both unformatted and formatted output operations.">OutputStream</a> </dd></dl>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae8816b32366a16afde4ef05abb7ef386" name="ae8816b32366a16afde4ef05abb7ef386"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae8816b32366a16afde4ef05abb7ef386">&#9670;&#160;</a></span>Disassembler()</h2>
 
@@ -194,6 +204,14 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="class_bond_1_1_disassembler.html" title="A disassembler for Bond bytecode and CBO streams.">Disassembler</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">allocator</td><td>The memory allocator used for temporary allocations during disassembly. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -247,6 +265,16 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Decodes the given bytecode buffer and writes disassembled output. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">byteCode</td><td>Pointer to the start of the bytecode buffer. </td></tr>
+    <tr><td class="paramname">length</td><td>The number of bytes in the bytecode buffer. </td></tr>
+    <tr><td class="paramname">outputStream</td><td><a class="el" href="class_bond_1_1_stream.html" title="A base interface for performing IO operations.">Stream</a> where the disassembled output is written. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ae13479fff30f7f049a30696400fc4dad" name="ae13479fff30f7f049a30696400fc4dad"></a>
@@ -267,6 +295,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Reads bytecode from the given CBO stream and writes disassembled output. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cboStream</td><td>Input stream containing CBO data to disassemble. </td></tr>
+    <tr><td class="paramname">outputStream</td><td><a class="el" href="class_bond_1_1_stream.html" title="A base interface for performing IO operations.">Stream</a> where the disassembled output is written. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

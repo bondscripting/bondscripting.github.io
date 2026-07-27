@@ -157,9 +157,12 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_bond_1_1
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Bond::PrettyPrinter Class Reference</div></div>
+  <div class="headertitle"><div class="title">Bond::PrettyPrinter Class Reference<div class="ingroups"><a class="el" href="group__tools.html">Tools</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A formatter for <a class="el" href="namespace_bond.html">Bond</a> parse trees.  
+ <a href="#details">More...</a></p>
 
 <p><code>#include &lt;bond/tools/prettyprinter.h&gt;</code></p>
 <table class="memberdecls">
@@ -168,16 +171,24 @@ Public Types</h2></td></tr>
 <tr class="memitem:a4bf8afc0ab5da1e15331fca1efb2ee9f" id="r_a4bf8afc0ab5da1e15331fca1efb2ee9f"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a4bf8afc0ab5da1e15331fca1efb2ee9f">Verbosity</a> { <a class="el" href="#a4bf8afc0ab5da1e15331fca1efb2ee9fad75466fb9f90c5bcd409c6145e74aeba">VERBOSITY_NORMAL</a>
 , <a class="el" href="#a4bf8afc0ab5da1e15331fca1efb2ee9fab85309144194437bd97db7a91a197f39">VERBOSITY_MINIMAL</a>
  }</td></tr>
+<tr class="memdesc:a4bf8afc0ab5da1e15331fca1efb2ee9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls whitespace and layout verbosity in pretty-printed output.  <a href="#a4bf8afc0ab5da1e15331fca1efb2ee9f">More...</a><br /></td></tr>
 <tr class="memitem:a027fa2ab2228a460358a9abfb8a04f25" id="r_a027fa2ab2228a460358a9abfb8a04f25"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a027fa2ab2228a460358a9abfb8a04f25">ConstantFolding</a> { <a class="el" href="#a027fa2ab2228a460358a9abfb8a04f25a4165c9b17952a29fa89276f74fe7e24d">CONSTANT_FOLDING_OFF</a>
 , <a class="el" href="#a027fa2ab2228a460358a9abfb8a04f25a124ebfa13f56e53ad511643748c1e44f">CONSTANT_FOLDING_ON</a>
  }</td></tr>
+<tr class="memdesc:a027fa2ab2228a460358a9abfb8a04f25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls whether constant expressions are folded before printing.  <a href="#a027fa2ab2228a460358a9abfb8a04f25">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7d540737f5b93561f9be3c1bb81e0618" id="r_a7d540737f5b93561f9be3c1bb81e0618"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7d540737f5b93561f9be3c1bb81e0618">Print</a> (const <a class="el" href="class_bond_1_1_parse_node.html">ParseNode</a> *parseNode, <a class="el" href="class_bond_1_1_output_stream.html">OutputStream</a> &amp;stream, <a class="el" href="#a4bf8afc0ab5da1e15331fca1efb2ee9f">Verbosity</a> verbosity=<a class="el" href="#a4bf8afc0ab5da1e15331fca1efb2ee9fad75466fb9f90c5bcd409c6145e74aeba">VERBOSITY_NORMAL</a>, <a class="el" href="#a027fa2ab2228a460358a9abfb8a04f25">ConstantFolding</a> folding=<a class="el" href="#a027fa2ab2228a460358a9abfb8a04f25a4165c9b17952a29fa89276f74fe7e24d">CONSTANT_FOLDING_OFF</a>) const</td></tr>
+<tr class="memdesc:a7d540737f5b93561f9be3c1bb81e0618"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints <a class="el" href="namespace_bond.html">Bond</a> source code for a parse tree rooted at a single parse node.  <br /></td></tr>
 <tr class="memitem:a4ddc65a0e41c50d03f3c27138964e0bf" id="r_a4ddc65a0e41c50d03f3c27138964e0bf"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4ddc65a0e41c50d03f3c27138964e0bf">PrintList</a> (const <a class="el" href="class_bond_1_1_list_parse_node.html">ListParseNode</a> *listNode, <a class="el" href="class_bond_1_1_output_stream.html">OutputStream</a> &amp;stream, <a class="el" href="#a4bf8afc0ab5da1e15331fca1efb2ee9f">Verbosity</a> verbosity=<a class="el" href="#a4bf8afc0ab5da1e15331fca1efb2ee9fad75466fb9f90c5bcd409c6145e74aeba">VERBOSITY_NORMAL</a>, <a class="el" href="#a027fa2ab2228a460358a9abfb8a04f25">ConstantFolding</a> folding=<a class="el" href="#a027fa2ab2228a460358a9abfb8a04f25a4165c9b17952a29fa89276f74fe7e24d">CONSTANT_FOLDING_OFF</a>) const</td></tr>
+<tr class="memdesc:a4ddc65a0e41c50d03f3c27138964e0bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints <a class="el" href="namespace_bond.html">Bond</a> source code for a parse tree represented as a list of parse nodes.  <br /></td></tr>
 </table>
-<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Member Enumeration Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A formatter for <a class="el" href="namespace_bond.html">Bond</a> parse trees. </p>
+<p><a class="el" href="class_bond_1_1_pretty_printer.html" title="A formatter for Bond parse trees.">PrettyPrinter</a> converts parse trees back into <a class="el" href="namespace_bond.html">Bond</a> source code using consistent formatting rules. It can optionally emit minimal formatting and fold constant expressions.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_bond_1_1_parse_node.html">ParseNode</a>, <a class="el" href="class_bond_1_1_list_parse_node.html">ListParseNode</a>, <a class="el" href="class_bond_1_1_output_stream.html" title="An abstract interface for performing both unformatted and formatted output operations.">OutputStream</a> </dd></dl>
+</div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Member Enumeration Documentation</h2>
 <a id="a027fa2ab2228a460358a9abfb8a04f25" name="a027fa2ab2228a460358a9abfb8a04f25"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a027fa2ab2228a460358a9abfb8a04f25">&#9670;&#160;</a></span>ConstantFolding</h2>
 
@@ -189,9 +200,13 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Controls whether constant expressions are folded before printing. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a027fa2ab2228a460358a9abfb8a04f25a4165c9b17952a29fa89276f74fe7e24d" name="a027fa2ab2228a460358a9abfb8a04f25a4165c9b17952a29fa89276f74fe7e24d"></a>CONSTANT_FOLDING_OFF&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a027fa2ab2228a460358a9abfb8a04f25a124ebfa13f56e53ad511643748c1e44f" name="a027fa2ab2228a460358a9abfb8a04f25a124ebfa13f56e53ad511643748c1e44f"></a>CONSTANT_FOLDING_ON&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a027fa2ab2228a460358a9abfb8a04f25a4165c9b17952a29fa89276f74fe7e24d" name="a027fa2ab2228a460358a9abfb8a04f25a4165c9b17952a29fa89276f74fe7e24d"></a>CONSTANT_FOLDING_OFF&#160;</td><td class="fielddoc"><p>Print expressions without constant folding. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a027fa2ab2228a460358a9abfb8a04f25a124ebfa13f56e53ad511643748c1e44f" name="a027fa2ab2228a460358a9abfb8a04f25a124ebfa13f56e53ad511643748c1e44f"></a>CONSTANT_FOLDING_ON&#160;</td><td class="fielddoc"><p>Fold constant expressions and print their literal values. </p>
+</td></tr>
 </table>
 
 </div>
@@ -207,9 +222,13 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Controls whitespace and layout verbosity in pretty-printed output. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a4bf8afc0ab5da1e15331fca1efb2ee9fad75466fb9f90c5bcd409c6145e74aeba" name="a4bf8afc0ab5da1e15331fca1efb2ee9fad75466fb9f90c5bcd409c6145e74aeba"></a>VERBOSITY_NORMAL&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a4bf8afc0ab5da1e15331fca1efb2ee9fab85309144194437bd97db7a91a197f39" name="a4bf8afc0ab5da1e15331fca1efb2ee9fab85309144194437bd97db7a91a197f39"></a>VERBOSITY_MINIMAL&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a4bf8afc0ab5da1e15331fca1efb2ee9fad75466fb9f90c5bcd409c6145e74aeba" name="a4bf8afc0ab5da1e15331fca1efb2ee9fad75466fb9f90c5bcd409c6145e74aeba"></a>VERBOSITY_NORMAL&#160;</td><td class="fielddoc"><p>Full formatting with standard whitespace and line breaks. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4bf8afc0ab5da1e15331fca1efb2ee9fab85309144194437bd97db7a91a197f39" name="a4bf8afc0ab5da1e15331fca1efb2ee9fab85309144194437bd97db7a91a197f39"></a>VERBOSITY_MINIMAL&#160;</td><td class="fielddoc"><p>Compact formatting with minimal whitespace. </p>
+</td></tr>
 </table>
 
 </div>
@@ -244,6 +263,17 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Prints <a class="el" href="namespace_bond.html">Bond</a> source code for a parse tree rooted at a single parse node. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parseNode</td><td>Root parse node to print. </td></tr>
+    <tr><td class="paramname">stream</td><td>Output stream receiving the formatted <a class="el" href="namespace_bond.html">Bond</a> source. </td></tr>
+    <tr><td class="paramname">verbosity</td><td>Controls output spacing and compactness. </td></tr>
+    <tr><td class="paramname">folding</td><td>Controls whether constant expressions are folded before printing. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a4ddc65a0e41c50d03f3c27138964e0bf" name="a4ddc65a0e41c50d03f3c27138964e0bf"></a>
@@ -274,6 +304,17 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Prints <a class="el" href="namespace_bond.html">Bond</a> source code for a parse tree represented as a list of parse nodes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">listNode</td><td>Head of the parse node list to print. </td></tr>
+    <tr><td class="paramname">stream</td><td>Output stream receiving the formatted <a class="el" href="namespace_bond.html">Bond</a> source. </td></tr>
+    <tr><td class="paramname">verbosity</td><td>Controls output spacing and compactness. </td></tr>
+    <tr><td class="paramname">folding</td><td>Controls whether constant expressions are folded before printing. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
