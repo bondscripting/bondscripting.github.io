@@ -157,32 +157,54 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_bond_1_1
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Bond::CodeSegment Class Reference</div></div>
+  <div class="headertitle"><div class="title">Bond::CodeSegment Class Reference<div class="ingroups"><a class="el" href="group__vm.html">Virtual Machine</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Collection of functions, static initializers and data loaded from CBO files.  
+ <a href="#details">More...</a></p>
 
 <p><code>#include &lt;bond/vm/codesegment.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3bed94f0932de8ca94cdd6b3787d2ebc" id="r_a3bed94f0932de8ca94cdd6b3787d2ebc"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a3bed94f0932de8ca94cdd6b3787d2ebc">CodeSegment</a> (const <a class="el" href="struct_bond_1_1_function.html">Function</a> *functionTable, size_t functionCount, const <a class="el" href="struct_bond_1_1_function.html">Function</a> *staticInitializerTable, size_t staticInitializerCount, const <a class="el" href="struct_bond_1_1_data_entry.html">DataEntry</a> *dataTable, size_t dataCount)</td></tr>
+<tr class="memdesc:a3bed94f0932de8ca94cdd6b3787d2ebc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_bond_1_1_code_segment.html" title="Collection of functions, static initializers and data loaded from CBO files.">CodeSegment</a> from prebuilt tables.  <br /></td></tr>
 <tr class="memitem:a712f05ce4bb8c0132fcdbe28812f86c6" id="r_a712f05ce4bb8c0132fcdbe28812f86c6"><td class="memItemLeft">const <a class="el" href="struct_bond_1_1_function.html">Function</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a712f05ce4bb8c0132fcdbe28812f86c6">GetFunction</a> (const <a class="el" href="class_bond_1_1_qualified_name.html">QualifiedName</a> &amp;qualifiedName) const</td></tr>
+<tr class="memdesc:a712f05ce4bb8c0132fcdbe28812f86c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds a function by qualified name.  <br /></td></tr>
 <tr class="memitem:a5a00d5dc1ef5268c859c5f5228125c5a" id="r_a5a00d5dc1ef5268c859c5f5228125c5a"><td class="memItemLeft">const <a class="el" href="struct_bond_1_1_function.html">Function</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a5a00d5dc1ef5268c859c5f5228125c5a">GetFunction</a> (const char *qualifiedName) const</td></tr>
+<tr class="memdesc:a5a00d5dc1ef5268c859c5f5228125c5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds a function by qualified name string.  <br /></td></tr>
 <tr class="memitem:ae549cac545b8bad8dd315fd52d5fe6ca" id="r_ae549cac545b8bad8dd315fd52d5fe6ca"><td class="memItemLeft">int32_t&#160;</td><td class="memItemRight"><a class="el" href="#ae549cac545b8bad8dd315fd52d5fe6ca">GetFunctionIndex</a> (const <a class="el" href="class_bond_1_1_qualified_name.html">QualifiedName</a> &amp;qualifiedName) const</td></tr>
+<tr class="memdesc:ae549cac545b8bad8dd315fd52d5fe6ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the index of a function by qualified name.  <br /></td></tr>
 <tr class="memitem:a778711d8adf620b0caffb7f07a39bbca" id="r_a778711d8adf620b0caffb7f07a39bbca"><td class="memItemLeft">int32_t&#160;</td><td class="memItemRight"><a class="el" href="#a778711d8adf620b0caffb7f07a39bbca">GetFunctionIndex</a> (const char *qualifiedName) const</td></tr>
+<tr class="memdesc:a778711d8adf620b0caffb7f07a39bbca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the index of a function by qualified name string.  <br /></td></tr>
 <tr class="memitem:ac32bb6d07d850a17b9237789291bd903" id="r_ac32bb6d07d850a17b9237789291bd903"><td class="memItemLeft">const <a class="el" href="struct_bond_1_1_function.html">Function</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ac32bb6d07d850a17b9237789291bd903">GetFunctionAtIndex</a> (uint32_t functionIndex) const</td></tr>
+<tr class="memdesc:ac32bb6d07d850a17b9237789291bd903"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the function at the specified index.  <br /></td></tr>
 <tr class="memitem:a7625f5c5872de7dd54cc94583ff95b45" id="r_a7625f5c5872de7dd54cc94583ff95b45"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a7625f5c5872de7dd54cc94583ff95b45">GetFunctionCount</a> () const</td></tr>
+<tr class="memdesc:a7625f5c5872de7dd54cc94583ff95b45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of functions in the function table.  <br /></td></tr>
 <tr class="memitem:ac619162339d01eae29503d29175ea0d4" id="r_ac619162339d01eae29503d29175ea0d4"><td class="memItemLeft">const <a class="el" href="struct_bond_1_1_function.html">Function</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ac619162339d01eae29503d29175ea0d4">GetStaticInitializerAtIndex</a> (uint32_t initializerIndex) const</td></tr>
+<tr class="memdesc:ac619162339d01eae29503d29175ea0d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the static initializer at the specified index.  <br /></td></tr>
 <tr class="memitem:a638419702e8142119de7ece0bf88b3c5" id="r_a638419702e8142119de7ece0bf88b3c5"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a638419702e8142119de7ece0bf88b3c5">GetStaticInitializerCount</a> () const</td></tr>
+<tr class="memdesc:a638419702e8142119de7ece0bf88b3c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of static initializers.  <br /></td></tr>
 <tr class="memitem:ae284d23307e9069c3ede9cf608d6c948" id="r_ae284d23307e9069c3ede9cf608d6c948"><td class="memItemLeft">const <a class="el" href="struct_bond_1_1_data_entry.html">DataEntry</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ae284d23307e9069c3ede9cf608d6c948">GetDataEntry</a> (const <a class="el" href="class_bond_1_1_qualified_name.html">QualifiedName</a> &amp;qualifiedName) const</td></tr>
+<tr class="memdesc:ae284d23307e9069c3ede9cf608d6c948"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds a data entry by qualified name.  <br /></td></tr>
 <tr class="memitem:a0e332ea2c050a3b98958026b14fbc689" id="r_a0e332ea2c050a3b98958026b14fbc689"><td class="memItemLeft">const <a class="el" href="struct_bond_1_1_data_entry.html">DataEntry</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a0e332ea2c050a3b98958026b14fbc689">GetDataEntry</a> (const char *qualifiedName) const</td></tr>
+<tr class="memdesc:a0e332ea2c050a3b98958026b14fbc689"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds a data entry by qualified name string.  <br /></td></tr>
 <tr class="memitem:ac28fc99b4a111ccd6dcec20ed9281df6" id="r_ac28fc99b4a111ccd6dcec20ed9281df6"><td class="memItemLeft">int32_t&#160;</td><td class="memItemRight"><a class="el" href="#ac28fc99b4a111ccd6dcec20ed9281df6">GetDataEntryIndex</a> (const <a class="el" href="class_bond_1_1_qualified_name.html">QualifiedName</a> &amp;qualifiedName) const</td></tr>
+<tr class="memdesc:ac28fc99b4a111ccd6dcec20ed9281df6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the index of a data entry by qualified name.  <br /></td></tr>
 <tr class="memitem:a9372c35f4847ac9c95c5a3508f6cdc65" id="r_a9372c35f4847ac9c95c5a3508f6cdc65"><td class="memItemLeft">int32_t&#160;</td><td class="memItemRight"><a class="el" href="#a9372c35f4847ac9c95c5a3508f6cdc65">GetDataEntryIndex</a> (const char *qualifiedName) const</td></tr>
+<tr class="memdesc:a9372c35f4847ac9c95c5a3508f6cdc65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the index of a data entry by qualified name string.  <br /></td></tr>
 <tr class="memitem:a9ed57a3b18248f408431546151b070ef" id="r_a9ed57a3b18248f408431546151b070ef"><td class="memItemLeft">const <a class="el" href="struct_bond_1_1_data_entry.html">DataEntry</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a9ed57a3b18248f408431546151b070ef">GetDataEntryAtIndex</a> (uint32_t dataIndex) const</td></tr>
+<tr class="memdesc:a9ed57a3b18248f408431546151b070ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the data entry at the specified index.  <br /></td></tr>
 <tr class="memitem:a9b15c0bc7f083ffa5f9d45ef25e3aca5" id="r_a9b15c0bc7f083ffa5f9d45ef25e3aca5"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a9b15c0bc7f083ffa5f9d45ef25e3aca5">GetDataCount</a> () const</td></tr>
+<tr class="memdesc:a9b15c0bc7f083ffa5f9d45ef25e3aca5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of data entries in the data table.  <br /></td></tr>
 <tr class="memitem:a3b12b123eae9a06ec67e766995f510fd" id="r_a3b12b123eae9a06ec67e766995f510fd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3b12b123eae9a06ec67e766995f510fd">CallStaticInitializers</a> (<a class="el" href="class_bond_1_1_v_m.html">VM</a> &amp;vm) const</td></tr>
+<tr class="memdesc:a3b12b123eae9a06ec67e766995f510fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls all static initializer functions in this code segment.  <br /></td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Collection of functions, static initializers and data loaded from CBO files. </p>
+<p>A <a class="el" href="class_bond_1_1_code_segment.html" title="Collection of functions, static initializers and data loaded from CBO files.">CodeSegment</a> is produced by <a class="el" href="class_bond_1_1_cbo_loader.html" title="Loads CBO modules and resolves their native function bindings.">CboLoader</a> and consumed by the <a class="el" href="class_bond_1_1_v_m.html">VM</a>. It supports looking up functions and data entries by qualified name, and calling static initializers before an application's entry point is invoked. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3bed94f0932de8ca94cdd6b3787d2ebc" name="a3bed94f0932de8ca94cdd6b3787d2ebc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3bed94f0932de8ca94cdd6b3787d2ebc">&#9670;&#160;</a></span>CodeSegment()</h2>
 
@@ -230,6 +252,19 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Constructs a <a class="el" href="class_bond_1_1_code_segment.html" title="Collection of functions, static initializers and data loaded from CBO files.">CodeSegment</a> from prebuilt tables. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">functionTable</td><td>Array of callable functions. </td></tr>
+    <tr><td class="paramname">functionCount</td><td>Number of entries in <code class="param">functionTable</code>. </td></tr>
+    <tr><td class="paramname">staticInitializerTable</td><td>Array of static initializer functions. </td></tr>
+    <tr><td class="paramname">staticInitializerCount</td><td>Number of entries in <code class="param">staticInitializerTable</code>. </td></tr>
+    <tr><td class="paramname">dataTable</td><td>Array of named data entries. </td></tr>
+    <tr><td class="paramname">dataCount</td><td>Number of entries in <code class="param">dataTable</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
@@ -247,6 +282,14 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Calls all static initializer functions in this code segment. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vm</td><td><a class="el" href="class_bond_1_1_v_m.html">VM</a> instance used to invoke initializer functions. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -273,6 +316,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the number of data entries in the data table. </p>
+<dl class="section return"><dt>Returns</dt><dd>Data table size. </dd></dl>
+
 </div>
 </div>
 <a id="a0e332ea2c050a3b98958026b14fbc689" name="a0e332ea2c050a3b98958026b14fbc689"></a>
@@ -290,6 +336,15 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Finds a data entry by qualified name string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">qualifiedName</td><td>Fully qualified data entry name string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the data entry, or <code>nullptr</code> if it is not found. </dd></dl>
+
 </div>
 </div>
 <a id="ae284d23307e9069c3ede9cf608d6c948" name="ae284d23307e9069c3ede9cf608d6c948"></a>
@@ -306,6 +361,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Finds a data entry by qualified name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">qualifiedName</td><td>Fully qualified data entry name. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the data entry, or <code>nullptr</code> if it is not found. </dd></dl>
 
 </div>
 </div>
@@ -332,6 +396,15 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the data entry at the specified index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dataIndex</td><td>Index of the data entry in the data table. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the data entry at <code class="param">dataIndex</code>. </dd></dl>
+
 </div>
 </div>
 <a id="a9372c35f4847ac9c95c5a3508f6cdc65" name="a9372c35f4847ac9c95c5a3508f6cdc65"></a>
@@ -348,6 +421,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Gets the index of a data entry by qualified name string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">qualifiedName</td><td>Fully qualified data entry name string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Data entry index, or -1 if it is not found. </dd></dl>
 
 </div>
 </div>
@@ -366,6 +448,15 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Gets the index of a data entry by qualified name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">qualifiedName</td><td>Fully qualified data entry name. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Data entry index, or -1 if it is not found. </dd></dl>
+
 </div>
 </div>
 <a id="a5a00d5dc1ef5268c859c5f5228125c5a" name="a5a00d5dc1ef5268c859c5f5228125c5a"></a>
@@ -383,6 +474,15 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Finds a function by qualified name string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">qualifiedName</td><td>Fully qualified function name string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the function, or <code>nullptr</code> if it is not found. </dd></dl>
+
 </div>
 </div>
 <a id="a712f05ce4bb8c0132fcdbe28812f86c6" name="a712f05ce4bb8c0132fcdbe28812f86c6"></a>
@@ -399,6 +499,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Finds a function by qualified name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">qualifiedName</td><td>Fully qualified function name. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the function, or <code>nullptr</code> if it is not found. </dd></dl>
 
 </div>
 </div>
@@ -425,6 +534,15 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the function at the specified index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">functionIndex</td><td>Index of the function in the function table. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the function at <code class="param">functionIndex</code>. </dd></dl>
+
 </div>
 </div>
 <a id="a7625f5c5872de7dd54cc94583ff95b45" name="a7625f5c5872de7dd54cc94583ff95b45"></a>
@@ -450,6 +568,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the number of functions in the function table. </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="struct_bond_1_1_function.html" title="Function metadata and executable payload loaded from CBO.">Function</a> table size. </dd></dl>
+
 </div>
 </div>
 <a id="a778711d8adf620b0caffb7f07a39bbca" name="a778711d8adf620b0caffb7f07a39bbca"></a>
@@ -467,6 +588,15 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Gets the index of a function by qualified name string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">qualifiedName</td><td>Fully qualified function name string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="struct_bond_1_1_function.html" title="Function metadata and executable payload loaded from CBO.">Function</a> index, or -1 if it is not found. </dd></dl>
+
 </div>
 </div>
 <a id="ae549cac545b8bad8dd315fd52d5fe6ca" name="ae549cac545b8bad8dd315fd52d5fe6ca"></a>
@@ -483,6 +613,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Gets the index of a function by qualified name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">qualifiedName</td><td>Fully qualified function name. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="struct_bond_1_1_function.html" title="Function metadata and executable payload loaded from CBO.">Function</a> index, or -1 if it is not found. </dd></dl>
 
 </div>
 </div>
@@ -509,6 +648,15 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the static initializer at the specified index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">initializerIndex</td><td>Index of the static initializer. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the static initializer at <code class="param">initializerIndex</code>. </dd></dl>
+
 </div>
 </div>
 <a id="a638419702e8142119de7ece0bf88b3c5" name="a638419702e8142119de7ece0bf88b3c5"></a>
@@ -533,6 +681,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the number of static initializers. </p>
+<dl class="section return"><dt>Returns</dt><dd>Static initializer table size. </dd></dl>
 
 </div>
 </div>

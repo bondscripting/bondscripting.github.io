@@ -161,6 +161,9 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_bond_1_1
 </div><!--header-->
 <div class="contents">
 
+<p>A <a class="el" href="class_bond_1_1_collectable.html" title="Base class for objects tracked by a Collector.">Collectable</a> wrapper for arbitrary content.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;bond/vm/collector.h&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Bond::WrapperCollectable&lt; T &gt;:</div>
@@ -168,7 +171,7 @@ Inheritance diagram for Bond::WrapperCollectable&lt; T &gt;:</div>
  <div class="center">
   <img src="class_bond_1_1_wrapper_collectable.png" usemap="#Bond_3A_3AWrapperCollectable_3C_20T_20_3E_map" alt=""/>
   <map id="Bond_3A_3AWrapperCollectable_3C_20T_20_3E_map" name="Bond_3A_3AWrapperCollectable_3C_20T_20_3E_map">
-<area href="class_bond_1_1_collectable.html" alt="Bond::Collectable" shape="rect" coords="0,0,190,24"/>
+<area href="class_bond_1_1_collectable.html" title="Base class for objects tracked by a Collector." alt="Bond::Collectable" shape="rect" coords="0,0,190,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -180,18 +183,18 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ac162e087b0be17fa738113a70efca8d5" id="r_ac162e087b0be17fa738113a70efca8d5"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
 <tr class="memitem:ac162e087b0be17fa738113a70efca8d5 template"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ac162e087b0be17fa738113a70efca8d5">WrapperCollectable</a> (Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:ac162e087b0be17fa738113a70efca8d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the wrapped content in place.  <br /></td></tr>
 <tr class="memitem:ae8cd45f559417b239afdbc30f4cddd72" id="r_ae8cd45f559417b239afdbc30f4cddd72"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#ae8cd45f559417b239afdbc30f4cddd72">~WrapperCollectable</a> ()</td></tr>
 <tr class="memitem:ac6f76f4021a7d3d8114d7d437c058461" id="r_ac6f76f4021a7d3d8114d7d437c058461"><td class="memItemLeft">const T &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ac6f76f4021a7d3d8114d7d437c058461">GetContent</a> () const</td></tr>
 <tr class="memitem:afa210e339cc108d460b72845447a60ea" id="r_afa210e339cc108d460b72845447a60ea"><td class="memItemLeft">T &amp;&#160;</td><td class="memItemRight"><a class="el" href="#afa210e339cc108d460b72845447a60ea">GetContent</a> ()</td></tr>
 <tr class="inherit_header pub_methods_class_bond_1_1_collectable"><td colspan="2">Public Member Functions inherited from <a class="el" href="class_bond_1_1_collectable.html">Bond::Collectable</a></td></tr>
 <tr class="memitem:adab23fd61fce9b2e8d73c944bb36e45e pub_methods_class_bond_1_1_collectable" id="r_adab23fd61fce9b2e8d73c944bb36e45e"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_collectable.html#adab23fd61fce9b2e8d73c944bb36e45e">~Collectable</a> ()</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_attribs_class_bond_1_1_collectable"><td colspan="2">Public Attributes inherited from <a class="el" href="class_bond_1_1_collectable.html">Bond::Collectable</a></td></tr>
-<tr class="memitem:a492e767f05eb30d9d2d47236c667bb03 pub_attribs_class_bond_1_1_collectable" id="r_a492e767f05eb30d9d2d47236c667bb03"><td class="memItemLeft"><a class="el" href="group__vm.html#gafa928831f66f99255739910ae1c1adbb">CollectableHandle</a>&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_collectable.html#a492e767f05eb30d9d2d47236c667bb03">mNext</a></td></tr>
 </table>
-<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
+class Bond::WrapperCollectable&lt; T &gt;</div><p>A <a class="el" href="class_bond_1_1_collectable.html" title="Base class for objects tracked by a Collector.">Collectable</a> wrapper for arbitrary content. </p>
+<p>This class can be used to register non-Collectable objects with a <a class="el" href="class_bond_1_1_collector.html" title="Tracks and destroys Collectable objects.">Collector</a> by storing them as wrapped content. </p>
+</div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
 <a id="abbb8325a3e1260d15d0ed21937517d51" name="abbb8325a3e1260d15d0ed21937517d51"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abbb8325a3e1260d15d0ed21937517d51">&#9670;&#160;</a></span>ContentType</h2>
 
@@ -235,6 +238,14 @@ template&lt;typename... Args&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Constructs the wrapped content in place. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>Arguments forwarded to the wrapped content constructor. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
