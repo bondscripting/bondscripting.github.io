@@ -161,6 +161,9 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_bond_1_1
 </div><!--header-->
 <div class="contents">
 
+<p>Base class for named entities that participate in symbol lookup.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;bond/compiler/parsenodes.h&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Bond::Symbol:</div>
@@ -168,18 +171,18 @@ Inheritance diagram for Bond::Symbol:</div>
  <div class="center">
   <img src="class_bond_1_1_symbol.png" usemap="#Bond_3A_3ASymbol_map" alt=""/>
   <map id="Bond_3A_3ASymbol_map" name="Bond_3A_3ASymbol_map">
-<area href="class_bond_1_1_list_parse_node.html" alt="Bond::ListParseNode" shape="rect" coords="0,56,166,80"/>
-<area href="class_bond_1_1_parse_node.html" alt="Bond::ParseNode" shape="rect" coords="0,0,166,24"/>
-<area href="class_bond_1_1_compound_statement.html" alt="Bond::CompoundStatement" shape="rect" coords="176,168,342,192"/>
-<area href="class_bond_1_1_enum_declaration.html" alt="Bond::EnumDeclaration" shape="rect" coords="176,224,342,248"/>
-<area href="class_bond_1_1_enumerator.html" alt="Bond::Enumerator" shape="rect" coords="176,280,342,304"/>
-<area href="class_bond_1_1_for_statement.html" alt="Bond::ForStatement" shape="rect" coords="176,336,342,360"/>
-<area href="class_bond_1_1_function_definition.html" alt="Bond::FunctionDefinition" shape="rect" coords="176,392,342,416"/>
-<area href="class_bond_1_1_named_initializer.html" alt="Bond::NamedInitializer" shape="rect" coords="176,448,342,472"/>
-<area href="class_bond_1_1_namespace_definition.html" alt="Bond::NamespaceDefinition" shape="rect" coords="176,504,342,528"/>
-<area href="class_bond_1_1_parameter.html" alt="Bond::Parameter" shape="rect" coords="176,560,342,584"/>
-<area href="class_bond_1_1_struct_declaration.html" alt="Bond::StructDeclaration" shape="rect" coords="176,616,342,640"/>
-<area href="class_bond_1_1_switch_section.html" alt="Bond::SwitchSection" shape="rect" coords="176,672,342,696"/>
+<area href="class_bond_1_1_list_parse_node.html" title="Base class for parse nodes that can be linked into singly linked lists." alt="Bond::ListParseNode" shape="rect" coords="0,56,166,80"/>
+<area href="class_bond_1_1_parse_node.html" title="Base class for all parse tree nodes." alt="Bond::ParseNode" shape="rect" coords="0,0,166,24"/>
+<area href="class_bond_1_1_compound_statement.html" title="Represents a block statement and its local scope." alt="Bond::CompoundStatement" shape="rect" coords="176,168,342,192"/>
+<area href="class_bond_1_1_enum_declaration.html" title="Represents an enum declaration." alt="Bond::EnumDeclaration" shape="rect" coords="176,224,342,248"/>
+<area href="class_bond_1_1_enumerator.html" title="Represents a single enum value." alt="Bond::Enumerator" shape="rect" coords="176,280,342,304"/>
+<area href="class_bond_1_1_for_statement.html" title="Represents a for loop and its local scope." alt="Bond::ForStatement" shape="rect" coords="176,336,342,360"/>
+<area href="class_bond_1_1_function_definition.html" title="Represents a function declaration or definition." alt="Bond::FunctionDefinition" shape="rect" coords="176,392,342,416"/>
+<area href="class_bond_1_1_named_initializer.html" title="Represents a named variable initializer." alt="Bond::NamedInitializer" shape="rect" coords="176,448,342,472"/>
+<area href="class_bond_1_1_namespace_definition.html" title="Represents a namespace definition." alt="Bond::NamespaceDefinition" shape="rect" coords="176,504,342,528"/>
+<area href="class_bond_1_1_parameter.html" title="Represents a function parameter." alt="Bond::Parameter" shape="rect" coords="176,560,342,584"/>
+<area href="class_bond_1_1_struct_declaration.html" title="Represents a struct declaration." alt="Bond::StructDeclaration" shape="rect" coords="176,616,342,640"/>
+<area href="class_bond_1_1_switch_section.html" title="Represents one labeled section inside a switch statement." alt="Bond::SwitchSection" shape="rect" coords="176,672,342,696"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -195,38 +198,63 @@ Public Types</h2></td></tr>
 , <a class="el" href="#a37116ce688af2562fa23a3b40612faeda9a46909d643e80e02dc3c0dd2e5da13d">TYPE_FUNCTION</a>
 <br />
  }</td></tr>
+<tr class="memdesc:a37116ce688af2562fa23a3b40612faed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifies the concrete symbol category.  <a href="#a37116ce688af2562fa23a3b40612faed">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a61b5e84991bae8a60edb4af528ef29bd" id="r_a61b5e84991bae8a60edb4af528ef29bd"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#a61b5e84991bae8a60edb4af528ef29bd">~Symbol</a> ()</td></tr>
 <tr class="memitem:a2b167c4a2bcebbbb9ae3895a7794bcf9" id="r_a2b167c4a2bcebbbb9ae3895a7794bcf9"><td class="memItemLeft">virtual const <a class="el" href="class_bond_1_1_token.html">Token</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a2b167c4a2bcebbbb9ae3895a7794bcf9">GetContextToken</a> () const override</td></tr>
+<tr class="memdesc:a2b167c4a2bcebbbb9ae3895a7794bcf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the token used as source context for diagnostics.  <br /></td></tr>
 <tr class="memitem:a94935a4c6ffd49963bad4272b0fd2227" id="r_a94935a4c6ffd49963bad4272b0fd2227"><td class="memItemLeft">virtual <a class="el" href="#a37116ce688af2562fa23a3b40612faed">SymbolType</a>&#160;</td><td class="memItemRight"><a class="el" href="#a94935a4c6ffd49963bad4272b0fd2227">GetSymbolType</a> () const =0</td></tr>
+<tr class="memdesc:a94935a4c6ffd49963bad4272b0fd2227"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the concrete symbol type.  <br /></td></tr>
 <tr class="memitem:a4c547838b9d4b2a1a54c067e43dc538a" id="r_a4c547838b9d4b2a1a54c067e43dc538a"><td class="memItemLeft">virtual const <a class="el" href="class_bond_1_1_token.html">Token</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a4c547838b9d4b2a1a54c067e43dc538a">GetName</a> () const</td></tr>
+<tr class="memdesc:a4c547838b9d4b2a1a54c067e43dc538a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the symbol name token.  <br /></td></tr>
 <tr class="memitem:a1e4559ba7355b311371497af9a796687" id="r_a1e4559ba7355b311371497af9a796687"><td class="memItemLeft">virtual <a class="el" href="class_bond_1_1_type_and_value.html">TypeAndValue</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a1e4559ba7355b311371497af9a796687">GetTypeAndValue</a> ()</td></tr>
+<tr class="memdesc:a1e4559ba7355b311371497af9a796687"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the symbol's type-and-value metadata.  <br /></td></tr>
 <tr class="memitem:a946c598f9c5f5a3e88b04f58b7bfb4a4" id="r_a946c598f9c5f5a3e88b04f58b7bfb4a4"><td class="memItemLeft">virtual const <a class="el" href="class_bond_1_1_type_and_value.html">TypeAndValue</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a946c598f9c5f5a3e88b04f58b7bfb4a4">GetTypeAndValue</a> () const</td></tr>
+<tr class="memdesc:a946c598f9c5f5a3e88b04f58b7bfb4a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the symbol's type-and-value metadata.  <br /></td></tr>
 <tr class="memitem:a78296d8395bc00e5f5d6ba9eaa341bfe" id="r_a78296d8395bc00e5f5d6ba9eaa341bfe"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a78296d8395bc00e5f5d6ba9eaa341bfe">IsResolved</a> () const</td></tr>
+<tr class="memdesc:a78296d8395bc00e5f5d6ba9eaa341bfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true when symbol resolution has completed for this symbol.  <br /></td></tr>
 <tr class="memitem:a63f5d9711d29dbfb77e22c7f7a8d9346" id="r_a63f5d9711d29dbfb77e22c7f7a8d9346"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a63f5d9711d29dbfb77e22c7f7a8d9346">IsTypeDefinition</a> () const</td></tr>
+<tr class="memdesc:a63f5d9711d29dbfb77e22c7f7a8d9346"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this symbol defines a type.  <br /></td></tr>
 <tr class="memitem:a06da8494d2f752918f707e5e0a0ee0da" id="r_a06da8494d2f752918f707e5e0a0ee0da"><td class="memItemLeft"><a class="el" href="#a16d85fe8a9094681f443028b875ec022">Symbol</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a06da8494d2f752918f707e5e0a0ee0da">GetParentSymbol</a> ()</td></tr>
+<tr class="memdesc:a06da8494d2f752918f707e5e0a0ee0da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the enclosing symbol.  <br /></td></tr>
 <tr class="memitem:a7c625aa424d33b17add0a0cdf910483b" id="r_a7c625aa424d33b17add0a0cdf910483b"><td class="memItemLeft">const <a class="el" href="#a16d85fe8a9094681f443028b875ec022">Symbol</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a7c625aa424d33b17add0a0cdf910483b">GetParentSymbol</a> () const</td></tr>
+<tr class="memdesc:a7c625aa424d33b17add0a0cdf910483b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the enclosing symbol.  <br /></td></tr>
 <tr class="memitem:a011ca3eea92cb34309d14b4c5a71b364" id="r_a011ca3eea92cb34309d14b4c5a71b364"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a011ca3eea92cb34309d14b4c5a71b364">SetParentSymbol</a> (<a class="el" href="#a16d85fe8a9094681f443028b875ec022">Symbol</a> *parent)</td></tr>
+<tr class="memdesc:a011ca3eea92cb34309d14b4c5a71b364"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the enclosing symbol.  <br /></td></tr>
 <tr class="memitem:a5d003b26e7bd5e089e6c05dbe39d1c06" id="r_a5d003b26e7bd5e089e6c05dbe39d1c06"><td class="memItemLeft"><a class="el" href="#a16d85fe8a9094681f443028b875ec022">Symbol</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a5d003b26e7bd5e089e6c05dbe39d1c06">FindSymbol</a> (const StringView &amp;name)</td></tr>
+<tr class="memdesc:a5d003b26e7bd5e089e6c05dbe39d1c06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds a directly contained symbol by name.  <br /></td></tr>
 <tr class="memitem:aac8353df4ee950e09ce0a1e83b76cd1d" id="r_aac8353df4ee950e09ce0a1e83b76cd1d"><td class="memItemLeft">const <a class="el" href="#a16d85fe8a9094681f443028b875ec022">Symbol</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aac8353df4ee950e09ce0a1e83b76cd1d">FindSymbol</a> (const StringView &amp;name) const</td></tr>
+<tr class="memdesc:aac8353df4ee950e09ce0a1e83b76cd1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds a directly contained symbol by name.  <br /></td></tr>
 <tr class="memitem:a3c16267806c1adff9db8068206350d0b" id="r_a3c16267806c1adff9db8068206350d0b"><td class="memItemLeft"><a class="el" href="#a16d85fe8a9094681f443028b875ec022">Symbol</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a3c16267806c1adff9db8068206350d0b">FindSymbol</a> (const <a class="el" href="class_bond_1_1_token.html">Token</a> *name)</td></tr>
+<tr class="memdesc:a3c16267806c1adff9db8068206350d0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds a directly contained symbol by token text.  <br /></td></tr>
 <tr class="memitem:aec6752dace66dc7504238f0f96a85381" id="r_aec6752dace66dc7504238f0f96a85381"><td class="memItemLeft">const <a class="el" href="#a16d85fe8a9094681f443028b875ec022">Symbol</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aec6752dace66dc7504238f0f96a85381">FindSymbol</a> (const <a class="el" href="class_bond_1_1_token.html">Token</a> *name) const</td></tr>
+<tr class="memdesc:aec6752dace66dc7504238f0f96a85381"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds a directly contained symbol by token text.  <br /></td></tr>
 <tr class="memitem:aa1133aedf14d151b31966c0b1cf9a388" id="r_aa1133aedf14d151b31966c0b1cf9a388"><td class="memItemLeft"><a class="el" href="#a16d85fe8a9094681f443028b875ec022">Symbol</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aa1133aedf14d151b31966c0b1cf9a388">FindSymbol</a> (const <a class="el" href="class_bond_1_1_qualified_identifier.html">QualifiedIdentifier</a> *identifier)</td></tr>
+<tr class="memdesc:aa1133aedf14d151b31966c0b1cf9a388"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds a symbol referenced by a qualified identifier.  <br /></td></tr>
 <tr class="memitem:a49c92d40779b10dbe4ba6632b979a1c0" id="r_a49c92d40779b10dbe4ba6632b979a1c0"><td class="memItemLeft">const <a class="el" href="#a16d85fe8a9094681f443028b875ec022">Symbol</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a49c92d40779b10dbe4ba6632b979a1c0">FindSymbol</a> (const <a class="el" href="class_bond_1_1_qualified_identifier.html">QualifiedIdentifier</a> *identifier) const</td></tr>
+<tr class="memdesc:a49c92d40779b10dbe4ba6632b979a1c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds a symbol referenced by a qualified identifier.  <br /></td></tr>
 <tr class="memitem:a6d19ac252374cf7047511864f5e0cabf" id="r_a6d19ac252374cf7047511864f5e0cabf"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6d19ac252374cf7047511864f5e0cabf">InsertSymbol</a> (<a class="el" href="#a16d85fe8a9094681f443028b875ec022">Symbol</a> *symbol)</td></tr>
+<tr class="memdesc:a6d19ac252374cf7047511864f5e0cabf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts a symbol into this symbol's child list.  <br /></td></tr>
 <tr class="memitem:a75e4c9dff783454b2f3f36c09979559b" id="r_a75e4c9dff783454b2f3f36c09979559b"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a75e4c9dff783454b2f3f36c09979559b">IsAnonymous</a> () const</td></tr>
+<tr class="memdesc:a75e4c9dff783454b2f3f36c09979559b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this symbol has no explicit name.  <br /></td></tr>
 <tr class="memitem:a3efa23777ea775819738eebef8687850" id="r_a3efa23777ea775819738eebef8687850"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a3efa23777ea775819738eebef8687850">Matches</a> (const StringView &amp;name) const</td></tr>
+<tr class="memdesc:a3efa23777ea775819738eebef8687850"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this symbol's name matches the given text.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_bond_1_1_list_parse_node"><td colspan="2">Public Member Functions inherited from <a class="el" href="class_bond_1_1_list_parse_node.html">Bond::ListParseNode</a></td></tr>
 <tr class="memitem:ad34e3a955708dfa0ff6be03639492619 pub_methods_class_bond_1_1_list_parse_node" id="r_ad34e3a955708dfa0ff6be03639492619"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_list_parse_node.html#ad34e3a955708dfa0ff6be03639492619">~ListParseNode</a> ()</td></tr>
 <tr class="memitem:a7ef67e649f6ecb80adc285091fb42851 pub_methods_class_bond_1_1_list_parse_node" id="r_a7ef67e649f6ecb80adc285091fb42851"><td class="memItemLeft"><a class="el" href="class_bond_1_1_list_parse_node.html#a7be09e471f388a343f2b68de7417f939">ListParseNode</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_list_parse_node.html#a7ef67e649f6ecb80adc285091fb42851">GetNextNode</a> ()</td></tr>
+<tr class="memdesc:a7ef67e649f6ecb80adc285091fb42851 pub_methods_class_bond_1_1_list_parse_node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the next node in the list.  <br /></td></tr>
 <tr class="memitem:a2490c2fbc501b82858efae21f95c8922 pub_methods_class_bond_1_1_list_parse_node" id="r_a2490c2fbc501b82858efae21f95c8922"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_list_parse_node.html#a7be09e471f388a343f2b68de7417f939">ListParseNode</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_list_parse_node.html#a2490c2fbc501b82858efae21f95c8922">GetNextNode</a> () const</td></tr>
+<tr class="memdesc:a2490c2fbc501b82858efae21f95c8922 pub_methods_class_bond_1_1_list_parse_node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the next node in the list.  <br /></td></tr>
 <tr class="memitem:a631c04c65ff24ec65a51af71a1bed5a2 pub_methods_class_bond_1_1_list_parse_node" id="r_a631c04c65ff24ec65a51af71a1bed5a2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_list_parse_node.html#a631c04c65ff24ec65a51af71a1bed5a2">SetNextNode</a> (<a class="el" href="class_bond_1_1_list_parse_node.html#a7be09e471f388a343f2b68de7417f939">ListParseNode</a> *next)</td></tr>
+<tr class="memdesc:a631c04c65ff24ec65a51af71a1bed5a2 pub_methods_class_bond_1_1_list_parse_node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the next node in the list.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_bond_1_1_parse_node"><td colspan="2">Public Member Functions inherited from <a class="el" href="class_bond_1_1_parse_node.html">Bond::ParseNode</a></td></tr>
 <tr class="memitem:a38c4879ddf1a936a68ebd90eeb5a03da pub_methods_class_bond_1_1_parse_node" id="r_a38c4879ddf1a936a68ebd90eeb5a03da"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_parse_node.html#a38c4879ddf1a936a68ebd90eeb5a03da">~ParseNode</a> ()</td></tr>
 <tr class="memitem:a361e795aa9316b263352acc85d53c13a pub_methods_class_bond_1_1_parse_node" id="r_a361e795aa9316b263352acc85d53c13a"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_parse_node.html#a361e795aa9316b263352acc85d53c13a">Accept</a> (<a class="el" href="class_bond_1_1_parse_node_visitor.html">ParseNodeVisitor</a> &amp;visitor)=0</td></tr>
+<tr class="memdesc:a361e795aa9316b263352acc85d53c13a pub_methods_class_bond_1_1_parse_node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispatches this node to the given visitor.  <br /></td></tr>
 <tr class="memitem:a9249cbd2b2f98a0e9cbfcb46b863ddbd pub_methods_class_bond_1_1_parse_node" id="r_a9249cbd2b2f98a0e9cbfcb46b863ddbd"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_parse_node.html#a9249cbd2b2f98a0e9cbfcb46b863ddbd">Accept</a> (<a class="el" href="class_bond_1_1_parse_node_visitor.html">ParseNodeVisitor</a> &amp;visitor) const =0</td></tr>
+<tr class="memdesc:a9249cbd2b2f98a0e9cbfcb46b863ddbd pub_methods_class_bond_1_1_parse_node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispatches this node to the given visitor.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -236,7 +264,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="inherit_header pro_methods_class_bond_1_1_parse_node"><td colspan="2">Protected Member Functions inherited from <a class="el" href="class_bond_1_1_parse_node.html">Bond::ParseNode</a></td></tr>
 <tr class="memitem:a7b951fe102ad645db975811c648013f0 pro_methods_class_bond_1_1_parse_node" id="r_a7b951fe102ad645db975811c648013f0"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_parse_node.html#a7b951fe102ad645db975811c648013f0">ParseNode</a> ()</td></tr>
 </table>
-<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Member Enumeration Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Base class for named entities that participate in symbol lookup. </p>
+</div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Member Enumeration Documentation</h2>
 <a id="a37116ce688af2562fa23a3b40612faed" name="a37116ce688af2562fa23a3b40612faed"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a37116ce688af2562fa23a3b40612faed">&#9670;&#160;</a></span>SymbolType</h2>
 
@@ -248,13 +278,21 @@ Protected Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Identifies the concrete symbol category. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a37116ce688af2562fa23a3b40612faeda84d270c89054d11b2aede168048a7c7e" name="a37116ce688af2562fa23a3b40612faeda84d270c89054d11b2aede168048a7c7e"></a>TYPE_NAMESPACE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a37116ce688af2562fa23a3b40612faeda710a7cb19e938ee1e85d865e1469bee7" name="a37116ce688af2562fa23a3b40612faeda710a7cb19e938ee1e85d865e1469bee7"></a>TYPE_STRUCT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a37116ce688af2562fa23a3b40612faeda6698c633554bce1c56b8ac9a61a2b97f" name="a37116ce688af2562fa23a3b40612faeda6698c633554bce1c56b8ac9a61a2b97f"></a>TYPE_ENUM&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a37116ce688af2562fa23a3b40612faedaa82068c4d063581e3f1731080733be5d" name="a37116ce688af2562fa23a3b40612faedaa82068c4d063581e3f1731080733be5d"></a>TYPE_LOCALSCOPE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a37116ce688af2562fa23a3b40612faeda6de8f5879175ed9f9f287df2c07a27cf" name="a37116ce688af2562fa23a3b40612faeda6de8f5879175ed9f9f287df2c07a27cf"></a>TYPE_VALUE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a37116ce688af2562fa23a3b40612faeda9a46909d643e80e02dc3c0dd2e5da13d" name="a37116ce688af2562fa23a3b40612faeda9a46909d643e80e02dc3c0dd2e5da13d"></a>TYPE_FUNCTION&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a37116ce688af2562fa23a3b40612faeda84d270c89054d11b2aede168048a7c7e" name="a37116ce688af2562fa23a3b40612faeda84d270c89054d11b2aede168048a7c7e"></a>TYPE_NAMESPACE&#160;</td><td class="fielddoc"><p>Namespace declaration symbol. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a37116ce688af2562fa23a3b40612faeda710a7cb19e938ee1e85d865e1469bee7" name="a37116ce688af2562fa23a3b40612faeda710a7cb19e938ee1e85d865e1469bee7"></a>TYPE_STRUCT&#160;</td><td class="fielddoc"><p>Struct declaration symbol. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a37116ce688af2562fa23a3b40612faeda6698c633554bce1c56b8ac9a61a2b97f" name="a37116ce688af2562fa23a3b40612faeda6698c633554bce1c56b8ac9a61a2b97f"></a>TYPE_ENUM&#160;</td><td class="fielddoc"><p>Enum declaration symbol. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a37116ce688af2562fa23a3b40612faedaa82068c4d063581e3f1731080733be5d" name="a37116ce688af2562fa23a3b40612faedaa82068c4d063581e3f1731080733be5d"></a>TYPE_LOCALSCOPE&#160;</td><td class="fielddoc"><p>Local scope symbol. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a37116ce688af2562fa23a3b40612faeda6de8f5879175ed9f9f287df2c07a27cf" name="a37116ce688af2562fa23a3b40612faeda6de8f5879175ed9f9f287df2c07a27cf"></a>TYPE_VALUE&#160;</td><td class="fielddoc"><p><a class="el" href="union_bond_1_1_value.html" title="Union of all value types representable by a Token in the Bond compiler.">Value</a> symbol, such as a variable or enumerator. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a37116ce688af2562fa23a3b40612faeda9a46909d643e80e02dc3c0dd2e5da13d" name="a37116ce688af2562fa23a3b40612faeda9a46909d643e80e02dc3c0dd2e5da13d"></a>TYPE_FUNCTION&#160;</td><td class="fielddoc"><p><a class="el" href="struct_bond_1_1_function.html" title="Function metadata and executable payload loaded from CBO.">Function</a> symbol. </p>
+</td></tr>
 </table>
 
 </div>
@@ -326,6 +364,15 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Finds a symbol referenced by a qualified identifier. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">identifier</td><td>Qualified identifier to resolve. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Matching symbol, or null if not found. </dd></dl>
+
 </div>
 </div>
 <a id="a49c92d40779b10dbe4ba6632b979a1c0" name="a49c92d40779b10dbe4ba6632b979a1c0"></a>
@@ -342,6 +389,15 @@ Protected Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Finds a symbol referenced by a qualified identifier. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">identifier</td><td>Qualified identifier to resolve. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Matching symbol, or null if not found. </dd></dl>
 
 </div>
 </div>
@@ -360,6 +416,15 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Finds a directly contained symbol by name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name to search for. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Matching symbol, or null if not found. </dd></dl>
+
 </div>
 </div>
 <a id="aac8353df4ee950e09ce0a1e83b76cd1d" name="aac8353df4ee950e09ce0a1e83b76cd1d"></a>
@@ -376,6 +441,15 @@ Protected Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Finds a directly contained symbol by name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name to search for. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Matching symbol, or null if not found. </dd></dl>
 
 </div>
 </div>
@@ -402,6 +476,15 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Finds a directly contained symbol by token text. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name token to search for. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Matching symbol, or null if not found. </dd></dl>
+
 </div>
 </div>
 <a id="aec6752dace66dc7504238f0f96a85381" name="aec6752dace66dc7504238f0f96a85381"></a>
@@ -427,6 +510,15 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Finds a directly contained symbol by token text. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name token to search for. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Matching symbol, or null if not found. </dd></dl>
+
 </div>
 </div>
 <a id="a2b167c4a2bcebbbb9ae3895a7794bcf9" name="a2b167c4a2bcebbbb9ae3895a7794bcf9"></a>
@@ -451,6 +543,9 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the token used as source context for diagnostics. </p>
+<dl class="section return"><dt>Returns</dt><dd>A token associated with this node, or null if no token applies. </dd></dl>
 
 <p>Implements <a class="el" href="class_bond_1_1_parse_node.html#ae9a578142b6f2ab663f6b9990012fa13">Bond::ParseNode</a>.</p>
 
@@ -481,6 +576,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the symbol name token. </p>
+<dl class="section return"><dt>Returns</dt><dd>The name token, or null for anonymous symbols. </dd></dl>
+
 <p>Reimplemented in <a class="el" href="class_bond_1_1_enum_declaration.html#ae4de24a5d59b029e36708f4eae0a350f">Bond::EnumDeclaration</a>, <a class="el" href="class_bond_1_1_enumerator.html#ad6100eeae823c41c2fa18810f42f649d">Bond::Enumerator</a>, <a class="el" href="class_bond_1_1_function_definition.html#a6337bdbad7f705832d68d6009bf47e79">Bond::FunctionDefinition</a>, <a class="el" href="class_bond_1_1_named_initializer.html#aa85ecfb56d40879b6460ec3bc697f8bb">Bond::NamedInitializer</a>, <a class="el" href="class_bond_1_1_namespace_definition.html#a8783a3b40a68d34a08f1f6857ceaa39c">Bond::NamespaceDefinition</a>, <a class="el" href="class_bond_1_1_parameter.html#a96326e837cf3b649d4b09e9fbfb3846e">Bond::Parameter</a>, and <a class="el" href="class_bond_1_1_struct_declaration.html#a9ce2bd92d4aaf3d1d03dc091eaf3742b">Bond::StructDeclaration</a>.</p>
 
 </div>
@@ -508,6 +606,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the enclosing symbol. </p>
+<dl class="section return"><dt>Returns</dt><dd>The parent symbol, or null at global scope. </dd></dl>
+
 </div>
 </div>
 <a id="a7c625aa424d33b17add0a0cdf910483b" name="a7c625aa424d33b17add0a0cdf910483b"></a>
@@ -533,6 +634,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the enclosing symbol. </p>
+<dl class="section return"><dt>Returns</dt><dd>The parent symbol, or null at global scope. </dd></dl>
+
 </div>
 </div>
 <a id="a94935a4c6ffd49963bad4272b0fd2227" name="a94935a4c6ffd49963bad4272b0fd2227"></a>
@@ -557,6 +661,8 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the concrete symbol type. </p>
 
 <p>Implemented in <a class="el" href="class_bond_1_1_compound_statement.html#aa0daa37d2d91d30c6351dc7cc0b22438">Bond::CompoundStatement</a>, <a class="el" href="class_bond_1_1_enum_declaration.html#a4cb1932b775d989547fe3fd0479a7833">Bond::EnumDeclaration</a>, <a class="el" href="class_bond_1_1_enumerator.html#aae8e3b3b1d99f9b5ec64c0561e13b607">Bond::Enumerator</a>, <a class="el" href="class_bond_1_1_for_statement.html#a87d51de270ecc4437439d6fd3aca14d8">Bond::ForStatement</a>, <a class="el" href="class_bond_1_1_function_definition.html#a77e65478e05587e890fac7a2b30cae4a">Bond::FunctionDefinition</a>, <a class="el" href="class_bond_1_1_named_initializer.html#ad97a83ca06a7bf70e7af3f1a01a828d6">Bond::NamedInitializer</a>, <a class="el" href="class_bond_1_1_namespace_definition.html#af6952a946fda7b095ac4682ea0fa1538">Bond::NamespaceDefinition</a>, <a class="el" href="class_bond_1_1_parameter.html#a943122b9ec66a31ba736b9a6ddb39251">Bond::Parameter</a>, <a class="el" href="class_bond_1_1_struct_declaration.html#ade23da8d0ece9019c38ab0eda5a89fe6">Bond::StructDeclaration</a>, and <a class="el" href="class_bond_1_1_switch_section.html#a1a7c52045b6f14029380233dae22b84f">Bond::SwitchSection</a>.</p>
 
@@ -585,6 +691,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the symbol's type-and-value metadata. </p>
+<dl class="section return"><dt>Returns</dt><dd>Type and value information, or null if not applicable. </dd></dl>
+
 <p>Reimplemented in <a class="el" href="class_bond_1_1_enumerator.html#a564f5b694123e43050a0c59f8b02315e">Bond::Enumerator</a>, <a class="el" href="class_bond_1_1_function_definition.html#affee3d54bc6af2c29f69fc6329edf2a1">Bond::FunctionDefinition</a>, <a class="el" href="class_bond_1_1_named_initializer.html#a4a87b8beb6f4a932c85bcbf2f7b655d5">Bond::NamedInitializer</a>, and <a class="el" href="class_bond_1_1_parameter.html#a3ea3166141d85e1478388dea1589c0df">Bond::Parameter</a>.</p>
 
 </div>
@@ -612,6 +721,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the symbol's type-and-value metadata. </p>
+<dl class="section return"><dt>Returns</dt><dd>Type and value information, or null if not applicable. </dd></dl>
+
 <p>Reimplemented in <a class="el" href="class_bond_1_1_enumerator.html#a69fd0ef1ef568818d398e17d30436f2e">Bond::Enumerator</a>, <a class="el" href="class_bond_1_1_function_definition.html#a7f01719522dbb5ea2db00a7ac8d58a9c">Bond::FunctionDefinition</a>, <a class="el" href="class_bond_1_1_named_initializer.html#a72a2e97d22026e2e1413e2c49baf6a3d">Bond::NamedInitializer</a>, and <a class="el" href="class_bond_1_1_parameter.html#a8bcb093bec02c7a44c2dd71b3590bf8c">Bond::Parameter</a>.</p>
 
 </div>
@@ -630,6 +742,14 @@ Protected Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Inserts a symbol into this symbol's child list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">symbol</td><td><a class="el" href="class_bond_1_1_symbol.html" title="Base class for named entities that participate in symbol lookup.">Symbol</a> to insert. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -656,6 +776,8 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns true if this symbol has no explicit name. </p>
+
 </div>
 </div>
 <a id="a78296d8395bc00e5f5d6ba9eaa341bfe" name="a78296d8395bc00e5f5d6ba9eaa341bfe"></a>
@@ -681,6 +803,8 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns true when symbol resolution has completed for this symbol. </p>
+
 <p>Reimplemented in <a class="el" href="class_bond_1_1_struct_declaration.html#a4d8670b00b6518130b5f4aa14c9ee83e">Bond::StructDeclaration</a>.</p>
 
 </div>
@@ -700,6 +824,8 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Returns true if this symbol defines a type. </p>
+
 </div>
 </div>
 <a id="a3efa23777ea775819738eebef8687850" name="a3efa23777ea775819738eebef8687850"></a>
@@ -717,6 +843,14 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Returns true if this symbol's name matches the given text. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name to compare against. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a011ca3eea92cb34309d14b4c5a71b364" name="a011ca3eea92cb34309d14b4c5a71b364"></a>
@@ -733,6 +867,14 @@ Protected Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Sets the enclosing symbol. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>Parent symbol to assign. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

@@ -161,6 +161,9 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_bond_1_1
 </div><!--header-->
 <div class="contents">
 
+<p>Represents a complete parsed source file.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;bond/compiler/parsenodes.h&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Bond::TranslationUnit:</div>
@@ -168,29 +171,42 @@ Inheritance diagram for Bond::TranslationUnit:</div>
  <div class="center">
   <img src="class_bond_1_1_translation_unit.png" usemap="#Bond_3A_3ATranslationUnit_map" alt=""/>
   <map id="Bond_3A_3ATranslationUnit_map" name="Bond_3A_3ATranslationUnit_map">
-<area href="class_bond_1_1_list_parse_node.html" alt="Bond::ListParseNode" shape="rect" coords="0,56,130,80"/>
-<area href="class_bond_1_1_parse_node.html" alt="Bond::ParseNode" shape="rect" coords="0,0,130,24"/>
+<area href="class_bond_1_1_list_parse_node.html" title="Base class for parse nodes that can be linked into singly linked lists." alt="Bond::ListParseNode" shape="rect" coords="0,56,130,80"/>
+<area href="class_bond_1_1_parse_node.html" title="Base class for all parse tree nodes." alt="Bond::ParseNode" shape="rect" coords="0,0,130,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aade34a2cacfb737936b3f5e4b9d72f69" id="r_aade34a2cacfb737936b3f5e4b9d72f69"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aade34a2cacfb737936b3f5e4b9d72f69">TranslationUnit</a> (<a class="el" href="class_bond_1_1_include_directive.html">IncludeDirective</a> *includeDirectiveList, <a class="el" href="class_bond_1_1_list_parse_node.html#a7be09e471f388a343f2b68de7417f939">ListParseNode</a> *declarationList)</td></tr>
+<tr class="memdesc:aade34a2cacfb737936b3f5e4b9d72f69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a translation unit.  <br /></td></tr>
 <tr class="memitem:aa35326db8a708f39f09614809336f5eb" id="r_aa35326db8a708f39f09614809336f5eb"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#aa35326db8a708f39f09614809336f5eb">~TranslationUnit</a> ()</td></tr>
 <tr class="memitem:a84fb10c66bfd78c56e88c369c80f836f" id="r_a84fb10c66bfd78c56e88c369c80f836f"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a84fb10c66bfd78c56e88c369c80f836f">Accept</a> (<a class="el" href="class_bond_1_1_parse_node_visitor.html">ParseNodeVisitor</a> &amp;visitor) override</td></tr>
+<tr class="memdesc:a84fb10c66bfd78c56e88c369c80f836f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispatches this node to the given visitor.  <br /></td></tr>
 <tr class="memitem:a574088c233b905b9c2400781e49e9567" id="r_a574088c233b905b9c2400781e49e9567"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a574088c233b905b9c2400781e49e9567">Accept</a> (<a class="el" href="class_bond_1_1_parse_node_visitor.html">ParseNodeVisitor</a> &amp;visitor) const override</td></tr>
+<tr class="memdesc:a574088c233b905b9c2400781e49e9567"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispatches this node to the given visitor.  <br /></td></tr>
 <tr class="memitem:abc75a2f0033afca9aad65c23b7d92431" id="r_abc75a2f0033afca9aad65c23b7d92431"><td class="memItemLeft">virtual const <a class="el" href="class_bond_1_1_token.html">Token</a> *&#160;</td><td class="memItemRight"><a class="el" href="#abc75a2f0033afca9aad65c23b7d92431">GetContextToken</a> () const override</td></tr>
+<tr class="memdesc:abc75a2f0033afca9aad65c23b7d92431"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the token used as source context for diagnostics.  <br /></td></tr>
 <tr class="memitem:a9ca6973de4e5c64c7d95ac5fe218851f" id="r_a9ca6973de4e5c64c7d95ac5fe218851f"><td class="memItemLeft"><a class="el" href="class_bond_1_1_include_directive.html">IncludeDirective</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a9ca6973de4e5c64c7d95ac5fe218851f">GetIncludeDirectiveList</a> ()</td></tr>
+<tr class="memdesc:a9ca6973de4e5c64c7d95ac5fe218851f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the include directive list.  <br /></td></tr>
 <tr class="memitem:abe20e19acd93710cf84af70d7d76b68c" id="r_abe20e19acd93710cf84af70d7d76b68c"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_include_directive.html">IncludeDirective</a> *&#160;</td><td class="memItemRight"><a class="el" href="#abe20e19acd93710cf84af70d7d76b68c">GetIncludeDirectiveList</a> () const</td></tr>
+<tr class="memdesc:abe20e19acd93710cf84af70d7d76b68c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the include directive list.  <br /></td></tr>
 <tr class="memitem:a0693a1bdfc645fa416097092053b2fde" id="r_a0693a1bdfc645fa416097092053b2fde"><td class="memItemLeft"><a class="el" href="class_bond_1_1_list_parse_node.html#a7be09e471f388a343f2b68de7417f939">ListParseNode</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a0693a1bdfc645fa416097092053b2fde">GetExternalDeclarationList</a> ()</td></tr>
+<tr class="memdesc:a0693a1bdfc645fa416097092053b2fde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the list of top-level declarations.  <br /></td></tr>
 <tr class="memitem:a63889bed525f3fc1dac557f14ab51d72" id="r_a63889bed525f3fc1dac557f14ab51d72"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_list_parse_node.html#a7be09e471f388a343f2b68de7417f939">ListParseNode</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a63889bed525f3fc1dac557f14ab51d72">GetExternalDeclarationList</a> () const</td></tr>
+<tr class="memdesc:a63889bed525f3fc1dac557f14ab51d72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the list of top-level declarations.  <br /></td></tr>
 <tr class="memitem:a2557ffafdbb3431b2c0376e07d61d0f3" id="r_a2557ffafdbb3431b2c0376e07d61d0f3"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a2557ffafdbb3431b2c0376e07d61d0f3">RequiresCodeGeneration</a> () const</td></tr>
+<tr class="memdesc:a2557ffafdbb3431b2c0376e07d61d0f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this unit should produce code.  <br /></td></tr>
 <tr class="memitem:a4672b40ad5603fc87ee130015aea50cf" id="r_a4672b40ad5603fc87ee130015aea50cf"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4672b40ad5603fc87ee130015aea50cf">SetRequiresCodeGeneration</a> (bool required)</td></tr>
+<tr class="memdesc:a4672b40ad5603fc87ee130015aea50cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether this translation unit should produce code.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_bond_1_1_list_parse_node"><td colspan="2">Public Member Functions inherited from <a class="el" href="class_bond_1_1_list_parse_node.html">Bond::ListParseNode</a></td></tr>
 <tr class="memitem:ad34e3a955708dfa0ff6be03639492619 pub_methods_class_bond_1_1_list_parse_node" id="r_ad34e3a955708dfa0ff6be03639492619"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_list_parse_node.html#ad34e3a955708dfa0ff6be03639492619">~ListParseNode</a> ()</td></tr>
 <tr class="memitem:a7ef67e649f6ecb80adc285091fb42851 pub_methods_class_bond_1_1_list_parse_node" id="r_a7ef67e649f6ecb80adc285091fb42851"><td class="memItemLeft"><a class="el" href="class_bond_1_1_list_parse_node.html#a7be09e471f388a343f2b68de7417f939">ListParseNode</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_list_parse_node.html#a7ef67e649f6ecb80adc285091fb42851">GetNextNode</a> ()</td></tr>
+<tr class="memdesc:a7ef67e649f6ecb80adc285091fb42851 pub_methods_class_bond_1_1_list_parse_node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the next node in the list.  <br /></td></tr>
 <tr class="memitem:a2490c2fbc501b82858efae21f95c8922 pub_methods_class_bond_1_1_list_parse_node" id="r_a2490c2fbc501b82858efae21f95c8922"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_list_parse_node.html#a7be09e471f388a343f2b68de7417f939">ListParseNode</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_list_parse_node.html#a2490c2fbc501b82858efae21f95c8922">GetNextNode</a> () const</td></tr>
+<tr class="memdesc:a2490c2fbc501b82858efae21f95c8922 pub_methods_class_bond_1_1_list_parse_node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the next node in the list.  <br /></td></tr>
 <tr class="memitem:a631c04c65ff24ec65a51af71a1bed5a2 pub_methods_class_bond_1_1_list_parse_node" id="r_a631c04c65ff24ec65a51af71a1bed5a2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_list_parse_node.html#a631c04c65ff24ec65a51af71a1bed5a2">SetNextNode</a> (<a class="el" href="class_bond_1_1_list_parse_node.html#a7be09e471f388a343f2b68de7417f939">ListParseNode</a> *next)</td></tr>
+<tr class="memdesc:a631c04c65ff24ec65a51af71a1bed5a2 pub_methods_class_bond_1_1_list_parse_node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the next node in the list.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_bond_1_1_parse_node"><td colspan="2">Public Member Functions inherited from <a class="el" href="class_bond_1_1_parse_node.html">Bond::ParseNode</a></td></tr>
 <tr class="memitem:a38c4879ddf1a936a68ebd90eeb5a03da pub_methods_class_bond_1_1_parse_node" id="r_a38c4879ddf1a936a68ebd90eeb5a03da"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_parse_node.html#a38c4879ddf1a936a68ebd90eeb5a03da">~ParseNode</a> ()</td></tr>
 </table><table class="memberdecls">
@@ -201,7 +217,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_class_bond_1_1_parse_node"><td colspan="2">Protected Member Functions inherited from <a class="el" href="class_bond_1_1_parse_node.html">Bond::ParseNode</a></td></tr>
 <tr class="memitem:a7b951fe102ad645db975811c648013f0 pro_methods_class_bond_1_1_parse_node" id="r_a7b951fe102ad645db975811c648013f0"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_parse_node.html#a7b951fe102ad645db975811c648013f0">ParseNode</a> ()</td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represents a complete parsed source file. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aade34a2cacfb737936b3f5e4b9d72f69" name="aade34a2cacfb737936b3f5e4b9d72f69"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aade34a2cacfb737936b3f5e4b9d72f69">&#9670;&#160;</a></span>TranslationUnit()</h2>
 
@@ -228,6 +246,15 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Constructs a translation unit. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">includeDirectiveList</td><td>List of include directives. </td></tr>
+    <tr><td class="paramname">declarationList</td><td>List of top-level declarations. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -280,6 +307,14 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Dispatches this node to the given visitor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">visitor</td><td>Visitor that handles this node type. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Implements <a class="el" href="class_bond_1_1_parse_node.html#a9249cbd2b2f98a0e9cbfcb46b863ddbd">Bond::ParseNode</a>.</p>
 
 </div>
@@ -306,6 +341,14 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Dispatches this node to the given visitor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">visitor</td><td>Visitor that handles this node type. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="class_bond_1_1_parse_node.html#a361e795aa9316b263352acc85d53c13a">Bond::ParseNode</a>.</p>
 
@@ -334,6 +377,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the token used as source context for diagnostics. </p>
+<dl class="section return"><dt>Returns</dt><dd>A token associated with this node, or null if no token applies. </dd></dl>
+
 <p>Implements <a class="el" href="class_bond_1_1_parse_node.html#ae9a578142b6f2ab663f6b9990012fa13">Bond::ParseNode</a>.</p>
 
 </div>
@@ -361,6 +407,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the list of top-level declarations. </p>
+
 </div>
 </div>
 <a id="a63889bed525f3fc1dac557f14ab51d72" name="a63889bed525f3fc1dac557f14ab51d72"></a>
@@ -385,6 +433,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the list of top-level declarations. </p>
 
 </div>
 </div>
@@ -411,6 +461,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the include directive list. </p>
+
 </div>
 </div>
 <a id="abe20e19acd93710cf84af70d7d76b68c" name="abe20e19acd93710cf84af70d7d76b68c"></a>
@@ -435,6 +487,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the include directive list. </p>
 
 </div>
 </div>
@@ -461,6 +515,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns true if this unit should produce code. </p>
+
 </div>
 </div>
 <a id="a4672b40ad5603fc87ee130015aea50cf" name="a4672b40ad5603fc87ee130015aea50cf"></a>
@@ -485,6 +541,14 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Sets whether this translation unit should produce code. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">required</td><td>True to enable code generation. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

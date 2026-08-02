@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_bond_1_1
 </div><!--header-->
 <div class="contents">
 
-<p>A concrete implementation of <a class="el" href="class_bond_1_1_parse_node_visitor.html" title="An abstract interface that implements the Visitor pattern over all concrete types that derive from Pa...">ParseNodeVisitor</a> that, in addition to visiting a <a class="el" href="class_bond_1_1_parse_node.html">ParseNode</a>, does a depth-first traversal its children and visits them too.  
+<p>A concrete implementation of <a class="el" href="class_bond_1_1_parse_node_visitor.html" title="An abstract interface that implements the Visitor pattern over all concrete types that derive from Pa...">ParseNodeVisitor</a> that, in addition to visiting a <a class="el" href="class_bond_1_1_parse_node.html" title="Base class for all parse tree nodes.">ParseNode</a>, does a depth-first traversal its children and visits them too.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;bond/compiler/parsenodetraverser.h&gt;</code></p>
@@ -180,9 +180,9 @@ Inheritance diagram for Bond::ParseNodeTraverser:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af7556e051d8ea4c499b7d8e2ab6ae80e" id="r_af7556e051d8ea4c499b7d8e2ab6ae80e"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#af7556e051d8ea4c499b7d8e2ab6ae80e">~ParseNodeTraverser</a> ()</td></tr>
 <tr class="memitem:a2d021e676343ee3b903a2db40b1aa116" id="r_a2d021e676343ee3b903a2db40b1aa116"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a2d021e676343ee3b903a2db40b1aa116">Traverse</a> (<a class="el" href="class_bond_1_1_parse_node.html">ParseNode</a> *parseNode)</td></tr>
-<tr class="memdesc:a2d021e676343ee3b903a2db40b1aa116"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given <a class="el" href="class_bond_1_1_parse_node.html">ParseNode</a> is not null and calls its Accept method with <span class="tt">this</span> as the argument.  <br /></td></tr>
+<tr class="memdesc:a2d021e676343ee3b903a2db40b1aa116"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given <a class="el" href="class_bond_1_1_parse_node.html" title="Base class for all parse tree nodes.">ParseNode</a> is not null and calls its Accept method with <span class="tt">this</span> as the argument.  <br /></td></tr>
 <tr class="memitem:ac1e4819b8f27b1749d84b82ca3556cda" id="r_ac1e4819b8f27b1749d84b82ca3556cda"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ac1e4819b8f27b1749d84b82ca3556cda">Traverse</a> (const <a class="el" href="class_bond_1_1_parse_node.html">ParseNode</a> *parseNode)</td></tr>
-<tr class="memdesc:ac1e4819b8f27b1749d84b82ca3556cda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given <a class="el" href="class_bond_1_1_parse_node.html">ParseNode</a> is not null and calls its Accept method with <span class="tt">this</span> as the argument.  <br /></td></tr>
+<tr class="memdesc:ac1e4819b8f27b1749d84b82ca3556cda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given <a class="el" href="class_bond_1_1_parse_node.html" title="Base class for all parse tree nodes.">ParseNode</a> is not null and calls its Accept method with <span class="tt">this</span> as the argument.  <br /></td></tr>
 <tr class="memitem:a0eb904787ebfbb1721786544acef701c" id="r_a0eb904787ebfbb1721786544acef701c"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a0eb904787ebfbb1721786544acef701c">TraverseList</a> (<a class="el" href="class_bond_1_1_list_parse_node.html">ListParseNode</a> *listNode)</td></tr>
 <tr class="memdesc:a0eb904787ebfbb1721786544acef701c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterates over the given list of ListParseNodes and calls the Accept method of each one with <span class="tt">this</span> as the argument.  <br /></td></tr>
 <tr class="memitem:a99f1039481c2b85ea1041dcf2385f75c" id="r_a99f1039481c2b85ea1041dcf2385f75c"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a99f1039481c2b85ea1041dcf2385f75c">TraverseList</a> (const <a class="el" href="class_bond_1_1_list_parse_node.html">ListParseNode</a> *listNode)</td></tr>
@@ -267,9 +267,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a35866c5e516ea2490c17d94031cb6391 pub_methods_class_bond_1_1_parse_node_visitor" id="r_a35866c5e516ea2490c17d94031cb6391"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_parse_node_visitor.html#a35866c5e516ea2490c17d94031cb6391">~ParseNodeVisitor</a> ()</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A concrete implementation of <a class="el" href="class_bond_1_1_parse_node_visitor.html" title="An abstract interface that implements the Visitor pattern over all concrete types that derive from Pa...">ParseNodeVisitor</a> that, in addition to visiting a <a class="el" href="class_bond_1_1_parse_node.html">ParseNode</a>, does a depth-first traversal its children and visits them too. </p>
-<p>Since the traversal of a <a class="el" href="class_bond_1_1_parse_node.html">ParseNode</a>'s children is invoked from the Visit methods, if any of them are overridden, traversal of the node's children will not occur unless an overridden method calls the corresponding <a class="el" href="#a9a1d29e91a014c1df15490c935750ddb">ParseNodeTraverser::Visit</a> method. Traversal can be pre or post-order depending on whether the <a class="el" href="#a9a1d29e91a014c1df15490c935750ddb">ParseNodeTraverser::Visit</a> method is called at the beginning or end of the body of an overridden Visit method. For more complex traversal orders (e.g. in-order), traversal of the children may need to be reimplemented in the overridden Visit method instead of calling the base method.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_bond_1_1_parse_node.html">ParseNode</a>, <a class="el" href="class_bond_1_1_parse_node_visitor_adapter.html" title="A concrete implementation of ParseNodeVisitor with methods that do nothing.">ParseNodeVisitorAdapter</a>, <a class="el" href="class_bond_1_1_parse_node_traverser.html" title="A concrete implementation of ParseNodeVisitor that, in addition to visiting a ParseNode,...">ParseNodeTraverser</a> </dd></dl>
+<div class="textblock"><p>A concrete implementation of <a class="el" href="class_bond_1_1_parse_node_visitor.html" title="An abstract interface that implements the Visitor pattern over all concrete types that derive from Pa...">ParseNodeVisitor</a> that, in addition to visiting a <a class="el" href="class_bond_1_1_parse_node.html" title="Base class for all parse tree nodes.">ParseNode</a>, does a depth-first traversal its children and visits them too. </p>
+<p>Since the traversal of a <a class="el" href="class_bond_1_1_parse_node.html" title="Base class for all parse tree nodes.">ParseNode</a>'s children is invoked from the Visit methods, if any of them are overridden, traversal of the node's children will not occur unless an overridden method calls the corresponding <a class="el" href="#a9a1d29e91a014c1df15490c935750ddb">ParseNodeTraverser::Visit</a> method. Traversal can be pre or post-order depending on whether the <a class="el" href="#a9a1d29e91a014c1df15490c935750ddb">ParseNodeTraverser::Visit</a> method is called at the beginning or end of the body of an overridden Visit method. For more complex traversal orders (e.g. in-order), traversal of the children may need to be reimplemented in the overridden Visit method instead of calling the base method.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_bond_1_1_parse_node.html" title="Base class for all parse tree nodes.">ParseNode</a>, <a class="el" href="class_bond_1_1_parse_node_visitor_adapter.html" title="A concrete implementation of ParseNodeVisitor with methods that do nothing.">ParseNodeVisitorAdapter</a>, <a class="el" href="class_bond_1_1_parse_node_traverser.html" title="A concrete implementation of ParseNodeVisitor that, in addition to visiting a ParseNode,...">ParseNodeTraverser</a> </dd></dl>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af7556e051d8ea4c499b7d8e2ab6ae80e" name="af7556e051d8ea4c499b7d8e2ab6ae80e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af7556e051d8ea4c499b7d8e2ab6ae80e">&#9670;&#160;</a></span>~ParseNodeTraverser()</h2>
@@ -320,7 +320,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Checks if the given <a class="el" href="class_bond_1_1_parse_node.html">ParseNode</a> is not null and calls its Accept method with <span class="tt">this</span> as the argument. </p>
+<p>Checks if the given <a class="el" href="class_bond_1_1_parse_node.html" title="Base class for all parse tree nodes.">ParseNode</a> is not null and calls its Accept method with <span class="tt">this</span> as the argument. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">parseNode</td><td>The node whose Accept method is called. </td></tr>
@@ -353,7 +353,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Checks if the given <a class="el" href="class_bond_1_1_parse_node.html">ParseNode</a> is not null and calls its Accept method with <span class="tt">this</span> as the argument. </p>
+<p>Checks if the given <a class="el" href="class_bond_1_1_parse_node.html" title="Base class for all parse tree nodes.">ParseNode</a> is not null and calls its Accept method with <span class="tt">this</span> as the argument. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">parseNode</td><td>The node whose Accept method is called. </td></tr>

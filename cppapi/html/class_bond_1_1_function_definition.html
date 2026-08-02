@@ -161,6 +161,9 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_bond_1_1
 </div><!--header-->
 <div class="contents">
 
+<p>Represents a function declaration or definition.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;bond/compiler/parsenodes.h&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Bond::FunctionDefinition:</div>
@@ -168,54 +171,89 @@ Inheritance diagram for Bond::FunctionDefinition:</div>
  <div class="center">
   <img src="class_bond_1_1_function_definition.png" usemap="#Bond_3A_3AFunctionDefinition_map" alt=""/>
   <map id="Bond_3A_3AFunctionDefinition_map" name="Bond_3A_3AFunctionDefinition_map">
-<area href="class_bond_1_1_symbol.html" alt="Bond::Symbol" shape="rect" coords="0,112,149,136"/>
-<area href="class_bond_1_1_list_parse_node.html" alt="Bond::ListParseNode" shape="rect" coords="0,56,149,80"/>
-<area href="class_bond_1_1_parse_node.html" alt="Bond::ParseNode" shape="rect" coords="0,0,149,24"/>
+<area href="class_bond_1_1_symbol.html" title="Base class for named entities that participate in symbol lookup." alt="Bond::Symbol" shape="rect" coords="0,112,149,136"/>
+<area href="class_bond_1_1_list_parse_node.html" title="Base class for parse nodes that can be linked into singly linked lists." alt="Bond::ListParseNode" shape="rect" coords="0,56,149,80"/>
+<area href="class_bond_1_1_parse_node.html" title="Base class for all parse tree nodes." alt="Bond::ParseNode" shape="rect" coords="0,0,149,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aabdcb69f71f737b543a2088a18895749" id="r_aabdcb69f71f737b543a2088a18895749"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aabdcb69f71f737b543a2088a18895749">FunctionDefinition</a> (<a class="el" href="class_bond_1_1_function_prototype.html">FunctionPrototype</a> *prototype, <a class="el" href="class_bond_1_1_compound_statement.html">CompoundStatement</a> *body, <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> *thisTypeDescriptor, <a class="el" href="group__nodes.html#ga7076d8340ec207cc8c9d34193b45aad2">Scope</a> scope)</td></tr>
+<tr class="memdesc:aabdcb69f71f737b543a2088a18895749"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a function definition node.  <br /></td></tr>
 <tr class="memitem:aeb37ad4b1f5cd3665442a55a112346eb" id="r_aeb37ad4b1f5cd3665442a55a112346eb"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#aeb37ad4b1f5cd3665442a55a112346eb">~FunctionDefinition</a> ()</td></tr>
 <tr class="memitem:a4e19472cfe486e88ef7865e8e379f757" id="r_a4e19472cfe486e88ef7865e8e379f757"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a4e19472cfe486e88ef7865e8e379f757">Accept</a> (<a class="el" href="class_bond_1_1_parse_node_visitor.html">ParseNodeVisitor</a> &amp;visitor) override</td></tr>
+<tr class="memdesc:a4e19472cfe486e88ef7865e8e379f757"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispatches this node to the given visitor.  <br /></td></tr>
 <tr class="memitem:ac442970edc072fde9e4e1d30a08946b3" id="r_ac442970edc072fde9e4e1d30a08946b3"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ac442970edc072fde9e4e1d30a08946b3">Accept</a> (<a class="el" href="class_bond_1_1_parse_node_visitor.html">ParseNodeVisitor</a> &amp;visitor) const override</td></tr>
+<tr class="memdesc:ac442970edc072fde9e4e1d30a08946b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispatches this node to the given visitor.  <br /></td></tr>
 <tr class="memitem:a77e65478e05587e890fac7a2b30cae4a" id="r_a77e65478e05587e890fac7a2b30cae4a"><td class="memItemLeft">virtual <a class="el" href="class_bond_1_1_symbol.html#a37116ce688af2562fa23a3b40612faed">SymbolType</a>&#160;</td><td class="memItemRight"><a class="el" href="#a77e65478e05587e890fac7a2b30cae4a">GetSymbolType</a> () const override</td></tr>
+<tr class="memdesc:a77e65478e05587e890fac7a2b30cae4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the concrete symbol type.  <br /></td></tr>
 <tr class="memitem:a6337bdbad7f705832d68d6009bf47e79" id="r_a6337bdbad7f705832d68d6009bf47e79"><td class="memItemLeft">virtual const <a class="el" href="class_bond_1_1_token.html">Token</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a6337bdbad7f705832d68d6009bf47e79">GetName</a> () const override</td></tr>
+<tr class="memdesc:a6337bdbad7f705832d68d6009bf47e79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the symbol name token.  <br /></td></tr>
 <tr class="memitem:affee3d54bc6af2c29f69fc6329edf2a1" id="r_affee3d54bc6af2c29f69fc6329edf2a1"><td class="memItemLeft">virtual <a class="el" href="class_bond_1_1_type_and_value.html">TypeAndValue</a> *&#160;</td><td class="memItemRight"><a class="el" href="#affee3d54bc6af2c29f69fc6329edf2a1">GetTypeAndValue</a> () override</td></tr>
+<tr class="memdesc:affee3d54bc6af2c29f69fc6329edf2a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the symbol's type-and-value metadata.  <br /></td></tr>
 <tr class="memitem:a7f01719522dbb5ea2db00a7ac8d58a9c" id="r_a7f01719522dbb5ea2db00a7ac8d58a9c"><td class="memItemLeft">virtual const <a class="el" href="class_bond_1_1_type_and_value.html">TypeAndValue</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a7f01719522dbb5ea2db00a7ac8d58a9c">GetTypeAndValue</a> () const override</td></tr>
+<tr class="memdesc:a7f01719522dbb5ea2db00a7ac8d58a9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the symbol's type-and-value metadata.  <br /></td></tr>
 <tr class="memitem:ab34dd3cef583d719942735631eb67d16" id="r_ab34dd3cef583d719942735631eb67d16"><td class="memItemLeft"><a class="el" href="class_bond_1_1_function_prototype.html">FunctionPrototype</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ab34dd3cef583d719942735631eb67d16">GetPrototype</a> ()</td></tr>
+<tr class="memdesc:ab34dd3cef583d719942735631eb67d16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the function prototype.  <br /></td></tr>
 <tr class="memitem:a7c907c172cd6c26b4a2156b5585864d1" id="r_a7c907c172cd6c26b4a2156b5585864d1"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_function_prototype.html">FunctionPrototype</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a7c907c172cd6c26b4a2156b5585864d1">GetPrototype</a> () const</td></tr>
+<tr class="memdesc:a7c907c172cd6c26b4a2156b5585864d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the function prototype.  <br /></td></tr>
 <tr class="memitem:aff6d1d744371bb7c6f6f62934a6792da" id="r_aff6d1d744371bb7c6f6f62934a6792da"><td class="memItemLeft"><a class="el" href="class_bond_1_1_compound_statement.html">CompoundStatement</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aff6d1d744371bb7c6f6f62934a6792da">GetBody</a> ()</td></tr>
+<tr class="memdesc:aff6d1d744371bb7c6f6f62934a6792da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the function body.  <br /></td></tr>
 <tr class="memitem:aad74dca1e8c460d15e4064621f11baeb" id="r_aad74dca1e8c460d15e4064621f11baeb"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_compound_statement.html">CompoundStatement</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aad74dca1e8c460d15e4064621f11baeb">GetBody</a> () const</td></tr>
+<tr class="memdesc:aad74dca1e8c460d15e4064621f11baeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the function body.  <br /></td></tr>
 <tr class="memitem:a81cdf973efed9f95b8f87ddddaed1406" id="r_a81cdf973efed9f95b8f87ddddaed1406"><td class="memItemLeft"><a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a81cdf973efed9f95b8f87ddddaed1406">GetThisTypeDescriptor</a> ()</td></tr>
+<tr class="memdesc:a81cdf973efed9f95b8f87ddddaed1406"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the this-parameter type descriptor.  <br /></td></tr>
 <tr class="memitem:a270917be95fe5cbefe35638b09b4d74e" id="r_a270917be95fe5cbefe35638b09b4d74e"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a270917be95fe5cbefe35638b09b4d74e">GetThisTypeDescriptor</a> () const</td></tr>
+<tr class="memdesc:a270917be95fe5cbefe35638b09b4d74e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the this-parameter type descriptor.  <br /></td></tr>
 <tr class="memitem:a6bbfaaa29432c3e0e77864a60fdebf58" id="r_a6bbfaaa29432c3e0e77864a60fdebf58"><td class="memItemLeft"><a class="el" href="group__nodes.html#ga7076d8340ec207cc8c9d34193b45aad2">Scope</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6bbfaaa29432c3e0e77864a60fdebf58">GetScope</a> () const</td></tr>
+<tr class="memdesc:a6bbfaaa29432c3e0e77864a60fdebf58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the declaration scope of this function.  <br /></td></tr>
 <tr class="memitem:afa0d2125d0470a41cf5278a0d10a774e" id="r_afa0d2125d0470a41cf5278a0d10a774e"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#afa0d2125d0470a41cf5278a0d10a774e">IsNative</a> () const</td></tr>
+<tr class="memdesc:afa0d2125d0470a41cf5278a0d10a774e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this function is native (no <a class="el" href="namespace_bond.html">Bond</a> body).  <br /></td></tr>
 <tr class="memitem:a5b40e8d40d7b1e7a683bff8f6c5ecd6f" id="r_a5b40e8d40d7b1e7a683bff8f6c5ecd6f"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a5b40e8d40d7b1e7a683bff8f6c5ecd6f">GetNumReservedJumpTargetIds</a> () const</td></tr>
+<tr class="memdesc:a5b40e8d40d7b1e7a683bff8f6c5ecd6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of reserved jump target IDs used by code generation.  <br /></td></tr>
 <tr class="memitem:a6a7f32e1ebd5a1e352ac377da683e9b4" id="r_a6a7f32e1ebd5a1e352ac377da683e9b4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6a7f32e1ebd5a1e352ac377da683e9b4">SetNumReservedJumpTargetIds</a> (size_t numIds)</td></tr>
+<tr class="memdesc:a6a7f32e1ebd5a1e352ac377da683e9b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the number of reserved jump target IDs used by code generation.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_bond_1_1_symbol"><td colspan="2">Public Member Functions inherited from <a class="el" href="class_bond_1_1_symbol.html">Bond::Symbol</a></td></tr>
 <tr class="memitem:a61b5e84991bae8a60edb4af528ef29bd pub_methods_class_bond_1_1_symbol" id="r_a61b5e84991bae8a60edb4af528ef29bd"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_symbol.html#a61b5e84991bae8a60edb4af528ef29bd">~Symbol</a> ()</td></tr>
 <tr class="memitem:a2b167c4a2bcebbbb9ae3895a7794bcf9 pub_methods_class_bond_1_1_symbol" id="r_a2b167c4a2bcebbbb9ae3895a7794bcf9"><td class="memItemLeft">virtual const <a class="el" href="class_bond_1_1_token.html">Token</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_symbol.html#a2b167c4a2bcebbbb9ae3895a7794bcf9">GetContextToken</a> () const override</td></tr>
+<tr class="memdesc:a2b167c4a2bcebbbb9ae3895a7794bcf9 pub_methods_class_bond_1_1_symbol"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the token used as source context for diagnostics.  <br /></td></tr>
 <tr class="memitem:a78296d8395bc00e5f5d6ba9eaa341bfe pub_methods_class_bond_1_1_symbol" id="r_a78296d8395bc00e5f5d6ba9eaa341bfe"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_symbol.html#a78296d8395bc00e5f5d6ba9eaa341bfe">IsResolved</a> () const</td></tr>
+<tr class="memdesc:a78296d8395bc00e5f5d6ba9eaa341bfe pub_methods_class_bond_1_1_symbol"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true when symbol resolution has completed for this symbol.  <br /></td></tr>
 <tr class="memitem:a63f5d9711d29dbfb77e22c7f7a8d9346 pub_methods_class_bond_1_1_symbol" id="r_a63f5d9711d29dbfb77e22c7f7a8d9346"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_symbol.html#a63f5d9711d29dbfb77e22c7f7a8d9346">IsTypeDefinition</a> () const</td></tr>
+<tr class="memdesc:a63f5d9711d29dbfb77e22c7f7a8d9346 pub_methods_class_bond_1_1_symbol"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this symbol defines a type.  <br /></td></tr>
 <tr class="memitem:a06da8494d2f752918f707e5e0a0ee0da pub_methods_class_bond_1_1_symbol" id="r_a06da8494d2f752918f707e5e0a0ee0da"><td class="memItemLeft"><a class="el" href="class_bond_1_1_symbol.html#a16d85fe8a9094681f443028b875ec022">Symbol</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_symbol.html#a06da8494d2f752918f707e5e0a0ee0da">GetParentSymbol</a> ()</td></tr>
+<tr class="memdesc:a06da8494d2f752918f707e5e0a0ee0da pub_methods_class_bond_1_1_symbol"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the enclosing symbol.  <br /></td></tr>
 <tr class="memitem:a7c625aa424d33b17add0a0cdf910483b pub_methods_class_bond_1_1_symbol" id="r_a7c625aa424d33b17add0a0cdf910483b"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_symbol.html#a16d85fe8a9094681f443028b875ec022">Symbol</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_symbol.html#a7c625aa424d33b17add0a0cdf910483b">GetParentSymbol</a> () const</td></tr>
+<tr class="memdesc:a7c625aa424d33b17add0a0cdf910483b pub_methods_class_bond_1_1_symbol"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the enclosing symbol.  <br /></td></tr>
 <tr class="memitem:a011ca3eea92cb34309d14b4c5a71b364 pub_methods_class_bond_1_1_symbol" id="r_a011ca3eea92cb34309d14b4c5a71b364"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_symbol.html#a011ca3eea92cb34309d14b4c5a71b364">SetParentSymbol</a> (<a class="el" href="class_bond_1_1_symbol.html#a16d85fe8a9094681f443028b875ec022">Symbol</a> *parent)</td></tr>
+<tr class="memdesc:a011ca3eea92cb34309d14b4c5a71b364 pub_methods_class_bond_1_1_symbol"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the enclosing symbol.  <br /></td></tr>
 <tr class="memitem:a5d003b26e7bd5e089e6c05dbe39d1c06 pub_methods_class_bond_1_1_symbol" id="r_a5d003b26e7bd5e089e6c05dbe39d1c06"><td class="memItemLeft"><a class="el" href="class_bond_1_1_symbol.html#a16d85fe8a9094681f443028b875ec022">Symbol</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_symbol.html#a5d003b26e7bd5e089e6c05dbe39d1c06">FindSymbol</a> (const StringView &amp;name)</td></tr>
+<tr class="memdesc:a5d003b26e7bd5e089e6c05dbe39d1c06 pub_methods_class_bond_1_1_symbol"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds a directly contained symbol by name.  <br /></td></tr>
 <tr class="memitem:aac8353df4ee950e09ce0a1e83b76cd1d pub_methods_class_bond_1_1_symbol" id="r_aac8353df4ee950e09ce0a1e83b76cd1d"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_symbol.html#a16d85fe8a9094681f443028b875ec022">Symbol</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_symbol.html#aac8353df4ee950e09ce0a1e83b76cd1d">FindSymbol</a> (const StringView &amp;name) const</td></tr>
+<tr class="memdesc:aac8353df4ee950e09ce0a1e83b76cd1d pub_methods_class_bond_1_1_symbol"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds a directly contained symbol by name.  <br /></td></tr>
 <tr class="memitem:a3c16267806c1adff9db8068206350d0b pub_methods_class_bond_1_1_symbol" id="r_a3c16267806c1adff9db8068206350d0b"><td class="memItemLeft"><a class="el" href="class_bond_1_1_symbol.html#a16d85fe8a9094681f443028b875ec022">Symbol</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_symbol.html#a3c16267806c1adff9db8068206350d0b">FindSymbol</a> (const <a class="el" href="class_bond_1_1_token.html">Token</a> *name)</td></tr>
+<tr class="memdesc:a3c16267806c1adff9db8068206350d0b pub_methods_class_bond_1_1_symbol"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds a directly contained symbol by token text.  <br /></td></tr>
 <tr class="memitem:aec6752dace66dc7504238f0f96a85381 pub_methods_class_bond_1_1_symbol" id="r_aec6752dace66dc7504238f0f96a85381"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_symbol.html#a16d85fe8a9094681f443028b875ec022">Symbol</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_symbol.html#aec6752dace66dc7504238f0f96a85381">FindSymbol</a> (const <a class="el" href="class_bond_1_1_token.html">Token</a> *name) const</td></tr>
+<tr class="memdesc:aec6752dace66dc7504238f0f96a85381 pub_methods_class_bond_1_1_symbol"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds a directly contained symbol by token text.  <br /></td></tr>
 <tr class="memitem:aa1133aedf14d151b31966c0b1cf9a388 pub_methods_class_bond_1_1_symbol" id="r_aa1133aedf14d151b31966c0b1cf9a388"><td class="memItemLeft"><a class="el" href="class_bond_1_1_symbol.html#a16d85fe8a9094681f443028b875ec022">Symbol</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_symbol.html#aa1133aedf14d151b31966c0b1cf9a388">FindSymbol</a> (const <a class="el" href="class_bond_1_1_qualified_identifier.html">QualifiedIdentifier</a> *identifier)</td></tr>
+<tr class="memdesc:aa1133aedf14d151b31966c0b1cf9a388 pub_methods_class_bond_1_1_symbol"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds a symbol referenced by a qualified identifier.  <br /></td></tr>
 <tr class="memitem:a49c92d40779b10dbe4ba6632b979a1c0 pub_methods_class_bond_1_1_symbol" id="r_a49c92d40779b10dbe4ba6632b979a1c0"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_symbol.html#a16d85fe8a9094681f443028b875ec022">Symbol</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_symbol.html#a49c92d40779b10dbe4ba6632b979a1c0">FindSymbol</a> (const <a class="el" href="class_bond_1_1_qualified_identifier.html">QualifiedIdentifier</a> *identifier) const</td></tr>
+<tr class="memdesc:a49c92d40779b10dbe4ba6632b979a1c0 pub_methods_class_bond_1_1_symbol"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds a symbol referenced by a qualified identifier.  <br /></td></tr>
 <tr class="memitem:a6d19ac252374cf7047511864f5e0cabf pub_methods_class_bond_1_1_symbol" id="r_a6d19ac252374cf7047511864f5e0cabf"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_symbol.html#a6d19ac252374cf7047511864f5e0cabf">InsertSymbol</a> (<a class="el" href="class_bond_1_1_symbol.html#a16d85fe8a9094681f443028b875ec022">Symbol</a> *symbol)</td></tr>
+<tr class="memdesc:a6d19ac252374cf7047511864f5e0cabf pub_methods_class_bond_1_1_symbol"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts a symbol into this symbol's child list.  <br /></td></tr>
 <tr class="memitem:a75e4c9dff783454b2f3f36c09979559b pub_methods_class_bond_1_1_symbol" id="r_a75e4c9dff783454b2f3f36c09979559b"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_symbol.html#a75e4c9dff783454b2f3f36c09979559b">IsAnonymous</a> () const</td></tr>
+<tr class="memdesc:a75e4c9dff783454b2f3f36c09979559b pub_methods_class_bond_1_1_symbol"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this symbol has no explicit name.  <br /></td></tr>
 <tr class="memitem:a3efa23777ea775819738eebef8687850 pub_methods_class_bond_1_1_symbol" id="r_a3efa23777ea775819738eebef8687850"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_symbol.html#a3efa23777ea775819738eebef8687850">Matches</a> (const StringView &amp;name) const</td></tr>
+<tr class="memdesc:a3efa23777ea775819738eebef8687850 pub_methods_class_bond_1_1_symbol"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this symbol's name matches the given text.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_bond_1_1_list_parse_node"><td colspan="2">Public Member Functions inherited from <a class="el" href="class_bond_1_1_list_parse_node.html">Bond::ListParseNode</a></td></tr>
 <tr class="memitem:ad34e3a955708dfa0ff6be03639492619 pub_methods_class_bond_1_1_list_parse_node" id="r_ad34e3a955708dfa0ff6be03639492619"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_list_parse_node.html#ad34e3a955708dfa0ff6be03639492619">~ListParseNode</a> ()</td></tr>
 <tr class="memitem:a7ef67e649f6ecb80adc285091fb42851 pub_methods_class_bond_1_1_list_parse_node" id="r_a7ef67e649f6ecb80adc285091fb42851"><td class="memItemLeft"><a class="el" href="class_bond_1_1_list_parse_node.html#a7be09e471f388a343f2b68de7417f939">ListParseNode</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_list_parse_node.html#a7ef67e649f6ecb80adc285091fb42851">GetNextNode</a> ()</td></tr>
+<tr class="memdesc:a7ef67e649f6ecb80adc285091fb42851 pub_methods_class_bond_1_1_list_parse_node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the next node in the list.  <br /></td></tr>
 <tr class="memitem:a2490c2fbc501b82858efae21f95c8922 pub_methods_class_bond_1_1_list_parse_node" id="r_a2490c2fbc501b82858efae21f95c8922"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_list_parse_node.html#a7be09e471f388a343f2b68de7417f939">ListParseNode</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_list_parse_node.html#a2490c2fbc501b82858efae21f95c8922">GetNextNode</a> () const</td></tr>
+<tr class="memdesc:a2490c2fbc501b82858efae21f95c8922 pub_methods_class_bond_1_1_list_parse_node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the next node in the list.  <br /></td></tr>
 <tr class="memitem:a631c04c65ff24ec65a51af71a1bed5a2 pub_methods_class_bond_1_1_list_parse_node" id="r_a631c04c65ff24ec65a51af71a1bed5a2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_list_parse_node.html#a631c04c65ff24ec65a51af71a1bed5a2">SetNextNode</a> (<a class="el" href="class_bond_1_1_list_parse_node.html#a7be09e471f388a343f2b68de7417f939">ListParseNode</a> *next)</td></tr>
+<tr class="memdesc:a631c04c65ff24ec65a51af71a1bed5a2 pub_methods_class_bond_1_1_list_parse_node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the next node in the list.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_bond_1_1_parse_node"><td colspan="2">Public Member Functions inherited from <a class="el" href="class_bond_1_1_parse_node.html">Bond::ParseNode</a></td></tr>
 <tr class="memitem:a38c4879ddf1a936a68ebd90eeb5a03da pub_methods_class_bond_1_1_parse_node" id="r_a38c4879ddf1a936a68ebd90eeb5a03da"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_parse_node.html#a38c4879ddf1a936a68ebd90eeb5a03da">~ParseNode</a> ()</td></tr>
 </table><table class="memberdecls">
@@ -232,6 +270,7 @@ Additional Inherited Members</h2></td></tr>
 , <a class="el" href="class_bond_1_1_symbol.html#a37116ce688af2562fa23a3b40612faeda9a46909d643e80e02dc3c0dd2e5da13d">TYPE_FUNCTION</a>
 <br />
  }</td></tr>
+<tr class="memdesc:a37116ce688af2562fa23a3b40612faed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifies the concrete symbol category.  <a href="class_bond_1_1_symbol.html#a37116ce688af2562fa23a3b40612faed">More...</a><br /></td></tr>
 <tr class="inherit_header pro_methods_class_bond_1_1_symbol"><td colspan="2">Protected Member Functions inherited from <a class="el" href="class_bond_1_1_symbol.html">Bond::Symbol</a></td></tr>
 <tr class="memitem:a16d85fe8a9094681f443028b875ec022 pro_methods_class_bond_1_1_symbol" id="r_a16d85fe8a9094681f443028b875ec022"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_symbol.html#a16d85fe8a9094681f443028b875ec022">Symbol</a> ()</td></tr>
 <tr class="inherit_header pro_methods_class_bond_1_1_list_parse_node"><td colspan="2">Protected Member Functions inherited from <a class="el" href="class_bond_1_1_list_parse_node.html">Bond::ListParseNode</a></td></tr>
@@ -239,7 +278,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_class_bond_1_1_parse_node"><td colspan="2">Protected Member Functions inherited from <a class="el" href="class_bond_1_1_parse_node.html">Bond::ParseNode</a></td></tr>
 <tr class="memitem:a7b951fe102ad645db975811c648013f0 pro_methods_class_bond_1_1_parse_node" id="r_a7b951fe102ad645db975811c648013f0"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_parse_node.html#a7b951fe102ad645db975811c648013f0">ParseNode</a> ()</td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represents a function declaration or definition. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aabdcb69f71f737b543a2088a18895749" name="aabdcb69f71f737b543a2088a18895749"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aabdcb69f71f737b543a2088a18895749">&#9670;&#160;</a></span>FunctionDefinition()</h2>
 
@@ -276,6 +317,17 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Constructs a function definition node. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prototype</td><td><a class="el" href="struct_bond_1_1_function.html" title="Function metadata and executable payload loaded from CBO.">Function</a> prototype. </td></tr>
+    <tr><td class="paramname">body</td><td><a class="el" href="struct_bond_1_1_function.html" title="Function metadata and executable payload loaded from CBO.">Function</a> body, or null for native functions. </td></tr>
+    <tr><td class="paramname">thisTypeDescriptor</td><td>This-parameter type for member functions. </td></tr>
+    <tr><td class="paramname">scope</td><td><a class="el" href="group__nodes.html#ga7076d8340ec207cc8c9d34193b45aad2" title="Describes where a symbol is declared.">Scope</a> in which the function is declared. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -328,6 +380,14 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Dispatches this node to the given visitor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">visitor</td><td>Visitor that handles this node type. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Implements <a class="el" href="class_bond_1_1_parse_node.html#a9249cbd2b2f98a0e9cbfcb46b863ddbd">Bond::ParseNode</a>.</p>
 
 </div>
@@ -354,6 +414,14 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Dispatches this node to the given visitor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">visitor</td><td>Visitor that handles this node type. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="class_bond_1_1_parse_node.html#a361e795aa9316b263352acc85d53c13a">Bond::ParseNode</a>.</p>
 
@@ -382,6 +450,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the function body. </p>
+
 </div>
 </div>
 <a id="aad74dca1e8c460d15e4064621f11baeb" name="aad74dca1e8c460d15e4064621f11baeb"></a>
@@ -407,6 +477,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the function body. </p>
+
 </div>
 </div>
 <a id="a6337bdbad7f705832d68d6009bf47e79" name="a6337bdbad7f705832d68d6009bf47e79"></a>
@@ -431,6 +503,9 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the symbol name token. </p>
+<dl class="section return"><dt>Returns</dt><dd>The name token, or null for anonymous symbols. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="class_bond_1_1_symbol.html#a4c547838b9d4b2a1a54c067e43dc538a">Bond::Symbol</a>.</p>
 
@@ -459,6 +534,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the number of reserved jump target IDs used by code generation. </p>
+
 </div>
 </div>
 <a id="ab34dd3cef583d719942735631eb67d16" name="ab34dd3cef583d719942735631eb67d16"></a>
@@ -483,6 +560,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the function prototype. </p>
 
 </div>
 </div>
@@ -509,6 +588,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the function prototype. </p>
+
 </div>
 </div>
 <a id="a6bbfaaa29432c3e0e77864a60fdebf58" name="a6bbfaaa29432c3e0e77864a60fdebf58"></a>
@@ -534,6 +615,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the declaration scope of this function. </p>
+
 </div>
 </div>
 <a id="a77e65478e05587e890fac7a2b30cae4a" name="a77e65478e05587e890fac7a2b30cae4a"></a>
@@ -558,6 +641,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the concrete symbol type. </p>
 
 <p>Implements <a class="el" href="class_bond_1_1_symbol.html#a94935a4c6ffd49963bad4272b0fd2227">Bond::Symbol</a>.</p>
 
@@ -586,6 +671,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the this-parameter type descriptor. </p>
+
 </div>
 </div>
 <a id="a270917be95fe5cbefe35638b09b4d74e" name="a270917be95fe5cbefe35638b09b4d74e"></a>
@@ -611,6 +698,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the this-parameter type descriptor. </p>
+
 </div>
 </div>
 <a id="a7f01719522dbb5ea2db00a7ac8d58a9c" name="a7f01719522dbb5ea2db00a7ac8d58a9c"></a>
@@ -635,6 +724,9 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the symbol's type-and-value metadata. </p>
+<dl class="section return"><dt>Returns</dt><dd>Type and value information, or null if not applicable. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="class_bond_1_1_symbol.html#a946c598f9c5f5a3e88b04f58b7bfb4a4">Bond::Symbol</a>.</p>
 
@@ -663,6 +755,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the symbol's type-and-value metadata. </p>
+<dl class="section return"><dt>Returns</dt><dd>Type and value information, or null if not applicable. </dd></dl>
+
 <p>Reimplemented from <a class="el" href="class_bond_1_1_symbol.html#a1e4559ba7355b311371497af9a796687">Bond::Symbol</a>.</p>
 
 </div>
@@ -690,6 +785,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns true if this function is native (no <a class="el" href="namespace_bond.html">Bond</a> body). </p>
+
 </div>
 </div>
 <a id="a6a7f32e1ebd5a1e352ac377da683e9b4" name="a6a7f32e1ebd5a1e352ac377da683e9b4"></a>
@@ -714,6 +811,14 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Sets the number of reserved jump target IDs used by code generation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">numIds</td><td>Number of reserved jump target IDs. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

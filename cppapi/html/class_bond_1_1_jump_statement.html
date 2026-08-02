@@ -161,6 +161,9 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_bond_1_1
 </div><!--header-->
 <div class="contents">
 
+<p>Represents a break, continue, or return statement.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;bond/compiler/parsenodes.h&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Bond::JumpStatement:</div>
@@ -168,29 +171,42 @@ Inheritance diagram for Bond::JumpStatement:</div>
  <div class="center">
   <img src="class_bond_1_1_jump_statement.png" usemap="#Bond_3A_3AJumpStatement_map" alt=""/>
   <map id="Bond_3A_3AJumpStatement_map" name="Bond_3A_3AJumpStatement_map">
-<area href="class_bond_1_1_list_parse_node.html" alt="Bond::ListParseNode" shape="rect" coords="0,56,131,80"/>
-<area href="class_bond_1_1_parse_node.html" alt="Bond::ParseNode" shape="rect" coords="0,0,131,24"/>
+<area href="class_bond_1_1_list_parse_node.html" title="Base class for parse nodes that can be linked into singly linked lists." alt="Bond::ListParseNode" shape="rect" coords="0,56,131,80"/>
+<area href="class_bond_1_1_parse_node.html" title="Base class for all parse tree nodes." alt="Bond::ParseNode" shape="rect" coords="0,0,131,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a29d047f257c2e58c3a4cf5ac183cce6a" id="r_a29d047f257c2e58c3a4cf5ac183cce6a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a29d047f257c2e58c3a4cf5ac183cce6a">JumpStatement</a> (const <a class="el" href="class_bond_1_1_token.html">Token</a> *keyword, <a class="el" href="class_bond_1_1_expression.html">Expression</a> *rhs)</td></tr>
+<tr class="memdesc:a29d047f257c2e58c3a4cf5ac183cce6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a jump statement.  <br /></td></tr>
 <tr class="memitem:a2d9d756a12b985fd6596451a3ba20121" id="r_a2d9d756a12b985fd6596451a3ba20121"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#a2d9d756a12b985fd6596451a3ba20121">~JumpStatement</a> ()</td></tr>
 <tr class="memitem:a343b2609af4d21611cf084652a1bce32" id="r_a343b2609af4d21611cf084652a1bce32"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a343b2609af4d21611cf084652a1bce32">Accept</a> (<a class="el" href="class_bond_1_1_parse_node_visitor.html">ParseNodeVisitor</a> &amp;visitor) override</td></tr>
+<tr class="memdesc:a343b2609af4d21611cf084652a1bce32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispatches this node to the given visitor.  <br /></td></tr>
 <tr class="memitem:ac3698ff30c6d9c04c01f31770d142595" id="r_ac3698ff30c6d9c04c01f31770d142595"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ac3698ff30c6d9c04c01f31770d142595">Accept</a> (<a class="el" href="class_bond_1_1_parse_node_visitor.html">ParseNodeVisitor</a> &amp;visitor) const override</td></tr>
+<tr class="memdesc:ac3698ff30c6d9c04c01f31770d142595"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispatches this node to the given visitor.  <br /></td></tr>
 <tr class="memitem:a661280bad1ae80f57c39eb7fd470a61f" id="r_a661280bad1ae80f57c39eb7fd470a61f"><td class="memItemLeft">virtual const <a class="el" href="class_bond_1_1_token.html">Token</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a661280bad1ae80f57c39eb7fd470a61f">GetContextToken</a> () const override</td></tr>
+<tr class="memdesc:a661280bad1ae80f57c39eb7fd470a61f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the token used as source context for diagnostics.  <br /></td></tr>
 <tr class="memitem:a4da1cd1369bb702e48155e9fa9ecbc30" id="r_a4da1cd1369bb702e48155e9fa9ecbc30"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token.html">Token</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a4da1cd1369bb702e48155e9fa9ecbc30">GetKeyword</a> () const</td></tr>
+<tr class="memdesc:a4da1cd1369bb702e48155e9fa9ecbc30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the jump keyword token.  <br /></td></tr>
 <tr class="memitem:aff45a8332a6b8bc4bba1baeb61c5cea6" id="r_aff45a8332a6b8bc4bba1baeb61c5cea6"><td class="memItemLeft"><a class="el" href="class_bond_1_1_expression.html">Expression</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aff45a8332a6b8bc4bba1baeb61c5cea6">GetRhs</a> ()</td></tr>
+<tr class="memdesc:aff45a8332a6b8bc4bba1baeb61c5cea6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the right-hand-side expression.  <br /></td></tr>
 <tr class="memitem:ace30f40b9a6452121ed2f061ceb73667" id="r_ace30f40b9a6452121ed2f061ceb73667"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_expression.html">Expression</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ace30f40b9a6452121ed2f061ceb73667">GetRhs</a> () const</td></tr>
+<tr class="memdesc:ace30f40b9a6452121ed2f061ceb73667"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the right-hand-side expression.  <br /></td></tr>
 <tr class="memitem:a2c7367ab976cb6f2d19f06aa7b95c747" id="r_a2c7367ab976cb6f2d19f06aa7b95c747"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a2c7367ab976cb6f2d19f06aa7b95c747">IsBreak</a> () const</td></tr>
+<tr class="memdesc:a2c7367ab976cb6f2d19f06aa7b95c747"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this is a break statement.  <br /></td></tr>
 <tr class="memitem:a45f5c38ca3e922d5e65ccb5ae4a8234d" id="r_a45f5c38ca3e922d5e65ccb5ae4a8234d"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a45f5c38ca3e922d5e65ccb5ae4a8234d">IsContinue</a> () const</td></tr>
+<tr class="memdesc:a45f5c38ca3e922d5e65ccb5ae4a8234d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this is a continue statement.  <br /></td></tr>
 <tr class="memitem:aee5185cba8d58cc4ab98bb0957f117a9" id="r_aee5185cba8d58cc4ab98bb0957f117a9"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aee5185cba8d58cc4ab98bb0957f117a9">IsReturn</a> () const</td></tr>
+<tr class="memdesc:aee5185cba8d58cc4ab98bb0957f117a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this is a return statement.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_bond_1_1_list_parse_node"><td colspan="2">Public Member Functions inherited from <a class="el" href="class_bond_1_1_list_parse_node.html">Bond::ListParseNode</a></td></tr>
 <tr class="memitem:ad34e3a955708dfa0ff6be03639492619 pub_methods_class_bond_1_1_list_parse_node" id="r_ad34e3a955708dfa0ff6be03639492619"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_list_parse_node.html#ad34e3a955708dfa0ff6be03639492619">~ListParseNode</a> ()</td></tr>
 <tr class="memitem:a7ef67e649f6ecb80adc285091fb42851 pub_methods_class_bond_1_1_list_parse_node" id="r_a7ef67e649f6ecb80adc285091fb42851"><td class="memItemLeft"><a class="el" href="class_bond_1_1_list_parse_node.html#a7be09e471f388a343f2b68de7417f939">ListParseNode</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_list_parse_node.html#a7ef67e649f6ecb80adc285091fb42851">GetNextNode</a> ()</td></tr>
+<tr class="memdesc:a7ef67e649f6ecb80adc285091fb42851 pub_methods_class_bond_1_1_list_parse_node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the next node in the list.  <br /></td></tr>
 <tr class="memitem:a2490c2fbc501b82858efae21f95c8922 pub_methods_class_bond_1_1_list_parse_node" id="r_a2490c2fbc501b82858efae21f95c8922"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_list_parse_node.html#a7be09e471f388a343f2b68de7417f939">ListParseNode</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_list_parse_node.html#a2490c2fbc501b82858efae21f95c8922">GetNextNode</a> () const</td></tr>
+<tr class="memdesc:a2490c2fbc501b82858efae21f95c8922 pub_methods_class_bond_1_1_list_parse_node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the next node in the list.  <br /></td></tr>
 <tr class="memitem:a631c04c65ff24ec65a51af71a1bed5a2 pub_methods_class_bond_1_1_list_parse_node" id="r_a631c04c65ff24ec65a51af71a1bed5a2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_list_parse_node.html#a631c04c65ff24ec65a51af71a1bed5a2">SetNextNode</a> (<a class="el" href="class_bond_1_1_list_parse_node.html#a7be09e471f388a343f2b68de7417f939">ListParseNode</a> *next)</td></tr>
+<tr class="memdesc:a631c04c65ff24ec65a51af71a1bed5a2 pub_methods_class_bond_1_1_list_parse_node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the next node in the list.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_bond_1_1_parse_node"><td colspan="2">Public Member Functions inherited from <a class="el" href="class_bond_1_1_parse_node.html">Bond::ParseNode</a></td></tr>
 <tr class="memitem:a38c4879ddf1a936a68ebd90eeb5a03da pub_methods_class_bond_1_1_parse_node" id="r_a38c4879ddf1a936a68ebd90eeb5a03da"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_parse_node.html#a38c4879ddf1a936a68ebd90eeb5a03da">~ParseNode</a> ()</td></tr>
 </table><table class="memberdecls">
@@ -201,7 +217,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_class_bond_1_1_parse_node"><td colspan="2">Protected Member Functions inherited from <a class="el" href="class_bond_1_1_parse_node.html">Bond::ParseNode</a></td></tr>
 <tr class="memitem:a7b951fe102ad645db975811c648013f0 pro_methods_class_bond_1_1_parse_node" id="r_a7b951fe102ad645db975811c648013f0"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_parse_node.html#a7b951fe102ad645db975811c648013f0">ParseNode</a> ()</td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represents a break, continue, or return statement. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a29d047f257c2e58c3a4cf5ac183cce6a" name="a29d047f257c2e58c3a4cf5ac183cce6a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a29d047f257c2e58c3a4cf5ac183cce6a">&#9670;&#160;</a></span>JumpStatement()</h2>
 
@@ -228,6 +246,15 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Constructs a jump statement. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">keyword</td><td>Jump keyword token. </td></tr>
+    <tr><td class="paramname">rhs</td><td>Optional return expression. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -280,6 +307,14 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Dispatches this node to the given visitor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">visitor</td><td>Visitor that handles this node type. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Implements <a class="el" href="class_bond_1_1_parse_node.html#a9249cbd2b2f98a0e9cbfcb46b863ddbd">Bond::ParseNode</a>.</p>
 
 </div>
@@ -306,6 +341,14 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Dispatches this node to the given visitor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">visitor</td><td>Visitor that handles this node type. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="class_bond_1_1_parse_node.html#a361e795aa9316b263352acc85d53c13a">Bond::ParseNode</a>.</p>
 
@@ -334,6 +377,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the token used as source context for diagnostics. </p>
+<dl class="section return"><dt>Returns</dt><dd>A token associated with this node, or null if no token applies. </dd></dl>
+
 <p>Implements <a class="el" href="class_bond_1_1_parse_node.html#ae9a578142b6f2ab663f6b9990012fa13">Bond::ParseNode</a>.</p>
 
 </div>
@@ -361,6 +407,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the jump keyword token. </p>
+
 </div>
 </div>
 <a id="aff45a8332a6b8bc4bba1baeb61c5cea6" name="aff45a8332a6b8bc4bba1baeb61c5cea6"></a>
@@ -385,6 +433,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the right-hand-side expression. </p>
 
 </div>
 </div>
@@ -411,6 +461,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the right-hand-side expression. </p>
+
 </div>
 </div>
 <a id="a2c7367ab976cb6f2d19f06aa7b95c747" name="a2c7367ab976cb6f2d19f06aa7b95c747"></a>
@@ -435,6 +487,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns true if this is a break statement. </p>
 
 </div>
 </div>
@@ -461,6 +515,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns true if this is a continue statement. </p>
+
 </div>
 </div>
 <a id="aee5185cba8d58cc4ab98bb0957f117a9" name="aee5185cba8d58cc4ab98bb0957f117a9"></a>
@@ -485,6 +541,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns true if this is a return statement. </p>
 
 </div>
 </div>

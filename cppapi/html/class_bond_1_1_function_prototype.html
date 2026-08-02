@@ -161,6 +161,9 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_bond_1_1
 </div><!--header-->
 <div class="contents">
 
+<p>Represents a function signature.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;bond/compiler/parsenodes.h&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Bond::FunctionPrototype:</div>
@@ -168,23 +171,33 @@ Inheritance diagram for Bond::FunctionPrototype:</div>
  <div class="center">
   <img src="class_bond_1_1_function_prototype.png" usemap="#Bond_3A_3AFunctionPrototype_map" alt=""/>
   <map id="Bond_3A_3AFunctionPrototype_map" name="Bond_3A_3AFunctionPrototype_map">
-<area href="class_bond_1_1_parse_node.html" alt="Bond::ParseNode" shape="rect" coords="0,0,150,24"/>
+<area href="class_bond_1_1_parse_node.html" title="Base class for all parse tree nodes." alt="Bond::ParseNode" shape="rect" coords="0,0,150,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa3eecfb78eb0faa8f6984d764d5bf6ef" id="r_aa3eecfb78eb0faa8f6984d764d5bf6ef"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa3eecfb78eb0faa8f6984d764d5bf6ef">FunctionPrototype</a> (const <a class="el" href="class_bond_1_1_token.html">Token</a> *name, <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> *returnType, <a class="el" href="class_bond_1_1_parameter.html">Parameter</a> *parameterList, bool isConst)</td></tr>
+<tr class="memdesc:aa3eecfb78eb0faa8f6984d764d5bf6ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a function prototype.  <br /></td></tr>
 <tr class="memitem:a29945987a93c8f2f3388718fc4782791" id="r_a29945987a93c8f2f3388718fc4782791"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#a29945987a93c8f2f3388718fc4782791">~FunctionPrototype</a> ()</td></tr>
 <tr class="memitem:abf26c085f4b8b502e91558165bb18d3b" id="r_abf26c085f4b8b502e91558165bb18d3b"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#abf26c085f4b8b502e91558165bb18d3b">Accept</a> (<a class="el" href="class_bond_1_1_parse_node_visitor.html">ParseNodeVisitor</a> &amp;visitor) override</td></tr>
+<tr class="memdesc:abf26c085f4b8b502e91558165bb18d3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispatches this node to the given visitor.  <br /></td></tr>
 <tr class="memitem:aa83fedf7fc0adf5bc5cd328e2c8ab5c6" id="r_aa83fedf7fc0adf5bc5cd328e2c8ab5c6"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aa83fedf7fc0adf5bc5cd328e2c8ab5c6">Accept</a> (<a class="el" href="class_bond_1_1_parse_node_visitor.html">ParseNodeVisitor</a> &amp;visitor) const override</td></tr>
+<tr class="memdesc:aa83fedf7fc0adf5bc5cd328e2c8ab5c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispatches this node to the given visitor.  <br /></td></tr>
 <tr class="memitem:a091e0f0e90f3fd81c31bc498aa46a8e3" id="r_a091e0f0e90f3fd81c31bc498aa46a8e3"><td class="memItemLeft">virtual const <a class="el" href="class_bond_1_1_token.html">Token</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a091e0f0e90f3fd81c31bc498aa46a8e3">GetContextToken</a> () const override</td></tr>
+<tr class="memdesc:a091e0f0e90f3fd81c31bc498aa46a8e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the token used as source context for diagnostics.  <br /></td></tr>
 <tr class="memitem:ab785bdcab78da7f76b62b6eeebe4f5e0" id="r_ab785bdcab78da7f76b62b6eeebe4f5e0"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token.html">Token</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ab785bdcab78da7f76b62b6eeebe4f5e0">GetName</a> () const</td></tr>
+<tr class="memdesc:ab785bdcab78da7f76b62b6eeebe4f5e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the function name token.  <br /></td></tr>
 <tr class="memitem:a821202622bf61c1a3055934947b45cae" id="r_a821202622bf61c1a3055934947b45cae"><td class="memItemLeft"><a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a821202622bf61c1a3055934947b45cae">GetReturnType</a> ()</td></tr>
+<tr class="memdesc:a821202622bf61c1a3055934947b45cae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the return type descriptor.  <br /></td></tr>
 <tr class="memitem:a22273b1a212f9148584c4a85b2b6b613" id="r_a22273b1a212f9148584c4a85b2b6b613"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a22273b1a212f9148584c4a85b2b6b613">GetReturnType</a> () const</td></tr>
+<tr class="memdesc:a22273b1a212f9148584c4a85b2b6b613"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the return type descriptor.  <br /></td></tr>
 <tr class="memitem:ad234509b578116202af5c302650ab58d" id="r_ad234509b578116202af5c302650ab58d"><td class="memItemLeft"><a class="el" href="class_bond_1_1_parameter.html">Parameter</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ad234509b578116202af5c302650ab58d">GetParameterList</a> ()</td></tr>
+<tr class="memdesc:ad234509b578116202af5c302650ab58d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the parameter list.  <br /></td></tr>
 <tr class="memitem:a6deb26014b8a2225ab63c3a3ca887826" id="r_a6deb26014b8a2225ab63c3a3ca887826"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_parameter.html">Parameter</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a6deb26014b8a2225ab63c3a3ca887826">GetParameterList</a> () const</td></tr>
+<tr class="memdesc:a6deb26014b8a2225ab63c3a3ca887826"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the parameter list.  <br /></td></tr>
 <tr class="memitem:a781b70acfb1f8db58cad1f31fb601412" id="r_a781b70acfb1f8db58cad1f31fb601412"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a781b70acfb1f8db58cad1f31fb601412">IsConst</a> () const</td></tr>
+<tr class="memdesc:a781b70acfb1f8db58cad1f31fb601412"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the function is const-qualified.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_bond_1_1_parse_node"><td colspan="2">Public Member Functions inherited from <a class="el" href="class_bond_1_1_parse_node.html">Bond::ParseNode</a></td></tr>
 <tr class="memitem:a38c4879ddf1a936a68ebd90eeb5a03da pub_methods_class_bond_1_1_parse_node" id="r_a38c4879ddf1a936a68ebd90eeb5a03da"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_parse_node.html#a38c4879ddf1a936a68ebd90eeb5a03da">~ParseNode</a> ()</td></tr>
 </table><table class="memberdecls">
@@ -193,7 +206,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_class_bond_1_1_parse_node"><td colspan="2">Protected Member Functions inherited from <a class="el" href="class_bond_1_1_parse_node.html">Bond::ParseNode</a></td></tr>
 <tr class="memitem:a7b951fe102ad645db975811c648013f0 pro_methods_class_bond_1_1_parse_node" id="r_a7b951fe102ad645db975811c648013f0"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_parse_node.html#a7b951fe102ad645db975811c648013f0">ParseNode</a> ()</td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represents a function signature. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa3eecfb78eb0faa8f6984d764d5bf6ef" name="aa3eecfb78eb0faa8f6984d764d5bf6ef"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa3eecfb78eb0faa8f6984d764d5bf6ef">&#9670;&#160;</a></span>FunctionPrototype()</h2>
 
@@ -230,6 +245,17 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Constructs a function prototype. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td><a class="el" href="struct_bond_1_1_function.html" title="Function metadata and executable payload loaded from CBO.">Function</a> name token. </td></tr>
+    <tr><td class="paramname">returnType</td><td><a class="el" href="struct_bond_1_1_function.html" title="Function metadata and executable payload loaded from CBO.">Function</a> return type descriptor. </td></tr>
+    <tr><td class="paramname">parameterList</td><td><a class="el" href="struct_bond_1_1_function.html" title="Function metadata and executable payload loaded from CBO.">Function</a> parameter list. </td></tr>
+    <tr><td class="paramname">isConst</td><td>True if this is a const-qualified member function. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -282,6 +308,14 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Dispatches this node to the given visitor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">visitor</td><td>Visitor that handles this node type. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Implements <a class="el" href="class_bond_1_1_parse_node.html#a9249cbd2b2f98a0e9cbfcb46b863ddbd">Bond::ParseNode</a>.</p>
 
 </div>
@@ -308,6 +342,14 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Dispatches this node to the given visitor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">visitor</td><td>Visitor that handles this node type. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="class_bond_1_1_parse_node.html#a361e795aa9316b263352acc85d53c13a">Bond::ParseNode</a>.</p>
 
@@ -336,6 +378,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the token used as source context for diagnostics. </p>
+<dl class="section return"><dt>Returns</dt><dd>A token associated with this node, or null if no token applies. </dd></dl>
+
 <p>Implements <a class="el" href="class_bond_1_1_parse_node.html#ae9a578142b6f2ab663f6b9990012fa13">Bond::ParseNode</a>.</p>
 
 </div>
@@ -363,6 +408,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the function name token. </p>
+
 </div>
 </div>
 <a id="ad234509b578116202af5c302650ab58d" name="ad234509b578116202af5c302650ab58d"></a>
@@ -387,6 +434,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the parameter list. </p>
 
 </div>
 </div>
@@ -413,6 +462,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the parameter list. </p>
+
 </div>
 </div>
 <a id="a821202622bf61c1a3055934947b45cae" name="a821202622bf61c1a3055934947b45cae"></a>
@@ -437,6 +488,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the return type descriptor. </p>
 
 </div>
 </div>
@@ -463,6 +516,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the return type descriptor. </p>
+
 </div>
 </div>
 <a id="a781b70acfb1f8db58cad1f31fb601412" name="a781b70acfb1f8db58cad1f31fb601412"></a>
@@ -487,6 +542,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns true if the function is const-qualified. </p>
 
 </div>
 </div>

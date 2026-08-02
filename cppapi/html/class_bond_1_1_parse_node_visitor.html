@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_bond_1_1
 </div><!--header-->
 <div class="contents">
 
-<p>An abstract interface that implements the Visitor pattern over all concrete types that derive from <a class="el" href="class_bond_1_1_parse_node.html">ParseNode</a>.  
+<p>An abstract interface that implements the Visitor pattern over all concrete types that derive from <a class="el" href="class_bond_1_1_parse_node.html" title="Base class for all parse tree nodes.">ParseNode</a>.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;bond/compiler/parsenodevisitor.h&gt;</code></p>
@@ -259,9 +259,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab9368d2c9fa2603eb06e0ed01afd119e" id="r_ab9368d2c9fa2603eb06e0ed01afd119e"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ab9368d2c9fa2603eb06e0ed01afd119e">Visit</a> (const <a class="el" href="class_bond_1_1_empty_expression.html">EmptyExpression</a> *emptyExpression)=0</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>An abstract interface that implements the Visitor pattern over all concrete types that derive from <a class="el" href="class_bond_1_1_parse_node.html">ParseNode</a>. </p>
-<p>Any of the <a class="el" href="#a82b0c9a24314a857eb6eb2a4df2749ce">ParseNodeVisitor::Visit</a> methods can be called directly if the concrete type of the <a class="el" href="class_bond_1_1_parse_node.html">ParseNode</a> is known at compile time. If the node's concrete type is not known, its <a class="el" href="class_bond_1_1_parse_node.html#a361e795aa9316b263352acc85d53c13a">ParseNode::Accept</a> method can be called with the visitor passed in as an argument, which will in turn call the appropriate Visit method.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_bond_1_1_parse_node.html">ParseNode</a>, <a class="el" href="class_bond_1_1_parse_node_visitor_adapter.html" title="A concrete implementation of ParseNodeVisitor with methods that do nothing.">ParseNodeVisitorAdapter</a>, <a class="el" href="class_bond_1_1_parse_node_traverser.html" title="A concrete implementation of ParseNodeVisitor that, in addition to visiting a ParseNode,...">ParseNodeTraverser</a> </dd></dl>
+<div class="textblock"><p>An abstract interface that implements the Visitor pattern over all concrete types that derive from <a class="el" href="class_bond_1_1_parse_node.html" title="Base class for all parse tree nodes.">ParseNode</a>. </p>
+<p>Any of the <a class="el" href="#a82b0c9a24314a857eb6eb2a4df2749ce">ParseNodeVisitor::Visit</a> methods can be called directly if the concrete type of the <a class="el" href="class_bond_1_1_parse_node.html" title="Base class for all parse tree nodes.">ParseNode</a> is known at compile time. If the node's concrete type is not known, its <a class="el" href="class_bond_1_1_parse_node.html#a361e795aa9316b263352acc85d53c13a" title="Dispatches this node to the given visitor.">ParseNode::Accept</a> method can be called with the visitor passed in as an argument, which will in turn call the appropriate Visit method.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_bond_1_1_parse_node.html" title="Base class for all parse tree nodes.">ParseNode</a>, <a class="el" href="class_bond_1_1_parse_node_visitor_adapter.html" title="A concrete implementation of ParseNodeVisitor with methods that do nothing.">ParseNodeVisitorAdapter</a>, <a class="el" href="class_bond_1_1_parse_node_traverser.html" title="A concrete implementation of ParseNodeVisitor that, in addition to visiting a ParseNode,...">ParseNodeTraverser</a> </dd></dl>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a35866c5e516ea2490c17d94031cb6391" name="a35866c5e516ea2490c17d94031cb6391"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a35866c5e516ea2490c17d94031cb6391">&#9670;&#160;</a></span>~ParseNodeVisitor()</h2>
