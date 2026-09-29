@@ -44,6 +44,7 @@
 <li class="toc_h2"><a href="#language_ref">Language Reference</a></li>
 <li class="toc_h3"><a href="#elements">Basics of Bond</a></li>
 <li class="toc_h4"><a href="#structure_of_a_program">Structure of a Program</a></li>
+<li class="toc_h4"><a href="#compiler_directives">Compiler Directives</a></li>
 <li class="toc_h4"><a href="#identifiers">Identifiers</a></li>
 <li class="toc_h4"><a href="#keywords">Keywords</a></li>
 <li class="toc_h4"><a href="#primitive_types">Primitive Types</a></li>
@@ -56,6 +57,7 @@
 <li class="toc_h5"><a href="#floating_point_constants">Floating-Point Constants</a></li>
 <li class="toc_h5"><a href="#character_constants">Character Constants</a></li>
 <li class="toc_h5"><a href="#string_literals">String Literals</a></li>
+<li class="toc_h5"><a href="#null_pointer">Null Pointer</a></li>
 <li class="toc_h4"><a href="#variables">Variables</a></li>
 <li class="toc_h4"><a href="#operators">Operators</a></li>
 <li class="toc_h5"><a href="#assignment_operator">Assignment Operator</a></li>
@@ -86,8 +88,8 @@
 <li class="toc_h3"><a href="#data_types">Data Types</a></li>
 <li class="toc_h4"><a href="#enum_types">Enumerated Types</a></li>
 <li class="toc_h4"><a href="#array_types">Array Types</a></li>
-<li class="toc_h4"><a href="#struct_types">Structure Types</a></li>
 <li class="toc_h4"><a href="#pointer_types">Pointer Types</a></li>
+<li class="toc_h4"><a href="#struct_types">Structure Types</a></li>
 <li class="toc_h3"><a href="#namespaces">Namespaces</a></li>
 <li class="toc_h3"><a href="#sbrm">Scope-Based Resource Management</a></li>
 <li class="toc_h3"><a href="#native_blocks">Native Blocks</a></li>
@@ -239,6 +241,26 @@ int main()
 <dd>This line of code is a statement that specifies what value is returned by the <span class="token">main</span> function. As we saw on line 4, the <span class="token">main</span> function returns an <span class="token">int</span>. In Bond, as with other programming languages, such as C and C++, the return value of the <span class="token">main</span> function indicates the exit status of the program. By convention, a return value of 0 indicates that the program terminated normally, whereas any other value indicates an application specific error code.</dd>
 </dl>
 
+<h4 id="compiler_directives">Compiler Directives</h4>
+<p>Bond currently has one compiler directive: <span class="token">include</span>. Unlike preprocessor directives in C, Bond compiler directives do not perform textual substitution. Instead, they provide instructions to the compiler about what additional source files should be scanned and parsed.</p>
+
+<p>The syntax for an include directive is a string literal path followed by a semicolon.</p>
+
+<pre class="code">include "io.bond";
+include "memory.bond";</pre>
+
+<p>Include directives may appear at file scope. If the same file is included more than once (directly or indirectly through other includes), the compiler scans that file only once.</p>
+
+<pre class="code">// app.bond
+include "io.bond";
+include "string.bond";
+
+int main()
+{
+    Bond::StdOut()->PrintStr("Compiler directives are simple and explicit.\n");
+    return 0;
+}</pre>
+
 <h4 id="identifiers">Identifiers</h4>
 <p>Identifiers are names for symbols such as variables, functions and types defined in code. Identifiers consist of any sequence of letters, digits and underscores ('_'), with the exception that the first character cannot be a digit. Also, keywords are reserved and cannot be used as identifiers. Identifiers are case sensitive.</p>
 
@@ -361,6 +383,19 @@ Literal constants represent immutable values in source code. They can be boolean
 
 <h5 id="string_literals">String Literals</h5>
 <p>String literals represent a sequence of characters of type <span class="token">const char[]</span>. They consist of a sequence of character constants enclosed in double quotes and are implicitly terminated with a null character (<span class="token">\0</span>).</p>
+
+<h5 id="null_pointer">Null Pointer</h5>
+<p>The null pointer is represented by the keyword <span class="token">null</span>. It is a special pointer value that points to no valid object. A null pointer can be assigned to any pointer type and can be compared with any pointer type.</p>
+
+<pre class="code">const char *message = null;
+message = GetMessage();
+
+if (message == null)
+{
+    Bond::StdOut()->PrintStr("Message pointer is null.\n");
+}</pre>
+
+<p>Null pointers are commonly used to initialize variables that are assigned later, represent optional references and to indicate failure in APIs that return pointers. Pointers are covered in greater detail in the <a href="#pointer_types">Pointer Types</a> section.</p>
 
 <!--
 <h5 id="null_pointer">Null Pointer</h5>
@@ -1204,17 +1239,136 @@ void TryToModifyAFunctionArgument()
 
 <pre class="code">AnimalSound sound = Moo;</pre>
 
-<h4 id="array_types">Array Types</h4>
+<h4 id="array_types">Array Types TODO</h4>
 
-<h4 id="struct_types">Structure Types</h4>
+<h4 id="struct_types">Structure Types TODO</h4>
 
 <h4 id="pointer_types">Pointer Types</h4>
 
-<h3 id="namespaces">Namespaces</h3>
+<p>Pointers are used to the store the memory addresses of values rather than values themselves. Pointers are useful for allowing functions to modify values, sharing data without having to copy it, and working with dynamically allocated memory.</p>
 
-<h3 id="sbrm">Scope-Based Resource Management</h3>
+<p>Pointer types are written by placing <span class="token">*</span> in the type declaration. For example, <span class="token">int *</span> is a pointer to an <span class="token">int</span>. Two operators are commonly used for working with pointers. The address-of operator, denoted with <span class="token">&amp;</span>, produces the address of a variable. Meanwhile, the dereference operator, denoted with <span class="token">*</span>, allows the data sitting at the memory address to be inspected or modified.</p>
 
-<h3 id="native_blocks">Native Blocks</h3>
+<pre class="code">int val = 42;
+
+// Declare a pointer variable and initialize it with a pointer to val.
+int *ptr = &amp;val;
+
+// Inspect the value at the address held by ptr.
+Bond::StdOut()-&gt;PrintStr(&quot;*ptr is: &quot;)-&gt;PrintI(*ptr)-&gt;PrintStr(&quot;\n&quot;);
+
+// Modify the value the pointer points to.
+*ptr = 32;
+
+// Observe that both *ptr and val now have the new value.
+Bond::StdOut()-&gt;PrintStr(&quot;*ptr is: &quot;)-&gt;PrintI(*ptr)-&gt;PrintStr(&quot;\n&quot;);
+Bond::StdOut()-&gt;PrintStr(&quot;val is: &quot;)-&gt;PrintI(val)-&gt;PrintStr(&quot;\n&quot;);</pre>
+
+The output of the above code would be:
+
+<pre class="code">*ptr is: 42
+*ptr is: 32
+val is: 32</pre>
+
+<p>Pointers can point to multiple values stored contiguously in memory. Like with arrays, accessing the elements is done with the index operator [], but take care because pointers do not know how many elements they point to. Additionally, integer arithmetic can be performed on pointers using the + and - operators to calculate the address of array elements and get the distance between array elements respectively.</p>
+
+<pre class="code">int[5] data = {10, 20, 30, 40, 50};
+int *ptr = data;
+
+Bond::StdOut()-&gt;PrintStr(&quot;ptr[0] is: &quot;)-&gt;PrintI(ptr[0])-&gt;PrintStr(&quot;\n&quot;);
+Bond::StdOut()-&gt;PrintStr(&quot;ptr[2] is: &quot;)-&gt;PrintI(ptr[2])-&gt;PrintStr(&quot;\n&quot;);
+
+ptr[2] = 31;
+
+Bond::StdOut()-&gt;PrintStr(&quot;ptr[2] is: &quot;)-&gt;PrintI(ptr[2])-&gt;PrintStr(&quot;\n&quot;);
+
+// Use pointer arithmetic to assign a new value. Equivalent to: ptr[2] = 32;
+*(ptr + 2) = 32;
+Bond::StdOut()-&gt;PrintStr(&quot;ptr[2] is: &quot;)-&gt;PrintI(ptr[2])-&gt;PrintStr(&quot;\n&quot;);
+
+// Calculate the distance (i.e. number of elements) between two pointers.
+int distance = cast&lt;int&gt;(&amp;data[4] - &amp;data[0]);
+Bond::StdOut()-&gt;PrintStr(&quot;distance is: &quot;)-&gt;PrintI(distance)-&gt;PrintStr(&quot;\n&quot;);</pre>
+
+<p>The code above outputs:</p>
+
+<pre class="code">ptr[0] is: 10
+ptr[2] is: 30
+ptr[2] is: 31
+ptr[2] is: 32
+distance is: 4</pre>
+
+<p>As we saw in the Function Calls section, functions receive copies of their arguments, therefore they cannot modify the original values. This limitation can be overcome by instead passing pointers.</p>
+
+<pre class="code">void AssignToParameter(int value)
+{
+    // This only modifies our local copy of the argument assigned to the parameter named value.
+    value = 3;
+}
+
+void AssignToPointer(int *ptr)
+{
+    // This modifies the value pointed to by ptr.
+    *ptr = 3;
+}
+
+void TryToModifyAFunctionArgument()
+{
+    int a = 1;
+    AssignToParameter(a);
+
+    // Observe that a has not changed. Outputs 1.
+    Bond::StdOut()-&gt;PrintStr(&quot;a is: &quot;)-&gt;PrintI(a)-&gt;PrintStr(&quot;\n&quot;);
+
+    AssignToPointer(&amp;a);
+
+    // Observe that a has indeed changed. Outputs 3.
+    Bond::StdOut()-&gt;PrintStr(&quot;a is: &quot;)-&gt;PrintI(a)-&gt;PrintStr(&quot;\n&quot;);
+}</pre>
+
+</p>Pointers are also useful when the amount of required memory is not known at compile time, so data structures like fixed sized arrays are not satisfactory. What follows is a complete program that interactively prompts the user for a number, dynamically allocates an array of that many integers, fills the array with user supplied data, repeats the stored data and finally deallocates the array.</p>
+
+<pre class="code">include &quot;io.bond&quot;;
+include &quot;memory.bond&quot;;
+
+int main()
+{
+    Bond::StdOut()-&gt;PrintStr(&quot;Enter the number of elements:\n&quot;);
+    const ulong n = Bond::StdIn()-&gt;ScanUL();
+
+    int *array = Bond::Allocate(n * sizeof&lt;int&gt;);
+
+    Bond::StdOut()-&gt;PrintStr(&quot;Enter &quot;)-&gt;PrintUL(n)-&gt;PrintStr(&quot; integers:\n&quot;);
+    for (ulong i = 0; i &lt; n; i++)
+    {
+        array[i] = Bond::StdIn()-&gt;ScanI();
+    }
+
+    Bond::StdOut()-&gt;PrintStr(&quot;You entered:\n&quot;);
+    for (ulong i = 0; i &lt; n; i++)
+    {
+        Bond::StdOut()-&gt;PrintI(array[i])-&gt;PrintStr(&quot;\n&quot;);
+    }
+
+    Bond::Free(array);
+    array = null;
+
+    return 0;
+}</pre>
+
+<p>See the <a href="#null_pointer">Null Pointer</a> section for details on representing an empty pointer value.</p>
+
+<h4 id="struct_types">Structure Types TODO</h4>
+
+
+<h3 id="namespaces">Namespaces TODO</h3>
+
+
+<h3 id="sbrm">Scope-Based Resource Management TODO</h3>
+
+
+<h3 id="native_blocks">Native Blocks TODO</h3>
+
 
 <br>
 </div> <!--content-->
@@ -1222,3 +1376,5 @@ void TryToModifyAFunctionArgument()
 </div> <!--page-->
 </body>
 </html>
+
+<!-- https://www.learn-c.org/ -->
