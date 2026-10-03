@@ -88,9 +88,18 @@
 <li class="toc_h3"><a href="#data_types">Data Types</a></li>
 <li class="toc_h4"><a href="#enum_types">Enumerated Types</a></li>
 <li class="toc_h4"><a href="#array_types">Array Types</a></li>
+<li class="toc_h5"><a href="#multidimensional_arrays">Multidimensional Arrays</a></li>
 <li class="toc_h4"><a href="#pointer_types">Pointer Types</a></li>
 <li class="toc_h4"><a href="#struct_types">Structure Types</a></li>
+<li class="toc_h5"><a href="#struct_definitions">Defining Structures</a></li>
+<li class="toc_h5"><a href="#struct_instantiation">Instantiation and Initialization</a></li>
+<li class="toc_h5"><a href="#member_access">Member Variables</a></li>
+<li class="toc_h5"><a href="#member_functions">Member Functions</a></li>
+<li class="toc_h5"><a href="#this_pointer">The <span class="token">this</span> Pointer</a></li>
 <li class="toc_h3"><a href="#namespaces">Namespaces</a></li>
+<li class="toc_h4"><a href="#namespace_definitions">Defining Namespaces</a></li>
+<li class="toc_h4"><a href="#namespace_access">Accessing Namespaced Symbols</a></li>
+<li class="toc_h4"><a href="#using_statements"><span class="token">using</span> Statements</a></li>
 <li class="toc_h3"><a href="#sbrm">Scope-Based Resource Management</a></li>
 <li class="toc_h3"><a href="#native_blocks">Native Blocks</a></li>
 </ul>
@@ -1239,9 +1248,81 @@ void TryToModifyAFunctionArgument()
 
 <pre class="code">AnimalSound sound = Moo;</pre>
 
-<h4 id="array_types">Array Types TODO</h4>
+<h4 id="array_types">Array Types</h4>
+<p>An array is a collection of elements of the same type stored contiguously in memory. As noted in the <a href="#diff_type_declarations">Type Declarations</a> section, one notable difference between Bond and C is that all parts of a type descriptor, including array dimensions, appear before the variable name.</p>
 
-<h4 id="struct_types">Structure Types TODO</h4>
+<p>An array type is written by placing the length in square brackets after the element type. The length must be a constant expression.</p>
+
+<pre class="code">int[5] numbers;
+float[10] samples;
+char[32] buffer;</pre>
+
+<p>Multiple variables of the same array type can be declared at once, and each variable will have the same type. In contrast to C, there is no ambiguity here.</p>
+
+<pre class="code">int[3] a, b; // Both a and b are of type int[3].</pre>
+
+<p>An array can be initialized with a brace-enclosed initializer list. If an initializer list is provided, the array length can be omitted from the type and the compiler will infer the length from the number of elements.</p>
+
+<pre class="code">int[5] data = {10, 20, 30, 40, 50};
+int[] values = {1, 2, 3}; // Length is inferred as 3.</pre>
+
+<p>An array of structs can also be initialized with an initializer list. Each element is itself a brace-enclosed list or an expression that evaluates to the struct type.</p>
+
+<pre class="code">struct Vector2
+{
+    int x;
+    int y;
+};
+
+Vector2[3] points = {{1, 2}, {3, 4}, {5, 6}};</pre>
+
+<p>Individual elements of an array can be accessed and modified using the index operator <span class="token">[]</span>. Array indices start at 0. Thus, for an array of length <span class="token">n</span>, the valid indices are 0 through <span class="token">n - 1</span>.</p>
+
+<pre class="code">int[4] data = {10, 20, 30, 40};
+int first = data[0];  // first is 10.
+int third = data[2];  // third is 30.
+data[1] = 25;         // Modify the second element.</pre>
+
+<p>Arrays work naturally with loops for iterating over their elements.</p>
+
+<pre class="code">int[5] scores = {85, 92, 78, 95, 88};
+int sum = 0;
+for (int i = 0; i &lt; 5; ++i)
+{
+    sum += scores[i];
+}</pre>
+
+<p>An array can be passed as a function parameter. When an array type appears as a parameter type, the compiler converts it to a pointer to the element type. This means that arrays are effectively passed by reference and that the function does not know the length of the array.</p>
+
+<pre class="code">int SumArray(int[] values, int count)
+{
+    int total = 0;
+    for (int i = 0; i &lt; count; ++i)
+    {
+        total += values[i];
+    }
+    return total;
+}</pre>
+
+<p>A function cannot return an array type.</p>
+
+<h5 id="multidimensional_arrays">Multidimensional Arrays</h5>
+<p>Multidimensional arrays are created by specifying multiple dimensions in the type descriptor. As with single dimensional arrays, all dimensions appear before the variable name. Only the first (outermost) dimension may be omitted when an initializer list is provided; all subsequent dimensions must have explicit lengths.</p>
+
+<pre class="code">int[2][3] matrix = {{1, 2, 3}, {4, 5, 6}};</pre>
+
+<p>This declares a 2-by-3 array. The first dimension has 2 elements, each of which is an array of 3 integers. Note that the syntax <span class="token">int[2][3]</span> is equivalent to C's <span class="token">int matrix[2][3]</span>.</p>
+
+<p>Elements of a multidimensional array are accessed using successive applications of the index operator.</p>
+
+<pre class="code">int[2][3] m = {{1, 2, 3}, {4, 5, 6}};
+int val = m[1][2]; // val is 6.
+m[0][1] = 20;      // Modify element at row 0, column 1.</pre>
+
+<p>Array types with three or more dimensions follow the same pattern.</p>
+
+<pre class="code">int[2][3][4] cube;
+cube[0][1][2] = 42;</pre>
 
 <h4 id="pointer_types">Pointer Types</h4>
 
@@ -1358,10 +1439,232 @@ int main()
 
 <p>See the <a href="#null_pointer">Null Pointer</a> section for details on representing an empty pointer value.</p>
 
-<h4 id="struct_types">Structure Types TODO</h4>
+<h4 id="struct_types">Structure Types</h4>
+<p>A structure type, or struct, is a composite data type that groups related variables together under a single name. Unlike C, Bond structs can also contain member functions, a feature borrowed from C++.</p>
 
+<h5 id="struct_definitions">Defining Structures</h5>
+<p>A struct is declared using the <span class="token">struct</span> keyword followed by a name, a body enclosed in curly braces and a semicolon. The body contains a list of member variable declarations and member function definitions. Member variables and member functions can appear in any order within the body.</p>
 
-<h3 id="namespaces">Namespaces TODO</h3>
+<pre class="code">struct Point
+{
+    int x;
+    int y;
+};</pre>
+
+<p>Members can be of any type, including other struct types, pointers and arrays.</p>
+
+<pre class="code">struct Line
+{
+    Point start;
+    Point end;
+};</pre>
+
+<h5 id="struct_instantiation">Instantiation and Initialization</h5>
+<p>A variable of a struct type is declared the same way as any other variable. The variable is called an instance of that struct type. Simply declaring a struct variable allocates memory for all of its members on the stack.</p>
+
+<pre class="code">Point p;
+p.x = 10;
+p.y = 20;</pre>
+
+<p>A struct instance can also be initialized with a brace-enclosed initializer list. The values in the list are assigned to the members in the order in which they are declared in the struct definition.</p>
+
+<pre class="code">Point p = {10, 20};
+Line segment = {{0, 0}, {5, 5}};</pre>
+
+<p>Struct values can be assigned from one variable to another. This copies the entire contents of the struct.</p>
+
+<pre class="code">Point a = {3, 4};
+Point b;
+b = a; // b.x is 3 and b.y is 4.</pre>
+
+<h5 id="member_access">Member Variables</h5>
+<p>The members of a struct instance are accessed using the dot operator <span class="token">.</span> on a value of the struct type. When working with a pointer to a struct, the arrow operator <span class="token">-&gt;</span> is used instead. These operators work the same as in C.</p>
+
+<pre class="code">Point p = {7, 11};
+int px = p.x;     // Access member x by value.
+
+Point *ptr = &amp;p;
+int py = ptr-&gt;y;  // Access member y through a pointer.
+ptr-&gt;x = 8;       // Modify member x through a pointer.</pre>
+
+<p>Nested structs are accessed by chaining the dot and arrow operators.</p>
+
+<pre class="code">Line segment = {{0, 0}, {5, 5}};
+int endX = segment.end.x; // endX is 5.</pre>
+
+<h5 id="member_functions">Member Functions</h5>
+<p>Unlike C, structs in Bond can have member functions defined within the struct body. A member function is defined the same way as a regular function.</p>
+
+<pre class="code">struct Rectangle
+{
+    int width;
+    int height;
+
+    int Area()
+    {
+        return this-&gt;width * this-&gt;height;
+    }
+};</pre>
+
+<p>A member function is called using the dot operator on an instance or the arrow operator on a pointer, followed by the function name and argument list.</p>
+
+<pre class="code">Rectangle rect = {10, 5};
+int a = rect.Area(); // a is 50.
+
+Rectangle *rptr = &amp;rect;
+int b = rptr-&gt;Area(); // b is 50.</pre>
+
+<p>A member function can be declared <span class="token">const</span> by placing the <span class="token">const</span> keyword after the parameter list. A const member function cannot modify the member variables of the struct instance on which it is called.</p>
+
+<pre class="code">struct Vector3
+{
+    int mX;
+    int mY;
+    int mZ;
+
+    int GetX() const { return mX; }
+    void SetX(int x) { mX = x; }
+
+    int Dot(const Vector3 *other) const
+    {
+        return mX * other-&gt;GetX() + mY * other-&gt;GetY() + mZ * other-&gt;GetZ();
+    }
+};</pre>
+
+<h5 id="this_pointer">The <span class="token">this</span> Pointer</h5>
+<p>Inside a member function, the keyword <span class="token">this</span> is a pointer to the struct instance on which the function was called. It can be used to access the instance's members explicitly using the arrow operator <span class="token">-&gt;</span>. The use of <span class="token">this</span> is optional; member variables and member functions of the current instance can also be accessed directly by name.</p>
+
+<pre class="code">struct Counter
+{
+    int count;
+
+    void Increment()
+    {
+        this-&gt;count = this-&gt;count + 1; // Explicit use of this.
+    }
+
+    int GetCount() const
+    {
+        return count; // Implicit access without this.
+    }
+};</pre>
+
+<p>In a <span class="token">const</span> member function, <span class="token">this</span> is a pointer to <span class="token">const</span>, so it cannot be used to modify members. Both forms of member access, with and without <span class="token">this</span>, are equivalent.</p>
+
+<h3 id="namespaces">Namespaces</h3>
+<p>Namespaces provide a mechanism for organizing code and preventing name collisions between identifiers. They are similar to C++ namespaces. As mentioned in the <a href="#diff_namespaces">Notable Differences With C</a> section, Bond has namespaces whereas C does not. All declarations of the Bond Standard Library are in the <span class="token">Bond</span> namespace.</p>
+
+<h4 id="namespace_definitions">Defining Namespaces</h4>
+<p>A namespace is declared using the <span class="token">namespace</span> keyword followed by a name and a body enclosed in curly braces. The body can contain any declarations that are allowed at file scope, including constants, functions, structs, enums and nested namespaces.</p>
+
+<pre class="code">namespace Geometry
+{
+    const double PI = 3.14159;
+
+    double CircleArea(double radius)
+    {
+        return PI * radius * radius;
+    }
+
+    struct Point
+    {
+        int x;
+        int y;
+    };
+}</pre>
+
+<p>Namespaces can be nested to create hierarchies of names.</p>
+
+<pre class="code">namespace Graphics
+{
+    namespace Shapes
+    {
+        struct Circle
+        {
+            int x;
+            int y;
+            int radius;
+        };
+    }
+}</pre>
+
+<p>The same namespace can be defined in multiple places. Declarations from each definition are combined into a single namespace.</p>
+
+<pre class="code">namespace Util
+{
+    int Add(int a, int b) { return a + b; }
+}
+
+namespace Util
+{
+    int Subtract(int a, int b) { return a - b; }
+}
+
+// Both Add and Subtract are in the Util namespace.</pre>
+
+<h4 id="namespace_access">Accessing Namespaced Symbols</h4>
+<p>Identifiers declared within a namespace are accessed using the scope resolution operator <span class="token">::</span>. The namespace name appears on the left side of the operator and the identifier on the right.</p>
+
+<pre class="code">double area = Geometry::CircleArea(5.0);
+Geometry::Point p;
+p.x = 10;
+p.y = 20;</pre>
+
+<p>For nested namespaces, the <span class="token">::</span> operator is chained to navigate the hierarchy.</p>
+
+<pre class="code">Graphics::Shapes::Circle c;
+c.x = 100;
+c.y = 200;
+c.radius = 50;</pre>
+
+<h4 id="using_statements"><span class="token">using</span> Statements</h4>
+<p>The <span class="token">using</span> keyword provides a way to bring namespaced identifiers into the current scope without having to qualify them with the <span class="token">::</span> operator. There are two forms of using statements.</p>
+
+<p>A using directive, written as <span class="token">using namespace</span> followed by a namespace name and a semicolon, brings all identifiers from the named namespace into the current scope.</p>
+
+<pre class="code">void DrawScene()
+{
+    using namespace Geometry;
+
+    // PI and CircleArea can now be used without the Geometry:: prefix.
+    double area = CircleArea(5.0);
+    Point p = {10, 20};
+}</pre>
+
+<p>A using declaration, written as <span class="token">using</span> followed by a qualified identifier and a semicolon, brings a single specific identifier into the current scope.</p>
+
+<pre class="code">void CalculateArea()
+{
+    using Geometry::CircleArea;
+    using Geometry::PI;
+
+    // Only CircleArea and PI are accessible without the prefix.
+    double area = CircleArea(5.0);
+}</pre>
+
+<p>Both forms of using statements can appear at file scope or within any block scope such as the body of a function or a compound statement. When used within a block, the effect of the using statement is limited to that block.</p>
+
+<pre class="code">void Example()
+{
+    {
+        using namespace Geometry;
+        Point p = {1, 2}; // Point is visible here.
+    }
+    // Point is no longer visible without qualification.
+    Geometry::Point q = {3, 4};
+}</pre>
+
+<p>Using directives can be chained with nested namespaces. Once a namespace has been brought into scope, its child namespaces can be referenced without the parent prefix.</p>
+
+<pre class="code">void Example()
+{
+    using namespace Graphics;
+    using namespace Shapes;
+
+    // Circle is accessible without the full Graphics::Shapes:: prefix.
+    Circle c;
+    c.radius = 10;
+}</pre>
 
 
 <h3 id="sbrm">Scope-Based Resource Management TODO</h3>
