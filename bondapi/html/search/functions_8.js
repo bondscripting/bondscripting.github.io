@@ -1,6 +1,26 @@
 var searchData=
 [
-  ['memcpy_0',['Memcpy',['../group__memory.html#ga49539dd35dee1c9f8d379a34ad57d525',1,'Bond']]],
-  ['modf_1',['Modf',['../group__math.html#gaac1de67ff891636889f6fd0d0acebb0a',1,'Bond']]],
-  ['modff_2',['Modff',['../group__math.html#ga0546881d28133e7ef44fbe0652753fe9',1,'Bond']]]
+  ['maxc_0',['MaxC',['../group__math.html#ga1055d9e2869adc16f1bf69dcb5f3b62e',1,'Bond']]],
+  ['maxd_1',['MaxD',['../group__math.html#gafd9314f70cf9ee78e0cd4a6883b889a9',1,'Bond']]],
+  ['maxf_2',['MaxF',['../group__math.html#ga042777f9a8bc6a0366fc3c679696f197',1,'Bond']]],
+  ['maxi_3',['MaxI',['../group__math.html#ga752bae2da9c2e451be7277953e048926',1,'Bond']]],
+  ['maxl_4',['MaxL',['../group__math.html#ga9208078c9f7f58cdfc6fab872be36585',1,'Bond']]],
+  ['maxs_5',['MaxS',['../group__math.html#gafc0146a48b990f14da26a86c5ad4fa8c',1,'Bond']]],
+  ['maxuc_6',['MaxUC',['../group__math.html#ga3c138254f82ff250c277331c27fb24fd',1,'Bond']]],
+  ['maxui_7',['MaxUI',['../group__math.html#ga9750c3d0463801e5e40e85f6bbecdd8b',1,'Bond']]],
+  ['maxul_8',['MaxUL',['../group__math.html#gabebc02626cf50f160d17ef648991b82f',1,'Bond']]],
+  ['maxus_9',['MaxUS',['../group__math.html#gadc46872b3d0ecdf31271b57ae2a79300',1,'Bond']]],
+  ['memcpy_10',['Memcpy',['../group__memory.html#ga49539dd35dee1c9f8d379a34ad57d525',1,'Bond']]],
+  ['minc_11',['MinC',['../group__math.html#ga3c3bb736c59eeebab0788af784c7eac9',1,'Bond']]],
+  ['mind_12',['MinD',['../group__math.html#gae9b59d8fe0a5ec6c7b13f6961558f46e',1,'Bond']]],
+  ['minf_13',['MinF',['../group__math.html#ga7d6fd36fe6622cb2223129267343e59b',1,'Bond']]],
+  ['mini_14',['MinI',['../group__math.html#ga1227925e26145cad99d892813326847d',1,'Bond']]],
+  ['minl_15',['MinL',['../group__math.html#ga454a1561ce256c164a0a984f5dffe53e',1,'Bond']]],
+  ['mins_16',['MinS',['../group__math.html#ga076794631cc2a187f1e3b3edf3d7e9ab',1,'Bond']]],
+  ['minuc_17',['MinUC',['../group__math.html#gaae7b7ab6e6263ea8bac0868e97571014',1,'Bond']]],
+  ['minui_18',['MinUI',['../group__math.html#ga789bb6ea27a01b9fadbc8ab423907742',1,'Bond']]],
+  ['minul_19',['MinUL',['../group__math.html#gab2bcfa977356571a966f294cdb4dec4f',1,'Bond']]],
+  ['minus_20',['MinUS',['../group__math.html#gac81d384787733d04a5617f2aae3e3f8a',1,'Bond']]],
+  ['modfd_21',['ModfD',['../group__math.html#ga98cd870a28d30e4b997806f3fc78208d',1,'Bond']]],
+  ['modff_22',['ModfF',['../group__math.html#ga81ed570f50e71adb3bb4a1245672a5b1',1,'Bond']]]
 ];

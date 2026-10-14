@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['pow_0',['Pow',['../group__math.html#ga217c0ca095852d9178f48e7d142a5a37',1,'Bond']]],
-  ['powf_1',['Powf',['../group__math.html#gaea1fd1327d0a8865c9065c38f96e1051',1,'Bond']]],
+  ['powd_0',['PowD',['../group__math.html#ga686570c4ae215874dd62b80075b957a2',1,'Bond']]],
+  ['powf_1',['PowF',['../group__math.html#gaec70269ded7d4099a3a1f1951a0733b9',1,'Bond']]],
   ['printb_2',['PrintB',['../struct_bond_1_1_output_stream.html#acf8e6b6ac5448748eaa1ee76db6950bc',1,'Bond::OutputStream']]],
   ['printc_3',['PrintC',['../struct_bond_1_1_output_stream.html#a125dbe1bd4a0a5bf8e682c09cb0eb954',1,'Bond::OutputStream']]],
   ['printd_4',['PrintD',['../struct_bond_1_1_output_stream.html#ab124ef586cfdfc20bf4041074c9ac565',1,'Bond::OutputStream']]],

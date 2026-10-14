@@ -27,7 +27,7 @@ var NAVTREE =
   [ "Bond", "index.html", [
     [ "Topics", "topics.html", "topics" ],
     [ "Namespace Members", "namespacemembers.html", [
-      [ "All", "namespacemembers.html", null ],
+      [ "All", "namespacemembers.html", "namespacemembers_dup" ],
       [ "Functions", "namespacemembers_func.html", null ],
       [ "Variables", "namespacemembers_vars.html", null ],
       [ "Enumerations", "namespacemembers_enum.html", null ],
@@ -46,7 +46,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html"
+"annotated.html",
+"struct_bond_1_1_input_stream.html#a6437c2d6e9ea312ea9f50e4c4d87fc8f"
 ];
 
 const SYNCONMSG = 'click to disable panel synchronization';

@@ -1,11 +1,19 @@
 var searchData=
 [
-  ['ldexp_0',['Ldexp',['../group__math.html#ga115f1ceb7b0ded6fe06c439dfa8f20b6',1,'Bond']]],
-  ['ldexpf_1',['Ldexpf',['../group__math.html#ga308459931c4db8948375f0c4e4b38d42',1,'Bond']]],
-  ['log_2',['Log',['../group__math.html#ga31163e042d38713a693493ab76ae2270',1,'Bond']]],
-  ['log10_3',['Log10',['../group__math.html#gaa8fad0ad369c5fc719648e5364de0092',1,'Bond']]],
-  ['log10f_4',['Log10f',['../group__math.html#ga45f2ff3560691ab8150a1a3cf64d21f2',1,'Bond']]],
-  ['log2_5',['Log2',['../group__math.html#gaa9578649e0da0ca0a0f21a90531e7ab5',1,'Bond']]],
-  ['log2f_6',['Log2f',['../group__math.html#gadb70e165118c061d92ef3770ccd22ee3',1,'Bond']]],
-  ['logf_7',['Logf',['../group__math.html#ga81738b1d4fe1023685516ac8e01c046f',1,'Bond']]]
+  ['ldexpd_0',['LdexpD',['../group__math.html#ga44b5848f37a695ead1179fad827dfe39',1,'Bond']]],
+  ['ldexpf_1',['LdexpF',['../group__math.html#gac66c01b4a1a0eff4ed8d743cef6e3921',1,'Bond']]],
+  ['lgammad_2',['LgammaD',['../group__math.html#ga09500fd79bc5a3c9f1a06be247e7add2',1,'Bond']]],
+  ['lgammaf_3',['LgammaF',['../group__math.html#ga1cff3e2cb4ce26d15a6064c9ca29a1eb',1,'Bond']]],
+  ['log10d_4',['Log10D',['../group__math.html#gacc55b342a71d0c6d5d5230016694b313',1,'Bond']]],
+  ['log10f_5',['Log10F',['../group__math.html#gaa077eafa446a0c44dea4911cbaed431e',1,'Bond']]],
+  ['log1pd_6',['Log1pD',['../group__math.html#ga002d3891a075023e07ebf671b290e9b0',1,'Bond']]],
+  ['log1pf_7',['Log1pF',['../group__math.html#ga4167a7d880a4cabedd64c966da982d83',1,'Bond']]],
+  ['log2d_8',['Log2D',['../group__math.html#ga44f2c20bc213c164b21c5852e2a51830',1,'Bond']]],
+  ['log2f_9',['Log2F',['../group__math.html#ga0a6a4e40689f268f8aa9c702fe650d00',1,'Bond']]],
+  ['logbd_10',['LogbD',['../group__math.html#ga9a0c22840d7ba0d11410d40f04da9d0d',1,'Bond']]],
+  ['logbf_11',['LogbF',['../group__math.html#ga5c424f0b110bc7b8fb5680c40969aa58',1,'Bond']]],
+  ['logd_12',['LogD',['../group__math.html#gae9f605a22a179dc5ae07bc75b0d5e969',1,'Bond']]],
+  ['logf_13',['LogF',['../group__math.html#ga818579ed71831302dd4cd3bc257b9eee',1,'Bond']]],
+  ['lroundd_14',['LroundD',['../group__math.html#gadd7571a18c43d78a5c60ee7c5825985e',1,'Bond']]],
+  ['lroundf_15',['LroundF',['../group__math.html#gaa1e093d57b96d486bcb8d5149ed19b58',1,'Bond']]]
 ];
