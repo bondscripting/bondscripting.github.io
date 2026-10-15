@@ -52,6 +52,9 @@ var group__compiler =
         [ "DUPLICATE_SYMBOL", "class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4ca762fc3741c9a4e14168cb6e177b6295b", null ],
         [ "UNEXPECTED_TOKEN", "class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4caa9ac8f4da1b1030dcebe86b023c32494", null ],
         [ "SYMBOL_IS_NOT_DEFINED", "class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4ca560f1a9d582791c6cbade2b94e838b1d", null ],
+        [ "EXPECTED_NAMESPACE", "class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4ca8ca1132fcc2d012f4c8fbfec1beab233", null ],
+        [ "USING_NAMESPACE_REQUIRES_NAMESPACE_KEYWORD", "class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4cab520b1a00d9050ec7cc0625e13587337", null ],
+        [ "AMBIGUOUS_SYMBOL_REFERENCE", "class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4cad20782f0f1640de30b31febd5b7480b5", null ],
         [ "NATIVE_STRUCT_IS_NOT_DEFINED", "class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4ca263066b2019c5beb2bb00d695e58c870", null ],
         [ "DUPLICATE_NATIVE_STRUCT_STUB", "class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4cad94102d4fe8e251551abf1becb7c4290", null ],
         [ "SYMBOL_IS_NOT_A_TYPE", "class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4cafdc63ad3b3fbb41c09ab76b4f7cdcdcf", null ],
@@ -194,6 +197,8 @@ var group__compiler =
       [ "Visit", "class_bond_1_1_parse_node_traverser.html#a520e44498d1cc091e71642cec174f6cd", null ],
       [ "Visit", "class_bond_1_1_parse_node_traverser.html#aece19cff02682be70ebdfca7b0f67046", null ],
       [ "Visit", "class_bond_1_1_parse_node_traverser.html#a2d72ba165e2a5968aa4fd684e70f751f", null ],
+      [ "Visit", "class_bond_1_1_parse_node_traverser.html#a05951afb8c5feae09c6873de14fdac20", null ],
+      [ "Visit", "class_bond_1_1_parse_node_traverser.html#a2ccb71b928d916665fbe471cf4b00d4b", null ],
       [ "Visit", "class_bond_1_1_parse_node_traverser.html#a4f5e641bca9504d34ab3636da1965daa", null ],
       [ "Visit", "class_bond_1_1_parse_node_traverser.html#a4dba6bda76348eff975e374af97814ac", null ],
       [ "Visit", "class_bond_1_1_parse_node_traverser.html#a87a59726e16900c4a940247c1a894e3f", null ],
@@ -227,6 +232,8 @@ var group__compiler =
       [ "Visit", "class_bond_1_1_parse_node_traverser.html#a5454898d8a94bea0d763f04c3c628314", null ],
       [ "Visit", "class_bond_1_1_parse_node_traverser.html#a890979648fce5b7b68de6be900e584c8", null ],
       [ "Visit", "class_bond_1_1_parse_node_traverser.html#a1f52abc897bf8047af33f1dc3c401506", null ],
+      [ "Visit", "class_bond_1_1_parse_node_traverser.html#ae0dc16b22a76df1cf28a0e5c13207f65", null ],
+      [ "Visit", "class_bond_1_1_parse_node_traverser.html#a1e0cf223d63afb4bb930b6c593e79296", null ],
       [ "Visit", "class_bond_1_1_parse_node_traverser.html#ac8e3919a0d6ea74ef1c372f367fa2b73", null ]
     ] ],
     [ "Bond::CastVisitor&lt; T &gt;", "class_bond_1_1_cast_visitor.html", [
@@ -274,6 +281,8 @@ var group__compiler =
       [ "Visit", "class_bond_1_1_cast_visitor.html#a14f5826982d5e95b303087696f017df5", null ],
       [ "Visit", "class_bond_1_1_cast_visitor.html#aba1de4c9ea4b65b19de965c00d81d6c0", null ],
       [ "Visit", "class_bond_1_1_cast_visitor.html#a3b0ce03acd38c6e3eedb392c9987bb51", null ],
+      [ "Visit", "class_bond_1_1_cast_visitor.html#a922b019481b11e0c72b6ce1ca6ea0e0e", null ],
+      [ "Visit", "class_bond_1_1_cast_visitor.html#aa69bd82506099c13cb2ad9a56e8d3e6c", null ],
       [ "Visit", "class_bond_1_1_cast_visitor.html#a2ab43de1f486d0dacd2f1db3cec84ebf", null ],
       [ "Visit", "class_bond_1_1_cast_visitor.html#a6c6a4c4570b8b081c5656f0acd3f2b78", null ],
       [ "Visit", "class_bond_1_1_cast_visitor.html#af523b12614020444ed05bdb1125a4f2e", null ],
@@ -308,6 +317,8 @@ var group__compiler =
       [ "Visit", "class_bond_1_1_cast_visitor.html#a7d77fd51e0c58f5ae0ac4e653e484220", null ],
       [ "Visit", "class_bond_1_1_cast_visitor.html#a3e176d65e4a1a67f72af4c7e30da4d3c", null ],
       [ "Visit", "class_bond_1_1_cast_visitor.html#a3b8c13bc5bcb38c0f7d4d36146ca9be2", null ],
+      [ "Visit", "class_bond_1_1_cast_visitor.html#a2cd4db5eca5e6269ecce6dce662170c2", null ],
+      [ "Visit", "class_bond_1_1_cast_visitor.html#ab0b10ebfd72d6001eb0edc11d39b4878", null ],
       [ "Visit", "class_bond_1_1_cast_visitor.html#a85e8e0b4cec6c3a80a7b060ee69119f6", null ]
     ] ],
     [ "Bond::ParseNodeVisitor", "class_bond_1_1_parse_node_visitor.html", [
@@ -354,6 +365,8 @@ var group__compiler =
       [ "Visit", "class_bond_1_1_parse_node_visitor.html#a14f5826982d5e95b303087696f017df5", null ],
       [ "Visit", "class_bond_1_1_parse_node_visitor.html#aba1de4c9ea4b65b19de965c00d81d6c0", null ],
       [ "Visit", "class_bond_1_1_parse_node_visitor.html#a3b0ce03acd38c6e3eedb392c9987bb51", null ],
+      [ "Visit", "class_bond_1_1_parse_node_visitor.html#a922b019481b11e0c72b6ce1ca6ea0e0e", null ],
+      [ "Visit", "class_bond_1_1_parse_node_visitor.html#aa69bd82506099c13cb2ad9a56e8d3e6c", null ],
       [ "Visit", "class_bond_1_1_parse_node_visitor.html#a2ab43de1f486d0dacd2f1db3cec84ebf", null ],
       [ "Visit", "class_bond_1_1_parse_node_visitor.html#a6c6a4c4570b8b081c5656f0acd3f2b78", null ],
       [ "Visit", "class_bond_1_1_parse_node_visitor.html#af523b12614020444ed05bdb1125a4f2e", null ],
@@ -387,6 +400,8 @@ var group__compiler =
       [ "Visit", "class_bond_1_1_parse_node_visitor.html#a7d77fd51e0c58f5ae0ac4e653e484220", null ],
       [ "Visit", "class_bond_1_1_parse_node_visitor.html#a3e176d65e4a1a67f72af4c7e30da4d3c", null ],
       [ "Visit", "class_bond_1_1_parse_node_visitor.html#a3b8c13bc5bcb38c0f7d4d36146ca9be2", null ],
+      [ "Visit", "class_bond_1_1_parse_node_visitor.html#a2cd4db5eca5e6269ecce6dce662170c2", null ],
+      [ "Visit", "class_bond_1_1_parse_node_visitor.html#ab0b10ebfd72d6001eb0edc11d39b4878", null ],
       [ "Visit", "class_bond_1_1_parse_node_visitor.html#a85e8e0b4cec6c3a80a7b060ee69119f6", null ]
     ] ],
     [ "Bond::ParseNodeVisitorAdapter", "class_bond_1_1_parse_node_visitor_adapter.html", [
@@ -433,6 +448,8 @@ var group__compiler =
       [ "Visit", "class_bond_1_1_parse_node_visitor_adapter.html#a9ada4da5b65d966a9a3507194cbaa773", null ],
       [ "Visit", "class_bond_1_1_parse_node_visitor_adapter.html#a45bd0183d535422895649680620edc14", null ],
       [ "Visit", "class_bond_1_1_parse_node_visitor_adapter.html#a06749d3147a1e11e23c1138ba871c194", null ],
+      [ "Visit", "class_bond_1_1_parse_node_visitor_adapter.html#a764e0ed363c36594dd48c4d9d19be75a", null ],
+      [ "Visit", "class_bond_1_1_parse_node_visitor_adapter.html#a9ad89828b1fe59e3461e263ec5ae524c", null ],
       [ "Visit", "class_bond_1_1_parse_node_visitor_adapter.html#a49055ea173db1be19576f3246c8184c4", null ],
       [ "Visit", "class_bond_1_1_parse_node_visitor_adapter.html#a920b61ab1ca11a7317463ca770635ed9", null ],
       [ "Visit", "class_bond_1_1_parse_node_visitor_adapter.html#ac271ef6491535f7da3aa158e3c0e871b", null ],
@@ -466,6 +483,8 @@ var group__compiler =
       [ "Visit", "class_bond_1_1_parse_node_visitor_adapter.html#a0e59ffaa004e725f0313d2006d2fe7bb", null ],
       [ "Visit", "class_bond_1_1_parse_node_visitor_adapter.html#a03be8af08f2e38bc8ce9a17a25e63f60", null ],
       [ "Visit", "class_bond_1_1_parse_node_visitor_adapter.html#a8ee57cc3d3ceff89c1050d4ce2fe1835", null ],
+      [ "Visit", "class_bond_1_1_parse_node_visitor_adapter.html#a04d59b5ec346d978e8626261145cee9d", null ],
+      [ "Visit", "class_bond_1_1_parse_node_visitor_adapter.html#ad3b8e37bbfaa24488de2d428f186356d", null ],
       [ "Visit", "class_bond_1_1_parse_node_visitor_adapter.html#acd531ca29b874717e977e8c0aae9e1c2", null ]
     ] ],
     [ "Bond::Parser", "class_bond_1_1_parser.html", [
@@ -482,7 +501,8 @@ var group__compiler =
       [ "~SemanticAnalyzer", "class_bond_1_1_semantic_analyzer.html#ace74d458e790ce73984d8410d4ae6f9a", null ],
       [ "Analyze", "class_bond_1_1_semantic_analyzer.html#a607f487e00d697e2c0ac74d4ff39434b", null ],
       [ "GetErrorBuffer", "class_bond_1_1_semantic_analyzer.html#ae5fa9422cd58c43bf0bd4ba001399dda", null ],
-      [ "GetSymbolTable", "class_bond_1_1_semantic_analyzer.html#a0fb7151c91b4a788cf153d5d6d27d926", null ]
+      [ "GetSymbolTable", "class_bond_1_1_semantic_analyzer.html#a0fb7151c91b4a788cf153d5d6d27d926", null ],
+      [ "SetPointerSize", "class_bond_1_1_semantic_analyzer.html#af908bee7a7690010f9480c196a30a8ec", null ]
     ] ],
     [ "Bond::StreamPos", "struct_bond_1_1_stream_pos.html", [
       [ "StreamPos", "struct_bond_1_1_stream_pos.html#a163dba2528d1b984dda4e9f1f590aaeb", null ],
@@ -533,6 +553,7 @@ var group__compiler =
         [ "KEY_UINT", "class_bond_1_1_token.html#a6d09a1144b5a79476ae9c8056728362fa1f5514f7327c37e40349453ec22eb017", null ],
         [ "KEY_ULONG", "class_bond_1_1_token.html#a6d09a1144b5a79476ae9c8056728362fa424abab2db246e2573682634ddaf58fc", null ],
         [ "KEY_USHORT", "class_bond_1_1_token.html#a6d09a1144b5a79476ae9c8056728362fa4451bec17f0385d172b8bfca71750402", null ],
+        [ "KEY_USING", "class_bond_1_1_token.html#a6d09a1144b5a79476ae9c8056728362fab6c5135ef8eb25151f68e86d3fb6ac9a", null ],
         [ "KEY_VOID", "class_bond_1_1_token.html#a6d09a1144b5a79476ae9c8056728362fa4e4c360e44a69d29fe4ac525f2a54cad", null ],
         [ "KEY_WHILE", "class_bond_1_1_token.html#a6d09a1144b5a79476ae9c8056728362fa63f67a109683ec6bdeb42737a6a8f7bd", null ],
         [ "IDENTIFIER", "class_bond_1_1_token.html#a6d09a1144b5a79476ae9c8056728362fa1b5231267d1453844cebe2594d07fa47", null ],

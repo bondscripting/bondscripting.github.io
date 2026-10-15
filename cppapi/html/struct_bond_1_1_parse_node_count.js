@@ -38,5 +38,7 @@ var struct_bond_1_1_parse_node_count =
     [ "mTypeDescriptor", "struct_bond_1_1_parse_node_count.html#a54d2011f64af9fadf6edc784b68ed98c", null ],
     [ "mTypeSpecifier", "struct_bond_1_1_parse_node_count.html#a5be38f98827d983ab799174c047f03a4", null ],
     [ "mUnaryExpression", "struct_bond_1_1_parse_node_count.html#a01e209b2fb155479f311e2b89fac8f46", null ],
+    [ "mUsingDeclaration", "struct_bond_1_1_parse_node_count.html#a0fc8aae4c5a341365be53c6e6d5137a2", null ],
+    [ "mUsingDirective", "struct_bond_1_1_parse_node_count.html#aef488e8e3274b2aa10eebdb1bd5a1c5a", null ],
     [ "mWhileStatement", "struct_bond_1_1_parse_node_count.html#a5c2e6349225aacfcbd37a1d2ececdd9c", null ]
 ];

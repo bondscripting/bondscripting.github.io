@@ -66,7 +66,9 @@ var searchData=
   ['_7etypedescriptor_63',['~TypeDescriptor',['../class_bond_1_1_type_descriptor.html#a872edd063cdb5591a719d6f786e595ba',1,'Bond::TypeDescriptor']]],
   ['_7etypespecifier_64',['~TypeSpecifier',['../class_bond_1_1_type_specifier.html#a09e9f070d23e90d7c46b3b6a3209d3c1',1,'Bond::TypeSpecifier']]],
   ['_7eunaryexpression_65',['~UnaryExpression',['../class_bond_1_1_unary_expression.html#aed2834e3ab719bdeed5642af8683dce4',1,'Bond::UnaryExpression']]],
-  ['_7evm_66',['~VM',['../class_bond_1_1_v_m.html#accba99893a1c4bd2e5f0238a5927899d',1,'Bond::VM']]],
-  ['_7ewhilestatement_67',['~WhileStatement',['../class_bond_1_1_while_statement.html#a73388154443611d38ccce6ba7057c81f',1,'Bond::WhileStatement']]],
-  ['_7ewrappercollectable_68',['~WrapperCollectable',['../class_bond_1_1_wrapper_collectable.html#ae8cd45f559417b239afdbc30f4cddd72',1,'Bond::WrapperCollectable']]]
+  ['_7eusingdeclaration_66',['~UsingDeclaration',['../class_bond_1_1_using_declaration.html#ac345d47e105ab6b408c0161824829f29',1,'Bond::UsingDeclaration']]],
+  ['_7eusingdirective_67',['~UsingDirective',['../class_bond_1_1_using_directive.html#abf28638894468a3eeabdb0c7c42e6a56',1,'Bond::UsingDirective']]],
+  ['_7evm_68',['~VM',['../class_bond_1_1_v_m.html#accba99893a1c4bd2e5f0238a5927899d',1,'Bond::VM']]],
+  ['_7ewhilestatement_69',['~WhileStatement',['../class_bond_1_1_while_statement.html#a73388154443611d38ccce6ba7057c81f',1,'Bond::WhileStatement']]],
+  ['_7ewrappercollectable_70',['~WrapperCollectable',['../class_bond_1_1_wrapper_collectable.html#ae8cd45f559417b239afdbc30f4cddd72',1,'Bond::WrapperCollectable']]]
 ];

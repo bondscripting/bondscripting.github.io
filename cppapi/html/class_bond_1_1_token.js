@@ -36,6 +36,7 @@ var class_bond_1_1_token =
       [ "KEY_UINT", "class_bond_1_1_token.html#a6d09a1144b5a79476ae9c8056728362fa1f5514f7327c37e40349453ec22eb017", null ],
       [ "KEY_ULONG", "class_bond_1_1_token.html#a6d09a1144b5a79476ae9c8056728362fa424abab2db246e2573682634ddaf58fc", null ],
       [ "KEY_USHORT", "class_bond_1_1_token.html#a6d09a1144b5a79476ae9c8056728362fa4451bec17f0385d172b8bfca71750402", null ],
+      [ "KEY_USING", "class_bond_1_1_token.html#a6d09a1144b5a79476ae9c8056728362fab6c5135ef8eb25151f68e86d3fb6ac9a", null ],
       [ "KEY_VOID", "class_bond_1_1_token.html#a6d09a1144b5a79476ae9c8056728362fa4e4c360e44a69d29fe4ac525f2a54cad", null ],
       [ "KEY_WHILE", "class_bond_1_1_token.html#a6d09a1144b5a79476ae9c8056728362fa63f67a109683ec6bdeb42737a6a8f7bd", null ],
       [ "IDENTIFIER", "class_bond_1_1_token.html#a6d09a1144b5a79476ae9c8056728362fa1b5231267d1453844cebe2594d07fa47", null ],

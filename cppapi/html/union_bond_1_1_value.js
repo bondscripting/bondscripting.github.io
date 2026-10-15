@@ -8,8 +8,6 @@ var union_bond_1_1_value =
     [ "Value", "union_bond_1_1_value.html#ab419e9a51392c27d70e504276f334b0a", null ],
     [ "Value", "union_bond_1_1_value.html#ad6479340aaab9a34221dd94f1d48629f", null ],
     [ "Value", "union_bond_1_1_value.html#a8ecd64e2005209a517762817ed6a75f6", null ],
-    [ "buffer", "union_bond_1_1_value.html#abc9a4e46a4c81066d56ca1139b3215db", null ],
-    [ "length", "union_bond_1_1_value.html#a806ccbe6093efb326c284b847bbd4499", null ],
     [ "mBool", "union_bond_1_1_value.html#a1d78873c07936356503933766d8191be", null ],
     [ "mDouble", "union_bond_1_1_value.html#a56af1d125690c2d33b574fe8a3ebbdeb", null ],
     [ "mFloat", "union_bond_1_1_value.html#a9537e2e74136879e032627da7a75cae0", null ],

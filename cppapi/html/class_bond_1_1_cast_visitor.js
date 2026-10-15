@@ -44,6 +44,8 @@ var class_bond_1_1_cast_visitor =
     [ "Visit", "class_bond_1_1_cast_visitor.html#a14f5826982d5e95b303087696f017df5", null ],
     [ "Visit", "class_bond_1_1_cast_visitor.html#aba1de4c9ea4b65b19de965c00d81d6c0", null ],
     [ "Visit", "class_bond_1_1_cast_visitor.html#a3b0ce03acd38c6e3eedb392c9987bb51", null ],
+    [ "Visit", "class_bond_1_1_cast_visitor.html#a922b019481b11e0c72b6ce1ca6ea0e0e", null ],
+    [ "Visit", "class_bond_1_1_cast_visitor.html#aa69bd82506099c13cb2ad9a56e8d3e6c", null ],
     [ "Visit", "class_bond_1_1_cast_visitor.html#a2ab43de1f486d0dacd2f1db3cec84ebf", null ],
     [ "Visit", "class_bond_1_1_cast_visitor.html#a6c6a4c4570b8b081c5656f0acd3f2b78", null ],
     [ "Visit", "class_bond_1_1_cast_visitor.html#af523b12614020444ed05bdb1125a4f2e", null ],
@@ -78,5 +80,7 @@ var class_bond_1_1_cast_visitor =
     [ "Visit", "class_bond_1_1_cast_visitor.html#a7d77fd51e0c58f5ae0ac4e653e484220", null ],
     [ "Visit", "class_bond_1_1_cast_visitor.html#a3e176d65e4a1a67f72af4c7e30da4d3c", null ],
     [ "Visit", "class_bond_1_1_cast_visitor.html#a3b8c13bc5bcb38c0f7d4d36146ca9be2", null ],
+    [ "Visit", "class_bond_1_1_cast_visitor.html#a2cd4db5eca5e6269ecce6dce662170c2", null ],
+    [ "Visit", "class_bond_1_1_cast_visitor.html#ab0b10ebfd72d6001eb0edc11d39b4878", null ],
     [ "Visit", "class_bond_1_1_cast_visitor.html#a85e8e0b4cec6c3a80a7b060ee69119f6", null ]
 ];

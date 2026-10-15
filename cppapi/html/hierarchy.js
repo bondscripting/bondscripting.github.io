@@ -1,5 +1,7 @@
 var hierarchy =
 [
+    [ "Bond::Value::[struct].mString", "struct_bond_1_1_value_1_1_0fstruct_0e_8m_string.html", null ],
+    [ "Bond::Function::[union].__unnamed0__", "union_bond_1_1_function_1_1_0funion_0e_8____unnamed0____.html", null ],
     [ "Bond::Allocator::AlignedDeallocator&lt; T &gt;", "struct_bond_1_1_allocator_1_1_aligned_deallocator.html", null ],
     [ "Bond::Allocator::AlignedObjectDeallocator&lt; T &gt;", "struct_bond_1_1_allocator_1_1_aligned_object_deallocator.html", null ],
     [ "Bond::Allocator", "class_bond_1_1_allocator.html", [
@@ -80,9 +82,11 @@ var hierarchy =
           [ "Bond::NamespaceDefinition", "class_bond_1_1_namespace_definition.html", null ],
           [ "Bond::Parameter", "class_bond_1_1_parameter.html", null ],
           [ "Bond::StructDeclaration", "class_bond_1_1_struct_declaration.html", null ],
-          [ "Bond::SwitchSection", "class_bond_1_1_switch_section.html", null ]
+          [ "Bond::SwitchSection", "class_bond_1_1_switch_section.html", null ],
+          [ "Bond::UsingDeclaration", "class_bond_1_1_using_declaration.html", null ]
         ] ],
         [ "Bond::TranslationUnit", "class_bond_1_1_translation_unit.html", null ],
+        [ "Bond::UsingDirective", "class_bond_1_1_using_directive.html", null ],
         [ "Bond::WhileStatement", "class_bond_1_1_while_statement.html", null ]
       ] ],
       [ "Bond::TypeDescriptor", "class_bond_1_1_type_descriptor.html", null ],

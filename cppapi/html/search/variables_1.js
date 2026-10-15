@@ -24,5 +24,5 @@ var searchData=
   ['bool_5ftoken_21',['BOOL_TOKEN',['../group__compiler.html#ga9308c5ec469c6467bac5b9a68cffa340',1,'Bond']]],
   ['bool_5ftype_5fspecifier_22',['BOOL_TYPE_SPECIFIER',['../group__nodes.html#gab8d8443be1213ff5d817418bd3e74975',1,'Bond']]],
   ['boolean_5ftype_5fspecifiers_5ftypeset_23',['BOOLEAN_TYPE_SPECIFIERS_TYPESET',['../group__compiler.html#gab5b2268cb9a7ba52e9e44d6c9cd01463',1,'Bond']]],
-  ['buffer_24',['buffer',['../union_bond_1_1_value.html#abc9a4e46a4c81066d56ca1139b3215db',1,'Bond::Value']]]
+  ['buffer_24',['buffer',['../struct_bond_1_1_value_1_1_0fstruct_0e_8m_string.html#a9eb50881f47b5d46460e04ac4fc5281d',1,'Bond::Value::[struct].mString']]]
 ];

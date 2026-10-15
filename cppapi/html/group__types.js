@@ -35,8 +35,6 @@ var group__types =
       [ "Value", "union_bond_1_1_value.html#ab419e9a51392c27d70e504276f334b0a", null ],
       [ "Value", "union_bond_1_1_value.html#ad6479340aaab9a34221dd94f1d48629f", null ],
       [ "Value", "union_bond_1_1_value.html#a8ecd64e2005209a517762817ed6a75f6", null ],
-      [ "buffer", "union_bond_1_1_value.html#abc9a4e46a4c81066d56ca1139b3215db", null ],
-      [ "length", "union_bond_1_1_value.html#a806ccbe6093efb326c284b847bbd4499", null ],
       [ "mBool", "union_bond_1_1_value.html#a1d78873c07936356503933766d8191be", null ],
       [ "mDouble", "union_bond_1_1_value.html#a56af1d125690c2d33b574fe8a3ebbdeb", null ],
       [ "mFloat", "union_bond_1_1_value.html#a9537e2e74136879e032627da7a75cae0", null ],
@@ -78,6 +76,10 @@ var group__types =
       [ "mDouble", "union_bond_1_1_value64.html#a5f3e03e326e2672d5dbcce884e5f3981", null ],
       [ "mLong", "union_bond_1_1_value64.html#a07a686b261d7179b12f775809df933c6", null ],
       [ "mULong", "union_bond_1_1_value64.html#ab076b1d81df3676972b07406689ccc5b", null ]
+    ] ],
+    [ "Bond::Value::[struct].mString", "struct_bond_1_1_value_1_1_0fstruct_0e_8m_string.html", [
+      [ "buffer", "struct_bond_1_1_value_1_1_0fstruct_0e_8m_string.html#a9eb50881f47b5d46460e04ac4fc5281d", null ],
+      [ "length", "struct_bond_1_1_value_1_1_0fstruct_0e_8m_string.html#af77ced641c4afde05bd38d90ee24af95", null ]
     ] ],
     [ "BOND_OPCODE_LIST", "group__types.html#ga753b1436366d6951f6dc48087cf3b7bb", null ],
     [ "Bond::OpCode", "group__types.html#ga557394428c2bb1199d13db3825d0c0f6", [
@@ -216,7 +218,8 @@ var group__types =
       [ "Bond::OPCODE_DTOL", "group__types.html#gga557394428c2bb1199d13db3825d0c0f6ad117e5f454d809e7cf5d02681018404c", null ],
       [ "Bond::OPCODE_DTOUL", "group__types.html#gga557394428c2bb1199d13db3825d0c0f6a72d8416cd5abda0a18c576b618af8e37", null ],
       [ "Bond::OPCODE_DTOF", "group__types.html#gga557394428c2bb1199d13db3825d0c0f6af3b14211361c4e89071d9dc8a4f31779", null ],
-      [ "Bond::OPCODE_PTROFF", "group__types.html#gga557394428c2bb1199d13db3825d0c0f6ad187f4c899b46a86ed27d1e00068eb99", null ],
+      [ "Bond::OPCODE_PTROFFI", "group__types.html#gga557394428c2bb1199d13db3825d0c0f6a37be172b12359eb02d201674e7836db2", null ],
+      [ "Bond::OPCODE_PTROFFL", "group__types.html#gga557394428c2bb1199d13db3825d0c0f6a8e5e9c12bcc16ff51932d6a8be41c727", null ],
       [ "Bond::OPCODE_PTRDIFF", "group__types.html#gga557394428c2bb1199d13db3825d0c0f6a6a0354a6434ea828196294d79adaf471", null ],
       [ "Bond::OPCODE_INCI", "group__types.html#gga557394428c2bb1199d13db3825d0c0f6a0cedaa9edf74facfa62de289d9f4e702", null ],
       [ "Bond::OPCODE_INCL", "group__types.html#gga557394428c2bb1199d13db3825d0c0f6a751154513f473a99686122b1a012b302", null ],

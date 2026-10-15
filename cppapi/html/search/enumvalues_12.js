@@ -7,5 +7,6 @@ var searchData=
   ['unterminated_5fcharacter_4',['UNTERMINATED_CHARACTER',['../class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4ca55d10bfa36a845dd1635356e4fbcaf63',1,'Bond::CompilerError']]],
   ['unterminated_5fcomment_5',['UNTERMINATED_COMMENT',['../class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4ca0af836c43c8be050d3af393c6721c539',1,'Bond::CompilerError']]],
   ['unterminated_5fstring_6',['UNTERMINATED_STRING',['../class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4ca0b2a92671ceb45618aeb6734be2b7631',1,'Bond::CompilerError']]],
-  ['unterminated_5fswitch_5fsection_7',['UNTERMINATED_SWITCH_SECTION',['../class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4caba6f230982bb873b2dc44dca67e80a8f',1,'Bond::CompilerError']]]
+  ['unterminated_5fswitch_5fsection_7',['UNTERMINATED_SWITCH_SECTION',['../class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4caba6f230982bb873b2dc44dca67e80a8f',1,'Bond::CompilerError']]],
+  ['using_5fnamespace_5frequires_5fnamespace_5fkeyword_8',['USING_NAMESPACE_REQUIRES_NAMESPACE_KEYWORD',['../class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4cab520b1a00d9050ec7cc0625e13587337',1,'Bond::CompilerError']]]
 ];

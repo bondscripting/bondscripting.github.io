@@ -5,6 +5,6 @@ var searchData=
   ['haserror_2',['HasError',['../class_bond_1_1_memory_input_stream.html#ac50b39e604c5043aad46f88518e81f53',1,'Bond::MemoryInputStream::HasError()'],['../class_bond_1_1_memory_output_stream.html#aa8ab2c941ebe5da84716faaefeecaae8',1,'Bond::MemoryOutputStream::HasError()'],['../class_bond_1_1_stdio_input_stream.html#a0a7c2f274d8e0642f4c539c647b32fa1',1,'Bond::StdioInputStream::HasError()'],['../class_bond_1_1_stdio_output_stream.html#a3daab285f6bb6a5bd4e3f9e55a2e1eaf',1,'Bond::StdioOutputStream::HasError()'],['../class_bond_1_1_stream.html#a7dd39d528d8d3dae47635e10da8cfb77',1,'Bond::Stream::HasError()']]],
   ['haserrors_3',['HasErrors',['../class_bond_1_1_compiler_error_buffer.html#a942a592ab37bd2026b9ba2ff01782769',1,'Bond::CompilerErrorBuffer::HasErrors()'],['../class_bond_1_1_front_end.html#a7f375a36406a4cf40ab09923c5b2af0b',1,'Bond::FrontEnd::HasErrors()']]],
   ['hasnext_4',['HasNext',['../class_bond_1_1_char_stream.html#a6a39f11d1f5b754ec51c8089ad713186',1,'Bond::CharStream']]],
-  ['hypot_5',['Hypot',['../namespace_bond.html#acf4c8e60de9ab53afbb2c7d0c6116072',1,'Bond']]],
-  ['hypotf_6',['Hypotf',['../namespace_bond.html#a258feadc9413cd99a2d57366ceebdbbd',1,'Bond']]]
+  ['hypotd_5',['HypotD',['../namespace_bond.html#ada27586e5031a696d8e3a3049b765715',1,'Bond']]],
+  ['hypotf_6',['HypotF',['../namespace_bond.html#a22502db7cd5065aaac95547b2c49941b',1,'Bond']]]
 ];

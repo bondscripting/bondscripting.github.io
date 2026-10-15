@@ -107,6 +107,8 @@ var annotated_dup =
       [ "TypeDescriptor", "class_bond_1_1_type_descriptor.html", "class_bond_1_1_type_descriptor" ],
       [ "TypeSpecifier", "class_bond_1_1_type_specifier.html", "class_bond_1_1_type_specifier" ],
       [ "UnaryExpression", "class_bond_1_1_unary_expression.html", "class_bond_1_1_unary_expression" ],
+      [ "UsingDeclaration", "class_bond_1_1_using_declaration.html", "class_bond_1_1_using_declaration" ],
+      [ "UsingDirective", "class_bond_1_1_using_directive.html", "class_bond_1_1_using_directive" ],
       [ "Value", "union_bond_1_1_value.html", "union_bond_1_1_value" ],
       [ "Value16", "union_bond_1_1_value16.html", "union_bond_1_1_value16" ],
       [ "Value32", "union_bond_1_1_value32.html", "union_bond_1_1_value32" ],
