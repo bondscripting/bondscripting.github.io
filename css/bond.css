@@ -284,3 +284,84 @@ div.code
     margin: 0;
     padding: 16px 4px 16px 0;
 }
+
+@media (max-width: 600px)
+{
+    .prodid
+    {
+        font-size: 3em;
+    }
+
+    .navbutton a
+    {
+        padding: 12px 10px;
+    }
+
+    ul, ol
+    {
+        padding-left: 24px;
+    }
+
+    dd
+    {
+        margin-left: 1em;
+    }
+
+    /* Block display is required for overflow-x to take effect on a table. */
+    table
+    {
+        display: block;
+        margin: 16px 0;
+        overflow-x: auto;
+    }
+
+    th, td
+    {
+        padding: 4px 8px;
+    }
+
+    .code
+    {
+        padding: 8px;
+    }
+
+    div.code
+    {
+        padding: 0 8px;
+    }
+
+    .lineno
+    {
+        padding: 8px 4px 8px 0;
+    }
+
+    .toc_h2
+    {
+        margin-left: 0.5em;
+        margin-right: 0;
+    }
+
+    .toc_h3
+    {
+        margin-left: 1.5em;
+        margin-right: 0;
+    }
+
+    .toc_h4
+    {
+        margin-left: 2.5em;
+        margin-right: 0;
+    }
+
+    .toc_h5
+    {
+        margin-left: 3.5em;
+        margin-right: 0;
+    }
+
+    .toc_h6
+    {
+        margin-left: 4.5em;
+        margin-right: 0;
+    }
+}
