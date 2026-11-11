@@ -120,19 +120,30 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('group__memory.
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:Bond_3A_3ACollector" id="r_Bond_3A_3ACollector"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_bond_1_1_collector.html">Bond::Collector</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An opaque set of collected allocations that are freed together.  <a href="struct_bond_1_1_collector.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:gac435c9b185d74ec9cabe047e64c7f698" id="r_gac435c9b185d74ec9cabe047e64c7f698"><td class="memItemLeft"><a class="el" href="struct_bond_1_1_collector.html">Collector</a> *&#160;</td><td class="memItemRight"><a class="el" href="#gac435c9b185d74ec9cabe047e64c7f698">Bond::GetCollector</a> ()</td></tr>
+<tr class="memdesc:gac435c9b185d74ec9cabe047e64c7f698"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="struct_bond_1_1_collector.html" title="An opaque set of collected allocations that are freed together.">Collector</a> of the calling function.  <br /></td></tr>
 <tr class="memitem:ga49d97858c63abd9454f3ef8dacdcf2b8" id="r_ga49d97858c63abd9454f3ef8dacdcf2b8"><td class="memItemLeft">void *&#160;</td><td class="memItemRight"><a class="el" href="#ga49d97858c63abd9454f3ef8dacdcf2b8">Bond::Allocate</a> (ulong size)</td></tr>
+<tr class="memdesc:ga49d97858c63abd9454f3ef8dacdcf2b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates a block of memory that must be freed manually.  <br /></td></tr>
 <tr class="memitem:gabf0073a026beddc413726df87d781228" id="r_gabf0073a026beddc413726df87d781228"><td class="memItemLeft">void *&#160;</td><td class="memItemRight"><a class="el" href="#gabf0073a026beddc413726df87d781228">Bond::AllocateCollected</a> (ulong size)</td></tr>
+<tr class="memdesc:gabf0073a026beddc413726df87d781228"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates a block of memory that is freed automatically when the calling function returns.  <br /></td></tr>
 <tr class="memitem:ga60d6d826b5869ba087a84b3e1dcf2da2" id="r_ga60d6d826b5869ba087a84b3e1dcf2da2"><td class="memItemLeft">void *&#160;</td><td class="memItemRight"><a class="el" href="#ga60d6d826b5869ba087a84b3e1dcf2da2">Bond::AllocateWithCollector</a> (<a class="el" href="struct_bond_1_1_collector.html">Collector</a> *collector, ulong size)</td></tr>
+<tr class="memdesc:ga60d6d826b5869ba087a84b3e1dcf2da2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates a block of memory that is freed automatically along with a given <a class="el" href="struct_bond_1_1_collector.html" title="An opaque set of collected allocations that are freed together.">Collector</a>.  <br /></td></tr>
 <tr class="memitem:ga4e8314acd3beb9bf5e04383819dbaae7" id="r_ga4e8314acd3beb9bf5e04383819dbaae7"><td class="memItemLeft">void *&#160;</td><td class="memItemRight"><a class="el" href="#ga4e8314acd3beb9bf5e04383819dbaae7">Bond::AllocateAligned</a> (ulong size, uint alignment)</td></tr>
+<tr class="memdesc:ga4e8314acd3beb9bf5e04383819dbaae7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates an aligned block of memory that must be freed manually.  <br /></td></tr>
 <tr class="memitem:gaa1260bf89fe5e428a91a4692ec465cfa" id="r_gaa1260bf89fe5e428a91a4692ec465cfa"><td class="memItemLeft">void *&#160;</td><td class="memItemRight"><a class="el" href="#gaa1260bf89fe5e428a91a4692ec465cfa">Bond::AllocateAlignedCollected</a> (ulong size, uint alignment)</td></tr>
+<tr class="memdesc:gaa1260bf89fe5e428a91a4692ec465cfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates an aligned block of memory that is freed automatically when the calling function returns.  <br /></td></tr>
 <tr class="memitem:ga48e6f5479c4fd86c79b042f4c9f2aee1" id="r_ga48e6f5479c4fd86c79b042f4c9f2aee1"><td class="memItemLeft">void *&#160;</td><td class="memItemRight"><a class="el" href="#ga48e6f5479c4fd86c79b042f4c9f2aee1">Bond::AllocateAlignedWithCollector</a> (<a class="el" href="struct_bond_1_1_collector.html">Collector</a> *collector, ulong size, uint alignment)</td></tr>
+<tr class="memdesc:ga48e6f5479c4fd86c79b042f4c9f2aee1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates an aligned block of memory that is freed automatically along with a given <a class="el" href="struct_bond_1_1_collector.html" title="An opaque set of collected allocations that are freed together.">Collector</a>.  <br /></td></tr>
 <tr class="memitem:ga08da36fe054ef1e3fbf0e8322487c66e" id="r_ga08da36fe054ef1e3fbf0e8322487c66e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga08da36fe054ef1e3fbf0e8322487c66e">Bond::Free</a> (void *ptr)</td></tr>
+<tr class="memdesc:ga08da36fe054ef1e3fbf0e8322487c66e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees a block of memory allocated with Allocate.  <br /></td></tr>
 <tr class="memitem:ga8c52c5a12996d27c823cd8252909d5e3" id="r_ga8c52c5a12996d27c823cd8252909d5e3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga8c52c5a12996d27c823cd8252909d5e3">Bond::FreeAligned</a> (void *ptr)</td></tr>
+<tr class="memdesc:ga8c52c5a12996d27c823cd8252909d5e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees a block of memory allocated with AllocateAligned.  <br /></td></tr>
 <tr class="memitem:ga49539dd35dee1c9f8d379a34ad57d525" id="r_ga49539dd35dee1c9f8d379a34ad57d525"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga49539dd35dee1c9f8d379a34ad57d525">Bond::Memcpy</a> (void *dest, void *src, ulong size)</td></tr>
+<tr class="memdesc:ga49539dd35dee1c9f8d379a34ad57d525"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies bytes from one block of memory to another. The blocks must not overlap.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>API for scope-based and manual dynamic memory management, as well as other memory related functions. </p>
@@ -152,6 +163,15 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Allocates a block of memory that must be freed manually. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>The size of the block in bytes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the allocated memory, which must be freed with Free. </dd></dl>
 
 </div>
 </div>
@@ -174,6 +194,16 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Allocates an aligned block of memory that must be freed manually. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>The size of the block in bytes. </td></tr>
+    <tr><td class="paramname">alignment</td><td>The alignment of the block in bytes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the allocated memory, which must be freed with FreeAligned. </dd></dl>
+
 </div>
 </div>
 <a id="gaa1260bf89fe5e428a91a4692ec465cfa" name="gaa1260bf89fe5e428a91a4692ec465cfa"></a>
@@ -194,6 +224,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Allocates an aligned block of memory that is freed automatically when the calling function returns. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>The size of the block in bytes. </td></tr>
+    <tr><td class="paramname">alignment</td><td>The alignment of the block in bytes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the allocated memory, which must not be freed manually. </dd></dl>
 
 </div>
 </div>
@@ -221,6 +261,17 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Allocates an aligned block of memory that is freed automatically along with a given <a class="el" href="struct_bond_1_1_collector.html" title="An opaque set of collected allocations that are freed together.">Collector</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">collector</td><td>The <a class="el" href="struct_bond_1_1_collector.html" title="An opaque set of collected allocations that are freed together.">Collector</a> with which the memory is registered. If null, the <a class="el" href="struct_bond_1_1_collector.html" title="An opaque set of collected allocations that are freed together.">Collector</a> of the calling function is used. </td></tr>
+    <tr><td class="paramname">size</td><td>The size of the block in bytes. </td></tr>
+    <tr><td class="paramname">alignment</td><td>The alignment of the block in bytes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the allocated memory, which must not be freed manually. </dd></dl>
+
 </div>
 </div>
 <a id="gabf0073a026beddc413726df87d781228" name="gabf0073a026beddc413726df87d781228"></a>
@@ -237,6 +288,15 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Allocates a block of memory that is freed automatically when the calling function returns. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>The size of the block in bytes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the allocated memory, which must not be freed manually. </dd></dl>
 
 </div>
 </div>
@@ -259,6 +319,16 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Allocates a block of memory that is freed automatically along with a given <a class="el" href="struct_bond_1_1_collector.html" title="An opaque set of collected allocations that are freed together.">Collector</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">collector</td><td>The <a class="el" href="struct_bond_1_1_collector.html" title="An opaque set of collected allocations that are freed together.">Collector</a> with which the memory is registered. If null, the <a class="el" href="struct_bond_1_1_collector.html" title="An opaque set of collected allocations that are freed together.">Collector</a> of the calling function is used. </td></tr>
+    <tr><td class="paramname">size</td><td>The size of the block in bytes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the allocated memory, which must not be freed manually. </dd></dl>
+
 </div>
 </div>
 <a id="ga08da36fe054ef1e3fbf0e8322487c66e" name="ga08da36fe054ef1e3fbf0e8322487c66e"></a>
@@ -275,6 +345,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Frees a block of memory allocated with Allocate. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td>A pointer returned by Allocate. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -293,6 +371,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Frees a block of memory allocated with AllocateAligned. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td>A pointer returned by AllocateAligned. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="gac435c9b185d74ec9cabe047e64c7f698" name="gac435c9b185d74ec9cabe047e64c7f698"></a>
@@ -309,6 +395,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns the <a class="el" href="struct_bond_1_1_collector.html" title="An opaque set of collected allocations that are freed together.">Collector</a> of the calling function. </p>
+<p>Allocations registered with it are freed when the calling function returns. The returned pointer can be passed to a function that it calls, so that the callee can allocate memory that outlives it. </p>
 
 </div>
 </div>
@@ -335,6 +424,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Copies bytes from one block of memory to another. The blocks must not overlap. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dest</td><td>A pointer to the memory into which the bytes are copied. </td></tr>
+    <tr><td class="paramname">src</td><td>A pointer to the memory from which the bytes are copied. </td></tr>
+    <tr><td class="paramname">size</td><td>The number of bytes to copy. Both pointers must be non-null unless it is 0. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

@@ -114,42 +114,43 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('group__type.ht
 </div><!--header-->
 <div class="contents">
 
-<p>Functions for testing the values of types.  
+<p>Functions for classifying and converting characters.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ga422ab07f380ecd2aa0e5f3b0cc5e7f4c" id="r_ga422ab07f380ecd2aa0e5f3b0cc5e7f4c"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga422ab07f380ecd2aa0e5f3b0cc5e7f4c">Bond::IsAlnum</a> (int c)</td></tr>
-<tr class="memdesc:ga422ab07f380ecd2aa0e5f3b0cc5e7f4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a character is alphanumeric (i.e. a decimal digit or an upper or lower case letter).  <br /></td></tr>
+<tr class="memdesc:ga422ab07f380ecd2aa0e5f3b0cc5e7f4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a character is an ASCII alphanumeric character (i.e. a decimal digit or an upper or lower case letter).  <br /></td></tr>
 <tr class="memitem:ga4441fa3bf132057a89a0c73ba68d3bfb" id="r_ga4441fa3bf132057a89a0c73ba68d3bfb"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga4441fa3bf132057a89a0c73ba68d3bfb">Bond::IsAlpha</a> (int c)</td></tr>
-<tr class="memdesc:ga4441fa3bf132057a89a0c73ba68d3bfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a character is alphabetic (.i.e. an upper or lower case letter).  <br /></td></tr>
+<tr class="memdesc:ga4441fa3bf132057a89a0c73ba68d3bfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a character is an ASCII alphabetic character (i.e. an upper or lower case letter).  <br /></td></tr>
 <tr class="memitem:gad30d0c220315f18f0bd3b3a4d6a8b9cf" id="r_gad30d0c220315f18f0bd3b3a4d6a8b9cf"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#gad30d0c220315f18f0bd3b3a4d6a8b9cf">Bond::IsBlank</a> (int c)</td></tr>
-<tr class="memdesc:gad30d0c220315f18f0bd3b3a4d6a8b9cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a character is a whitespace character used for separating words in a sentence.  <br /></td></tr>
+<tr class="memdesc:gad30d0c220315f18f0bd3b3a4d6a8b9cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a character is an ASCII blank character (i.e. a space or a horizontal tab).  <br /></td></tr>
 <tr class="memitem:ga206b80bea4a77d55a19158a67a78eea9" id="r_ga206b80bea4a77d55a19158a67a78eea9"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga206b80bea4a77d55a19158a67a78eea9">Bond::IsCntrl</a> (int c)</td></tr>
-<tr class="memdesc:ga206b80bea4a77d55a19158a67a78eea9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a character is a control character (i.e. a non-printable character).  <br /></td></tr>
+<tr class="memdesc:ga206b80bea4a77d55a19158a67a78eea9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a character is an ASCII control character (i.e. 0 through 31 or 127).  <br /></td></tr>
 <tr class="memitem:ga5d51589e770824f00db48f1b1df493fb" id="r_ga5d51589e770824f00db48f1b1df493fb"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga5d51589e770824f00db48f1b1df493fb">Bond::IsDigit</a> (int c)</td></tr>
-<tr class="memdesc:ga5d51589e770824f00db48f1b1df493fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a character is a decimal digit.  <br /></td></tr>
+<tr class="memdesc:ga5d51589e770824f00db48f1b1df493fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a character is an ASCII decimal digit.  <br /></td></tr>
 <tr class="memitem:ga0fbe7de467c86e3085d93935ea6e6d6d" id="r_ga0fbe7de467c86e3085d93935ea6e6d6d"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga0fbe7de467c86e3085d93935ea6e6d6d">Bond::IsGraph</a> (int c)</td></tr>
-<tr class="memdesc:ga0fbe7de467c86e3085d93935ea6e6d6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a character has a graphical representation (i.e. it is printable and is not a space).  <br /></td></tr>
+<tr class="memdesc:ga0fbe7de467c86e3085d93935ea6e6d6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a character is an ASCII character with a graphical representation (i.e. it is printable and is not a space).  <br /></td></tr>
 <tr class="memitem:gac826ddac257ccceb17f8cb841ed8b949" id="r_gac826ddac257ccceb17f8cb841ed8b949"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#gac826ddac257ccceb17f8cb841ed8b949">Bond::IsLower</a> (int c)</td></tr>
-<tr class="memdesc:gac826ddac257ccceb17f8cb841ed8b949"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a character is a lower case letter.  <br /></td></tr>
+<tr class="memdesc:gac826ddac257ccceb17f8cb841ed8b949"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a character is an ASCII lower case letter.  <br /></td></tr>
 <tr class="memitem:ga5e678280e226718482c3eb68ca4e64af" id="r_ga5e678280e226718482c3eb68ca4e64af"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga5e678280e226718482c3eb68ca4e64af">Bond::IsPrint</a> (int c)</td></tr>
-<tr class="memdesc:ga5e678280e226718482c3eb68ca4e64af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a character is a printable character (i.e. it occupies space on a display).  <br /></td></tr>
+<tr class="memdesc:ga5e678280e226718482c3eb68ca4e64af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a character is a printable ASCII character (i.e. a graphical character or a space).  <br /></td></tr>
 <tr class="memitem:ga83cbcea3205cff24ac2db95d9267f5b5" id="r_ga83cbcea3205cff24ac2db95d9267f5b5"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga83cbcea3205cff24ac2db95d9267f5b5">Bond::IsPunct</a> (int c)</td></tr>
-<tr class="memdesc:ga83cbcea3205cff24ac2db95d9267f5b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a character is a punctuation character.  <br /></td></tr>
+<tr class="memdesc:ga83cbcea3205cff24ac2db95d9267f5b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a character is an ASCII punctuation character (i.e. a graphical character that is not alphanumeric).  <br /></td></tr>
 <tr class="memitem:gadbfdf9ee11555b3379f1a2f87f3fa2ee" id="r_gadbfdf9ee11555b3379f1a2f87f3fa2ee"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#gadbfdf9ee11555b3379f1a2f87f3fa2ee">Bond::IsSpace</a> (int c)</td></tr>
-<tr class="memdesc:gadbfdf9ee11555b3379f1a2f87f3fa2ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a character is a whitespace character.  <br /></td></tr>
+<tr class="memdesc:gadbfdf9ee11555b3379f1a2f87f3fa2ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a character is an ASCII whitespace character (i.e. a space, horizontal tab, newline, vertical tab, form feed or carriage return).  <br /></td></tr>
 <tr class="memitem:ga340184b198b66a0caf1e118f78612734" id="r_ga340184b198b66a0caf1e118f78612734"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga340184b198b66a0caf1e118f78612734">Bond::IsUpper</a> (int c)</td></tr>
-<tr class="memdesc:ga340184b198b66a0caf1e118f78612734"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a character is an upper case letter.  <br /></td></tr>
+<tr class="memdesc:ga340184b198b66a0caf1e118f78612734"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a character is an ASCII upper case letter.  <br /></td></tr>
 <tr class="memitem:ga486bbf3a09d19f4ef00d7904a48f0fab" id="r_ga486bbf3a09d19f4ef00d7904a48f0fab"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga486bbf3a09d19f4ef00d7904a48f0fab">Bond::IsXDigit</a> (int c)</td></tr>
-<tr class="memdesc:ga486bbf3a09d19f4ef00d7904a48f0fab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a character is a hexadecimal digit character. (i.e. the digits 0 through 9 and upper and lower case letters A through F).  <br /></td></tr>
+<tr class="memdesc:ga486bbf3a09d19f4ef00d7904a48f0fab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a character is an ASCII hexadecimal digit (i.e. the digits 0 through 9 and upper and lower case letters A through F).  <br /></td></tr>
 <tr class="memitem:ga9d84a8fa7a07e1c7acc0ada75335ad46" id="r_ga9d84a8fa7a07e1c7acc0ada75335ad46"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ga9d84a8fa7a07e1c7acc0ada75335ad46">Bond::ToLower</a> (int c)</td></tr>
-<tr class="memdesc:ga9d84a8fa7a07e1c7acc0ada75335ad46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an upper case letter converted to lower case. If the given character is not an upper case letter, it is returned unchanged.  <br /></td></tr>
+<tr class="memdesc:ga9d84a8fa7a07e1c7acc0ada75335ad46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an ASCII upper case letter converted to lower case. If the given character is not an ASCII upper case letter, it is returned unchanged.  <br /></td></tr>
 <tr class="memitem:gaaa363e7da3bbe6ead99f9a5e0adc3d2c" id="r_gaaa363e7da3bbe6ead99f9a5e0adc3d2c"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#gaaa363e7da3bbe6ead99f9a5e0adc3d2c">Bond::ToUpper</a> (int c)</td></tr>
-<tr class="memdesc:gaaa363e7da3bbe6ead99f9a5e0adc3d2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns lower case letter converted to upper case. If the given character is not a lower case letter, it is returned unchanged.  <br /></td></tr>
+<tr class="memdesc:gaaa363e7da3bbe6ead99f9a5e0adc3d2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an ASCII lower case letter converted to upper case. If the given character is not an ASCII lower case letter, it is returned unchanged.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Functions for testing the values of types. </p>
+<div class="textblock"><p>Functions for classifying and converting characters. </p>
+<p>Only ASCII characters (values 0 through 127) are classified. All other values, including the negative char values of the bytes of multi-byte UTF-8 sequences, are not members of any class and are returned unchanged by the conversion functions. The results do not depend on the locale.</p>
 <div class="fragment"><div class="line">include <span class="stringliteral">&quot;type.bond&quot;</span>;</div>
 </div><!-- fragment --> </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="ga422ab07f380ecd2aa0e5f3b0cc5e7f4c" name="ga422ab07f380ecd2aa0e5f3b0cc5e7f4c"></a>
@@ -167,7 +168,13 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns whether a character is alphanumeric (i.e. a decimal digit or an upper or lower case letter). </p>
+<p>Returns whether a character is an ASCII alphanumeric character (i.e. a decimal digit or an upper or lower case letter). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>The character to classify. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -186,7 +193,13 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns whether a character is alphabetic (.i.e. an upper or lower case letter). </p>
+<p>Returns whether a character is an ASCII alphabetic character (i.e. an upper or lower case letter). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>The character to classify. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -205,7 +218,13 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns whether a character is a whitespace character used for separating words in a sentence. </p>
+<p>Returns whether a character is an ASCII blank character (i.e. a space or a horizontal tab). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>The character to classify. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -224,7 +243,13 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns whether a character is a control character (i.e. a non-printable character). </p>
+<p>Returns whether a character is an ASCII control character (i.e. 0 through 31 or 127). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>The character to classify. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -243,7 +268,13 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns whether a character is a decimal digit. </p>
+<p>Returns whether a character is an ASCII decimal digit. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>The character to classify. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -262,7 +293,13 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns whether a character has a graphical representation (i.e. it is printable and is not a space). </p>
+<p>Returns whether a character is an ASCII character with a graphical representation (i.e. it is printable and is not a space). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>The character to classify. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -281,7 +318,13 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns whether a character is a lower case letter. </p>
+<p>Returns whether a character is an ASCII lower case letter. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>The character to classify. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -300,7 +343,13 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns whether a character is a printable character (i.e. it occupies space on a display). </p>
+<p>Returns whether a character is a printable ASCII character (i.e. a graphical character or a space). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>The character to classify. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -319,7 +368,13 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns whether a character is a punctuation character. </p>
+<p>Returns whether a character is an ASCII punctuation character (i.e. a graphical character that is not alphanumeric). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>The character to classify. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -338,7 +393,13 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns whether a character is a whitespace character. </p>
+<p>Returns whether a character is an ASCII whitespace character (i.e. a space, horizontal tab, newline, vertical tab, form feed or carriage return). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>The character to classify. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -357,7 +418,13 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns whether a character is an upper case letter. </p>
+<p>Returns whether a character is an ASCII upper case letter. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>The character to classify. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -376,7 +443,13 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns whether a character is a hexadecimal digit character. (i.e. the digits 0 through 9 and upper and lower case letters A through F). </p>
+<p>Returns whether a character is an ASCII hexadecimal digit (i.e. the digits 0 through 9 and upper and lower case letters A through F). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>The character to classify. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -395,7 +468,13 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns an upper case letter converted to lower case. If the given character is not an upper case letter, it is returned unchanged. </p>
+<p>Returns an ASCII upper case letter converted to lower case. If the given character is not an ASCII upper case letter, it is returned unchanged. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>The character to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -414,7 +493,13 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns lower case letter converted to upper case. If the given character is not a lower case letter, it is returned unchanged. </p>
+<p>Returns an ASCII lower case letter converted to upper case. If the given character is not an ASCII lower case letter, it is returned unchanged. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>The character to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

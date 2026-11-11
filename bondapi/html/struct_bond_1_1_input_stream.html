@@ -144,11 +144,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a572dd18493a0800413932ae53b93e590" id="r_a572dd18493a0800413932ae53b93e590"><td class="memItemLeft">uint&#160;</td><td class="memItemRight"><a class="el" href="#a572dd18493a0800413932ae53b93e590">Read</a> (void *bytes, uint numBytes)</td></tr>
 <tr class="memdesc:a572dd18493a0800413932ae53b93e590"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to read the specified number of unformatted bytes into the given buffer.  <br /></td></tr>
 <tr class="memitem:abd3d1b1ad0242cd153238a0f529c0696" id="r_abd3d1b1ad0242cd153238a0f529c0696"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#abd3d1b1ad0242cd153238a0f529c0696">GetFlags</a> () const</td></tr>
-<tr class="memdesc:abd3d1b1ad0242cd153238a0f529c0696"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the stream's current format flags as a bitmask of values from the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618">IO::Flags</a> enum.  <br /></td></tr>
+<tr class="memdesc:abd3d1b1ad0242cd153238a0f529c0696"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the stream's current format flags as a bitmask of values from the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618" title="Format flags that modify how InputStream and OutputStream interpret input and format output....">IO::Flags</a> enum.  <br /></td></tr>
 <tr class="memitem:ad17dcce8ee4250d6eb330f9f850ec008" id="r_ad17dcce8ee4250d6eb330f9f850ec008"><td class="memItemLeft"><a class="el" href="struct_bond_1_1_input_stream.html">InputStream</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ad17dcce8ee4250d6eb330f9f850ec008">SetFlags</a> (int flags)</td></tr>
-<tr class="memdesc:ad17dcce8ee4250d6eb330f9f850ec008"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables the format format flags in the given bitmask of values from the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618">IO::Flags</a> enum if they are not already enabled.  <br /></td></tr>
+<tr class="memdesc:ad17dcce8ee4250d6eb330f9f850ec008"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables the format flags in the given bitmask of values from the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618" title="Format flags that modify how InputStream and OutputStream interpret input and format output....">IO::Flags</a> enum.  <br /></td></tr>
 <tr class="memitem:a31a7257639560cb18de3b6143c2aec63" id="r_a31a7257639560cb18de3b6143c2aec63"><td class="memItemLeft"><a class="el" href="struct_bond_1_1_input_stream.html">InputStream</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a31a7257639560cb18de3b6143c2aec63">UnsetFlags</a> (int flags)</td></tr>
-<tr class="memdesc:a31a7257639560cb18de3b6143c2aec63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disables the format format flags in the given bitmask of values from the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618">IO::Flags</a> enum if they are not already disabled.  <br /></td></tr>
+<tr class="memdesc:a31a7257639560cb18de3b6143c2aec63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disables the format flags in the given bitmask of values from the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618" title="Format flags that modify how InputStream and OutputStream interpret input and format output....">IO::Flags</a> enum.  <br /></td></tr>
 <tr class="memitem:a260ac15beb5a250a56f2a3dfd503c8e8" id="r_a260ac15beb5a250a56f2a3dfd503c8e8"><td class="memItemLeft"><a class="el" href="struct_bond_1_1_input_stream.html">InputStream</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a260ac15beb5a250a56f2a3dfd503c8e8">ClearFlags</a> ()</td></tr>
 <tr class="memdesc:a260ac15beb5a250a56f2a3dfd503c8e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disables all of the format flags.  <br /></td></tr>
 <tr class="memitem:a4c79ccdd389b0b6f2fbbd22313dfb657" id="r_a4c79ccdd389b0b6f2fbbd22313dfb657"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a4c79ccdd389b0b6f2fbbd22313dfb657">GetPosition</a> () const</td></tr>
@@ -164,12 +164,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7b4a6a98df7520820f3045d78b9d115e" id="r_a7b4a6a98df7520820f3045d78b9d115e"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a7b4a6a98df7520820f3045d78b9d115e">IsEof</a> () const</td></tr>
 <tr class="memdesc:a7b4a6a98df7520820f3045d78b9d115e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the end of the stream has been reached.  <br /></td></tr>
 <tr class="memitem:a0cb232f04432e1dcbcebc5cf51e0ef7a" id="r_a0cb232f04432e1dcbcebc5cf51e0ef7a"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a0cb232f04432e1dcbcebc5cf51e0ef7a">HasError</a> () const</td></tr>
-<tr class="memdesc:a0cb232f04432e1dcbcebc5cf51e0ef7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether an error has occurred during an input operation.  <br /></td></tr>
+<tr class="memdesc:a0cb232f04432e1dcbcebc5cf51e0ef7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether an I/O error has occurred during an input operation.  <br /></td></tr>
 <tr class="memitem:a77a1a95c777f7bcd30e12668c689f1b6" id="r_a77a1a95c777f7bcd30e12668c689f1b6"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a77a1a95c777f7bcd30e12668c689f1b6">ClearError</a> ()</td></tr>
 <tr class="memdesc:a77a1a95c777f7bcd30e12668c689f1b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the error flag.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An abstract interface for performing both unformatted and formatted input operations. </p>
+<p>Except for Close, using a stream after it has been closed raises an error. </p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a4ba4921626ee4f81ebc972087d28fb87" name="a4ba4921626ee4f81ebc972087d28fb87"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4ba4921626ee4f81ebc972087d28fb87">&#9670;&#160;</a></span>AddOffset()</h2>
@@ -251,6 +252,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Discards any unread input and closes the stream. </p>
+<p>Closing a stream that is already closed has no effect. Closing a stream does not free it. </p>
 
 </div>
 </div>
@@ -270,7 +272,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reads and returns a single unformatted byte from the input stream. </p>
-<p>If the end of the stream has been reached and there is no data to return, the value <a class="el" href="namespace_bond_1_1_i_o.html#aae3188d0b70931e09bd2ec1b9056c206a05fe24c20e513f45eb6ee0e78b2b9cdb">IO::Eof</a> is returned. </p>
+<p>If the end of the stream has been reached and there is no data to return, the value <a class="el" href="namespace_bond_1_1_i_o.html#aae3188d0b70931e09bd2ec1b9056c206a05fe24c20e513f45eb6ee0e78b2b9cdb" title="The value returned by InputStream::Get when the end of the stream has been reached.">IO::Eof</a> is returned. </p>
 
 </div>
 </div>
@@ -308,7 +310,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the stream's current format flags as a bitmask of values from the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618">IO::Flags</a> enum. </p>
+<p>Returns the stream's current format flags as a bitmask of values from the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618" title="Format flags that modify how InputStream and OutputStream interpret input and format output....">IO::Flags</a> enum. </p>
 <p>The format flags modify how the stream interprets input. </p>
 
 </div>
@@ -347,7 +349,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns whether an error has occurred during an input operation. </p>
+<p>Returns whether an I/O error has occurred during an input operation. </p>
+<p>Input that does not match the requested format is not an error. </p>
 
 </div>
 </div>
@@ -390,7 +393,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Attempts to read the specified number of unformatted bytes into the given buffer. </p>
-<p>Fewer bytes may be read if the end of the stream is reached or the stream is closed. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Fewer bytes are read if the end of the stream is reached. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bytes</td><td>The buffer into which the read bytes are stored. </td></tr>
     <tr><td class="paramname">numBytes</td><td>The requested number of bytes to be read. </td></tr>
@@ -417,7 +420,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reads and returns a formatted Boolean value from the input stream. </p>
-<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a296b8578eeca2079b42b58321e73b44e" title="Read and write bool values as the strings &quot;true&quot; and &quot;false&quot;.">IO::BoolAlpha</a> flag is set, an attempt is made to read the strings "true" or "false", otherwise an integer is read. If a non-zero value, or the string "true" is read, the value true is returned. If no input that could be interpreted as a bool is read, <a class="el" href="#a0cb232f04432e1dcbcebc5cf51e0ef7a" title="Returns whether an error has occurred during an input operation.">HasError()</a> returns true. </p>
+<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a296b8578eeca2079b42b58321e73b44e" title="Read and write bool values as the strings &quot;true&quot; and &quot;false&quot;.">IO::BoolAlpha</a> flag is set, an attempt is made to read the string "true" or "false", otherwise an integer is read, in base 16 if it begins with 0x, in base 8 if it begins with 0, or in base 10 otherwise. If the string "true" or a non-zero value is read, true is returned. If no valid input can be read, false is returned and the stream is left at the first character that did not match. </p>
 
 </div>
 </div>
@@ -437,6 +440,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reads and returns a single character from the input stream. </p>
+<p>Whitespace is skipped first if the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a08bbb630988ca5bcba5c36c08635c2a6" title="Skip whitespace before reading a character with InputStream::ScanC, or a bool with InputStream::ScanB...">IO::SkipWhite</a> flag is set. If the end of the stream has been reached, 0 is returned. </p>
 
 </div>
 </div>
@@ -456,7 +460,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reads and returns a formatted floating-point number as a double from the input stream. </p>
-<p>If no input that could be interpreted as a floating-point number is read, <a class="el" href="#a0cb232f04432e1dcbcebc5cf51e0ef7a" title="Returns whether an error has occurred during an input operation.">HasError()</a> returns true. </p>
+<p>Leading whitespace is skipped. If no floating-point number can be read, 0 is returned and the stream is left at the first character that did not match. </p>
 
 </div>
 </div>
@@ -476,7 +480,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reads and returns a formatted floating-point number as a float from the input stream. </p>
-<p>If no input that could be interpreted as a floating-point number is read, <a class="el" href="#a0cb232f04432e1dcbcebc5cf51e0ef7a" title="Returns whether an error has occurred during an input operation.">HasError()</a> returns true. </p>
+<p>Leading whitespace is skipped. If no floating-point number can be read, 0 is returned and the stream is left at the first character that did not match. </p>
 
 </div>
 </div>
@@ -496,7 +500,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reads and returns a formatted integer as an int from the input stream. </p>
-<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a7dcac6c8fd112841d484de37ae390c62" title="Read and write integers in base 10.">IO::Dec</a>, <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9" title="Read and write integers in base 16.">IO::Hex</a> or <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae158c14cc75a1751708c4c2fbae0f9bf" title="Read and write integers in base 8.">IO::Oct</a> flag is set, the integer is read in base 10, 16 or 8 respectively. If none of those flags are set, the integer is read in base 16 if it begins with 0x, in base 8 if it begins with 0, or in base 10 otherwise. If no input that could be interpreted as an integer is read, <a class="el" href="#a0cb232f04432e1dcbcebc5cf51e0ef7a" title="Returns whether an error has occurred during an input operation.">HasError()</a> returns true. </p>
+<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a7dcac6c8fd112841d484de37ae390c62" title="Read integers in base 10. Takes precedence over IO::Hex and IO::Oct when reading, but not when writin...">IO::Dec</a>, <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9" title="Read and write integers in base 16. Takes precedence over IO::Oct.">IO::Hex</a> or <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae158c14cc75a1751708c4c2fbae0f9bf" title="Read and write integers in base 8.">IO::Oct</a> flag is set, the integer is read in base 10, 16 or 8 respectively, checked in that order. If none of those flags are set, the integer is read in base 16 if it begins with 0x, in base 8 if it begins with 0, or in base 10 otherwise. Leading whitespace is skipped. If no integer can be read, 0 is returned and the stream is left at the first character that did not match. </p>
 
 </div>
 </div>
@@ -516,7 +520,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reads and returns a formatted integer as a long from the input stream. </p>
-<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a7dcac6c8fd112841d484de37ae390c62" title="Read and write integers in base 10.">IO::Dec</a>, <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9" title="Read and write integers in base 16.">IO::Hex</a> or <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae158c14cc75a1751708c4c2fbae0f9bf" title="Read and write integers in base 8.">IO::Oct</a> flag is set, the integer is read in base 10, 16 or 8 respectively. If none of those flags are set, the integer is read in base 16 if it begins with 0x, in base 8 if it begins with 0, or in base 10 otherwise. If no input that could be interpreted as an integer is read, <a class="el" href="#a0cb232f04432e1dcbcebc5cf51e0ef7a" title="Returns whether an error has occurred during an input operation.">HasError()</a> returns true. </p>
+<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a7dcac6c8fd112841d484de37ae390c62" title="Read integers in base 10. Takes precedence over IO::Hex and IO::Oct when reading, but not when writin...">IO::Dec</a>, <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9" title="Read and write integers in base 16. Takes precedence over IO::Oct.">IO::Hex</a> or <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae158c14cc75a1751708c4c2fbae0f9bf" title="Read and write integers in base 8.">IO::Oct</a> flag is set, the integer is read in base 10, 16 or 8 respectively, checked in that order. If none of those flags are set, the integer is read in base 16 if it begins with 0x, in base 8 if it begins with 0, or in base 10 otherwise. Leading whitespace is skipped. If no integer can be read, 0 is returned and the stream is left at the first character that did not match. </p>
 
 </div>
 </div>
@@ -540,10 +544,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reads a string of characters from the input stream into a character buffer. </p>
-<p>The scan stops at the first whitespace character or when the buffer is full. The string is null terminated. At most bufferSize-1 characters are read to leave space for the null terminator. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Leading whitespace is skipped. The scan stops at the first whitespace character or when the buffer is full. The string is null terminated. At most bufferSize-1 characters are read to leave space for the null terminator. If the end of the stream is reached before any character is read, the buffer is left unchanged. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">str</td><td>Pointer to a character buffer where characters are stored. </td></tr>
-    <tr><td class="paramname">bufferSize</td><td>Length of the buffer pointed to by str. </td></tr>
+    <tr><td class="paramname">bufferSize</td><td>Length of the buffer pointed to by str. It must be at least 1. </td></tr>
   </table>
   </dd>
 </dl>
@@ -566,7 +570,9 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reads and returns a formatted unsigned integer as a uint from the input stream. </p>
-<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a7dcac6c8fd112841d484de37ae390c62" title="Read and write integers in base 10.">IO::Dec</a>, <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9" title="Read and write integers in base 16.">IO::Hex</a> or <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae158c14cc75a1751708c4c2fbae0f9bf" title="Read and write integers in base 8.">IO::Oct</a> flag is set, the integer is read in base 10, 16 or 8 respectively. If none of those flags are set, the integer is read in base 16 if it begins with 0x, in base 8 if it begins with 0, or in base 10 otherwise. If no input that could be interpreted as an integer is read, <a class="el" href="#a0cb232f04432e1dcbcebc5cf51e0ef7a" title="Returns whether an error has occurred during an input operation.">HasError()</a> returns true. </p>
+<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a7dcac6c8fd112841d484de37ae390c62" title="Read integers in base 10. Takes precedence over IO::Hex and IO::Oct when reading, but not when writin...">IO::Dec</a>, <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9" title="Read and write integers in base 16. Takes precedence over IO::Oct.">IO::Hex</a> or <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae158c14cc75a1751708c4c2fbae0f9bf" title="Read and write integers in base 8.">IO::Oct</a> flag is set, the integer is read in base 10, 16 or 8 respectively, checked in that order. If none of those flags are set, the integer is read in base</p><ol type="1">
+<li>Leading whitespace is skipped. If no integer can be read, 0 is returned and the stream is left at the first character that did not match. </li>
+</ol>
 
 </div>
 </div>
@@ -586,7 +592,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reads and returns a formatted unsigned integer as a ulong from the input stream. </p>
-<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a7dcac6c8fd112841d484de37ae390c62" title="Read and write integers in base 10.">IO::Dec</a>, <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9" title="Read and write integers in base 16.">IO::Hex</a> or <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae158c14cc75a1751708c4c2fbae0f9bf" title="Read and write integers in base 8.">IO::Oct</a> flag is set, the integer is read in base 10, 16 or 8 respectively. If none of those flags are set, the integer is read in base 16 if it begins with 0x, in base 8 if it begins with 0, or in base 10 otherwise. If no input that could be interpreted as an integer is read, <a class="el" href="#a0cb232f04432e1dcbcebc5cf51e0ef7a" title="Returns whether an error has occurred during an input operation.">HasError()</a> returns true. </p>
+<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a7dcac6c8fd112841d484de37ae390c62" title="Read integers in base 10. Takes precedence over IO::Hex and IO::Oct when reading, but not when writin...">IO::Dec</a>, <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9" title="Read and write integers in base 16. Takes precedence over IO::Oct.">IO::Hex</a> or <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae158c14cc75a1751708c4c2fbae0f9bf" title="Read and write integers in base 8.">IO::Oct</a> flag is set, the integer is read in base 10, 16 or 8 respectively, checked in that order. If none of those flags are set, the integer is read in base 16 if it begins with 0x, in base 8 if it begins with 0, or in base 10 otherwise. Leading whitespace is skipped. If no integer can be read, 0 is returned and the stream is left at the first character that did not match. </p>
 
 </div>
 </div>
@@ -605,10 +611,10 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Enables the format format flags in the given bitmask of values from the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618">IO::Flags</a> enum if they are not already enabled. </p>
+<p>Enables the format flags in the given bitmask of values from the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618" title="Format flags that modify how InputStream and OutputStream interpret input and format output....">IO::Flags</a> enum. </p>
 <p>All other flags are left untouched. The format flags modify how the stream interprets input. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">flags</td><td>The bitmask of flags from the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618">IO::Flags</a> enum to enable. </td></tr>
+    <tr><td class="paramname">flags</td><td>The bitmask of flags from the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618" title="Format flags that modify how InputStream and OutputStream interpret input and format output....">IO::Flags</a> enum to enable. </td></tr>
   </table>
   </dd>
 </dl>
@@ -681,10 +687,10 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Disables the format format flags in the given bitmask of values from the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618">IO::Flags</a> enum if they are not already disabled. </p>
+<p>Disables the format flags in the given bitmask of values from the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618" title="Format flags that modify how InputStream and OutputStream interpret input and format output....">IO::Flags</a> enum. </p>
 <p>All other flags are left untouched. The format flags modify how the stream interprets input. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">flags</td><td>The bitmask of flags from the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618">IO::Flags</a> enum to disable. </td></tr>
+    <tr><td class="paramname">flags</td><td>The bitmask of flags from the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618" title="Format flags that modify how InputStream and OutputStream interpret input and format output....">IO::Flags</a> enum to disable. </td></tr>
   </table>
   </dd>
 </dl>

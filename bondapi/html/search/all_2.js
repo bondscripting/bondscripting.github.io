@@ -15,7 +15,7 @@ var searchData=
   ['clampul_12',['ClampUL',['../group__math.html#gaf026cb5e550026f21d4e92bf3703b2c3',1,'Bond']]],
   ['clampus_13',['ClampUS',['../group__math.html#gae6649fd702aa4096277370481ab94156',1,'Bond']]],
   ['clearerror_14',['ClearError',['../struct_bond_1_1_input_stream.html#a77a1a95c777f7bcd30e12668c689f1b6',1,'Bond::InputStream::ClearError()'],['../struct_bond_1_1_output_stream.html#ad11e5fece2b495ee4a880636d7ac6326',1,'Bond::OutputStream::ClearError()']]],
-  ['clearflags_15',['ClearFlags',['../struct_bond_1_1_input_stream.html#a260ac15beb5a250a56f2a3dfd503c8e8',1,'Bond::InputStream::ClearFlags()'],['../struct_bond_1_1_output_stream.html#ad1ced9d412ef19e49f292ad21e3d4e61',1,'Bond::OutputStream::ClearFlags()']]],
+  ['clearflags_15',['ClearFlags',['../struct_bond_1_1_input_stream.html#a260ac15beb5a250a56f2a3dfd503c8e8',1,'Bond::InputStream::ClearFlags()'],['../struct_bond_1_1_output_stream.html#a281a31671cb46411216556021f45d883',1,'Bond::OutputStream::ClearFlags()']]],
   ['close_16',['Close',['../struct_bond_1_1_input_stream.html#a7f00809408db03f990d80f031a24b580',1,'Bond::InputStream::Close()'],['../struct_bond_1_1_output_stream.html#a6befc82efb0871d24526fb5ad816bdcd',1,'Bond::OutputStream::Close()']]],
   ['collector_17',['Collector',['../struct_bond_1_1_collector.html',1,'Bond']]],
   ['constants_18',['Constants',['../namespace_bond_1_1_i_o.html#aae3188d0b70931e09bd2ec1b9056c206',1,'Bond::IO']]],
@@ -28,7 +28,7 @@ var searchData=
   ['createinputstream_25',['CreateInputStream',['../group__io.html#gab785d4e797cc8f8d7f896af22cd7c4e7',1,'Bond']]],
   ['createinputstreamcollected_26',['CreateInputStreamCollected',['../group__io.html#gae2201ca92519d5af792741e45c35c456',1,'Bond']]],
   ['createinputstreamwithcollector_27',['CreateInputStreamWithCollector',['../group__io.html#gae1a010fc6d53b270fb8ea52c7ed93f58',1,'Bond']]],
-  ['createoutputstream_28',['CreateOutputStream',['../group__io.html#ga966169b170483b13c084db0624bf3766',1,'Bond']]],
-  ['createoutputstreamcollected_29',['CreateOutputStreamCollected',['../group__io.html#ga1af4b51e479b6f6234740e04ef7bbe7a',1,'Bond']]],
-  ['createoutputstreamwithcollector_30',['CreateOutputStreamWithCollector',['../group__io.html#gadf5fddfe71993286fa85d652cfb6e491',1,'Bond']]]
+  ['createoutputstream_28',['CreateOutputStream',['../group__io.html#gaf9d7124f1e46e6a2989c4058f2b05f7d',1,'Bond']]],
+  ['createoutputstreamcollected_29',['CreateOutputStreamCollected',['../group__io.html#ga85d444d738a40bcb9aac695c43a99fdf',1,'Bond']]],
+  ['createoutputstreamwithcollector_30',['CreateOutputStreamWithCollector',['../group__io.html#ga03d374e3e2e9ed8d3311c3aadc5dc559',1,'Bond']]]
 ];

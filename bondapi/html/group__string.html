@@ -120,15 +120,29 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('group__string.
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ga535b768db59af2a1d7e9f8f14959e7d3" id="r_ga535b768db59af2a1d7e9f8f14959e7d3"><td class="memItemLeft">uint&#160;</td><td class="memItemRight"><a class="el" href="#ga535b768db59af2a1d7e9f8f14959e7d3">Bond::Strlen</a> (const char *str)</td></tr>
-<tr class="memdesc:ga535b768db59af2a1d7e9f8f14959e7d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the length of a string.  <br /></td></tr>
+<tr class="memdesc:ga535b768db59af2a1d7e9f8f14959e7d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the length of a string in bytes, not in characters.  <br /></td></tr>
 <tr class="memitem:gaeed7baaf34194ba42342591dc9eac110" id="r_gaeed7baaf34194ba42342591dc9eac110"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#gaeed7baaf34194ba42342591dc9eac110">Bond::Strcmp</a> (const char *str1, const char *str2)</td></tr>
+<tr class="memdesc:gaeed7baaf34194ba42342591dc9eac110"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two strings byte by byte. For UTF-8 strings, this orders them by code point. The order is stable, but it is not a locale's collation order.  <br /></td></tr>
+<tr class="memitem:gac1559b9a779d1f574a406b257bb73bd4" id="r_gac1559b9a779d1f574a406b257bb73bd4"><td class="memItemLeft">uint&#160;</td><td class="memItemRight"><a class="el" href="#gac1559b9a779d1f574a406b257bb73bd4">Bond::Utf8Length</a> (const char *str)</td></tr>
+<tr class="memdesc:gac1559b9a779d1f574a406b257bb73bd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of code points in a UTF-8 string. Each invalid byte sequence counts as one, as if it were replaced with U+FFFD.  <br /></td></tr>
+<tr class="memitem:ga5878ade1cab069edd2cb153ff9802c48" id="r_ga5878ade1cab069edd2cb153ff9802c48"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga5878ade1cab069edd2cb153ff9802c48">Bond::Utf8IsValid</a> (const char *str)</td></tr>
+<tr class="memdesc:ga5878ade1cab069edd2cb153ff9802c48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a string is valid UTF-8. Overlong encodings, UTF-16 surrogates and values beyond U+10FFFF are invalid.  <br /></td></tr>
+<tr class="memitem:ga0ea9385d2ca33648a39c22c3a72fae12" id="r_ga0ea9385d2ca33648a39c22c3a72fae12"><td class="memItemLeft">uint&#160;</td><td class="memItemRight"><a class="el" href="#ga0ea9385d2ca33648a39c22c3a72fae12">Bond::Utf8Decode</a> (const char *str, uint *codePoint)</td></tr>
+<tr class="memdesc:ga0ea9385d2ca33648a39c22c3a72fae12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decodes the UTF-8 encoded code point at the start of a string.  <br /></td></tr>
+<tr class="memitem:gae3c58f9d1efc80c9c864554cdac96b6b" id="r_gae3c58f9d1efc80c9c864554cdac96b6b"><td class="memItemLeft">uint&#160;</td><td class="memItemRight"><a class="el" href="#gae3c58f9d1efc80c9c864554cdac96b6b">Bond::Utf8Encode</a> (uint codePoint, char *buffer)</td></tr>
+<tr class="memdesc:gae3c58f9d1efc80c9c864554cdac96b6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encodes a code point in UTF-8.  <br /></td></tr>
 <tr class="memitem:gab7fa25925e36b6e83764d3ec8efdb220" id="r_gab7fa25925e36b6e83764d3ec8efdb220"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#gab7fa25925e36b6e83764d3ec8efdb220">Bond::TryParseInt</a> (const char *str, int *result)</td></tr>
+<tr class="memdesc:gab7fa25925e36b6e83764d3ec8efdb220"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a base-10 integer from the start of a string as an int.  <br /></td></tr>
 <tr class="memitem:ga8f844c44791dd83c487d96085e2bad7c" id="r_ga8f844c44791dd83c487d96085e2bad7c"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga8f844c44791dd83c487d96085e2bad7c">Bond::TryParseLong</a> (const char *str, long *result)</td></tr>
-<tr class="memitem:ga4c226bcf5b110572c770dbd1f9265a00" id="r_ga4c226bcf5b110572c770dbd1f9265a00"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga4c226bcf5b110572c770dbd1f9265a00">Bond::TryParseFloat</a> (const char *str, int *result)</td></tr>
-<tr class="memitem:ga6c0c17ba2624f43f110108cd97ab8132" id="r_ga6c0c17ba2624f43f110108cd97ab8132"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga6c0c17ba2624f43f110108cd97ab8132">Bond::TryParseDouble</a> (const char *str, int *result)</td></tr>
+<tr class="memdesc:ga8f844c44791dd83c487d96085e2bad7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a base-10 integer from the start of a string as a long.  <br /></td></tr>
+<tr class="memitem:gaeecfc2cf30ebedb2031341df8050c47f" id="r_gaeecfc2cf30ebedb2031341df8050c47f"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#gaeecfc2cf30ebedb2031341df8050c47f">Bond::TryParseFloat</a> (const char *str, float *result)</td></tr>
+<tr class="memdesc:gaeecfc2cf30ebedb2031341df8050c47f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a floating-point number from the start of a string as a float.  <br /></td></tr>
+<tr class="memitem:ga1ae84b1868d2d8eb86c17606e1731db9" id="r_ga1ae84b1868d2d8eb86c17606e1731db9"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga1ae84b1868d2d8eb86c17606e1731db9">Bond::TryParseDouble</a> (const char *str, double *result)</td></tr>
+<tr class="memdesc:ga1ae84b1868d2d8eb86c17606e1731db9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a floating-point number from the start of a string as a double.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A collection of functions for manipulating strings of characters. </p>
+<p>Strings are null-terminated and encoded in UTF-8. A char holds a single byte, which is one UTF-8 code unit rather than one character. The Utf8 functions operate on code points.</p>
 <div class="fragment"><div class="line">include <span class="stringliteral">&quot;string.bond&quot;</span>;</div>
 </div><!-- fragment --> </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="gaeed7baaf34194ba42342591dc9eac110" name="gaeed7baaf34194ba42342591dc9eac110"></a>
@@ -150,6 +164,16 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Compares two strings byte by byte. For UTF-8 strings, this orders them by code point. The order is stable, but it is not a locale's collation order. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str1</td><td>The first string to compare. </td></tr>
+    <tr><td class="paramname">str2</td><td>The second string to compare. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A negative value if str1 orders before str2, zero if they are equal, or a positive value if str1 orders after str2. </dd></dl>
+
 </div>
 </div>
 <a id="ga535b768db59af2a1d7e9f8f14959e7d3" name="ga535b768db59af2a1d7e9f8f14959e7d3"></a>
@@ -167,18 +191,19 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the length of a string. </p>
+<p>Returns the length of a string in bytes, not in characters. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">str</td><td>The string whose length is returned. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#gac1559b9a779d1f574a406b257bb73bd4" title="Returns the number of code points in a UTF-8 string. Each invalid byte sequence counts as one,...">Utf8Length</a> </dd></dl>
 
 </div>
 </div>
-<a id="ga6c0c17ba2624f43f110108cd97ab8132" name="ga6c0c17ba2624f43f110108cd97ab8132"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga6c0c17ba2624f43f110108cd97ab8132">&#9670;&#160;</a></span>TryParseDouble()</h2>
+<a id="ga1ae84b1868d2d8eb86c17606e1731db9" name="ga1ae84b1868d2d8eb86c17606e1731db9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1ae84b1868d2d8eb86c17606e1731db9">&#9670;&#160;</a></span>TryParseDouble()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -191,15 +216,25 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>result</em></span>&#160;)</td>
+          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>result</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Parses a floating-point number from the start of a string as a double. </p>
+<p>Leading whitespace is skipped, and any characters after the number are ignored. The accepted syntax is that of the C library's strtod, which depends on the C locale unless the host has replaced the parser. A value out of the range of a double is not an error: it is parsed as infinity or zero. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>The string to parse. </td></tr>
+    <tr><td class="paramname">result</td><td>Receives the parsed value on success. It is left unchanged on failure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Whether a number was parsed. False is returned if the string does not start with a number or if either pointer is null. </dd></dl>
+
 </div>
 </div>
-<a id="ga4c226bcf5b110572c770dbd1f9265a00" name="ga4c226bcf5b110572c770dbd1f9265a00"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga4c226bcf5b110572c770dbd1f9265a00">&#9670;&#160;</a></span>TryParseFloat()</h2>
+<a id="gaeecfc2cf30ebedb2031341df8050c47f" name="gaeecfc2cf30ebedb2031341df8050c47f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaeecfc2cf30ebedb2031341df8050c47f">&#9670;&#160;</a></span>TryParseFloat()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -212,10 +247,20 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>result</em></span>&#160;)</td>
+          <td class="paramtype">float *</td>          <td class="paramname"><span class="paramname"><em>result</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Parses a floating-point number from the start of a string as a float. </p>
+<p>Leading whitespace is skipped, and any characters after the number are ignored. The accepted syntax is that of the C library's strtof, which depends on the C locale unless the host has replaced the parser. A value out of the range of a float is not an error: it is parsed as infinity or zero. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>The string to parse. </td></tr>
+    <tr><td class="paramname">result</td><td>Receives the parsed value on success. It is left unchanged on failure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Whether a number was parsed. False is returned if the string does not start with a number or if either pointer is null. </dd></dl>
 
 </div>
 </div>
@@ -238,6 +283,16 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Parses a base-10 integer from the start of a string as an int. </p>
+<p>Leading whitespace is skipped, and any characters after the number are ignored. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>The string to parse. </td></tr>
+    <tr><td class="paramname">result</td><td>Receives the parsed value on success. It is left unchanged on failure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Whether a number was parsed. False is returned if the string does not start with a number, if the value is out of the range of an int, or if either pointer is null. </dd></dl>
+
 </div>
 </div>
 <a id="ga8f844c44791dd83c487d96085e2bad7c" name="ga8f844c44791dd83c487d96085e2bad7c"></a>
@@ -258,6 +313,128 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Parses a base-10 integer from the start of a string as a long. </p>
+<p>Leading whitespace is skipped, and any characters after the number are ignored. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>The string to parse. </td></tr>
+    <tr><td class="paramname">result</td><td>Receives the parsed value on success. It is left unchanged on failure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Whether a number was parsed. False is returned if the string does not start with a number, if the value is out of the range of a long, or if either pointer is null. </dd></dl>
+
+</div>
+</div>
+<a id="ga0ea9385d2ca33648a39c22c3a72fae12" name="ga0ea9385d2ca33648a39c22c3a72fae12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0ea9385d2ca33648a39c22c3a72fae12">&#9670;&#160;</a></span>Utf8Decode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint Bond::Utf8Decode </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>str</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint *</td>          <td class="paramname"><span class="paramname"><em>codePoint</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Decodes the UTF-8 encoded code point at the start of a string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>The string to decode. </td></tr>
+    <tr><td class="paramname">codePoint</td><td>Receives the decoded code point, or U+FFFD if the sequence is invalid. May be null to skip over a code point without reading it. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of bytes consumed, from 1 to 4, or 0 at the end of the string. For an invalid sequence, it is the length of the invalid sequence, which is at least 1, so the string can be iterated with <span class="tt">for (uint n; (n = <a class="el" href="#ga0ea9385d2ca33648a39c22c3a72fae12" title="Decodes the UTF-8 encoded code point at the start of a string.">Utf8Decode</a>(str, &amp;cp)) &gt; 0u; str += n)</span>. </dd></dl>
+
+</div>
+</div>
+<a id="gae3c58f9d1efc80c9c864554cdac96b6b" name="gae3c58f9d1efc80c9c864554cdac96b6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae3c58f9d1efc80c9c864554cdac96b6b">&#9670;&#160;</a></span>Utf8Encode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint Bond::Utf8Encode </td>
+          <td>(</td>
+          <td class="paramtype">uint</td>          <td class="paramname"><span class="paramname"><em>codePoint</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Encodes a code point in UTF-8. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">codePoint</td><td>The code point to encode. </td></tr>
+    <tr><td class="paramname">buffer</td><td>Receives from 1 to 4 bytes, without a null terminator. May be null to just compute the length. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of bytes in the encoding, or 0 if the code point is a UTF-16 surrogate or is beyond U+10FFFF, in which case nothing is written. </dd></dl>
+
+</div>
+</div>
+<a id="ga5878ade1cab069edd2cb153ff9802c48" name="ga5878ade1cab069edd2cb153ff9802c48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5878ade1cab069edd2cb153ff9802c48">&#9670;&#160;</a></span>Utf8IsValid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Bond::Utf8IsValid </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns whether a string is valid UTF-8. Overlong encodings, UTF-16 surrogates and values beyond U+10FFFF are invalid. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>The string to validate. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gac1559b9a779d1f574a406b257bb73bd4" name="gac1559b9a779d1f574a406b257bb73bd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac1559b9a779d1f574a406b257bb73bd4">&#9670;&#160;</a></span>Utf8Length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint Bond::Utf8Length </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the number of code points in a UTF-8 string. Each invalid byte sequence counts as one, as if it were replaced with U+FFFD. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>The string whose length is returned. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

@@ -10,8 +10,8 @@ var searchData=
   ['toupper_7',['ToUpper',['../group__type.html#gaaa363e7da3bbe6ead99f9a5e0adc3d2c',1,'Bond']]],
   ['truncd_8',['TruncD',['../group__math.html#ga39e83338f86864d4aa005a5975074919',1,'Bond']]],
   ['truncf_9',['TruncF',['../group__math.html#ga1c0d597e3422da159bfafc79cf328a17',1,'Bond']]],
-  ['tryparsedouble_10',['TryParseDouble',['../group__string.html#ga6c0c17ba2624f43f110108cd97ab8132',1,'Bond']]],
-  ['tryparsefloat_11',['TryParseFloat',['../group__string.html#ga4c226bcf5b110572c770dbd1f9265a00',1,'Bond']]],
+  ['tryparsedouble_10',['TryParseDouble',['../group__string.html#ga1ae84b1868d2d8eb86c17606e1731db9',1,'Bond']]],
+  ['tryparsefloat_11',['TryParseFloat',['../group__string.html#gaeecfc2cf30ebedb2031341df8050c47f',1,'Bond']]],
   ['tryparseint_12',['TryParseInt',['../group__string.html#gab7fa25925e36b6e83764d3ec8efdb220',1,'Bond']]],
   ['tryparselong_13',['TryParseLong',['../group__string.html#ga8f844c44791dd83c487d96085e2bad7c',1,'Bond']]]
 ];

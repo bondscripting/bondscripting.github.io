@@ -2,7 +2,7 @@ var struct_bond_1_1_output_stream =
 [
     [ "AddOffset", "struct_bond_1_1_output_stream.html#a46027ab7af4d90389b7862e7cda4ee3e", null ],
     [ "ClearError", "struct_bond_1_1_output_stream.html#ad11e5fece2b495ee4a880636d7ac6326", null ],
-    [ "ClearFlags", "struct_bond_1_1_output_stream.html#ad1ced9d412ef19e49f292ad21e3d4e61", null ],
+    [ "ClearFlags", "struct_bond_1_1_output_stream.html#a281a31671cb46411216556021f45d883", null ],
     [ "Close", "struct_bond_1_1_output_stream.html#a6befc82efb0871d24526fb5ad816bdcd", null ],
     [ "Flush", "struct_bond_1_1_output_stream.html#ad8ff3d141f6bf73f3ac631de6c24c91e", null ],
     [ "GetEndPosition", "struct_bond_1_1_output_stream.html#a40c56db8b73a0cda72c8a386207146e0", null ],
@@ -25,8 +25,8 @@ var struct_bond_1_1_output_stream =
     [ "SetFlags", "struct_bond_1_1_output_stream.html#a9adf18a3b6251932f785b45491e03257", null ],
     [ "SetPosition", "struct_bond_1_1_output_stream.html#a5a60d5b8559ba0048193211ec457e9bc", null ],
     [ "SetPositionFromEnd", "struct_bond_1_1_output_stream.html#ad5426d2d60319fcd13ae9b99982d9a2c", null ],
-    [ "SetPrecision", "struct_bond_1_1_output_stream.html#a378a13848e017336dc2f85accad34e0b", null ],
-    [ "SetWidth", "struct_bond_1_1_output_stream.html#a3b1a8150b261ec55e12c31f0629b8ff2", null ],
+    [ "SetPrecision", "struct_bond_1_1_output_stream.html#a4c87069a253ceae07aa4d28cab356bf3", null ],
+    [ "SetWidth", "struct_bond_1_1_output_stream.html#a778c6a3b1837749ea2084a08e7bbed70", null ],
     [ "UnsetFlags", "struct_bond_1_1_output_stream.html#aa33ecb2e4dc74a049b6ae6d52e13e1bf", null ],
     [ "Write", "struct_bond_1_1_output_stream.html#ad25ff1f82d203e6062d98d3ae82050f1", null ]
 ];

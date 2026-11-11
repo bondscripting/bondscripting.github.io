@@ -144,20 +144,23 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac3e40229e523c4878243e29bf2f61cf4" id="r_ac3e40229e523c4878243e29bf2f61cf4"><td class="memItemLeft"><a class="el" href="struct_bond_1_1_output_stream.html">OutputStream</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ac3e40229e523c4878243e29bf2f61cf4">Put</a> (uchar byte)</td></tr>
 <tr class="memdesc:ac3e40229e523c4878243e29bf2f61cf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a single unformatted byte to the output stream.  <br /></td></tr>
 <tr class="memitem:ad25ff1f82d203e6062d98d3ae82050f1" id="r_ad25ff1f82d203e6062d98d3ae82050f1"><td class="memItemLeft"><a class="el" href="struct_bond_1_1_output_stream.html">OutputStream</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ad25ff1f82d203e6062d98d3ae82050f1">Write</a> (void *bytes, uint numBytes)</td></tr>
+<tr class="memdesc:ad25ff1f82d203e6062d98d3ae82050f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes an array of unformatted bytes to the output stream.  <br /></td></tr>
 <tr class="memitem:a7d47fee208831ba77c852359eff10245" id="r_a7d47fee208831ba77c852359eff10245"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a7d47fee208831ba77c852359eff10245">GetFlags</a> () const</td></tr>
-<tr class="memdesc:a7d47fee208831ba77c852359eff10245"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the stream's current format flags as a bitmask of values from the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618">IO::Flags</a> enum.  <br /></td></tr>
+<tr class="memdesc:a7d47fee208831ba77c852359eff10245"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the stream's current format flags as a bitmask of values from the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618" title="Format flags that modify how InputStream and OutputStream interpret input and format output....">IO::Flags</a> enum.  <br /></td></tr>
 <tr class="memitem:a9adf18a3b6251932f785b45491e03257" id="r_a9adf18a3b6251932f785b45491e03257"><td class="memItemLeft"><a class="el" href="struct_bond_1_1_output_stream.html">OutputStream</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a9adf18a3b6251932f785b45491e03257">SetFlags</a> (int flags)</td></tr>
-<tr class="memdesc:a9adf18a3b6251932f785b45491e03257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables the format format flags in the given bitmask of values from the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618">IO::Flags</a> enum if they are not already enabled.  <br /></td></tr>
+<tr class="memdesc:a9adf18a3b6251932f785b45491e03257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables the format flags in the given bitmask of values from the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618" title="Format flags that modify how InputStream and OutputStream interpret input and format output....">IO::Flags</a> enum.  <br /></td></tr>
 <tr class="memitem:aa33ecb2e4dc74a049b6ae6d52e13e1bf" id="r_aa33ecb2e4dc74a049b6ae6d52e13e1bf"><td class="memItemLeft"><a class="el" href="struct_bond_1_1_output_stream.html">OutputStream</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aa33ecb2e4dc74a049b6ae6d52e13e1bf">UnsetFlags</a> (int flags)</td></tr>
-<tr class="memdesc:aa33ecb2e4dc74a049b6ae6d52e13e1bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disables the format format flags in the given bitmask of values from the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618">IO::Flags</a> enum if they are not already disabled.  <br /></td></tr>
-<tr class="memitem:ad1ced9d412ef19e49f292ad21e3d4e61" id="r_ad1ced9d412ef19e49f292ad21e3d4e61"><td class="memItemLeft"><a class="el" href="struct_bond_1_1_output_stream.html">OutputStream</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ad1ced9d412ef19e49f292ad21e3d4e61">ClearFlags</a> (int flags)</td></tr>
-<tr class="memdesc:ad1ced9d412ef19e49f292ad21e3d4e61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disables all of the format flags.  <br /></td></tr>
+<tr class="memdesc:aa33ecb2e4dc74a049b6ae6d52e13e1bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disables the format flags in the given bitmask of values from the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618" title="Format flags that modify how InputStream and OutputStream interpret input and format output....">IO::Flags</a> enum.  <br /></td></tr>
+<tr class="memitem:a281a31671cb46411216556021f45d883" id="r_a281a31671cb46411216556021f45d883"><td class="memItemLeft"><a class="el" href="struct_bond_1_1_output_stream.html">OutputStream</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a281a31671cb46411216556021f45d883">ClearFlags</a> ()</td></tr>
+<tr class="memdesc:a281a31671cb46411216556021f45d883"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disables all of the format flags.  <br /></td></tr>
 <tr class="memitem:a9a738b9665577f9b8db5858aa49eadd7" id="r_a9a738b9665577f9b8db5858aa49eadd7"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a9a738b9665577f9b8db5858aa49eadd7">GetPrecision</a> () const</td></tr>
-<tr class="memitem:a378a13848e017336dc2f85accad34e0b" id="r_a378a13848e017336dc2f85accad34e0b"><td class="memItemLeft"><a class="el" href="struct_bond_1_1_output_stream.html">OutputStream</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a378a13848e017336dc2f85accad34e0b">SetPrecision</a> (int flags)</td></tr>
+<tr class="memdesc:a9a738b9665577f9b8db5858aa49eadd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the precision used when writing floating-point values. The default is 6.  <br /></td></tr>
+<tr class="memitem:a4c87069a253ceae07aa4d28cab356bf3" id="r_a4c87069a253ceae07aa4d28cab356bf3"><td class="memItemLeft"><a class="el" href="struct_bond_1_1_output_stream.html">OutputStream</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a4c87069a253ceae07aa4d28cab356bf3">SetPrecision</a> (int precision)</td></tr>
+<tr class="memdesc:a4c87069a253ceae07aa4d28cab356bf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns the precision used when writing floating-point values.  <br /></td></tr>
 <tr class="memitem:adc91ce47848e07b8706230c4fe69d046" id="r_adc91ce47848e07b8706230c4fe69d046"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#adc91ce47848e07b8706230c4fe69d046">GetWidth</a> () const</td></tr>
 <tr class="memdesc:adc91ce47848e07b8706230c4fe69d046"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current minimum field width.  <br /></td></tr>
-<tr class="memitem:a3b1a8150b261ec55e12c31f0629b8ff2" id="r_a3b1a8150b261ec55e12c31f0629b8ff2"><td class="memItemLeft"><a class="el" href="struct_bond_1_1_output_stream.html">OutputStream</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a3b1a8150b261ec55e12c31f0629b8ff2">SetWidth</a> (int flags)</td></tr>
-<tr class="memdesc:a3b1a8150b261ec55e12c31f0629b8ff2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns the minimum field width.  <br /></td></tr>
+<tr class="memitem:a778c6a3b1837749ea2084a08e7bbed70" id="r_a778c6a3b1837749ea2084a08e7bbed70"><td class="memItemLeft"><a class="el" href="struct_bond_1_1_output_stream.html">OutputStream</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a778c6a3b1837749ea2084a08e7bbed70">SetWidth</a> (int width)</td></tr>
+<tr class="memdesc:a778c6a3b1837749ea2084a08e7bbed70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns the minimum field width of the next formatted output operation.  <br /></td></tr>
 <tr class="memitem:ab99460f2ae48ae689922f9dc36dc8b66" id="r_ab99460f2ae48ae689922f9dc36dc8b66"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ab99460f2ae48ae689922f9dc36dc8b66">GetPosition</a> () const</td></tr>
 <tr class="memdesc:ab99460f2ae48ae689922f9dc36dc8b66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the stream's current position measured in bytes.  <br /></td></tr>
 <tr class="memitem:a40c56db8b73a0cda72c8a386207146e0" id="r_a40c56db8b73a0cda72c8a386207146e0"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a40c56db8b73a0cda72c8a386207146e0">GetEndPosition</a> () const</td></tr>
@@ -177,6 +180,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An abstract interface for performing both unformatted and formatted output operations. </p>
+<p>Except for Close, using a stream after it has been closed raises an error. </p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a46027ab7af4d90389b7862e7cda4ee3e" name="a46027ab7af4d90389b7862e7cda4ee3e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a46027ab7af4d90389b7862e7cda4ee3e">&#9670;&#160;</a></span>AddOffset()</h2>
@@ -222,8 +226,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad1ced9d412ef19e49f292ad21e3d4e61" name="ad1ced9d412ef19e49f292ad21e3d4e61"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad1ced9d412ef19e49f292ad21e3d4e61">&#9670;&#160;</a></span>ClearFlags()</h2>
+<a id="a281a31671cb46411216556021f45d883" name="a281a31671cb46411216556021f45d883"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a281a31671cb46411216556021f45d883">&#9670;&#160;</a></span>ClearFlags()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -231,7 +235,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="struct_bond_1_1_output_stream.html">OutputStream</a> * Bond::OutputStream::ClearFlags </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>flags</em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -258,6 +262,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Flushes any unwritten output and closes the stream. </p>
+<p>Closing a stream that is already closed has no effect. Closing a stream does not free it. </p>
 
 </div>
 </div>
@@ -314,7 +319,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the stream's current format flags as a bitmask of values from the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618">IO::Flags</a> enum. </p>
+<p>Returns the stream's current format flags as a bitmask of values from the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618" title="Format flags that modify how InputStream and OutputStream interpret input and format output....">IO::Flags</a> enum. </p>
 <p>The format flags modify how the stream formats output. </p>
 
 </div>
@@ -353,6 +358,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Returns the precision used when writing floating-point values. The default is 6. </p>
+
 </div>
 </div>
 <a id="adc91ce47848e07b8706230c4fe69d046" name="adc91ce47848e07b8706230c4fe69d046"></a>
@@ -371,6 +378,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the current minimum field width. </p>
+<p>The width is reset to 0 by every formatted output operation. </p>
 
 </div>
 </div>
@@ -428,7 +436,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Writes a formatted Boolean value to the output stream. </p>
-<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a296b8578eeca2079b42b58321e73b44e" title="Read and write bool values as the strings &quot;true&quot; and &quot;false&quot;.">IO::BoolAlpha</a> flag is set, the values true and false are written as the strings "true" and "false" respectively, otherwise they are written as the strings "0" and "1". </p><dl class="params"><dt>Parameters</dt><dd>
+<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a296b8578eeca2079b42b58321e73b44e" title="Read and write bool values as the strings &quot;true&quot; and &quot;false&quot;.">IO::BoolAlpha</a> flag is set, the values true and false are written as the strings "true" and "false" respectively, otherwise they are written as the integers 1 and 0 as by PrintI. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">value</td><td>The Boolean value to be written to the stream. </td></tr>
   </table>
@@ -454,7 +462,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Writes a single character to the output stream. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>The character is padded to the field width (see SetWidth) with spaces, on the left, or on the right if the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a983becf80d3cd5820e11b2d4be2e9406" title="Write output with left justification.">IO::Left</a> flag is set. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">value</td><td>The character to be written to the stream. </td></tr>
   </table>
@@ -480,7 +488,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Writes a formatted double to the output stream. </p>
-<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a807aea6cf4ad41adf53655d50cf5dc90" title="Write floating-point values in decimal notation.">IO::Fixed</a> or <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618adcda1375d258abf7c6264120558a3532" title="Write floating-point values in scientific notation.">IO::Scientific</a> flag is set, the number is written in decimal notation or scientific notation respectively. If neither flag is set, the number is written in scientific notation if the exponent is less than -4 or greater than the precision, otherwise the number is written in decimal notation. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae7a9861470cfad343d3aa0b8fdf29b22" title="Write numbers padded to the left with zeros instead of spaces.">IO::Zero</a> flag is set, the value is zero padded to the left. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a983becf80d3cd5820e11b2d4be2e9406" title="Write output with left justification.">IO::Left</a> flag is set, the value is left-justified instead of right-justified. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618aebbc41e42e8e159b2e41e285f5c9ac32" title="Always write a decimal point in floating-point values.">IO::ShowPoint</a> flag is set, a decimal point is always written. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a807aea6cf4ad41adf53655d50cf5dc90" title="Write floating-point values in decimal notation. Takes precedence over IO::Scientific.">IO::Fixed</a> or <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618adcda1375d258abf7c6264120558a3532" title="Write floating-point values in scientific notation.">IO::Scientific</a> flag is set, the number is written in decimal notation or scientific notation respectively, with the precision (see SetPrecision) giving the number of digits after the decimal point. If neither flag is set, the precision gives the number of significant digits, trailing zeros are removed, and the number is written in scientific notation if its exponent is less than -4 or greater than or equal to the precision, otherwise in decimal notation. The value is padded to the field width (see SetWidth). If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae7a9861470cfad343d3aa0b8fdf29b22" title="Write numbers padded to the left with zeros instead of spaces.">IO::Zero</a> flag is set, it is zero padded to the left. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a983becf80d3cd5820e11b2d4be2e9406" title="Write output with left justification.">IO::Left</a> flag is set, the value is left-justified instead of right-justified, and padded with spaces. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618aebbc41e42e8e159b2e41e285f5c9ac32" title="Always write a decimal point in floating-point values, and keep trailing zeros when neither IO::Fixed...">IO::ShowPoint</a> flag is set, a decimal point is always written and trailing zeros are kept. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">value</td><td>The floating-point number to be written to the stream. </td></tr>
   </table>
@@ -506,7 +514,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Writes a formatted float to the output stream. </p>
-<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a807aea6cf4ad41adf53655d50cf5dc90" title="Write floating-point values in decimal notation.">IO::Fixed</a> or <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618adcda1375d258abf7c6264120558a3532" title="Write floating-point values in scientific notation.">IO::Scientific</a> flag is set, the number is written in decimal notation or scientific notation respectively. If neither flag is set, the number is written in scientific notation if the exponent is less than -4 or greater than the precision, otherwise the number is written in decimal notation. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae7a9861470cfad343d3aa0b8fdf29b22" title="Write numbers padded to the left with zeros instead of spaces.">IO::Zero</a> flag is set, the value is zero padded to the left. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a983becf80d3cd5820e11b2d4be2e9406" title="Write output with left justification.">IO::Left</a> flag is set, the value is left-justified instead of right-justified. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618aebbc41e42e8e159b2e41e285f5c9ac32" title="Always write a decimal point in floating-point values.">IO::ShowPoint</a> flag is set, a decimal point is always written. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a807aea6cf4ad41adf53655d50cf5dc90" title="Write floating-point values in decimal notation. Takes precedence over IO::Scientific.">IO::Fixed</a> or <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618adcda1375d258abf7c6264120558a3532" title="Write floating-point values in scientific notation.">IO::Scientific</a> flag is set, the number is written in decimal notation or scientific notation respectively, with the precision (see SetPrecision) giving the number of digits after the decimal point. If neither flag is set, the precision gives the number of significant digits, trailing zeros are removed, and the number is written in scientific notation if its exponent is less than -4 or greater than or equal to the precision, otherwise in decimal notation. The value is padded to the field width (see SetWidth). If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae7a9861470cfad343d3aa0b8fdf29b22" title="Write numbers padded to the left with zeros instead of spaces.">IO::Zero</a> flag is set, it is zero padded to the left. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a983becf80d3cd5820e11b2d4be2e9406" title="Write output with left justification.">IO::Left</a> flag is set, the value is left-justified instead of right-justified, and padded with spaces. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618aebbc41e42e8e159b2e41e285f5c9ac32" title="Always write a decimal point in floating-point values, and keep trailing zeros when neither IO::Fixed...">IO::ShowPoint</a> flag is set, a decimal point is always written and trailing zeros are kept. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">value</td><td>The floating-point number to be written to the stream. </td></tr>
   </table>
@@ -532,7 +540,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Writes a formatted int to the output stream. </p>
-<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9" title="Read and write integers in base 16.">IO::Hex</a> or <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae158c14cc75a1751708c4c2fbae0f9bf" title="Read and write integers in base 8.">IO::Oct</a> flag is set, the integer is written in base 16 or 8 respectively, otherwise it is written in base 10. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a377607c20f5c8f330fd1f7c5e1096267" title="Write base 16 and base 8 integers with a &quot;0x&quot; or &quot;0&quot; prefix.">IO::ShowBase</a> flag is set in addition to <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9" title="Read and write integers in base 16.">IO::Hex</a>, the string "0x" is written before the number. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a377607c20f5c8f330fd1f7c5e1096267" title="Write base 16 and base 8 integers with a &quot;0x&quot; or &quot;0&quot; prefix.">IO::ShowBase</a> flag is set in addition to <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae158c14cc75a1751708c4c2fbae0f9bf" title="Read and write integers in base 8.">IO::Oct</a>, the string "0" is written before the number. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae7a9861470cfad343d3aa0b8fdf29b22" title="Write numbers padded to the left with zeros instead of spaces.">IO::Zero</a> flag is set, the value is zero padded to the left. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a983becf80d3cd5820e11b2d4be2e9406" title="Write output with left justification.">IO::Left</a> flag is set, the value is left-justified instead of right-justified. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9" title="Read and write integers in base 16. Takes precedence over IO::Oct.">IO::Hex</a> or <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae158c14cc75a1751708c4c2fbae0f9bf" title="Read and write integers in base 8.">IO::Oct</a> flag is set, the integer is written in base 16 or 8 respectively, otherwise it is written in base 10. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a377607c20f5c8f330fd1f7c5e1096267" title="Write base 16 and base 8 integers with a &quot;0x&quot; or &quot;0&quot; prefix.">IO::ShowBase</a> flag is set in addition to <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9" title="Read and write integers in base 16. Takes precedence over IO::Oct.">IO::Hex</a>, the string "0x" is written before a non-zero number. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a377607c20f5c8f330fd1f7c5e1096267" title="Write base 16 and base 8 integers with a &quot;0x&quot; or &quot;0&quot; prefix.">IO::ShowBase</a> flag is set in addition to <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae158c14cc75a1751708c4c2fbae0f9bf" title="Read and write integers in base 8.">IO::Oct</a>, the number is written with a leading "0". The value is padded to the field width (see SetWidth). If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae7a9861470cfad343d3aa0b8fdf29b22" title="Write numbers padded to the left with zeros instead of spaces.">IO::Zero</a> flag is set, it is zero padded to the left. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a983becf80d3cd5820e11b2d4be2e9406" title="Write output with left justification.">IO::Left</a> flag is set, the value is left-justified instead of right-justified, and padded with spaces. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">value</td><td>The integer to be written to the stream. </td></tr>
   </table>
@@ -558,7 +566,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Writes a formatted long to the output stream. </p>
-<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9" title="Read and write integers in base 16.">IO::Hex</a> or <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae158c14cc75a1751708c4c2fbae0f9bf" title="Read and write integers in base 8.">IO::Oct</a> flag is set, the integer is written in base 16 or 8 respectively, otherwise it is written in base 10. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a377607c20f5c8f330fd1f7c5e1096267" title="Write base 16 and base 8 integers with a &quot;0x&quot; or &quot;0&quot; prefix.">IO::ShowBase</a> flag is set in addition to <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9" title="Read and write integers in base 16.">IO::Hex</a>, the string "0x" is written before the number. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a377607c20f5c8f330fd1f7c5e1096267" title="Write base 16 and base 8 integers with a &quot;0x&quot; or &quot;0&quot; prefix.">IO::ShowBase</a> flag is set in addition to <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae158c14cc75a1751708c4c2fbae0f9bf" title="Read and write integers in base 8.">IO::Oct</a>, the string "0" is written before the number. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae7a9861470cfad343d3aa0b8fdf29b22" title="Write numbers padded to the left with zeros instead of spaces.">IO::Zero</a> flag is set, the value is zero padded to the left. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a983becf80d3cd5820e11b2d4be2e9406" title="Write output with left justification.">IO::Left</a> flag is set, the value is left-justified instead of right-justified. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9" title="Read and write integers in base 16. Takes precedence over IO::Oct.">IO::Hex</a> or <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae158c14cc75a1751708c4c2fbae0f9bf" title="Read and write integers in base 8.">IO::Oct</a> flag is set, the integer is written in base 16 or 8 respectively, otherwise it is written in base 10. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a377607c20f5c8f330fd1f7c5e1096267" title="Write base 16 and base 8 integers with a &quot;0x&quot; or &quot;0&quot; prefix.">IO::ShowBase</a> flag is set in addition to <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9" title="Read and write integers in base 16. Takes precedence over IO::Oct.">IO::Hex</a>, the string "0x" is written before a non-zero number. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a377607c20f5c8f330fd1f7c5e1096267" title="Write base 16 and base 8 integers with a &quot;0x&quot; or &quot;0&quot; prefix.">IO::ShowBase</a> flag is set in addition to <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae158c14cc75a1751708c4c2fbae0f9bf" title="Read and write integers in base 8.">IO::Oct</a>, the number is written with a leading "0". The value is padded to the field width (see SetWidth). If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae7a9861470cfad343d3aa0b8fdf29b22" title="Write numbers padded to the left with zeros instead of spaces.">IO::Zero</a> flag is set, it is zero padded to the left. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a983becf80d3cd5820e11b2d4be2e9406" title="Write output with left justification.">IO::Left</a> flag is set, the value is left-justified instead of right-justified, and padded with spaces. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">value</td><td>The integer to be written to the stream. </td></tr>
   </table>
@@ -584,7 +592,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Writes a string of characters to the output stream. Writing stops at the first null character. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>The string is padded to the field width (see SetWidth) with spaces, on the left, or on the right if the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a983becf80d3cd5820e11b2d4be2e9406" title="Write output with left justification.">IO::Left</a> flag is set. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">str</td><td>Pointer to a string of characters to be written to the stream. </td></tr>
   </table>
@@ -610,7 +618,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Writes a formatted uint to the output stream. </p>
-<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9" title="Read and write integers in base 16.">IO::Hex</a> or <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae158c14cc75a1751708c4c2fbae0f9bf" title="Read and write integers in base 8.">IO::Oct</a> flag is set, the integer is written in base 16 or 8 respectively, otherwise it is written in base 10. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a377607c20f5c8f330fd1f7c5e1096267" title="Write base 16 and base 8 integers with a &quot;0x&quot; or &quot;0&quot; prefix.">IO::ShowBase</a> flag is set in addition to <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9" title="Read and write integers in base 16.">IO::Hex</a>, the string "0x" is written before the number. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a377607c20f5c8f330fd1f7c5e1096267" title="Write base 16 and base 8 integers with a &quot;0x&quot; or &quot;0&quot; prefix.">IO::ShowBase</a> flag is set in addition to <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae158c14cc75a1751708c4c2fbae0f9bf" title="Read and write integers in base 8.">IO::Oct</a>, the string "0" is written before the number. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae7a9861470cfad343d3aa0b8fdf29b22" title="Write numbers padded to the left with zeros instead of spaces.">IO::Zero</a> flag is set, the value is zero padded to the left. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a983becf80d3cd5820e11b2d4be2e9406" title="Write output with left justification.">IO::Left</a> flag is set, the value is left-justified instead of right-justified. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9" title="Read and write integers in base 16. Takes precedence over IO::Oct.">IO::Hex</a> or <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae158c14cc75a1751708c4c2fbae0f9bf" title="Read and write integers in base 8.">IO::Oct</a> flag is set, the integer is written in base 16 or 8 respectively, otherwise it is written in base 10. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a377607c20f5c8f330fd1f7c5e1096267" title="Write base 16 and base 8 integers with a &quot;0x&quot; or &quot;0&quot; prefix.">IO::ShowBase</a> flag is set in addition to <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9" title="Read and write integers in base 16. Takes precedence over IO::Oct.">IO::Hex</a>, the string "0x" is written before a non-zero number. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a377607c20f5c8f330fd1f7c5e1096267" title="Write base 16 and base 8 integers with a &quot;0x&quot; or &quot;0&quot; prefix.">IO::ShowBase</a> flag is set in addition to <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae158c14cc75a1751708c4c2fbae0f9bf" title="Read and write integers in base 8.">IO::Oct</a>, the number is written with a leading "0". The value is padded to the field width (see SetWidth). If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae7a9861470cfad343d3aa0b8fdf29b22" title="Write numbers padded to the left with zeros instead of spaces.">IO::Zero</a> flag is set, it is zero padded to the left. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a983becf80d3cd5820e11b2d4be2e9406" title="Write output with left justification.">IO::Left</a> flag is set, the value is left-justified instead of right-justified, and padded with spaces. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">value</td><td>The integer to be written to the stream. </td></tr>
   </table>
@@ -636,7 +644,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Writes a formatted ulong to the output stream. </p>
-<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9" title="Read and write integers in base 16.">IO::Hex</a> or <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae158c14cc75a1751708c4c2fbae0f9bf" title="Read and write integers in base 8.">IO::Oct</a> flag is set, the integer is written in base 16 or 8 respectively, otherwise it is written in base 10. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a377607c20f5c8f330fd1f7c5e1096267" title="Write base 16 and base 8 integers with a &quot;0x&quot; or &quot;0&quot; prefix.">IO::ShowBase</a> flag is set in addition to <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9" title="Read and write integers in base 16.">IO::Hex</a>, the string "0x" is written before the number. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a377607c20f5c8f330fd1f7c5e1096267" title="Write base 16 and base 8 integers with a &quot;0x&quot; or &quot;0&quot; prefix.">IO::ShowBase</a> flag is set in addition to <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae158c14cc75a1751708c4c2fbae0f9bf" title="Read and write integers in base 8.">IO::Oct</a>, the string "0" is written before the number. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae7a9861470cfad343d3aa0b8fdf29b22" title="Write numbers padded to the left with zeros instead of spaces.">IO::Zero</a> flag is set, the value is zero padded to the left. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a983becf80d3cd5820e11b2d4be2e9406" title="Write output with left justification.">IO::Left</a> flag is set, the value is left-justified instead of right-justified. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9" title="Read and write integers in base 16. Takes precedence over IO::Oct.">IO::Hex</a> or <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae158c14cc75a1751708c4c2fbae0f9bf" title="Read and write integers in base 8.">IO::Oct</a> flag is set, the integer is written in base 16 or 8 respectively, otherwise it is written in base 10. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a377607c20f5c8f330fd1f7c5e1096267" title="Write base 16 and base 8 integers with a &quot;0x&quot; or &quot;0&quot; prefix.">IO::ShowBase</a> flag is set in addition to <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9" title="Read and write integers in base 16. Takes precedence over IO::Oct.">IO::Hex</a>, the string "0x" is written before a non-zero number. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a377607c20f5c8f330fd1f7c5e1096267" title="Write base 16 and base 8 integers with a &quot;0x&quot; or &quot;0&quot; prefix.">IO::ShowBase</a> flag is set in addition to <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae158c14cc75a1751708c4c2fbae0f9bf" title="Read and write integers in base 8.">IO::Oct</a>, the number is written with a leading "0". The value is padded to the field width (see SetWidth). If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae7a9861470cfad343d3aa0b8fdf29b22" title="Write numbers padded to the left with zeros instead of spaces.">IO::Zero</a> flag is set, it is zero padded to the left. If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a983becf80d3cd5820e11b2d4be2e9406" title="Write output with left justification.">IO::Left</a> flag is set, the value is left-justified instead of right-justified, and padded with spaces. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">value</td><td>The integer to be written to the stream. </td></tr>
   </table>
@@ -687,10 +695,10 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Enables the format format flags in the given bitmask of values from the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618">IO::Flags</a> enum if they are not already enabled. </p>
+<p>Enables the format flags in the given bitmask of values from the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618" title="Format flags that modify how InputStream and OutputStream interpret input and format output....">IO::Flags</a> enum. </p>
 <p>All other flags are left untouched. The format flags modify how the stream formats output. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">flags</td><td>The bitmask of flags from the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618">IO::Flags</a> enum to enable. </td></tr>
+    <tr><td class="paramname">flags</td><td>The bitmask of flags from the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618" title="Format flags that modify how InputStream and OutputStream interpret input and format output....">IO::Flags</a> enum to enable. </td></tr>
   </table>
   </dd>
 </dl>
@@ -748,8 +756,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a378a13848e017336dc2f85accad34e0b" name="a378a13848e017336dc2f85accad34e0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a378a13848e017336dc2f85accad34e0b">&#9670;&#160;</a></span>SetPrecision()</h2>
+<a id="a4c87069a253ceae07aa4d28cab356bf3" name="a4c87069a253ceae07aa4d28cab356bf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c87069a253ceae07aa4d28cab356bf3">&#9670;&#160;</a></span>SetPrecision()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -757,16 +765,25 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="struct_bond_1_1_output_stream.html">OutputStream</a> * Bond::OutputStream::SetPrecision </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>flags</em></span></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>precision</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Assigns the precision used when writing floating-point values. </p>
+<p>If the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a807aea6cf4ad41adf53655d50cf5dc90" title="Write floating-point values in decimal notation. Takes precedence over IO::Scientific.">IO::Fixed</a> or <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618adcda1375d258abf7c6264120558a3532" title="Write floating-point values in scientific notation.">IO::Scientific</a> flag is set, the precision is the number of digits written after the decimal point, otherwise it is the maximum number of significant digits. Unlike the field width, the precision remains in effect until it is changed. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">precision</td><td>The new precision. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The stream on which this function was called. </dd></dl>
+
 </div>
 </div>
-<a id="a3b1a8150b261ec55e12c31f0629b8ff2" name="a3b1a8150b261ec55e12c31f0629b8ff2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3b1a8150b261ec55e12c31f0629b8ff2">&#9670;&#160;</a></span>SetWidth()</h2>
+<a id="a778c6a3b1837749ea2084a08e7bbed70" name="a778c6a3b1837749ea2084a08e7bbed70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a778c6a3b1837749ea2084a08e7bbed70">&#9670;&#160;</a></span>SetWidth()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -774,14 +791,20 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="struct_bond_1_1_output_stream.html">OutputStream</a> * Bond::OutputStream::SetWidth </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>flags</em></span></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>width</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Assigns the minimum field width. </p>
-<p>The minimum field width specifies the minimum number of characters to be written in a formatted output operation. If the number of characters in the written value is less than the field width, it will be padded to the left with spaces, or padded to the right if the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a983becf80d3cd5820e11b2d4be2e9406" title="Write output with left justification.">IO::Left</a> flag is set. </p>
+<p>Assigns the minimum field width of the next formatted output operation. </p>
+<p>The minimum field width specifies the minimum number of characters to be written in a formatted output operation. If the number of characters in the written value is less than the field width, it is padded to the left, or to the right if the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a983becf80d3cd5820e11b2d4be2e9406" title="Write output with left justification.">IO::Left</a> flag is set. It is padded with spaces, except for numbers written with the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618ae7a9861470cfad343d3aa0b8fdf29b22" title="Write numbers padded to the left with zeros instead of spaces.">IO::Zero</a> flag set. The width applies only to the next formatted output operation, after which it is reset to 0. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>The new minimum field width. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The stream on which this function was called. </dd></dl>
 
 </div>
 </div>
@@ -800,10 +823,10 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Disables the format format flags in the given bitmask of values from the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618">IO::Flags</a> enum if they are not already disabled. </p>
+<p>Disables the format flags in the given bitmask of values from the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618" title="Format flags that modify how InputStream and OutputStream interpret input and format output....">IO::Flags</a> enum. </p>
 <p>All other flags are left untouched. The format flags modify how the stream formats output. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">flags</td><td>The bitmask of flags from the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618">IO::Flags</a> enum to disable. </td></tr>
+    <tr><td class="paramname">flags</td><td>The bitmask of flags from the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618" title="Format flags that modify how InputStream and OutputStream interpret input and format output....">IO::Flags</a> enum to disable. </td></tr>
   </table>
   </dd>
 </dl>
@@ -829,6 +852,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Writes an array of unformatted bytes to the output stream. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bytes</td><td>Pointer to the array of bytes to be written to the stream. </td></tr>
