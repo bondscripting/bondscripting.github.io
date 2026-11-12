@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('struct_bond_1_
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="struct_bond_1_1_function.html" title="Function metadata and executable payload loaded from CBO.">Function</a> metadata and executable payload loaded from CBO.  
+<p>Metadata and executable code or native binding of a function loaded from a CBO.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;bond/vm/codesegment.h&gt;</code></p>
@@ -126,25 +126,34 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a0bf5bcd2a06e38d8ecf0b111e507fdaa" id="r_a0bf5bcd2a06e38d8ecf0b111e507fdaa"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a0bf5bcd2a06e38d8ecf0b111e507fdaa">IsNative</a> () const</td></tr>
-<tr class="memdesc:a0bf5bcd2a06e38d8ecf0b111e507fdaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether this function is native.  <br /></td></tr>
+<tr class="memdesc:a0bf5bcd2a06e38d8ecf0b111e507fdaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether this function is native, i.e. implemented in C++ rather than <a class="el" href="namespace_bond.html">Bond</a> bytecode.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:aaac71471cc407930ef4128b525669dde" id="r_aaac71471cc407930ef4128b525669dde"><td class="memItemLeft"><a class="el" href="class_bond_1_1_qualified_name.html">QualifiedName</a>&#160;</td><td class="memItemRight"><a class="el" href="#aaac71471cc407930ef4128b525669dde">mName</a></td></tr>
+<tr class="memdesc:aaac71471cc407930ef4128b525669dde"><td class="mdescLeft">&#160;</td><td class="mdescRight">The fully qualified name of the function.  <br /></td></tr>
 <tr class="memitem:a00bd219afcaef29323fbc3b4a45d5ce0" id="r_a00bd219afcaef29323fbc3b4a45d5ce0"><td class="memItemLeft"><a class="el" href="struct_bond_1_1_return_signature.html">ReturnSignature</a>&#160;</td><td class="memItemRight"><a class="el" href="#a00bd219afcaef29323fbc3b4a45d5ce0">mReturnSignature</a></td></tr>
+<tr class="memdesc:a00bd219afcaef29323fbc3b4a45d5ce0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The signature of the return value.  <br /></td></tr>
 <tr class="memitem:aa2e0945b465e2ad73112ef9fb6b19d5c" id="r_aa2e0945b465e2ad73112ef9fb6b19d5c"><td class="memItemLeft"><a class="el" href="struct_bond_1_1_param_list_signature.html">ParamListSignature</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa2e0945b465e2ad73112ef9fb6b19d5c">mParamListSignature</a></td></tr>
+<tr class="memdesc:aa2e0945b465e2ad73112ef9fb6b19d5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The signature of the parameter list.  <br /></td></tr>
 <tr class="memitem:a3eda26969a6a790b6119bfdd901bebb2" id="r_a3eda26969a6a790b6119bfdd901bebb2"><td class="memItemLeft">const <a class="el" href="struct_bond_1_1_constant_table.html">ConstantTable</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a3eda26969a6a790b6119bfdd901bebb2">mConstantTable</a></td></tr>
+<tr class="memdesc:a3eda26969a6a790b6119bfdd901bebb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constant tables of the CBO in which the function is defined.  <br /></td></tr>
 <tr class="memitem:"><td class="memItemLeft"><a class="el" href="union_bond_1_1_function_1_1_0funion_0e_8____unnamed0____.html">union </a>&#160;</td><td class="memItemRight"></td></tr>
 <tr class="memitem:a6fb96268dd0ce3c6eb4968834ddf927b" id="r_a6fb96268dd0ce3c6eb4968834ddf927b"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a6fb96268dd0ce3c6eb4968834ddf927b">mCodeSize</a></td></tr>
+<tr class="memdesc:a6fb96268dd0ce3c6eb4968834ddf927b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size of the bytecode in bytes, which is 0 for a native function.  <br /></td></tr>
 <tr class="memitem:afb63a56e268992b8e10fa410e098d136" id="r_afb63a56e268992b8e10fa410e098d136"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#afb63a56e268992b8e10fa410e098d136">mArgSize</a></td></tr>
+<tr class="memdesc:afb63a56e268992b8e10fa410e098d136"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size in bytes of the arguments laid out in the function's frame.  <br /></td></tr>
 <tr class="memitem:aea10754fdc06e8c598c7b3f4d1e08e8a" id="r_aea10754fdc06e8c598c7b3f4d1e08e8a"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#aea10754fdc06e8c598c7b3f4d1e08e8a">mPackedArgSize</a></td></tr>
+<tr class="memdesc:aea10754fdc06e8c598c7b3f4d1e08e8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size in bytes of the arguments packed into consecutive slots by the caller.  <br /></td></tr>
 <tr class="memitem:ad272f0fc91eee6bb7ebc99805782b6fb" id="r_ad272f0fc91eee6bb7ebc99805782b6fb"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#ad272f0fc91eee6bb7ebc99805782b6fb">mLocalSize</a></td></tr>
+<tr class="memdesc:ad272f0fc91eee6bb7ebc99805782b6fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size in bytes of the function's local variables.  <br /></td></tr>
 <tr class="memitem:a7ebe86c4e1e627ee44caedba8cbcaf2c" id="r_a7ebe86c4e1e627ee44caedba8cbcaf2c"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a7ebe86c4e1e627ee44caedba8cbcaf2c">mStackSize</a></td></tr>
+<tr class="memdesc:a7ebe86c4e1e627ee44caedba8cbcaf2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum size in bytes of the function's operand stack.  <br /></td></tr>
 <tr class="memitem:a054b4b4b84e5df6e52527dae32a96281" id="r_a054b4b4b84e5df6e52527dae32a96281"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a054b4b4b84e5df6e52527dae32a96281">mFramePointerAlignment</a></td></tr>
-<tr class="memitem:a0caff527dbdaa04ff42dd69473c50c34" id="r_a0caff527dbdaa04ff42dd69473c50c34"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a0caff527dbdaa04ff42dd69473c50c34">mUnpackArguments</a></td></tr>
+<tr class="memdesc:a054b4b4b84e5df6e52527dae32a96281"><td class="mdescLeft">&#160;</td><td class="mdescRight">The alignment in bytes of the function's frame pointer.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="struct_bond_1_1_function.html" title="Function metadata and executable payload loaded from CBO.">Function</a> metadata and executable payload loaded from CBO. </p>
+<div class="textblock"><p>Metadata and executable code or native binding of a function loaded from a CBO. </p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a0bf5bcd2a06e38d8ecf0b111e507fdaa" name="a0bf5bcd2a06e38d8ecf0b111e507fdaa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0bf5bcd2a06e38d8ecf0b111e507fdaa">&#9670;&#160;</a></span>IsNative()</h2>
@@ -169,7 +178,7 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Indicates whether this function is native. </p>
+<p>Returns whether this function is native, i.e. implemented in C++ rather than <a class="el" href="namespace_bond.html">Bond</a> bytecode. </p>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the function is native, otherwise <code>false</code>. </dd></dl>
 
 </div>
@@ -201,6 +210,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The size in bytes of the arguments laid out in the function's frame. </p>
+
 </div>
 </div>
 <a id="a6fb96268dd0ce3c6eb4968834ddf927b" name="a6fb96268dd0ce3c6eb4968834ddf927b"></a>
@@ -214,6 +225,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The size of the bytecode in bytes, which is 0 for a native function. </p>
 
 </div>
 </div>
@@ -229,6 +242,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The constant tables of the CBO in which the function is defined. </p>
+
 </div>
 </div>
 <a id="a054b4b4b84e5df6e52527dae32a96281" name="a054b4b4b84e5df6e52527dae32a96281"></a>
@@ -242,6 +257,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The alignment in bytes of the function's frame pointer. </p>
 
 </div>
 </div>
@@ -257,6 +274,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The size in bytes of the function's local variables. </p>
+
 </div>
 </div>
 <a id="aaac71471cc407930ef4128b525669dde" name="aaac71471cc407930ef4128b525669dde"></a>
@@ -270,6 +289,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The fully qualified name of the function. </p>
 
 </div>
 </div>
@@ -285,6 +306,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The size in bytes of the arguments packed into consecutive slots by the caller. </p>
+
 </div>
 </div>
 <a id="aa2e0945b465e2ad73112ef9fb6b19d5c" name="aa2e0945b465e2ad73112ef9fb6b19d5c"></a>
@@ -298,6 +321,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The signature of the parameter list. </p>
 
 </div>
 </div>
@@ -313,6 +338,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The signature of the return value. </p>
+
 </div>
 </div>
 <a id="a7ebe86c4e1e627ee44caedba8cbcaf2c" name="a7ebe86c4e1e627ee44caedba8cbcaf2c"></a>
@@ -327,19 +354,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a0caff527dbdaa04ff42dd69473c50c34" name="a0caff527dbdaa04ff42dd69473c50c34"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0caff527dbdaa04ff42dd69473c50c34">&#9670;&#160;</a></span>mUnpackArguments</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Bond::Function::mUnpackArguments</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>The maximum size in bytes of the function's operand stack. </p>
 
 </div>
 </div>

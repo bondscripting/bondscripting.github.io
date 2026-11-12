@@ -150,14 +150,15 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a93fde48af1a8eedf3eb59ec6cbba4a94" id="r_a93fde48af1a8eedf3eb59ec6cbba4a94"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#a93fde48af1a8eedf3eb59ec6cbba4a94">~Allocator</a> ()</td></tr>
+<tr class="memdesc:a93fde48af1a8eedf3eb59ec6cbba4a94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the <a class="el" href="class_bond_1_1_allocator.html" title="Abstract base class defining the interface through which all components of Bond perform memory and ob...">Allocator</a>.  <br /></td></tr>
 <tr class="memitem:a209afb39837588ac6bb50d812d4b5ef0" id="r_a209afb39837588ac6bb50d812d4b5ef0"><td class="memItemLeft">virtual void *&#160;</td><td class="memItemRight"><a class="el" href="#a209afb39837588ac6bb50d812d4b5ef0">Allocate</a> (size_t size)=0</td></tr>
 <tr class="memdesc:a209afb39837588ac6bb50d812d4b5ef0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates and returns a pointer to a block of uninitialized memory of the given size.  <br /></td></tr>
 <tr class="memitem:a5f3a272ae19a0e9fa50413fbe1a6f32f" id="r_a5f3a272ae19a0e9fa50413fbe1a6f32f"><td class="memItemLeft">virtual void *&#160;</td><td class="memItemRight"><a class="el" href="#a5f3a272ae19a0e9fa50413fbe1a6f32f">AllocateAligned</a> (size_t size, size_t align)=0</td></tr>
 <tr class="memdesc:a5f3a272ae19a0e9fa50413fbe1a6f32f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates and returns a pointer to a block of uninitialized memory with the given size and alignment.  <br /></td></tr>
 <tr class="memitem:af126cf26d4c816747f4171957878415c" id="r_af126cf26d4c816747f4171957878415c"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#af126cf26d4c816747f4171957878415c">Free</a> (void *buffer)=0</td></tr>
-<tr class="memdesc:af126cf26d4c816747f4171957878415c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees the memory pointed to by the given pointer. The memory must have been allocated by this allocator's Allocate method.  <br /></td></tr>
+<tr class="memdesc:af126cf26d4c816747f4171957878415c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees the memory pointed to by the given pointer. The memory must have been allocated by this allocator's Allocate method. Does nothing if the pointer is null.  <br /></td></tr>
 <tr class="memitem:a6dca1d0e262561c46aef5715d538b191" id="r_a6dca1d0e262561c46aef5715d538b191"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a6dca1d0e262561c46aef5715d538b191">FreeAligned</a> (void *buffer)=0</td></tr>
-<tr class="memdesc:a6dca1d0e262561c46aef5715d538b191"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees the aligned memory pointed to by the given pointer. The memory must have been allocated by this allocator's Allocate method.  <br /></td></tr>
+<tr class="memdesc:a6dca1d0e262561c46aef5715d538b191"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees the aligned memory pointed to by the given pointer. The memory must have been allocated by this allocator's AllocateAligned method. Does nothing if the pointer is null.  <br /></td></tr>
 <tr class="memitem:afac9f8f25601d36f7832c57c1509cbf3" id="r_afac9f8f25601d36f7832c57c1509cbf3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afac9f8f25601d36f7832c57c1509cbf3">Free</a> (const void *buffer)</td></tr>
 <tr class="memdesc:afac9f8f25601d36f7832c57c1509cbf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls the non-const form of Free after casting away the constness of the given pointer.  <br /></td></tr>
 <tr class="memitem:a0074ece5a6c1030276b83645df27d8dc" id="r_a0074ece5a6c1030276b83645df27d8dc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0074ece5a6c1030276b83645df27d8dc">FreeAligned</a> (const void *buffer)</td></tr>
@@ -226,6 +227,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Destroys the <a class="el" href="class_bond_1_1_allocator.html" title="Abstract base class defining the interface through which all components of Bond perform memory and ob...">Allocator</a>. </p>
 
 </div>
 </div>
@@ -433,6 +436,12 @@ template&lt;typename T, typename... Args&gt; </div>
 </div><div class="memdoc">
 
 <p>Allocates and returns a pointer to a block of uninitialized memory of the given size. </p>
+<p>Implementations are expected to report failure by throwing an exception, such as std::bad_alloc, or by returning null. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>The size of the block in bytes. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implemented in <a class="el" href="class_bond_1_1_default_allocator.html#a9e584ff66eb9fad00bdc755a15fca9cf">Bond::DefaultAllocator</a>.</p>
 
@@ -466,6 +475,13 @@ template&lt;typename T, typename... Args&gt; </div>
 </div><div class="memdoc">
 
 <p>Allocates and returns a pointer to a block of uninitialized memory with the given size and alignment. </p>
+<p>Implementations are expected to report failure by throwing an exception, such as std::bad_alloc, or by returning null. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>The size of the block in bytes. </td></tr>
+    <tr><td class="paramname">align</td><td>The alignment of the block in bytes. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implemented in <a class="el" href="class_bond_1_1_default_allocator.html#a32281af782a1063647f84c9d7ff86b72">Bond::DefaultAllocator</a>.</p>
 
@@ -770,7 +786,13 @@ template&lt;typename T, typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Frees the memory pointed to by the given pointer. The memory must have been allocated by this allocator's Allocate method. </p>
+<p>Frees the memory pointed to by the given pointer. The memory must have been allocated by this allocator's Allocate method. Does nothing if the pointer is null. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>Pointer to the memory to be freed. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implemented in <a class="el" href="class_bond_1_1_default_allocator.html#a76c6205b27523ee05eb5a3824d1d9e01">Bond::DefaultAllocator</a>.</p>
 
@@ -826,7 +848,13 @@ template&lt;typename T, typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Frees the aligned memory pointed to by the given pointer. The memory must have been allocated by this allocator's Allocate method. </p>
+<p>Frees the aligned memory pointed to by the given pointer. The memory must have been allocated by this allocator's AllocateAligned method. Does nothing if the pointer is null. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>Pointer to the memory to be freed. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implemented in <a class="el" href="class_bond_1_1_default_allocator.html#aff539565827a26b13ab7e7ed5923941a">Bond::DefaultAllocator</a>.</p>
 

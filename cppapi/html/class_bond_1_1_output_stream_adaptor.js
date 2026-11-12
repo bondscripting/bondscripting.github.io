@@ -2,6 +2,7 @@ var class_bond_1_1_output_stream_adaptor =
 [
     [ "OutputStreamAdaptor", "class_bond_1_1_output_stream_adaptor.html#a63cb211ad71921ed29a21ff4901496d9", null ],
     [ "ClearFlags", "class_bond_1_1_output_stream_adaptor.html#a9c0e0e0fc2f3177801c329944e703e53", null ],
+    [ "Close", "class_bond_1_1_output_stream_adaptor.html#ad147fc432e9072a0975500a419e96e56", null ],
     [ "GetFlags", "class_bond_1_1_output_stream_adaptor.html#a4556002e60f26a71c3e6f17b3d256f83", null ],
     [ "GetPrecision", "class_bond_1_1_output_stream_adaptor.html#ad1328defee5b82213bed818895416d32", null ],
     [ "GetStream", "class_bond_1_1_output_stream_adaptor.html#a41372a3c3597dcd30b0117f11df41ad0", null ],

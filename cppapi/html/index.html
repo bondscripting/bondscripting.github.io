@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.18.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Bond: Main Page</title>
+<title>Bond: Bond C++ API</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
@@ -109,10 +109,22 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('index.html',''
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">Bond Documentation</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title"><a class="el" href="namespace_bond.html">Bond</a> C++ API </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p><a class="el" href="namespace_bond.html">Bond</a> is a lightweight bytecode interpreted embeddable scripting language implemented in C++. This is the API of its compiler, virtual machine and runtime library.</p>
+<h1 class="doxsection"><a class="anchor" id="text_encoding"></a>
+Text encoding</h1>
+<p>All text in <a class="el" href="namespace_bond.html">Bond</a> is encoded in UTF-8. Every <span class="tt">const char *</span> that crosses the C++ API is UTF-8, including:</p>
+<ul>
+<li><a class="el" href="namespace_bond.html">Bond</a> source code passed to the Lexer, and strings in <a class="el" href="namespace_bond.html">Bond</a> scripts and CBO files.</li>
+<li>File names passed to stream factories, StdioFileHandle and the other I/O classes. On Windows, they are converted to UTF-16 to open the file, so a name that is not valid UTF-8 fails to open. An embedder must not pass names in the ANSI code page.</li>
+<li>Names of functions, structs and other symbols, such as those passed to VM::CallFunction.</li>
+<li>Command line arguments, which the <a class="el" href="namespace_bond.html">Bond</a> tools obtain with CommandLineArgs.</li>
+</ul>
+<p>A <a class="el" href="namespace_bond.html">Bond</a> <span class="tt">char</span> holds one byte, which is one UTF-8 code unit rather than one character. Compiler error columns count code points. </p>
+</div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->
 </div><!-- doc-content -->

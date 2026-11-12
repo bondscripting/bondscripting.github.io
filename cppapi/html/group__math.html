@@ -130,25 +130,22 @@ Functions</h2></td></tr>
 <tr class="memdesc:gabc245a942c6631bc678335379834d4a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the difference between an integer and the nearest larger multiple of a specified power of two.  <br /></td></tr>
 <tr class="memitem:gad3da71a6e10efe251e248cd065b40d62" id="r_gad3da71a6e10efe251e248cd065b40d62"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:gad3da71a6e10efe251e248cd065b40d62 template"><td class="memItemLeft">T *&#160;</td><td class="memItemRight"><a class="el" href="#gad3da71a6e10efe251e248cd065b40d62">Bond::AlignPointerDown</a> (T *ptr, size_t align)</td></tr>
-<tr class="memdesc:gad3da71a6e10efe251e248cd065b40d62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rounds a pointer down the nearest multiple of a specified power of two.  <br /></td></tr>
+<tr class="memdesc:gad3da71a6e10efe251e248cd065b40d62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rounds a pointer down to the nearest multiple of a specified power of two.  <br /></td></tr>
 <tr class="memitem:gada613550b1b4b255164ea24ef94d5860" id="r_gada613550b1b4b255164ea24ef94d5860"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:gada613550b1b4b255164ea24ef94d5860 template"><td class="memItemLeft">T *&#160;</td><td class="memItemRight"><a class="el" href="#gada613550b1b4b255164ea24ef94d5860">Bond::AlignPointerUp</a> (T *ptr, size_t align)</td></tr>
 <tr class="memdesc:gada613550b1b4b255164ea24ef94d5860"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rounds a pointer up to the nearest multiple of a specified power of two.  <br /></td></tr>
-<tr class="memitem:ga4de3ef1d111693de2f5eeb17e347a7ea" id="r_ga4de3ef1d111693de2f5eeb17e347a7ea"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
-<tr class="memitem:ga4de3ef1d111693de2f5eeb17e347a7ea template"><td class="memItemLeft">T&#160;</td><td class="memItemRight"><a class="el" href="#ga4de3ef1d111693de2f5eeb17e347a7ea">Bond::IsPowerOfTwo</a> (T value)</td></tr>
-<tr class="memdesc:ga4de3ef1d111693de2f5eeb17e347a7ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether an integer is a power of two.  <br /></td></tr>
+<tr class="memitem:ga328441458ae62f1b2efe295742e36d2f" id="r_ga328441458ae62f1b2efe295742e36d2f"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:ga328441458ae62f1b2efe295742e36d2f template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga328441458ae62f1b2efe295742e36d2f">Bond::IsPowerOfTwo</a> (T value)</td></tr>
+<tr class="memdesc:ga328441458ae62f1b2efe295742e36d2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether an integer is a power of two. 0 is not a power of two.  <br /></td></tr>
 <tr class="memitem:ga9f3d113d264251653f831227998c8a6f" id="r_ga9f3d113d264251653f831227998c8a6f"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:ga9f3d113d264251653f831227998c8a6f template"><td class="memItemLeft">T&#160;</td><td class="memItemRight"><a class="el" href="#ga9f3d113d264251653f831227998c8a6f">Bond::RoundUpToPowerOfTwo32</a> (T value)</td></tr>
-<tr class="memdesc:ga9f3d113d264251653f831227998c8a6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rounds a 32 bit integer up to the nearest power of two.  <br /></td></tr>
+<tr class="memdesc:ga9f3d113d264251653f831227998c8a6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rounds a 32 bit integer up to the nearest power of two. Values that are already powers of two are returned unchanged and 0 is returned as 0. The result is only correct for values no greater than 2^31.  <br /></td></tr>
 <tr class="memitem:gaba3411e60d2c6c4b73482285caa4a10c" id="r_gaba3411e60d2c6c4b73482285caa4a10c"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:gaba3411e60d2c6c4b73482285caa4a10c template"><td class="memItemLeft">T&#160;</td><td class="memItemRight"><a class="el" href="#gaba3411e60d2c6c4b73482285caa4a10c">Bond::Abs</a> (T value)</td></tr>
 <tr class="memdesc:gaba3411e60d2c6c4b73482285caa4a10c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the absolute value of a number.  <br /></td></tr>
-<tr class="memitem:gaade5f2fa9ccd67f22a3f3a4c5c0d04f2" id="r_gaade5f2fa9ccd67f22a3f3a4c5c0d04f2"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
-<tr class="memitem:gaade5f2fa9ccd67f22a3f3a4c5c0d04f2 template"><td class="memItemLeft">T&#160;</td><td class="memItemRight"><a class="el" href="#gaade5f2fa9ccd67f22a3f3a4c5c0d04f2">Bond::Min</a> (T a, T b)</td></tr>
-<tr class="memdesc:gaade5f2fa9ccd67f22a3f3a4c5c0d04f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two numbers and returns the smaller of the two.  <br /></td></tr>
-<tr class="memitem:ga421d21696c200c0cf9f1482ccd6968e7" id="r_ga421d21696c200c0cf9f1482ccd6968e7"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
-<tr class="memitem:ga421d21696c200c0cf9f1482ccd6968e7 template"><td class="memItemLeft">T&#160;</td><td class="memItemRight"><a class="el" href="#ga421d21696c200c0cf9f1482ccd6968e7">Bond::Max</a> (T a, T b)</td></tr>
-<tr class="memdesc:ga421d21696c200c0cf9f1482ccd6968e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two numbers and returns the larger of the two.  <br /></td></tr>
+<tr class="memitem:ga1d40e1aa5701e0f398bc406d365d0191" id="r_ga1d40e1aa5701e0f398bc406d365d0191"><td class="memTemplParams" colspan="2">template&lt;typename RangeType, typename ValueType&gt; </td></tr>
+<tr class="memitem:ga1d40e1aa5701e0f398bc406d365d0191 template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga1d40e1aa5701e0f398bc406d365d0191">Bond::IsInRange</a> (ValueType value)</td></tr>
+<tr class="memdesc:ga1d40e1aa5701e0f398bc406d365d0191"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether value is exactly representable by RangeType, i.e. whether converting it to RangeType and back is lossless. NaN and infinity are never representable.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Useful math functions. </p>
@@ -258,7 +255,7 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Rounds a pointer down the nearest multiple of a specified power of two. </p>
+<p>Rounds a pointer down to the nearest multiple of a specified power of two. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ptr</td><td>The pointer to be rounded. </td></tr>
@@ -389,8 +386,29 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="ga4de3ef1d111693de2f5eeb17e347a7ea" name="ga4de3ef1d111693de2f5eeb17e347a7ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga4de3ef1d111693de2f5eeb17e347a7ea">&#9670;&#160;</a></span>IsPowerOfTwo()</h2>
+<a id="ga1d40e1aa5701e0f398bc406d365d0191" name="ga1d40e1aa5701e0f398bc406d365d0191"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1d40e1aa5701e0f398bc406d365d0191">&#9670;&#160;</a></span>IsInRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RangeType, typename ValueType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Bond::IsInRange </td>
+          <td>(</td>
+          <td class="paramtype">ValueType</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns whether value is exactly representable by RangeType, i.e. whether converting it to RangeType and back is lossless. NaN and infinity are never representable. </p>
+
+</div>
+</div>
+<a id="ga328441458ae62f1b2efe295742e36d2f" name="ga328441458ae62f1b2efe295742e36d2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga328441458ae62f1b2efe295742e36d2f">&#9670;&#160;</a></span>IsPowerOfTwo()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -401,7 +419,7 @@ template&lt;typename T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">T Bond::IsPowerOfTwo </td>
+          <td class="memname">bool Bond::IsPowerOfTwo </td>
           <td>(</td>
           <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
@@ -414,90 +432,10 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Returns whether an integer is a power of two. </p>
+<p>Returns whether an integer is a power of two. 0 is not a power of two. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">value</td><td>The value to test. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ga421d21696c200c0cf9f1482ccd6968e7" name="ga421d21696c200c0cf9f1482ccd6968e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga421d21696c200c0cf9f1482ccd6968e7">&#9670;&#160;</a></span>Max()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">T Bond::Max </td>
-          <td>(</td>
-          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Compares two numbers and returns the larger of the two. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">a</td><td>The first of the two compared numbers. </td></tr>
-    <tr><td class="paramname">b</td><td>The second of the two compared numbers. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="gaade5f2fa9ccd67f22a3f3a4c5c0d04f2" name="gaade5f2fa9ccd67f22a3f3a4c5c0d04f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaade5f2fa9ccd67f22a3f3a4c5c0d04f2">&#9670;&#160;</a></span>Min()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">T Bond::Min </td>
-          <td>(</td>
-          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Compares two numbers and returns the smaller of the two. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">a</td><td>The first of the two compared numbers. </td></tr>
-    <tr><td class="paramname">b</td><td>The second of the two compared numbers. </td></tr>
   </table>
   </dd>
 </dl>
@@ -529,7 +467,7 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Rounds a 32 bit integer up to the nearest power of two. </p>
+<p>Rounds a 32 bit integer up to the nearest power of two. Values that are already powers of two are returned unchanged and 0 is returned as 0. The result is only correct for values no greater than 2^31. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">value</td><td>The value to be rounded. </td></tr>

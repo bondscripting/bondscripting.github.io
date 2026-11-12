@@ -122,35 +122,63 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_bond_1_1
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ac0fcc47171b60001da16e8819b807186" id="r_ac0fcc47171b60001da16e8819b807186"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ac0fcc47171b60001da16e8819b807186">TypeAndValue</a> (<a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> &amp;descriptor)</td></tr>
+<tr class="memdesc:ac0fcc47171b60001da16e8819b807186"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_bond_1_1_type_and_value.html" title="Contains the information regarding the type and value of an expression as it is evaluated by the comp...">TypeAndValue</a> object with an undefined value that is not yet resolved.  <br /></td></tr>
 <tr class="memitem:a9fbf0b92e4acb6694e513e063c3207c5" id="r_a9fbf0b92e4acb6694e513e063c3207c5"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a9fbf0b92e4acb6694e513e063c3207c5">TypeAndValue</a> (<a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> &amp;descriptor, const <a class="el" href="union_bond_1_1_value.html">Value</a> &amp;value)</td></tr>
+<tr class="memdesc:a9fbf0b92e4acb6694e513e063c3207c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_bond_1_1_type_and_value.html" title="Contains the information regarding the type and value of an expression as it is evaluated by the comp...">TypeAndValue</a> object with a defined value that is already resolved.  <br /></td></tr>
 <tr class="memitem:aedf19c573fab253bb6bd655f2086280f" id="r_aedf19c573fab253bb6bd655f2086280f"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aedf19c573fab253bb6bd655f2086280f">IsTypeDefined</a> () const</td></tr>
+<tr class="memdesc:aedf19c573fab253bb6bd655f2086280f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the type is defined, as reported by <a class="el" href="class_bond_1_1_type_descriptor.html#ab98ec08d31854b4a2f01763c6e04f577" title="Returns true if this descriptor has a defined storage category.">TypeDescriptor::IsDefined()</a>.  <br /></td></tr>
 <tr class="memitem:a8a9830e9f1018551ab8f506328d19bfd" id="r_a8a9830e9f1018551ab8f506328d19bfd"><td class="memItemLeft"><a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a8a9830e9f1018551ab8f506328d19bfd">GetTypeDescriptor</a> ()</td></tr>
+<tr class="memdesc:a8a9830e9f1018551ab8f506328d19bfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the type of the expression.  <br /></td></tr>
 <tr class="memitem:ac6e276505ead5f526ea57bf17fe1453b" id="r_ac6e276505ead5f526ea57bf17fe1453b"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ac6e276505ead5f526ea57bf17fe1453b">GetTypeDescriptor</a> () const</td></tr>
+<tr class="memdesc:ac6e276505ead5f526ea57bf17fe1453b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the type of the expression.  <br /></td></tr>
 <tr class="memitem:ab2eccb917213d5377536d0be583be11a" id="r_ab2eccb917213d5377536d0be583be11a"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ab2eccb917213d5377536d0be583be11a">IsValueDefined</a> () const</td></tr>
+<tr class="memdesc:ab2eccb917213d5377536d0be583be11a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the value of the expression is known at compile time.  <br /></td></tr>
 <tr class="memitem:ab5c2ff8b82fb17ae001da04a1813ede3" id="r_ab5c2ff8b82fb17ae001da04a1813ede3"><td class="memItemLeft">const <a class="el" href="union_bond_1_1_value.html">Value</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ab5c2ff8b82fb17ae001da04a1813ede3">GetValue</a> () const</td></tr>
+<tr class="memdesc:ab5c2ff8b82fb17ae001da04a1813ede3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value of the expression.  <br /></td></tr>
 <tr class="memitem:ae1a320342ca73e26da869612ee117fdf" id="r_ae1a320342ca73e26da869612ee117fdf"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae1a320342ca73e26da869612ee117fdf">SetValue</a> (const <a class="el" href="union_bond_1_1_value.html">Value</a> &amp;value)</td></tr>
+<tr class="memdesc:ae1a320342ca73e26da869612ee117fdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value of the expression and marks it as defined.  <br /></td></tr>
 <tr class="memitem:a2028c6066057cf995a19b33c055c562a" id="r_a2028c6066057cf995a19b33c055c562a"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a2028c6066057cf995a19b33c055c562a">GetBoolValue</a> () const</td></tr>
+<tr class="memdesc:a2028c6066057cf995a19b33c055c562a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value as a bool.  <br /></td></tr>
 <tr class="memitem:a659c5f69cd9bc4ca23a683647a4232ac" id="r_a659c5f69cd9bc4ca23a683647a4232ac"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a659c5f69cd9bc4ca23a683647a4232ac">SetBoolValue</a> (bool value)</td></tr>
+<tr class="memdesc:a659c5f69cd9bc4ca23a683647a4232ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value to a bool and marks it as defined.  <br /></td></tr>
 <tr class="memitem:a7aac2ecdfc5cc5eee962ff4c169fcc99" id="r_a7aac2ecdfc5cc5eee962ff4c169fcc99"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a7aac2ecdfc5cc5eee962ff4c169fcc99">GetFloatValue</a> () const</td></tr>
+<tr class="memdesc:a7aac2ecdfc5cc5eee962ff4c169fcc99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value as a float.  <br /></td></tr>
 <tr class="memitem:a0ce5d652a0f76ace989793295560eacf" id="r_a0ce5d652a0f76ace989793295560eacf"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0ce5d652a0f76ace989793295560eacf">SetFloatValue</a> (float value)</td></tr>
+<tr class="memdesc:a0ce5d652a0f76ace989793295560eacf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value to a float and marks it as defined.  <br /></td></tr>
 <tr class="memitem:a7204b0349721068e9e795ba7517d4937" id="r_a7204b0349721068e9e795ba7517d4937"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a7204b0349721068e9e795ba7517d4937">GetDoubleValue</a> () const</td></tr>
+<tr class="memdesc:a7204b0349721068e9e795ba7517d4937"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value as a double.  <br /></td></tr>
 <tr class="memitem:aa4e2bd8149ab655d9d6d5dc9576a1e57" id="r_aa4e2bd8149ab655d9d6d5dc9576a1e57"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa4e2bd8149ab655d9d6d5dc9576a1e57">SetDoubleValue</a> (double value)</td></tr>
+<tr class="memdesc:aa4e2bd8149ab655d9d6d5dc9576a1e57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value to a double and marks it as defined.  <br /></td></tr>
 <tr class="memitem:ac1853c62281ca26915ab2265dac82d97" id="r_ac1853c62281ca26915ab2265dac82d97"><td class="memItemLeft">int32_t&#160;</td><td class="memItemRight"><a class="el" href="#ac1853c62281ca26915ab2265dac82d97">GetIntValue</a> () const</td></tr>
+<tr class="memdesc:ac1853c62281ca26915ab2265dac82d97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value as a signed 32-bit integer.  <br /></td></tr>
 <tr class="memitem:a3c72e5ee72a91331a258b59a6e602b5d" id="r_a3c72e5ee72a91331a258b59a6e602b5d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3c72e5ee72a91331a258b59a6e602b5d">SetIntValue</a> (int32_t value)</td></tr>
+<tr class="memdesc:a3c72e5ee72a91331a258b59a6e602b5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value to a signed 32-bit integer and marks it as defined.  <br /></td></tr>
 <tr class="memitem:a7439cedc5320197c056639f598bd3dbe" id="r_a7439cedc5320197c056639f598bd3dbe"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a7439cedc5320197c056639f598bd3dbe">GetUIntValue</a> () const</td></tr>
+<tr class="memdesc:a7439cedc5320197c056639f598bd3dbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value as an unsigned 32-bit integer.  <br /></td></tr>
 <tr class="memitem:a3ad61143933ea8c8796085df478e54ad" id="r_a3ad61143933ea8c8796085df478e54ad"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3ad61143933ea8c8796085df478e54ad">SetUIntValue</a> (uint32_t value)</td></tr>
+<tr class="memdesc:a3ad61143933ea8c8796085df478e54ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value to an unsigned 32-bit integer and marks it as defined.  <br /></td></tr>
 <tr class="memitem:a4734ef1f8a1f8f21a25b1dadc5ad5d34" id="r_a4734ef1f8a1f8f21a25b1dadc5ad5d34"><td class="memItemLeft">int64_t&#160;</td><td class="memItemRight"><a class="el" href="#a4734ef1f8a1f8f21a25b1dadc5ad5d34">GetLongValue</a> () const</td></tr>
+<tr class="memdesc:a4734ef1f8a1f8f21a25b1dadc5ad5d34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value as a signed 64-bit integer.  <br /></td></tr>
 <tr class="memitem:a8cfa268fdb5268739c6042b44c2793e2" id="r_a8cfa268fdb5268739c6042b44c2793e2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8cfa268fdb5268739c6042b44c2793e2">SetLongValue</a> (int64_t value)</td></tr>
+<tr class="memdesc:a8cfa268fdb5268739c6042b44c2793e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value to a signed 64-bit integer and marks it as defined.  <br /></td></tr>
 <tr class="memitem:aae7aa4a01c996a713f80e1d2e335ec1f" id="r_aae7aa4a01c996a713f80e1d2e335ec1f"><td class="memItemLeft">int64_t&#160;</td><td class="memItemRight"><a class="el" href="#aae7aa4a01c996a713f80e1d2e335ec1f">AsLongValue</a> () const</td></tr>
+<tr class="memdesc:aae7aa4a01c996a713f80e1d2e335ec1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value converted from its type to a signed 64-bit integer.  <br /></td></tr>
 <tr class="memitem:a8b6230f9005b682702eb4934439190ab" id="r_a8b6230f9005b682702eb4934439190ab"><td class="memItemLeft">uint64_t&#160;</td><td class="memItemRight"><a class="el" href="#a8b6230f9005b682702eb4934439190ab">GetULongValue</a> () const</td></tr>
+<tr class="memdesc:a8b6230f9005b682702eb4934439190ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value as an unsigned 64-bit integer.  <br /></td></tr>
 <tr class="memitem:a47f9379a7d4045afd3016edb8f99612a" id="r_a47f9379a7d4045afd3016edb8f99612a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a47f9379a7d4045afd3016edb8f99612a">SetULongValue</a> (uint64_t value)</td></tr>
+<tr class="memdesc:a47f9379a7d4045afd3016edb8f99612a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value to an unsigned 64-bit integer and marks it as defined.  <br /></td></tr>
 <tr class="memitem:abde1ececc1a09352997f318f88b5cc2d" id="r_abde1ececc1a09352997f318f88b5cc2d"><td class="memItemLeft">uint64_t&#160;</td><td class="memItemRight"><a class="el" href="#abde1ececc1a09352997f318f88b5cc2d">AsULongValue</a> () const</td></tr>
+<tr class="memdesc:abde1ececc1a09352997f318f88b5cc2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value converted from its type to an unsigned 64-bit integer.  <br /></td></tr>
 <tr class="memitem:afa83b95e179c2a95a26598ba557cb825" id="r_afa83b95e179c2a95a26598ba557cb825"><td class="memItemLeft">const StringView&#160;</td><td class="memItemRight"><a class="el" href="#afa83b95e179c2a95a26598ba557cb825">GetStringValue</a> () const</td></tr>
+<tr class="memdesc:afa83b95e179c2a95a26598ba557cb825"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value as a string, which is not null terminated.  <br /></td></tr>
 <tr class="memitem:a88f55e34e194169019058d157c343b21" id="r_a88f55e34e194169019058d157c343b21"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a88f55e34e194169019058d157c343b21">IsResolved</a> () const</td></tr>
+<tr class="memdesc:a88f55e34e194169019058d157c343b21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the semantic analyzer has finished evaluating the type and value.  <br /></td></tr>
 <tr class="memitem:aa1d5b5efe2a9a4a245d676f55e814a6d" id="r_aa1d5b5efe2a9a4a245d676f55e814a6d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa1d5b5efe2a9a4a245d676f55e814a6d">Resolve</a> ()</td></tr>
+<tr class="memdesc:aa1d5b5efe2a9a4a245d676f55e814a6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks the type and value as resolved.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Contains the information regarding the type and value of an expression as it is evaluated by the compiler. </p>
+<p>The value is only meaningful when it is defined, i.e. when the expression is a compile-time constant. The getters and setters for specific value types access the corresponding member of the <a class="el" href="union_bond_1_1_value.html" title="Union of all value types representable by a Token in the Bond compiler.">Value</a> union without any conversion, so they must match the type described by the <a class="el" href="class_bond_1_1_type_descriptor.html" title="Describes a resolved or partially resolved Bond type.">TypeDescriptor</a>. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ac0fcc47171b60001da16e8819b807186" name="ac0fcc47171b60001da16e8819b807186"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac0fcc47171b60001da16e8819b807186">&#9670;&#160;</a></span>TypeAndValue() <span class="overload">[1/2]</span></h2>
@@ -174,6 +202,14 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="class_bond_1_1_type_and_value.html" title="Contains the information regarding the type and value of an expression as it is evaluated by the comp...">TypeAndValue</a> object with an undefined value that is not yet resolved. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">descriptor</td><td>The type of the expression. It is not copied, so it must outlive the <a class="el" href="class_bond_1_1_type_and_value.html" title="Contains the information regarding the type and value of an expression as it is evaluated by the comp...">TypeAndValue</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -204,6 +240,15 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Constructs a <a class="el" href="class_bond_1_1_type_and_value.html" title="Contains the information regarding the type and value of an expression as it is evaluated by the comp...">TypeAndValue</a> object with a defined value that is already resolved. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">descriptor</td><td>The type of the expression. It is not copied, so it must outlive the <a class="el" href="class_bond_1_1_type_and_value.html" title="Contains the information regarding the type and value of an expression as it is evaluated by the comp...">TypeAndValue</a>. </td></tr>
+    <tr><td class="paramname">value</td><td>The value of the expression. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
@@ -222,6 +267,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Returns the value converted from its type to a signed 64-bit integer. </p>
+
 </div>
 </div>
 <a id="abde1ececc1a09352997f318f88b5cc2d" name="abde1ececc1a09352997f318f88b5cc2d"></a>
@@ -238,6 +285,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns the value converted from its type to an unsigned 64-bit integer. </p>
 
 </div>
 </div>
@@ -264,6 +313,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the value as a bool. </p>
+
 </div>
 </div>
 <a id="a7204b0349721068e9e795ba7517d4937" name="a7204b0349721068e9e795ba7517d4937"></a>
@@ -288,6 +339,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the value as a double. </p>
 
 </div>
 </div>
@@ -314,6 +367,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the value as a float. </p>
+
 </div>
 </div>
 <a id="ac1853c62281ca26915ab2265dac82d97" name="ac1853c62281ca26915ab2265dac82d97"></a>
@@ -338,6 +393,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the value as a signed 32-bit integer. </p>
 
 </div>
 </div>
@@ -364,6 +421,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the value as a signed 64-bit integer. </p>
+
 </div>
 </div>
 <a id="afa83b95e179c2a95a26598ba557cb825" name="afa83b95e179c2a95a26598ba557cb825"></a>
@@ -388,6 +447,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the value as a string, which is not null terminated. </p>
 
 </div>
 </div>
@@ -414,6 +475,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the type of the expression. </p>
+
 </div>
 </div>
 <a id="ac6e276505ead5f526ea57bf17fe1453b" name="ac6e276505ead5f526ea57bf17fe1453b"></a>
@@ -438,6 +501,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the type of the expression. </p>
 
 </div>
 </div>
@@ -464,6 +529,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the value as an unsigned 32-bit integer. </p>
+
 </div>
 </div>
 <a id="a8b6230f9005b682702eb4934439190ab" name="a8b6230f9005b682702eb4934439190ab"></a>
@@ -488,6 +555,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the value as an unsigned 64-bit integer. </p>
 
 </div>
 </div>
@@ -514,6 +583,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the value of the expression. </p>
+
 </div>
 </div>
 <a id="a88f55e34e194169019058d157c343b21" name="a88f55e34e194169019058d157c343b21"></a>
@@ -539,6 +610,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns whether the semantic analyzer has finished evaluating the type and value. </p>
+
 </div>
 </div>
 <a id="aedf19c573fab253bb6bd655f2086280f" name="aedf19c573fab253bb6bd655f2086280f"></a>
@@ -555,6 +628,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns whether the type is defined, as reported by <a class="el" href="class_bond_1_1_type_descriptor.html#ab98ec08d31854b4a2f01763c6e04f577" title="Returns true if this descriptor has a defined storage category.">TypeDescriptor::IsDefined()</a>. </p>
 
 </div>
 </div>
@@ -581,6 +656,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns whether the value of the expression is known at compile time. </p>
+
 </div>
 </div>
 <a id="aa1d5b5efe2a9a4a245d676f55e814a6d" name="aa1d5b5efe2a9a4a245d676f55e814a6d"></a>
@@ -605,6 +682,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Marks the type and value as resolved. </p>
 
 </div>
 </div>
@@ -631,6 +710,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sets the value to a bool and marks it as defined. </p>
+
 </div>
 </div>
 <a id="aa4e2bd8149ab655d9d6d5dc9576a1e57" name="aa4e2bd8149ab655d9d6d5dc9576a1e57"></a>
@@ -655,6 +736,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Sets the value to a double and marks it as defined. </p>
 
 </div>
 </div>
@@ -681,6 +764,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sets the value to a float and marks it as defined. </p>
+
 </div>
 </div>
 <a id="a3c72e5ee72a91331a258b59a6e602b5d" name="a3c72e5ee72a91331a258b59a6e602b5d"></a>
@@ -705,6 +790,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Sets the value to a signed 32-bit integer and marks it as defined. </p>
 
 </div>
 </div>
@@ -731,6 +818,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sets the value to a signed 64-bit integer and marks it as defined. </p>
+
 </div>
 </div>
 <a id="a3ad61143933ea8c8796085df478e54ad" name="a3ad61143933ea8c8796085df478e54ad"></a>
@@ -755,6 +844,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Sets the value to an unsigned 32-bit integer and marks it as defined. </p>
 
 </div>
 </div>
@@ -781,6 +872,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sets the value to an unsigned 64-bit integer and marks it as defined. </p>
+
 </div>
 </div>
 <a id="ae1a320342ca73e26da869612ee117fdf" name="ae1a320342ca73e26da869612ee117fdf"></a>
@@ -805,6 +898,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Sets the value of the expression and marks it as defined. </p>
 
 </div>
 </div>

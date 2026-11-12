@@ -134,6 +134,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5a053088ced3e0a397cbc105f3b2f31a" id="r_a5a053088ced3e0a397cbc105f3b2f31a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a5a053088ced3e0a397cbc105f3b2f31a">UsingDirective</a> (<a class="el" href="class_bond_1_1_qualified_identifier.html">QualifiedIdentifier</a> *identifier)</td></tr>
 <tr class="memdesc:a5a053088ced3e0a397cbc105f3b2f31a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a using-directive.  <br /></td></tr>
 <tr class="memitem:abf28638894468a3eeabdb0c7c42e6a56" id="r_abf28638894468a3eeabdb0c7c42e6a56"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#abf28638894468a3eeabdb0c7c42e6a56">~UsingDirective</a> ()</td></tr>
+<tr class="memdesc:abf28638894468a3eeabdb0c7c42e6a56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys a <a class="el" href="class_bond_1_1_using_directive.html" title="Represents a using-directive that opens a namespace&#39;s symbols into local scope.">UsingDirective</a> object.  <br /></td></tr>
 <tr class="memitem:a8b870150dfb4a46e9aaacd7ea19ffaf4" id="r_a8b870150dfb4a46e9aaacd7ea19ffaf4"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a8b870150dfb4a46e9aaacd7ea19ffaf4">Accept</a> (<a class="el" href="class_bond_1_1_parse_node_visitor.html">ParseNodeVisitor</a> &amp;visitor) override</td></tr>
 <tr class="memdesc:a8b870150dfb4a46e9aaacd7ea19ffaf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispatches this node to the given visitor.  <br /></td></tr>
 <tr class="memitem:a01cf9d9169ff7d5275a1afcd455dbbef" id="r_a01cf9d9169ff7d5275a1afcd455dbbef"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a01cf9d9169ff7d5275a1afcd455dbbef">Accept</a> (<a class="el" href="class_bond_1_1_parse_node_visitor.html">ParseNodeVisitor</a> &amp;visitor) const override</td></tr>
@@ -150,6 +151,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a083a39d71526e7c5c89b654945aa8593"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the resolved namespace symbol that this directive opens, if any.  <br /></td></tr>
 <tr class="memitem:a1c6a41625362a3cad8b9d94baed132b4" id="r_a1c6a41625362a3cad8b9d94baed132b4"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_symbol.html">Symbol</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a1c6a41625362a3cad8b9d94baed132b4">GetNamespace</a> () const</td></tr>
 <tr class="memdesc:a1c6a41625362a3cad8b9d94baed132b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the resolved namespace symbol that this directive opens, if any.  <br /></td></tr>
+<tr class="memitem:abefde5c4038e69cd311b0334f05f891b" id="r_abefde5c4038e69cd311b0334f05f891b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abefde5c4038e69cd311b0334f05f891b">SetEnclosingNamespace</a> (<a class="el" href="class_bond_1_1_symbol.html">Symbol</a> *space)</td></tr>
+<tr class="memdesc:abefde5c4038e69cd311b0334f05f891b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the nearest namespace that encloses both this directive and the namespace it opens.  <br /></td></tr>
+<tr class="memitem:a642c1fc2f92194bfc9fd92539141789d" id="r_a642c1fc2f92194bfc9fd92539141789d"><td class="memItemLeft"><a class="el" href="class_bond_1_1_symbol.html">Symbol</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a642c1fc2f92194bfc9fd92539141789d">GetEnclosingNamespace</a> ()</td></tr>
+<tr class="memdesc:a642c1fc2f92194bfc9fd92539141789d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the nearest namespace that encloses both this directive and the namespace it opens.  <br /></td></tr>
+<tr class="memitem:a728b03efc197f23a7d73b091f7775846" id="r_a728b03efc197f23a7d73b091f7775846"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_symbol.html">Symbol</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a728b03efc197f23a7d73b091f7775846">GetEnclosingNamespace</a> () const</td></tr>
+<tr class="memdesc:a728b03efc197f23a7d73b091f7775846"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the nearest namespace that encloses both this directive and the namespace it opens.  <br /></td></tr>
 <tr class="memitem:a3d41aab7385a7d6c935f515dad2c5f79" id="r_a3d41aab7385a7d6c935f515dad2c5f79"><td class="memItemLeft"><a class="el" href="#a5a053088ced3e0a397cbc105f3b2f31a">UsingDirective</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a3d41aab7385a7d6c935f515dad2c5f79">GetNextUsingDirective</a> ()</td></tr>
 <tr class="memdesc:a3d41aab7385a7d6c935f515dad2c5f79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the next using-directive opened in the same local scope.  <br /></td></tr>
 <tr class="memitem:ace29cd54435f1a009d308c2abcd2333e" id="r_ace29cd54435f1a009d308c2abcd2333e"><td class="memItemLeft">const <a class="el" href="#a5a053088ced3e0a397cbc105f3b2f31a">UsingDirective</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ace29cd54435f1a009d308c2abcd2333e">GetNextUsingDirective</a> () const</td></tr>
@@ -158,6 +165,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a50be29d7a5d308dd169f2efb468fb2da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Links this directive into its enclosing scope's list of opened namespaces.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_bond_1_1_list_parse_node"><td colspan="2">Public Member Functions inherited from <a class="el" href="class_bond_1_1_list_parse_node.html">Bond::ListParseNode</a></td></tr>
 <tr class="memitem:ad34e3a955708dfa0ff6be03639492619 pub_methods_class_bond_1_1_list_parse_node" id="r_ad34e3a955708dfa0ff6be03639492619"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_list_parse_node.html#ad34e3a955708dfa0ff6be03639492619">~ListParseNode</a> ()</td></tr>
+<tr class="memdesc:ad34e3a955708dfa0ff6be03639492619 pub_methods_class_bond_1_1_list_parse_node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys a <a class="el" href="class_bond_1_1_list_parse_node.html" title="Base class for parse nodes that can be linked into singly linked lists.">ListParseNode</a> object.  <br /></td></tr>
 <tr class="memitem:a7ef67e649f6ecb80adc285091fb42851 pub_methods_class_bond_1_1_list_parse_node" id="r_a7ef67e649f6ecb80adc285091fb42851"><td class="memItemLeft"><a class="el" href="class_bond_1_1_list_parse_node.html#a7be09e471f388a343f2b68de7417f939">ListParseNode</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_list_parse_node.html#a7ef67e649f6ecb80adc285091fb42851">GetNextNode</a> ()</td></tr>
 <tr class="memdesc:a7ef67e649f6ecb80adc285091fb42851 pub_methods_class_bond_1_1_list_parse_node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the next node in the list.  <br /></td></tr>
 <tr class="memitem:a2490c2fbc501b82858efae21f95c8922 pub_methods_class_bond_1_1_list_parse_node" id="r_a2490c2fbc501b82858efae21f95c8922"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_list_parse_node.html#a7be09e471f388a343f2b68de7417f939">ListParseNode</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_list_parse_node.html#a2490c2fbc501b82858efae21f95c8922">GetNextNode</a> () const</td></tr>
@@ -166,6 +174,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a631c04c65ff24ec65a51af71a1bed5a2 pub_methods_class_bond_1_1_list_parse_node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the next node in the list.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_bond_1_1_parse_node"><td colspan="2">Public Member Functions inherited from <a class="el" href="class_bond_1_1_parse_node.html">Bond::ParseNode</a></td></tr>
 <tr class="memitem:a38c4879ddf1a936a68ebd90eeb5a03da pub_methods_class_bond_1_1_parse_node" id="r_a38c4879ddf1a936a68ebd90eeb5a03da"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_parse_node.html#a38c4879ddf1a936a68ebd90eeb5a03da">~ParseNode</a> ()</td></tr>
+<tr class="memdesc:a38c4879ddf1a936a68ebd90eeb5a03da pub_methods_class_bond_1_1_parse_node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys a <a class="el" href="class_bond_1_1_parse_node.html" title="Base class for all parse tree nodes.">ParseNode</a> object.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -176,7 +185,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a using-directive that opens a namespace's symbols into local scope. </p>
-<p>Never enters a symbol table; it is instead threaded into its enclosing local scope's list of opened namespaces (via its own dedicated next-pointer, separate from the <a class="el" href="class_bond_1_1_list_parse_node.html" title="Base class for parse nodes that can be linked into singly linked lists.">ListParseNode</a> next-pointer used to place it among the enclosing statement list) and consulted as a fallback by <a class="el" href="class_bond_1_1_symbol.html#a5d003b26e7bd5e089e6c05dbe39d1c06" title="Finds a directly contained symbol by name.">Symbol::FindSymbol</a>. </p>
+<p>Never enters a symbol table; it is instead threaded into its enclosing local scope's list of opened namespaces (via its own dedicated next-pointer, separate from the <a class="el" href="class_bond_1_1_list_parse_node.html" title="Base class for parse nodes that can be linked into singly linked lists.">ListParseNode</a> next-pointer used to place it among the enclosing statement list). During unqualified lookup from within that scope, the opened namespace's members are treated as members of the nearest namespace that encloses both the directive and the opened namespace, as in C++. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a5a053088ced3e0a397cbc105f3b2f31a" name="a5a053088ced3e0a397cbc105f3b2f31a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5a053088ced3e0a397cbc105f3b2f31a">&#9670;&#160;</a></span>UsingDirective()</h2>
@@ -233,6 +242,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Destroys a <a class="el" href="class_bond_1_1_using_directive.html" title="Represents a using-directive that opens a namespace&#39;s symbols into local scope.">UsingDirective</a> object. </p>
 
 </div>
 </div>
@@ -334,6 +345,60 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A token associated with this node, or null if no token applies. </dd></dl>
 
 <p>Implements <a class="el" href="class_bond_1_1_parse_node.html#ae9a578142b6f2ab663f6b9990012fa13">Bond::ParseNode</a>.</p>
+
+</div>
+</div>
+<a id="a642c1fc2f92194bfc9fd92539141789d" name="a642c1fc2f92194bfc9fd92539141789d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a642c1fc2f92194bfc9fd92539141789d">&#9670;&#160;</a></span>GetEnclosingNamespace() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_bond_1_1_symbol.html">Symbol</a> * Bond::UsingDirective::GetEnclosingNamespace </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the nearest namespace that encloses both this directive and the namespace it opens. </p>
+
+</div>
+</div>
+<a id="a728b03efc197f23a7d73b091f7775846" name="a728b03efc197f23a7d73b091f7775846"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a728b03efc197f23a7d73b091f7775846">&#9670;&#160;</a></span>GetEnclosingNamespace() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_bond_1_1_symbol.html">Symbol</a> * Bond::UsingDirective::GetEnclosingNamespace </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the nearest namespace that encloses both this directive and the namespace it opens. </p>
 
 </div>
 </div>
@@ -496,6 +561,39 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the next using-directive opened in the same local scope. </p>
+
+</div>
+</div>
+<a id="abefde5c4038e69cd311b0334f05f891b" name="abefde5c4038e69cd311b0334f05f891b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abefde5c4038e69cd311b0334f05f891b">&#9670;&#160;</a></span>SetEnclosingNamespace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Bond::UsingDirective::SetEnclosingNamespace </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_bond_1_1_symbol.html">Symbol</a> *</td>          <td class="paramname"><span class="paramname"><em>space</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the nearest namespace that encloses both this directive and the namespace it opens. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">space</td><td>The enclosing namespace, to whose members the opened namespace's members are added. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

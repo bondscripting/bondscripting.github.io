@@ -282,7 +282,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9d74e64ffeb0d53e57871cce4c329778" id="r_a9d74e64ffeb0d53e57871cce4c329778"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9d74e64ffeb0d53e57871cce4c329778">AddAnnotation</a> (const <a class="el" href="#ad4b6c5692435cfc04cc96eb829d10da2">Annotation</a> &amp;annotation)</td></tr>
 <tr class="memdesc:a9d74e64ffeb0d53e57871cce4c329778"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an annotation to the token.  <br /></td></tr>
 <tr class="memitem:a0151ade5d937d7f23e4e4ca595c9a638" id="r_a0151ade5d937d7f23e4e4ca595c9a638"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a0151ade5d937d7f23e4e4ca595c9a638">HasAnnotation</a> (const <a class="el" href="#ad4b6c5692435cfc04cc96eb829d10da2">Annotation</a> &amp;annotation) const</td></tr>
-<tr class="memdesc:a0151ade5d937d7f23e4e4ca595c9a638"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> as a specified annotation.  <br /></td></tr>
+<tr class="memdesc:a0151ade5d937d7f23e4e4ca595c9a638"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> has a specified annotation.  <br /></td></tr>
 <tr class="memitem:a34631459cb9b7cd19b8e33a744c9490b" id="r_a34631459cb9b7cd19b8e33a744c9490b"><td class="memItemLeft">const <a class="el" href="union_bond_1_1_value.html">Value</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a34631459cb9b7cd19b8e33a744c9490b">GetValue</a> () const</td></tr>
 <tr class="memdesc:a34631459cb9b7cd19b8e33a744c9490b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value of the token. Valid only for constant literal tokens.  <br /></td></tr>
 <tr class="memitem:a88576223da302eda093f9211423f6878" id="r_a88576223da302eda093f9211423f6878"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a88576223da302eda093f9211423f6878">GetBoolValue</a> () const</td></tr>
@@ -290,9 +290,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a404b059118956880faa177e26da5bdf4" id="r_a404b059118956880faa177e26da5bdf4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a404b059118956880faa177e26da5bdf4">SetBoolValue</a> (bool value)</td></tr>
 <tr class="memdesc:a404b059118956880faa177e26da5bdf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns the boolean value of the <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a>. Valid only for Tokens of type <span class="tt"><a class="el" href="#a6d09a1144b5a79476ae9c8056728362fa88ea43f3d14f85852019c1f2bf49cfd7">CONST_BOOL</a></span>.  <br /></td></tr>
 <tr class="memitem:a4b78f75cfbdfb4b5724fa127ef5f196c" id="r_a4b78f75cfbdfb4b5724fa127ef5f196c"><td class="memItemLeft">int32_t&#160;</td><td class="memItemRight"><a class="el" href="#a4b78f75cfbdfb4b5724fa127ef5f196c">GetIntValue</a> () const</td></tr>
-<tr class="memdesc:a4b78f75cfbdfb4b5724fa127ef5f196c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the integral value of the <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a>. Valid only for Tokens of type <span class="tt"><a class="el" href="#a6d09a1144b5a79476ae9c8056728362fa13b2cb57237b2a58f36667e4b1117721">CONST_INT</a></span>.  <br /></td></tr>
+<tr class="memdesc:a4b78f75cfbdfb4b5724fa127ef5f196c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the integral value of the <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a>. Valid only for Tokens of type <span class="tt"><a class="el" href="#a6d09a1144b5a79476ae9c8056728362fa839fbf56c57e603bc6b4511c470369d4">CONST_CHAR</a></span> and <span class="tt"><a class="el" href="#a6d09a1144b5a79476ae9c8056728362fa13b2cb57237b2a58f36667e4b1117721">CONST_INT</a></span>.  <br /></td></tr>
 <tr class="memitem:a792223baf239ae28d5366cc35aedb753" id="r_a792223baf239ae28d5366cc35aedb753"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a792223baf239ae28d5366cc35aedb753">SetIntValue</a> (int32_t value)</td></tr>
-<tr class="memdesc:a792223baf239ae28d5366cc35aedb753"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns the integral value of the <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a>. Valid only for Tokens of type <span class="tt"><a class="el" href="#a6d09a1144b5a79476ae9c8056728362fa13b2cb57237b2a58f36667e4b1117721">CONST_INT</a></span>.  <br /></td></tr>
+<tr class="memdesc:a792223baf239ae28d5366cc35aedb753"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns the integral value of the <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a>. Valid only for Tokens of type <span class="tt"><a class="el" href="#a6d09a1144b5a79476ae9c8056728362fa839fbf56c57e603bc6b4511c470369d4">CONST_CHAR</a></span> and <span class="tt"><a class="el" href="#a6d09a1144b5a79476ae9c8056728362fa13b2cb57237b2a58f36667e4b1117721">CONST_INT</a></span>.  <br /></td></tr>
 <tr class="memitem:acd3b6b9524d92d0b25325d618ba8e0c7" id="r_acd3b6b9524d92d0b25325d618ba8e0c7"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#acd3b6b9524d92d0b25325d618ba8e0c7">GetUIntValue</a> () const</td></tr>
 <tr class="memdesc:acd3b6b9524d92d0b25325d618ba8e0c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the integral value of the <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a>. Valid only for Tokens of type <span class="tt"><a class="el" href="#a6d09a1144b5a79476ae9c8056728362fac526ec3c57a1aa7274c9ea4399f63745">CONST_UINT</a></span>.  <br /></td></tr>
 <tr class="memitem:ae108e3c9e4177de5b545d12dc78ac0b9" id="r_ae108e3c9e4177de5b545d12dc78ac0b9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae108e3c9e4177de5b545d12dc78ac0b9">SetUIntValue</a> (uint32_t value)</td></tr>
@@ -346,8 +346,10 @@ Static Public Member Functions</h2></td></tr>
 
 <p>An enumeration describing a characteristic of the token as it appears in the <a class="el" href="namespace_bond.html">Bond</a> source. Currently only used to qualify integer literals as being expressed as hex or octal. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad4b6c5692435cfc04cc96eb829d10da2a61dbfe01af7c84f4dbcbb6b3b239ceb7" name="ad4b6c5692435cfc04cc96eb829d10da2a61dbfe01af7c84f4dbcbb6b3b239ceb7"></a>OCTAL&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad4b6c5692435cfc04cc96eb829d10da2a2f8111ca56dd179a05260d8f54f51498" name="ad4b6c5692435cfc04cc96eb829d10da2a2f8111ca56dd179a05260d8f54f51498"></a>HEX&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad4b6c5692435cfc04cc96eb829d10da2a61dbfe01af7c84f4dbcbb6b3b239ceb7" name="ad4b6c5692435cfc04cc96eb829d10da2a61dbfe01af7c84f4dbcbb6b3b239ceb7"></a>OCTAL&#160;</td><td class="fielddoc"><p>The integer literal is expressed in octal. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad4b6c5692435cfc04cc96eb829d10da2a2f8111ca56dd179a05260d8f54f51498" name="ad4b6c5692435cfc04cc96eb829d10da2a2f8111ca56dd179a05260d8f54f51498"></a>HEX&#160;</td><td class="fielddoc"><p>The integer literal is expressed in hexadecimal. </p>
+</td></tr>
 </table>
 
 </div>
@@ -784,7 +786,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the integral value of the <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a>. Valid only for Tokens of type <span class="tt"><a class="el" href="#a6d09a1144b5a79476ae9c8056728362fa13b2cb57237b2a58f36667e4b1117721">CONST_INT</a></span>. </p>
+<p>Returns the integral value of the <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a>. Valid only for Tokens of type <span class="tt"><a class="el" href="#a6d09a1144b5a79476ae9c8056728362fa839fbf56c57e603bc6b4511c470369d4">CONST_CHAR</a></span> and <span class="tt"><a class="el" href="#a6d09a1144b5a79476ae9c8056728362fa13b2cb57237b2a58f36667e4b1117721">CONST_INT</a></span>. </p>
 
 </div>
 </div>
@@ -1127,7 +1129,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns whether the <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> as a specified annotation. </p>
+<p>Returns whether the <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> has a specified annotation. </p>
 
 </div>
 </div>
@@ -1289,7 +1291,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Assigns the integral value of the <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a>. Valid only for Tokens of type <span class="tt"><a class="el" href="#a6d09a1144b5a79476ae9c8056728362fa13b2cb57237b2a58f36667e4b1117721">CONST_INT</a></span>. </p>
+<p>Assigns the integral value of the <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a>. Valid only for Tokens of type <span class="tt"><a class="el" href="#a6d09a1144b5a79476ae9c8056728362fa839fbf56c57e603bc6b4511c470369d4">CONST_CHAR</a></span> and <span class="tt"><a class="el" href="#a6d09a1144b5a79476ae9c8056728362fa13b2cb57237b2a58f36667e4b1117721">CONST_INT</a></span>. </p>
 
 </div>
 </div>

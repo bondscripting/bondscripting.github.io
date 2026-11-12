@@ -127,26 +127,47 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ab8778b05b02cda2f8b70cff8eb3b0fe7" id="r_ab8778b05b02cda2f8b70cff8eb3b0fe7"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#ab8778b05b02cda2f8b70cff8eb3b0fe7">mMajorVersion</a></td></tr>
+<tr class="memdesc:ab8778b05b02cda2f8b70cff8eb3b0fe7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The major version of the CBO file format.  <br /></td></tr>
 <tr class="memitem:a7f7b50f6e7157919aceebb690f0fabe6" id="r_a7f7b50f6e7157919aceebb690f0fabe6"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a7f7b50f6e7157919aceebb690f0fabe6">mMinorVersion</a></td></tr>
-<tr class="memitem:ac5b21c4cf213b850b85f1ff76fdc3720" id="r_ac5b21c4cf213b850b85f1ff76fdc3720"><td class="memItemLeft"><a class="el" href="namespace_bond.html#ad6df57f21c24017711bb3ccd316fb4b6">PointerSize</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac5b21c4cf213b850b85f1ff76fdc3720">mPointerSize</a></td></tr>
+<tr class="memdesc:a7f7b50f6e7157919aceebb690f0fabe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The minor version of the CBO file format.  <br /></td></tr>
+<tr class="memitem:ac5b21c4cf213b850b85f1ff76fdc3720" id="r_ac5b21c4cf213b850b85f1ff76fdc3720"><td class="memItemLeft"><a class="el" href="group__types.html#gad6df57f21c24017711bb3ccd316fb4b6">PointerSize</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac5b21c4cf213b850b85f1ff76fdc3720">mPointerSize</a></td></tr>
+<tr class="memdesc:ac5b21c4cf213b850b85f1ff76fdc3720"><td class="mdescLeft">&#160;</td><td class="mdescRight">The pointer size for which the CBO was compiled.  <br /></td></tr>
 <tr class="memitem:af2bf31de7db546b8d9bdcb93025bbb74" id="r_af2bf31de7db546b8d9bdcb93025bbb74"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#af2bf31de7db546b8d9bdcb93025bbb74">mListBlobIdIndex</a></td></tr>
+<tr class="memdesc:af2bf31de7db546b8d9bdcb93025bbb74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of the "List" blob identifier in the string table, or BOND_SIZE_MAX.  <br /></td></tr>
 <tr class="memitem:a374d9e36f86a6aab015d4729cb8021fd" id="r_a374d9e36f86a6aab015d4729cb8021fd"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a374d9e36f86a6aab015d4729cb8021fd">mFunctionBlobIdIndex</a></td></tr>
+<tr class="memdesc:a374d9e36f86a6aab015d4729cb8021fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of the "Func" blob identifier in the string table, or BOND_SIZE_MAX.  <br /></td></tr>
 <tr class="memitem:a5d9807e98aaabb7d8f7ebad13f988504" id="r_a5d9807e98aaabb7d8f7ebad13f988504"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a5d9807e98aaabb7d8f7ebad13f988504">mDataBlobIdIndex</a></td></tr>
+<tr class="memdesc:a5d9807e98aaabb7d8f7ebad13f988504"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of the "Data" blob identifier in the string table, or BOND_SIZE_MAX.  <br /></td></tr>
 <tr class="memitem:ace9c6ce2fa272cc94f4caf64afdd96b9" id="r_ace9c6ce2fa272cc94f4caf64afdd96b9"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#ace9c6ce2fa272cc94f4caf64afdd96b9">mStaticInitializerNameIndex</a></td></tr>
+<tr class="memdesc:ace9c6ce2fa272cc94f4caf64afdd96b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of the empty qualified name, which names the static initializer, in the qualified name table, or BOND_SIZE_MAX.  <br /></td></tr>
 <tr class="memitem:a81b277b3016b28d9d8f13b6d84d8a550" id="r_a81b277b3016b28d9d8f13b6d84d8a550"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a81b277b3016b28d9d8f13b6d84d8a550">mValue32Count</a></td></tr>
+<tr class="memdesc:a81b277b3016b28d9d8f13b6d84d8a550"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of entries in the 32-bit constant table.  <br /></td></tr>
 <tr class="memitem:ad299c039eb08f7185d8654bda44fc588" id="r_ad299c039eb08f7185d8654bda44fc588"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#ad299c039eb08f7185d8654bda44fc588">mValue64Count</a></td></tr>
+<tr class="memdesc:ad299c039eb08f7185d8654bda44fc588"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of entries in the 64-bit constant table.  <br /></td></tr>
 <tr class="memitem:a10fa9ae3aba08793faf22ecd38ad27b9" id="r_a10fa9ae3aba08793faf22ecd38ad27b9"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a10fa9ae3aba08793faf22ecd38ad27b9">mStringCount</a></td></tr>
+<tr class="memdesc:a10fa9ae3aba08793faf22ecd38ad27b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of entries in the string table.  <br /></td></tr>
 <tr class="memitem:a7ab8ccd900de3a5eed07964a0abefe61" id="r_a7ab8ccd900de3a5eed07964a0abefe61"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a7ab8ccd900de3a5eed07964a0abefe61">mStringByteCount</a></td></tr>
+<tr class="memdesc:a7ab8ccd900de3a5eed07964a0abefe61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total number of bytes in the strings of the string table, excluding null terminators.  <br /></td></tr>
 <tr class="memitem:a3a51d39e51e2fb02d04bd9b25b0eb49e" id="r_a3a51d39e51e2fb02d04bd9b25b0eb49e"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a3a51d39e51e2fb02d04bd9b25b0eb49e">mQualifiedNameCount</a></td></tr>
+<tr class="memdesc:a3a51d39e51e2fb02d04bd9b25b0eb49e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of entries in the qualified name table.  <br /></td></tr>
 <tr class="memitem:ab79c6c812208a2525d036799e0d799a1" id="r_ab79c6c812208a2525d036799e0d799a1"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#ab79c6c812208a2525d036799e0d799a1">mQualifiedNameElementCount</a></td></tr>
+<tr class="memdesc:ab79c6c812208a2525d036799e0d799a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total number of elements in the qualified names of the qualified name table, excluding terminators.  <br /></td></tr>
 <tr class="memitem:a09855939beed7f6a4800efe559cdec01" id="r_a09855939beed7f6a4800efe559cdec01"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a09855939beed7f6a4800efe559cdec01">mParamListSignatureCount</a></td></tr>
+<tr class="memdesc:a09855939beed7f6a4800efe559cdec01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of parameter list signatures.  <br /></td></tr>
 <tr class="memitem:a05c39af44e4358e03d4ca411b31e6581" id="r_a05c39af44e4358e03d4ca411b31e6581"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a05c39af44e4358e03d4ca411b31e6581">mParamSignatureCount</a></td></tr>
+<tr class="memdesc:a05c39af44e4358e03d4ca411b31e6581"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total number of parameter signatures.  <br /></td></tr>
 <tr class="memitem:aa9e263c65e753a3cc2cc59949e83d222" id="r_aa9e263c65e753a3cc2cc59949e83d222"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#aa9e263c65e753a3cc2cc59949e83d222">mFunctionCount</a></td></tr>
+<tr class="memdesc:aa9e263c65e753a3cc2cc59949e83d222"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of functions, excluding the static initializer.  <br /></td></tr>
 <tr class="memitem:a63d5e6359e4bfb2f9510bbc76e17cbae" id="r_a63d5e6359e4bfb2f9510bbc76e17cbae"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a63d5e6359e4bfb2f9510bbc76e17cbae">mStaticInitializerCount</a></td></tr>
+<tr class="memdesc:a63d5e6359e4bfb2f9510bbc76e17cbae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of static initializers.  <br /></td></tr>
 <tr class="memitem:a0e4bdfbbbd18fa78d13cecbde0e2ec4e" id="r_a0e4bdfbbbd18fa78d13cecbde0e2ec4e"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a0e4bdfbbbd18fa78d13cecbde0e2ec4e">mCodeByteCount</a></td></tr>
+<tr class="memdesc:a0e4bdfbbbd18fa78d13cecbde0e2ec4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total number of bytes of bytecode.  <br /></td></tr>
 <tr class="memitem:a2987df002f6d3a382bc70af58fcaea19" id="r_a2987df002f6d3a382bc70af58fcaea19"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a2987df002f6d3a382bc70af58fcaea19">mDataCount</a></td></tr>
+<tr class="memdesc:a2987df002f6d3a382bc70af58fcaea19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of global variables.  <br /></td></tr>
 <tr class="memitem:a0051f0f2a4a874903a2c8a5aa33dadc6" id="r_a0051f0f2a4a874903a2c8a5aa33dadc6"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a0051f0f2a4a874903a2c8a5aa33dadc6">mDataSize</a></td></tr>
+<tr class="memdesc:a0051f0f2a4a874903a2c8a5aa33dadc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total size in bytes of the global variables, including padding.  <br /></td></tr>
 <tr class="memitem:a9f3da5fb79ddf44437bb8f45f4df8746" id="r_a9f3da5fb79ddf44437bb8f45f4df8746"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a9f3da5fb79ddf44437bb8f45f4df8746">mDataAlignment</a></td></tr>
+<tr class="memdesc:a9f3da5fb79ddf44437bb8f45f4df8746"><td class="mdescLeft">&#160;</td><td class="mdescRight">The largest alignment of the global variables, which is at least BOND_SLOT_SIZE.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Summary information produced during CBO validation. </p>
@@ -191,6 +212,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Total number of bytes of bytecode. </p>
+
 </div>
 </div>
 <a id="a9f3da5fb79ddf44437bb8f45f4df8746" name="a9f3da5fb79ddf44437bb8f45f4df8746"></a>
@@ -204,6 +227,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The largest alignment of the global variables, which is at least BOND_SLOT_SIZE. </p>
 
 </div>
 </div>
@@ -219,6 +244,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Index of the "Data" blob identifier in the string table, or BOND_SIZE_MAX. </p>
+
 </div>
 </div>
 <a id="a2987df002f6d3a382bc70af58fcaea19" name="a2987df002f6d3a382bc70af58fcaea19"></a>
@@ -232,6 +259,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Number of global variables. </p>
 
 </div>
 </div>
@@ -247,6 +276,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Total size in bytes of the global variables, including padding. </p>
+
 </div>
 </div>
 <a id="a374d9e36f86a6aab015d4729cb8021fd" name="a374d9e36f86a6aab015d4729cb8021fd"></a>
@@ -260,6 +291,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Index of the "Func" blob identifier in the string table, or BOND_SIZE_MAX. </p>
 
 </div>
 </div>
@@ -275,6 +308,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Number of functions, excluding the static initializer. </p>
+
 </div>
 </div>
 <a id="af2bf31de7db546b8d9bdcb93025bbb74" name="af2bf31de7db546b8d9bdcb93025bbb74"></a>
@@ -288,6 +323,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Index of the "List" blob identifier in the string table, or BOND_SIZE_MAX. </p>
 
 </div>
 </div>
@@ -303,6 +340,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The major version of the CBO file format. </p>
+
 </div>
 </div>
 <a id="a7f7b50f6e7157919aceebb690f0fabe6" name="a7f7b50f6e7157919aceebb690f0fabe6"></a>
@@ -316,6 +355,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The minor version of the CBO file format. </p>
 
 </div>
 </div>
@@ -331,6 +372,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Number of parameter list signatures. </p>
+
 </div>
 </div>
 <a id="a05c39af44e4358e03d4ca411b31e6581" name="a05c39af44e4358e03d4ca411b31e6581"></a>
@@ -345,6 +388,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Total number of parameter signatures. </p>
+
 </div>
 </div>
 <a id="ac5b21c4cf213b850b85f1ff76fdc3720" name="ac5b21c4cf213b850b85f1ff76fdc3720"></a>
@@ -354,10 +399,12 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_bond.html#ad6df57f21c24017711bb3ccd316fb4b6">PointerSize</a> Bond::CboValidator::Result::mPointerSize</td>
+          <td class="memname"><a class="el" href="group__types.html#gad6df57f21c24017711bb3ccd316fb4b6">PointerSize</a> Bond::CboValidator::Result::mPointerSize</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The pointer size for which the CBO was compiled. </p>
 
 </div>
 </div>
@@ -373,6 +420,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Number of entries in the qualified name table. </p>
+
 </div>
 </div>
 <a id="ab79c6c812208a2525d036799e0d799a1" name="ab79c6c812208a2525d036799e0d799a1"></a>
@@ -386,6 +435,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Total number of elements in the qualified names of the qualified name table, excluding terminators. </p>
 
 </div>
 </div>
@@ -401,6 +452,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Number of static initializers. </p>
+
 </div>
 </div>
 <a id="ace9c6ce2fa272cc94f4caf64afdd96b9" name="ace9c6ce2fa272cc94f4caf64afdd96b9"></a>
@@ -414,6 +467,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Index of the empty qualified name, which names the static initializer, in the qualified name table, or BOND_SIZE_MAX. </p>
 
 </div>
 </div>
@@ -429,6 +484,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Total number of bytes in the strings of the string table, excluding null terminators. </p>
+
 </div>
 </div>
 <a id="a10fa9ae3aba08793faf22ecd38ad27b9" name="a10fa9ae3aba08793faf22ecd38ad27b9"></a>
@@ -442,6 +499,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Number of entries in the string table. </p>
 
 </div>
 </div>
@@ -457,6 +516,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Number of entries in the 32-bit constant table. </p>
+
 </div>
 </div>
 <a id="ad299c039eb08f7185d8654bda44fc588" name="ad299c039eb08f7185d8654bda44fc588"></a>
@@ -470,6 +531,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Number of entries in the 64-bit constant table. </p>
 
 </div>
 </div>

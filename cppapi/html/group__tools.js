@@ -28,6 +28,19 @@ var group__tools =
       [ "Validate", "class_bond_1_1_cbo_validator.html#a73d1f889e87d14f237ea5bcee883c744", null ],
       [ "Validate", "class_bond_1_1_cbo_validator.html#a776a5b9d339e9a4234be3ed395c19001", null ]
     ] ],
+    [ "Bond::CommandLineArgs", "class_bond_1_1_command_line_args.html", [
+      [ "CommandLineArgs", "class_bond_1_1_command_line_args.html#a9ea719746e093b60f19c83186dd51980", null ],
+      [ "CommandLineArgs", "class_bond_1_1_command_line_args.html#a98bbca32f3d897f435128ffe3c207ab4", null ],
+      [ "GetArgc", "class_bond_1_1_command_line_args.html#afa4b743fc618bcf492dbaecad61d40f3", null ],
+      [ "GetArgv", "class_bond_1_1_command_line_args.html#ac880fe28fa7655e2179e763f05de6a8c", null ],
+      [ "operator=", "class_bond_1_1_command_line_args.html#a7f0941fb977599f54bf01a3d608a6645", null ]
+    ] ],
+    [ "Bond::Utf8ConsoleOutput", "class_bond_1_1_utf8_console_output.html", [
+      [ "Utf8ConsoleOutput", "class_bond_1_1_utf8_console_output.html#a4b9e9a29e8a0fb633b778c86e8a3fe4b", null ],
+      [ "~Utf8ConsoleOutput", "class_bond_1_1_utf8_console_output.html#ac38d18318511284bbe7403a252c6f9bd", null ],
+      [ "Utf8ConsoleOutput", "class_bond_1_1_utf8_console_output.html#a89d4c992b89353c44fed5e3cd317a2e1", null ],
+      [ "operator=", "class_bond_1_1_utf8_console_output.html#a3b73838508ca3b4ac761bdf5d4127859", null ]
+    ] ],
     [ "Bond::Disassembler", "class_bond_1_1_disassembler.html", [
       [ "Disassembler", "class_bond_1_1_disassembler.html#ae8816b32366a16afde4ef05abb7ef386", null ],
       [ "~Disassembler", "class_bond_1_1_disassembler.html#aadb8c265febab84f1c674c8304b119fd", null ],
@@ -36,7 +49,7 @@ var group__tools =
       [ "operator=", "class_bond_1_1_disassembler.html#a0c780b46a6c06c4ab5ddda93fc01805b", null ]
     ] ],
     [ "Bond::NativeBindingGenerator", "class_bond_1_1_native_binding_generator.html", [
-      [ "Generate", "class_bond_1_1_native_binding_generator.html#a89dbc8560b35021fc3427bd6e3603494", null ]
+      [ "Generate", "class_bond_1_1_native_binding_generator.html#a18b320f05da2dbe27ada5d04b4ae6e17", null ]
     ] ],
     [ "Bond::ParseNodeCount", "struct_bond_1_1_parse_node_count.html", [
       [ "ParseNodeCount", "struct_bond_1_1_parse_node_count.html#a3bc41a3df72b57cfc03aceeb44c4da71", null ],

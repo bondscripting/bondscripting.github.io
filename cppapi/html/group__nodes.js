@@ -1,5 +1,6 @@
 var group__nodes =
 [
+    [ "parsenodesfwd.h", "parsenodesfwd_8h.html", null ],
     [ "Bond::ParseNode", "class_bond_1_1_parse_node.html", [
       [ "~ParseNode", "class_bond_1_1_parse_node.html#a38c4879ddf1a936a68ebd90eeb5a03da", null ],
       [ "ParseNode", "class_bond_1_1_parse_node.html#a7b951fe102ad645db975811c648013f0", null ],
@@ -38,12 +39,8 @@ var group__nodes =
       [ "FindSymbol", "class_bond_1_1_symbol.html#aae6fce38f01fca3f0724320d5844faad", null ],
       [ "FindSymbol", "class_bond_1_1_symbol.html#a5d003b26e7bd5e089e6c05dbe39d1c06", null ],
       [ "FindSymbol", "class_bond_1_1_symbol.html#aac8353df4ee950e09ce0a1e83b76cd1d", null ],
-      [ "FindSymbol", "class_bond_1_1_symbol.html#ac3ad4f8ecc0f83a64108e3c01a3d6b10", null ],
-      [ "FindSymbol", "class_bond_1_1_symbol.html#acf58261d0db59578d62699a4b878448a", null ],
       [ "FindSymbol", "class_bond_1_1_symbol.html#a3c16267806c1adff9db8068206350d0b", null ],
       [ "FindSymbol", "class_bond_1_1_symbol.html#aec6752dace66dc7504238f0f96a85381", null ],
-      [ "FindSymbol", "class_bond_1_1_symbol.html#af0d18804f941c0758f957349b852203c", null ],
-      [ "FindSymbol", "class_bond_1_1_symbol.html#a94055dd2030b9edbeef14c3e6bbc286b", null ],
       [ "GetContextToken", "class_bond_1_1_symbol.html#a2b167c4a2bcebbbb9ae3895a7794bcf9", null ],
       [ "GetName", "class_bond_1_1_symbol.html#a4c547838b9d4b2a1a54c067e43dc538a", null ],
       [ "GetParentSymbol", "class_bond_1_1_symbol.html#a06da8494d2f752918f707e5e0a0ee0da", null ],
@@ -87,6 +84,7 @@ var group__nodes =
       [ "GetStackSize", "class_bond_1_1_type_descriptor.html#a55d1b0e27ebedcd2a79d5913bd479f27", null ],
       [ "GetTypeSpecifier", "class_bond_1_1_type_descriptor.html#a229ba2b6a3d3aca75f133286722cdab2", null ],
       [ "GetTypeSpecifier", "class_bond_1_1_type_descriptor.html#ab36403bd2eebad963d85c927e1138bca", null ],
+      [ "HasUndefinedTypeName", "class_bond_1_1_type_descriptor.html#a3bc034e52f4043fd682bce31377f9433", null ],
       [ "IsAddressable", "class_bond_1_1_type_descriptor.html#a3363e8aadd4f72be0dbe1fa64d4d3e9d", null ],
       [ "IsArrayType", "class_bond_1_1_type_descriptor.html#ad93545044ddc0083311edd10d0a6b867", null ],
       [ "IsAssignable", "class_bond_1_1_type_descriptor.html#a778079c4f3291a1c916f0bd228a5fab4", null ],
@@ -507,12 +505,15 @@ var group__nodes =
       [ "Accept", "class_bond_1_1_using_directive.html#a01cf9d9169ff7d5275a1afcd455dbbef", null ],
       [ "Accept", "class_bond_1_1_using_directive.html#a8b870150dfb4a46e9aaacd7ea19ffaf4", null ],
       [ "GetContextToken", "class_bond_1_1_using_directive.html#ad782a18dfec110a6b55af6ace71fe78d", null ],
+      [ "GetEnclosingNamespace", "class_bond_1_1_using_directive.html#a642c1fc2f92194bfc9fd92539141789d", null ],
+      [ "GetEnclosingNamespace", "class_bond_1_1_using_directive.html#a728b03efc197f23a7d73b091f7775846", null ],
       [ "GetIdentifier", "class_bond_1_1_using_directive.html#a41d70bec9ce0fb60827d353e6038aabd", null ],
       [ "GetIdentifier", "class_bond_1_1_using_directive.html#a9821b9dbaae409f7f07e854c0796ec6a", null ],
       [ "GetNamespace", "class_bond_1_1_using_directive.html#a083a39d71526e7c5c89b654945aa8593", null ],
       [ "GetNamespace", "class_bond_1_1_using_directive.html#a1c6a41625362a3cad8b9d94baed132b4", null ],
       [ "GetNextUsingDirective", "class_bond_1_1_using_directive.html#a3d41aab7385a7d6c935f515dad2c5f79", null ],
       [ "GetNextUsingDirective", "class_bond_1_1_using_directive.html#ace29cd54435f1a009d308c2abcd2333e", null ],
+      [ "SetEnclosingNamespace", "class_bond_1_1_using_directive.html#abefde5c4038e69cd311b0334f05f891b", null ],
       [ "SetNamespace", "class_bond_1_1_using_directive.html#a8b502c5d45884788a19290132c494e3a", null ],
       [ "SetNextUsingDirective", "class_bond_1_1_using_directive.html#a50be29d7a5d308dd169f2efb468fb2da", null ]
     ] ],
@@ -525,11 +526,12 @@ var group__nodes =
       [ "SetTypeDescriptor", "class_bond_1_1_expression.html#afb521f7b45df1369c5a1ac171d2c6064", null ]
     ] ],
     [ "Bond::ExpressionStatement", "class_bond_1_1_expression_statement.html", [
-      [ "ExpressionStatement", "class_bond_1_1_expression_statement.html#a9fed4347cfbe947cea371ff3e7c3c4d0", null ],
+      [ "ExpressionStatement", "class_bond_1_1_expression_statement.html#ac5eba8884a4a5eeda41db8fc20b06e67", null ],
       [ "~ExpressionStatement", "class_bond_1_1_expression_statement.html#a38f1fc37a7eb1722aecbf93b6cf20026", null ],
       [ "Accept", "class_bond_1_1_expression_statement.html#ab38a1ce4d6e92c8a226cf1ec93c68283", null ],
       [ "Accept", "class_bond_1_1_expression_statement.html#a11160801c981cbb0c3a3f67ab29861b4", null ],
       [ "GetContextToken", "class_bond_1_1_expression_statement.html#a120c0e7245d5f596fb997a8bed0dddeb", null ],
+      [ "GetDeclaratorName", "class_bond_1_1_expression_statement.html#a4709ca5484c99f9506410a51ef2b8999", null ],
       [ "GetExpression", "class_bond_1_1_expression_statement.html#a72aabaf6e46ae00f99731c66a3574e44", null ],
       [ "GetExpression", "class_bond_1_1_expression_statement.html#a8ea8fb24ab2b4fefbb4eb706e723412d", null ]
     ] ],
@@ -678,13 +680,13 @@ var group__nodes =
       [ "Bond::SCOPE_LOCAL", "group__nodes.html#gga7076d8340ec207cc8c9d34193b45aad2a27b6b9bc5423e95b8cb70535c187713a", null ],
       [ "Bond::SCOPE_STRUCT_MEMBER", "group__nodes.html#gga7076d8340ec207cc8c9d34193b45aad2ae8792d9201d4b2312494726d182633f4", null ]
     ] ],
-    [ "Bond::BOOL_TYPE_SPECIFIER", "group__nodes.html#gab8d8443be1213ff5d817418bd3e74975", null ],
-    [ "Bond::CHAR_TYPE_SPECIFIER", "group__nodes.html#ga9520c571b7909598d2a243e0d7f63570", null ],
-    [ "Bond::DOUBLE_TYPE_SPECIFIER", "group__nodes.html#gafb2d463e315e4cd6aa93666fe3da99c0", null ],
-    [ "Bond::FLOAT_TYPE_SPECIFIER", "group__nodes.html#gaf1a1a6c703343aacdb728567a4c62d60", null ],
-    [ "Bond::INT_TYPE_SPECIFIER", "group__nodes.html#ga952ffdd8c0edf0fc17d50633c234bcec", null ],
-    [ "Bond::LONG_TYPE_SPECIFIER", "group__nodes.html#gae323adbb316e4f861916b86545bb7b63", null ],
-    [ "Bond::UINT_TYPE_SPECIFIER", "group__nodes.html#gad5fef621e85c52b3bc434efc62b4ad7b", null ],
-    [ "Bond::ULONG_TYPE_SPECIFIER", "group__nodes.html#gac39b489623defc92eb140b70d84de834", null ],
-    [ "Bond::VOID_TYPE_SPECIFIER", "group__nodes.html#ga2247b01143c6cd055bf29927592cb3aa", null ]
+    [ "Bond::BOOL_TYPE_SPECIFIER", "group__nodes.html#ga5e0f8c23f2adad334661287c8a70b8bc", null ],
+    [ "Bond::CHAR_TYPE_SPECIFIER", "group__nodes.html#gab70ec7271ec4d27116181861e2305d52", null ],
+    [ "Bond::DOUBLE_TYPE_SPECIFIER", "group__nodes.html#ga3bbef9b11603537c964934f599eec88e", null ],
+    [ "Bond::FLOAT_TYPE_SPECIFIER", "group__nodes.html#ga684200d72e400b7877c19ebc3dfa5681", null ],
+    [ "Bond::INT_TYPE_SPECIFIER", "group__nodes.html#ga8c4c59d52ae57a64de06eb2d4ea929f2", null ],
+    [ "Bond::LONG_TYPE_SPECIFIER", "group__nodes.html#gaab20990040f7407ed9c6df6cb001c9ee", null ],
+    [ "Bond::UINT_TYPE_SPECIFIER", "group__nodes.html#ga742b411fcbd012c0f09c5a480b51b01b", null ],
+    [ "Bond::ULONG_TYPE_SPECIFIER", "group__nodes.html#ga39848e83bc967aa510894596dd6ad290", null ],
+    [ "Bond::VOID_TYPE_SPECIFIER", "group__nodes.html#ga234940abc26dadbcc3b237a6f7209066", null ]
 ];

@@ -137,6 +137,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adb8b1468041e73e0f2f5bc0e4ef0a2dd" id="r_adb8b1468041e73e0f2f5bc0e4ef0a2dd"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#adb8b1468041e73e0f2f5bc0e4ef0a2dd">TypeDescriptor</a> (TypeDescriptor *parent, bool isConst)</td></tr>
 <tr class="memdesc:adb8b1468041e73e0f2f5bc0e4ef0a2dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a pointer type descriptor from a parent type.  <br /></td></tr>
 <tr class="memitem:a872edd063cdb5591a719d6f786e595ba" id="r_a872edd063cdb5591a719d6f786e595ba"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#a872edd063cdb5591a719d6f786e595ba">~TypeDescriptor</a> ()</td></tr>
+<tr class="memdesc:a872edd063cdb5591a719d6f786e595ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys a <a class="el" href="class_bond_1_1_type_descriptor.html" title="Describes a resolved or partially resolved Bond type.">TypeDescriptor</a> object.  <br /></td></tr>
 <tr class="memitem:a2e054b84ade164750fec37f5936776d2" id="r_a2e054b84ade164750fec37f5936776d2"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a2e054b84ade164750fec37f5936776d2">Accept</a> (<a class="el" href="class_bond_1_1_parse_node_visitor.html">ParseNodeVisitor</a> &amp;visitor) override</td></tr>
 <tr class="memdesc:a2e054b84ade164750fec37f5936776d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispatches this node to the given visitor.  <br /></td></tr>
 <tr class="memitem:a5e3f1cac1ccc9026b89b611c4a9cc558" id="r_a5e3f1cac1ccc9026b89b611c4a9cc558"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a5e3f1cac1ccc9026b89b611c4a9cc558">Accept</a> (<a class="el" href="class_bond_1_1_parse_node_visitor.html">ParseNodeVisitor</a> &amp;visitor) const override</td></tr>
@@ -169,6 +170,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ab98ec08d31854b4a2f01763c6e04f577"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this descriptor has a defined storage category.  <br /></td></tr>
 <tr class="memitem:abbcf6e910f26043447365d910d8750ee" id="r_abbcf6e910f26043447365d910d8750ee"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#abbcf6e910f26043447365d910d8750ee">IsResolved</a> () const</td></tr>
 <tr class="memdesc:abbcf6e910f26043447365d910d8750ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if all referenced type information is resolved.  <br /></td></tr>
+<tr class="memitem:a3bc034e52f4043fd682bce31377f9433" id="r_a3bc034e52f4043fd682bce31377f9433"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a3bc034e52f4043fd682bce31377f9433">HasUndefinedTypeName</a> () const</td></tr>
+<tr class="memdesc:a3bc034e52f4043fd682bce31377f9433"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this descriptor refers to a type name that has no type definition.  <br /></td></tr>
 <tr class="memitem:a08193b4e15804bd27b96ac4121e5f33b" id="r_a08193b4e15804bd27b96ac4121e5f33b"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a08193b4e15804bd27b96ac4121e5f33b">IsInstantiable</a> () const</td></tr>
 <tr class="memdesc:a08193b4e15804bd27b96ac4121e5f33b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if values of this type can be instantiated.  <br /></td></tr>
 <tr class="memitem:ae857661f6e79032bf8ebc2c130ddb740" id="r_ae857661f6e79032bf8ebc2c130ddb740"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ae857661f6e79032bf8ebc2c130ddb740">IsConst</a> () const</td></tr>
@@ -191,13 +194,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ae9f284887a8a4757de9b6360b3ebb29d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears all lvalue flags.  <br /></td></tr>
 <tr class="memitem:a778079c4f3291a1c916f0bd228a5fab4" id="r_a778079c4f3291a1c916f0bd228a5fab4"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a778079c4f3291a1c916f0bd228a5fab4">IsAssignable</a> () const</td></tr>
 <tr class="memdesc:a778079c4f3291a1c916f0bd228a5fab4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if assignment into this type is allowed.  <br /></td></tr>
-<tr class="memitem:a55d1b0e27ebedcd2a79d5913bd479f27" id="r_a55d1b0e27ebedcd2a79d5913bd479f27"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a55d1b0e27ebedcd2a79d5913bd479f27">GetStackSize</a> (<a class="el" href="namespace_bond.html#ad6df57f21c24017711bb3ccd316fb4b6">PointerSize</a> pointerSize) const</td></tr>
-<tr class="memdesc:a55d1b0e27ebedcd2a79d5913bd479f27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the stack storage size of this type.  <br /></td></tr>
-<tr class="memitem:a87277062506d7d66efdf307ab8221463" id="r_a87277062506d7d66efdf307ab8221463"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a87277062506d7d66efdf307ab8221463">GetSize</a> (<a class="el" href="namespace_bond.html#ad6df57f21c24017711bb3ccd316fb4b6">PointerSize</a> pointerSize) const</td></tr>
+<tr class="memitem:a55d1b0e27ebedcd2a79d5913bd479f27" id="r_a55d1b0e27ebedcd2a79d5913bd479f27"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a55d1b0e27ebedcd2a79d5913bd479f27">GetStackSize</a> (<a class="el" href="group__types.html#gad6df57f21c24017711bb3ccd316fb4b6">PointerSize</a> pointerSize) const</td></tr>
+<tr class="memdesc:a55d1b0e27ebedcd2a79d5913bd479f27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the stack storage size of this type, which is its size rounded up to a multiple of BOND_SLOT_SIZE, or BOND_SLOT_SIZE for pointer types.  <br /></td></tr>
+<tr class="memitem:a87277062506d7d66efdf307ab8221463" id="r_a87277062506d7d66efdf307ab8221463"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a87277062506d7d66efdf307ab8221463">GetSize</a> (<a class="el" href="group__types.html#gad6df57f21c24017711bb3ccd316fb4b6">PointerSize</a> pointerSize) const</td></tr>
 <tr class="memdesc:a87277062506d7d66efdf307ab8221463"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the object size of this type.  <br /></td></tr>
-<tr class="memitem:aeca478ece6c7ad089db39eb35759fed1" id="r_aeca478ece6c7ad089db39eb35759fed1"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#aeca478ece6c7ad089db39eb35759fed1">GetAlignment</a> (<a class="el" href="namespace_bond.html#ad6df57f21c24017711bb3ccd316fb4b6">PointerSize</a> pointerSize) const</td></tr>
+<tr class="memitem:aeca478ece6c7ad089db39eb35759fed1" id="r_aeca478ece6c7ad089db39eb35759fed1"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#aeca478ece6c7ad089db39eb35759fed1">GetAlignment</a> (<a class="el" href="group__types.html#gad6df57f21c24017711bb3ccd316fb4b6">PointerSize</a> pointerSize) const</td></tr>
 <tr class="memdesc:aeca478ece6c7ad089db39eb35759fed1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the object alignment of this type.  <br /></td></tr>
-<tr class="memitem:a639115a6977be40c993c8d200d2ae1a6" id="r_a639115a6977be40c993c8d200d2ae1a6"><td class="memItemLeft"><a class="el" href="namespace_bond.html#a852f7fbdd2b590ad8ede531c62fcd649">SignatureType</a>&#160;</td><td class="memItemRight"><a class="el" href="#a639115a6977be40c993c8d200d2ae1a6">GetSignatureType</a> () const</td></tr>
+<tr class="memitem:a639115a6977be40c993c8d200d2ae1a6" id="r_a639115a6977be40c993c8d200d2ae1a6"><td class="memItemLeft"><a class="el" href="group__types.html#ga852f7fbdd2b590ad8ede531c62fcd649">SignatureType</a>&#160;</td><td class="memItemRight"><a class="el" href="#a639115a6977be40c993c8d200d2ae1a6">GetSignatureType</a> () const</td></tr>
 <tr class="memdesc:a639115a6977be40c993c8d200d2ae1a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the signature encoding type for this descriptor.  <br /></td></tr>
 <tr class="memitem:ac8cc9f4d94688abaf56aa79c17a07d80" id="r_ac8cc9f4d94688abaf56aa79c17a07d80"><td class="memItemLeft"><a class="el" href="class_bond_1_1_token.html#a6d09a1144b5a79476ae9c8056728362f">Token::TokenType</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac8cc9f4d94688abaf56aa79c17a07d80">GetPrimitiveType</a> () const</td></tr>
 <tr class="memdesc:ac8cc9f4d94688abaf56aa79c17a07d80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the primitive token type, if applicable.  <br /></td></tr>
@@ -234,9 +237,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afadcc5623bf882b528aa5a7ff99c0365" id="r_afadcc5623bf882b528aa5a7ff99c0365"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#afadcc5623bf882b528aa5a7ff99c0365">IsStructType</a> () const</td></tr>
 <tr class="memdesc:afadcc5623bf882b528aa5a7ff99c0365"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this descriptor denotes a struct type.  <br /></td></tr>
 <tr class="memitem:af586581a8110a86138007937ee4ebb0a" id="r_af586581a8110a86138007937ee4ebb0a"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#af586581a8110a86138007937ee4ebb0a">IsStringType</a> () const</td></tr>
-<tr class="memdesc:af586581a8110a86138007937ee4ebb0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this descriptor denotes the string type.  <br /></td></tr>
+<tr class="memdesc:af586581a8110a86138007937ee4ebb0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this descriptor denotes a string type, i.e. a pointer or array whose element type is char or uchar, regardless of const qualification.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_bond_1_1_parse_node"><td colspan="2">Public Member Functions inherited from <a class="el" href="class_bond_1_1_parse_node.html">Bond::ParseNode</a></td></tr>
 <tr class="memitem:a38c4879ddf1a936a68ebd90eeb5a03da pub_methods_class_bond_1_1_parse_node" id="r_a38c4879ddf1a936a68ebd90eeb5a03da"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_parse_node.html#a38c4879ddf1a936a68ebd90eeb5a03da">~ParseNode</a> ()</td></tr>
+<tr class="memdesc:a38c4879ddf1a936a68ebd90eeb5a03da pub_methods_class_bond_1_1_parse_node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys a <a class="el" href="class_bond_1_1_parse_node.html" title="Base class for all parse tree nodes.">ParseNode</a> object.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -259,13 +263,13 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:aa69352b9e3d584e1c5ef4820c018e154" id="r_aa69352b9e3d584e1c5ef4820c018e154"><td class="memItemLeft">static <a class="el" href="#a3bdfb5c1d3e589b2946da61e857fce89">TypeDescriptor</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa69352b9e3d584e1c5ef4820c018e154">GetDoubleType</a> ()</td></tr>
 <tr class="memdesc:aa69352b9e3d584e1c5ef4820c018e154"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a descriptor for the double type.  <br /></td></tr>
 <tr class="memitem:ada4315633cbc6be6e6b13d6abab2b262" id="r_ada4315633cbc6be6e6b13d6abab2b262"><td class="memItemLeft">static <a class="el" href="#a3bdfb5c1d3e589b2946da61e857fce89">TypeDescriptor</a>&#160;</td><td class="memItemRight"><a class="el" href="#ada4315633cbc6be6e6b13d6abab2b262">GetStringType</a> ()</td></tr>
-<tr class="memdesc:ada4315633cbc6be6e6b13d6abab2b262"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a descriptor for the string type.  <br /></td></tr>
+<tr class="memdesc:ada4315633cbc6be6e6b13d6abab2b262"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a descriptor for the string type, which is a pointer to const char.  <br /></td></tr>
 <tr class="memitem:ad77df218dce0397d44c55ee39b492637" id="r_ad77df218dce0397d44c55ee39b492637"><td class="memItemLeft">static <a class="el" href="#a3bdfb5c1d3e589b2946da61e857fce89">TypeDescriptor</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad77df218dce0397d44c55ee39b492637">GetVoidPointerType</a> ()</td></tr>
-<tr class="memdesc:ad77df218dce0397d44c55ee39b492637"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a descriptor for the void pointer type.  <br /></td></tr>
+<tr class="memdesc:ad77df218dce0397d44c55ee39b492637"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a descriptor for a pointer to const void.  <br /></td></tr>
 <tr class="memitem:a0082a39272fc29cd444c9911eb291a91" id="r_a0082a39272fc29cd444c9911eb291a91"><td class="memItemLeft">static <a class="el" href="#a3bdfb5c1d3e589b2946da61e857fce89">TypeDescriptor</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0082a39272fc29cd444c9911eb291a91">GetPointerType</a> (const <a class="el" href="class_bond_1_1_type_specifier.html">TypeSpecifier</a> *specifier)</td></tr>
 <tr class="memdesc:a0082a39272fc29cd444c9911eb291a91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a descriptor for a pointer to the given type.  <br /></td></tr>
 <tr class="memitem:a3a45f0568794dd41f7dfb512dee01d15" id="r_a3a45f0568794dd41f7dfb512dee01d15"><td class="memItemLeft">static <a class="el" href="#a3bdfb5c1d3e589b2946da61e857fce89">TypeDescriptor</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3a45f0568794dd41f7dfb512dee01d15">GetConstPointerType</a> (const <a class="el" href="class_bond_1_1_type_specifier.html">TypeSpecifier</a> *specifier)</td></tr>
-<tr class="memdesc:a3a45f0568794dd41f7dfb512dee01d15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const-qualified descriptor for a pointer to the given type.  <br /></td></tr>
+<tr class="memdesc:a3a45f0568794dd41f7dfb512dee01d15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a descriptor for a pointer to the const-qualified given type. The pointer itself is not const-qualified.  <br /></td></tr>
 <tr class="memitem:ae65b015f1372334a32a806576783beae" id="r_ae65b015f1372334a32a806576783beae"><td class="memItemLeft">static <a class="el" href="#a3bdfb5c1d3e589b2946da61e857fce89">TypeDescriptor</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae65b015f1372334a32a806576783beae">GetNullType</a> ()</td></tr>
 <tr class="memdesc:ae65b015f1372334a32a806576783beae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a descriptor for the null type.  <br /></td></tr>
 </table><table class="memberdecls">
@@ -402,6 +406,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Destroys a <a class="el" href="class_bond_1_1_type_descriptor.html" title="Describes a resolved or partially resolved Bond type.">TypeDescriptor</a> object. </p>
 
 </div>
 </div>
@@ -583,7 +589,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">uint32_t Bond::TypeDescriptor::GetAlignment </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_bond.html#ad6df57f21c24017711bb3ccd316fb4b6">PointerSize</a></td>          <td class="paramname"><span class="paramname"><em>pointerSize</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="group__types.html#gad6df57f21c24017711bb3ccd316fb4b6">PointerSize</a></td>          <td class="paramname"><span class="paramname"><em>pointerSize</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -695,7 +701,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a const-qualified descriptor for a pointer to the given type. </p>
+<p>Returns a descriptor for a pointer to the const-qualified given type. The pointer itself is not const-qualified. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">specifier</td><td>Type specifier for the pointee type. </td></tr>
@@ -1056,7 +1062,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_bond.html#a852f7fbdd2b590ad8ede531c62fcd649">SignatureType</a> Bond::TypeDescriptor::GetSignatureType </td>
+          <td class="memname"><a class="el" href="group__types.html#ga852f7fbdd2b590ad8ede531c62fcd649">SignatureType</a> Bond::TypeDescriptor::GetSignatureType </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1077,7 +1083,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">uint32_t Bond::TypeDescriptor::GetSize </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_bond.html#ad6df57f21c24017711bb3ccd316fb4b6">PointerSize</a></td>          <td class="paramname"><span class="paramname"><em>pointerSize</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="group__types.html#gad6df57f21c24017711bb3ccd316fb4b6">PointerSize</a></td>          <td class="paramname"><span class="paramname"><em>pointerSize</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1102,13 +1108,13 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">uint32_t Bond::TypeDescriptor::GetStackSize </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_bond.html#ad6df57f21c24017711bb3ccd316fb4b6">PointerSize</a></td>          <td class="paramname"><span class="paramname"><em>pointerSize</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="group__types.html#gad6df57f21c24017711bb3ccd316fb4b6">PointerSize</a></td>          <td class="paramname"><span class="paramname"><em>pointerSize</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the stack storage size of this type. </p>
+<p>Returns the stack storage size of this type, which is its size rounded up to a multiple of BOND_SLOT_SIZE, or BOND_SLOT_SIZE for pointer types. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pointerSize</td><td>Target pointer size. </td></tr>
@@ -1141,7 +1147,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a descriptor for the string type. </p>
+<p>Returns a descriptor for the string type, which is a pointer to const char. </p>
 
 </div>
 </div>
@@ -1276,7 +1282,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a descriptor for the void pointer type. </p>
+<p>Returns a descriptor for a pointer to const void. </p>
 
 </div>
 </div>
@@ -1304,6 +1310,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns a descriptor for the void type. </p>
+
+</div>
+</div>
+<a id="a3bc034e52f4043fd682bce31377f9433" name="a3bc034e52f4043fd682bce31377f9433"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bc034e52f4043fd682bce31377f9433">&#9670;&#160;</a></span>HasUndefinedTypeName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Bond::TypeDescriptor::HasUndefinedTypeName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if this descriptor refers to a type name that has no type definition. </p>
+<p>Holds after name resolution if the name is undefined or does not name a type. That error has already been reported, so further checks involving this type should be skipped. </p>
 
 </div>
 </div>
@@ -1771,7 +1797,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns true if this descriptor denotes the string type. </p>
+<p>Returns true if this descriptor denotes a string type, i.e. a pointer or array whose element type is char or uchar, regardless of const qualification. </p>
 
 </div>
 </div>

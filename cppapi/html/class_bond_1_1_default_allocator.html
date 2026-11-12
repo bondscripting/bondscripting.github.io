@@ -131,19 +131,22 @@ Inheritance diagram for Bond::DefaultAllocator:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ac4525ad743ccc9465027c60379c21f79" id="r_ac4525ad743ccc9465027c60379c21f79"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ac4525ad743ccc9465027c60379c21f79">DefaultAllocator</a> ()</td></tr>
+<tr class="memdesc:ac4525ad743ccc9465027c60379c21f79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_bond_1_1_default_allocator.html" title="A simple implementation of Allocator that allocates and frees memory using the new and delete operato...">DefaultAllocator</a> object with no outstanding allocations.  <br /></td></tr>
 <tr class="memitem:aacd74ff9bba2b4064bde82aaafddc1d8" id="r_aacd74ff9bba2b4064bde82aaafddc1d8"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#aacd74ff9bba2b4064bde82aaafddc1d8">~DefaultAllocator</a> ()</td></tr>
+<tr class="memdesc:aacd74ff9bba2b4064bde82aaafddc1d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the <a class="el" href="class_bond_1_1_default_allocator.html" title="A simple implementation of Allocator that allocates and frees memory using the new and delete operato...">DefaultAllocator</a>. Outstanding allocations are not freed.  <br /></td></tr>
 <tr class="memitem:a9e584ff66eb9fad00bdc755a15fca9cf" id="r_a9e584ff66eb9fad00bdc755a15fca9cf"><td class="memItemLeft">virtual void *&#160;</td><td class="memItemRight"><a class="el" href="#a9e584ff66eb9fad00bdc755a15fca9cf">Allocate</a> (size_t size) override</td></tr>
-<tr class="memdesc:a9e584ff66eb9fad00bdc755a15fca9cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates and returns a pointer to a block of uninitialized memory of the given size.  <br /></td></tr>
+<tr class="memdesc:a9e584ff66eb9fad00bdc755a15fca9cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates a block of memory of the given size with the new operator.  <br /></td></tr>
 <tr class="memitem:a32281af782a1063647f84c9d7ff86b72" id="r_a32281af782a1063647f84c9d7ff86b72"><td class="memItemLeft">virtual void *&#160;</td><td class="memItemRight"><a class="el" href="#a32281af782a1063647f84c9d7ff86b72">AllocateAligned</a> (size_t size, size_t align) override</td></tr>
-<tr class="memdesc:a32281af782a1063647f84c9d7ff86b72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates and returns a pointer to a block of uninitialized memory with the given size and alignment.  <br /></td></tr>
+<tr class="memdesc:a32281af782a1063647f84c9d7ff86b72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates a block of memory with the given size and alignment with the new operator.  <br /></td></tr>
 <tr class="memitem:a76c6205b27523ee05eb5a3824d1d9e01" id="r_a76c6205b27523ee05eb5a3824d1d9e01"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a76c6205b27523ee05eb5a3824d1d9e01">Free</a> (void *buffer) override</td></tr>
-<tr class="memdesc:a76c6205b27523ee05eb5a3824d1d9e01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees the memory pointed to by the given pointer. The memory must have been allocated by this allocator's Allocate method.  <br /></td></tr>
+<tr class="memdesc:a76c6205b27523ee05eb5a3824d1d9e01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees memory allocated by Allocate with the delete operator.  <br /></td></tr>
 <tr class="memitem:aff539565827a26b13ab7e7ed5923941a" id="r_aff539565827a26b13ab7e7ed5923941a"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aff539565827a26b13ab7e7ed5923941a">FreeAligned</a> (void *buffer) override</td></tr>
-<tr class="memdesc:aff539565827a26b13ab7e7ed5923941a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees the aligned memory pointed to by the given pointer. The memory must have been allocated by this allocator's Allocate method.  <br /></td></tr>
+<tr class="memdesc:aff539565827a26b13ab7e7ed5923941a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees memory allocated by AllocateAligned with the delete operator.  <br /></td></tr>
 <tr class="memitem:a6cda81cd2c8b211351092c572690438b" id="r_a6cda81cd2c8b211351092c572690438b"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a6cda81cd2c8b211351092c572690438b">GetNumAllocations</a> () const</td></tr>
 <tr class="memdesc:a6cda81cd2c8b211351092c572690438b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of outstanding allocations.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_bond_1_1_allocator"><td colspan="2">Public Member Functions inherited from <a class="el" href="class_bond_1_1_allocator.html">Bond::Allocator</a></td></tr>
 <tr class="memitem:a93fde48af1a8eedf3eb59ec6cbba4a94 pub_methods_class_bond_1_1_allocator" id="r_a93fde48af1a8eedf3eb59ec6cbba4a94"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_allocator.html#a93fde48af1a8eedf3eb59ec6cbba4a94">~Allocator</a> ()</td></tr>
+<tr class="memdesc:a93fde48af1a8eedf3eb59ec6cbba4a94 pub_methods_class_bond_1_1_allocator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the <a class="el" href="class_bond_1_1_allocator.html" title="Abstract base class defining the interface through which all components of Bond perform memory and ob...">Allocator</a>.  <br /></td></tr>
 <tr class="memitem:afac9f8f25601d36f7832c57c1509cbf3 pub_methods_class_bond_1_1_allocator" id="r_afac9f8f25601d36f7832c57c1509cbf3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_allocator.html#afac9f8f25601d36f7832c57c1509cbf3">Free</a> (const void *buffer)</td></tr>
 <tr class="memdesc:afac9f8f25601d36f7832c57c1509cbf3 pub_methods_class_bond_1_1_allocator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls the non-const form of Free after casting away the constness of the given pointer.  <br /></td></tr>
 <tr class="memitem:a0074ece5a6c1030276b83645df27d8dc pub_methods_class_bond_1_1_allocator" id="r_a0074ece5a6c1030276b83645df27d8dc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_allocator.html#a0074ece5a6c1030276b83645df27d8dc">FreeAligned</a> (const void *buffer)</td></tr>
@@ -187,6 +190,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A simple implementation of <a class="el" href="class_bond_1_1_allocator.html" title="Abstract base class defining the interface through which all components of Bond perform memory and ob...">Allocator</a> that allocates and frees memory using the new and delete operators and also tracks the number of outstanding allocations. </p>
+<p>Allocation failures are reported by throwing std::bad_alloc. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ac4525ad743ccc9465027c60379c21f79" name="ac4525ad743ccc9465027c60379c21f79"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac4525ad743ccc9465027c60379c21f79">&#9670;&#160;</a></span>DefaultAllocator()</h2>
@@ -210,6 +214,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="class_bond_1_1_default_allocator.html" title="A simple implementation of Allocator that allocates and frees memory using the new and delete operato...">DefaultAllocator</a> object with no outstanding allocations. </p>
 
 </div>
 </div>
@@ -235,6 +241,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Destroys the <a class="el" href="class_bond_1_1_default_allocator.html" title="A simple implementation of Allocator that allocates and frees memory using the new and delete operato...">DefaultAllocator</a>. Outstanding allocations are not freed. </p>
 
 </div>
 </div>
@@ -262,7 +270,13 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Allocates and returns a pointer to a block of uninitialized memory of the given size. </p>
+<p>Allocates a block of memory of the given size with the new operator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>The size of the block in bytes. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="class_bond_1_1_allocator.html#a209afb39837588ac6bb50d812d4b5ef0">Bond::Allocator</a>.</p>
 
@@ -295,7 +309,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Allocates and returns a pointer to a block of uninitialized memory with the given size and alignment. </p>
+<p>Allocates a block of memory with the given size and alignment with the new operator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>The size of the block in bytes. </td></tr>
+    <tr><td class="paramname">align</td><td>The alignment of the block in bytes. It is rounded up to a power of two that is at least the size of a pointer. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="class_bond_1_1_allocator.html#a5f3a272ae19a0e9fa50413fbe1a6f32f">Bond::Allocator</a>.</p>
 
@@ -324,7 +345,13 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Frees the memory pointed to by the given pointer. The memory must have been allocated by this allocator's Allocate method. </p>
+<p>Frees memory allocated by Allocate with the delete operator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>Pointer to the memory to be freed, or null. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="class_bond_1_1_allocator.html#af126cf26d4c816747f4171957878415c">Bond::Allocator</a>.</p>
 
@@ -353,7 +380,13 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Frees the aligned memory pointed to by the given pointer. The memory must have been allocated by this allocator's Allocate method. </p>
+<p>Frees memory allocated by AllocateAligned with the delete operator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>Pointer to the memory to be freed, or null. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="class_bond_1_1_allocator.html#a6dca1d0e262561c46aef5715d538b191">Bond::Allocator</a>.</p>
 

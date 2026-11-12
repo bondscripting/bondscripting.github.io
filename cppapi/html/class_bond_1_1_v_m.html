@@ -114,44 +114,73 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_bond_1_1
 </div><!--header-->
 <div class="contents">
 
+<p>A virtual machine that executes the <a class="el" href="namespace_bond.html">Bond</a> bytecode in a <a class="el" href="class_bond_1_1_code_segment.html" title="Collection of functions, static initializers and data loaded from CBO files.">CodeSegment</a>.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;bond/vm/vm.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab59972f249c6b37e3fcc5a5aa0b6cc55" id="r_ab59972f249c6b37e3fcc5a5aa0b6cc55"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab59972f249c6b37e3fcc5a5aa0b6cc55">VM</a> (<a class="el" href="class_bond_1_1_allocator.html">Allocator</a> &amp;allocator, const <a class="el" href="class_bond_1_1_code_segment.html">CodeSegment</a> &amp;codeSegment, size_t stackSize, <a class="el" href="class_bond_1_1_input_stream.html">InputStream</a> *stdIn=nullptr, <a class="el" href="class_bond_1_1_output_stream.html">OutputStream</a> *stdOut=nullptr, <a class="el" href="class_bond_1_1_output_stream.html">OutputStream</a> *stdErr=nullptr, <a class="el" href="class_bond_1_1_stream_factory.html">StreamFactory</a> *streamFactory=nullptr)</td></tr>
+<tr class="memdesc:ab59972f249c6b37e3fcc5a5aa0b6cc55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a> object.  <br /></td></tr>
 <tr class="memitem:accba99893a1c4bd2e5f0238a5927899d" id="r_accba99893a1c4bd2e5f0238a5927899d"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#accba99893a1c4bd2e5f0238a5927899d">~VM</a> ()</td></tr>
+<tr class="memdesc:accba99893a1c4bd2e5f0238a5927899d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a> and frees its stack.  <br /></td></tr>
 <tr class="memitem:ad7a8957bdac09ef035eb1c76281302d0" id="r_ad7a8957bdac09ef035eb1c76281302d0"><td class="memItemLeft"><a class="el" href="class_bond_1_1_allocator.html">Allocator</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ad7a8957bdac09ef035eb1c76281302d0">GetAllocator</a> () const</td></tr>
+<tr class="memdesc:ad7a8957bdac09ef035eb1c76281302d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the memory allocator used by the <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a>.  <br /></td></tr>
 <tr class="memitem:abe12d403ee6a0271bd058943d65b8a2c" id="r_abe12d403ee6a0271bd058943d65b8a2c"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_code_segment.html">CodeSegment</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#abe12d403ee6a0271bd058943d65b8a2c">GetCodeSegment</a> () const</td></tr>
+<tr class="memdesc:abe12d403ee6a0271bd058943d65b8a2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="class_bond_1_1_code_segment.html" title="Collection of functions, static initializers and data loaded from CBO files.">CodeSegment</a> executed by the <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a>.  <br /></td></tr>
 <tr class="memitem:abd42e3a07cbbbd1513263428121eb41d" id="r_abd42e3a07cbbbd1513263428121eb41d"><td class="memItemLeft"><a class="el" href="class_bond_1_1_stack_frame.html">StackFrame</a> *&#160;</td><td class="memItemRight"><a class="el" href="#abd42e3a07cbbbd1513263428121eb41d">GetStackFrame</a> ()</td></tr>
+<tr class="memdesc:abd42e3a07cbbbd1513263428121eb41d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the <a class="el" href="class_bond_1_1_stack_frame.html" title="The activation record of a function invoked by a VM.">StackFrame</a> at the top of the call stack, which is that of the function currently being executed.  <br /></td></tr>
 <tr class="memitem:aceaef32a3b65b8f4415237bb7436ef95" id="r_aceaef32a3b65b8f4415237bb7436ef95"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_stack_frame.html">StackFrame</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aceaef32a3b65b8f4415237bb7436ef95">GetStackFrame</a> () const</td></tr>
+<tr class="memdesc:aceaef32a3b65b8f4415237bb7436ef95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="class_bond_1_1_stack_frame.html" title="The activation record of a function invoked by a VM.">StackFrame</a> at the top of the call stack, which is that of the function currently being executed.  <br /></td></tr>
 <tr class="memitem:aee5afe8e0cd204f2ffba075d0b091de9" id="r_aee5afe8e0cd204f2ffba075d0b091de9"><td class="memItemLeft"><a class="el" href="class_bond_1_1_stack_frame.html">StackFrame</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aee5afe8e0cd204f2ffba075d0b091de9">GetCallerStackFrame</a> ()</td></tr>
+<tr class="memdesc:aee5afe8e0cd204f2ffba075d0b091de9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="class_bond_1_1_stack_frame.html" title="The activation record of a function invoked by a VM.">StackFrame</a> immediately below the top of the call stack, which is that of the caller of the function currently being executed.  <br /></td></tr>
 <tr class="memitem:adc3cf7eac9fa2ee4e07c107ab0fad6fc" id="r_adc3cf7eac9fa2ee4e07c107ab0fad6fc"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_stack_frame.html">StackFrame</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#adc3cf7eac9fa2ee4e07c107ab0fad6fc">GetCallerStackFrame</a> () const</td></tr>
+<tr class="memdesc:adc3cf7eac9fa2ee4e07c107ab0fad6fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="class_bond_1_1_stack_frame.html" title="The activation record of a function invoked by a VM.">StackFrame</a> immediately below the top of the call stack, which is that of the caller of the function currently being executed.  <br /></td></tr>
 <tr class="memitem:aae9a2e77da2ca1ea624ca2659f60bde6" id="r_aae9a2e77da2ca1ea624ca2659f60bde6"><td class="memItemLeft"><a class="el" href="class_bond_1_1_input_stream_adaptor.html">InputStreamAdaptor</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aae9a2e77da2ca1ea624ca2659f60bde6">GetStdIn</a> ()</td></tr>
+<tr class="memdesc:aae9a2e77da2ca1ea624ca2659f60bde6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the adaptor wrapping the standard input stream given to the constructor.  <br /></td></tr>
 <tr class="memitem:a274a4bb0619cc8e09b974696cf6fc27b" id="r_a274a4bb0619cc8e09b974696cf6fc27b"><td class="memItemLeft"><a class="el" href="class_bond_1_1_output_stream_adaptor.html">OutputStreamAdaptor</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a274a4bb0619cc8e09b974696cf6fc27b">GetStdOut</a> ()</td></tr>
+<tr class="memdesc:a274a4bb0619cc8e09b974696cf6fc27b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the adaptor wrapping the standard output stream given to the constructor.  <br /></td></tr>
 <tr class="memitem:ab1460f71e704e329c4bbc05a4b7c5011" id="r_ab1460f71e704e329c4bbc05a4b7c5011"><td class="memItemLeft"><a class="el" href="class_bond_1_1_output_stream_adaptor.html">OutputStreamAdaptor</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ab1460f71e704e329c4bbc05a4b7c5011">GetStdErr</a> ()</td></tr>
+<tr class="memdesc:ab1460f71e704e329c4bbc05a4b7c5011"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the adaptor wrapping the standard error stream given to the constructor.  <br /></td></tr>
 <tr class="memitem:ad5912c9f0153d01ebf6e8adab8bc4db6" id="r_ad5912c9f0153d01ebf6e8adab8bc4db6"><td class="memItemLeft"><a class="el" href="class_bond_1_1_stream_factory.html">StreamFactory</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ad5912c9f0153d01ebf6e8adab8bc4db6">GetStreamFactory</a> ()</td></tr>
+<tr class="memdesc:ad5912c9f0153d01ebf6e8adab8bc4db6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="class_bond_1_1_stream_factory.html" title="An abstract interface for creating file streams without being coupled to any particular concrete type...">StreamFactory</a> given to the constructor, or null if there is none.  <br /></td></tr>
 <tr class="memitem:a39c45888519f0dbd65247bd3d58db8d9" id="r_a39c45888519f0dbd65247bd3d58db8d9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a39c45888519f0dbd65247bd3d58db8d9">DumpCallStack</a> (<a class="el" href="class_bond_1_1_output_stream.html">OutputStream</a> &amp;stream) const</td></tr>
+<tr class="memdesc:a39c45888519f0dbd65247bd3d58db8d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a description of every <a class="el" href="class_bond_1_1_stack_frame.html" title="The activation record of a function invoked by a VM.">StackFrame</a> on the call stack, from the top down, to the given stream.  <br /></td></tr>
 <tr class="memitem:ad64b81f73d5a0aaffcadc9f539b340bc" id="r_ad64b81f73d5a0aaffcadc9f539b340bc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad64b81f73d5a0aaffcadc9f539b340bc">DumpStackFrame</a> (<a class="el" href="class_bond_1_1_output_stream.html">OutputStream</a> &amp;stream, const <a class="el" href="class_bond_1_1_stack_frame.html">StackFrame</a> &amp;frame) const</td></tr>
+<tr class="memdesc:ad64b81f73d5a0aaffcadc9f539b340bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a description of the given <a class="el" href="class_bond_1_1_stack_frame.html" title="The activation record of a function invoked by a VM.">StackFrame</a>, consisting of the signature of its function and the values of its arguments, to the given stream.  <br /></td></tr>
 <tr class="memitem:a5aa338b3bb24012b7e4df3705959cf59" id="r_a5aa338b3bb24012b7e4df3705959cf59"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5aa338b3bb24012b7e4df3705959cf59">RaiseError</a> (const char *format,...) const</td></tr>
+<tr class="memdesc:a5aa338b3bb24012b7e4df3705959cf59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throws a <a class="el" href="class_bond_1_1_exception.html" title="Exception thrown for all types of errors in the Bond Runtime Library.">Bond::Exception</a> whose message is the formatted error message followed by a dump of the call stack.  <br /></td></tr>
 <tr class="memitem:ab237af34df02528077249a78b5cf7c62" id="r_ab237af34df02528077249a78b5cf7c62"><td class="memTemplParams" colspan="2">template&lt;typename ReturnType, typename... Args&gt; </td></tr>
 <tr class="memitem:ab237af34df02528077249a78b5cf7c62 template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab237af34df02528077249a78b5cf7c62">CallFunction</a> (const <a class="el" href="class_bond_1_1_qualified_name.html">QualifiedName</a> &amp;functionName, ReturnType *returnAddress, Args... args)</td></tr>
+<tr class="memdesc:ab237af34df02528077249a78b5cf7c62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invokes a function that returns a value with the given arguments.  <br /></td></tr>
 <tr class="memitem:aaf334fe7487f98f6de2d3bfeccc99c04" id="r_aaf334fe7487f98f6de2d3bfeccc99c04"><td class="memTemplParams" colspan="2">template&lt;typename ReturnType, typename... Args&gt; </td></tr>
 <tr class="memitem:aaf334fe7487f98f6de2d3bfeccc99c04 template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aaf334fe7487f98f6de2d3bfeccc99c04">CallFunction</a> (const char *functionName, ReturnType *returnAddress, Args... args)</td></tr>
+<tr class="memdesc:aaf334fe7487f98f6de2d3bfeccc99c04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invokes a function that returns a value with the given arguments.  <br /></td></tr>
 <tr class="memitem:a70966f9bf8cfc0a2c8985e28d088114d" id="r_a70966f9bf8cfc0a2c8985e28d088114d"><td class="memTemplParams" colspan="2">template&lt;typename ReturnType, typename... Args&gt; </td></tr>
 <tr class="memitem:a70966f9bf8cfc0a2c8985e28d088114d template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a70966f9bf8cfc0a2c8985e28d088114d">CallFunction</a> (const <a class="el" href="struct_bond_1_1_function.html">Function</a> &amp;function, ReturnType *returnAddress, Args... args)</td></tr>
+<tr class="memdesc:a70966f9bf8cfc0a2c8985e28d088114d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invokes a function that returns a value with the given arguments.  <br /></td></tr>
 <tr class="memitem:a2a7e729838b5f3af3c2b4cdd311a1af8" id="r_a2a7e729838b5f3af3c2b4cdd311a1af8"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
 <tr class="memitem:a2a7e729838b5f3af3c2b4cdd311a1af8 template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2a7e729838b5f3af3c2b4cdd311a1af8">CallVoidFunction</a> (const <a class="el" href="class_bond_1_1_qualified_name.html">QualifiedName</a> &amp;functionName, Args... args)</td></tr>
+<tr class="memdesc:a2a7e729838b5f3af3c2b4cdd311a1af8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invokes a function that returns void with the given arguments.  <br /></td></tr>
 <tr class="memitem:ae1ae9d47ee7ca160f02098604bf63482" id="r_ae1ae9d47ee7ca160f02098604bf63482"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
 <tr class="memitem:ae1ae9d47ee7ca160f02098604bf63482 template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae1ae9d47ee7ca160f02098604bf63482">CallVoidFunction</a> (const char *functionName, Args... args)</td></tr>
+<tr class="memdesc:ae1ae9d47ee7ca160f02098604bf63482"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invokes a function that returns void with the given arguments.  <br /></td></tr>
 <tr class="memitem:a874b6d2b3f1d349a66feda9fa82cda07" id="r_a874b6d2b3f1d349a66feda9fa82cda07"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
 <tr class="memitem:a874b6d2b3f1d349a66feda9fa82cda07 template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a874b6d2b3f1d349a66feda9fa82cda07">CallVoidFunction</a> (const <a class="el" href="struct_bond_1_1_function.html">Function</a> &amp;function, Args... args)</td></tr>
+<tr class="memdesc:a874b6d2b3f1d349a66feda9fa82cda07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invokes a function that returns void with the given arguments.  <br /></td></tr>
 <tr class="memitem:a98c07ee98e2ca498c3ef71d6a1d29645" id="r_a98c07ee98e2ca498c3ef71d6a1d29645"><td class="memItemLeft"><a class="el" href="#ab59972f249c6b37e3fcc5a5aa0b6cc55">VM</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a98c07ee98e2ca498c3ef71d6a1d29645">operator=</a> (const <a class="el" href="#ab59972f249c6b37e3fcc5a5aa0b6cc55">VM</a> &amp;other)=delete</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:a48430cf6c88398807b1688016b492e88" id="r_a48430cf6c88398807b1688016b492e88"><td class="memItemLeft">class&#160;</td><td class="memItemRight"><a class="el" href="#a48430cf6c88398807b1688016b492e88">InvocationStackFrame</a></td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A virtual machine that executes the <a class="el" href="namespace_bond.html">Bond</a> bytecode in a <a class="el" href="class_bond_1_1_code_segment.html" title="Collection of functions, static initializers and data loaded from CBO files.">CodeSegment</a>. </p>
+<p>A <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a> owns a stack of a fixed size on which the frames of invoked functions are allocated. It executes <a class="el" href="namespace_bond.html">Bond</a> functions by interpreting their bytecode and invokes native functions through their bound <a class="el" href="group__api.html#ga7bf93af8c357376bdb44bab75cd31b6c" title="A C++ function that implements a function declared native in Bond.">NativeFunction</a>. Functions are invoked from native code with <a class="el" href="#ab237af34df02528077249a78b5cf7c62" title="Invokes a function that returns a value with the given arguments.">CallFunction()</a>, <a class="el" href="#a2a7e729838b5f3af3c2b4cdd311a1af8" title="Invokes a function that returns void with the given arguments.">CallVoidFunction()</a> or an <a class="el" href="class_bond_1_1_invocation_stack_frame.html" title="Sets up and invokes a call to a Bond function from native code.">InvocationStackFrame</a>. Errors detected while executing code, such as a stack overflow, are reported by throwing a <a class="el" href="class_bond_1_1_exception.html" title="Exception thrown for all types of errors in the Bond Runtime Library.">Bond::Exception</a> whose message includes a dump of the call stack.</p>
+<p>The <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a> does not call the static initializers of the <a class="el" href="class_bond_1_1_code_segment.html" title="Collection of functions, static initializers and data loaded from CBO files.">CodeSegment</a>; an application typically calls <a class="el" href="class_bond_1_1_code_segment.html#a3b12b123eae9a06ec67e766995f510fd" title="Calls all static initializer functions in this code segment.">CodeSegment::CallStaticInitializers()</a> before invoking its entry point.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_bond_1_1_cbo_loader.html" title="Loads CBO modules and resolves their native function bindings.">CboLoader</a>, <a class="el" href="class_bond_1_1_code_segment.html" title="Collection of functions, static initializers and data loaded from CBO files.">CodeSegment</a>, <a class="el" href="class_bond_1_1_invocation_stack_frame.html" title="Sets up and invokes a call to a Bond function from native code.">InvocationStackFrame</a>, <a class="el" href="class_bond_1_1_stack_frame.html" title="The activation record of a function invoked by a VM.">StackFrame</a> </dd></dl>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab59972f249c6b37e3fcc5a5aa0b6cc55" name="ab59972f249c6b37e3fcc5a5aa0b6cc55"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab59972f249c6b37e3fcc5a5aa0b6cc55">&#9670;&#160;</a></span>VM()</h2>
 
@@ -196,6 +225,20 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Constructs a <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">allocator</td><td>The memory allocator from which the <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a> stack is allocated. It is also available to native functions via <a class="el" href="#ad7a8957bdac09ef035eb1c76281302d0" title="Returns the memory allocator used by the VM.">GetAllocator()</a>. </td></tr>
+    <tr><td class="paramname">codeSegment</td><td>The <a class="el" href="class_bond_1_1_code_segment.html" title="Collection of functions, static initializers and data loaded from CBO files.">CodeSegment</a> containing the functions and data executed by the <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a>. It is not copied, so it must remain valid for the lifetime of the <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a>. </td></tr>
+    <tr><td class="paramname">stackSize</td><td>The size of the <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a> stack in bytes. </td></tr>
+    <tr><td class="paramname">stdIn</td><td>The stream wrapped by the adaptor returned by <a class="el" href="#aae9a2e77da2ca1ea624ca2659f60bde6" title="Returns the adaptor wrapping the standard input stream given to the constructor.">GetStdIn()</a>, or null. </td></tr>
+    <tr><td class="paramname">stdOut</td><td>The stream wrapped by the adaptor returned by <a class="el" href="#a274a4bb0619cc8e09b974696cf6fc27b" title="Returns the adaptor wrapping the standard output stream given to the constructor.">GetStdOut()</a>, or null. </td></tr>
+    <tr><td class="paramname">stdErr</td><td>The stream wrapped by the adaptor returned by <a class="el" href="#ab1460f71e704e329c4bbc05a4b7c5011" title="Returns the adaptor wrapping the standard error stream given to the constructor.">GetStdErr()</a>, or null. </td></tr>
+    <tr><td class="paramname">streamFactory</td><td>The factory used by the <a class="el" href="namespace_bond.html">Bond</a> Standard Library to open files, or null. None of the streams nor the factory are owned by the <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a>, so they must remain valid for as long as the <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a> uses them. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="accba99893a1c4bd2e5f0238a5927899d" name="accba99893a1c4bd2e5f0238a5927899d"></a>
@@ -212,6 +255,8 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Destroys the <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a> and frees its stack. </p>
 
 </div>
 </div>
@@ -242,6 +287,16 @@ template&lt;typename ReturnType, typename... Args&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Invokes a function that returns a value with the given arguments. </p>
+<p>Equivalent to constructing an <a class="el" href="class_bond_1_1_invocation_stack_frame.html" title="Sets up and invokes a call to a Bond function from native code.">InvocationStackFrame</a>, pushing the arguments with <a class="el" href="class_bond_1_1_invocation_stack_frame.html#a20b034f8c3feb4d6a7086794fae0a9f7" title="Pushes the next arguments of the function call, in order, as if by calling PushArg() for each of them...">InvocationStackFrame::PushArgs()</a> and calling <a class="el" href="class_bond_1_1_invocation_stack_frame.html#a8d2f2a683dbf969aab9457070a5c7367" title="Invokes the function. Must be called after all of its arguments have been pushed.">InvocationStackFrame::Call()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">functionName</td><td>The fully qualified name of the function with its elements separated by the '.' character, e.g. "Namespace.Function". </td></tr>
+    <tr><td class="paramname">returnAddress</td><td>Pointer to where the return value is written. </td></tr>
+    <tr><td class="paramname">args</td><td>The arguments passed to the function. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a70966f9bf8cfc0a2c8985e28d088114d" name="a70966f9bf8cfc0a2c8985e28d088114d"></a>
@@ -269,6 +324,16 @@ template&lt;typename ReturnType, typename... Args&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Invokes a function that returns a value with the given arguments. </p>
+<p>Equivalent to constructing an <a class="el" href="class_bond_1_1_invocation_stack_frame.html" title="Sets up and invokes a call to a Bond function from native code.">InvocationStackFrame</a>, pushing the arguments with <a class="el" href="class_bond_1_1_invocation_stack_frame.html#a20b034f8c3feb4d6a7086794fae0a9f7" title="Pushes the next arguments of the function call, in order, as if by calling PushArg() for each of them...">InvocationStackFrame::PushArgs()</a> and calling <a class="el" href="class_bond_1_1_invocation_stack_frame.html#a8d2f2a683dbf969aab9457070a5c7367" title="Invokes the function. Must be called after all of its arguments have been pushed.">InvocationStackFrame::Call()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">function</td><td>The function to be invoked. It must belong to the <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a>'s <a class="el" href="class_bond_1_1_code_segment.html" title="Collection of functions, static initializers and data loaded from CBO files.">CodeSegment</a>. </td></tr>
+    <tr><td class="paramname">returnAddress</td><td>Pointer to where the return value is written. </td></tr>
+    <tr><td class="paramname">args</td><td>The arguments passed to the function. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -298,6 +363,16 @@ template&lt;typename ReturnType, typename... Args&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Invokes a function that returns a value with the given arguments. </p>
+<p>Equivalent to constructing an <a class="el" href="class_bond_1_1_invocation_stack_frame.html" title="Sets up and invokes a call to a Bond function from native code.">InvocationStackFrame</a>, pushing the arguments with <a class="el" href="class_bond_1_1_invocation_stack_frame.html#a20b034f8c3feb4d6a7086794fae0a9f7" title="Pushes the next arguments of the function call, in order, as if by calling PushArg() for each of them...">InvocationStackFrame::PushArgs()</a> and calling <a class="el" href="class_bond_1_1_invocation_stack_frame.html#a8d2f2a683dbf969aab9457070a5c7367" title="Invokes the function. Must be called after all of its arguments have been pushed.">InvocationStackFrame::Call()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">functionName</td><td>The fully qualified name of the function. </td></tr>
+    <tr><td class="paramname">returnAddress</td><td>Pointer to where the return value is written. </td></tr>
+    <tr><td class="paramname">args</td><td>The arguments passed to the function. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ae1ae9d47ee7ca160f02098604bf63482" name="ae1ae9d47ee7ca160f02098604bf63482"></a>
@@ -320,6 +395,15 @@ template&lt;typename... Args&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Invokes a function that returns void with the given arguments. </p>
+<p>Equivalent to constructing an <a class="el" href="class_bond_1_1_invocation_stack_frame.html" title="Sets up and invokes a call to a Bond function from native code.">InvocationStackFrame</a>, pushing the arguments with <a class="el" href="class_bond_1_1_invocation_stack_frame.html#a20b034f8c3feb4d6a7086794fae0a9f7" title="Pushes the next arguments of the function call, in order, as if by calling PushArg() for each of them...">InvocationStackFrame::PushArgs()</a> and calling <a class="el" href="class_bond_1_1_invocation_stack_frame.html#a8d2f2a683dbf969aab9457070a5c7367" title="Invokes the function. Must be called after all of its arguments have been pushed.">InvocationStackFrame::Call()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">functionName</td><td>The fully qualified name of the function with its elements separated by the '.' character, e.g. "Namespace.Function". </td></tr>
+    <tr><td class="paramname">args</td><td>The arguments passed to the function. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -344,6 +428,15 @@ template&lt;typename... Args&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Invokes a function that returns void with the given arguments. </p>
+<p>Equivalent to constructing an <a class="el" href="class_bond_1_1_invocation_stack_frame.html" title="Sets up and invokes a call to a Bond function from native code.">InvocationStackFrame</a>, pushing the arguments with <a class="el" href="class_bond_1_1_invocation_stack_frame.html#a20b034f8c3feb4d6a7086794fae0a9f7" title="Pushes the next arguments of the function call, in order, as if by calling PushArg() for each of them...">InvocationStackFrame::PushArgs()</a> and calling <a class="el" href="class_bond_1_1_invocation_stack_frame.html#a8d2f2a683dbf969aab9457070a5c7367" title="Invokes the function. Must be called after all of its arguments have been pushed.">InvocationStackFrame::Call()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">function</td><td>The function to be invoked. It must belong to the <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a>'s <a class="el" href="class_bond_1_1_code_segment.html" title="Collection of functions, static initializers and data loaded from CBO files.">CodeSegment</a>. </td></tr>
+    <tr><td class="paramname">args</td><td>The arguments passed to the function. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a2a7e729838b5f3af3c2b4cdd311a1af8" name="a2a7e729838b5f3af3c2b4cdd311a1af8"></a>
@@ -367,6 +460,15 @@ template&lt;typename... Args&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Invokes a function that returns void with the given arguments. </p>
+<p>Equivalent to constructing an <a class="el" href="class_bond_1_1_invocation_stack_frame.html" title="Sets up and invokes a call to a Bond function from native code.">InvocationStackFrame</a>, pushing the arguments with <a class="el" href="class_bond_1_1_invocation_stack_frame.html#a20b034f8c3feb4d6a7086794fae0a9f7" title="Pushes the next arguments of the function call, in order, as if by calling PushArg() for each of them...">InvocationStackFrame::PushArgs()</a> and calling <a class="el" href="class_bond_1_1_invocation_stack_frame.html#a8d2f2a683dbf969aab9457070a5c7367" title="Invokes the function. Must be called after all of its arguments have been pushed.">InvocationStackFrame::Call()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">functionName</td><td>The fully qualified name of the function. </td></tr>
+    <tr><td class="paramname">args</td><td>The arguments passed to the function. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a39c45888519f0dbd65247bd3d58db8d9" name="a39c45888519f0dbd65247bd3d58db8d9"></a>
@@ -383,6 +485,14 @@ template&lt;typename... Args&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Writes a description of every <a class="el" href="class_bond_1_1_stack_frame.html" title="The activation record of a function invoked by a VM.">StackFrame</a> on the call stack, from the top down, to the given stream. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stream</td><td>The stream to which the call stack is written. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -404,6 +514,15 @@ template&lt;typename... Args&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Writes a description of the given <a class="el" href="class_bond_1_1_stack_frame.html" title="The activation record of a function invoked by a VM.">StackFrame</a>, consisting of the signature of its function and the values of its arguments, to the given stream. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stream</td><td>The stream to which the stack frame is written. </td></tr>
+    <tr><td class="paramname">frame</td><td>The <a class="el" href="class_bond_1_1_stack_frame.html" title="The activation record of a function invoked by a VM.">StackFrame</a> to be written. Nothing is written if it is not associated with a function. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -430,6 +549,8 @@ template&lt;typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the memory allocator used by the <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a>. </p>
+
 </div>
 </div>
 <a id="aee5afe8e0cd204f2ffba075d0b091de9" name="aee5afe8e0cd204f2ffba075d0b091de9"></a>
@@ -447,6 +568,9 @@ template&lt;typename... Args&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Returns the <a class="el" href="class_bond_1_1_stack_frame.html" title="The activation record of a function invoked by a VM.">StackFrame</a> immediately below the top of the call stack, which is that of the caller of the function currently being executed. </p>
+<p>Throws a <a class="el" href="class_bond_1_1_exception.html" title="Exception thrown for all types of errors in the Bond Runtime Library.">Bond::Exception</a> if there is no such frame. </p>
+
 </div>
 </div>
 <a id="adc3cf7eac9fa2ee4e07c107ab0fad6fc" name="adc3cf7eac9fa2ee4e07c107ab0fad6fc"></a>
@@ -463,6 +587,9 @@ template&lt;typename... Args&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns the <a class="el" href="class_bond_1_1_stack_frame.html" title="The activation record of a function invoked by a VM.">StackFrame</a> immediately below the top of the call stack, which is that of the caller of the function currently being executed. </p>
+<p>Throws a <a class="el" href="class_bond_1_1_exception.html" title="Exception thrown for all types of errors in the Bond Runtime Library.">Bond::Exception</a> if there is no such frame. </p>
 
 </div>
 </div>
@@ -489,6 +616,8 @@ template&lt;typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the <a class="el" href="class_bond_1_1_code_segment.html" title="Collection of functions, static initializers and data loaded from CBO files.">CodeSegment</a> executed by the <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a>. </p>
+
 </div>
 </div>
 <a id="abd42e3a07cbbbd1513263428121eb41d" name="abd42e3a07cbbbd1513263428121eb41d"></a>
@@ -513,6 +642,8 @@ template&lt;typename... Args&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns a pointer to the <a class="el" href="class_bond_1_1_stack_frame.html" title="The activation record of a function invoked by a VM.">StackFrame</a> at the top of the call stack, which is that of the function currently being executed. </p>
 
 </div>
 </div>
@@ -539,6 +670,8 @@ template&lt;typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the <a class="el" href="class_bond_1_1_stack_frame.html" title="The activation record of a function invoked by a VM.">StackFrame</a> at the top of the call stack, which is that of the function currently being executed. </p>
+
 </div>
 </div>
 <a id="ab1460f71e704e329c4bbc05a4b7c5011" name="ab1460f71e704e329c4bbc05a4b7c5011"></a>
@@ -563,6 +696,8 @@ template&lt;typename... Args&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the adaptor wrapping the standard error stream given to the constructor. </p>
 
 </div>
 </div>
@@ -589,6 +724,8 @@ template&lt;typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the adaptor wrapping the standard input stream given to the constructor. </p>
+
 </div>
 </div>
 <a id="a274a4bb0619cc8e09b974696cf6fc27b" name="a274a4bb0619cc8e09b974696cf6fc27b"></a>
@@ -614,6 +751,8 @@ template&lt;typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the adaptor wrapping the standard output stream given to the constructor. </p>
+
 </div>
 </div>
 <a id="ad5912c9f0153d01ebf6e8adab8bc4db6" name="ad5912c9f0153d01ebf6e8adab8bc4db6"></a>
@@ -638,6 +777,8 @@ template&lt;typename... Args&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the <a class="el" href="class_bond_1_1_stream_factory.html" title="An abstract interface for creating file streams without being coupled to any particular concrete type...">StreamFactory</a> given to the constructor, or null if there is none. </p>
 
 </div>
 </div>
@@ -684,6 +825,14 @@ template&lt;typename... Args&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Throws a <a class="el" href="class_bond_1_1_exception.html" title="Exception thrown for all types of errors in the Bond Runtime Library.">Bond::Exception</a> whose message is the formatted error message followed by a dump of the call stack. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>A printf-style format string for the error message. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

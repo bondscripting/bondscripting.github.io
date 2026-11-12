@@ -122,11 +122,14 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('struct_bond_1_
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa9f25ccc80b204b31c2fe1534d5447cd" id="r_aa9f25ccc80b204b31c2fe1534d5447cd"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa9f25ccc80b204b31c2fe1534d5447cd">AlignedDeallocator</a> (<a class="el" href="class_bond_1_1_allocator.html">Allocator</a> *allocator=nullptr)</td></tr>
+<tr class="memdesc:aa9f25ccc80b204b31c2fe1534d5447cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <a class="el" href="struct_bond_1_1_allocator_1_1_aligned_deallocator.html" title="A custom unique_ptr deleter that deallocates aligned memory by calling Allocator::FreeAligned,...">AlignedDeallocator</a> object.  <br /></td></tr>
 <tr class="memitem:a5ae12c431b774017d37e622a53a2eee5" id="r_a5ae12c431b774017d37e622a53a2eee5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5ae12c431b774017d37e622a53a2eee5">operator()</a> (T *ptr)</td></tr>
+<tr class="memdesc:a5ae12c431b774017d37e622a53a2eee5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees the given memory by calling <a class="el" href="class_bond_1_1_allocator.html#a6dca1d0e262561c46aef5715d538b191" title="Frees the aligned memory pointed to by the given pointer. The memory must have been allocated by this...">Allocator::FreeAligned</a>.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ae4627749a1bed5da2cc00cf1f0b87ade" id="r_ae4627749a1bed5da2cc00cf1f0b87ade"><td class="memItemLeft"><a class="el" href="class_bond_1_1_allocator.html">Allocator</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ae4627749a1bed5da2cc00cf1f0b87ade">mAllocator</a></td></tr>
+<tr class="memdesc:ae4627749a1bed5da2cc00cf1f0b87ade"><td class="mdescLeft">&#160;</td><td class="mdescRight">The allocator that frees the memory.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
@@ -157,6 +160,14 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Constructs an <a class="el" href="struct_bond_1_1_allocator_1_1_aligned_deallocator.html" title="A custom unique_ptr deleter that deallocates aligned memory by calling Allocator::FreeAligned,...">AlignedDeallocator</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">allocator</td><td>The allocator that frees the memory. If null, the memory is not freed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
@@ -185,6 +196,8 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Frees the given memory by calling <a class="el" href="class_bond_1_1_allocator.html#a6dca1d0e262561c46aef5715d538b191" title="Frees the aligned memory pointed to by the given pointer. The memory must have been allocated by this...">Allocator::FreeAligned</a>. </p>
+
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
@@ -201,6 +214,8 @@ template&lt;typename T&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The allocator that frees the memory. </p>
 
 </div>
 </div>

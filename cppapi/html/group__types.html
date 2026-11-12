@@ -117,6 +117,11 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('group__types.h
 <p>Various basic types used throughout the <a class="el" href="namespace_bond.html">Bond</a> Runtime Library.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-files" class="groupheader"><a id="files" name="files"></a>
+Files</h2></td></tr>
+<tr class="memitem:include_2Fbond_2Ftypes_2Ftypes_2Eh" id="r_include_2Fbond_2Ftypes_2Ftypes_2Eh"><td class="memItemLeft">file &#160;</td><td class="memItemRight"><a class="el" href="types_8h.html">include/bond/types/types.h</a></td></tr>
+<tr class="memdesc:types_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fixed-size integer types and the sizes, signature types and mnemonics of <a class="el" href="namespace_bond.html">Bond</a> types. <br /></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:Bond_3A_3ADataView" id="r_Bond_3A_3ADataView"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_data_view.html">Bond::DataView</a></td></tr>
@@ -134,10 +139,18 @@ Classes</h2></td></tr>
 <tr class="memitem:Bond_3A_3AValue64" id="r_Bond_3A_3AValue64"><td class="memItemLeft">union &#160;</td><td class="memItemRight"><a class="el" href="union_bond_1_1_value64.html">Bond::Value64</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Union of all 64 bit value types used within the <a class="el" href="namespace_bond.html">Bond</a> compiler, the CBO file format, and the <a class="el" href="namespace_bond.html">Bond</a> Virtual Machine.  <a href="union_bond_1_1_value64.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Bond_3A_3AValue_3A_3A_5Bstruct_5D_2EmString" id="r_Bond_3A_3AValue_3A_3A_5Bstruct_5D_2EmString"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_bond_1_1_value_1_1_0fstruct_0e_8m_string.html">Bond::Value::[struct].mString</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The value as a string, which is not null terminated.  <a href="struct_bond_1_1_value_1_1_0fstruct_0e_8m_string.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:ga753b1436366d6951f6dc48087cf3b7bb" id="r_ga753b1436366d6951f6dc48087cf3b7bb"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga753b1436366d6951f6dc48087cf3b7bb">BOND_OPCODE_LIST</a></td></tr>
+<tr class="memdesc:ga753b1436366d6951f6dc48087cf3b7bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">An X-macro that lists every opcode in the <a class="el" href="namespace_bond.html">Bond</a> Virtual Machine instruction set.  <br /></td></tr>
+<tr class="memitem:ga5ce5500a771c7c7a642d96c60ae32ca8" id="r_ga5ce5500a771c7c7a642d96c60ae32ca8"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga5ce5500a771c7c7a642d96c60ae32ca8">BOND_SIGNATURE_TYPE_LIST</a></td></tr>
+<tr class="memdesc:ga5ce5500a771c7c7a642d96c60ae32ca8"><td class="mdescLeft">&#160;</td><td class="mdescRight">An X-macro that lists the signature types used to describe the parameters and return values of functions in CBO files.  <br /></td></tr>
+<tr class="memitem:gac060939ad510bd7f5bffb2705784883c" id="r_gac060939ad510bd7f5bffb2705784883c"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gac060939ad510bd7f5bffb2705784883c">BOND_NATIVE_GETTER_SUFFIX</a>&#160;&#160;&#160;&quot;@get&quot;</td></tr>
+<tr class="memdesc:gac060939ad510bd7f5bffb2705784883c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suffix appended to the qualified name of a native struct member to form the name of the native function that reads its value.  <br /></td></tr>
+<tr class="memitem:ga866ab1896c7b1b4a76af68ce5a2ff415" id="r_ga866ab1896c7b1b4a76af68ce5a2ff415"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga866ab1896c7b1b4a76af68ce5a2ff415">BOND_NATIVE_SETTER_SUFFIX</a>&#160;&#160;&#160;&quot;@set&quot;</td></tr>
+<tr class="memdesc:ga866ab1896c7b1b4a76af68ce5a2ff415"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suffix appended to the qualified name of a native struct member to form the name of the native function that writes its value.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -328,112 +341,111 @@ Enumerations</h2></td></tr>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6aaee25bc85804a198b9cb80e9e72eee27">Bond::OPCODE_SUBD</a>
 , <br />
 &#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6abae27ddd635904bab6ed8bc26e1e2a30">Bond::OPCODE_MULI</a>
-, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6af467ed18b2e254858ff1f8ceaa437162">Bond::OPCODE_MULUI</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6acadc3609872b8adbc5ad6c3e44ae9bf4">Bond::OPCODE_MULL</a>
-, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6ab67fc4a1d8ae6fae412492e883fbe2b5">Bond::OPCODE_MULUL</a>
-, <br />
-&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a88d8410b70f79b39ecdcea3cbdc97314">Bond::OPCODE_MULF</a>
+, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a88d8410b70f79b39ecdcea3cbdc97314">Bond::OPCODE_MULF</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6affb3d6e63ff33cc8f6b675096ee0c9a6">Bond::OPCODE_MULD</a>
-, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a212c706ba3505148721f14130f3f0442">Bond::OPCODE_DIVI</a>
+, <br />
+&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a212c706ba3505148721f14130f3f0442">Bond::OPCODE_DIVI</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6ab2fa3c128eaf75a9f740a9185bf3aa4c">Bond::OPCODE_DIVUI</a>
-, <br />
-&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a2187c9cce121504d8655322316639a18">Bond::OPCODE_DIVL</a>
+, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a2187c9cce121504d8655322316639a18">Bond::OPCODE_DIVL</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a876d77ba82eede320baa3f4ace65623e">Bond::OPCODE_DIVUL</a>
-, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6ad07e0f87c9863017ac962e8223044225">Bond::OPCODE_DIVF</a>
+, <br />
+&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6ad07e0f87c9863017ac962e8223044225">Bond::OPCODE_DIVF</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6ac77ef5fca50ed3a4d1e1627cf9e6ccb8">Bond::OPCODE_DIVD</a>
-, <br />
-&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a0da8378be4faf5517ff3221bd87ca585">Bond::OPCODE_REMI</a>
+, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a0da8378be4faf5517ff3221bd87ca585">Bond::OPCODE_REMI</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6ad54df7d8857d8c41837f9302a647e0d2">Bond::OPCODE_REMUI</a>
-, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6aafc29c6ef130cafee989b7ebfeb7fbee">Bond::OPCODE_REML</a>
+, <br />
+&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6aafc29c6ef130cafee989b7ebfeb7fbee">Bond::OPCODE_REML</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a2af9162c487827728674a6ae5a673a36">Bond::OPCODE_REMUL</a>
-, <br />
-&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6ae9b79473d904b718adfc9b3c8f4238f4">Bond::OPCODE_LSHI</a>
+, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6ae9b79473d904b718adfc9b3c8f4238f4">Bond::OPCODE_LSHI</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6ab76ba2b7df2edbf6e3d22422d6a06531">Bond::OPCODE_LSHL</a>
-, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a4a1c36f6e448f59cfe0cce1e71ec0ffe">Bond::OPCODE_RSHI</a>
+, <br />
+&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a4a1c36f6e448f59cfe0cce1e71ec0ffe">Bond::OPCODE_RSHI</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6abf97670a032f76d4bb5edb6b675e14ab">Bond::OPCODE_RSHUI</a>
-, <br />
-&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6add830b82f0d5b6b884d330a32cd70ca6">Bond::OPCODE_RSHL</a>
+, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6add830b82f0d5b6b884d330a32cd70ca6">Bond::OPCODE_RSHL</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a6c9191451ac00375e2da6176bdc4ade3">Bond::OPCODE_RSHUL</a>
-, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6aad2e9478426e2f65dd20143ca5cdc5e1">Bond::OPCODE_ANDI</a>
+, <br />
+&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6aad2e9478426e2f65dd20143ca5cdc5e1">Bond::OPCODE_ANDI</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a25907fa39c796e493662f97785155f66">Bond::OPCODE_ANDL</a>
-, <br />
-&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a6c08f66351d7dc90bb74ad522a7738a4">Bond::OPCODE_ORI</a>
+, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a6c08f66351d7dc90bb74ad522a7738a4">Bond::OPCODE_ORI</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6aa91528f020f2bd53f8453a76c32621d4">Bond::OPCODE_ORL</a>
-, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6aaba3408ce72f867506a107e31b05ec21">Bond::OPCODE_XORI</a>
+, <br />
+&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6aaba3408ce72f867506a107e31b05ec21">Bond::OPCODE_XORI</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6aab2ae3428e304dd020fac53337acc64f">Bond::OPCODE_XORL</a>
-, <br />
-&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a47b074d4dfb2eb735f2173aabd1a644f">Bond::OPCODE_NEGI</a>
+, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a47b074d4dfb2eb735f2173aabd1a644f">Bond::OPCODE_NEGI</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6adbbe7d564ef678abd3cec4263561f212">Bond::OPCODE_NEGL</a>
-, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6aa732a944ffbe97a4e2b96c4c32a96083">Bond::OPCODE_NEGF</a>
+, <br />
+&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6aa732a944ffbe97a4e2b96c4c32a96083">Bond::OPCODE_NEGF</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a11e41c9a5280154f8ceeffcb5d6c56b7">Bond::OPCODE_NEGD</a>
-, <br />
-&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6ac3fb9625278144557308999fb7334abd">Bond::OPCODE_NOT</a>
+, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6ac3fb9625278144557308999fb7334abd">Bond::OPCODE_NOT</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a6b0cd2421b2b347716bc5f1d32fd7f83">Bond::OPCODE_CMPEQI</a>
-, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6aa9b4231115b7f266f8375b3f9a2d738b">Bond::OPCODE_CMPEQL</a>
+, <br />
+&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6aa9b4231115b7f266f8375b3f9a2d738b">Bond::OPCODE_CMPEQL</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a3e2ff9f6b912a524e2bde3d8d2fa2143">Bond::OPCODE_CMPEQF</a>
-, <br />
-&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6acd1db757ec00500c09fe862470f88ad6">Bond::OPCODE_CMPEQD</a>
+, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6acd1db757ec00500c09fe862470f88ad6">Bond::OPCODE_CMPEQD</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a366329815c8a793635b6e603123672e1">Bond::OPCODE_CMPNEQI</a>
-, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a3782960948b1f69b62e2234c2d0e46f5">Bond::OPCODE_CMPNEQL</a>
+, <br />
+&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a3782960948b1f69b62e2234c2d0e46f5">Bond::OPCODE_CMPNEQL</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a1002db793839f8121dcc19ac8e0f013b">Bond::OPCODE_CMPNEQF</a>
-, <br />
-&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a37b30f8ce9e4ad7d4aab23465b878bd6">Bond::OPCODE_CMPNEQD</a>
+, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a37b30f8ce9e4ad7d4aab23465b878bd6">Bond::OPCODE_CMPNEQD</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a47a6b93d7b01d6414ee2d8f78173c7c4">Bond::OPCODE_CMPLTI</a>
-, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a3e8e333c7a56e47122506962b8129549">Bond::OPCODE_CMPLTUI</a>
+, <br />
+&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a3e8e333c7a56e47122506962b8129549">Bond::OPCODE_CMPLTUI</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a7c988461d50055ef7fbf37ead3ae6a81">Bond::OPCODE_CMPLTL</a>
-, <br />
-&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a8d3904ce537c7744d8817233e1a54bc0">Bond::OPCODE_CMPLTUL</a>
+, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a8d3904ce537c7744d8817233e1a54bc0">Bond::OPCODE_CMPLTUL</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6ab430c5b747578bb3bd757a252394ec74">Bond::OPCODE_CMPLTF</a>
-, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6ac892d530cfcc30f8d2b6a5fbe75cb261">Bond::OPCODE_CMPLTD</a>
+, <br />
+&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6ac892d530cfcc30f8d2b6a5fbe75cb261">Bond::OPCODE_CMPLTD</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a3a5fcd67e38acfb42cfbe59c1bf3d7e6">Bond::OPCODE_CMPLEI</a>
-, <br />
-&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6ae2b3804178d0227fdd2718e2910f4d86">Bond::OPCODE_CMPLEUI</a>
+, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6ae2b3804178d0227fdd2718e2910f4d86">Bond::OPCODE_CMPLEUI</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a9ed6c3363b159c3e2c1624b2b2cbad52">Bond::OPCODE_CMPLEL</a>
-, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6aef03e285590f50f99e22c1d46bffa208">Bond::OPCODE_CMPLEUL</a>
+, <br />
+&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6aef03e285590f50f99e22c1d46bffa208">Bond::OPCODE_CMPLEUL</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a81e91d05a11a71f5299d4bbbcd738714">Bond::OPCODE_CMPLEF</a>
-, <br />
-&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a738c39e96c7e0ad3b90db5e38dcae58e">Bond::OPCODE_CMPLED</a>
+, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a738c39e96c7e0ad3b90db5e38dcae58e">Bond::OPCODE_CMPLED</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6aca46cea2741977408f7d0ec29c01daa2">Bond::OPCODE_CMPGTI</a>
-, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6aa117ff7698fa125f0be246eaf17028df">Bond::OPCODE_CMPGTUI</a>
+, <br />
+&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6aa117ff7698fa125f0be246eaf17028df">Bond::OPCODE_CMPGTUI</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a82ef0d0ee333d3c816fedd187301a808">Bond::OPCODE_CMPGTL</a>
-, <br />
-&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a7cc1591137375ef413d05cb7f33d9322">Bond::OPCODE_CMPGTUL</a>
+, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a7cc1591137375ef413d05cb7f33d9322">Bond::OPCODE_CMPGTUL</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a7ad393b2816feef56d327577ec8bc7f8">Bond::OPCODE_CMPGTF</a>
-, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a81b7d71aafbe128e9d8702fac2d31201">Bond::OPCODE_CMPGTD</a>
+, <br />
+&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a81b7d71aafbe128e9d8702fac2d31201">Bond::OPCODE_CMPGTD</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a32360323c2d27661e24a81ee940f9e02">Bond::OPCODE_CMPGEI</a>
-, <br />
-&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6afdd6873aabd4f2cbed79c4aa5a61ec2c">Bond::OPCODE_CMPGEUI</a>
+, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6afdd6873aabd4f2cbed79c4aa5a61ec2c">Bond::OPCODE_CMPGEUI</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a307ce4865b849c7be523133f4e108881">Bond::OPCODE_CMPGEL</a>
-, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6aadf217f5274b740f7e6cc551a5a57d54">Bond::OPCODE_CMPGEUL</a>
+, <br />
+&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6aadf217f5274b740f7e6cc551a5a57d54">Bond::OPCODE_CMPGEUL</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6adcff43b5ad1b8eec74801a522c42a349">Bond::OPCODE_CMPGEF</a>
-, <br />
-&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6add7683b17c4611e69d5d0759d68e7367">Bond::OPCODE_CMPGED</a>
+, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6add7683b17c4611e69d5d0759d68e7367">Bond::OPCODE_CMPGED</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a5b6abd76abca906104622d1d9114ebc2">Bond::OPCODE_BRZ</a>
-, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a073a87b7a23be17cfb315f85a7ecf94b">Bond::OPCODE_BRZW</a>
+, <br />
+&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a073a87b7a23be17cfb315f85a7ecf94b">Bond::OPCODE_BRZW</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a735f16c9fd9ee8edd6614c747af0fcd8">Bond::OPCODE_BRNZ</a>
-, <br />
-&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a7cc7752793c48119497556f7fc6ba14b">Bond::OPCODE_BRNZW</a>
+, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a7cc7752793c48119497556f7fc6ba14b">Bond::OPCODE_BRNZW</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6ad6959440752d19a3905f2fdfab7a8354">Bond::OPCODE_NBRZ</a>
-, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a22bb4eb2f0a63238a17c8d78692e95d3">Bond::OPCODE_NBRZW</a>
+, <br />
+&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a22bb4eb2f0a63238a17c8d78692e95d3">Bond::OPCODE_NBRZW</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a35b09bacb0021c8f8b5228fe87812f4a">Bond::OPCODE_NBRNZ</a>
-, <br />
-&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a1136ec3c9eb2d0e20bc4df48c7f4cc6a">Bond::OPCODE_NBRNZW</a>
+, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a1136ec3c9eb2d0e20bc4df48c7f4cc6a">Bond::OPCODE_NBRNZW</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6abd7b53fe344df169c4cc1cdae978509c">Bond::OPCODE_IFZ</a>
-, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6ac774973e02556b8e53ce365d6fb773f7">Bond::OPCODE_IFZW</a>
+, <br />
+&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6ac774973e02556b8e53ce365d6fb773f7">Bond::OPCODE_IFZW</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a9a72f58139082b69039d397f1bd6d060">Bond::OPCODE_IFNZ</a>
-, <br />
-&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6ab4db77c52d69fa466473c9cfb9c21967">Bond::OPCODE_IFNZW</a>
+, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6ab4db77c52d69fa466473c9cfb9c21967">Bond::OPCODE_IFNZW</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a14f6866ca9e90efdc723af10151cf526">Bond::OPCODE_GOTO</a>
-, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6aaa26cadc36a19d2beb7ffa33c049a6f6">Bond::OPCODE_GOTOW</a>
-, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a9e71045e0ebbcc890b939079c7c9d830">Bond::OPCODE_LOOKUPSWITCH</a>
 , <br />
-&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a6ad85e85e7b1a05e16d5c06cdd4d52e1">Bond::OPCODE_TABLESWITCH</a>
+&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6aaa26cadc36a19d2beb7ffa33c049a6f6">Bond::OPCODE_GOTOW</a>
+, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a9e71045e0ebbcc890b939079c7c9d830">Bond::OPCODE_LOOKUPSWITCH</a>
+, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a6ad85e85e7b1a05e16d5c06cdd4d52e1">Bond::OPCODE_TABLESWITCH</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a0265d829bcbec109b9cb7f4c55936510">Bond::OPCODE_INVOKE</a>
+, <br />
+&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6aa3c9f0b0f578f914293c7c9ac84bfb76">Bond::OPCODE_INVOKEUNPACK</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a0754dbc09273164677e9da80f58dc0dd">Bond::OPCODE_RETURN</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6af5f973e715b442d4eba352a54e437a87">Bond::OPCODE_RETURN32</a>
+, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a81610495cc1ddc7f3549122b19bcf3c0">Bond::OPCODE_RETURN64</a>
 , <br />
-&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a81610495cc1ddc7f3549122b19bcf3c0">Bond::OPCODE_RETURN64</a>
-, <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a9e80fad8bd78803f936c99a59acf9958">Bond::OPCODE_RETURNMEMW</a>
+&#160;&#160;<a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a9e80fad8bd78803f936c99a59acf9958">Bond::OPCODE_RETURNMEMW</a>
 , <a class="el" href="#gga557394428c2bb1199d13db3825d0c0f6a86d97ced0b03966534c9178477bef5fd">Bond::OPCODE_MAX</a>
 <br />
  }</td></tr>
@@ -442,7 +454,7 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="#gga2490c24df3d969eccdecb7ea1150c4cca3779dd9f522684de361b2442d7eaaafa">Bond::OC_PARAM_NONE</a>
 , <a class="el" href="#gga2490c24df3d969eccdecb7ea1150c4cca344e2c87ebf91023466effd122aeceec">Bond::OC_PARAM_CHAR</a>
 , <a class="el" href="#gga2490c24df3d969eccdecb7ea1150c4cca64e8fcf7605acb8a6cc546cc735260cf">Bond::OC_PARAM_UCHAR</a>
-, <a class="el" href="#gga2490c24df3d969eccdecb7ea1150c4ccae43eb7226eec1400569d909e12f8584b">Bond::OC_PARAM_UCHAR_CHAR</a>
+, <a class="el" href="#gga2490c24df3d969eccdecb7ea1150c4ccad1de658f58f65107e42e5f3cff697ab5">Bond::OC_PARAM_CHAR_CHAR</a>
 , <br />
 &#160;&#160;<a class="el" href="#gga2490c24df3d969eccdecb7ea1150c4ccaf1ad558c571772be73f71bcb060a1a43">Bond::OC_PARAM_SHORT</a>
 , <a class="el" href="#gga2490c24df3d969eccdecb7ea1150c4cca68a518761a635c7784dfb3fc4bf836c9">Bond::OC_PARAM_USHORT</a>
@@ -460,25 +472,127 @@ Enumerations</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="memdesc:ga2490c24df3d969eccdecb7ea1150c4cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration describing all combinations of parameter types for the instructions in the <a class="el" href="namespace_bond.html">Bond</a> Virtual Machine instruction set.  <a href="#ga2490c24df3d969eccdecb7ea1150c4cc">More...</a><br /></td></tr>
+<tr class="memitem:gad6df57f21c24017711bb3ccd316fb4b6" id="r_gad6df57f21c24017711bb3ccd316fb4b6"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#gad6df57f21c24017711bb3ccd316fb4b6">Bond::PointerSize</a> { <a class="el" href="#ggad6df57f21c24017711bb3ccd316fb4b6a523bae4bc1f4f5e39684b239b950476b">Bond::POINTER_32BIT</a>
+, <a class="el" href="#ggad6df57f21c24017711bb3ccd316fb4b6a4ba1c5015932073e600739779ff8bb0c">Bond::POINTER_64BIT</a>
+ }</td></tr>
+<tr class="memdesc:gad6df57f21c24017711bb3ccd316fb4b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size of pointers on a target platform.  <a href="#gad6df57f21c24017711bb3ccd316fb4b6">More...</a><br /></td></tr>
+<tr class="memitem:ga852f7fbdd2b590ad8ede531c62fcd649" id="r_ga852f7fbdd2b590ad8ede531c62fcd649"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#ga852f7fbdd2b590ad8ede531c62fcd649">Bond::SignatureType</a> { <br />
+&#160;&#160;<a class="el" href="#gga852f7fbdd2b590ad8ede531c62fcd649a59fa97fe9a4e24dd74ec92b7dc19985c">Bond::SIG_VOID</a>
+, <a class="el" href="#gga852f7fbdd2b590ad8ede531c62fcd649a1530a2bd23f5d742fef81313537d2b92">Bond::SIG_BOOL</a>
+, <a class="el" href="#gga852f7fbdd2b590ad8ede531c62fcd649af809c23913caa25e388714c27f42a4f6">Bond::SIG_CHAR</a>
+, <a class="el" href="#gga852f7fbdd2b590ad8ede531c62fcd649a2578e88496e6881b1b03413a2dc71a90">Bond::SIG_UCHAR</a>
+, <br />
+&#160;&#160;<a class="el" href="#gga852f7fbdd2b590ad8ede531c62fcd649adb655a24b61288118f9bbc0605aa29a5">Bond::SIG_SHORT</a>
+, <a class="el" href="#gga852f7fbdd2b590ad8ede531c62fcd649a9875c81846158507e23ba134fd15207c">Bond::SIG_USHORT</a>
+, <a class="el" href="#gga852f7fbdd2b590ad8ede531c62fcd649a118c2329df697496668a24eb6dab80a5">Bond::SIG_INT</a>
+, <a class="el" href="#gga852f7fbdd2b590ad8ede531c62fcd649a76982b5fafb411f1a8dd22ed631acf02">Bond::SIG_UINT</a>
+, <br />
+&#160;&#160;<a class="el" href="#gga852f7fbdd2b590ad8ede531c62fcd649a38360fa8f8fdb6f92661ce764c60ce3f">Bond::SIG_LONG</a>
+, <a class="el" href="#gga852f7fbdd2b590ad8ede531c62fcd649a94df7a7c5f091d77f8c0b34c1fff8fec">Bond::SIG_ULONG</a>
+, <a class="el" href="#gga852f7fbdd2b590ad8ede531c62fcd649a7b48535db5d1d567535118f671171e34">Bond::SIG_FLOAT</a>
+, <a class="el" href="#gga852f7fbdd2b590ad8ede531c62fcd649abf7335a92eb35a3102d90fd82faa1f84">Bond::SIG_DOUBLE</a>
+, <br />
+&#160;&#160;<a class="el" href="#gga852f7fbdd2b590ad8ede531c62fcd649a2d876b4c4dbbf9bc7d6f85caf01c42b1">Bond::SIG_POINTER</a>
+, <a class="el" href="#gga852f7fbdd2b590ad8ede531c62fcd649a7c56cec47b2d236c7c65ddd5f5a1627c">Bond::SIG_AGGREGATE</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ga852f7fbdd2b590ad8ede531c62fcd649"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration of the types of function parameters and return values in CBO files.  <a href="#ga852f7fbdd2b590ad8ede531c62fcd649">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gad500a490b83cfb44bfc4b7f56925028b" id="r_gad500a490b83cfb44bfc4b7f56925028b"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#gad500a490b83cfb44bfc4b7f56925028b">Bond::GetOpCodeMnemonic</a> (<a class="el" href="#ga557394428c2bb1199d13db3825d0c0f6">OpCode</a> opCode)</td></tr>
-<tr class="memdesc:gad500a490b83cfb44bfc4b7f56925028b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string representation of the given opcode.  <br /></td></tr>
-<tr class="memitem:ga88242ea393f502a775234dcb09ccd8d7" id="r_ga88242ea393f502a775234dcb09ccd8d7"><td class="memItemLeft"><a class="el" href="#ga2490c24df3d969eccdecb7ea1150c4cc">OpCodeParam</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga88242ea393f502a775234dcb09ccd8d7">Bond::GetOpCodeParamType</a> (<a class="el" href="#ga557394428c2bb1199d13db3825d0c0f6">OpCode</a> opCode)</td></tr>
-<tr class="memdesc:ga88242ea393f502a775234dcb09ccd8d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a value of the <a class="el" href="#ga2490c24df3d969eccdecb7ea1150c4cc" title="Enumeration describing all combinations of parameter types for the instructions in the Bond Virtual M...">OpCodeParam</a> enumeration describing the parameter types for the given opcode.  <br /></td></tr>
-<tr class="memitem:ga3186af69ba26130f18ae6517e6f3f05b" id="r_ga3186af69ba26130f18ae6517e6f3f05b"><td class="memItemLeft">int32_t&#160;</td><td class="memItemRight"><a class="el" href="#ga3186af69ba26130f18ae6517e6f3f05b">Bond::GetStackDelta</a> (<a class="el" href="#ga557394428c2bb1199d13db3825d0c0f6">OpCode</a> opCode)</td></tr>
-<tr class="memdesc:ga3186af69ba26130f18ae6517e6f3f05b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the how much the given opcode moves the stack pointer in multiples of BOND_SLOT_SIZE bytes.  <br /></td></tr>
+<tr class="memitem:gaa4267cc7cadce022d7edaed7712ad587" id="r_gaa4267cc7cadce022d7edaed7712ad587"><td class="memItemLeft">BOND_API const char *&#160;</td><td class="memItemRight"><a class="el" href="#gaa4267cc7cadce022d7edaed7712ad587">Bond::GetOpCodeMnemonic</a> (<a class="el" href="#ga557394428c2bb1199d13db3825d0c0f6">OpCode</a> opCode)</td></tr>
+<tr class="memdesc:gaa4267cc7cadce022d7edaed7712ad587"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the mnemonic of the given opcode, e.g. "addi" for OPCODE_ADDI.  <br /></td></tr>
+<tr class="memitem:ga8a49b1403026b17ee3852475621182d9" id="r_ga8a49b1403026b17ee3852475621182d9"><td class="memItemLeft">BOND_API <a class="el" href="#ga2490c24df3d969eccdecb7ea1150c4cc">OpCodeParam</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga8a49b1403026b17ee3852475621182d9">Bond::GetOpCodeParamType</a> (<a class="el" href="#ga557394428c2bb1199d13db3825d0c0f6">OpCode</a> opCode)</td></tr>
+<tr class="memdesc:ga8a49b1403026b17ee3852475621182d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a value of the <a class="el" href="#ga2490c24df3d969eccdecb7ea1150c4cc" title="Enumeration describing all combinations of parameter types for the instructions in the Bond Virtual M...">OpCodeParam</a> enumeration describing the parameter types for the given opcode.  <br /></td></tr>
+<tr class="memitem:gab10767436bbc126b73af9551d43b86d7" id="r_gab10767436bbc126b73af9551d43b86d7"><td class="memItemLeft">BOND_API int32_t&#160;</td><td class="memItemRight"><a class="el" href="#gab10767436bbc126b73af9551d43b86d7">Bond::GetStackDelta</a> (<a class="el" href="#ga557394428c2bb1199d13db3825d0c0f6">OpCode</a> opCode)</td></tr>
+<tr class="memdesc:gab10767436bbc126b73af9551d43b86d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns how much the given opcode moves the stack pointer in multiples of BOND_SLOT_SIZE bytes.  <br /></td></tr>
+<tr class="memitem:gaa334d8b6d2203114fef557fe57bf74fe" id="r_gaa334d8b6d2203114fef557fe57bf74fe"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#gaa334d8b6d2203114fef557fe57bf74fe">Bond::GetPointerSize</a> (<a class="el" href="#gad6df57f21c24017711bb3ccd316fb4b6">PointerSize</a> pointerSize)</td></tr>
+<tr class="memdesc:gaa334d8b6d2203114fef557fe57bf74fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of bytes in a pointer of the given size.  <br /></td></tr>
+<tr class="memitem:ga6c21003293af59a112ae1ba8c7fccd60" id="r_ga6c21003293af59a112ae1ba8c7fccd60"><td class="memItemLeft">BOND_API const char *&#160;</td><td class="memItemRight"><a class="el" href="#ga6c21003293af59a112ae1ba8c7fccd60">Bond::GetBondTypeMnemonic</a> (<a class="el" href="#ga852f7fbdd2b590ad8ede531c62fcd649">SignatureType</a> signatureType)</td></tr>
+<tr class="memdesc:ga6c21003293af59a112ae1ba8c7fccd60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the mnemonic of the given signature type as it is named in <a class="el" href="namespace_bond.html">Bond</a>, e.g. "int".  <br /></td></tr>
+<tr class="memitem:ga2ad4ab0ce310eb856b60629ad202ad7f" id="r_ga2ad4ab0ce310eb856b60629ad202ad7f"><td class="memItemLeft">BOND_API char *&#160;</td><td class="memItemRight"><a class="el" href="#ga2ad4ab0ce310eb856b60629ad202ad7f">Bond::ExpandBondTypeMnemonic</a> (char *buffer, size_t length, <a class="el" href="#ga852f7fbdd2b590ad8ede531c62fcd649">SignatureType</a> signatureType, uint32_t size)</td></tr>
+<tr class="memdesc:ga2ad4ab0ce310eb856b60629ad202ad7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the mnemonic of the given signature type as it is named in <a class="el" href="namespace_bond.html">Bond</a> to the given buffer, expanding the size of an aggregate, e.g. "aggr&lt;12&gt;".  <br /></td></tr>
+<tr class="memitem:gae0b6a61b2d1d719633e3e51e29ad4e02" id="r_gae0b6a61b2d1d719633e3e51e29ad4e02"><td class="memItemLeft">BOND_API const char *&#160;</td><td class="memItemRight"><a class="el" href="#gae0b6a61b2d1d719633e3e51e29ad4e02">Bond::GetApiTypeMnemonic</a> (<a class="el" href="#ga852f7fbdd2b590ad8ede531c62fcd649">SignatureType</a> signatureType)</td></tr>
+<tr class="memdesc:gae0b6a61b2d1d719633e3e51e29ad4e02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the mnemonic of the given signature type as it is named in the C++ API, e.g. "int32_t".  <br /></td></tr>
+<tr class="memitem:ga5b04b1487481090eaf7c6b622db10605" id="r_ga5b04b1487481090eaf7c6b622db10605"><td class="memItemLeft">BOND_API char *&#160;</td><td class="memItemRight"><a class="el" href="#ga5b04b1487481090eaf7c6b622db10605">Bond::ExpandApiTypeMnemonic</a> (char *buffer, size_t length, <a class="el" href="#ga852f7fbdd2b590ad8ede531c62fcd649">SignatureType</a> signatureType, uint32_t size)</td></tr>
+<tr class="memdesc:ga5b04b1487481090eaf7c6b622db10605"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the mnemonic of the given signature type as it is named in the C++ API to the given buffer, expanding the size of an aggregate, e.g. "aggr&lt;12&gt;".  <br /></td></tr>
 <tr class="memitem:ga9f55fa87c6b684715a369dbc50090eda" id="r_ga9f55fa87c6b684715a369dbc50090eda"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga9f55fa87c6b684715a369dbc50090eda">Bond::operator&lt;</a> (const <a class="el" href="union_bond_1_1_value16.html">Value16</a> &amp;a, const <a class="el" href="union_bond_1_1_value16.html">Value16</a> &amp;b)</td></tr>
 <tr class="memdesc:ga9f55fa87c6b684715a369dbc50090eda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the result of the expression: <code>a.mUShort &lt; b.mUShort</code>.  <br /></td></tr>
 <tr class="memitem:ga99af6153ceab4fc4dbf201baee72fb57" id="r_ga99af6153ceab4fc4dbf201baee72fb57"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga99af6153ceab4fc4dbf201baee72fb57">Bond::operator&lt;</a> (const <a class="el" href="union_bond_1_1_value32.html">Value32</a> &amp;a, const <a class="el" href="union_bond_1_1_value32.html">Value32</a> &amp;b)</td></tr>
 <tr class="memdesc:ga99af6153ceab4fc4dbf201baee72fb57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the result of the expression: <code>a.mUInt &lt; b.mUInt</code>.  <br /></td></tr>
 <tr class="memitem:ga91c58667f1fcc96d3144edbdfc53422c" id="r_ga91c58667f1fcc96d3144edbdfc53422c"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga91c58667f1fcc96d3144edbdfc53422c">Bond::operator&lt;</a> (const <a class="el" href="union_bond_1_1_value64.html">Value64</a> &amp;a, const <a class="el" href="union_bond_1_1_value64.html">Value64</a> &amp;b)</td></tr>
 <tr class="memdesc:ga91c58667f1fcc96d3144edbdfc53422c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the result of the expression: <code>a.mULong &lt; b.mULong</code>.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:gac1111f40416f5f7561ba5f769a8b9151" id="r_gac1111f40416f5f7561ba5f769a8b9151"><td class="memItemLeft">const uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#gac1111f40416f5f7561ba5f769a8b9151">Bond::BOND_VOID_SIZE</a> = 0</td></tr>
+<tr class="memdesc:gac1111f40416f5f7561ba5f769a8b9151"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size in bytes of the <a class="el" href="namespace_bond.html">Bond</a> void type.  <br /></td></tr>
+<tr class="memitem:gaf9258f6ac5a5191f7e5640ef7fc87529" id="r_gaf9258f6ac5a5191f7e5640ef7fc87529"><td class="memItemLeft">const uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#gaf9258f6ac5a5191f7e5640ef7fc87529">Bond::BOND_BOOL_SIZE</a> = 1</td></tr>
+<tr class="memdesc:gaf9258f6ac5a5191f7e5640ef7fc87529"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size in bytes of the <a class="el" href="namespace_bond.html">Bond</a> bool type.  <br /></td></tr>
+<tr class="memitem:ga4a06b5131d49cfa99ef52f7c57f0512c" id="r_ga4a06b5131d49cfa99ef52f7c57f0512c"><td class="memItemLeft">const uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#ga4a06b5131d49cfa99ef52f7c57f0512c">Bond::BOND_CHAR_SIZE</a> = 1</td></tr>
+<tr class="memdesc:ga4a06b5131d49cfa99ef52f7c57f0512c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size in bytes of the <a class="el" href="namespace_bond.html">Bond</a> char type.  <br /></td></tr>
+<tr class="memitem:gab266e727e17c27dd4edce82e88f16b17" id="r_gab266e727e17c27dd4edce82e88f16b17"><td class="memItemLeft">const uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#gab266e727e17c27dd4edce82e88f16b17">Bond::BOND_UCHAR_SIZE</a> = 1</td></tr>
+<tr class="memdesc:gab266e727e17c27dd4edce82e88f16b17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size in bytes of the <a class="el" href="namespace_bond.html">Bond</a> uchar type.  <br /></td></tr>
+<tr class="memitem:ga8367092e643187cc0cd9575d8aad0b2f" id="r_ga8367092e643187cc0cd9575d8aad0b2f"><td class="memItemLeft">const uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#ga8367092e643187cc0cd9575d8aad0b2f">Bond::BOND_SHORT_SIZE</a> = 2</td></tr>
+<tr class="memdesc:ga8367092e643187cc0cd9575d8aad0b2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size in bytes of the <a class="el" href="namespace_bond.html">Bond</a> short type.  <br /></td></tr>
+<tr class="memitem:gad9c310918ee44c7d28f8a90127211d9d" id="r_gad9c310918ee44c7d28f8a90127211d9d"><td class="memItemLeft">const uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#gad9c310918ee44c7d28f8a90127211d9d">Bond::BOND_USHORT_SIZE</a> = 2</td></tr>
+<tr class="memdesc:gad9c310918ee44c7d28f8a90127211d9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size in bytes of the <a class="el" href="namespace_bond.html">Bond</a> ushort type.  <br /></td></tr>
+<tr class="memitem:ga9e3be89072bf87c6090ad034965299e5" id="r_ga9e3be89072bf87c6090ad034965299e5"><td class="memItemLeft">const uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#ga9e3be89072bf87c6090ad034965299e5">Bond::BOND_INT_SIZE</a> = 4</td></tr>
+<tr class="memdesc:ga9e3be89072bf87c6090ad034965299e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size in bytes of the <a class="el" href="namespace_bond.html">Bond</a> int type.  <br /></td></tr>
+<tr class="memitem:ga4d28b2e435ddebc3be60b0ee08545d35" id="r_ga4d28b2e435ddebc3be60b0ee08545d35"><td class="memItemLeft">const uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#ga4d28b2e435ddebc3be60b0ee08545d35">Bond::BOND_UINT_SIZE</a> = 4</td></tr>
+<tr class="memdesc:ga4d28b2e435ddebc3be60b0ee08545d35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size in bytes of the <a class="el" href="namespace_bond.html">Bond</a> uint type.  <br /></td></tr>
+<tr class="memitem:gaef2c8b6c1141fd453d36ddb221be71b6" id="r_gaef2c8b6c1141fd453d36ddb221be71b6"><td class="memItemLeft">const uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#gaef2c8b6c1141fd453d36ddb221be71b6">Bond::BOND_LONG_SIZE</a> = 8</td></tr>
+<tr class="memdesc:gaef2c8b6c1141fd453d36ddb221be71b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size in bytes of the <a class="el" href="namespace_bond.html">Bond</a> long type.  <br /></td></tr>
+<tr class="memitem:ga58aec166c9f9654a9e6389eecc340b44" id="r_ga58aec166c9f9654a9e6389eecc340b44"><td class="memItemLeft">const uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#ga58aec166c9f9654a9e6389eecc340b44">Bond::BOND_ULONG_SIZE</a> = 8</td></tr>
+<tr class="memdesc:ga58aec166c9f9654a9e6389eecc340b44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size in bytes of the <a class="el" href="namespace_bond.html">Bond</a> ulong type.  <br /></td></tr>
+<tr class="memitem:gae1c7a43c7a20acab33bda2e3c6abd9b1" id="r_gae1c7a43c7a20acab33bda2e3c6abd9b1"><td class="memItemLeft">const uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#gae1c7a43c7a20acab33bda2e3c6abd9b1">Bond::BOND_FLOAT_SIZE</a> = 4</td></tr>
+<tr class="memdesc:gae1c7a43c7a20acab33bda2e3c6abd9b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size in bytes of the <a class="el" href="namespace_bond.html">Bond</a> float type.  <br /></td></tr>
+<tr class="memitem:gadf540afcf970f3a07df60487b5d29b63" id="r_gadf540afcf970f3a07df60487b5d29b63"><td class="memItemLeft">const uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#gadf540afcf970f3a07df60487b5d29b63">Bond::BOND_DOUBLE_SIZE</a> = 8</td></tr>
+<tr class="memdesc:gadf540afcf970f3a07df60487b5d29b63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size in bytes of the <a class="el" href="namespace_bond.html">Bond</a> double type.  <br /></td></tr>
+<tr class="memitem:gac32bf986194af0a0f068124eed7c3155" id="r_gac32bf986194af0a0f068124eed7c3155"><td class="memItemLeft">const uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#gac32bf986194af0a0f068124eed7c3155">Bond::BOND_DEFAULT_STRUCT_SIZE</a> = 4</td></tr>
+<tr class="memdesc:gac32bf986194af0a0f068124eed7c3155"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum size in bytes of a struct whose layout is computed by the compiler.  <br /></td></tr>
+<tr class="memitem:gac0a38e81f17af81f332982ad691a773e" id="r_gac0a38e81f17af81f332982ad691a773e"><td class="memItemLeft">const uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#gac0a38e81f17af81f332982ad691a773e">Bond::BOND_DEFAULT_STRUCT_ALIGN</a> = <a class="el" href="#gac32bf986194af0a0f068124eed7c3155">BOND_DEFAULT_STRUCT_SIZE</a></td></tr>
+<tr class="memdesc:gac0a38e81f17af81f332982ad691a773e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum alignment in bytes of a struct whose layout is computed by the compiler.  <br /></td></tr>
+<tr class="memitem:ga7b54466a4ec2823fe2ee164ce021fa88" id="r_ga7b54466a4ec2823fe2ee164ce021fa88"><td class="memItemLeft">const int32_t&#160;</td><td class="memItemRight"><a class="el" href="#ga7b54466a4ec2823fe2ee164ce021fa88">Bond::BOND_SLOT_SIZE</a> = 8</td></tr>
+<tr class="memdesc:ga7b54466a4ec2823fe2ee164ce021fa88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size in bytes of a slot on the operand stack of the <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a>.  <br /></td></tr>
+<tr class="memitem:ga84787e97baa6296bde4a923e97023079" id="r_ga84787e97baa6296bde4a923e97023079"><td class="memItemLeft">const <a class="el" href="#gad6df57f21c24017711bb3ccd316fb4b6">PointerSize</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga84787e97baa6296bde4a923e97023079">Bond::BOND_NATIVE_POINTER_SIZE</a> = (sizeof(void *) == 8) ? <a class="el" href="#ggad6df57f21c24017711bb3ccd316fb4b6a4ba1c5015932073e600739779ff8bb0c">POINTER_64BIT</a> : <a class="el" href="#ggad6df57f21c24017711bb3ccd316fb4b6a523bae4bc1f4f5e39684b239b950476b">POINTER_32BIT</a></td></tr>
+<tr class="memdesc:ga84787e97baa6296bde4a923e97023079"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size of pointers on the platform for which the code is compiled.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Various basic types used throughout the <a class="el" href="namespace_bond.html">Bond</a> Runtime Library. </p>
 </div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a id="gac060939ad510bd7f5bffb2705784883c" name="gac060939ad510bd7f5bffb2705784883c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac060939ad510bd7f5bffb2705784883c">&#9670;&#160;</a></span>BOND_NATIVE_GETTER_SUFFIX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BOND_NATIVE_GETTER_SUFFIX&#160;&#160;&#160;&quot;@get&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Suffix appended to the qualified name of a native struct member to form the name of the native function that reads its value. </p>
+
+</div>
+</div>
+<a id="ga866ab1896c7b1b4a76af68ce5a2ff415" name="ga866ab1896c7b1b4a76af68ce5a2ff415"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga866ab1896c7b1b4a76af68ce5a2ff415">&#9670;&#160;</a></span>BOND_NATIVE_SETTER_SUFFIX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BOND_NATIVE_SETTER_SUFFIX&#160;&#160;&#160;&quot;@set&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Suffix appended to the qualified name of a native struct member to form the name of the native function that writes its value. </p>
+
+</div>
+</div>
 <a id="ga753b1436366d6951f6dc48087cf3b7bb" name="ga753b1436366d6951f6dc48087cf3b7bb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga753b1436366d6951f6dc48087cf3b7bb">&#9670;&#160;</a></span>BOND_OPCODE_LIST</h2>
 
@@ -490,6 +604,41 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>An X-macro that lists every opcode in the <a class="el" href="namespace_bond.html">Bond</a> Virtual Machine instruction set. </p>
+<p>To use it, define BOND_OPCODE_ITEM(opCode, mnemonic, param, stackDelta), expand BOND_OPCODE_LIST and then undefine BOND_OPCODE_ITEM. The arguments of each item are the opcode name without its OPCODE_ prefix, its mnemonic as an unquoted identifier, its parameter type without its OC_PARAM_ prefix, and how much it moves the stack pointer in multiples of BOND_SLOT_SIZE bytes. The instructions are described in docs/instruction-set.txt. </p>
+
+</div>
+</div>
+<a id="ga5ce5500a771c7c7a642d96c60ae32ca8" name="ga5ce5500a771c7c7a642d96c60ae32ca8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5ce5500a771c7c7a642d96c60ae32ca8">&#9670;&#160;</a></span>BOND_SIGNATURE_TYPE_LIST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BOND_SIGNATURE_TYPE_LIST</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="types_8h.html#ace0c9f3d5290bc3d9369482c2f504a03">BOND_SIGNATURE_TYPE_ITEM</a>(VOID,      <span class="stringliteral">&quot;void&quot;</span>,                   <span class="stringliteral">&quot;void&quot;</span>)                   \</div>
+<div class="line">BOND_SIGNATURE_TYPE_ITEM(BOOL,      <span class="stringliteral">&quot;bool&quot;</span>,                   <span class="stringliteral">&quot;bool&quot;</span>)                   \</div>
+<div class="line">BOND_SIGNATURE_TYPE_ITEM(CHAR,      <span class="stringliteral">&quot;char&quot;</span>,                   <span class="stringliteral">&quot;int8_t&quot;</span>)                 \</div>
+<div class="line">BOND_SIGNATURE_TYPE_ITEM(UCHAR,     <span class="stringliteral">&quot;uchar&quot;</span>,                  <span class="stringliteral">&quot;uint8_t&quot;</span>)                \</div>
+<div class="line">BOND_SIGNATURE_TYPE_ITEM(SHORT,     <span class="stringliteral">&quot;short&quot;</span>,                  <span class="stringliteral">&quot;int16_t&quot;</span>)                \</div>
+<div class="line">BOND_SIGNATURE_TYPE_ITEM(USHORT,    <span class="stringliteral">&quot;ushort&quot;</span>,                 <span class="stringliteral">&quot;uint16_t&quot;</span>)               \</div>
+<div class="line">BOND_SIGNATURE_TYPE_ITEM(INT,       <span class="stringliteral">&quot;int&quot;</span>,                    <span class="stringliteral">&quot;int32_t&quot;</span>)                \</div>
+<div class="line">BOND_SIGNATURE_TYPE_ITEM(UINT,      <span class="stringliteral">&quot;uint&quot;</span>,                   <span class="stringliteral">&quot;uint32_t&quot;</span>)               \</div>
+<div class="line">BOND_SIGNATURE_TYPE_ITEM(LONG,      <span class="stringliteral">&quot;long&quot;</span>,                   <span class="stringliteral">&quot;int64_t&quot;</span>)                \</div>
+<div class="line">BOND_SIGNATURE_TYPE_ITEM(ULONG,     <span class="stringliteral">&quot;ulong&quot;</span>,                  <span class="stringliteral">&quot;uint64_t&quot;</span>)               \</div>
+<div class="line">BOND_SIGNATURE_TYPE_ITEM(FLOAT,     <span class="stringliteral">&quot;float&quot;</span>,                  <span class="stringliteral">&quot;float&quot;</span>)                  \</div>
+<div class="line">BOND_SIGNATURE_TYPE_ITEM(DOUBLE,    <span class="stringliteral">&quot;double&quot;</span>,                 <span class="stringliteral">&quot;double&quot;</span>)                 \</div>
+<div class="line">BOND_SIGNATURE_TYPE_ITEM(POINTER,   <span class="stringliteral">&quot;*&quot;</span>,                      <span class="stringliteral">&quot;pointer&quot;</span>)                \</div>
+<div class="line">BOND_SIGNATURE_TYPE_ITEM(AGGREGATE, <span class="stringliteral">&quot;aggr&lt;%&quot;</span> BOND_PRIu32 <span class="stringliteral">&quot;&gt;&quot;</span>, <span class="stringliteral">&quot;aggr&lt;%&quot;</span> BOND_PRIu32 <span class="stringliteral">&quot;&gt;&quot;</span>) \</div>
+<div class="ttc" id="atypes_8h_html_ace0c9f3d5290bc3d9369482c2f504a03"><div class="ttname"><a href="types_8h.html#ace0c9f3d5290bc3d9369482c2f504a03">BOND_SIGNATURE_TYPE_ITEM</a></div><div class="ttdeci">#define BOND_SIGNATURE_TYPE_ITEM(type, bondType, apiType)</div><div class="ttdef"><b>Definition</b> types.h:76</div></div>
+</div><!-- fragment -->
+<p>An X-macro that lists the signature types used to describe the parameters and return values of functions in CBO files. </p>
+<p>To use it, define <a class="el" href="types_8h.html#ace0c9f3d5290bc3d9369482c2f504a03">BOND_SIGNATURE_TYPE_ITEM(type, bondType, apiType)</a>, expand BOND_SIGNATURE_TYPE_LIST and then undefine BOND_SIGNATURE_TYPE_ITEM. The arguments of each item are the signature type name without its SIG_ prefix, the printf format string of its mnemonic in <a class="el" href="namespace_bond.html">Bond</a> and the printf format string of its mnemonic in the C++ API. The aggregate mnemonics expect the size of the aggregate as a uint32_t argument. </p>
 
 </div>
 </div>
@@ -657,9 +806,7 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a3fac46e6d3fb5ebb0e52111602180d8b" name="gga557394428c2bb1199d13db3825d0c0f6a3fac46e6d3fb5ebb0e52111602180d8b"></a>OPCODE_SUBF&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6aaee25bc85804a198b9cb80e9e72eee27" name="gga557394428c2bb1199d13db3825d0c0f6aaee25bc85804a198b9cb80e9e72eee27"></a>OPCODE_SUBD&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6abae27ddd635904bab6ed8bc26e1e2a30" name="gga557394428c2bb1199d13db3825d0c0f6abae27ddd635904bab6ed8bc26e1e2a30"></a>OPCODE_MULI&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6af467ed18b2e254858ff1f8ceaa437162" name="gga557394428c2bb1199d13db3825d0c0f6af467ed18b2e254858ff1f8ceaa437162"></a>OPCODE_MULUI&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6acadc3609872b8adbc5ad6c3e44ae9bf4" name="gga557394428c2bb1199d13db3825d0c0f6acadc3609872b8adbc5ad6c3e44ae9bf4"></a>OPCODE_MULL&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6ab67fc4a1d8ae6fae412492e883fbe2b5" name="gga557394428c2bb1199d13db3825d0c0f6ab67fc4a1d8ae6fae412492e883fbe2b5"></a>OPCODE_MULUL&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a88d8410b70f79b39ecdcea3cbdc97314" name="gga557394428c2bb1199d13db3825d0c0f6a88d8410b70f79b39ecdcea3cbdc97314"></a>OPCODE_MULF&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6affb3d6e63ff33cc8f6b675096ee0c9a6" name="gga557394428c2bb1199d13db3825d0c0f6affb3d6e63ff33cc8f6b675096ee0c9a6"></a>OPCODE_MULD&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a212c706ba3505148721f14130f3f0442" name="gga557394428c2bb1199d13db3825d0c0f6a212c706ba3505148721f14130f3f0442"></a>OPCODE_DIVI&#160;</td><td class="fielddoc"></td></tr>
@@ -738,11 +885,13 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a9e71045e0ebbcc890b939079c7c9d830" name="gga557394428c2bb1199d13db3825d0c0f6a9e71045e0ebbcc890b939079c7c9d830"></a>OPCODE_LOOKUPSWITCH&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a6ad85e85e7b1a05e16d5c06cdd4d52e1" name="gga557394428c2bb1199d13db3825d0c0f6a6ad85e85e7b1a05e16d5c06cdd4d52e1"></a>OPCODE_TABLESWITCH&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a0265d829bcbec109b9cb7f4c55936510" name="gga557394428c2bb1199d13db3825d0c0f6a0265d829bcbec109b9cb7f4c55936510"></a>OPCODE_INVOKE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6aa3c9f0b0f578f914293c7c9ac84bfb76" name="gga557394428c2bb1199d13db3825d0c0f6aa3c9f0b0f578f914293c7c9ac84bfb76"></a>OPCODE_INVOKEUNPACK&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a0754dbc09273164677e9da80f58dc0dd" name="gga557394428c2bb1199d13db3825d0c0f6a0754dbc09273164677e9da80f58dc0dd"></a>OPCODE_RETURN&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6af5f973e715b442d4eba352a54e437a87" name="gga557394428c2bb1199d13db3825d0c0f6af5f973e715b442d4eba352a54e437a87"></a>OPCODE_RETURN32&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a81610495cc1ddc7f3549122b19bcf3c0" name="gga557394428c2bb1199d13db3825d0c0f6a81610495cc1ddc7f3549122b19bcf3c0"></a>OPCODE_RETURN64&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a9e80fad8bd78803f936c99a59acf9958" name="gga557394428c2bb1199d13db3825d0c0f6a9e80fad8bd78803f936c99a59acf9958"></a>OPCODE_RETURNMEMW&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a86d97ced0b03966534c9178477bef5fd" name="gga557394428c2bb1199d13db3825d0c0f6a86d97ced0b03966534c9178477bef5fd"></a>OPCODE_MAX&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga557394428c2bb1199d13db3825d0c0f6a86d97ced0b03966534c9178477bef5fd" name="gga557394428c2bb1199d13db3825d0c0f6a86d97ced0b03966534c9178477bef5fd"></a>OPCODE_MAX&#160;</td><td class="fielddoc"><p>The number of opcodes. Not a valid opcode. </p>
+</td></tr>
 </table>
 
 </div>
@@ -760,35 +909,232 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Enumeration describing all combinations of parameter types for the instructions in the <a class="el" href="namespace_bond.html">Bond</a> Virtual Machine instruction set. </p>
+<p>Parameters are encoded in the bytecode immediately after the opcode byte. Parameters that refer to a constant table are encoded as a 16-bit index into the table of the CBO. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4cca3779dd9f522684de361b2442d7eaaafa" name="gga2490c24df3d969eccdecb7ea1150c4cca3779dd9f522684de361b2442d7eaaafa"></a>OC_PARAM_NONE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4cca344e2c87ebf91023466effd122aeceec" name="gga2490c24df3d969eccdecb7ea1150c4cca344e2c87ebf91023466effd122aeceec"></a>OC_PARAM_CHAR&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4cca64e8fcf7605acb8a6cc546cc735260cf" name="gga2490c24df3d969eccdecb7ea1150c4cca64e8fcf7605acb8a6cc546cc735260cf"></a>OC_PARAM_UCHAR&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4ccae43eb7226eec1400569d909e12f8584b" name="gga2490c24df3d969eccdecb7ea1150c4ccae43eb7226eec1400569d909e12f8584b"></a>OC_PARAM_UCHAR_CHAR&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4ccaf1ad558c571772be73f71bcb060a1a43" name="gga2490c24df3d969eccdecb7ea1150c4ccaf1ad558c571772be73f71bcb060a1a43"></a>OC_PARAM_SHORT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4cca68a518761a635c7784dfb3fc4bf836c9" name="gga2490c24df3d969eccdecb7ea1150c4cca68a518761a635c7784dfb3fc4bf836c9"></a>OC_PARAM_USHORT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4cca0d2c8543da6f347e6ac9ed89030dc9fe" name="gga2490c24df3d969eccdecb7ea1150c4cca0d2c8543da6f347e6ac9ed89030dc9fe"></a>OC_PARAM_INT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4ccafe2c3fb03b81318238ec8358c7ec0ab8" name="gga2490c24df3d969eccdecb7ea1150c4ccafe2c3fb03b81318238ec8358c7ec0ab8"></a>OC_PARAM_VAL32&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4ccab5b59e5b1efc165fa96c63d340db1eda" name="gga2490c24df3d969eccdecb7ea1150c4ccab5b59e5b1efc165fa96c63d340db1eda"></a>OC_PARAM_VAL64&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4cca0dfdea159a1caceea9608fc438f631c6" name="gga2490c24df3d969eccdecb7ea1150c4cca0dfdea159a1caceea9608fc438f631c6"></a>OC_PARAM_OFF16&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4cca1547c157ab2f594ccb8f80ef9c89923d" name="gga2490c24df3d969eccdecb7ea1150c4cca1547c157ab2f594ccb8f80ef9c89923d"></a>OC_PARAM_OFF32&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4cca33bc4f69f2dbbba0031539fd770bda46" name="gga2490c24df3d969eccdecb7ea1150c4cca33bc4f69f2dbbba0031539fd770bda46"></a>OC_PARAM_STRING&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4cca75c63dae57e4961aa8d1757c88f4789c" name="gga2490c24df3d969eccdecb7ea1150c4cca75c63dae57e4961aa8d1757c88f4789c"></a>OC_PARAM_NAME&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4ccab28fb25a575604c44cd47b06678c2d65" name="gga2490c24df3d969eccdecb7ea1150c4ccab28fb25a575604c44cd47b06678c2d65"></a>OC_PARAM_LOOKUPSWITCH&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4cca28df9d91823552ba53410d09cb65fc4c" name="gga2490c24df3d969eccdecb7ea1150c4cca28df9d91823552ba53410d09cb65fc4c"></a>OC_PARAM_TABLESWITCH&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4cca3779dd9f522684de361b2442d7eaaafa" name="gga2490c24df3d969eccdecb7ea1150c4cca3779dd9f522684de361b2442d7eaaafa"></a>OC_PARAM_NONE&#160;</td><td class="fielddoc"><p>No parameter. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4cca344e2c87ebf91023466effd122aeceec" name="gga2490c24df3d969eccdecb7ea1150c4cca344e2c87ebf91023466effd122aeceec"></a>OC_PARAM_CHAR&#160;</td><td class="fielddoc"><p>A signed 8-bit value. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4cca64e8fcf7605acb8a6cc546cc735260cf" name="gga2490c24df3d969eccdecb7ea1150c4cca64e8fcf7605acb8a6cc546cc735260cf"></a>OC_PARAM_UCHAR&#160;</td><td class="fielddoc"><p>An unsigned 8-bit value. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4ccad1de658f58f65107e42e5f3cff697ab5" name="gga2490c24df3d969eccdecb7ea1150c4ccad1de658f58f65107e42e5f3cff697ab5"></a>OC_PARAM_CHAR_CHAR&#160;</td><td class="fielddoc"><p>Two signed 8-bit values: a slot index and an increment. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4ccaf1ad558c571772be73f71bcb060a1a43" name="gga2490c24df3d969eccdecb7ea1150c4ccaf1ad558c571772be73f71bcb060a1a43"></a>OC_PARAM_SHORT&#160;</td><td class="fielddoc"><p>A signed 16-bit value. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4cca68a518761a635c7784dfb3fc4bf836c9" name="gga2490c24df3d969eccdecb7ea1150c4cca68a518761a635c7784dfb3fc4bf836c9"></a>OC_PARAM_USHORT&#160;</td><td class="fielddoc"><p>An unsigned 16-bit value. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4cca0d2c8543da6f347e6ac9ed89030dc9fe" name="gga2490c24df3d969eccdecb7ea1150c4cca0d2c8543da6f347e6ac9ed89030dc9fe"></a>OC_PARAM_INT&#160;</td><td class="fielddoc"><p>A signed 32-bit integer stored in the 32-bit constant table. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4ccafe2c3fb03b81318238ec8358c7ec0ab8" name="gga2490c24df3d969eccdecb7ea1150c4ccafe2c3fb03b81318238ec8358c7ec0ab8"></a>OC_PARAM_VAL32&#160;</td><td class="fielddoc"><p>A 32-bit value stored in the 32-bit constant table. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4ccab5b59e5b1efc165fa96c63d340db1eda" name="gga2490c24df3d969eccdecb7ea1150c4ccab5b59e5b1efc165fa96c63d340db1eda"></a>OC_PARAM_VAL64&#160;</td><td class="fielddoc"><p>A 64-bit value stored in the 64-bit constant table. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4cca0dfdea159a1caceea9608fc438f631c6" name="gga2490c24df3d969eccdecb7ea1150c4cca0dfdea159a1caceea9608fc438f631c6"></a>OC_PARAM_OFF16&#160;</td><td class="fielddoc"><p>A signed 16-bit branch offset relative to the end of the instruction. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4cca1547c157ab2f594ccb8f80ef9c89923d" name="gga2490c24df3d969eccdecb7ea1150c4cca1547c157ab2f594ccb8f80ef9c89923d"></a>OC_PARAM_OFF32&#160;</td><td class="fielddoc"><p>A signed 32-bit branch offset relative to the end of the instruction, stored in the 32-bit constant table. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4cca33bc4f69f2dbbba0031539fd770bda46" name="gga2490c24df3d969eccdecb7ea1150c4cca33bc4f69f2dbbba0031539fd770bda46"></a>OC_PARAM_STRING&#160;</td><td class="fielddoc"><p>A string stored in the string constant table. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4cca75c63dae57e4961aa8d1757c88f4789c" name="gga2490c24df3d969eccdecb7ea1150c4cca75c63dae57e4961aa8d1757c88f4789c"></a>OC_PARAM_NAME&#160;</td><td class="fielddoc"><p>A qualified name stored in the qualified name table. The <a class="el" href="class_bond_1_1_cbo_loader.html" title="Loads CBO modules and resolves their native function bindings.">CboLoader</a> replaces the index with that of the referenced function or data entry in the <a class="el" href="class_bond_1_1_code_segment.html" title="Collection of functions, static initializers and data loaded from CBO files.">CodeSegment</a>. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4ccab28fb25a575604c44cd47b06678c2d65" name="gga2490c24df3d969eccdecb7ea1150c4ccab28fb25a575604c44cd47b06678c2d65"></a>OC_PARAM_LOOKUPSWITCH&#160;</td><td class="fielddoc"><p>A 32-bit aligned table holding a default offset, a match count and sorted pairs of match values and branch offsets. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2490c24df3d969eccdecb7ea1150c4cca28df9d91823552ba53410d09cb65fc4c" name="gga2490c24df3d969eccdecb7ea1150c4cca28df9d91823552ba53410d09cb65fc4c"></a>OC_PARAM_TABLESWITCH&#160;</td><td class="fielddoc"><p>A 32-bit aligned table holding a default offset, a minimum and maximum match value and one branch offset per value in that range. </p>
+</td></tr>
 </table>
 
 </div>
 </div>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="gad500a490b83cfb44bfc4b7f56925028b" name="gad500a490b83cfb44bfc4b7f56925028b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad500a490b83cfb44bfc4b7f56925028b">&#9670;&#160;</a></span>GetOpCodeMnemonic()</h2>
+<a id="gad6df57f21c24017711bb3ccd316fb4b6" name="gad6df57f21c24017711bb3ccd316fb4b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad6df57f21c24017711bb3ccd316fb4b6">&#9670;&#160;</a></span>PointerSize</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const char * Bond::GetOpCodeMnemonic </td>
+          <td class="memname">enum <a class="el" href="#gad6df57f21c24017711bb3ccd316fb4b6">Bond::PointerSize</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The size of pointers on a target platform. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggad6df57f21c24017711bb3ccd316fb4b6a523bae4bc1f4f5e39684b239b950476b" name="ggad6df57f21c24017711bb3ccd316fb4b6a523bae4bc1f4f5e39684b239b950476b"></a>POINTER_32BIT&#160;</td><td class="fielddoc"><p>4-byte pointers. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggad6df57f21c24017711bb3ccd316fb4b6a4ba1c5015932073e600739779ff8bb0c" name="ggad6df57f21c24017711bb3ccd316fb4b6a4ba1c5015932073e600739779ff8bb0c"></a>POINTER_64BIT&#160;</td><td class="fielddoc"><p>8-byte pointers. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga852f7fbdd2b590ad8ede531c62fcd649" name="ga852f7fbdd2b590ad8ede531c62fcd649"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga852f7fbdd2b590ad8ede531c62fcd649">&#9670;&#160;</a></span>SignatureType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#ga852f7fbdd2b590ad8ede531c62fcd649">Bond::SignatureType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enumeration of the types of function parameters and return values in CBO files. </p>
+<p>Its values are SIG_VOID, SIG_BOOL, SIG_CHAR, SIG_UCHAR, SIG_SHORT, SIG_USHORT, SIG_INT, SIG_UINT, SIG_LONG, SIG_ULONG, SIG_FLOAT, SIG_DOUBLE, SIG_POINTER and SIG_AGGREGATE, the last of which describes structs passed by value. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga852f7fbdd2b590ad8ede531c62fcd649a59fa97fe9a4e24dd74ec92b7dc19985c" name="gga852f7fbdd2b590ad8ede531c62fcd649a59fa97fe9a4e24dd74ec92b7dc19985c"></a>SIG_VOID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga852f7fbdd2b590ad8ede531c62fcd649a1530a2bd23f5d742fef81313537d2b92" name="gga852f7fbdd2b590ad8ede531c62fcd649a1530a2bd23f5d742fef81313537d2b92"></a>SIG_BOOL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga852f7fbdd2b590ad8ede531c62fcd649af809c23913caa25e388714c27f42a4f6" name="gga852f7fbdd2b590ad8ede531c62fcd649af809c23913caa25e388714c27f42a4f6"></a>SIG_CHAR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga852f7fbdd2b590ad8ede531c62fcd649a2578e88496e6881b1b03413a2dc71a90" name="gga852f7fbdd2b590ad8ede531c62fcd649a2578e88496e6881b1b03413a2dc71a90"></a>SIG_UCHAR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga852f7fbdd2b590ad8ede531c62fcd649adb655a24b61288118f9bbc0605aa29a5" name="gga852f7fbdd2b590ad8ede531c62fcd649adb655a24b61288118f9bbc0605aa29a5"></a>SIG_SHORT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga852f7fbdd2b590ad8ede531c62fcd649a9875c81846158507e23ba134fd15207c" name="gga852f7fbdd2b590ad8ede531c62fcd649a9875c81846158507e23ba134fd15207c"></a>SIG_USHORT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga852f7fbdd2b590ad8ede531c62fcd649a118c2329df697496668a24eb6dab80a5" name="gga852f7fbdd2b590ad8ede531c62fcd649a118c2329df697496668a24eb6dab80a5"></a>SIG_INT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga852f7fbdd2b590ad8ede531c62fcd649a76982b5fafb411f1a8dd22ed631acf02" name="gga852f7fbdd2b590ad8ede531c62fcd649a76982b5fafb411f1a8dd22ed631acf02"></a>SIG_UINT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga852f7fbdd2b590ad8ede531c62fcd649a38360fa8f8fdb6f92661ce764c60ce3f" name="gga852f7fbdd2b590ad8ede531c62fcd649a38360fa8f8fdb6f92661ce764c60ce3f"></a>SIG_LONG&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga852f7fbdd2b590ad8ede531c62fcd649a94df7a7c5f091d77f8c0b34c1fff8fec" name="gga852f7fbdd2b590ad8ede531c62fcd649a94df7a7c5f091d77f8c0b34c1fff8fec"></a>SIG_ULONG&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga852f7fbdd2b590ad8ede531c62fcd649a7b48535db5d1d567535118f671171e34" name="gga852f7fbdd2b590ad8ede531c62fcd649a7b48535db5d1d567535118f671171e34"></a>SIG_FLOAT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga852f7fbdd2b590ad8ede531c62fcd649abf7335a92eb35a3102d90fd82faa1f84" name="gga852f7fbdd2b590ad8ede531c62fcd649abf7335a92eb35a3102d90fd82faa1f84"></a>SIG_DOUBLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga852f7fbdd2b590ad8ede531c62fcd649a2d876b4c4dbbf9bc7d6f85caf01c42b1" name="gga852f7fbdd2b590ad8ede531c62fcd649a2d876b4c4dbbf9bc7d6f85caf01c42b1"></a>SIG_POINTER&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga852f7fbdd2b590ad8ede531c62fcd649a7c56cec47b2d236c7c65ddd5f5a1627c" name="gga852f7fbdd2b590ad8ede531c62fcd649a7c56cec47b2d236c7c65ddd5f5a1627c"></a>SIG_AGGREGATE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="ga5b04b1487481090eaf7c6b622db10605" name="ga5b04b1487481090eaf7c6b622db10605"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5b04b1487481090eaf7c6b622db10605">&#9670;&#160;</a></span>ExpandApiTypeMnemonic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOND_API char * Bond::ExpandApiTypeMnemonic </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>length</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#ga852f7fbdd2b590ad8ede531c62fcd649">SignatureType</a></td>          <td class="paramname"><span class="paramname"><em>signatureType</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Writes the mnemonic of the given signature type as it is named in the C++ API to the given buffer, expanding the size of an aggregate, e.g. "aggr&lt;12&gt;". </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>The buffer to which the mnemonic is written. </td></tr>
+    <tr><td class="paramname">length</td><td>The size of the buffer in bytes. The mnemonic is truncated if it does not fit. </td></tr>
+    <tr><td class="paramname">signatureType</td><td>The signature type whose mnemonic is written. </td></tr>
+    <tr><td class="paramname">size</td><td>The size in bytes of the type, used only by SIG_AGGREGATE. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The given buffer. </dd></dl>
+
+</div>
+</div>
+<a id="ga2ad4ab0ce310eb856b60629ad202ad7f" name="ga2ad4ab0ce310eb856b60629ad202ad7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2ad4ab0ce310eb856b60629ad202ad7f">&#9670;&#160;</a></span>ExpandBondTypeMnemonic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOND_API char * Bond::ExpandBondTypeMnemonic </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>length</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#ga852f7fbdd2b590ad8ede531c62fcd649">SignatureType</a></td>          <td class="paramname"><span class="paramname"><em>signatureType</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Writes the mnemonic of the given signature type as it is named in <a class="el" href="namespace_bond.html">Bond</a> to the given buffer, expanding the size of an aggregate, e.g. "aggr&lt;12&gt;". </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>The buffer to which the mnemonic is written. </td></tr>
+    <tr><td class="paramname">length</td><td>The size of the buffer in bytes. The mnemonic is truncated if it does not fit. </td></tr>
+    <tr><td class="paramname">signatureType</td><td>The signature type whose mnemonic is written. </td></tr>
+    <tr><td class="paramname">size</td><td>The size in bytes of the type, used only by SIG_AGGREGATE. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The given buffer. </dd></dl>
+
+</div>
+</div>
+<a id="gae0b6a61b2d1d719633e3e51e29ad4e02" name="gae0b6a61b2d1d719633e3e51e29ad4e02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae0b6a61b2d1d719633e3e51e29ad4e02">&#9670;&#160;</a></span>GetApiTypeMnemonic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOND_API const char * Bond::GetApiTypeMnemonic </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga852f7fbdd2b590ad8ede531c62fcd649">SignatureType</a></td>          <td class="paramname"><span class="paramname"><em>signatureType</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the mnemonic of the given signature type as it is named in the C++ API, e.g. "int32_t". </p>
+<p>The mnemonic is a printf format string. That of SIG_AGGREGATE expects the size of the aggregate as a uint32_t argument; <a class="el" href="#ga5b04b1487481090eaf7c6b622db10605" title="Writes the mnemonic of the given signature type as it is named in the C++ API to the given buffer,...">ExpandApiTypeMnemonic()</a> can be used to expand it. </p>
+
+</div>
+</div>
+<a id="ga6c21003293af59a112ae1ba8c7fccd60" name="ga6c21003293af59a112ae1ba8c7fccd60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6c21003293af59a112ae1ba8c7fccd60">&#9670;&#160;</a></span>GetBondTypeMnemonic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOND_API const char * Bond::GetBondTypeMnemonic </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga852f7fbdd2b590ad8ede531c62fcd649">SignatureType</a></td>          <td class="paramname"><span class="paramname"><em>signatureType</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the mnemonic of the given signature type as it is named in <a class="el" href="namespace_bond.html">Bond</a>, e.g. "int". </p>
+<p>The mnemonic is a printf format string. That of SIG_AGGREGATE expects the size of the aggregate as a uint32_t argument; <a class="el" href="#ga2ad4ab0ce310eb856b60629ad202ad7f" title="Writes the mnemonic of the given signature type as it is named in Bond to the given buffer,...">ExpandBondTypeMnemonic()</a> can be used to expand it. </p>
+
+</div>
+</div>
+<a id="gaa4267cc7cadce022d7edaed7712ad587" name="gaa4267cc7cadce022d7edaed7712ad587"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa4267cc7cadce022d7edaed7712ad587">&#9670;&#160;</a></span>GetOpCodeMnemonic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOND_API const char * Bond::GetOpCodeMnemonic </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ga557394428c2bb1199d13db3825d0c0f6">OpCode</a></td>          <td class="paramname"><span class="paramname"><em>opCode</em></span></td><td>)</td>
           <td></td>
@@ -796,18 +1142,18 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns a string representation of the given opcode. </p>
+<p>Returns the mnemonic of the given opcode, e.g. "addi" for OPCODE_ADDI. </p>
 
 </div>
 </div>
-<a id="ga88242ea393f502a775234dcb09ccd8d7" name="ga88242ea393f502a775234dcb09ccd8d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga88242ea393f502a775234dcb09ccd8d7">&#9670;&#160;</a></span>GetOpCodeParamType()</h2>
+<a id="ga8a49b1403026b17ee3852475621182d9" name="ga8a49b1403026b17ee3852475621182d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8a49b1403026b17ee3852475621182d9">&#9670;&#160;</a></span>GetOpCodeParamType()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#ga2490c24df3d969eccdecb7ea1150c4cc">OpCodeParam</a> Bond::GetOpCodeParamType </td>
+          <td class="memname">BOND_API <a class="el" href="#ga2490c24df3d969eccdecb7ea1150c4cc">OpCodeParam</a> Bond::GetOpCodeParamType </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ga557394428c2bb1199d13db3825d0c0f6">OpCode</a></td>          <td class="paramname"><span class="paramname"><em>opCode</em></span></td><td>)</td>
           <td></td>
@@ -819,14 +1165,41 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga3186af69ba26130f18ae6517e6f3f05b" name="ga3186af69ba26130f18ae6517e6f3f05b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga3186af69ba26130f18ae6517e6f3f05b">&#9670;&#160;</a></span>GetStackDelta()</h2>
+<a id="gaa334d8b6d2203114fef557fe57bf74fe" name="gaa334d8b6d2203114fef557fe57bf74fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa334d8b6d2203114fef557fe57bf74fe">&#9670;&#160;</a></span>GetPointerSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t Bond::GetPointerSize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#gad6df57f21c24017711bb3ccd316fb4b6">PointerSize</a></td>          <td class="paramname"><span class="paramname"><em>pointerSize</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the number of bytes in a pointer of the given size. </p>
+
+</div>
+</div>
+<a id="gab10767436bbc126b73af9551d43b86d7" name="gab10767436bbc126b73af9551d43b86d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab10767436bbc126b73af9551d43b86d7">&#9670;&#160;</a></span>GetStackDelta()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int32_t Bond::GetStackDelta </td>
+          <td class="memname">BOND_API int32_t Bond::GetStackDelta </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ga557394428c2bb1199d13db3825d0c0f6">OpCode</a></td>          <td class="paramname"><span class="paramname"><em>opCode</em></span></td><td>)</td>
           <td></td>
@@ -834,7 +1207,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the how much the given opcode moves the stack pointer in multiples of BOND_SLOT_SIZE bytes. </p>
+<p>Returns how much the given opcode moves the stack pointer in multiples of BOND_SLOT_SIZE bytes. </p>
 
 </div>
 </div>
@@ -928,6 +1301,263 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the result of the expression: <code>a.mULong &lt; b.mULong</code>. </p>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
+<a id="gaf9258f6ac5a5191f7e5640ef7fc87529" name="gaf9258f6ac5a5191f7e5640ef7fc87529"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf9258f6ac5a5191f7e5640ef7fc87529">&#9670;&#160;</a></span>BOND_BOOL_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint32_t Bond::BOND_BOOL_SIZE = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Size in bytes of the <a class="el" href="namespace_bond.html">Bond</a> bool type. </p>
+
+</div>
+</div>
+<a id="ga4a06b5131d49cfa99ef52f7c57f0512c" name="ga4a06b5131d49cfa99ef52f7c57f0512c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4a06b5131d49cfa99ef52f7c57f0512c">&#9670;&#160;</a></span>BOND_CHAR_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint32_t Bond::BOND_CHAR_SIZE = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Size in bytes of the <a class="el" href="namespace_bond.html">Bond</a> char type. </p>
+
+</div>
+</div>
+<a id="gac0a38e81f17af81f332982ad691a773e" name="gac0a38e81f17af81f332982ad691a773e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac0a38e81f17af81f332982ad691a773e">&#9670;&#160;</a></span>BOND_DEFAULT_STRUCT_ALIGN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint32_t Bond::BOND_DEFAULT_STRUCT_ALIGN = <a class="el" href="#gac32bf986194af0a0f068124eed7c3155">BOND_DEFAULT_STRUCT_SIZE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Minimum alignment in bytes of a struct whose layout is computed by the compiler. </p>
+
+</div>
+</div>
+<a id="gac32bf986194af0a0f068124eed7c3155" name="gac32bf986194af0a0f068124eed7c3155"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac32bf986194af0a0f068124eed7c3155">&#9670;&#160;</a></span>BOND_DEFAULT_STRUCT_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint32_t Bond::BOND_DEFAULT_STRUCT_SIZE = 4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Minimum size in bytes of a struct whose layout is computed by the compiler. </p>
+
+</div>
+</div>
+<a id="gadf540afcf970f3a07df60487b5d29b63" name="gadf540afcf970f3a07df60487b5d29b63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadf540afcf970f3a07df60487b5d29b63">&#9670;&#160;</a></span>BOND_DOUBLE_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint32_t Bond::BOND_DOUBLE_SIZE = 8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Size in bytes of the <a class="el" href="namespace_bond.html">Bond</a> double type. </p>
+
+</div>
+</div>
+<a id="gae1c7a43c7a20acab33bda2e3c6abd9b1" name="gae1c7a43c7a20acab33bda2e3c6abd9b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae1c7a43c7a20acab33bda2e3c6abd9b1">&#9670;&#160;</a></span>BOND_FLOAT_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint32_t Bond::BOND_FLOAT_SIZE = 4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Size in bytes of the <a class="el" href="namespace_bond.html">Bond</a> float type. </p>
+
+</div>
+</div>
+<a id="ga9e3be89072bf87c6090ad034965299e5" name="ga9e3be89072bf87c6090ad034965299e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9e3be89072bf87c6090ad034965299e5">&#9670;&#160;</a></span>BOND_INT_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint32_t Bond::BOND_INT_SIZE = 4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Size in bytes of the <a class="el" href="namespace_bond.html">Bond</a> int type. </p>
+
+</div>
+</div>
+<a id="gaef2c8b6c1141fd453d36ddb221be71b6" name="gaef2c8b6c1141fd453d36ddb221be71b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaef2c8b6c1141fd453d36ddb221be71b6">&#9670;&#160;</a></span>BOND_LONG_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint32_t Bond::BOND_LONG_SIZE = 8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Size in bytes of the <a class="el" href="namespace_bond.html">Bond</a> long type. </p>
+
+</div>
+</div>
+<a id="ga84787e97baa6296bde4a923e97023079" name="ga84787e97baa6296bde4a923e97023079"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga84787e97baa6296bde4a923e97023079">&#9670;&#160;</a></span>BOND_NATIVE_POINTER_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="#gad6df57f21c24017711bb3ccd316fb4b6">PointerSize</a> Bond::BOND_NATIVE_POINTER_SIZE = (sizeof(void *) == 8) ? <a class="el" href="#ggad6df57f21c24017711bb3ccd316fb4b6a4ba1c5015932073e600739779ff8bb0c">POINTER_64BIT</a> : <a class="el" href="#ggad6df57f21c24017711bb3ccd316fb4b6a523bae4bc1f4f5e39684b239b950476b">POINTER_32BIT</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The size of pointers on the platform for which the code is compiled. </p>
+
+</div>
+</div>
+<a id="ga8367092e643187cc0cd9575d8aad0b2f" name="ga8367092e643187cc0cd9575d8aad0b2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8367092e643187cc0cd9575d8aad0b2f">&#9670;&#160;</a></span>BOND_SHORT_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint32_t Bond::BOND_SHORT_SIZE = 2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Size in bytes of the <a class="el" href="namespace_bond.html">Bond</a> short type. </p>
+
+</div>
+</div>
+<a id="ga7b54466a4ec2823fe2ee164ce021fa88" name="ga7b54466a4ec2823fe2ee164ce021fa88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7b54466a4ec2823fe2ee164ce021fa88">&#9670;&#160;</a></span>BOND_SLOT_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int32_t Bond::BOND_SLOT_SIZE = 8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Size in bytes of a slot on the operand stack of the <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a>. </p>
+
+</div>
+</div>
+<a id="gab266e727e17c27dd4edce82e88f16b17" name="gab266e727e17c27dd4edce82e88f16b17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab266e727e17c27dd4edce82e88f16b17">&#9670;&#160;</a></span>BOND_UCHAR_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint32_t Bond::BOND_UCHAR_SIZE = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Size in bytes of the <a class="el" href="namespace_bond.html">Bond</a> uchar type. </p>
+
+</div>
+</div>
+<a id="ga4d28b2e435ddebc3be60b0ee08545d35" name="ga4d28b2e435ddebc3be60b0ee08545d35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4d28b2e435ddebc3be60b0ee08545d35">&#9670;&#160;</a></span>BOND_UINT_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint32_t Bond::BOND_UINT_SIZE = 4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Size in bytes of the <a class="el" href="namespace_bond.html">Bond</a> uint type. </p>
+
+</div>
+</div>
+<a id="ga58aec166c9f9654a9e6389eecc340b44" name="ga58aec166c9f9654a9e6389eecc340b44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga58aec166c9f9654a9e6389eecc340b44">&#9670;&#160;</a></span>BOND_ULONG_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint32_t Bond::BOND_ULONG_SIZE = 8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Size in bytes of the <a class="el" href="namespace_bond.html">Bond</a> ulong type. </p>
+
+</div>
+</div>
+<a id="gad9c310918ee44c7d28f8a90127211d9d" name="gad9c310918ee44c7d28f8a90127211d9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad9c310918ee44c7d28f8a90127211d9d">&#9670;&#160;</a></span>BOND_USHORT_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint32_t Bond::BOND_USHORT_SIZE = 2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Size in bytes of the <a class="el" href="namespace_bond.html">Bond</a> ushort type. </p>
+
+</div>
+</div>
+<a id="gac1111f40416f5f7561ba5f769a8b9151" name="gac1111f40416f5f7561ba5f769a8b9151"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac1111f40416f5f7561ba5f769a8b9151">&#9670;&#160;</a></span>BOND_VOID_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint32_t Bond::BOND_VOID_SIZE = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Size in bytes of the <a class="el" href="namespace_bond.html">Bond</a> void type. </p>
 
 </div>
 </div>

@@ -8,5 +8,6 @@ var class_bond_1_1_compiler_error_buffer =
     [ "Print", "class_bond_1_1_compiler_error_buffer.html#aba03f34ea14c8f167b9c533991837a10", null ],
     [ "PushError", "class_bond_1_1_compiler_error_buffer.html#aba82d6e40abffe2e572b867db294f3f1", null ],
     [ "PushErrorInt", "class_bond_1_1_compiler_error_buffer.html#a84cd21f969b073882f2b22ce60d5a519", null ],
-    [ "Reset", "class_bond_1_1_compiler_error_buffer.html#afc3479c3660326fbe635c36288763180", null ]
+    [ "Reset", "class_bond_1_1_compiler_error_buffer.html#afc3479c3660326fbe635c36288763180", null ],
+    [ "Truncate", "class_bond_1_1_compiler_error_buffer.html#a2103e1ed02861dbb36f9973faca54693", null ]
 ];

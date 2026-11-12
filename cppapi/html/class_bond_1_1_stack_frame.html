@@ -114,29 +114,44 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_bond_1_1
 </div><!--header-->
 <div class="contents">
 
+<p>The activation record of a function invoked by a <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a>.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;bond/vm/vm.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aecab98b70d6f86548395afa390322a26" id="r_aecab98b70d6f86548395afa390322a26"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aecab98b70d6f86548395afa390322a26">StackFrame</a> (<a class="el" href="#ac692204ff14b03296e5ff3cfc4a3b3d6">VM</a> &amp;vm)</td></tr>
+<tr class="memdesc:aecab98b70d6f86548395afa390322a26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_bond_1_1_stack_frame.html" title="The activation record of a function invoked by a VM.">StackFrame</a> object that is not associated with any function.  <br /></td></tr>
 <tr class="memitem:a6427c6b53cfaf1313264315075242893" id="r_a6427c6b53cfaf1313264315075242893"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a6427c6b53cfaf1313264315075242893">StackFrame</a> (<a class="el" href="#ac692204ff14b03296e5ff3cfc4a3b3d6">VM</a> &amp;vm, const <a class="el" href="struct_bond_1_1_function.html">Function</a> &amp;function, uint8_t *framePointer, uint8_t *stackPointer, uint8_t *returnPointer)</td></tr>
+<tr class="memdesc:a6427c6b53cfaf1313264315075242893"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_bond_1_1_stack_frame.html" title="The activation record of a function invoked by a VM.">StackFrame</a> object for an invocation of the given function.  <br /></td></tr>
 <tr class="memitem:a9a489d984184c57dcddd319c2c373620" id="r_a9a489d984184c57dcddd319c2c373620"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a9a489d984184c57dcddd319c2c373620">StackFrame</a> (const StackFrame &amp;other)=delete</td></tr>
 <tr class="memitem:a21a69e1495c4c86a956d7ffb8a98d4eb" id="r_a21a69e1495c4c86a956d7ffb8a98d4eb"><td class="memItemLeft"><a class="el" href="#aecab98b70d6f86548395afa390322a26">StackFrame</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a21a69e1495c4c86a956d7ffb8a98d4eb">operator=</a> (const <a class="el" href="#aecab98b70d6f86548395afa390322a26">StackFrame</a> &amp;other)=delete</td></tr>
 <tr class="memitem:a807a4f78cab0cc55d3cd89feded825b6" id="r_a807a4f78cab0cc55d3cd89feded825b6"><td class="memTemplParams" colspan="2">template&lt;typename ArgType&gt; </td></tr>
 <tr class="memitem:a807a4f78cab0cc55d3cd89feded825b6 template"><td class="memItemLeft">const ArgType &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a807a4f78cab0cc55d3cd89feded825b6">GetArg</a> (size_t index) const</td></tr>
+<tr class="memdesc:a807a4f78cab0cc55d3cd89feded825b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to an argument of the invoked function.  <br /></td></tr>
 <tr class="memitem:af8ce7c98c04f724dc6ea9b783b89306d" id="r_af8ce7c98c04f724dc6ea9b783b89306d"><td class="memTemplParams" colspan="2">template&lt;typename ReturnType&gt; </td></tr>
 <tr class="memitem:af8ce7c98c04f724dc6ea9b783b89306d template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af8ce7c98c04f724dc6ea9b783b89306d">SetReturnValue</a> (const ReturnType &amp;returnValue)</td></tr>
+<tr class="memdesc:af8ce7c98c04f724dc6ea9b783b89306d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the return value of the invoked function.  <br /></td></tr>
 <tr class="memitem:a2f2803c4d6fe200eb23b96e3781d8228" id="r_a2f2803c4d6fe200eb23b96e3781d8228"><td class="memItemLeft"><a class="el" href="#ac692204ff14b03296e5ff3cfc4a3b3d6">VM</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a2f2803c4d6fe200eb23b96e3781d8228">GetVM</a> ()</td></tr>
+<tr class="memdesc:a2f2803c4d6fe200eb23b96e3781d8228"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a> that owns the stack frame.  <br /></td></tr>
 <tr class="memitem:a938a905815455ee0de0f7d7ccd292294" id="r_a938a905815455ee0de0f7d7ccd292294"><td class="memItemLeft">const <a class="el" href="#ac692204ff14b03296e5ff3cfc4a3b3d6">VM</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a938a905815455ee0de0f7d7ccd292294">GetVM</a> () const</td></tr>
+<tr class="memdesc:a938a905815455ee0de0f7d7ccd292294"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a> that owns the stack frame.  <br /></td></tr>
 <tr class="memitem:a1b5fddec4c4385f16b9b4525f546ce06" id="r_a1b5fddec4c4385f16b9b4525f546ce06"><td class="memItemLeft"><a class="el" href="class_bond_1_1_collector.html">Collector</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a1b5fddec4c4385f16b9b4525f546ce06">GetCollector</a> ()</td></tr>
+<tr class="memdesc:a1b5fddec4c4385f16b9b4525f546ce06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="class_bond_1_1_collector.html" title="Tracks and destroys Collectable objects.">Collector</a> whose <a class="el" href="class_bond_1_1_collectable.html" title="Base class for objects tracked by a Collector.">Collectable</a> objects are destroyed when the stack frame is popped off of the <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a>'s call stack.  <br /></td></tr>
 <tr class="memitem:a99a9cc3c855513402482336c79f8a298" id="r_a99a9cc3c855513402482336c79f8a298"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_collector.html">Collector</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a99a9cc3c855513402482336c79f8a298">GetCollector</a> () const</td></tr>
+<tr class="memdesc:a99a9cc3c855513402482336c79f8a298"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="class_bond_1_1_collector.html" title="Tracks and destroys Collectable objects.">Collector</a> whose <a class="el" href="class_bond_1_1_collectable.html" title="Base class for objects tracked by a Collector.">Collectable</a> objects are destroyed when the stack frame is popped off of the <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a>'s call stack.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:ac692204ff14b03296e5ff3cfc4a3b3d6" id="r_ac692204ff14b03296e5ff3cfc4a3b3d6"><td class="memItemLeft">class&#160;</td><td class="memItemRight"><a class="el" href="#ac692204ff14b03296e5ff3cfc4a3b3d6">VM</a></td></tr>
 <tr class="memitem:a48430cf6c88398807b1688016b492e88" id="r_a48430cf6c88398807b1688016b492e88"><td class="memItemLeft">class&#160;</td><td class="memItemRight"><a class="el" href="#a48430cf6c88398807b1688016b492e88">InvocationStackFrame</a></td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The activation record of a function invoked by a <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a>. </p>
+<p>A <a class="el" href="class_bond_1_1_stack_frame.html" title="The activation record of a function invoked by a VM.">StackFrame</a> gives access to the arguments and return value of a function call. Native functions receive the <a class="el" href="class_bond_1_1_stack_frame.html" title="The activation record of a function invoked by a VM.">StackFrame</a> of their own invocation, through which they read their arguments with <a class="el" href="#a807a4f78cab0cc55d3cd89feded825b6" title="Returns a reference to an argument of the invoked function.">GetArg()</a> and set their return value with <a class="el" href="#af8ce7c98c04f724dc6ea9b783b89306d" title="Sets the return value of the invoked function.">SetReturnValue()</a>. <a class="el" href="group__vm.html#gaa26b04bb3d53922d0775e28b6a2fdb73" title="The call stack of a VM.">StackFrames</a> are created and destroyed by the <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a> and by <a class="el" href="class_bond_1_1_invocation_stack_frame.html" title="Sets up and invokes a call to a Bond function from native code.">InvocationStackFrame</a>; they are not constructed directly by applications.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_bond_1_1_invocation_stack_frame.html" title="Sets up and invokes a call to a Bond function from native code.">InvocationStackFrame</a>, <a class="el" href="group__api.html#ga7bf93af8c357376bdb44bab75cd31b6c" title="A C++ function that implements a function declared native in Bond.">NativeFunction</a>, <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a> </dd></dl>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aecab98b70d6f86548395afa390322a26" name="aecab98b70d6f86548395afa390322a26"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aecab98b70d6f86548395afa390322a26">&#9670;&#160;</a></span>StackFrame() <span class="overload">[1/3]</span></h2>
 
@@ -159,6 +174,14 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="class_bond_1_1_stack_frame.html" title="The activation record of a function invoked by a VM.">StackFrame</a> object that is not associated with any function. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vm</td><td>The <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a> that owns the stack frame. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -203,6 +226,18 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="class_bond_1_1_stack_frame.html" title="The activation record of a function invoked by a VM.">StackFrame</a> object for an invocation of the given function. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vm</td><td>The <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a> that owns the stack frame. </td></tr>
+    <tr><td class="paramname">function</td><td>The function being invoked. </td></tr>
+    <tr><td class="paramname">framePointer</td><td>Pointer to the base of the function's frame on the <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a> stack, relative to which its arguments and local variables are addressed. </td></tr>
+    <tr><td class="paramname">stackPointer</td><td>Pointer to the top of the function's frame on the <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a> stack. </td></tr>
+    <tr><td class="paramname">returnPointer</td><td>Pointer to where the function's return value is written, or null if the function returns void. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -249,6 +284,20 @@ template&lt;typename ArgType&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Returns a reference to an argument of the invoked function. </p>
+<p>When BOND_RUNTIME_CHECKS_ENABLED is non-zero, a <a class="el" href="class_bond_1_1_exception.html" title="Exception thrown for all types of errors in the Bond Runtime Library.">Bond::Exception</a> is thrown if the index is out of range or if ArgType does not match the type of the parameter. Integer types match any <a class="el" href="namespace_bond.html">Bond</a> integer type of the same size, regardless of signedness. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ArgType</td><td>The native type of the argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>The zero-based index of the argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a1b5fddec4c4385f16b9b4525f546ce06" name="a1b5fddec4c4385f16b9b4525f546ce06"></a>
@@ -273,6 +322,9 @@ template&lt;typename ArgType&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the <a class="el" href="class_bond_1_1_collector.html" title="Tracks and destroys Collectable objects.">Collector</a> whose <a class="el" href="class_bond_1_1_collectable.html" title="Base class for objects tracked by a Collector.">Collectable</a> objects are destroyed when the stack frame is popped off of the <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a>'s call stack. </p>
+<p>A native function that allocates memory or objects on behalf of the calling <a class="el" href="namespace_bond.html">Bond</a> function typically registers them with the <a class="el" href="class_bond_1_1_collector.html" title="Tracks and destroys Collectable objects.">Collector</a> of the caller's stack frame, obtained with <a class="el" href="class_bond_1_1_v_m.html#aee5afe8e0cd204f2ffba075d0b091de9" title="Returns the StackFrame immediately below the top of the call stack, which is that of the caller of th...">VM::GetCallerStackFrame()</a>, so that they live until the caller returns. </p>
 
 </div>
 </div>
@@ -299,6 +351,8 @@ template&lt;typename ArgType&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the <a class="el" href="class_bond_1_1_collector.html" title="Tracks and destroys Collectable objects.">Collector</a> whose <a class="el" href="class_bond_1_1_collectable.html" title="Base class for objects tracked by a Collector.">Collectable</a> objects are destroyed when the stack frame is popped off of the <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a>'s call stack. </p>
+
 </div>
 </div>
 <a id="a2f2803c4d6fe200eb23b96e3781d8228" name="a2f2803c4d6fe200eb23b96e3781d8228"></a>
@@ -324,6 +378,8 @@ template&lt;typename ArgType&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a> that owns the stack frame. </p>
+
 </div>
 </div>
 <a id="a938a905815455ee0de0f7d7ccd292294" name="a938a905815455ee0de0f7d7ccd292294"></a>
@@ -348,6 +404,8 @@ template&lt;typename ArgType&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a> that owns the stack frame. </p>
 
 </div>
 </div>
@@ -392,6 +450,20 @@ template&lt;typename ReturnType&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Sets the return value of the invoked function. </p>
+<p>Integers smaller than 32 bits are widened to 32 bits according to the <a class="el" href="namespace_bond.html">Bond</a> return type, and enums are stored as their underlying type. When BOND_RUNTIME_CHECKS_ENABLED is non-zero, a <a class="el" href="class_bond_1_1_exception.html" title="Exception thrown for all types of errors in the Bond Runtime Library.">Bond::Exception</a> is thrown if ReturnType does not match the return type of the function. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ReturnType</td><td>The native type of the return value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">returnValue</td><td>The value to be returned. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

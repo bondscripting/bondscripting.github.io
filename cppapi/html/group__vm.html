@@ -122,7 +122,7 @@ Classes</h2></td></tr>
 <tr class="memitem:Bond_3A_3ACboLoader" id="r_Bond_3A_3ACboLoader"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_cbo_loader.html">Bond::CboLoader</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads CBO modules and resolves their native function bindings.  <a href="class_bond_1_1_cbo_loader.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Bond_3A_3AConstantTable" id="r_Bond_3A_3AConstantTable"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_bond_1_1_constant_table.html">Bond::ConstantTable</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collection of per-CBO Constant tables.  <a href="struct_bond_1_1_constant_table.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constant tables of a single CBO, which are referenced by index from the bytecode of its functions.  <a href="struct_bond_1_1_constant_table.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Bond_3A_3AParamSignature" id="r_Bond_3A_3AParamSignature"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_bond_1_1_param_signature.html">Bond::ParamSignature</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signature metadata for a single function parameter.  <a href="struct_bond_1_1_param_signature.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Bond_3A_3AParamListSignature" id="r_Bond_3A_3AParamListSignature"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_bond_1_1_param_list_signature.html">Bond::ParamListSignature</a></td></tr>
@@ -130,11 +130,14 @@ Classes</h2></td></tr>
 <tr class="memitem:Bond_3A_3AReturnSignature" id="r_Bond_3A_3AReturnSignature"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_bond_1_1_return_signature.html">Bond::ReturnSignature</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signature metadata for a function return value.  <a href="struct_bond_1_1_return_signature.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Bond_3A_3AFunction" id="r_Bond_3A_3AFunction"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_bond_1_1_function.html">Bond::Function</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_bond_1_1_function.html" title="Function metadata and executable payload loaded from CBO.">Function</a> metadata and executable payload loaded from CBO.  <a href="struct_bond_1_1_function.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metadata and executable code or native binding of a function loaded from a CBO.  <a href="struct_bond_1_1_function.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Bond_3A_3AFunction_3A_3A_5Bunion_5D_2E_5F_5Funnamed0_5F_5F" id="r_Bond_3A_3AFunction_3A_3A_5Bunion_5D_2E_5F_5Funnamed0_5F_5F"><td class="memItemLeft">union &#160;</td><td class="memItemRight"><a class="el" href="union_bond_1_1_function_1_1_0funion_0e_8____unnamed0____.html">Bond::Function::[union].__unnamed0__</a></td></tr>
 <tr class="memitem:Bond_3A_3AVM" id="r_Bond_3A_3AVM"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_v_m.html">Bond::VM</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A virtual machine that executes the <a class="el" href="namespace_bond.html">Bond</a> bytecode in a <a class="el" href="class_bond_1_1_code_segment.html" title="Collection of functions, static initializers and data loaded from CBO files.">CodeSegment</a>.  <a href="class_bond_1_1_v_m.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Bond_3A_3AInvocationStackFrame" id="r_Bond_3A_3AInvocationStackFrame"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_invocation_stack_frame.html">Bond::InvocationStackFrame</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets up and invokes a call to a <a class="el" href="namespace_bond.html">Bond</a> function from native code.  <a href="class_bond_1_1_invocation_stack_frame.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Bond_3A_3AStackFrame" id="r_Bond_3A_3AStackFrame"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The activation record of a function invoked by a <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a>.  <a href="class_bond_1_1_stack_frame.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Bond_3A_3ACollector" id="r_Bond_3A_3ACollector"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_collector.html">Bond::Collector</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tracks and destroys <a class="el" href="class_bond_1_1_collectable.html" title="Base class for objects tracked by a Collector.">Collectable</a> objects.  <a href="class_bond_1_1_collector.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Bond_3A_3AWrapperCollectable_3C_20T_20_3E" id="r_Bond_3A_3AWrapperCollectable_3C_20T_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_wrapper_collectable.html">Bond::WrapperCollectable&lt; T &gt;</a></td></tr>
@@ -144,7 +147,7 @@ Classes</h2></td></tr>
 <tr class="memitem:Bond_3A_3ACodeSegment" id="r_Bond_3A_3ACodeSegment"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_code_segment.html">Bond::CodeSegment</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collection of functions, static initializers and data loaded from CBO files.  <a href="class_bond_1_1_code_segment.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Bond_3A_3ADataEntry" id="r_Bond_3A_3ADataEntry"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_bond_1_1_data_entry.html">Bond::DataEntry</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A named data slot loaded from CBO global data tables.  <a href="struct_bond_1_1_data_entry.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A named global variable loaded from a CBO.  <a href="struct_bond_1_1_data_entry.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -153,6 +156,7 @@ Typedefs</h2></td></tr>
 <tr class="memitem:gafa928831f66f99255739910ae1c1adbb" id="r_gafa928831f66f99255739910ae1c1adbb"><td class="memItemLeft">typedef <a class="el" href="class_bond_1_1_allocator_1_1_object_handle.html">Allocator::ObjectHandle</a>&lt; <a class="el" href="class_bond_1_1_collectable.html">Collectable</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#gafa928831f66f99255739910ae1c1adbb">Bond::CollectableHandle</a></td></tr>
 <tr class="memdesc:gafa928831f66f99255739910ae1c1adbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">An owning pointer to a dynamically allocated <a class="el" href="class_bond_1_1_collectable.html" title="Base class for objects tracked by a Collector.">Collectable</a>.  <br /></td></tr>
 <tr class="memitem:gaa26b04bb3d53922d0775e28b6a2fdb73" id="r_gaa26b04bb3d53922d0775e28b6a2fdb73"><td class="memItemLeft">typedef <a class="el" href="class_bond_1_1_auto_stack.html">AutoStack</a>&lt; <a class="el" href="class_bond_1_1_stack_frame.html">StackFrame</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#gaa26b04bb3d53922d0775e28b6a2fdb73">Bond::StackFrames</a></td></tr>
+<tr class="memdesc:gaa26b04bb3d53922d0775e28b6a2fdb73"><td class="mdescLeft">&#160;</td><td class="mdescRight">The call stack of a <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a>.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>These classes form the parts of the <a class="el" href="namespace_bond.html">Bond</a> virtual machine. </p>
@@ -200,6 +204,8 @@ Typedefs</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The call stack of a <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a>. </p>
 
 </div>
 </div>

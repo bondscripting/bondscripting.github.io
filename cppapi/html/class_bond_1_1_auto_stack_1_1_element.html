@@ -114,29 +114,43 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_bond_1_1
 </div><!--header-->
 <div class="contents">
 
+<p>A single value on an <a class="el" href="class_bond_1_1_auto_stack.html" title="A stack whose elements are automatic variables.">AutoStack</a>, owned by the scope that pushed it.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;bond/stl/autostack.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae7ae4beb9f556920dfe5c387d18a0d75" id="r_ae7ae4beb9f556920dfe5c387d18a0d75"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ae7ae4beb9f556920dfe5c387d18a0d75">Element</a> (<a class="el" href="#af3ac0c30fefd0c1374928a84d11c5ab1">AutoStack</a> &amp;stack)</td></tr>
+<tr class="memdesc:ae7ae4beb9f556920dfe5c387d18a0d75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <a class="el" href="class_bond_1_1_auto_stack_1_1_element.html" title="A single value on an AutoStack, owned by the scope that pushed it.">Element</a> holding a default constructed value and pushes it onto the given stack.  <br /></td></tr>
 <tr class="memitem:a64d87856304e52c41ba9d6248131be5a" id="r_a64d87856304e52c41ba9d6248131be5a"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
 <tr class="memitem:a64d87856304e52c41ba9d6248131be5a template"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a64d87856304e52c41ba9d6248131be5a">Element</a> (<a class="el" href="#af3ac0c30fefd0c1374928a84d11c5ab1">AutoStack</a> &amp;stack, Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:a64d87856304e52c41ba9d6248131be5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <a class="el" href="class_bond_1_1_auto_stack_1_1_element.html" title="A single value on an AutoStack, owned by the scope that pushed it.">Element</a> holding a value constructed from the given arguments and pushes it onto the given stack.  <br /></td></tr>
 <tr class="memitem:a78ab1269ddfe77bfd55dbaef1d922038" id="r_a78ab1269ddfe77bfd55dbaef1d922038"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a78ab1269ddfe77bfd55dbaef1d922038">~Element</a> ()</td></tr>
+<tr class="memdesc:a78ab1269ddfe77bfd55dbaef1d922038"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pops the <a class="el" href="class_bond_1_1_auto_stack_1_1_element.html" title="A single value on an AutoStack, owned by the scope that pushed it.">Element</a> from its stack. The <a class="el" href="class_bond_1_1_auto_stack_1_1_element.html" title="A single value on an AutoStack, owned by the scope that pushed it.">Element</a> must be at the top of the stack.  <br /></td></tr>
 <tr class="memitem:acdac1ae97091d81327e2e3bf835783b8" id="r_acdac1ae97091d81327e2e3bf835783b8"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#acdac1ae97091d81327e2e3bf835783b8">Element</a> (const Element &amp;other)=delete</td></tr>
 <tr class="memitem:a7128bda5708c5c509fca99a55a1639b3" id="r_a7128bda5708c5c509fca99a55a1639b3"><td class="memItemLeft"><a class="el" href="#ae7ae4beb9f556920dfe5c387d18a0d75">Element</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a7128bda5708c5c509fca99a55a1639b3">operator=</a> (const <a class="el" href="#ae7ae4beb9f556920dfe5c387d18a0d75">Element</a> &amp;other)=delete</td></tr>
 <tr class="memitem:ae1cbc05da37568d7941bf19450c68b0f" id="r_ae1cbc05da37568d7941bf19450c68b0f"><td class="memItemLeft"><a class="el" href="#ae7ae4beb9f556920dfe5c387d18a0d75">Element</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ae1cbc05da37568d7941bf19450c68b0f">operator=</a> (const ValueType &amp;value)</td></tr>
+<tr class="memdesc:ae1cbc05da37568d7941bf19450c68b0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns a copy of the given value to the <a class="el" href="class_bond_1_1_auto_stack_1_1_element.html" title="A single value on an AutoStack, owned by the scope that pushed it.">Element</a>.  <br /></td></tr>
 <tr class="memitem:a92cc0f7b9a0e8816fa11cf8dedc90fbe" id="r_a92cc0f7b9a0e8816fa11cf8dedc90fbe"><td class="memItemLeft"><a class="el" href="#ae7ae4beb9f556920dfe5c387d18a0d75">Element</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a92cc0f7b9a0e8816fa11cf8dedc90fbe">operator=</a> (ValueType &amp;&amp;value)</td></tr>
-<tr class="memitem:aa370fd333f475f0889f64cfecc652cdf" id="r_aa370fd333f475f0889f64cfecc652cdf"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa370fd333f475f0889f64cfecc652cdf">operator const ValueType &amp;</a> () const</td></tr>
-<tr class="memitem:a86c3875ba1eb4ae67f9618a7e9dab316" id="r_a86c3875ba1eb4ae67f9618a7e9dab316"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a86c3875ba1eb4ae67f9618a7e9dab316">operator ValueType &amp;</a> ()</td></tr>
-<tr class="memitem:acab087dc8d23e05ddcabf36bfc1e0942" id="r_acab087dc8d23e05ddcabf36bfc1e0942"><td class="memItemLeft">const ValueType &amp;&#160;</td><td class="memItemRight"><a class="el" href="#acab087dc8d23e05ddcabf36bfc1e0942">GetValue</a> () const</td></tr>
-<tr class="memitem:a117bc96af28b9f65356f8fd22b15599d" id="r_a117bc96af28b9f65356f8fd22b15599d"><td class="memItemLeft">ValueType &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a117bc96af28b9f65356f8fd22b15599d">GetValue</a> ()</td></tr>
+<tr class="memdesc:a92cc0f7b9a0e8816fa11cf8dedc90fbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the given value into the <a class="el" href="class_bond_1_1_auto_stack_1_1_element.html" title="A single value on an AutoStack, owned by the scope that pushed it.">Element</a>.  <br /></td></tr>
+<tr class="memitem:aee429ab345e992e774171fc4992bd83a" id="r_aee429ab345e992e774171fc4992bd83a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aee429ab345e992e774171fc4992bd83a">operator const ValueType &amp;</a> () const noexcept</td></tr>
+<tr class="memdesc:aee429ab345e992e774171fc4992bd83a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implicitly converts the <a class="el" href="class_bond_1_1_auto_stack_1_1_element.html" title="A single value on an AutoStack, owned by the scope that pushed it.">Element</a> to a const reference to its value.  <br /></td></tr>
+<tr class="memitem:a9cdf2b9d80a27b3c7aed459452dddc6d" id="r_a9cdf2b9d80a27b3c7aed459452dddc6d"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a9cdf2b9d80a27b3c7aed459452dddc6d">operator ValueType &amp;</a> () noexcept</td></tr>
+<tr class="memdesc:a9cdf2b9d80a27b3c7aed459452dddc6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implicitly converts the <a class="el" href="class_bond_1_1_auto_stack_1_1_element.html" title="A single value on an AutoStack, owned by the scope that pushed it.">Element</a> to a reference to its value.  <br /></td></tr>
+<tr class="memitem:a2a5b42ba1da07b5b3dbbd178cdd54f1e" id="r_a2a5b42ba1da07b5b3dbbd178cdd54f1e"><td class="memItemLeft">const ValueType &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a2a5b42ba1da07b5b3dbbd178cdd54f1e">GetValue</a> () const noexcept</td></tr>
+<tr class="memdesc:a2a5b42ba1da07b5b3dbbd178cdd54f1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the value held by the <a class="el" href="class_bond_1_1_auto_stack_1_1_element.html" title="A single value on an AutoStack, owned by the scope that pushed it.">Element</a>.  <br /></td></tr>
+<tr class="memitem:ae829cac5cb2a6c96f718847bac872d58" id="r_ae829cac5cb2a6c96f718847bac872d58"><td class="memItemLeft">ValueType &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ae829cac5cb2a6c96f718847bac872d58">GetValue</a> () noexcept</td></tr>
+<tr class="memdesc:ae829cac5cb2a6c96f718847bac872d58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the value held by the <a class="el" href="class_bond_1_1_auto_stack_1_1_element.html" title="A single value on an AutoStack, owned by the scope that pushed it.">Element</a>.  <br /></td></tr>
 <tr class="memitem:a448120b2d257fc0259f4b91c6e2ad8ee" id="r_a448120b2d257fc0259f4b91c6e2ad8ee"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a448120b2d257fc0259f4b91c6e2ad8ee">SetValue</a> (const ValueType &amp;value)</td></tr>
+<tr class="memdesc:a448120b2d257fc0259f4b91c6e2ad8ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns a copy of the given value to the <a class="el" href="class_bond_1_1_auto_stack_1_1_element.html" title="A single value on an AutoStack, owned by the scope that pushed it.">Element</a>.  <br /></td></tr>
 <tr class="memitem:aff2a68637f4814a4739efa2391d92f78" id="r_aff2a68637f4814a4739efa2391d92f78"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aff2a68637f4814a4739efa2391d92f78">SetValue</a> (ValueType &amp;&amp;value)</td></tr>
+<tr class="memdesc:aff2a68637f4814a4739efa2391d92f78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the given value into the <a class="el" href="class_bond_1_1_auto_stack_1_1_element.html" title="A single value on an AutoStack, owned by the scope that pushed it.">Element</a>.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a1ee38f71c0d04518e6b3965998a8a8c8" id="r_a1ee38f71c0d04518e6b3965998a8a8c8"><td class="memItemLeft"><a class="el" href="#ae7ae4beb9f556920dfe5c387d18a0d75">Element</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a1ee38f71c0d04518e6b3965998a8a8c8">GetNext</a> ()</td></tr>
-<tr class="memitem:a6fe1708e8e20b8b9956ef008670d8b15" id="r_a6fe1708e8e20b8b9956ef008670d8b15"><td class="memItemLeft">const <a class="el" href="#ae7ae4beb9f556920dfe5c387d18a0d75">Element</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a6fe1708e8e20b8b9956ef008670d8b15">GetNext</a> () const</td></tr>
+<tr class="memitem:a504389a71cff48610f052c2acc4acf3b" id="r_a504389a71cff48610f052c2acc4acf3b"><td class="memItemLeft"><a class="el" href="#ae7ae4beb9f556920dfe5c387d18a0d75">Element</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a504389a71cff48610f052c2acc4acf3b">GetNext</a> () noexcept</td></tr>
+<tr class="memitem:a3e5e4d60c96c7daa6a659fd3409e686b" id="r_a3e5e4d60c96c7daa6a659fd3409e686b"><td class="memItemLeft">const <a class="el" href="#ae7ae4beb9f556920dfe5c387d18a0d75">Element</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a3e5e4d60c96c7daa6a659fd3409e686b">GetNext</a> () const noexcept</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -148,7 +162,11 @@ Friends</h2></td></tr>
 <tr class="memitem:a9830fc407400559db7e7783cc10a9394" id="r_a9830fc407400559db7e7783cc10a9394"><td class="memItemLeft">class&#160;</td><td class="memItemRight"><a class="el" href="#a9830fc407400559db7e7783cc10a9394">Iterator</a></td></tr>
 <tr class="memitem:a5485970bb9da6b5d782fa28638b5658f" id="r_a5485970bb9da6b5d782fa28638b5658f"><td class="memItemLeft">class&#160;</td><td class="memItemRight"><a class="el" href="#a5485970bb9da6b5d782fa28638b5658f">ConstIterator</a></td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename ValueType&gt;<br />
+class Bond::AutoStack&lt; ValueType &gt;::Element</div><p>A single value on an <a class="el" href="class_bond_1_1_auto_stack.html" title="A stack whose elements are automatic variables.">AutoStack</a>, owned by the scope that pushed it. </p>
+<p>An <a class="el" href="class_bond_1_1_auto_stack_1_1_element.html" title="A single value on an AutoStack, owned by the scope that pushed it.">Element</a> is pushed onto its stack when it is constructed and popped when it is destroyed. An <a class="el" href="class_bond_1_1_auto_stack_1_1_element.html" title="A single value on an AutoStack, owned by the scope that pushed it.">Element</a> cannot be copied or moved. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae7ae4beb9f556920dfe5c387d18a0d75" name="ae7ae4beb9f556920dfe5c387d18a0d75"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae7ae4beb9f556920dfe5c387d18a0d75">&#9670;&#160;</a></span>Element() <span class="overload">[1/3]</span></h2>
 
@@ -173,6 +191,14 @@ template&lt;typename ValueType&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Constructs an <a class="el" href="class_bond_1_1_auto_stack_1_1_element.html" title="A single value on an AutoStack, owned by the scope that pushed it.">Element</a> holding a default constructed value and pushes it onto the given stack. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stack</td><td>The stack onto which the <a class="el" href="class_bond_1_1_auto_stack_1_1_element.html" title="A single value on an AutoStack, owned by the scope that pushed it.">Element</a> is pushed. It must outlive the <a class="el" href="class_bond_1_1_auto_stack_1_1_element.html" title="A single value on an AutoStack, owned by the scope that pushed it.">Element</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -207,6 +233,15 @@ template&lt;typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Constructs an <a class="el" href="class_bond_1_1_auto_stack_1_1_element.html" title="A single value on an AutoStack, owned by the scope that pushed it.">Element</a> holding a value constructed from the given arguments and pushes it onto the given stack. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stack</td><td>The stack onto which the <a class="el" href="class_bond_1_1_auto_stack_1_1_element.html" title="A single value on an AutoStack, owned by the scope that pushed it.">Element</a> is pushed. It must outlive the <a class="el" href="class_bond_1_1_auto_stack_1_1_element.html" title="A single value on an AutoStack, owned by the scope that pushed it.">Element</a>. </td></tr>
+    <tr><td class="paramname">args</td><td>The arguments forwarded to the constructor of the value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a78ab1269ddfe77bfd55dbaef1d922038" name="a78ab1269ddfe77bfd55dbaef1d922038"></a>
@@ -233,6 +268,8 @@ template&lt;typename ValueType&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Pops the <a class="el" href="class_bond_1_1_auto_stack_1_1_element.html" title="A single value on an AutoStack, owned by the scope that pushed it.">Element</a> from its stack. The <a class="el" href="class_bond_1_1_auto_stack_1_1_element.html" title="A single value on an AutoStack, owned by the scope that pushed it.">Element</a> must be at the top of the stack. </p>
 
 </div>
 </div>
@@ -264,35 +301,8 @@ template&lt;typename ValueType&gt; </div>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a1ee38f71c0d04518e6b3965998a8a8c8" name="a1ee38f71c0d04518e6b3965998a8a8c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ee38f71c0d04518e6b3965998a8a8c8">&#9670;&#160;</a></span>GetNext() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename ValueType&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#ae7ae4beb9f556920dfe5c387d18a0d75">Element</a> * <a class="el" href="class_bond_1_1_auto_stack.html">Bond::AutoStack</a>&lt; ValueType &gt;::Element::GetNext </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a6fe1708e8e20b8b9956ef008670d8b15" name="a6fe1708e8e20b8b9956ef008670d8b15"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6fe1708e8e20b8b9956ef008670d8b15">&#9670;&#160;</a></span>GetNext() <span class="overload">[2/2]</span></h2>
+<a id="a3e5e4d60c96c7daa6a659fd3409e686b" name="a3e5e4d60c96c7daa6a659fd3409e686b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e5e4d60c96c7daa6a659fd3409e686b">&#9670;&#160;</a></span>GetNext() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -311,15 +321,15 @@ template&lt;typename ValueType&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a117bc96af28b9f65356f8fd22b15599d" name="a117bc96af28b9f65356f8fd22b15599d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a117bc96af28b9f65356f8fd22b15599d">&#9670;&#160;</a></span>GetValue() <span class="overload">[1/2]</span></h2>
+<a id="a504389a71cff48610f052c2acc4acf3b" name="a504389a71cff48610f052c2acc4acf3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a504389a71cff48610f052c2acc4acf3b">&#9670;&#160;</a></span>GetNext() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -330,7 +340,7 @@ template&lt;typename ValueType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">ValueType &amp; <a class="el" href="class_bond_1_1_auto_stack.html">Bond::AutoStack</a>&lt; ValueType &gt;::Element::GetValue </td>
+          <td class="memname"><a class="el" href="#ae7ae4beb9f556920dfe5c387d18a0d75">Element</a> * <a class="el" href="class_bond_1_1_auto_stack.html">Bond::AutoStack</a>&lt; ValueType &gt;::Element::GetNext </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -338,15 +348,15 @@ template&lt;typename ValueType&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="acab087dc8d23e05ddcabf36bfc1e0942" name="acab087dc8d23e05ddcabf36bfc1e0942"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acab087dc8d23e05ddcabf36bfc1e0942">&#9670;&#160;</a></span>GetValue() <span class="overload">[2/2]</span></h2>
+<a id="a2a5b42ba1da07b5b3dbbd178cdd54f1e" name="a2a5b42ba1da07b5b3dbbd178cdd54f1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a5b42ba1da07b5b3dbbd178cdd54f1e">&#9670;&#160;</a></span>GetValue() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -365,15 +375,46 @@ template&lt;typename ValueType&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns a const reference to the value held by the <a class="el" href="class_bond_1_1_auto_stack_1_1_element.html" title="A single value on an AutoStack, owned by the scope that pushed it.">Element</a>. </p>
+
 </div>
 </div>
-<a id="aa370fd333f475f0889f64cfecc652cdf" name="aa370fd333f475f0889f64cfecc652cdf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa370fd333f475f0889f64cfecc652cdf">&#9670;&#160;</a></span>operator const ValueType &amp;()</h2>
+<a id="ae829cac5cb2a6c96f718847bac872d58" name="ae829cac5cb2a6c96f718847bac872d58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae829cac5cb2a6c96f718847bac872d58">&#9670;&#160;</a></span>GetValue() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ValueType &amp; <a class="el" href="class_bond_1_1_auto_stack.html">Bond::AutoStack</a>&lt; ValueType &gt;::Element::GetValue </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a reference to the value held by the <a class="el" href="class_bond_1_1_auto_stack_1_1_element.html" title="A single value on an AutoStack, owned by the scope that pushed it.">Element</a>. </p>
+
+</div>
+</div>
+<a id="aee429ab345e992e774171fc4992bd83a" name="aee429ab345e992e774171fc4992bd83a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee429ab345e992e774171fc4992bd83a">&#9670;&#160;</a></span>operator const ValueType &amp;()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -392,15 +433,17 @@ template&lt;typename ValueType&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
+<p>Implicitly converts the <a class="el" href="class_bond_1_1_auto_stack_1_1_element.html" title="A single value on an AutoStack, owned by the scope that pushed it.">Element</a> to a const reference to its value. </p>
+
 </div>
 </div>
-<a id="a86c3875ba1eb4ae67f9618a7e9dab316" name="a86c3875ba1eb4ae67f9618a7e9dab316"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a86c3875ba1eb4ae67f9618a7e9dab316">&#9670;&#160;</a></span>operator ValueType &amp;()</h2>
+<a id="a9cdf2b9d80a27b3c7aed459452dddc6d" name="a9cdf2b9d80a27b3c7aed459452dddc6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cdf2b9d80a27b3c7aed459452dddc6d">&#9670;&#160;</a></span>operator ValueType &amp;()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -419,10 +462,12 @@ template&lt;typename ValueType&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Implicitly converts the <a class="el" href="class_bond_1_1_auto_stack_1_1_element.html" title="A single value on an AutoStack, owned by the scope that pushed it.">Element</a> to a reference to its value. </p>
 
 </div>
 </div>
@@ -478,6 +523,15 @@ template&lt;typename ValueType&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Assigns a copy of the given value to the <a class="el" href="class_bond_1_1_auto_stack_1_1_element.html" title="A single value on an AutoStack, owned by the scope that pushed it.">Element</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The value to be copied. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to this <a class="el" href="class_bond_1_1_auto_stack_1_1_element.html" title="A single value on an AutoStack, owned by the scope that pushed it.">Element</a>. </dd></dl>
+
 </div>
 </div>
 <a id="a92cc0f7b9a0e8816fa11cf8dedc90fbe" name="a92cc0f7b9a0e8816fa11cf8dedc90fbe"></a>
@@ -504,6 +558,15 @@ template&lt;typename ValueType&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Moves the given value into the <a class="el" href="class_bond_1_1_auto_stack_1_1_element.html" title="A single value on an AutoStack, owned by the scope that pushed it.">Element</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The value to be moved. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to this <a class="el" href="class_bond_1_1_auto_stack_1_1_element.html" title="A single value on an AutoStack, owned by the scope that pushed it.">Element</a>. </dd></dl>
 
 </div>
 </div>
@@ -532,6 +595,14 @@ template&lt;typename ValueType&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Assigns a copy of the given value to the <a class="el" href="class_bond_1_1_auto_stack_1_1_element.html" title="A single value on an AutoStack, owned by the scope that pushed it.">Element</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The value to be copied. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="aff2a68637f4814a4739efa2391d92f78" name="aff2a68637f4814a4739efa2391d92f78"></a>
@@ -558,6 +629,14 @@ template&lt;typename ValueType&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Moves the given value into the <a class="el" href="class_bond_1_1_auto_stack_1_1_element.html" title="A single value on an AutoStack, owned by the scope that pushed it.">Element</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The value to be moved. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

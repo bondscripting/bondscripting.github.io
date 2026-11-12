@@ -132,7 +132,7 @@ Classes</h2></td></tr>
 <tr class="memitem:Bond_3A_3AOutputStream" id="r_Bond_3A_3AOutputStream"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_output_stream.html">Bond::OutputStream</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An abstract interface for performing both unformatted and formatted output operations.  <a href="class_bond_1_1_output_stream.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Bond_3A_3AOutputStreamAdaptor" id="r_Bond_3A_3AOutputStreamAdaptor"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_output_stream_adaptor.html">Bond::OutputStreamAdaptor</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A wrapper around an OuputStream that adds formatted output operations used within the <a class="el" href="namespace_bond.html">Bond</a> Standard Library.  <a href="class_bond_1_1_output_stream_adaptor.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A wrapper around an <a class="el" href="class_bond_1_1_output_stream.html" title="An abstract interface for performing both unformatted and formatted output operations.">OutputStream</a> that adds formatted output operations used within the <a class="el" href="namespace_bond.html">Bond</a> Standard Library.  <a href="class_bond_1_1_output_stream_adaptor.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Bond_3A_3AStdioFileHandle" id="r_Bond_3A_3AStdioFileHandle"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_stdio_file_handle.html">Bond::StdioFileHandle</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A handle to a stdio FILE* to ensure that the file is properly disposed using RAII.  <a href="class_bond_1_1_stdio_file_handle.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Bond_3A_3AStdioInputStream" id="r_Bond_3A_3AStdioInputStream"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_stdio_input_stream.html">Bond::StdioInputStream</a></td></tr>
@@ -152,6 +152,15 @@ Typedefs</h2></td></tr>
 <tr class="memdesc:ga37b72a5672b81b2727ba53b4ffbe47f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">An owning pointer to a dynamically allocated <a class="el" href="class_bond_1_1_input_stream.html" title="An abstract interface for performing both unformatted and formatted input operations.">InputStream</a>.  <br /></td></tr>
 <tr class="memitem:ga68173a5e6d6425a9194cfc319b70863c" id="r_ga68173a5e6d6425a9194cfc319b70863c"><td class="memItemLeft">typedef <a class="el" href="class_bond_1_1_allocator_1_1_object_handle.html">Allocator::ObjectHandle</a>&lt; <a class="el" href="class_bond_1_1_output_stream.html">OutputStream</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ga68173a5e6d6425a9194cfc319b70863c">Bond::OutputStreamHandle</a></td></tr>
 <tr class="memdesc:ga68173a5e6d6425a9194cfc319b70863c"><td class="mdescLeft">&#160;</td><td class="mdescRight">An owning pointer to a dynamically allocated <a class="el" href="class_bond_1_1_output_stream.html" title="An abstract interface for performing both unformatted and formatted output operations.">OutputStream</a>.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:gaf33e680567db7ed1721a2027c7d45c52" id="r_gaf33e680567db7ed1721a2027c7d45c52"><td class="memItemLeft">BOND_API bool&#160;</td><td class="memItemRight"><a class="el" href="#gaf33e680567db7ed1721a2027c7d45c52">Bond::IsAbsolutePath</a> (const StringView &amp;path)</td></tr>
+<tr class="memdesc:gaf33e680567db7ed1721a2027c7d45c52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a path is absolute, that is whether it starts with a '/' or '\' separator, or with a drive letter prefix such as "C:".  <br /></td></tr>
+<tr class="memitem:ga20a789392ca5fe0fb6723a0fced899a6" id="r_ga20a789392ca5fe0fb6723a0fced899a6"><td class="memItemLeft">BOND_API StringView&#160;</td><td class="memItemRight"><a class="el" href="#ga20a789392ca5fe0fb6723a0fced899a6">Bond::GetDirectory</a> (const StringView &amp;path)</td></tr>
+<tr class="memdesc:ga20a789392ca5fe0fb6723a0fced899a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the directory part of a path, up to and including its last '/' or '\' separator, or an empty StringView if the path has no separator.  <br /></td></tr>
+<tr class="memitem:gaaf703843801b253138e8e6b865719467" id="r_gaaf703843801b253138e8e6b865719467"><td class="memItemLeft">BOND_API void&#160;</td><td class="memItemRight"><a class="el" href="#gaaf703843801b253138e8e6b865719467">Bond::NormalizePath</a> (const StringView &amp;directory, const StringView &amp;path, Vector&lt; char &gt; &amp;result)</td></tr>
+<tr class="memdesc:gaaf703843801b253138e8e6b865719467"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lexically normalizes the path formed by joining a directory and a path.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>These interfaces and their default implementations are used by <a class="el" href="namespace_bond.html">Bond</a> for performing I/O operations without making assumptions about what underlying I/O library is used. </p>
@@ -185,6 +194,93 @@ Typedefs</h2></td></tr>
 </div><div class="memdoc">
 
 <p>An owning pointer to a dynamically allocated <a class="el" href="class_bond_1_1_output_stream.html" title="An abstract interface for performing both unformatted and formatted output operations.">OutputStream</a>. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="ga20a789392ca5fe0fb6723a0fced899a6" name="ga20a789392ca5fe0fb6723a0fced899a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga20a789392ca5fe0fb6723a0fced899a6">&#9670;&#160;</a></span>GetDirectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOND_API StringView Bond::GetDirectory </td>
+          <td>(</td>
+          <td class="paramtype">const StringView &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the directory part of a path, up to and including its last '/' or '\' separator, or an empty StringView if the path has no separator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>The path whose directory is returned. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaf33e680567db7ed1721a2027c7d45c52" name="gaf33e680567db7ed1721a2027c7d45c52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf33e680567db7ed1721a2027c7d45c52">&#9670;&#160;</a></span>IsAbsolutePath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOND_API bool Bond::IsAbsolutePath </td>
+          <td>(</td>
+          <td class="paramtype">const StringView &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns whether a path is absolute, that is whether it starts with a '/' or '\' separator, or with a drive letter prefix such as "C:". </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>The path to be tested. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaaf703843801b253138e8e6b865719467" name="gaaf703843801b253138e8e6b865719467"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaf703843801b253138e8e6b865719467">&#9670;&#160;</a></span>NormalizePath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOND_API void Bond::NormalizePath </td>
+          <td>(</td>
+          <td class="paramtype">const StringView &amp;</td>          <td class="paramname"><span class="paramname"><em>directory</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const StringView &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector&lt; char &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>result</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lexically normalizes the path formed by joining a directory and a path. </p>
+<p>The result uses '/' separators, contains no "." segments or repeated separators, and has "segment/.." pairs collapsed. Leading ".." segments are kept on relative paths and dropped at the root of absolute paths. A drive letter prefix, a root separator and a UNC "//" prefix are preserved. An empty result is written as ".". No file system calls are made, so the names need not refer to files, and symbolic links are not resolved. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">directory</td><td>A directory to prepend to path, with an implied separator between them. It may be empty. </td></tr>
+    <tr><td class="paramname">path</td><td>The path to be normalized. </td></tr>
+    <tr><td class="paramname">result</td><td>Receives the null terminated normalized path. Its previous contents are discarded. No memory is allocated other than by result. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

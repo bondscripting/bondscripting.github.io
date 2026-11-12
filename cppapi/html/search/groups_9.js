@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['virtual_20machine_0',['Virtual Machine',['../group__vm.html',1,'']]]
+  ['tools_0',['Tools',['../group__tools.html',1,'']]],
+  ['types_1',['Types',['../group__types.html',1,'']]]
 ];

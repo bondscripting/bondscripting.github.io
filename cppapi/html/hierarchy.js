@@ -17,6 +17,7 @@ var hierarchy =
       [ "Bond::WrapperCollectable< T >", "class_bond_1_1_wrapper_collectable.html", null ]
     ] ],
     [ "Bond::Collector", "class_bond_1_1_collector.html", null ],
+    [ "Bond::CommandLineArgs", "class_bond_1_1_command_line_args.html", null ],
     [ "Bond::CompilerError", "class_bond_1_1_compiler_error.html", null ],
     [ "Bond::CompilerErrorBuffer", "class_bond_1_1_compiler_error_buffer.html", null ],
     [ "Bond::ConstantTable", "struct_bond_1_1_constant_table.html", null ],
@@ -140,6 +141,7 @@ var hierarchy =
     [ "unique_ptr", null, [
       [ "Bond::Allocator::AlignedHandle< const CodeSegment >", "class_bond_1_1_allocator_1_1_aligned_handle.html", null ],
       [ "Bond::Allocator::Handle< const TokenCollection >", "class_bond_1_1_allocator_1_1_handle.html", null ],
+      [ "Bond::Allocator::Handle< char >", "class_bond_1_1_allocator_1_1_handle.html", null ],
       [ "Bond::Allocator::Handle< uint8_t >", "class_bond_1_1_allocator_1_1_handle.html", null ],
       [ "Bond::Allocator::ObjectHandle< ParseNode >", "class_bond_1_1_allocator_1_1_object_handle.html", null ],
       [ "Bond::Allocator::ObjectHandle< InputStream >", "class_bond_1_1_allocator_1_1_object_handle.html", null ],
@@ -150,6 +152,7 @@ var hierarchy =
       [ "Bond::Allocator::Handle< T >", "class_bond_1_1_allocator_1_1_handle.html", null ],
       [ "Bond::Allocator::ObjectHandle< T >", "class_bond_1_1_allocator_1_1_object_handle.html", null ]
     ] ],
+    [ "Bond::Utf8ConsoleOutput", "class_bond_1_1_utf8_console_output.html", null ],
     [ "Bond::Value", "union_bond_1_1_value.html", null ],
     [ "Bond::Value16", "union_bond_1_1_value16.html", null ],
     [ "Bond::Value32", "union_bond_1_1_value32.html", null ],

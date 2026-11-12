@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_bond_1_1
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6760f38e84ea0846923a366bb816939a" id="r_a6760f38e84ea0846923a366bb816939a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a6760f38e84ea0846923a366bb816939a">TokenStream</a> ()</td></tr>
-<tr class="memdesc:a6760f38e84ea0846923a366bb816939a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an empty <a class="el" href="class_bond_1_1_token_stream.html" title="An iterator over the contents of a TokenCollection.">TokenStream</a> object.  <br /></td></tr>
+<tr class="memdesc:a6760f38e84ea0846923a366bb816939a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an empty <a class="el" href="class_bond_1_1_token_stream.html" title="An iterator over the contents of a TokenCollection.">TokenStream</a> object. A buffer must be set with <a class="el" href="#abc32cc177cc2c73c18b584c9c7690730" title="Sets the underlying buffer of Token objects and resets the position of the stream.">SetBuffer()</a> before any Tokens are accessed.  <br /></td></tr>
 <tr class="memitem:a716429ba2c0cb2865819e4a6a7564ecc" id="r_a716429ba2c0cb2865819e4a6a7564ecc"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a716429ba2c0cb2865819e4a6a7564ecc">TokenStream</a> (const <a class="el" href="class_bond_1_1_token.html">Token</a> *buffer, int length)</td></tr>
 <tr class="memdesc:a716429ba2c0cb2865819e4a6a7564ecc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_bond_1_1_token_stream.html" title="An iterator over the contents of a TokenCollection.">TokenStream</a> object.  <br /></td></tr>
 <tr class="memitem:abc32cc177cc2c73c18b584c9c7690730" id="r_abc32cc177cc2c73c18b584c9c7690730"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abc32cc177cc2c73c18b584c9c7690730">SetBuffer</a> (const <a class="el" href="class_bond_1_1_token.html">Token</a> *buffer, int length)</td></tr>
@@ -130,7 +130,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab92f017668577a5f7afafe231d3a3253" id="r_ab92f017668577a5f7afafe231d3a3253"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab92f017668577a5f7afafe231d3a3253">Reset</a> ()</td></tr>
 <tr class="memdesc:ab92f017668577a5f7afafe231d3a3253"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the position of the stream.  <br /></td></tr>
 <tr class="memitem:a14038017ae91be7bf80597260de4f06e" id="r_a14038017ae91be7bf80597260de4f06e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a14038017ae91be7bf80597260de4f06e">Advance</a> ()</td></tr>
-<tr class="memdesc:a14038017ae91be7bf80597260de4f06e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increments the position of the stream by one.  <br /></td></tr>
+<tr class="memdesc:a14038017ae91be7bf80597260de4f06e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increments the position of the stream by one, unless it is at the last <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a>.  <br /></td></tr>
 <tr class="memitem:aa80c87523faf894d9c9942197bab5139" id="r_aa80c87523faf894d9c9942197bab5139"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token.html">Token</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aa80c87523faf894d9c9942197bab5139">Next</a> ()</td></tr>
 <tr class="memdesc:aa80c87523faf894d9c9942197bab5139"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the next token in the stream and advances the position.  <br /></td></tr>
 <tr class="memitem:a201fa787fccac5d3428eaf5607bbb0ab" id="r_a201fa787fccac5d3428eaf5607bbb0ab"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token.html">Token</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a201fa787fccac5d3428eaf5607bbb0ab">NextIf</a> (<a class="el" href="class_bond_1_1_token.html#a6d09a1144b5a79476ae9c8056728362f">Token::TokenType</a> type)</td></tr>
@@ -144,19 +144,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae939103753d05ff4bdae1fa0737f3671" id="r_ae939103753d05ff4bdae1fa0737f3671"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token.html">Token</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ae939103753d05ff4bdae1fa0737f3671">PeekIf</a> (const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> &amp;typeSet) const</td></tr>
 <tr class="memdesc:ae939103753d05ff4bdae1fa0737f3671"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the next token in the stream if it matches any of the given types, otherwise returns nullptr.  <br /></td></tr>
 <tr class="memitem:aebc7bc925e190a5fb1fca869ea4cafc5" id="r_aebc7bc925e190a5fb1fca869ea4cafc5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aebc7bc925e190a5fb1fca869ea4cafc5">SkipTo</a> (<a class="el" href="class_bond_1_1_token.html#a6d09a1144b5a79476ae9c8056728362f">Token::TokenType</a> type)</td></tr>
-<tr class="memdesc:aebc7bc925e190a5fb1fca869ea4cafc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advances the position of the stream until a <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> of the given type is encountered. If no such <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> is encountered, the stream is advanced to the end.  <br /></td></tr>
+<tr class="memdesc:aebc7bc925e190a5fb1fca869ea4cafc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advances the position of the stream until a <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> of the given type is encountered. If no such <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> is encountered, the stream is advanced to the last <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a>.  <br /></td></tr>
 <tr class="memitem:a6cc5c9e7caece52960fb38246124d468" id="r_a6cc5c9e7caece52960fb38246124d468"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6cc5c9e7caece52960fb38246124d468">SkipTo</a> (const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> &amp;typeSet)</td></tr>
-<tr class="memdesc:a6cc5c9e7caece52960fb38246124d468"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advances the position of the stream until a <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> of one of the given types is encountered. If no such <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> is encountered, the stream is advanced to the end.  <br /></td></tr>
+<tr class="memdesc:a6cc5c9e7caece52960fb38246124d468"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advances the position of the stream until a <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> of one of the given types is encountered. If no such <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> is encountered, the stream is advanced to the last <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a>.  <br /></td></tr>
 <tr class="memitem:a4bb3f2417bdc32e58556ee276a0b9d98" id="r_a4bb3f2417bdc32e58556ee276a0b9d98"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a4bb3f2417bdc32e58556ee276a0b9d98">GetPosition</a> () const</td></tr>
 <tr class="memdesc:a4bb3f2417bdc32e58556ee276a0b9d98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current position of the stream.  <br /></td></tr>
 <tr class="memitem:ab897536573d31bcaa825cd4d34fdef03" id="r_ab897536573d31bcaa825cd4d34fdef03"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab897536573d31bcaa825cd4d34fdef03">SetPosition</a> (int index)</td></tr>
-<tr class="memdesc:ab897536573d31bcaa825cd4d34fdef03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current position of the stream.  <br /></td></tr>
+<tr class="memdesc:ab897536573d31bcaa825cd4d34fdef03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current position of the stream.  <br /></td></tr>
 <tr class="memitem:a9441e5623f1e1aa63e4499076a9039ff" id="r_a9441e5623f1e1aa63e4499076a9039ff"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a9441e5623f1e1aa63e4499076a9039ff">GetLength</a> () const</td></tr>
 <tr class="memdesc:a9441e5623f1e1aa63e4499076a9039ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total number of tokens in the stream.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An iterator over the contents of a <a class="el" href="class_bond_1_1_token_collection.html" title="An ordered immutable collection of Tokens.">TokenCollection</a>. </p>
-<p><a class="el" href="class_bond_1_1_token_stream.html" title="An iterator over the contents of a TokenCollection.">TokenStream</a> has methods to return the next available <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a>, test whether the next <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> is of a certain type, peek at the next <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> and manipulate the position in the stream. </p>
+<p><a class="el" href="class_bond_1_1_token_stream.html" title="An iterator over the contents of a TokenCollection.">TokenStream</a> has methods to return the next available <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a>, test whether the next <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> is of a certain type, peek at the next <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> and manipulate the position in the stream.</p>
+<p>The position of the stream never advances past the last <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a>, which for a <a class="el" href="class_bond_1_1_token_collection.html" title="An ordered immutable collection of Tokens.">TokenCollection</a> generated by a <a class="el" href="class_bond_1_1_lexer.html" title="A lexer for the Bond scripting language.">Lexer</a> is an END <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a>. Once the last <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> is reached, <a class="el" href="#aa80c87523faf894d9c9942197bab5139" title="Returns the next token in the stream and advances the position.">Next()</a> keeps returning it. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6760f38e84ea0846923a366bb816939a" name="a6760f38e84ea0846923a366bb816939a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6760f38e84ea0846923a366bb816939a">&#9670;&#160;</a></span>TokenStream() <span class="overload">[1/2]</span></h2>
@@ -181,7 +182,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Constructs an empty <a class="el" href="class_bond_1_1_token_stream.html" title="An iterator over the contents of a TokenCollection.">TokenStream</a> object. </p>
+<p>Constructs an empty <a class="el" href="class_bond_1_1_token_stream.html" title="An iterator over the contents of a TokenCollection.">TokenStream</a> object. A buffer must be set with <a class="el" href="#abc32cc177cc2c73c18b584c9c7690730" title="Sets the underlying buffer of Token objects and resets the position of the stream.">SetBuffer()</a> before any Tokens are accessed. </p>
 
 </div>
 </div>
@@ -215,8 +216,8 @@ Public Member Functions</h2></td></tr>
 <p>Constructs a <a class="el" href="class_bond_1_1_token_stream.html" title="An iterator over the contents of a TokenCollection.">TokenStream</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">buffer</td><td>A pointer to a buffer of <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> objects over which the stream iterates.. </td></tr>
-    <tr><td class="paramname">length</td><td>The number of Tokens contained in the buffer. </td></tr>
+    <tr><td class="paramname">buffer</td><td>A pointer to a buffer of <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> objects over which the stream iterates. It is not copied, so it must outlive the <a class="el" href="class_bond_1_1_token_stream.html" title="An iterator over the contents of a TokenCollection.">TokenStream</a>. </td></tr>
+    <tr><td class="paramname">length</td><td>The number of Tokens contained in the buffer. It must be at least 1. </td></tr>
   </table>
   </dd>
 </dl>
@@ -247,7 +248,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Increments the position of the stream by one. </p>
+<p>Increments the position of the stream by one, unless it is at the last <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a>. </p>
 
 </div>
 </div>
@@ -531,10 +532,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set the current position of the stream. </p>
+<p>Sets the current position of the stream. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">index</td><td>The position that the stream is set to. </td></tr>
+    <tr><td class="paramname">index</td><td>The position that the stream is set to. It is clamped to the range [0, <a class="el" href="#a9441e5623f1e1aa63e4499076a9039ff" title="Returns the total number of tokens in the stream.">GetLength()</a> - 1]. </td></tr>
   </table>
   </dd>
 </dl>
@@ -556,7 +557,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Advances the position of the stream until a <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> of one of the given types is encountered. If no such <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> is encountered, the stream is advanced to the end. </p>
+<p>Advances the position of the stream until a <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> of one of the given types is encountered. If no such <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> is encountered, the stream is advanced to the last <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">typeSet</td><td>The set of types against which the Tokens are compared. </td></tr>
@@ -581,7 +582,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Advances the position of the stream until a <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> of the given type is encountered. If no such <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> is encountered, the stream is advanced to the end. </p>
+<p>Advances the position of the stream until a <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> of the given type is encountered. If no such <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> is encountered, the stream is advanced to the last <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">type</td><td>The type against which the Tokens are compared. </td></tr>

@@ -10,6 +10,5 @@ var struct_bond_1_1_function =
     [ "mPackedArgSize", "struct_bond_1_1_function.html#aea10754fdc06e8c598c7b3f4d1e08e8a", null ],
     [ "mParamListSignature", "struct_bond_1_1_function.html#aa2e0945b465e2ad73112ef9fb6b19d5c", null ],
     [ "mReturnSignature", "struct_bond_1_1_function.html#a00bd219afcaef29323fbc3b4a45d5ce0", null ],
-    [ "mStackSize", "struct_bond_1_1_function.html#a7ebe86c4e1e627ee44caedba8cbcaf2c", null ],
-    [ "mUnpackArguments", "struct_bond_1_1_function.html#a0caff527dbdaa04ff42dd69473c50c34", null ]
+    [ "mStackSize", "struct_bond_1_1_function.html#a7ebe86c4e1e627ee44caedba8cbcaf2c", null ]
 ];

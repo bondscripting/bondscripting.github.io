@@ -122,11 +122,13 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_bond_1_1
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af495c3b567b308efa59146b454cdd08f" id="r_af495c3b567b308efa59146b454cdd08f"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#af495c3b567b308efa59146b454cdd08f">InputStreamAdaptor</a> (<a class="el" href="class_bond_1_1_input_stream.html">InputStream</a> *stream)</td></tr>
-<tr class="memdesc:af495c3b567b308efa59146b454cdd08f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <a class="el" href="class_bond_1_1_input_stream_adaptor.html" title="A wrapper around an InputStream that adds formatted input operations used within the Bond Standard Li...">InputStreamAdaptor</a> object.  <br /></td></tr>
+<tr class="memdesc:af495c3b567b308efa59146b454cdd08f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <a class="el" href="class_bond_1_1_input_stream_adaptor.html" title="A wrapper around an InputStream that adds formatted input operations used within the Bond Standard Li...">InputStreamAdaptor</a> object with no formatting flags.  <br /></td></tr>
 <tr class="memitem:a373fb145ec08934a9dedca59f8a5e3a6" id="r_a373fb145ec08934a9dedca59f8a5e3a6"><td class="memItemLeft"><a class="el" href="class_bond_1_1_input_stream.html">InputStream</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a373fb145ec08934a9dedca59f8a5e3a6">GetStream</a> () const</td></tr>
 <tr class="memdesc:a373fb145ec08934a9dedca59f8a5e3a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the wrapped <a class="el" href="class_bond_1_1_input_stream.html" title="An abstract interface for performing both unformatted and formatted input operations.">InputStream</a>.  <br /></td></tr>
+<tr class="memitem:afcbd67bdb137d6c3e9bb14a5c4cd8c29" id="r_afcbd67bdb137d6c3e9bb14a5c4cd8c29"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afcbd67bdb137d6c3e9bb14a5c4cd8c29">Close</a> ()</td></tr>
+<tr class="memdesc:afcbd67bdb137d6c3e9bb14a5c4cd8c29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the wrapped <a class="el" href="class_bond_1_1_input_stream.html" title="An abstract interface for performing both unformatted and formatted input operations.">InputStream</a> and detaches from it, after which GetStream returns null. Does nothing if there is no wrapped <a class="el" href="class_bond_1_1_input_stream.html" title="An abstract interface for performing both unformatted and formatted input operations.">InputStream</a>.  <br /></td></tr>
 <tr class="memitem:abbe36ca03bd9f2c19a45e0eb3c6f2c49" id="r_abbe36ca03bd9f2c19a45e0eb3c6f2c49"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abbe36ca03bd9f2c19a45e0eb3c6f2c49">ScanStr</a> (char *str, uint32_t bufferSize)</td></tr>
-<tr class="memdesc:abbe36ca03bd9f2c19a45e0eb3c6f2c49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scans a string from the wrapped <a class="el" href="class_bond_1_1_input_stream.html" title="An abstract interface for performing both unformatted and formatted input operations.">InputStream</a>.  <br /></td></tr>
+<tr class="memdesc:abbe36ca03bd9f2c19a45e0eb3c6f2c49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scans a whitespace-delimited string from the wrapped <a class="el" href="class_bond_1_1_input_stream.html" title="An abstract interface for performing both unformatted and formatted input operations.">InputStream</a>.  <br /></td></tr>
 <tr class="memitem:a3d72dd895c5a3b1e5639d224b5c77cce" id="r_a3d72dd895c5a3b1e5639d224b5c77cce"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a3d72dd895c5a3b1e5639d224b5c77cce">ScanBool</a> ()</td></tr>
 <tr class="memdesc:a3d72dd895c5a3b1e5639d224b5c77cce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scans a boolean value from the wrapped <a class="el" href="class_bond_1_1_input_stream.html" title="An abstract interface for performing both unformatted and formatted input operations.">InputStream</a>.  <br /></td></tr>
 <tr class="memitem:ae902d9f5424e378c108ac19aa4da520f" id="r_ae902d9f5424e378c108ac19aa4da520f"><td class="memItemLeft">int8_t&#160;</td><td class="memItemRight"><a class="el" href="#ae902d9f5424e378c108ac19aa4da520f">ScanChar</a> ()</td></tr>
@@ -152,6 +154,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A wrapper around an <a class="el" href="class_bond_1_1_input_stream.html" title="An abstract interface for performing both unformatted and formatted input operations.">InputStream</a> that adds formatted input operations used within the <a class="el" href="namespace_bond.html">Bond</a> Standard Library. </p>
+<p>The scanning functions must only be called while the adaptor wraps a stream. A value that cannot be scanned is returned as 0. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af495c3b567b308efa59146b454cdd08f" name="af495c3b567b308efa59146b454cdd08f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af495c3b567b308efa59146b454cdd08f">&#9670;&#160;</a></span>InputStreamAdaptor()</h2>
@@ -176,10 +179,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Constructs an <a class="el" href="class_bond_1_1_input_stream_adaptor.html" title="A wrapper around an InputStream that adds formatted input operations used within the Bond Standard Li...">InputStreamAdaptor</a> object. </p>
+<p>Constructs an <a class="el" href="class_bond_1_1_input_stream_adaptor.html" title="A wrapper around an InputStream that adds formatted input operations used within the Bond Standard Li...">InputStreamAdaptor</a> object with no formatting flags. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">stream</td><td>The stream from which formatted input is read. </td></tr>
+    <tr><td class="paramname">stream</td><td>The stream from which formatted input is read, or null. The stream is not owned by the adaptor. </td></tr>
   </table>
   </dd>
 </dl>
@@ -212,6 +215,25 @@ Public Member Functions</h2></td></tr>
 
 <p>Clears all formatting flags. </p>
 <p>This clears any bitfield values previously set from the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618">IO::Flags</a> enum. </p>
+
+</div>
+</div>
+<a id="afcbd67bdb137d6c3e9bb14a5c4cd8c29" name="afcbd67bdb137d6c3e9bb14a5c4cd8c29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcbd67bdb137d6c3e9bb14a5c4cd8c29">&#9670;&#160;</a></span>Close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Bond::InputStreamAdaptor::Close </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Closes the wrapped <a class="el" href="class_bond_1_1_input_stream.html" title="An abstract interface for performing both unformatted and formatted input operations.">InputStream</a> and detaches from it, after which GetStream returns null. Does nothing if there is no wrapped <a class="el" href="class_bond_1_1_input_stream.html" title="An abstract interface for performing both unformatted and formatted input operations.">InputStream</a>. </p>
 
 </div>
 </div>
@@ -389,11 +411,11 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Scans a string from the wrapped <a class="el" href="class_bond_1_1_input_stream.html" title="An abstract interface for performing both unformatted and formatted input operations.">InputStream</a>. </p>
+<p>Scans a whitespace-delimited string from the wrapped <a class="el" href="class_bond_1_1_input_stream.html" title="An abstract interface for performing both unformatted and formatted input operations.">InputStream</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">str</td><td>Buffer where the scanned string is written. </td></tr>
-    <tr><td class="paramname">bufferSize</td><td>The size of the destination buffer, in bytes. </td></tr>
+    <tr><td class="paramname">str</td><td>Buffer where the scanned string is written, followed by a null terminator. </td></tr>
+    <tr><td class="paramname">bufferSize</td><td>The size of the destination buffer, in bytes. At most bufferSize - 1 characters are scanned. </td></tr>
   </table>
   </dd>
 </dl>

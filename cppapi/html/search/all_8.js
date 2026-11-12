@@ -1,15 +1,17 @@
 var searchData=
 [
   ['handle_0',['Handle',['../class_bond_1_1_allocator_1_1_handle.html',1,'Bond::Allocator::Handle&lt; T &gt;'],['../class_bond_1_1_allocator_1_1_handle.html#a6e9fbf4db1f98410fd8cc9246cb3662b',1,'Bond::Allocator::Handle::Handle(Allocator *allocator=nullptr, T *ptr=nullptr)'],['../class_bond_1_1_allocator_1_1_handle.html#a5e754a110a404f6c6b6fbd8a451a24f6',1,'Bond::Allocator::Handle::Handle(Allocator &amp;allocator, T *ptr=nullptr)'],['../class_bond_1_1_allocator_1_1_handle.html#ae98f2d8a3e80b345ca8e2c5684187c0a',1,'Bond::Allocator::Handle::Handle(Handle &amp;&amp;other)']]],
-  ['handle_3c_20const_20tokencollection_20_3e_1',['Handle&lt; const TokenCollection &gt;',['../class_bond_1_1_allocator_1_1_handle.html',1,'Bond::Allocator']]],
-  ['handle_3c_20uint8_5ft_20_3e_2',['Handle&lt; uint8_t &gt;',['../class_bond_1_1_allocator_1_1_handle.html',1,'Bond::Allocator']]],
-  ['hasannotation_3',['HasAnnotation',['../class_bond_1_1_token.html#a0151ade5d937d7f23e4e4ca595c9a638',1,'Bond::Token']]],
-  ['haserror_4',['HasError',['../class_bond_1_1_memory_input_stream.html#ac50b39e604c5043aad46f88518e81f53',1,'Bond::MemoryInputStream::HasError()'],['../class_bond_1_1_memory_output_stream.html#aa8ab2c941ebe5da84716faaefeecaae8',1,'Bond::MemoryOutputStream::HasError()'],['../class_bond_1_1_stdio_input_stream.html#a0a7c2f274d8e0642f4c539c647b32fa1',1,'Bond::StdioInputStream::HasError()'],['../class_bond_1_1_stdio_output_stream.html#a3daab285f6bb6a5bd4e3f9e55a2e1eaf',1,'Bond::StdioOutputStream::HasError()'],['../class_bond_1_1_stream.html#a7dd39d528d8d3dae47635e10da8cfb77',1,'Bond::Stream::HasError()']]],
-  ['haserrors_5',['HasErrors',['../class_bond_1_1_compiler_error_buffer.html#a942a592ab37bd2026b9ba2ff01782769',1,'Bond::CompilerErrorBuffer::HasErrors()'],['../class_bond_1_1_front_end.html#a7f375a36406a4cf40ab09923c5b2af0b',1,'Bond::FrontEnd::HasErrors()']]],
-  ['hasnext_6',['HasNext',['../class_bond_1_1_char_stream.html#a6a39f11d1f5b754ec51c8089ad713186',1,'Bond::CharStream']]],
-  ['hex_7',['HEX',['../class_bond_1_1_token.html#ad4b6c5692435cfc04cc96eb829d10da2a2f8111ca56dd179a05260d8f54f51498',1,'Bond::Token']]],
-  ['hex_8',['Hex',['../namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9',1,'Bond::IO']]],
-  ['hex_5fescape_5frange_9',['HEX_ESCAPE_RANGE',['../class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4ca161c52cc0c1972bedf4b41ff4c65f31a',1,'Bond::CompilerError']]],
-  ['hypotd_10',['HypotD',['../namespace_bond.html#ada27586e5031a696d8e3a3049b765715',1,'Bond']]],
-  ['hypotf_11',['HypotF',['../namespace_bond.html#a22502db7cd5065aaac95547b2c49941b',1,'Bond']]]
+  ['handle_3c_20char_20_3e_1',['Handle&lt; char &gt;',['../class_bond_1_1_allocator_1_1_handle.html',1,'Bond::Allocator']]],
+  ['handle_3c_20const_20tokencollection_20_3e_2',['Handle&lt; const TokenCollection &gt;',['../class_bond_1_1_allocator_1_1_handle.html',1,'Bond::Allocator']]],
+  ['handle_3c_20uint8_5ft_20_3e_3',['Handle&lt; uint8_t &gt;',['../class_bond_1_1_allocator_1_1_handle.html',1,'Bond::Allocator']]],
+  ['hasannotation_4',['HasAnnotation',['../class_bond_1_1_token.html#a0151ade5d937d7f23e4e4ca595c9a638',1,'Bond::Token']]],
+  ['haserror_5',['HasError',['../class_bond_1_1_memory_input_stream.html#ac50b39e604c5043aad46f88518e81f53',1,'Bond::MemoryInputStream::HasError()'],['../class_bond_1_1_memory_output_stream.html#aa8ab2c941ebe5da84716faaefeecaae8',1,'Bond::MemoryOutputStream::HasError()'],['../class_bond_1_1_stdio_input_stream.html#a0a7c2f274d8e0642f4c539c647b32fa1',1,'Bond::StdioInputStream::HasError()'],['../class_bond_1_1_stdio_output_stream.html#a3daab285f6bb6a5bd4e3f9e55a2e1eaf',1,'Bond::StdioOutputStream::HasError()'],['../class_bond_1_1_stream.html#a7dd39d528d8d3dae47635e10da8cfb77',1,'Bond::Stream::HasError()']]],
+  ['haserrors_6',['HasErrors',['../class_bond_1_1_compiler_error_buffer.html#a942a592ab37bd2026b9ba2ff01782769',1,'Bond::CompilerErrorBuffer::HasErrors()'],['../class_bond_1_1_front_end.html#a7f375a36406a4cf40ab09923c5b2af0b',1,'Bond::FrontEnd::HasErrors()']]],
+  ['hasnext_7',['HasNext',['../class_bond_1_1_char_stream.html#a6a39f11d1f5b754ec51c8089ad713186',1,'Bond::CharStream']]],
+  ['hasundefinedtypename_8',['HasUndefinedTypeName',['../class_bond_1_1_type_descriptor.html#a3bc034e52f4043fd682bce31377f9433',1,'Bond::TypeDescriptor']]],
+  ['hex_9',['HEX',['../class_bond_1_1_token.html#ad4b6c5692435cfc04cc96eb829d10da2a2f8111ca56dd179a05260d8f54f51498',1,'Bond::Token']]],
+  ['hex_10',['Hex',['../namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a1221df5b553f86e9819aa59b512958a9',1,'Bond::IO']]],
+  ['hex_5fescape_5frange_11',['HEX_ESCAPE_RANGE',['../class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4ca161c52cc0c1972bedf4b41ff4c65f31a',1,'Bond::CompilerError']]],
+  ['hypotd_12',['HypotD',['../namespace_bond.html#a721b7b9fe60e23ea23af48df5f0372d7',1,'Bond']]],
+  ['hypotf_13',['HypotF',['../namespace_bond.html#af70af93cd5dd75ff8acbc2ffb955a212',1,'Bond']]]
 ];

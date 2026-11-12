@@ -126,7 +126,8 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Tracks and destroys <a class="el" href="class_bond_1_1_collectable.html" title="Base class for objects tracked by a Collector.">Collectable</a> objects. </p>
-<p>All tracked <a class="el" href="class_bond_1_1_collectable.html" title="Base class for objects tracked by a Collector.">Collectable</a> objects are destroyed when the <a class="el" href="class_bond_1_1_collector.html" title="Tracks and destroys Collectable objects.">Collector</a> is destroyed. </p>
+<p>All tracked <a class="el" href="class_bond_1_1_collectable.html" title="Base class for objects tracked by a Collector.">Collectable</a> objects are destroyed when the <a class="el" href="class_bond_1_1_collector.html" title="Tracks and destroys Collectable objects.">Collector</a> is destroyed, most recently registered first. Each <a class="el" href="class_bond_1_1_stack_frame.html" title="The activation record of a function invoked by a VM.">StackFrame</a> has a <a class="el" href="class_bond_1_1_collector.html" title="Tracks and destroys Collectable objects.">Collector</a>, which allows native functions to tie the lifetime of objects they create to that of a function call.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_bond_1_1_stack_frame.html#a1b5fddec4c4385f16b9b4525f546ce06" title="Returns the Collector whose Collectable objects are destroyed when the stack frame is popped off of t...">StackFrame::GetCollector</a> </dd></dl>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="af86eda7be27ce40caaf245eb27239fdf" name="af86eda7be27ce40caaf245eb27239fdf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af86eda7be27ce40caaf245eb27239fdf">&#9670;&#160;</a></span>Register()</h2>
@@ -154,7 +155,7 @@ Public Member Functions</h2></td></tr>
 <p>Registers a <a class="el" href="class_bond_1_1_collectable.html" title="Base class for objects tracked by a Collector.">Collectable</a> object for later destruction. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">object</td><td>An owning handle to the <a class="el" href="class_bond_1_1_collectable.html" title="Base class for objects tracked by a Collector.">Collectable</a> object. </td></tr>
+    <tr><td class="paramname">object</td><td>An owning handle to the <a class="el" href="class_bond_1_1_collectable.html" title="Base class for objects tracked by a Collector.">Collectable</a> object. The <a class="el" href="class_bond_1_1_collector.html" title="Tracks and destroys Collectable objects.">Collector</a> takes ownership of the object, and of any objects already chained to it. Nothing is registered if the handle is null. </td></tr>
   </table>
   </dd>
 </dl>

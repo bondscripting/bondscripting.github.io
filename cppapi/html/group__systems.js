@@ -1,6 +1,7 @@
 var group__systems =
 [
-    [ "Endian", "group__endian.html", "group__endian" ],
+    [ "Assert", "group__assert.html", "group__assert" ],
+    [ "Error", "group__error.html", "group__error" ],
     [ "Math", "group__math.html", "group__math" ],
     [ "Bond::Allocator", "class_bond_1_1_allocator.html", [
       [ "Deallocator", "struct_bond_1_1_allocator_1_1_deallocator.html", [

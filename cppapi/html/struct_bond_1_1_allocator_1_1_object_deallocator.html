@@ -122,11 +122,14 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('struct_bond_1_
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:adf64bfd17666ad58c8196e83b1ab5dcf" id="r_adf64bfd17666ad58c8196e83b1ab5dcf"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#adf64bfd17666ad58c8196e83b1ab5dcf">ObjectDeallocator</a> (<a class="el" href="class_bond_1_1_allocator.html">Allocator</a> *allocator=nullptr)</td></tr>
+<tr class="memdesc:adf64bfd17666ad58c8196e83b1ab5dcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <a class="el" href="struct_bond_1_1_allocator_1_1_object_deallocator.html" title="A custom unique_ptr deleter that destroys an object by calling its destructor then freeing its memory...">ObjectDeallocator</a> object.  <br /></td></tr>
 <tr class="memitem:a029c608fdc0c425c7cbc29b43f33c100" id="r_a029c608fdc0c425c7cbc29b43f33c100"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a029c608fdc0c425c7cbc29b43f33c100">operator()</a> (T *ptr)</td></tr>
+<tr class="memdesc:a029c608fdc0c425c7cbc29b43f33c100"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the given object and frees its memory by calling <a class="el" href="class_bond_1_1_allocator.html#af126cf26d4c816747f4171957878415c" title="Frees the memory pointed to by the given pointer. The memory must have been allocated by this allocat...">Allocator::Free</a>.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ad4b52c16d421a22d55fed321b1e02acc" id="r_ad4b52c16d421a22d55fed321b1e02acc"><td class="memItemLeft"><a class="el" href="class_bond_1_1_allocator.html">Allocator</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ad4b52c16d421a22d55fed321b1e02acc">mAllocator</a></td></tr>
+<tr class="memdesc:ad4b52c16d421a22d55fed321b1e02acc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The allocator that frees the memory.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
@@ -157,6 +160,14 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Constructs an <a class="el" href="struct_bond_1_1_allocator_1_1_object_deallocator.html" title="A custom unique_ptr deleter that destroys an object by calling its destructor then freeing its memory...">ObjectDeallocator</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">allocator</td><td>The allocator that frees the memory. If null, the object is neither destroyed nor freed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
@@ -185,6 +196,8 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Destroys the given object and frees its memory by calling <a class="el" href="class_bond_1_1_allocator.html#af126cf26d4c816747f4171957878415c" title="Frees the memory pointed to by the given pointer. The memory must have been allocated by this allocat...">Allocator::Free</a>. </p>
+
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
@@ -201,6 +214,8 @@ template&lt;typename T&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The allocator that frees the memory. </p>
 
 </div>
 </div>

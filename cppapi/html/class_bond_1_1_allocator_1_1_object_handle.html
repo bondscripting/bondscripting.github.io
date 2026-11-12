@@ -128,11 +128,16 @@ Inheritance diagram for Bond::Allocator::ObjectHandle&lt; T &gt;:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:adf70115da13df44f3ec6182c92ed1757" id="r_adf70115da13df44f3ec6182c92ed1757"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#adf70115da13df44f3ec6182c92ed1757">ObjectHandle</a> (<a class="el" href="class_bond_1_1_allocator.html">Allocator</a> *allocator=nullptr, T *ptr=nullptr)</td></tr>
+<tr class="memdesc:adf70115da13df44f3ec6182c92ed1757"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <a class="el" href="class_bond_1_1_allocator_1_1_object_handle.html" title="An owning object handle that derives from unique_ptr that destroys an object using an ObjectDeallocat...">ObjectHandle</a> object.  <br /></td></tr>
 <tr class="memitem:aa93d77fe169ae7bfbf990f3d322fe7d8" id="r_aa93d77fe169ae7bfbf990f3d322fe7d8"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa93d77fe169ae7bfbf990f3d322fe7d8">ObjectHandle</a> (<a class="el" href="class_bond_1_1_allocator.html">Allocator</a> &amp;allocator, T *ptr=nullptr)</td></tr>
+<tr class="memdesc:aa93d77fe169ae7bfbf990f3d322fe7d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <a class="el" href="class_bond_1_1_allocator_1_1_object_handle.html" title="An owning object handle that derives from unique_ptr that destroys an object using an ObjectDeallocat...">ObjectHandle</a> object.  <br /></td></tr>
 <tr class="memitem:ad6a18cbb727d8f328812e569d92281f9" id="r_ad6a18cbb727d8f328812e569d92281f9"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ad6a18cbb727d8f328812e569d92281f9">ObjectHandle</a> (ObjectHandle &amp;&amp;other)</td></tr>
+<tr class="memdesc:ad6a18cbb727d8f328812e569d92281f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <a class="el" href="class_bond_1_1_allocator_1_1_object_handle.html" title="An owning object handle that derives from unique_ptr that destroys an object using an ObjectDeallocat...">ObjectHandle</a> object that takes ownership of the object owned by another.  <br /></td></tr>
 <tr class="memitem:ac4e17550ee8ddcfe30d7beb7c122f93a" id="r_ac4e17550ee8ddcfe30d7beb7c122f93a"><td class="memItemLeft"><a class="el" href="#adf70115da13df44f3ec6182c92ed1757">ObjectHandle</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ac4e17550ee8ddcfe30d7beb7c122f93a">operator=</a> (<a class="el" href="#adf70115da13df44f3ec6182c92ed1757">ObjectHandle</a> &amp;&amp;other)</td></tr>
+<tr class="memdesc:ac4e17550ee8ddcfe30d7beb7c122f93a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the currently owned object and takes ownership of the object owned by another <a class="el" href="class_bond_1_1_allocator_1_1_object_handle.html" title="An owning object handle that derives from unique_ptr that destroys an object using an ObjectDeallocat...">ObjectHandle</a>.  <br /></td></tr>
 <tr class="memitem:a69e204196bd1d4d9c0cd5c85a816b8cd" id="r_a69e204196bd1d4d9c0cd5c85a816b8cd"><td class="memTemplParams" colspan="2">template&lt;typename U, typename Bond::enable_if&lt; Bond::is_same&lt; U, T &gt;::value||Bond::has_virtual_destructor&lt; U &gt;::value, int &gt;::type = 0&gt; </td></tr>
 <tr class="memitem:a69e204196bd1d4d9c0cd5c85a816b8cd template"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a69e204196bd1d4d9c0cd5c85a816b8cd">operator ObjectHandle&lt; U &gt;</a> () &amp;&amp;</td></tr>
+<tr class="memdesc:a69e204196bd1d4d9c0cd5c85a816b8cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transfers ownership of the object to an <a class="el" href="class_bond_1_1_allocator_1_1_object_handle.html" title="An owning object handle that derives from unique_ptr that destroys an object using an ObjectDeallocat...">ObjectHandle</a> of another type, which must be T or have a virtual destructor so that the object is destroyed correctly.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
@@ -167,6 +172,15 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Constructs an <a class="el" href="class_bond_1_1_allocator_1_1_object_handle.html" title="An owning object handle that derives from unique_ptr that destroys an object using an ObjectDeallocat...">ObjectHandle</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">allocator</td><td>The allocator that frees the memory, or null if the object is not to be destroyed. </td></tr>
+    <tr><td class="paramname">ptr</td><td>Pointer to the owned object, whose memory must have been allocated by <code class="param">allocator</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="aa93d77fe169ae7bfbf990f3d322fe7d8" name="aa93d77fe169ae7bfbf990f3d322fe7d8"></a>
@@ -198,6 +212,15 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Constructs an <a class="el" href="class_bond_1_1_allocator_1_1_object_handle.html" title="An owning object handle that derives from unique_ptr that destroys an object using an ObjectDeallocat...">ObjectHandle</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">allocator</td><td>The allocator that frees the memory. </td></tr>
+    <tr><td class="paramname">ptr</td><td>Pointer to the owned object, whose memory must have been allocated by <code class="param">allocator</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ad6a18cbb727d8f328812e569d92281f9" name="ad6a18cbb727d8f328812e569d92281f9"></a>
@@ -224,6 +247,8 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Constructs an <a class="el" href="class_bond_1_1_allocator_1_1_object_handle.html" title="An owning object handle that derives from unique_ptr that destroys an object using an ObjectDeallocat...">ObjectHandle</a> object that takes ownership of the object owned by another. </p>
 
 </div>
 </div>
@@ -255,6 +280,8 @@ template&lt;typename U, typename Bond::enable_if&lt; Bond::is_same&lt; U, T &gt;
 </table>
 </div><div class="memdoc">
 
+<p>Transfers ownership of the object to an <a class="el" href="class_bond_1_1_allocator_1_1_object_handle.html" title="An owning object handle that derives from unique_ptr that destroys an object using an ObjectDeallocat...">ObjectHandle</a> of another type, which must be T or have a virtual destructor so that the object is destroyed correctly. </p>
+
 </div>
 </div>
 <a id="ac4e17550ee8ddcfe30d7beb7c122f93a" name="ac4e17550ee8ddcfe30d7beb7c122f93a"></a>
@@ -281,6 +308,8 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Destroys the currently owned object and takes ownership of the object owned by another <a class="el" href="class_bond_1_1_allocator_1_1_object_handle.html" title="An owning object handle that derives from unique_ptr that destroys an object using an ObjectDeallocat...">ObjectHandle</a>. </p>
 
 </div>
 </div>

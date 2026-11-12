@@ -157,6 +157,7 @@ Public Types</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a61b5e84991bae8a60edb4af528ef29bd" id="r_a61b5e84991bae8a60edb4af528ef29bd"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#a61b5e84991bae8a60edb4af528ef29bd">~Symbol</a> ()</td></tr>
+<tr class="memdesc:a61b5e84991bae8a60edb4af528ef29bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys a <a class="el" href="class_bond_1_1_symbol.html" title="Base class for named entities that participate in symbol lookup.">Symbol</a> object.  <br /></td></tr>
 <tr class="memitem:a2b167c4a2bcebbbb9ae3895a7794bcf9" id="r_a2b167c4a2bcebbbb9ae3895a7794bcf9"><td class="memItemLeft">virtual const <a class="el" href="class_bond_1_1_token.html">Token</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a2b167c4a2bcebbbb9ae3895a7794bcf9">GetContextToken</a> () const override</td></tr>
 <tr class="memdesc:a2b167c4a2bcebbbb9ae3895a7794bcf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the token used as source context for diagnostics.  <br /></td></tr>
 <tr class="memitem:a94935a4c6ffd49963bad4272b0fd2227" id="r_a94935a4c6ffd49963bad4272b0fd2227"><td class="memItemLeft">virtual <a class="el" href="#a37116ce688af2562fa23a3b40612faed">SymbolType</a>&#160;</td><td class="memItemRight"><a class="el" href="#a94935a4c6ffd49963bad4272b0fd2227">GetSymbolType</a> () const =0</td></tr>
@@ -170,7 +171,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a78296d8395bc00e5f5d6ba9eaa341bfe" id="r_a78296d8395bc00e5f5d6ba9eaa341bfe"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a78296d8395bc00e5f5d6ba9eaa341bfe">IsResolved</a> () const</td></tr>
 <tr class="memdesc:a78296d8395bc00e5f5d6ba9eaa341bfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true when symbol resolution has completed for this symbol.  <br /></td></tr>
 <tr class="memitem:a63f5d9711d29dbfb77e22c7f7a8d9346" id="r_a63f5d9711d29dbfb77e22c7f7a8d9346"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a63f5d9711d29dbfb77e22c7f7a8d9346">IsTypeDefinition</a> () const</td></tr>
-<tr class="memdesc:a63f5d9711d29dbfb77e22c7f7a8d9346"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this symbol defines a type.  <br /></td></tr>
+<tr class="memdesc:a63f5d9711d29dbfb77e22c7f7a8d9346"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this symbol defines a type, i.e. it is a struct or an enum.  <br /></td></tr>
 <tr class="memitem:a06da8494d2f752918f707e5e0a0ee0da" id="r_a06da8494d2f752918f707e5e0a0ee0da"><td class="memItemLeft"><a class="el" href="#a16d85fe8a9094681f443028b875ec022">Symbol</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a06da8494d2f752918f707e5e0a0ee0da">GetParentSymbol</a> ()</td></tr>
 <tr class="memdesc:a06da8494d2f752918f707e5e0a0ee0da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the enclosing symbol.  <br /></td></tr>
 <tr class="memitem:a7c625aa424d33b17add0a0cdf910483b" id="r_a7c625aa424d33b17add0a0cdf910483b"><td class="memItemLeft">const <a class="el" href="#a16d85fe8a9094681f443028b875ec022">Symbol</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a7c625aa424d33b17add0a0cdf910483b">GetParentSymbol</a> () const</td></tr>
@@ -181,18 +182,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a5d003b26e7bd5e089e6c05dbe39d1c06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds a directly contained symbol by name.  <br /></td></tr>
 <tr class="memitem:aac8353df4ee950e09ce0a1e83b76cd1d" id="r_aac8353df4ee950e09ce0a1e83b76cd1d"><td class="memItemLeft">const <a class="el" href="#a16d85fe8a9094681f443028b875ec022">Symbol</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aac8353df4ee950e09ce0a1e83b76cd1d">FindSymbol</a> (const StringView &amp;name) const</td></tr>
 <tr class="memdesc:aac8353df4ee950e09ce0a1e83b76cd1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds a directly contained symbol by name.  <br /></td></tr>
-<tr class="memitem:ac3ad4f8ecc0f83a64108e3c01a3d6b10" id="r_ac3ad4f8ecc0f83a64108e3c01a3d6b10"><td class="memItemLeft"><a class="el" href="#a16d85fe8a9094681f443028b875ec022">Symbol</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ac3ad4f8ecc0f83a64108e3c01a3d6b10">FindSymbol</a> (const StringView &amp;name, bool &amp;isAmbiguous)</td></tr>
-<tr class="memdesc:ac3ad4f8ecc0f83a64108e3c01a3d6b10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds a directly contained symbol by name, flagging ambiguous opened-namespace matches.  <br /></td></tr>
-<tr class="memitem:acf58261d0db59578d62699a4b878448a" id="r_acf58261d0db59578d62699a4b878448a"><td class="memItemLeft">const <a class="el" href="#a16d85fe8a9094681f443028b875ec022">Symbol</a> *&#160;</td><td class="memItemRight"><a class="el" href="#acf58261d0db59578d62699a4b878448a">FindSymbol</a> (const StringView &amp;name, bool &amp;isAmbiguous) const</td></tr>
-<tr class="memdesc:acf58261d0db59578d62699a4b878448a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds a directly contained symbol by name, flagging ambiguous opened-namespace matches.  <br /></td></tr>
 <tr class="memitem:a3c16267806c1adff9db8068206350d0b" id="r_a3c16267806c1adff9db8068206350d0b"><td class="memItemLeft"><a class="el" href="#a16d85fe8a9094681f443028b875ec022">Symbol</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a3c16267806c1adff9db8068206350d0b">FindSymbol</a> (const <a class="el" href="class_bond_1_1_token.html">Token</a> *name)</td></tr>
 <tr class="memdesc:a3c16267806c1adff9db8068206350d0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds a directly contained symbol by token text.  <br /></td></tr>
 <tr class="memitem:aec6752dace66dc7504238f0f96a85381" id="r_aec6752dace66dc7504238f0f96a85381"><td class="memItemLeft">const <a class="el" href="#a16d85fe8a9094681f443028b875ec022">Symbol</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aec6752dace66dc7504238f0f96a85381">FindSymbol</a> (const <a class="el" href="class_bond_1_1_token.html">Token</a> *name) const</td></tr>
 <tr class="memdesc:aec6752dace66dc7504238f0f96a85381"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds a directly contained symbol by token text.  <br /></td></tr>
-<tr class="memitem:af0d18804f941c0758f957349b852203c" id="r_af0d18804f941c0758f957349b852203c"><td class="memItemLeft"><a class="el" href="#a16d85fe8a9094681f443028b875ec022">Symbol</a> *&#160;</td><td class="memItemRight"><a class="el" href="#af0d18804f941c0758f957349b852203c">FindSymbol</a> (const <a class="el" href="class_bond_1_1_token.html">Token</a> *name, bool &amp;isAmbiguous)</td></tr>
-<tr class="memdesc:af0d18804f941c0758f957349b852203c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds a directly contained symbol by token text, flagging ambiguous opened-namespace matches.  <br /></td></tr>
-<tr class="memitem:a94055dd2030b9edbeef14c3e6bbc286b" id="r_a94055dd2030b9edbeef14c3e6bbc286b"><td class="memItemLeft">const <a class="el" href="#a16d85fe8a9094681f443028b875ec022">Symbol</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a94055dd2030b9edbeef14c3e6bbc286b">FindSymbol</a> (const <a class="el" href="class_bond_1_1_token.html">Token</a> *name, bool &amp;isAmbiguous) const</td></tr>
-<tr class="memdesc:a94055dd2030b9edbeef14c3e6bbc286b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds a directly contained symbol by token text, flagging ambiguous opened-namespace matches.  <br /></td></tr>
 <tr class="memitem:aa1133aedf14d151b31966c0b1cf9a388" id="r_aa1133aedf14d151b31966c0b1cf9a388"><td class="memItemLeft"><a class="el" href="#a16d85fe8a9094681f443028b875ec022">Symbol</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aa1133aedf14d151b31966c0b1cf9a388">FindSymbol</a> (const <a class="el" href="class_bond_1_1_qualified_identifier.html">QualifiedIdentifier</a> *identifier)</td></tr>
 <tr class="memdesc:aa1133aedf14d151b31966c0b1cf9a388"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds a symbol referenced by a qualified identifier.  <br /></td></tr>
 <tr class="memitem:a49c92d40779b10dbe4ba6632b979a1c0" id="r_a49c92d40779b10dbe4ba6632b979a1c0"><td class="memItemLeft">const <a class="el" href="#a16d85fe8a9094681f443028b875ec022">Symbol</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a49c92d40779b10dbe4ba6632b979a1c0">FindSymbol</a> (const <a class="el" href="class_bond_1_1_qualified_identifier.html">QualifiedIdentifier</a> *identifier) const</td></tr>
@@ -202,7 +195,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aae6fce38f01fca3f0724320d5844faad" id="r_aae6fce38f01fca3f0724320d5844faad"><td class="memItemLeft">const <a class="el" href="#a16d85fe8a9094681f443028b875ec022">Symbol</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aae6fce38f01fca3f0724320d5844faad">FindSymbol</a> (const <a class="el" href="class_bond_1_1_qualified_identifier.html">QualifiedIdentifier</a> *identifier, bool &amp;isAmbiguous) const</td></tr>
 <tr class="memdesc:aae6fce38f01fca3f0724320d5844faad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds a symbol referenced by a qualified identifier, flagging ambiguous matches.  <br /></td></tr>
 <tr class="memitem:a6d19ac252374cf7047511864f5e0cabf" id="r_a6d19ac252374cf7047511864f5e0cabf"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6d19ac252374cf7047511864f5e0cabf">InsertSymbol</a> (<a class="el" href="#a16d85fe8a9094681f443028b875ec022">Symbol</a> *symbol)</td></tr>
-<tr class="memdesc:a6d19ac252374cf7047511864f5e0cabf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts a symbol into this symbol's child list.  <br /></td></tr>
+<tr class="memdesc:a6d19ac252374cf7047511864f5e0cabf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts a symbol at the front of this symbol's child list and sets this symbol as its parent.  <br /></td></tr>
 <tr class="memitem:a75e4c9dff783454b2f3f36c09979559b" id="r_a75e4c9dff783454b2f3f36c09979559b"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a75e4c9dff783454b2f3f36c09979559b">IsAnonymous</a> () const</td></tr>
 <tr class="memdesc:a75e4c9dff783454b2f3f36c09979559b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this symbol has no explicit name.  <br /></td></tr>
 <tr class="memitem:a3efa23777ea775819738eebef8687850" id="r_a3efa23777ea775819738eebef8687850"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a3efa23777ea775819738eebef8687850">Matches</a> (const StringView &amp;name) const</td></tr>
@@ -219,6 +212,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a809a02e0b4bfe5cdfab6189eb777521d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens a namespace into this scope, making its members visible to unqualified lookup.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_bond_1_1_list_parse_node"><td colspan="2">Public Member Functions inherited from <a class="el" href="class_bond_1_1_list_parse_node.html">Bond::ListParseNode</a></td></tr>
 <tr class="memitem:ad34e3a955708dfa0ff6be03639492619 pub_methods_class_bond_1_1_list_parse_node" id="r_ad34e3a955708dfa0ff6be03639492619"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_list_parse_node.html#ad34e3a955708dfa0ff6be03639492619">~ListParseNode</a> ()</td></tr>
+<tr class="memdesc:ad34e3a955708dfa0ff6be03639492619 pub_methods_class_bond_1_1_list_parse_node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys a <a class="el" href="class_bond_1_1_list_parse_node.html" title="Base class for parse nodes that can be linked into singly linked lists.">ListParseNode</a> object.  <br /></td></tr>
 <tr class="memitem:a7ef67e649f6ecb80adc285091fb42851 pub_methods_class_bond_1_1_list_parse_node" id="r_a7ef67e649f6ecb80adc285091fb42851"><td class="memItemLeft"><a class="el" href="class_bond_1_1_list_parse_node.html#a7be09e471f388a343f2b68de7417f939">ListParseNode</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_list_parse_node.html#a7ef67e649f6ecb80adc285091fb42851">GetNextNode</a> ()</td></tr>
 <tr class="memdesc:a7ef67e649f6ecb80adc285091fb42851 pub_methods_class_bond_1_1_list_parse_node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the next node in the list.  <br /></td></tr>
 <tr class="memitem:a2490c2fbc501b82858efae21f95c8922 pub_methods_class_bond_1_1_list_parse_node" id="r_a2490c2fbc501b82858efae21f95c8922"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_list_parse_node.html#a7be09e471f388a343f2b68de7417f939">ListParseNode</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_list_parse_node.html#a2490c2fbc501b82858efae21f95c8922">GetNextNode</a> () const</td></tr>
@@ -227,6 +221,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a631c04c65ff24ec65a51af71a1bed5a2 pub_methods_class_bond_1_1_list_parse_node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the next node in the list.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_bond_1_1_parse_node"><td colspan="2">Public Member Functions inherited from <a class="el" href="class_bond_1_1_parse_node.html">Bond::ParseNode</a></td></tr>
 <tr class="memitem:a38c4879ddf1a936a68ebd90eeb5a03da pub_methods_class_bond_1_1_parse_node" id="r_a38c4879ddf1a936a68ebd90eeb5a03da"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_parse_node.html#a38c4879ddf1a936a68ebd90eeb5a03da">~ParseNode</a> ()</td></tr>
+<tr class="memdesc:a38c4879ddf1a936a68ebd90eeb5a03da pub_methods_class_bond_1_1_parse_node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys a <a class="el" href="class_bond_1_1_parse_node.html" title="Base class for all parse tree nodes.">ParseNode</a> object.  <br /></td></tr>
 <tr class="memitem:a361e795aa9316b263352acc85d53c13a pub_methods_class_bond_1_1_parse_node" id="r_a361e795aa9316b263352acc85d53c13a"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_parse_node.html#a361e795aa9316b263352acc85d53c13a">Accept</a> (<a class="el" href="class_bond_1_1_parse_node_visitor.html">ParseNodeVisitor</a> &amp;visitor)=0</td></tr>
 <tr class="memdesc:a361e795aa9316b263352acc85d53c13a pub_methods_class_bond_1_1_parse_node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispatches this node to the given visitor.  <br /></td></tr>
 <tr class="memitem:a9249cbd2b2f98a0e9cbfcb46b863ddbd pub_methods_class_bond_1_1_parse_node" id="r_a9249cbd2b2f98a0e9cbfcb46b863ddbd"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_parse_node.html#a9249cbd2b2f98a0e9cbfcb46b863ddbd">Accept</a> (<a class="el" href="class_bond_1_1_parse_node_visitor.html">ParseNodeVisitor</a> &amp;visitor) const =0</td></tr>
@@ -267,7 +262,7 @@ Protected Member Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a37116ce688af2562fa23a3b40612faeda6de8f5879175ed9f9f287df2c07a27cf" name="a37116ce688af2562fa23a3b40612faeda6de8f5879175ed9f9f287df2c07a27cf"></a>TYPE_VALUE&#160;</td><td class="fielddoc"><p><a class="el" href="union_bond_1_1_value.html" title="Union of all value types representable by a Token in the Bond compiler.">Value</a> symbol, such as a variable or enumerator. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a37116ce688af2562fa23a3b40612faeda9a46909d643e80e02dc3c0dd2e5da13d" name="a37116ce688af2562fa23a3b40612faeda9a46909d643e80e02dc3c0dd2e5da13d"></a>TYPE_FUNCTION&#160;</td><td class="fielddoc"><p><a class="el" href="struct_bond_1_1_function.html" title="Function metadata and executable payload loaded from CBO.">Function</a> symbol. </p>
+<tr><td class="fieldname"><a id="a37116ce688af2562fa23a3b40612faeda9a46909d643e80e02dc3c0dd2e5da13d" name="a37116ce688af2562fa23a3b40612faeda9a46909d643e80e02dc3c0dd2e5da13d"></a>TYPE_FUNCTION&#160;</td><td class="fielddoc"><p><a class="el" href="struct_bond_1_1_function.html" title="Metadata and executable code or native binding of a function loaded from a CBO.">Function</a> symbol. </p>
 </td></tr>
 </table>
 
@@ -296,6 +291,8 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Destroys a <a class="el" href="class_bond_1_1_symbol.html" title="Base class for named entities that participate in symbol lookup.">Symbol</a> object. </p>
 
 </div>
 </div>
@@ -361,7 +358,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="aa1133aedf14d151b31966c0b1cf9a388" name="aa1133aedf14d151b31966c0b1cf9a388"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa1133aedf14d151b31966c0b1cf9a388">&#9670;&#160;</a></span>FindSymbol() <span class="overload">[1/12]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1133aedf14d151b31966c0b1cf9a388">&#9670;&#160;</a></span>FindSymbol() <span class="overload">[1/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -387,7 +384,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a49c92d40779b10dbe4ba6632b979a1c0" name="a49c92d40779b10dbe4ba6632b979a1c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49c92d40779b10dbe4ba6632b979a1c0">&#9670;&#160;</a></span>FindSymbol() <span class="overload">[2/12]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a49c92d40779b10dbe4ba6632b979a1c0">&#9670;&#160;</a></span>FindSymbol() <span class="overload">[2/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -413,7 +410,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a5c0bb5af1db43740d91cf84fb8797243" name="a5c0bb5af1db43740d91cf84fb8797243"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c0bb5af1db43740d91cf84fb8797243">&#9670;&#160;</a></span>FindSymbol() <span class="overload">[3/12]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c0bb5af1db43740d91cf84fb8797243">&#9670;&#160;</a></span>FindSymbol() <span class="overload">[3/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -432,7 +429,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Finds a symbol referenced by a qualified identifier, flagging ambiguous matches. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Performs unqualified lookup of the first segment, walking outward from this symbol. As in C++, the members of a namespace opened by a using-directive are treated as members of the nearest namespace that encloses both the directive and the opened namespace. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">identifier</td><td>Qualified identifier to resolve. </td></tr>
     <tr><td class="paramname">isAmbiguous</td><td>Set to true if the identifier resolves ambiguously at some scope level. </td></tr>
@@ -444,7 +441,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="aae6fce38f01fca3f0724320d5844faad" name="aae6fce38f01fca3f0724320d5844faad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aae6fce38f01fca3f0724320d5844faad">&#9670;&#160;</a></span>FindSymbol() <span class="overload">[4/12]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aae6fce38f01fca3f0724320d5844faad">&#9670;&#160;</a></span>FindSymbol() <span class="overload">[4/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -475,7 +472,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a5d003b26e7bd5e089e6c05dbe39d1c06" name="a5d003b26e7bd5e089e6c05dbe39d1c06"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5d003b26e7bd5e089e6c05dbe39d1c06">&#9670;&#160;</a></span>FindSymbol() <span class="overload">[5/12]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d003b26e7bd5e089e6c05dbe39d1c06">&#9670;&#160;</a></span>FindSymbol() <span class="overload">[5/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -496,12 +493,12 @@ Protected Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Matching symbol, or null if not found. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Matching symbol, or null if not found. If the match is a <a class="el" href="class_bond_1_1_using_declaration.html" title="Represents a using-declaration that aliases a single symbol into local scope.">UsingDeclaration</a>, the symbol it aliases is returned instead. </dd></dl>
 
 </div>
 </div>
 <a id="aac8353df4ee950e09ce0a1e83b76cd1d" name="aac8353df4ee950e09ce0a1e83b76cd1d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac8353df4ee950e09ce0a1e83b76cd1d">&#9670;&#160;</a></span>FindSymbol() <span class="overload">[6/12]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aac8353df4ee950e09ce0a1e83b76cd1d">&#9670;&#160;</a></span>FindSymbol() <span class="overload">[6/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -522,74 +519,12 @@ Protected Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Matching symbol, or null if not found. </dd></dl>
-
-</div>
-</div>
-<a id="ac3ad4f8ecc0f83a64108e3c01a3d6b10" name="ac3ad4f8ecc0f83a64108e3c01a3d6b10"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3ad4f8ecc0f83a64108e3c01a3d6b10">&#9670;&#160;</a></span>FindSymbol() <span class="overload">[7/12]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#a16d85fe8a9094681f443028b875ec022">Symbol</a> * Bond::Symbol::FindSymbol </td>
-          <td>(</td>
-          <td class="paramtype">const StringView &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool &amp;</td>          <td class="paramname"><span class="paramname"><em>isAmbiguous</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Finds a directly contained symbol by name, flagging ambiguous opened-namespace matches. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">name</td><td>Name to search for. </td></tr>
-    <tr><td class="paramname">isAmbiguous</td><td>Set to true if more than one opened namespace defines a distinct match. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Best-effort matching symbol (the first match found), or null if not found. </dd></dl>
-
-</div>
-</div>
-<a id="acf58261d0db59578d62699a4b878448a" name="acf58261d0db59578d62699a4b878448a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf58261d0db59578d62699a4b878448a">&#9670;&#160;</a></span>FindSymbol() <span class="overload">[8/12]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="#a16d85fe8a9094681f443028b875ec022">Symbol</a> * Bond::Symbol::FindSymbol </td>
-          <td>(</td>
-          <td class="paramtype">const StringView &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool &amp;</td>          <td class="paramname"><span class="paramname"><em>isAmbiguous</em></span>&#160;) const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Finds a directly contained symbol by name, flagging ambiguous opened-namespace matches. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">name</td><td>Name to search for. </td></tr>
-    <tr><td class="paramname">isAmbiguous</td><td>Set to true if more than one opened namespace defines a distinct match. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Best-effort matching symbol (the first match found), or null if not found. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Matching symbol, or null if not found. If the match is a <a class="el" href="class_bond_1_1_using_declaration.html" title="Represents a using-declaration that aliases a single symbol into local scope.">UsingDeclaration</a>, the symbol it aliases is returned instead. </dd></dl>
 
 </div>
 </div>
 <a id="a3c16267806c1adff9db8068206350d0b" name="a3c16267806c1adff9db8068206350d0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c16267806c1adff9db8068206350d0b">&#9670;&#160;</a></span>FindSymbol() <span class="overload">[9/12]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c16267806c1adff9db8068206350d0b">&#9670;&#160;</a></span>FindSymbol() <span class="overload">[7/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -623,7 +558,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="aec6752dace66dc7504238f0f96a85381" name="aec6752dace66dc7504238f0f96a85381"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec6752dace66dc7504238f0f96a85381">&#9670;&#160;</a></span>FindSymbol() <span class="overload">[10/12]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aec6752dace66dc7504238f0f96a85381">&#9670;&#160;</a></span>FindSymbol() <span class="overload">[8/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -649,84 +584,6 @@ Protected Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>Name token to search for. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Matching symbol, or null if not found. </dd></dl>
-
-</div>
-</div>
-<a id="af0d18804f941c0758f957349b852203c" name="af0d18804f941c0758f957349b852203c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0d18804f941c0758f957349b852203c">&#9670;&#160;</a></span>FindSymbol() <span class="overload">[11/12]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#a16d85fe8a9094681f443028b875ec022">Symbol</a> * Bond::Symbol::FindSymbol </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_bond_1_1_token.html">Token</a> *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool &amp;</td>          <td class="paramname"><span class="paramname"><em>isAmbiguous</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Finds a directly contained symbol by token text, flagging ambiguous opened-namespace matches. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">name</td><td>Name token to search for. </td></tr>
-    <tr><td class="paramname">isAmbiguous</td><td>Set to true if more than one opened namespace defines a distinct match. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Matching symbol, or null if not found. </dd></dl>
-
-</div>
-</div>
-<a id="a94055dd2030b9edbeef14c3e6bbc286b" name="a94055dd2030b9edbeef14c3e6bbc286b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94055dd2030b9edbeef14c3e6bbc286b">&#9670;&#160;</a></span>FindSymbol() <span class="overload">[12/12]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="#a16d85fe8a9094681f443028b875ec022">Symbol</a> * Bond::Symbol::FindSymbol </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_bond_1_1_token.html">Token</a> *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool &amp;</td>          <td class="paramname"><span class="paramname"><em>isAmbiguous</em></span>&#160;) const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Finds a directly contained symbol by token text, flagging ambiguous opened-namespace matches. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">name</td><td>Name token to search for. </td></tr>
-    <tr><td class="paramname">isAmbiguous</td><td>Set to true if more than one opened namespace defines a distinct match. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1016,7 +873,7 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Inserts a symbol into this symbol's child list. </p>
+<p>Inserts a symbol at the front of this symbol's child list and sets this symbol as its parent. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">symbol</td><td><a class="el" href="class_bond_1_1_symbol.html" title="Base class for named entities that participate in symbol lookup.">Symbol</a> to insert. </td></tr>
@@ -1097,7 +954,7 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns true if this symbol defines a type. </p>
+<p>Returns true if this symbol defines a type, i.e. it is a struct or an enum. </p>
 
 </div>
 </div>

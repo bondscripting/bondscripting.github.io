@@ -114,6 +114,9 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_bond_1_1
 </div><!--header-->
 <div class="contents">
 
+<p>Sets up and invokes a call to a <a class="el" href="namespace_bond.html">Bond</a> function from native code.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;bond/vm/vm.h&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Bond::InvocationStackFrame:</div>
@@ -125,23 +128,37 @@ Inheritance diagram for Bond::InvocationStackFrame:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a2e4f16091215d44b95f08aeee093a4ed" id="r_a2e4f16091215d44b95f08aeee093a4ed"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a2e4f16091215d44b95f08aeee093a4ed">InvocationStackFrame</a> (<a class="el" href="class_bond_1_1_v_m.html">VM</a> &amp;vm, const <a class="el" href="class_bond_1_1_qualified_name.html">QualifiedName</a> &amp;functionName)</td></tr>
+<tr class="memdesc:a2e4f16091215d44b95f08aeee093a4ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <a class="el" href="class_bond_1_1_invocation_stack_frame.html" title="Sets up and invokes a call to a Bond function from native code.">InvocationStackFrame</a> object for a call to a function that returns void.  <br /></td></tr>
 <tr class="memitem:a3cb19582c64c99a1065872c819443ce7" id="r_a3cb19582c64c99a1065872c819443ce7"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a3cb19582c64c99a1065872c819443ce7">InvocationStackFrame</a> (<a class="el" href="class_bond_1_1_v_m.html">VM</a> &amp;vm, const char *functionName)</td></tr>
+<tr class="memdesc:a3cb19582c64c99a1065872c819443ce7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <a class="el" href="class_bond_1_1_invocation_stack_frame.html" title="Sets up and invokes a call to a Bond function from native code.">InvocationStackFrame</a> object for a call to a function that returns void.  <br /></td></tr>
 <tr class="memitem:ad52b3a6f43e81d667b55c02bb71c4acf" id="r_ad52b3a6f43e81d667b55c02bb71c4acf"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ad52b3a6f43e81d667b55c02bb71c4acf">InvocationStackFrame</a> (<a class="el" href="class_bond_1_1_v_m.html">VM</a> &amp;vm, const <a class="el" href="struct_bond_1_1_function.html">Function</a> &amp;function)</td></tr>
+<tr class="memdesc:ad52b3a6f43e81d667b55c02bb71c4acf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <a class="el" href="class_bond_1_1_invocation_stack_frame.html" title="Sets up and invokes a call to a Bond function from native code.">InvocationStackFrame</a> object for a call to a function that returns void.  <br /></td></tr>
 <tr class="memitem:a0fff8da267e386ae31b7f04525793d42" id="r_a0fff8da267e386ae31b7f04525793d42"><td class="memTemplParams" colspan="2">template&lt;typename ReturnType&gt; </td></tr>
 <tr class="memitem:a0fff8da267e386ae31b7f04525793d42 template"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a0fff8da267e386ae31b7f04525793d42">InvocationStackFrame</a> (<a class="el" href="class_bond_1_1_v_m.html">VM</a> &amp;vm, const <a class="el" href="class_bond_1_1_qualified_name.html">QualifiedName</a> &amp;functionName, ReturnType *returnPointer)</td></tr>
+<tr class="memdesc:a0fff8da267e386ae31b7f04525793d42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <a class="el" href="class_bond_1_1_invocation_stack_frame.html" title="Sets up and invokes a call to a Bond function from native code.">InvocationStackFrame</a> object for a call to a function that returns a value.  <br /></td></tr>
 <tr class="memitem:ae756aba43350fd9d4829c37006cd9254" id="r_ae756aba43350fd9d4829c37006cd9254"><td class="memTemplParams" colspan="2">template&lt;typename ReturnType&gt; </td></tr>
 <tr class="memitem:ae756aba43350fd9d4829c37006cd9254 template"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ae756aba43350fd9d4829c37006cd9254">InvocationStackFrame</a> (<a class="el" href="class_bond_1_1_v_m.html">VM</a> &amp;vm, const char *functionName, ReturnType *returnPointer)</td></tr>
+<tr class="memdesc:ae756aba43350fd9d4829c37006cd9254"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <a class="el" href="class_bond_1_1_invocation_stack_frame.html" title="Sets up and invokes a call to a Bond function from native code.">InvocationStackFrame</a> object for a call to a function that returns a value.  <br /></td></tr>
 <tr class="memitem:aa9de296917ad603a3842672afcc5f66f" id="r_aa9de296917ad603a3842672afcc5f66f"><td class="memTemplParams" colspan="2">template&lt;typename ReturnType&gt; </td></tr>
 <tr class="memitem:aa9de296917ad603a3842672afcc5f66f template"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa9de296917ad603a3842672afcc5f66f">InvocationStackFrame</a> (<a class="el" href="class_bond_1_1_v_m.html">VM</a> &amp;vm, const <a class="el" href="struct_bond_1_1_function.html">Function</a> &amp;function, ReturnType *returnPointer)</td></tr>
+<tr class="memdesc:aa9de296917ad603a3842672afcc5f66f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <a class="el" href="class_bond_1_1_invocation_stack_frame.html" title="Sets up and invokes a call to a Bond function from native code.">InvocationStackFrame</a> object for a call to a function that returns a value.  <br /></td></tr>
 <tr class="memitem:a61e84638cbec5942a89b83ce8341381e" id="r_a61e84638cbec5942a89b83ce8341381e"><td class="memTemplParams" colspan="2">template&lt;typename ArgType&gt; </td></tr>
 <tr class="memitem:a61e84638cbec5942a89b83ce8341381e template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a61e84638cbec5942a89b83ce8341381e">PushArg</a> (const ArgType &amp;arg)</td></tr>
-<tr class="memitem:a9f62cecac011c47574bb37530644e551" id="r_a9f62cecac011c47574bb37530644e551"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9f62cecac011c47574bb37530644e551">PushArgs</a> ()</td></tr>
-<tr class="memitem:a319cd4d8861c8e5a1d79d024484c68f7" id="r_a319cd4d8861c8e5a1d79d024484c68f7"><td class="memTemplParams" colspan="2">template&lt;typename Arg1, typename... Args&gt; </td></tr>
-<tr class="memitem:a319cd4d8861c8e5a1d79d024484c68f7 template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a319cd4d8861c8e5a1d79d024484c68f7">PushArgs</a> (Arg1 arg1, Args... args)</td></tr>
+<tr class="memdesc:a61e84638cbec5942a89b83ce8341381e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes the next argument of the function call.  <br /></td></tr>
+<tr class="memitem:a20b034f8c3feb4d6a7086794fae0a9f7" id="r_a20b034f8c3feb4d6a7086794fae0a9f7"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:a20b034f8c3feb4d6a7086794fae0a9f7 template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a20b034f8c3feb4d6a7086794fae0a9f7">PushArgs</a> (Args... args)</td></tr>
+<tr class="memdesc:a20b034f8c3feb4d6a7086794fae0a9f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes the next arguments of the function call, in order, as if by calling <a class="el" href="#a61e84638cbec5942a89b83ce8341381e" title="Pushes the next argument of the function call.">PushArg()</a> for each of them.  <br /></td></tr>
 <tr class="memitem:a8d2f2a683dbf969aab9457070a5c7367" id="r_a8d2f2a683dbf969aab9457070a5c7367"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8d2f2a683dbf969aab9457070a5c7367">Call</a> ()</td></tr>
+<tr class="memdesc:a8d2f2a683dbf969aab9457070a5c7367"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invokes the function. Must be called after all of its arguments have been pushed.  <br /></td></tr>
 <tr class="memitem:a38eb45ed32190c17e95c85b99e20119c" id="r_a38eb45ed32190c17e95c85b99e20119c"><td class="memItemLeft"><a class="el" href="#a2e4f16091215d44b95f08aeee093a4ed">InvocationStackFrame</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a38eb45ed32190c17e95c85b99e20119c">operator=</a> (const <a class="el" href="#a2e4f16091215d44b95f08aeee093a4ed">InvocationStackFrame</a> &amp;other)=delete</td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Sets up and invokes a call to a <a class="el" href="namespace_bond.html">Bond</a> function from native code. </p>
+<p>Constructing an <a class="el" href="class_bond_1_1_invocation_stack_frame.html" title="Sets up and invokes a call to a Bond function from native code.">InvocationStackFrame</a> pushes a new <a class="el" href="class_bond_1_1_stack_frame.html" title="The activation record of a function invoked by a VM.">StackFrame</a> onto the <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a>'s call stack, and destroying it pops the frame off. Arguments are pushed in order with <a class="el" href="#a61e84638cbec5942a89b83ce8341381e" title="Pushes the next argument of the function call.">PushArg()</a> or <a class="el" href="#a20b034f8c3feb4d6a7086794fae0a9f7" title="Pushes the next arguments of the function call, in order, as if by calling PushArg() for each of them...">PushArgs()</a>, after which the function is invoked with <a class="el" href="#a8d2f2a683dbf969aab9457070a5c7367" title="Invokes the function. Must be called after all of its arguments have been pushed.">Call()</a>. Since the frame is popped by the destructor, InvocationStackFrames must be destroyed in the reverse order of their construction, which is naturally the case when they are local variables.</p>
+<p>The constructors that look up a function by name throw a <a class="el" href="class_bond_1_1_exception.html" title="Exception thrown for all types of errors in the Bond Runtime Library.">Bond::Exception</a> if no such function exists in the <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a>'s <a class="el" href="class_bond_1_1_code_segment.html" title="Collection of functions, static initializers and data loaded from CBO files.">CodeSegment</a>, and all constructors throw a <a class="el" href="class_bond_1_1_exception.html" title="Exception thrown for all types of errors in the Bond Runtime Library.">Bond::Exception</a> if the frame does not fit on the <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a> stack. When BOND_RUNTIME_CHECKS_ENABLED is non-zero, the constructors also validate the return type, <a class="el" href="#a61e84638cbec5942a89b83ce8341381e" title="Pushes the next argument of the function call.">PushArg()</a> validates the argument types and count, and <a class="el" href="#a8d2f2a683dbf969aab9457070a5c7367" title="Invokes the function. Must be called after all of its arguments have been pushed.">Call()</a> validates that all arguments have been pushed. Violations throw a <a class="el" href="class_bond_1_1_exception.html" title="Exception thrown for all types of errors in the Bond Runtime Library.">Bond::Exception</a>.</p>
+<p><a class="el" href="class_bond_1_1_v_m.html#ab237af34df02528077249a78b5cf7c62" title="Invokes a function that returns a value with the given arguments.">VM::CallFunction</a> and <a class="el" href="class_bond_1_1_v_m.html#a2a7e729838b5f3af3c2b4cdd311a1af8" title="Invokes a function that returns void with the given arguments.">VM::CallVoidFunction</a> are convenient alternatives for calls whose arguments are all known up front.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_bond_1_1_stack_frame.html" title="The activation record of a function invoked by a VM.">StackFrame</a>, <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a> </dd></dl>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a2e4f16091215d44b95f08aeee093a4ed" name="a2e4f16091215d44b95f08aeee093a4ed"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2e4f16091215d44b95f08aeee093a4ed">&#9670;&#160;</a></span>InvocationStackFrame() <span class="overload">[1/6]</span></h2>
 
@@ -160,6 +177,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructs an <a class="el" href="class_bond_1_1_invocation_stack_frame.html" title="Sets up and invokes a call to a Bond function from native code.">InvocationStackFrame</a> object for a call to a function that returns void. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vm</td><td>The <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a> on which the function is invoked. </td></tr>
+    <tr><td class="paramname">functionName</td><td>The fully qualified name of the function. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -182,6 +208,15 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Constructs an <a class="el" href="class_bond_1_1_invocation_stack_frame.html" title="Sets up and invokes a call to a Bond function from native code.">InvocationStackFrame</a> object for a call to a function that returns void. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vm</td><td>The <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a> on which the function is invoked. </td></tr>
+    <tr><td class="paramname">functionName</td><td>The fully qualified name of the function with its elements separated by the '.' character, e.g. "Namespace.Function". </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ad52b3a6f43e81d667b55c02bb71c4acf" name="ad52b3a6f43e81d667b55c02bb71c4acf"></a>
@@ -202,6 +237,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructs an <a class="el" href="class_bond_1_1_invocation_stack_frame.html" title="Sets up and invokes a call to a Bond function from native code.">InvocationStackFrame</a> object for a call to a function that returns void. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vm</td><td>The <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a> on which the function is invoked. </td></tr>
+    <tr><td class="paramname">function</td><td>The function to be invoked. It must belong to the <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a>'s <a class="el" href="class_bond_1_1_code_segment.html" title="Collection of functions, static initializers and data loaded from CBO files.">CodeSegment</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -231,6 +275,22 @@ template&lt;typename ReturnType&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Constructs an <a class="el" href="class_bond_1_1_invocation_stack_frame.html" title="Sets up and invokes a call to a Bond function from native code.">InvocationStackFrame</a> object for a call to a function that returns a value. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ReturnType</td><td>The native type of the return value. Integers smaller than 32 bits are returned widened to 32 bits, so they must be received in an int32_t or uint32_t. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vm</td><td>The <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a> on which the function is invoked. </td></tr>
+    <tr><td class="paramname">functionName</td><td>The fully qualified name of the function. </td></tr>
+    <tr><td class="paramname">returnPointer</td><td>Pointer to where the return value is written. It must remain valid until <a class="el" href="#a8d2f2a683dbf969aab9457070a5c7367" title="Invokes the function. Must be called after all of its arguments have been pushed.">Call()</a> returns. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ae756aba43350fd9d4829c37006cd9254" name="ae756aba43350fd9d4829c37006cd9254"></a>
@@ -258,6 +318,22 @@ template&lt;typename ReturnType&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructs an <a class="el" href="class_bond_1_1_invocation_stack_frame.html" title="Sets up and invokes a call to a Bond function from native code.">InvocationStackFrame</a> object for a call to a function that returns a value. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ReturnType</td><td>The native type of the return value. Integers smaller than 32 bits are returned widened to 32 bits, so they must be received in an int32_t or uint32_t. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vm</td><td>The <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a> on which the function is invoked. </td></tr>
+    <tr><td class="paramname">functionName</td><td>The fully qualified name of the function with its elements separated by the '.' character, e.g. "Namespace.Function". </td></tr>
+    <tr><td class="paramname">returnPointer</td><td>Pointer to where the return value is written. It must remain valid until <a class="el" href="#a8d2f2a683dbf969aab9457070a5c7367" title="Invokes the function. Must be called after all of its arguments have been pushed.">Call()</a> returns. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -287,6 +363,22 @@ template&lt;typename ReturnType&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Constructs an <a class="el" href="class_bond_1_1_invocation_stack_frame.html" title="Sets up and invokes a call to a Bond function from native code.">InvocationStackFrame</a> object for a call to a function that returns a value. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ReturnType</td><td>The native type of the return value. Integers smaller than 32 bits are returned widened to 32 bits, so they must be received in an int32_t or uint32_t. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vm</td><td>The <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a> on which the function is invoked. </td></tr>
+    <tr><td class="paramname">function</td><td>The function to be invoked. It must belong to the <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a>'s <a class="el" href="class_bond_1_1_code_segment.html" title="Collection of functions, static initializers and data loaded from CBO files.">CodeSegment</a>. </td></tr>
+    <tr><td class="paramname">returnPointer</td><td>Pointer to where the return value is written. It must remain valid until <a class="el" href="#a8d2f2a683dbf969aab9457070a5c7367" title="Invokes the function. Must be called after all of its arguments have been pushed.">Call()</a> returns. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
@@ -304,6 +396,8 @@ template&lt;typename ReturnType&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Invokes the function. Must be called after all of its arguments have been pushed. </p>
 
 </div>
 </div>
@@ -349,53 +443,46 @@ template&lt;typename ArgType&gt; </div>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a9f62cecac011c47574bb37530644e551" name="a9f62cecac011c47574bb37530644e551"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f62cecac011c47574bb37530644e551">&#9670;&#160;</a></span>PushArgs() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Bond::InvocationStackFrame::PushArgs </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>Pushes the next argument of the function call. </p>
+<p>Enums are passed as their underlying type and nullptr is passed as a null void pointer. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ArgType</td><td>The native type of the argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>The value of the argument. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a id="a319cd4d8861c8e5a1d79d024484c68f7" name="a319cd4d8861c8e5a1d79d024484c68f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a319cd4d8861c8e5a1d79d024484c68f7">&#9670;&#160;</a></span>PushArgs() <span class="overload">[2/2]</span></h2>
+<a id="a20b034f8c3feb4d6a7086794fae0a9f7" name="a20b034f8c3feb4d6a7086794fae0a9f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20b034f8c3feb4d6a7086794fae0a9f7">&#9670;&#160;</a></span>PushArgs()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Arg1, typename... Args&gt; </div>
+template&lt;typename... Args&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void Bond::InvocationStackFrame::PushArgs </td>
           <td>(</td>
-          <td class="paramtype">Arg1</td>          <td class="paramname"><span class="paramname"><em>arg1</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">Args...</td>          <td class="paramname"><span class="paramname"><em>args</em></span></td><td>)</td>
           <td></td>
-          <td class="paramtype">Args...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Pushes the next arguments of the function call, in order, as if by calling <a class="el" href="#a61e84638cbec5942a89b83ce8341381e" title="Pushes the next argument of the function call.">PushArg()</a> for each of them. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>The values of the arguments. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

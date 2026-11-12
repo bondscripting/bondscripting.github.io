@@ -128,11 +128,16 @@ Inheritance diagram for Bond::Allocator::AlignedHandle&lt; T &gt;:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9e06201d74bc97fb36968b3accba945a" id="r_a9e06201d74bc97fb36968b3accba945a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a9e06201d74bc97fb36968b3accba945a">AlignedHandle</a> (<a class="el" href="class_bond_1_1_allocator.html">Allocator</a> *allocator=nullptr, T *ptr=nullptr)</td></tr>
+<tr class="memdesc:a9e06201d74bc97fb36968b3accba945a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <a class="el" href="class_bond_1_1_allocator_1_1_aligned_handle.html" title="An owning memory handle that derives from unique_ptr that deallocates memory using an AlignedDealloca...">AlignedHandle</a> object.  <br /></td></tr>
 <tr class="memitem:aba7d0ad9f983cfb0a4ea4c7a730aec75" id="r_aba7d0ad9f983cfb0a4ea4c7a730aec75"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aba7d0ad9f983cfb0a4ea4c7a730aec75">AlignedHandle</a> (<a class="el" href="class_bond_1_1_allocator.html">Allocator</a> &amp;allocator, T *ptr=nullptr)</td></tr>
+<tr class="memdesc:aba7d0ad9f983cfb0a4ea4c7a730aec75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <a class="el" href="class_bond_1_1_allocator_1_1_aligned_handle.html" title="An owning memory handle that derives from unique_ptr that deallocates memory using an AlignedDealloca...">AlignedHandle</a> object.  <br /></td></tr>
 <tr class="memitem:a3af4738712b7e8572706c8100843b5cf" id="r_a3af4738712b7e8572706c8100843b5cf"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a3af4738712b7e8572706c8100843b5cf">AlignedHandle</a> (AlignedHandle &amp;&amp;other)</td></tr>
+<tr class="memdesc:a3af4738712b7e8572706c8100843b5cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <a class="el" href="class_bond_1_1_allocator_1_1_aligned_handle.html" title="An owning memory handle that derives from unique_ptr that deallocates memory using an AlignedDealloca...">AlignedHandle</a> object that takes ownership of the memory owned by another.  <br /></td></tr>
 <tr class="memitem:a772c84ad901def0bbb3c44631ce28a3b" id="r_a772c84ad901def0bbb3c44631ce28a3b"><td class="memItemLeft"><a class="el" href="#a9e06201d74bc97fb36968b3accba945a">AlignedHandle</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a772c84ad901def0bbb3c44631ce28a3b">operator=</a> (<a class="el" href="#a9e06201d74bc97fb36968b3accba945a">AlignedHandle</a> &amp;&amp;other)</td></tr>
+<tr class="memdesc:a772c84ad901def0bbb3c44631ce28a3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees the currently owned memory and takes ownership of the memory owned by another <a class="el" href="class_bond_1_1_allocator_1_1_aligned_handle.html" title="An owning memory handle that derives from unique_ptr that deallocates memory using an AlignedDealloca...">AlignedHandle</a>.  <br /></td></tr>
 <tr class="memitem:a058742ac71f3d4ca6d8c2535b15af24e" id="r_a058742ac71f3d4ca6d8c2535b15af24e"><td class="memTemplParams" colspan="2">template&lt;typename U&gt; </td></tr>
 <tr class="memitem:a058742ac71f3d4ca6d8c2535b15af24e template"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a058742ac71f3d4ca6d8c2535b15af24e">operator AlignedHandle&lt; U &gt;</a> () &amp;&amp;</td></tr>
+<tr class="memdesc:a058742ac71f3d4ca6d8c2535b15af24e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transfers ownership of the memory to an <a class="el" href="class_bond_1_1_allocator_1_1_aligned_handle.html" title="An owning memory handle that derives from unique_ptr that deallocates memory using an AlignedDealloca...">AlignedHandle</a> of another pointer type.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
@@ -167,6 +172,15 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Constructs an <a class="el" href="class_bond_1_1_allocator_1_1_aligned_handle.html" title="An owning memory handle that derives from unique_ptr that deallocates memory using an AlignedDealloca...">AlignedHandle</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">allocator</td><td>The allocator that frees the memory, or null if it is not to be freed. </td></tr>
+    <tr><td class="paramname">ptr</td><td>Pointer to the owned memory, which must have been allocated by <code class="param">allocator</code> with AllocateAligned. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="aba7d0ad9f983cfb0a4ea4c7a730aec75" name="aba7d0ad9f983cfb0a4ea4c7a730aec75"></a>
@@ -198,6 +212,15 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Constructs an <a class="el" href="class_bond_1_1_allocator_1_1_aligned_handle.html" title="An owning memory handle that derives from unique_ptr that deallocates memory using an AlignedDealloca...">AlignedHandle</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">allocator</td><td>The allocator that frees the memory. </td></tr>
+    <tr><td class="paramname">ptr</td><td>Pointer to the owned memory, which must have been allocated by <code class="param">allocator</code> with AllocateAligned. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a3af4738712b7e8572706c8100843b5cf" name="a3af4738712b7e8572706c8100843b5cf"></a>
@@ -224,6 +247,8 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Constructs an <a class="el" href="class_bond_1_1_allocator_1_1_aligned_handle.html" title="An owning memory handle that derives from unique_ptr that deallocates memory using an AlignedDealloca...">AlignedHandle</a> object that takes ownership of the memory owned by another. </p>
 
 </div>
 </div>
@@ -255,6 +280,8 @@ template&lt;typename U&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Transfers ownership of the memory to an <a class="el" href="class_bond_1_1_allocator_1_1_aligned_handle.html" title="An owning memory handle that derives from unique_ptr that deallocates memory using an AlignedDealloca...">AlignedHandle</a> of another pointer type. </p>
+
 </div>
 </div>
 <a id="a772c84ad901def0bbb3c44631ce28a3b" name="a772c84ad901def0bbb3c44631ce28a3b"></a>
@@ -281,6 +308,8 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Frees the currently owned memory and takes ownership of the memory owned by another <a class="el" href="class_bond_1_1_allocator_1_1_aligned_handle.html" title="An owning memory handle that derives from unique_ptr that deallocates memory using an AlignedDealloca...">AlignedHandle</a>. </p>
 
 </div>
 </div>

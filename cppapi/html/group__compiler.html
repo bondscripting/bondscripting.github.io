@@ -137,7 +137,7 @@ Classes</h2></td></tr>
 <tr class="memitem:Bond_3A_3ALexer" id="r_Bond_3A_3ALexer"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_lexer.html">Bond::Lexer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A lexer for the <a class="el" href="namespace_bond.html">Bond</a> scripting language.  <a href="class_bond_1_1_lexer.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Bond_3A_3AParseNodeTraverser" id="r_Bond_3A_3AParseNodeTraverser"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_parse_node_traverser.html">Bond::ParseNodeTraverser</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A concrete implementation of <a class="el" href="class_bond_1_1_parse_node_visitor.html" title="An abstract interface that implements the Visitor pattern over all concrete types that derive from Pa...">ParseNodeVisitor</a> that, in addition to visiting a <a class="el" href="class_bond_1_1_parse_node.html" title="Base class for all parse tree nodes.">ParseNode</a>, does a depth-first traversal its children and visits them too.  <a href="class_bond_1_1_parse_node_traverser.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A concrete implementation of <a class="el" href="class_bond_1_1_parse_node_visitor.html" title="An abstract interface that implements the Visitor pattern over all concrete types that derive from Pa...">ParseNodeVisitor</a> that, in addition to visiting a <a class="el" href="class_bond_1_1_parse_node.html" title="Base class for all parse tree nodes.">ParseNode</a>, does a depth-first traversal of its children and visits them too.  <a href="class_bond_1_1_parse_node_traverser.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Bond_3A_3ACastVisitor_3C_20T_20_3E" id="r_Bond_3A_3ACastVisitor_3C_20T_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_cast_visitor.html">Bond::CastVisitor&lt; T &gt;</a></td></tr>
 <tr class="memitem:Bond_3A_3AParseNodeVisitor" id="r_Bond_3A_3AParseNodeVisitor"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_parse_node_visitor.html">Bond::ParseNodeVisitor</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An abstract interface that implements the Visitor pattern over all concrete types that derive from <a class="el" href="class_bond_1_1_parse_node.html" title="Base class for all parse tree nodes.">ParseNode</a>.  <a href="class_bond_1_1_parse_node_visitor.html#details">More...</a><br /></td></tr>
@@ -162,6 +162,13 @@ Classes</h2></td></tr>
 <tr class="memitem:Bond_3A_3ATypeAndValue" id="r_Bond_3A_3ATypeAndValue"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_type_and_value.html">Bond::TypeAndValue</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains the information regarding the type and value of an expression as it is evaluated by the compiler.  <a href="class_bond_1_1_type_and_value.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga6df34c94046fe9c12c5c2b937b974496" id="r_ga6df34c94046fe9c12c5c2b937b974496"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga6df34c94046fe9c12c5c2b937b974496">BOND_COMPILER_ERROR_LIST</a></td></tr>
+<tr class="memdesc:ga6df34c94046fe9c12c5c2b937b974496"><td class="mdescLeft">&#160;</td><td class="mdescRight">An X-macro that lists every type of compiler error along with the format of its message.  <br /></td></tr>
+<tr class="memitem:ga68fa66092c8e7ebe2369815c69750d9c" id="r_ga68fa66092c8e7ebe2369815c69750d9c"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga68fa66092c8e7ebe2369815c69750d9c">BOND_TOKEN_LIST</a></td></tr>
+<tr class="memdesc:ga68fa66092c8e7ebe2369815c69750d9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">An X-macro that lists every type of Token.  <br /></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:ga1fa36118c02afd1f252081501e134396" id="r_ga1fa36118c02afd1f252081501e134396"><td class="memItemLeft">typedef <a class="el" href="class_bond_1_1_allocator_1_1_handle.html">Allocator::Handle</a>&lt; const <a class="el" href="class_bond_1_1_token_collection.html">TokenCollection</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ga1fa36118c02afd1f252081501e134396">Bond::TokenCollectionHandle</a></td></tr>
@@ -175,125 +182,186 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga60b58a6d92a8dd0542204be19988f4fb" id="r_ga60b58a6d92a8dd0542204be19988f4fb"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#ga60b58a6d92a8dd0542204be19988f4fb">Bond::GetLength</a> (const <a class="el" href="class_bond_1_1_list_parse_node.html">ListParseNode</a> *list)</td></tr>
-<tr class="memdesc:ga60b58a6d92a8dd0542204be19988f4fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counts and returns the length of a list of ListParseNodes.  <br /></td></tr>
+<tr class="memitem:ga6c476056c4b9b77d7bfa12327a0f3fc7" id="r_ga6c476056c4b9b77d7bfa12327a0f3fc7"><td class="memItemLeft">BOND_API uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#ga6c476056c4b9b77d7bfa12327a0f3fc7">Bond::GetLength</a> (const <a class="el" href="class_bond_1_1_list_parse_node.html">ListParseNode</a> *list)</td></tr>
+<tr class="memdesc:ga6c476056c4b9b77d7bfa12327a0f3fc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counts and returns the length of a list of ListParseNodes.  <br /></td></tr>
 <tr class="memitem:gafd2c7eff4d650e31f0504fad156abb2a" id="r_gafd2c7eff4d650e31f0504fad156abb2a"><td class="memTemplParams" colspan="2">template&lt;typename NodeType&gt; </td></tr>
 <tr class="memitem:gafd2c7eff4d650e31f0504fad156abb2a template"><td class="memItemLeft">NodeType *&#160;</td><td class="memItemRight"><a class="el" href="#gafd2c7eff4d650e31f0504fad156abb2a">Bond::NextNode</a> (NodeType *list)</td></tr>
+<tr class="memdesc:gafd2c7eff4d650e31f0504fad156abb2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the node that follows the given one in a list of ListParseNodes, cast to the same type, or null if it is the last node.  <br /></td></tr>
 <tr class="memitem:gacff143e5e2a43a089c53a46e36c1df9d" id="r_gacff143e5e2a43a089c53a46e36c1df9d"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:gacff143e5e2a43a089c53a46e36c1df9d template"><td class="memItemLeft">T *&#160;</td><td class="memItemRight"><a class="el" href="#gacff143e5e2a43a089c53a46e36c1df9d">Bond::CastNode</a> (<a class="el" href="class_bond_1_1_parse_node.html">ParseNode</a> *node)</td></tr>
+<tr class="memdesc:gacff143e5e2a43a089c53a46e36c1df9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the given <a class="el" href="class_bond_1_1_parse_node.html" title="Base class for all parse tree nodes.">ParseNode</a> cast to the concrete type T, or null if its concrete type is not exactly T. The type is determined with a visitor rather than RTTI.  <br /></td></tr>
 <tr class="memitem:ga5637b5c6671204f41a5714f7a5a438be" id="r_ga5637b5c6671204f41a5714f7a5a438be"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:ga5637b5c6671204f41a5714f7a5a438be template"><td class="memItemLeft">const T *&#160;</td><td class="memItemRight"><a class="el" href="#ga5637b5c6671204f41a5714f7a5a438be">Bond::CastNode</a> (const <a class="el" href="class_bond_1_1_parse_node.html">ParseNode</a> *node)</td></tr>
+<tr class="memdesc:ga5637b5c6671204f41a5714f7a5a438be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the given <a class="el" href="class_bond_1_1_parse_node.html" title="Base class for all parse tree nodes.">ParseNode</a> cast to the concrete type T, or null if its concrete type is not exactly T. The type is determined with a visitor rather than RTTI.  <br /></td></tr>
 <tr class="memitem:ga81794b45fe74e0f670f3a4f05e8f9903" id="r_ga81794b45fe74e0f670f3a4f05e8f9903"><td class="memTemplParams" colspan="2">template&lt;typename NodeType, typename Comparator&gt; </td></tr>
 <tr class="memitem:ga81794b45fe74e0f670f3a4f05e8f9903 template"><td class="memItemLeft">NodeType *&#160;</td><td class="memItemRight"><a class="el" href="#ga81794b45fe74e0f670f3a4f05e8f9903">Bond::InsertNode</a> (NodeType *head, NodeType *node, Comparator compare)</td></tr>
-<tr class="memitem:ga1fe8e158a8343d6e90e7c53f528179f0" id="r_ga1fe8e158a8343d6e90e7c53f528179f0"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga1fe8e158a8343d6e90e7c53f528179f0">Bond::AreComparableTypes</a> (const <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> &amp;typeA, const <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> &amp;typeB)</td></tr>
-<tr class="memitem:gaee3f46e5d7ab6ec8df54caa5479288d9" id="r_gaee3f46e5d7ab6ec8df54caa5479288d9"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#gaee3f46e5d7ab6ec8df54caa5479288d9">Bond::AreConvertibleTypes</a> (const <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> &amp;fromType, const <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> &amp;toType)</td></tr>
-<tr class="memitem:ga8da2d7c5b201b858392855597c958974" id="r_ga8da2d7c5b201b858392855597c958974"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga8da2d7c5b201b858392855597c958974">Bond::AreSameTypes</a> (const <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> &amp;fromType, const <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> &amp;toType)</td></tr>
-<tr class="memitem:gad1028a1b299a5d3e93bc965fc05de492" id="r_gad1028a1b299a5d3e93bc965fc05de492"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#gad1028a1b299a5d3e93bc965fc05de492">Bond::AreAssignableTypes</a> (const <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> &amp;fromType, const <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> &amp;toType)</td></tr>
-<tr class="memitem:gadb2bc3221e9166bbc0d5f08dfcd2b051" id="r_gadb2bc3221e9166bbc0d5f08dfcd2b051"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#gadb2bc3221e9166bbc0d5f08dfcd2b051">Bond::IsLossyConversion</a> (const <a class="el" href="class_bond_1_1_type_and_value.html">TypeAndValue</a> &amp;fromTav, const <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> &amp;toType)</td></tr>
-<tr class="memitem:ga8d7e2aa79dfc39b392744aebc3fb9f32" id="r_ga8d7e2aa79dfc39b392744aebc3fb9f32"><td class="memItemLeft"><a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga8d7e2aa79dfc39b392744aebc3fb9f32">Bond::PromoteType</a> (const <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> &amp;type)</td></tr>
-<tr class="memitem:gab36ffd20d085305e7ac53549714d0d24" id="r_gab36ffd20d085305e7ac53549714d0d24"><td class="memItemLeft"><a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a>&#160;</td><td class="memItemRight"><a class="el" href="#gab36ffd20d085305e7ac53549714d0d24">Bond::CombineOperandTypes</a> (const <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> &amp;typeA, const <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> &amp;typeB)</td></tr>
-<tr class="memitem:ga48df44e721fbe79d6d326bca4f18c4d9" id="r_ga48df44e721fbe79d6d326bca4f18c4d9"><td class="memItemLeft"><a class="el" href="union_bond_1_1_value.html">Value</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga48df44e721fbe79d6d326bca4f18c4d9">Bond::CastValue</a> (const <a class="el" href="class_bond_1_1_token.html">Token</a> &amp;fromValue, <a class="el" href="class_bond_1_1_token.html#a6d09a1144b5a79476ae9c8056728362f">Token::TokenType</a> toType)</td></tr>
-<tr class="memitem:gaefbd8a4c5ef01657c32e2a34dd2511c6" id="r_gaefbd8a4c5ef01657c32e2a34dd2511c6"><td class="memItemLeft"><a class="el" href="union_bond_1_1_value.html">Value</a>&#160;</td><td class="memItemRight"><a class="el" href="#gaefbd8a4c5ef01657c32e2a34dd2511c6">Bond::CastValue</a> (const <a class="el" href="class_bond_1_1_type_and_value.html">TypeAndValue</a> &amp;fromTav, const <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> &amp;toType)</td></tr>
-<tr class="memitem:ga511a079045da4bca0edb4ed9014f5a93" id="r_ga511a079045da4bca0edb4ed9014f5a93"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga511a079045da4bca0edb4ed9014f5a93">Bond::IsNegativeIntegerConstant</a> (const <a class="el" href="class_bond_1_1_token.html">Token</a> &amp;token)</td></tr>
+<tr class="memdesc:ga81794b45fe74e0f670f3a4f05e8f9903"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts a node into a sorted list of ListParseNodes, after any nodes that compare equal to it.  <br /></td></tr>
+<tr class="memitem:gab917d95c03deeee8843aa1bd1286ef3a" id="r_gab917d95c03deeee8843aa1bd1286ef3a"><td class="memItemLeft">BOND_API bool&#160;</td><td class="memItemRight"><a class="el" href="#gab917d95c03deeee8843aa1bd1286ef3a">Bond::AreComparableTypes</a> (const <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> &amp;typeA, const <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> &amp;typeB)</td></tr>
+<tr class="memdesc:gab917d95c03deeee8843aa1bd1286ef3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether values of the given types can be compared, i.e. whether both are pointers, both are numeric or both are bool.  <br /></td></tr>
+<tr class="memitem:ga2205ea1829bea00333032dac335bd002" id="r_ga2205ea1829bea00333032dac335bd002"><td class="memItemLeft">BOND_API bool&#160;</td><td class="memItemRight"><a class="el" href="#ga2205ea1829bea00333032dac335bd002">Bond::AreConvertibleTypes</a> (const <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> &amp;fromType, const <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> &amp;toType)</td></tr>
+<tr class="memdesc:ga2205ea1829bea00333032dac335bd002"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a value of one type can be converted to another, i.e. whether the types are comparable or are the same struct or enum type.  <br /></td></tr>
+<tr class="memitem:ga9ec5d1b3e6c1aced2f271513bfb986e8" id="r_ga9ec5d1b3e6c1aced2f271513bfb986e8"><td class="memItemLeft">BOND_API bool&#160;</td><td class="memItemRight"><a class="el" href="#ga9ec5d1b3e6c1aced2f271513bfb986e8">Bond::AreSameTypes</a> (const <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> &amp;fromType, const <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> &amp;toType)</td></tr>
+<tr class="memdesc:ga9ec5d1b3e6c1aced2f271513bfb986e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether two types are the same, recursing through pointers and arrays, where array lengths must also match. The comparison is not symmetric with respect to const: it fails if fromType is const and toType is not, at any level of indirection, but succeeds if only toType is const.  <br /></td></tr>
+<tr class="memitem:gae64962b892e1c157cea1806147a89451" id="r_gae64962b892e1c157cea1806147a89451"><td class="memItemLeft">BOND_API bool&#160;</td><td class="memItemRight"><a class="el" href="#gae64962b892e1c157cea1806147a89451">Bond::AreAssignableTypes</a> (const <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> &amp;fromType, const <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> &amp;toType)</td></tr>
+<tr class="memdesc:gae64962b892e1c157cea1806147a89451"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a value of one type can be assigned to an object of another type.  <br /></td></tr>
+<tr class="memitem:ga9b77a93d5d65bb07fe3fd6e98500e524" id="r_ga9b77a93d5d65bb07fe3fd6e98500e524"><td class="memItemLeft">BOND_API bool&#160;</td><td class="memItemRight"><a class="el" href="#ga9b77a93d5d65bb07fe3fd6e98500e524">Bond::IsLossyConversion</a> (const <a class="el" href="class_bond_1_1_type_and_value.html">TypeAndValue</a> &amp;fromTav, const <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> &amp;toType)</td></tr>
+<tr class="memdesc:ga9b77a93d5d65bb07fe3fd6e98500e524"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether converting a numeric value to the given numeric type may lose data.  <br /></td></tr>
+<tr class="memitem:ga2745a768e0b002b25a4fbcc1964f49b4" id="r_ga2745a768e0b002b25a4fbcc1964f49b4"><td class="memItemLeft">BOND_API <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga2745a768e0b002b25a4fbcc1964f49b4">Bond::PromoteType</a> (const <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> &amp;type)</td></tr>
+<tr class="memdesc:ga2745a768e0b002b25a4fbcc1964f49b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the type of an operand after C's integer promotions.  <br /></td></tr>
+<tr class="memitem:ga5a2a43a38410cd10ce561582ea19df41" id="r_ga5a2a43a38410cd10ce561582ea19df41"><td class="memItemLeft">BOND_API <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga5a2a43a38410cd10ce561582ea19df41">Bond::CombineOperandTypes</a> (const <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> &amp;typeA, const <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> &amp;typeB)</td></tr>
+<tr class="memdesc:ga5a2a43a38410cd10ce561582ea19df41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the type in which a binary operation on operands of the given types is performed, following C's usual arithmetic conversions.  <br /></td></tr>
+<tr class="memitem:ga233ba40f7908ff91c36ef2ad151bbe43" id="r_ga233ba40f7908ff91c36ef2ad151bbe43"><td class="memItemLeft">BOND_API bool&#160;</td><td class="memItemRight"><a class="el" href="#ga233ba40f7908ff91c36ef2ad151bbe43">Bond::MayConvertNegativeToUnsigned</a> (const <a class="el" href="class_bond_1_1_type_and_value.html">TypeAndValue</a> &amp;operandTav, const <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> &amp;operationType)</td></tr>
+<tr class="memdesc:ga233ba40f7908ff91c36ef2ad151bbe43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the operand has a signed integer type, the operation in which it is used has an unsigned integer type and the operand is not a constant known to be non-negative.  <br /></td></tr>
+<tr class="memitem:ga665acbfc97771b727b92b2c9ba9312b6" id="r_ga665acbfc97771b727b92b2c9ba9312b6"><td class="memItemLeft">BOND_API <a class="el" href="union_bond_1_1_value.html">Value</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga665acbfc97771b727b92b2c9ba9312b6">Bond::CastValue</a> (const <a class="el" href="class_bond_1_1_token.html">Token</a> &amp;fromValue, <a class="el" href="class_bond_1_1_token.html#a6d09a1144b5a79476ae9c8056728362f">Token::TokenType</a> toType)</td></tr>
+<tr class="memdesc:ga665acbfc97771b727b92b2c9ba9312b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the value of a constant literal <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> to the given primitive type, as a C cast would.  <br /></td></tr>
+<tr class="memitem:ga4e0595dd80bb1830f85f9b6696fd0f07" id="r_ga4e0595dd80bb1830f85f9b6696fd0f07"><td class="memItemLeft">BOND_API <a class="el" href="union_bond_1_1_value.html">Value</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga4e0595dd80bb1830f85f9b6696fd0f07">Bond::CastValue</a> (const <a class="el" href="class_bond_1_1_type_and_value.html">TypeAndValue</a> &amp;fromTav, const <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> &amp;toType)</td></tr>
+<tr class="memdesc:ga4e0595dd80bb1830f85f9b6696fd0f07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a compile-time constant value to the given primitive type, as a C cast would.  <br /></td></tr>
+<tr class="memitem:ga43fd9161a711ab87c8f2e60da2b70c0a" id="r_ga43fd9161a711ab87c8f2e60da2b70c0a"><td class="memItemLeft">BOND_API bool&#160;</td><td class="memItemRight"><a class="el" href="#ga43fd9161a711ab87c8f2e60da2b70c0a">Bond::IsNegativeIntegerConstant</a> (const <a class="el" href="class_bond_1_1_token.html">Token</a> &amp;token)</td></tr>
+<tr class="memdesc:ga43fd9161a711ab87c8f2e60da2b70c0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the given <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> is a signed integer constant literal whose value is negative.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:ga7449b8d4c459fc828acdf9ec09a1c369" id="r_ga7449b8d4c459fc828acdf9ec09a1c369"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token.html">Token</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga7449b8d4c459fc828acdf9ec09a1c369">Bond::VOID_TOKEN</a></td></tr>
-<tr class="memdesc:ga7449b8d4c459fc828acdf9ec09a1c369"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> of type <span class="tt">KEY_VOID</span> representing the <span class="tt">void</span> keyword.  <br /></td></tr>
-<tr class="memitem:ga9308c5ec469c6467bac5b9a68cffa340" id="r_ga9308c5ec469c6467bac5b9a68cffa340"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token.html">Token</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga9308c5ec469c6467bac5b9a68cffa340">Bond::BOOL_TOKEN</a></td></tr>
-<tr class="memdesc:ga9308c5ec469c6467bac5b9a68cffa340"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> of type <span class="tt">KEY_BOOL</span> representing the <span class="tt">bool</span> keyword.  <br /></td></tr>
-<tr class="memitem:gade59e3d71b933fc0ca181b6529247ccd" id="r_gade59e3d71b933fc0ca181b6529247ccd"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token.html">Token</a>&#160;</td><td class="memItemRight"><a class="el" href="#gade59e3d71b933fc0ca181b6529247ccd">Bond::CHAR_TOKEN</a></td></tr>
-<tr class="memdesc:gade59e3d71b933fc0ca181b6529247ccd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> of type <span class="tt">KEY_CHAR</span> representing the <span class="tt">char</span> keyword.  <br /></td></tr>
-<tr class="memitem:ga78010f1bcb69321419ecdaba32074716" id="r_ga78010f1bcb69321419ecdaba32074716"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token.html">Token</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga78010f1bcb69321419ecdaba32074716">Bond::UCHAR_TOKEN</a></td></tr>
-<tr class="memdesc:ga78010f1bcb69321419ecdaba32074716"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> of type <span class="tt">KEY_UCHAR</span> representing the <span class="tt">uchar</span> keyword.  <br /></td></tr>
-<tr class="memitem:ga0788343abf1d6e3fd67a610694eb0c98" id="r_ga0788343abf1d6e3fd67a610694eb0c98"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token.html">Token</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga0788343abf1d6e3fd67a610694eb0c98">Bond::INT_TOKEN</a></td></tr>
-<tr class="memdesc:ga0788343abf1d6e3fd67a610694eb0c98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> of type <span class="tt">KEY_INT</span> representing the <span class="tt">int</span> keyword.  <br /></td></tr>
-<tr class="memitem:ga7ebb336a1afba1b977dfacf36f46eba8" id="r_ga7ebb336a1afba1b977dfacf36f46eba8"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token.html">Token</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga7ebb336a1afba1b977dfacf36f46eba8">Bond::UINT_TOKEN</a></td></tr>
-<tr class="memdesc:ga7ebb336a1afba1b977dfacf36f46eba8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> of type <span class="tt">KEY_UINT</span> representing the <span class="tt">uint</span> keyword.  <br /></td></tr>
-<tr class="memitem:ga0a3506f9eeebeefa561759d459945194" id="r_ga0a3506f9eeebeefa561759d459945194"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token.html">Token</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga0a3506f9eeebeefa561759d459945194">Bond::LONG_TOKEN</a></td></tr>
-<tr class="memdesc:ga0a3506f9eeebeefa561759d459945194"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> of type <span class="tt">KEY_LONG</span> representing the <span class="tt">long</span> keyword.  <br /></td></tr>
-<tr class="memitem:ga425c23909d1b88308ade9fb2c4093784" id="r_ga425c23909d1b88308ade9fb2c4093784"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token.html">Token</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga425c23909d1b88308ade9fb2c4093784">Bond::ULONG_TOKEN</a></td></tr>
-<tr class="memdesc:ga425c23909d1b88308ade9fb2c4093784"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> of type <span class="tt">KEY_ULONG</span> representing the <span class="tt">ulong</span> keyword.  <br /></td></tr>
-<tr class="memitem:ga6393bb12c5103a750469f9284b369e8c" id="r_ga6393bb12c5103a750469f9284b369e8c"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token.html">Token</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga6393bb12c5103a750469f9284b369e8c">Bond::FLOAT_TOKEN</a></td></tr>
-<tr class="memdesc:ga6393bb12c5103a750469f9284b369e8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> of type <span class="tt">KEY_FLOAT</span> representing the <span class="tt">float</span> keyword.  <br /></td></tr>
-<tr class="memitem:ga3196e4c099aaab744e1f235851c757e4" id="r_ga3196e4c099aaab744e1f235851c757e4"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token.html">Token</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga3196e4c099aaab744e1f235851c757e4">Bond::DOUBLE_TOKEN</a></td></tr>
-<tr class="memdesc:ga3196e4c099aaab744e1f235851c757e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> of type <span class="tt">KEY_DOUBLE</span> representing the <span class="tt">double</span> keyword.  <br /></td></tr>
-<tr class="memitem:ga9904605e5234423a532ba1994b643ad2" id="r_ga9904605e5234423a532ba1994b643ad2"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga9904605e5234423a532ba1994b643ad2">Bond::PRIMITIVE_TYPE_SPECIFIERS_TYPESET</a></td></tr>
-<tr class="memdesc:ga9904605e5234423a532ba1994b643ad2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all keywords representing <a class="el" href="namespace_bond.html">Bond</a> primitive types namely: <span class="tt">KEY_BOOL</span>, <span class="tt">KEY_CHAR</span>, <span class="tt">KEY_UCHAR</span>, <span class="tt">KEY_SHORT</span>, <span class="tt">KEY_USHORT</span>, <span class="tt">KEY_INT</span>, <span class="tt">KEY_UINT</span>, <span class="tt">KEY_LONG</span>, <span class="tt">KEY_ULONG</span>, <span class="tt">KEY_FLOAT</span>, <span class="tt">KEY_DOUBLE</span> and <span class="tt">KEY_VOID</span>.  <br /></td></tr>
-<tr class="memitem:gab5b2268cb9a7ba52e9e44d6c9cd01463" id="r_gab5b2268cb9a7ba52e9e44d6c9cd01463"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#gab5b2268cb9a7ba52e9e44d6c9cd01463">Bond::BOOLEAN_TYPE_SPECIFIERS_TYPESET</a></td></tr>
-<tr class="memdesc:gab5b2268cb9a7ba52e9e44d6c9cd01463"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> containing only <span class="tt">KEY_BOOL</span>.  <br /></td></tr>
-<tr class="memitem:gabe0f430df464e7804afaab17ef9d2a73" id="r_gabe0f430df464e7804afaab17ef9d2a73"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#gabe0f430df464e7804afaab17ef9d2a73">Bond::CHAR_TYPE_SPECIFIERS_TYPESET</a></td></tr>
-<tr class="memdesc:gabe0f430df464e7804afaab17ef9d2a73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all keywords representing <a class="el" href="namespace_bond.html">Bond</a> character types, namely: <span class="tt">KEY_CHAR</span> and <span class="tt">KEY_UCHAR</span>.  <br /></td></tr>
-<tr class="memitem:gab6e8e5fda03511fdaf4644f3f3a4fa63" id="r_gab6e8e5fda03511fdaf4644f3f3a4fa63"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#gab6e8e5fda03511fdaf4644f3f3a4fa63">Bond::INTEGER_TYPE_SPECIFIERS_TYPESET</a></td></tr>
-<tr class="memdesc:gab6e8e5fda03511fdaf4644f3f3a4fa63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all keywords representing <a class="el" href="namespace_bond.html">Bond</a> integral types, namely: <span class="tt">KEY_CHAR</span>, <span class="tt">KEY_UCHAR</span>, <span class="tt">KEY_SHORT</span>, <span class="tt">KEY_USHORT</span>, <span class="tt">KEY_INT</span>, <span class="tt">KEY_UINT</span>, <span class="tt">KEY_LONG</span> and <span class="tt">KEY_ULONG</span>.  <br /></td></tr>
-<tr class="memitem:gaafea1ca0cfae7ebe4da1d7e8d67c861e" id="r_gaafea1ca0cfae7ebe4da1d7e8d67c861e"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#gaafea1ca0cfae7ebe4da1d7e8d67c861e">Bond::SIGNED_INTEGER_TYPE_SPECIFIERS_TYPESET</a></td></tr>
-<tr class="memdesc:gaafea1ca0cfae7ebe4da1d7e8d67c861e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all keywords representing <a class="el" href="namespace_bond.html">Bond</a> signed integral types, namely: <span class="tt">KEY_CHAR</span>, <span class="tt">KEY_SHORT</span>, <span class="tt">KEY_INT</span> and <span class="tt">KEY_LONG</span>.  <br /></td></tr>
-<tr class="memitem:gaec8843ce8f45d5508ac8e9d6b67e7f66" id="r_gaec8843ce8f45d5508ac8e9d6b67e7f66"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#gaec8843ce8f45d5508ac8e9d6b67e7f66">Bond::UNSIGNED_INTEGER_TYPE_SPECIFIERS_TYPESET</a></td></tr>
-<tr class="memdesc:gaec8843ce8f45d5508ac8e9d6b67e7f66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all keywords representing <a class="el" href="namespace_bond.html">Bond</a> unsigned integral types, namely: <span class="tt">KEY_UCHAR</span>, <span class="tt">KEY_USHORT</span>, <span class="tt">KEY_UINT</span> and <span class="tt">KEY_ULONG</span>.  <br /></td></tr>
-<tr class="memitem:ga4a75d07b0787dc636880fa63bc201a5f" id="r_ga4a75d07b0787dc636880fa63bc201a5f"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga4a75d07b0787dc636880fa63bc201a5f">Bond::LEAST32_INTEGER_TYPE_SPECIFIERS_TYPESET</a></td></tr>
-<tr class="memdesc:ga4a75d07b0787dc636880fa63bc201a5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all keywords representing <a class="el" href="namespace_bond.html">Bond</a> integral types having at least 32 bits, namely: <span class="tt">KEY_INT</span>, <span class="tt">KEY_UINT</span>, <span class="tt">KEY_LONG</span> and <span class="tt">KEY_ULONG</span>.  <br /></td></tr>
-<tr class="memitem:ga97c8cedea226a5156be5989588b0e3fa" id="r_ga97c8cedea226a5156be5989588b0e3fa"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga97c8cedea226a5156be5989588b0e3fa">Bond::MOST32_INTEGER_TYPE_SPECIFIERS_TYPESET</a></td></tr>
-<tr class="memdesc:ga97c8cedea226a5156be5989588b0e3fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all keywords representing <a class="el" href="namespace_bond.html">Bond</a> integral types having at most 32 bits, namely: <span class="tt">KEY_CHAR</span>, <span class="tt">KEY_UCHAR</span>, <span class="tt">KEY_SHORT</span>, <span class="tt">KEY_USHORT</span>, <span class="tt">KEY_INT</span> and <span class="tt">KEY_UINT</span>.  <br /></td></tr>
-<tr class="memitem:gaf0174c32866ace77edad0298bfdc48a7" id="r_gaf0174c32866ace77edad0298bfdc48a7"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#gaf0174c32866ace77edad0298bfdc48a7">Bond::LONG_INTEGER_TYPE_SPECIFIERS_TYPESET</a></td></tr>
-<tr class="memdesc:gaf0174c32866ace77edad0298bfdc48a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all keywords representing <a class="el" href="namespace_bond.html">Bond</a> long integral types, namely: <span class="tt">KEY_LONG</span> and <span class="tt">KEY_ULONG</span>.  <br /></td></tr>
-<tr class="memitem:gae82404223e5d79b4520e7d0d6994e61a" id="r_gae82404223e5d79b4520e7d0d6994e61a"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#gae82404223e5d79b4520e7d0d6994e61a">Bond::NUMERIC_TYPE_SPECIFIERS_TYPESET</a></td></tr>
-<tr class="memdesc:gae82404223e5d79b4520e7d0d6994e61a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all keywords representing <a class="el" href="namespace_bond.html">Bond</a> numeric types, namely: <span class="tt">KEY_CHAR</span>, <span class="tt">KEY_UCHAR</span>, <span class="tt">KEY_SHORT</span>, <span class="tt">KEY_USHORT</span>, <span class="tt">KEY_INT</span>, <span class="tt">KEY_UINT</span>, <span class="tt">KEY_LONG</span>, <span class="tt">KEY_ULONG</span>, <span class="tt">KEY_FLOAT</span> and <span class="tt">KEY_DOUBLE</span>.  <br /></td></tr>
-<tr class="memitem:ga89acd6af8490e7c9bb872cb24f581613" id="r_ga89acd6af8490e7c9bb872cb24f581613"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga89acd6af8490e7c9bb872cb24f581613">Bond::VOID_TYPE_SPECIFIERS_TYPESET</a></td></tr>
-<tr class="memdesc:ga89acd6af8490e7c9bb872cb24f581613"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> containing only <span class="tt">KEY_VOID</span>.  <br /></td></tr>
-<tr class="memitem:ga2ded564254c23d6ff90e7a11636d9bcf" id="r_ga2ded564254c23d6ff90e7a11636d9bcf"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga2ded564254c23d6ff90e7a11636d9bcf">Bond::TYPE_DESCRIPTORS_TYPESET</a></td></tr>
-<tr class="memdesc:ga2ded564254c23d6ff90e7a11636d9bcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all punctuation token types used to begin a new level of indirection in type descriptors, namely: <span class="tt">OP_STAR</span> and <span class="tt">OBRACKET</span>.  <br /></td></tr>
-<tr class="memitem:gac40b1f7400ba9e3fd1bfd29a6a8b7aa9" id="r_gac40b1f7400ba9e3fd1bfd29a6a8b7aa9"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#gac40b1f7400ba9e3fd1bfd29a6a8b7aa9">Bond::MOST32_INTEGER_CONSTANTS_TYPESET</a></td></tr>
-<tr class="memdesc:gac40b1f7400ba9e3fd1bfd29a6a8b7aa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all integral literal constants having at most 32 bits, namely: CONST_CHAR, CONST_INT and CONST_UINT.  <br /></td></tr>
-<tr class="memitem:ga543c505c34ff21a885129b62313fedc9" id="r_ga543c505c34ff21a885129b62313fedc9"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga543c505c34ff21a885129b62313fedc9">Bond::SIGNED_INTEGER_CONSTANTS_TYPESET</a></td></tr>
-<tr class="memdesc:ga543c505c34ff21a885129b62313fedc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all signed integral literal constants, namely: CONST_CHAR, CONST_INT and CONST_LONG.  <br /></td></tr>
-<tr class="memitem:ga2e60fab3cef850e9cb69a443499738a3" id="r_ga2e60fab3cef850e9cb69a443499738a3"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga2e60fab3cef850e9cb69a443499738a3">Bond::JUMP_KEYWORDS_TYPESET</a></td></tr>
-<tr class="memdesc:ga2e60fab3cef850e9cb69a443499738a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all keywords used for jumps in <a class="el" href="namespace_bond.html">Bond</a> source code, namely: <span class="tt">KEY_BREAK</span>, <span class="tt">KEY_CONTINUE</span> and <span class="tt">KEY_RETURN</span>.  <br /></td></tr>
-<tr class="memitem:gad80f8ec169da85499b1239a1a43dcd1c" id="r_gad80f8ec169da85499b1239a1a43dcd1c"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#gad80f8ec169da85499b1239a1a43dcd1c">Bond::SWITCH_LABELS_TYPESET</a></td></tr>
-<tr class="memdesc:gad80f8ec169da85499b1239a1a43dcd1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all keywords used for defining case labels in <a class="el" href="namespace_bond.html">Bond</a> switch statements, namely: <span class="tt">KEY_CASE</span> and <span class="tt">KEY_DEFAULT</span>.  <br /></td></tr>
-<tr class="memitem:gaf02f4056296bf8d944df540b89a930f1" id="r_gaf02f4056296bf8d944df540b89a930f1"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#gaf02f4056296bf8d944df540b89a930f1">Bond::ASSIGNMENT_OPERATORS_TYPESET</a></td></tr>
-<tr class="memdesc:gaf02f4056296bf8d944df540b89a930f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all <a class="el" href="namespace_bond.html">Bond</a> assignment operators, namely: <span class="tt">ASSIGN</span>, <span class="tt">ASSIGN_LEFT</span>, <span class="tt">ASSIGN_RIGHT</span>, <span class="tt">ASSIGN_PLUS</span>, <span class="tt">ASSIGN_MINUS</span>, <span class="tt">ASSIGN_MULT</span>, <span class="tt">ASSIGN_DIV</span>, <span class="tt">ASSIGN_MOD</span>, <span class="tt">ASSIGN_AND</span>, <span class="tt">ASSIGN_OR</span> and <span class="tt">ASSIGN_XOR</span>.  <br /></td></tr>
-<tr class="memitem:gad56d8615e3a6370b6b2b0b99a3652213" id="r_gad56d8615e3a6370b6b2b0b99a3652213"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#gad56d8615e3a6370b6b2b0b99a3652213">Bond::EQUALITY_OPERATORS_TYPESET</a></td></tr>
-<tr class="memdesc:gad56d8615e3a6370b6b2b0b99a3652213"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all <a class="el" href="namespace_bond.html">Bond</a> equality operators, namely: <span class="tt">OP_EQUAL</span>, <span class="tt">OP_NOT_EQUAL</span>.  <br /></td></tr>
-<tr class="memitem:gae037f865ad40449220db1bcc581dc35c" id="r_gae037f865ad40449220db1bcc581dc35c"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#gae037f865ad40449220db1bcc581dc35c">Bond::RELATIONAL_OPERATORS_TYPESET</a></td></tr>
-<tr class="memdesc:gae037f865ad40449220db1bcc581dc35c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all <a class="el" href="namespace_bond.html">Bond</a> relational operators, namely: <span class="tt">OP_LT</span>, <span class="tt">OP_LTE</span>, <span class="tt">OP_GT</span> and <span class="tt">OP_GTE</span>.  <br /></td></tr>
-<tr class="memitem:ga1d649c2fd0cb13731ad287b9073bf2e4" id="r_ga1d649c2fd0cb13731ad287b9073bf2e4"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga1d649c2fd0cb13731ad287b9073bf2e4">Bond::SHIFT_OPERATORS_TYPESET</a></td></tr>
-<tr class="memdesc:ga1d649c2fd0cb13731ad287b9073bf2e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all <a class="el" href="namespace_bond.html">Bond</a> shift operators, namely: <span class="tt">OP_LEFT</span> and <span class="tt">OP_RIGHT</span>.  <br /></td></tr>
-<tr class="memitem:ga6962c5b3330183f5047c563d0fd012dc" id="r_ga6962c5b3330183f5047c563d0fd012dc"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga6962c5b3330183f5047c563d0fd012dc">Bond::ADDITIVE_OPERATORS_TYPESET</a></td></tr>
-<tr class="memdesc:ga6962c5b3330183f5047c563d0fd012dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all <a class="el" href="namespace_bond.html">Bond</a> additive arithmetic operators, namely: <span class="tt">OP_PLUS</span> and <span class="tt">OP_MINUS</span>.  <br /></td></tr>
-<tr class="memitem:ga3255a9f59fa9f6ce200021f6398018e1" id="r_ga3255a9f59fa9f6ce200021f6398018e1"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga3255a9f59fa9f6ce200021f6398018e1">Bond::MULTIPLICATIVE_OPERATORS_TYPESET</a></td></tr>
-<tr class="memdesc:ga3255a9f59fa9f6ce200021f6398018e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all <a class="el" href="namespace_bond.html">Bond</a> multiplicative arithmetic operators, namely: <span class="tt">OP_STAR</span>, <span class="tt">OP_DIV</span> and <span class="tt">OP_MOD</span>.  <br /></td></tr>
-<tr class="memitem:ga70a75a6f7578fbf29994964380fa565d" id="r_ga70a75a6f7578fbf29994964380fa565d"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga70a75a6f7578fbf29994964380fa565d">Bond::UNARY_OPERATORS_TYPESET</a></td></tr>
-<tr class="memdesc:ga70a75a6f7578fbf29994964380fa565d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all <a class="el" href="namespace_bond.html">Bond</a> prefix unary operators, namely: <span class="tt">OP_PLUS</span>, <span class="tt">OP_MINUS</span>, <span class="tt">OP_STAR</span>, <span class="tt">OP_INC</span>, <span class="tt">OP_DEC</span>, <span class="tt">OP_NOT</span>, <span class="tt">OP_AMP</span> and <span class="tt">OP_BIT_NOT</span>.  <br /></td></tr>
-<tr class="memitem:gab1b040b4632851b40cb95e35c757bdff" id="r_gab1b040b4632851b40cb95e35c757bdff"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#gab1b040b4632851b40cb95e35c757bdff">Bond::POSTFIX_OPERATORS_TYPESET</a></td></tr>
-<tr class="memdesc:gab1b040b4632851b40cb95e35c757bdff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all <a class="el" href="namespace_bond.html">Bond</a> postfix unary operators, namely: <span class="tt">OP_INC</span>, <span class="tt">OP_DEC</span>, <span class="tt">OP_ARROW</span>, <span class="tt">OPAREN</span>, <span class="tt">OBRACKET</span> and <span class="tt">PERIOD</span>.  <br /></td></tr>
-<tr class="memitem:ga93fc2bf1b3fba85529bfb5e16beac0cd" id="r_ga93fc2bf1b3fba85529bfb5e16beac0cd"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga93fc2bf1b3fba85529bfb5e16beac0cd">Bond::PROPERTYOF_OPERATORS_TYPESET</a></td></tr>
-<tr class="memdesc:ga93fc2bf1b3fba85529bfb5e16beac0cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all <a class="el" href="namespace_bond.html">Bond</a> operators for retrieving type properties, namely: <span class="tt">KEY_ALIGNOF</span>and <span class="tt">KEY_SIZEOF</span>.  <br /></td></tr>
-<tr class="memitem:ga6cd911fd6f5e87ae899e4690f04e33e2" id="r_ga6cd911fd6f5e87ae899e4690f04e33e2"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga6cd911fd6f5e87ae899e4690f04e33e2">Bond::CONSTANT_LITERALS_TYPESET</a></td></tr>
-<tr class="memdesc:ga6cd911fd6f5e87ae899e4690f04e33e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all <a class="el" href="namespace_bond.html">Bond</a> constant literals, namely: <span class="tt">CONST_BOOL</span>, <span class="tt">CONST_CHAR</span>, <span class="tt">CONST_INT</span>, <span class="tt">CONST_UINT</span>, <span class="tt">CONST_LONG</span>, <span class="tt">CONST_ULONG</span>, <span class="tt">CONST_FLOAT</span>, <span class="tt">CONST_DOUBLE</span>, <span class="tt">CONST_STRING</span> and <span class="tt">CONST_NULL</span>.  <br /></td></tr>
-<tr class="memitem:gab090f4ef728344d6ee1b2d0bb29767a2" id="r_gab090f4ef728344d6ee1b2d0bb29767a2"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#gab090f4ef728344d6ee1b2d0bb29767a2">Bond::BLOCK_DELIMITERS_TYPESET</a></td></tr>
-<tr class="memdesc:gab090f4ef728344d6ee1b2d0bb29767a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of tokens delimiting the end of a block of <a class="el" href="namespace_bond.html">Bond</a> source, namely: <span class="tt">CBRACE</span> and <span class="tt">END</span>.  <br /></td></tr>
-<tr class="memitem:ga8ac741c1ed3a1a7c22280bb60d6d5cf5" id="r_ga8ac741c1ed3a1a7c22280bb60d6d5cf5"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga8ac741c1ed3a1a7c22280bb60d6d5cf5">Bond::DECLARATION_DELIMITERS_TYPESET</a></td></tr>
-<tr class="memdesc:ga8ac741c1ed3a1a7c22280bb60d6d5cf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of tokens delimiting the end of <a class="el" href="namespace_bond.html">Bond</a> declarations, namely: <span class="tt">KEY_ENUM</span>, <span class="tt">KEY_NAMESPACE</span>, <span class="tt">KEY_NATIVE</span>, <span class="tt">KEY_STRUCT</span>, <span class="tt">CBRACE</span>, <span class="tt">SEMICOLON</span>, and <span class="tt">END</span>.  <br /></td></tr>
-<tr class="memitem:ga25ff4a7301bf367a8873bc17d045a2e8" id="r_ga25ff4a7301bf367a8873bc17d045a2e8"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga25ff4a7301bf367a8873bc17d045a2e8">Bond::INCLUDE_AND_DECLARATION_DELIMITERS_TYPESET</a></td></tr>
-<tr class="memdesc:ga25ff4a7301bf367a8873bc17d045a2e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of tokens delimiting the end of <a class="el" href="namespace_bond.html">Bond</a> declarations and includes, namely: <span class="tt">KEY_ENUM</span>, <span class="tt">KEY_INCLUDE</span>, <span class="tt">KEY_NAMESPACE</span>, <span class="tt">KEY_NATIVE</span>, <span class="tt">KEY_STRUCT</span>, <span class="tt">CBRACE</span>, <span class="tt">SEMICOLON</span>, and <span class="tt">END</span>.  <br /></td></tr>
-<tr class="memitem:ga2f3a174e0a7cc50b96d629c7feb1b35f" id="r_ga2f3a174e0a7cc50b96d629c7feb1b35f"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga2f3a174e0a7cc50b96d629c7feb1b35f">Bond::ENUM_DELIMITERS_TYPESET</a></td></tr>
-<tr class="memdesc:ga2f3a174e0a7cc50b96d629c7feb1b35f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of tokens delimiting the end of <a class="el" href="namespace_bond.html">Bond</a> enum declarations, namely: <span class="tt">CBRACE</span>, <span class="tt">SEMICOLON</span>, and <span class="tt">END</span>.  <br /></td></tr>
-<tr class="memitem:ga3c6976e56d91d135b9baafb5c947659d" id="r_ga3c6976e56d91d135b9baafb5c947659d"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga3c6976e56d91d135b9baafb5c947659d">Bond::ENUMERATOR_DELIMITERS_TYPESET</a></td></tr>
-<tr class="memdesc:ga3c6976e56d91d135b9baafb5c947659d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of tokens delimiting the end of <a class="el" href="namespace_bond.html">Bond</a> enumerator declarations, namely: <span class="tt">CBRACE</span>, <span class="tt">SEMICOLON</span>, and <span class="tt">COMMA</span>.  <br /></td></tr>
-<tr class="memitem:ga02fb746b6dc06ad3feb69b4c0eddba47" id="r_ga02fb746b6dc06ad3feb69b4c0eddba47"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga02fb746b6dc06ad3feb69b4c0eddba47">Bond::STRUCT_MEMBER_DELIMITERS_TYPESET</a></td></tr>
-<tr class="memdesc:ga02fb746b6dc06ad3feb69b4c0eddba47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of tokens delimiting the end of <a class="el" href="namespace_bond.html">Bond</a> struct member declarations, namely: <span class="tt">CBRACE</span> and <span class="tt">SEMICOLON</span>.  <br /></td></tr>
-<tr class="memitem:ga852e4d90386efa365d030bed12c6e8f6" id="r_ga852e4d90386efa365d030bed12c6e8f6"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga852e4d90386efa365d030bed12c6e8f6">Bond::INITIALIZER_DELIMITERS_TYPESET</a></td></tr>
-<tr class="memdesc:ga852e4d90386efa365d030bed12c6e8f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of tokens delimiting the end of <a class="el" href="namespace_bond.html">Bond</a> initializers, namely: <span class="tt">CBRACE</span>, <span class="tt">OBRACE</span> and <span class="tt">COMMA</span>.  <br /></td></tr>
-<tr class="memitem:gabc116b73a209e3e0ad00702499e3067f" id="r_gabc116b73a209e3e0ad00702499e3067f"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#gabc116b73a209e3e0ad00702499e3067f">Bond::SWITCH_SECTION_DELIMITERS_TYPESET</a></td></tr>
-<tr class="memdesc:gabc116b73a209e3e0ad00702499e3067f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of tokens delimiting the end of <a class="el" href="namespace_bond.html">Bond</a> switch statement sections, namely: <span class="tt">KEY_CASE</span>, <span class="tt">KEY_DEFAULT</span>, <span class="tt">CBRACE</span> and <span class="tt">COMMA</span>.  <br /></td></tr>
-<tr class="memitem:ga79fe0150789678136e9264725b1647d2" id="r_ga79fe0150789678136e9264725b1647d2"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga79fe0150789678136e9264725b1647d2">Bond::STATEMENT_DELIMITERS_TYPESET</a></td></tr>
-<tr class="memdesc:ga79fe0150789678136e9264725b1647d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of tokens delimiting the end of <a class="el" href="namespace_bond.html">Bond</a> statements, namely: <span class="tt">KEY_BREAK</span>, <span class="tt">KEY_CASE</span>, <span class="tt">KEY_CONTINUE</span>, <span class="tt">KEY_DEFAULT</span>, <span class="tt">KEY_DO</span>, <span class="tt">KEY_IF</span>, <span class="tt">KEY_FOR</span>, <span class="tt">KEY_RETURN</span>, <span class="tt">KEY_SWITCH</span>, <span class="tt">KEY_WHILE</span>, <span class="tt">OBRACE</span>, <span class="tt">CBRACE</span> and <span class="tt">COLON</span>.  <br /></td></tr>
-<tr class="memitem:ga9ca9355415112f9f314f50daa5dad289" id="r_ga9ca9355415112f9f314f50daa5dad289"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga9ca9355415112f9f314f50daa5dad289">Bond::LABEL_DELIMITERS_TYPESET</a></td></tr>
-<tr class="memdesc:ga9ca9355415112f9f314f50daa5dad289"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of tokens delimiting the end of <a class="el" href="namespace_bond.html">Bond</a> switch labels, namely: <span class="tt">KEY_BREAK</span>, <span class="tt">KEY_CASE</span>, <span class="tt">KEY_CONTINUE</span>, <span class="tt">KEY_DEFAULT</span>, <span class="tt">KEY_DO</span>, <span class="tt">KEY_IF</span>, <span class="tt">KEY_FOR</span>, <span class="tt">KEY_RETURN</span>, <span class="tt">KEY_SWITCH</span>, <span class="tt">KEY_WHILE</span>, <span class="tt">OBRACE</span>, <span class="tt">CBRACE</span>, <span class="tt">SEMICOLON</span> and <span class="tt">COLON</span>.  <br /></td></tr>
+<tr class="memitem:ga7c7e0efe7d17c720a4f7488a8d8b4983" id="r_ga7c7e0efe7d17c720a4f7488a8d8b4983"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token.html">Token</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga7c7e0efe7d17c720a4f7488a8d8b4983">Bond::VOID_TOKEN</a></td></tr>
+<tr class="memdesc:ga7c7e0efe7d17c720a4f7488a8d8b4983"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> of type <span class="tt">KEY_VOID</span> representing the <span class="tt">void</span> keyword.  <br /></td></tr>
+<tr class="memitem:gaa94769b167bcea66ec6c8d26419cdd0b" id="r_gaa94769b167bcea66ec6c8d26419cdd0b"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token.html">Token</a>&#160;</td><td class="memItemRight"><a class="el" href="#gaa94769b167bcea66ec6c8d26419cdd0b">Bond::BOOL_TOKEN</a></td></tr>
+<tr class="memdesc:gaa94769b167bcea66ec6c8d26419cdd0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> of type <span class="tt">KEY_BOOL</span> representing the <span class="tt">bool</span> keyword.  <br /></td></tr>
+<tr class="memitem:ga1ec31b9b77f115754b4e33287a8d6a45" id="r_ga1ec31b9b77f115754b4e33287a8d6a45"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token.html">Token</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga1ec31b9b77f115754b4e33287a8d6a45">Bond::CHAR_TOKEN</a></td></tr>
+<tr class="memdesc:ga1ec31b9b77f115754b4e33287a8d6a45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> of type <span class="tt">KEY_CHAR</span> representing the <span class="tt">char</span> keyword.  <br /></td></tr>
+<tr class="memitem:ga7dcf14694605dcb15bad564d35b6f1bb" id="r_ga7dcf14694605dcb15bad564d35b6f1bb"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token.html">Token</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga7dcf14694605dcb15bad564d35b6f1bb">Bond::UCHAR_TOKEN</a></td></tr>
+<tr class="memdesc:ga7dcf14694605dcb15bad564d35b6f1bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> of type <span class="tt">KEY_UCHAR</span> representing the <span class="tt">uchar</span> keyword.  <br /></td></tr>
+<tr class="memitem:ga52ee77203560bd1a1cd692f157266f24" id="r_ga52ee77203560bd1a1cd692f157266f24"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token.html">Token</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga52ee77203560bd1a1cd692f157266f24">Bond::INT_TOKEN</a></td></tr>
+<tr class="memdesc:ga52ee77203560bd1a1cd692f157266f24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> of type <span class="tt">KEY_INT</span> representing the <span class="tt">int</span> keyword.  <br /></td></tr>
+<tr class="memitem:ga2f1d12ec541c68d725045b0a25b22d34" id="r_ga2f1d12ec541c68d725045b0a25b22d34"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token.html">Token</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga2f1d12ec541c68d725045b0a25b22d34">Bond::UINT_TOKEN</a></td></tr>
+<tr class="memdesc:ga2f1d12ec541c68d725045b0a25b22d34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> of type <span class="tt">KEY_UINT</span> representing the <span class="tt">uint</span> keyword.  <br /></td></tr>
+<tr class="memitem:ga6a6eed4f755d4ac22b4ad15b1fd18ba7" id="r_ga6a6eed4f755d4ac22b4ad15b1fd18ba7"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token.html">Token</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga6a6eed4f755d4ac22b4ad15b1fd18ba7">Bond::LONG_TOKEN</a></td></tr>
+<tr class="memdesc:ga6a6eed4f755d4ac22b4ad15b1fd18ba7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> of type <span class="tt">KEY_LONG</span> representing the <span class="tt">long</span> keyword.  <br /></td></tr>
+<tr class="memitem:gae4474e6660266b2d92a96ed15660b3a8" id="r_gae4474e6660266b2d92a96ed15660b3a8"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token.html">Token</a>&#160;</td><td class="memItemRight"><a class="el" href="#gae4474e6660266b2d92a96ed15660b3a8">Bond::ULONG_TOKEN</a></td></tr>
+<tr class="memdesc:gae4474e6660266b2d92a96ed15660b3a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> of type <span class="tt">KEY_ULONG</span> representing the <span class="tt">ulong</span> keyword.  <br /></td></tr>
+<tr class="memitem:ga25f658d97cd5ea42accef50bcc6ea58b" id="r_ga25f658d97cd5ea42accef50bcc6ea58b"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token.html">Token</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga25f658d97cd5ea42accef50bcc6ea58b">Bond::FLOAT_TOKEN</a></td></tr>
+<tr class="memdesc:ga25f658d97cd5ea42accef50bcc6ea58b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> of type <span class="tt">KEY_FLOAT</span> representing the <span class="tt">float</span> keyword.  <br /></td></tr>
+<tr class="memitem:gad2decc33d847c94200538b2bda3738f8" id="r_gad2decc33d847c94200538b2bda3738f8"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token.html">Token</a>&#160;</td><td class="memItemRight"><a class="el" href="#gad2decc33d847c94200538b2bda3738f8">Bond::DOUBLE_TOKEN</a></td></tr>
+<tr class="memdesc:gad2decc33d847c94200538b2bda3738f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> of type <span class="tt">KEY_DOUBLE</span> representing the <span class="tt">double</span> keyword.  <br /></td></tr>
+<tr class="memitem:ga189af21ada22cc4b8e6eac842ddf726a" id="r_ga189af21ada22cc4b8e6eac842ddf726a"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga189af21ada22cc4b8e6eac842ddf726a">Bond::PRIMITIVE_TYPE_SPECIFIERS_TYPESET</a></td></tr>
+<tr class="memdesc:ga189af21ada22cc4b8e6eac842ddf726a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all keywords representing <a class="el" href="namespace_bond.html">Bond</a> primitive types namely: <span class="tt">KEY_BOOL</span>, <span class="tt">KEY_CHAR</span>, <span class="tt">KEY_UCHAR</span>, <span class="tt">KEY_SHORT</span>, <span class="tt">KEY_USHORT</span>, <span class="tt">KEY_INT</span>, <span class="tt">KEY_UINT</span>, <span class="tt">KEY_LONG</span>, <span class="tt">KEY_ULONG</span>, <span class="tt">KEY_FLOAT</span>, <span class="tt">KEY_DOUBLE</span> and <span class="tt">KEY_VOID</span>.  <br /></td></tr>
+<tr class="memitem:gafee2f832da65dfaf103b1bb785b14203" id="r_gafee2f832da65dfaf103b1bb785b14203"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#gafee2f832da65dfaf103b1bb785b14203">Bond::BOOLEAN_TYPE_SPECIFIERS_TYPESET</a></td></tr>
+<tr class="memdesc:gafee2f832da65dfaf103b1bb785b14203"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> containing only <span class="tt">KEY_BOOL</span>.  <br /></td></tr>
+<tr class="memitem:ga4ef5afd1009f339e3a56f86d55512278" id="r_ga4ef5afd1009f339e3a56f86d55512278"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga4ef5afd1009f339e3a56f86d55512278">Bond::CHAR_TYPE_SPECIFIERS_TYPESET</a></td></tr>
+<tr class="memdesc:ga4ef5afd1009f339e3a56f86d55512278"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all keywords representing <a class="el" href="namespace_bond.html">Bond</a> character types, namely: <span class="tt">KEY_CHAR</span> and <span class="tt">KEY_UCHAR</span>.  <br /></td></tr>
+<tr class="memitem:ga73a4343d0929a988c84a615861cbbab1" id="r_ga73a4343d0929a988c84a615861cbbab1"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga73a4343d0929a988c84a615861cbbab1">Bond::INTEGER_TYPE_SPECIFIERS_TYPESET</a></td></tr>
+<tr class="memdesc:ga73a4343d0929a988c84a615861cbbab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all keywords representing <a class="el" href="namespace_bond.html">Bond</a> integral types, namely: <span class="tt">KEY_CHAR</span>, <span class="tt">KEY_UCHAR</span>, <span class="tt">KEY_SHORT</span>, <span class="tt">KEY_USHORT</span>, <span class="tt">KEY_INT</span>, <span class="tt">KEY_UINT</span>, <span class="tt">KEY_LONG</span> and <span class="tt">KEY_ULONG</span>.  <br /></td></tr>
+<tr class="memitem:ga04a0ca0db9779b1c063cf6b389646553" id="r_ga04a0ca0db9779b1c063cf6b389646553"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga04a0ca0db9779b1c063cf6b389646553">Bond::SIGNED_INTEGER_TYPE_SPECIFIERS_TYPESET</a></td></tr>
+<tr class="memdesc:ga04a0ca0db9779b1c063cf6b389646553"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all keywords representing <a class="el" href="namespace_bond.html">Bond</a> signed integral types, namely: <span class="tt">KEY_CHAR</span>, <span class="tt">KEY_SHORT</span>, <span class="tt">KEY_INT</span> and <span class="tt">KEY_LONG</span>.  <br /></td></tr>
+<tr class="memitem:gac78677ff8c3cc520a4b3f86b7bff77df" id="r_gac78677ff8c3cc520a4b3f86b7bff77df"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#gac78677ff8c3cc520a4b3f86b7bff77df">Bond::UNSIGNED_INTEGER_TYPE_SPECIFIERS_TYPESET</a></td></tr>
+<tr class="memdesc:gac78677ff8c3cc520a4b3f86b7bff77df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all keywords representing <a class="el" href="namespace_bond.html">Bond</a> unsigned integral types, namely: <span class="tt">KEY_UCHAR</span>, <span class="tt">KEY_USHORT</span>, <span class="tt">KEY_UINT</span> and <span class="tt">KEY_ULONG</span>.  <br /></td></tr>
+<tr class="memitem:ga274560a7f2d1d3cf13a3d378a21a35cb" id="r_ga274560a7f2d1d3cf13a3d378a21a35cb"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga274560a7f2d1d3cf13a3d378a21a35cb">Bond::LEAST32_INTEGER_TYPE_SPECIFIERS_TYPESET</a></td></tr>
+<tr class="memdesc:ga274560a7f2d1d3cf13a3d378a21a35cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all keywords representing <a class="el" href="namespace_bond.html">Bond</a> integral types having at least 32 bits, namely: <span class="tt">KEY_INT</span>, <span class="tt">KEY_UINT</span>, <span class="tt">KEY_LONG</span> and <span class="tt">KEY_ULONG</span>.  <br /></td></tr>
+<tr class="memitem:ga2f9a721eb763b40bad931d22e8f5b801" id="r_ga2f9a721eb763b40bad931d22e8f5b801"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga2f9a721eb763b40bad931d22e8f5b801">Bond::MOST32_INTEGER_TYPE_SPECIFIERS_TYPESET</a></td></tr>
+<tr class="memdesc:ga2f9a721eb763b40bad931d22e8f5b801"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all keywords representing <a class="el" href="namespace_bond.html">Bond</a> integral types having at most 32 bits, namely: <span class="tt">KEY_CHAR</span>, <span class="tt">KEY_UCHAR</span>, <span class="tt">KEY_SHORT</span>, <span class="tt">KEY_USHORT</span>, <span class="tt">KEY_INT</span> and <span class="tt">KEY_UINT</span>.  <br /></td></tr>
+<tr class="memitem:ga16e0447b696df0f60d08c05e1c989aba" id="r_ga16e0447b696df0f60d08c05e1c989aba"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga16e0447b696df0f60d08c05e1c989aba">Bond::LONG_INTEGER_TYPE_SPECIFIERS_TYPESET</a></td></tr>
+<tr class="memdesc:ga16e0447b696df0f60d08c05e1c989aba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all keywords representing <a class="el" href="namespace_bond.html">Bond</a> long integral types, namely: <span class="tt">KEY_LONG</span> and <span class="tt">KEY_ULONG</span>.  <br /></td></tr>
+<tr class="memitem:gad3e0a091ac58c188f023222e1007e87a" id="r_gad3e0a091ac58c188f023222e1007e87a"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#gad3e0a091ac58c188f023222e1007e87a">Bond::NUMERIC_TYPE_SPECIFIERS_TYPESET</a></td></tr>
+<tr class="memdesc:gad3e0a091ac58c188f023222e1007e87a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all keywords representing <a class="el" href="namespace_bond.html">Bond</a> numeric types, namely: <span class="tt">KEY_CHAR</span>, <span class="tt">KEY_UCHAR</span>, <span class="tt">KEY_SHORT</span>, <span class="tt">KEY_USHORT</span>, <span class="tt">KEY_INT</span>, <span class="tt">KEY_UINT</span>, <span class="tt">KEY_LONG</span>, <span class="tt">KEY_ULONG</span>, <span class="tt">KEY_FLOAT</span> and <span class="tt">KEY_DOUBLE</span>.  <br /></td></tr>
+<tr class="memitem:gac034afb363ebf64842c8740e7bce37d0" id="r_gac034afb363ebf64842c8740e7bce37d0"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#gac034afb363ebf64842c8740e7bce37d0">Bond::VOID_TYPE_SPECIFIERS_TYPESET</a></td></tr>
+<tr class="memdesc:gac034afb363ebf64842c8740e7bce37d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> containing only <span class="tt">KEY_VOID</span>.  <br /></td></tr>
+<tr class="memitem:ga8fabb19815206436eba3c8a1f95608be" id="r_ga8fabb19815206436eba3c8a1f95608be"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga8fabb19815206436eba3c8a1f95608be">Bond::TYPE_DESCRIPTORS_TYPESET</a></td></tr>
+<tr class="memdesc:ga8fabb19815206436eba3c8a1f95608be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all punctuation token types used to begin a new level of indirection in type descriptors, namely: <span class="tt">OP_STAR</span> and <span class="tt">OBRACKET</span>.  <br /></td></tr>
+<tr class="memitem:ga99a01fb17c3441d39cdae99a0ef0276e" id="r_ga99a01fb17c3441d39cdae99a0ef0276e"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga99a01fb17c3441d39cdae99a0ef0276e">Bond::MOST32_INTEGER_CONSTANTS_TYPESET</a></td></tr>
+<tr class="memdesc:ga99a01fb17c3441d39cdae99a0ef0276e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all integral literal constants having at most 32 bits, namely: CONST_CHAR, CONST_INT and CONST_UINT.  <br /></td></tr>
+<tr class="memitem:gafdef1c33258c16da8c92be1f445354f2" id="r_gafdef1c33258c16da8c92be1f445354f2"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#gafdef1c33258c16da8c92be1f445354f2">Bond::SIGNED_INTEGER_CONSTANTS_TYPESET</a></td></tr>
+<tr class="memdesc:gafdef1c33258c16da8c92be1f445354f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all signed integral literal constants, namely: CONST_CHAR, CONST_INT and CONST_LONG.  <br /></td></tr>
+<tr class="memitem:ga41167e3296817ca025403e2aa97a3606" id="r_ga41167e3296817ca025403e2aa97a3606"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga41167e3296817ca025403e2aa97a3606">Bond::JUMP_KEYWORDS_TYPESET</a></td></tr>
+<tr class="memdesc:ga41167e3296817ca025403e2aa97a3606"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all keywords used for jumps in <a class="el" href="namespace_bond.html">Bond</a> source code, namely: <span class="tt">KEY_BREAK</span>, <span class="tt">KEY_CONTINUE</span> and <span class="tt">KEY_RETURN</span>.  <br /></td></tr>
+<tr class="memitem:gafa580a619501826a027aaef1ea17229d" id="r_gafa580a619501826a027aaef1ea17229d"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#gafa580a619501826a027aaef1ea17229d">Bond::SWITCH_LABELS_TYPESET</a></td></tr>
+<tr class="memdesc:gafa580a619501826a027aaef1ea17229d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all keywords used for defining case labels in <a class="el" href="namespace_bond.html">Bond</a> switch statements, namely: <span class="tt">KEY_CASE</span> and <span class="tt">KEY_DEFAULT</span>.  <br /></td></tr>
+<tr class="memitem:gac10a4cce4200818c5c010f9db19d5259" id="r_gac10a4cce4200818c5c010f9db19d5259"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#gac10a4cce4200818c5c010f9db19d5259">Bond::ASSIGNMENT_OPERATORS_TYPESET</a></td></tr>
+<tr class="memdesc:gac10a4cce4200818c5c010f9db19d5259"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all <a class="el" href="namespace_bond.html">Bond</a> assignment operators, namely: <span class="tt">ASSIGN</span>, <span class="tt">ASSIGN_LEFT</span>, <span class="tt">ASSIGN_RIGHT</span>, <span class="tt">ASSIGN_PLUS</span>, <span class="tt">ASSIGN_MINUS</span>, <span class="tt">ASSIGN_MULT</span>, <span class="tt">ASSIGN_DIV</span>, <span class="tt">ASSIGN_MOD</span>, <span class="tt">ASSIGN_AND</span>, <span class="tt">ASSIGN_OR</span> and <span class="tt">ASSIGN_XOR</span>.  <br /></td></tr>
+<tr class="memitem:gad541e511d832505eef7bedaba30f73fb" id="r_gad541e511d832505eef7bedaba30f73fb"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#gad541e511d832505eef7bedaba30f73fb">Bond::EQUALITY_OPERATORS_TYPESET</a></td></tr>
+<tr class="memdesc:gad541e511d832505eef7bedaba30f73fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all <a class="el" href="namespace_bond.html">Bond</a> equality operators, namely: <span class="tt">OP_EQUAL</span>, <span class="tt">OP_NOT_EQUAL</span>.  <br /></td></tr>
+<tr class="memitem:gaf85c1f66f0962ddf998316bb5015f97a" id="r_gaf85c1f66f0962ddf998316bb5015f97a"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#gaf85c1f66f0962ddf998316bb5015f97a">Bond::RELATIONAL_OPERATORS_TYPESET</a></td></tr>
+<tr class="memdesc:gaf85c1f66f0962ddf998316bb5015f97a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all <a class="el" href="namespace_bond.html">Bond</a> relational operators, namely: <span class="tt">OP_LT</span>, <span class="tt">OP_LTE</span>, <span class="tt">OP_GT</span> and <span class="tt">OP_GTE</span>.  <br /></td></tr>
+<tr class="memitem:ga835cb2cfeb98049c0a3724b48fee7b9a" id="r_ga835cb2cfeb98049c0a3724b48fee7b9a"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga835cb2cfeb98049c0a3724b48fee7b9a">Bond::SHIFT_OPERATORS_TYPESET</a></td></tr>
+<tr class="memdesc:ga835cb2cfeb98049c0a3724b48fee7b9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all <a class="el" href="namespace_bond.html">Bond</a> shift operators, namely: <span class="tt">OP_LEFT</span> and <span class="tt">OP_RIGHT</span>.  <br /></td></tr>
+<tr class="memitem:gaa58715111f4ea9fc057bb7889dc2fa47" id="r_gaa58715111f4ea9fc057bb7889dc2fa47"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#gaa58715111f4ea9fc057bb7889dc2fa47">Bond::ADDITIVE_OPERATORS_TYPESET</a></td></tr>
+<tr class="memdesc:gaa58715111f4ea9fc057bb7889dc2fa47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all <a class="el" href="namespace_bond.html">Bond</a> additive arithmetic operators, namely: <span class="tt">OP_PLUS</span> and <span class="tt">OP_MINUS</span>.  <br /></td></tr>
+<tr class="memitem:ga4757669ab8afd01d451ede6106483af9" id="r_ga4757669ab8afd01d451ede6106483af9"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga4757669ab8afd01d451ede6106483af9">Bond::MULTIPLICATIVE_OPERATORS_TYPESET</a></td></tr>
+<tr class="memdesc:ga4757669ab8afd01d451ede6106483af9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all <a class="el" href="namespace_bond.html">Bond</a> multiplicative arithmetic operators, namely: <span class="tt">OP_STAR</span>, <span class="tt">OP_DIV</span> and <span class="tt">OP_MOD</span>.  <br /></td></tr>
+<tr class="memitem:ga495a3c34417b5a408726b8fcf5806f14" id="r_ga495a3c34417b5a408726b8fcf5806f14"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga495a3c34417b5a408726b8fcf5806f14">Bond::UNARY_OPERATORS_TYPESET</a></td></tr>
+<tr class="memdesc:ga495a3c34417b5a408726b8fcf5806f14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all <a class="el" href="namespace_bond.html">Bond</a> prefix unary operators, namely: <span class="tt">OP_PLUS</span>, <span class="tt">OP_MINUS</span>, <span class="tt">OP_STAR</span>, <span class="tt">OP_INC</span>, <span class="tt">OP_DEC</span>, <span class="tt">OP_NOT</span>, <span class="tt">OP_AMP</span> and <span class="tt">OP_BIT_NOT</span>.  <br /></td></tr>
+<tr class="memitem:gaff1d5f33d75434910e5954597d89cd0d" id="r_gaff1d5f33d75434910e5954597d89cd0d"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#gaff1d5f33d75434910e5954597d89cd0d">Bond::POSTFIX_OPERATORS_TYPESET</a></td></tr>
+<tr class="memdesc:gaff1d5f33d75434910e5954597d89cd0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all <a class="el" href="namespace_bond.html">Bond</a> postfix unary operators, namely: <span class="tt">OP_INC</span>, <span class="tt">OP_DEC</span>, <span class="tt">OP_ARROW</span>, <span class="tt">OPAREN</span>, <span class="tt">OBRACKET</span> and <span class="tt">PERIOD</span>.  <br /></td></tr>
+<tr class="memitem:ga3c03eb7776386d9458d59f2d1c4b8637" id="r_ga3c03eb7776386d9458d59f2d1c4b8637"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga3c03eb7776386d9458d59f2d1c4b8637">Bond::PROPERTYOF_OPERATORS_TYPESET</a></td></tr>
+<tr class="memdesc:ga3c03eb7776386d9458d59f2d1c4b8637"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all <a class="el" href="namespace_bond.html">Bond</a> operators for retrieving type properties, namely: <span class="tt">KEY_ALIGNOF</span>and <span class="tt">KEY_SIZEOF</span>.  <br /></td></tr>
+<tr class="memitem:gac9097ae621d189d5d7396de78b86dd75" id="r_gac9097ae621d189d5d7396de78b86dd75"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#gac9097ae621d189d5d7396de78b86dd75">Bond::CONSTANT_LITERALS_TYPESET</a></td></tr>
+<tr class="memdesc:gac9097ae621d189d5d7396de78b86dd75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of all <a class="el" href="namespace_bond.html">Bond</a> constant literals, namely: <span class="tt">CONST_BOOL</span>, <span class="tt">CONST_CHAR</span>, <span class="tt">CONST_INT</span>, <span class="tt">CONST_UINT</span>, <span class="tt">CONST_LONG</span>, <span class="tt">CONST_ULONG</span>, <span class="tt">CONST_FLOAT</span>, <span class="tt">CONST_DOUBLE</span>, <span class="tt">CONST_STRING</span> and <span class="tt">CONST_NULL</span>.  <br /></td></tr>
+<tr class="memitem:ga5b591a75b4e9afb949e73d231f5e959e" id="r_ga5b591a75b4e9afb949e73d231f5e959e"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga5b591a75b4e9afb949e73d231f5e959e">Bond::BLOCK_DELIMITERS_TYPESET</a></td></tr>
+<tr class="memdesc:ga5b591a75b4e9afb949e73d231f5e959e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of tokens delimiting the end of a block of <a class="el" href="namespace_bond.html">Bond</a> source, namely: <span class="tt">CBRACE</span> and <span class="tt">END</span>.  <br /></td></tr>
+<tr class="memitem:ga0c8c266f57642fc814d2da83d908d7e0" id="r_ga0c8c266f57642fc814d2da83d908d7e0"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga0c8c266f57642fc814d2da83d908d7e0">Bond::DECLARATION_DELIMITERS_TYPESET</a></td></tr>
+<tr class="memdesc:ga0c8c266f57642fc814d2da83d908d7e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of tokens delimiting the end of <a class="el" href="namespace_bond.html">Bond</a> declarations, namely: <span class="tt">KEY_ENUM</span>, <span class="tt">KEY_NAMESPACE</span>, <span class="tt">KEY_NATIVE</span>, <span class="tt">KEY_STRUCT</span>, <span class="tt">CBRACE</span>, <span class="tt">SEMICOLON</span>, and <span class="tt">END</span>.  <br /></td></tr>
+<tr class="memitem:ga8b33c027b8576f8aa6b4842257fe2a34" id="r_ga8b33c027b8576f8aa6b4842257fe2a34"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga8b33c027b8576f8aa6b4842257fe2a34">Bond::INCLUDE_AND_DECLARATION_DELIMITERS_TYPESET</a></td></tr>
+<tr class="memdesc:ga8b33c027b8576f8aa6b4842257fe2a34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of tokens delimiting the end of <a class="el" href="namespace_bond.html">Bond</a> declarations and includes, namely: <span class="tt">KEY_ENUM</span>, <span class="tt">KEY_INCLUDE</span>, <span class="tt">KEY_NAMESPACE</span>, <span class="tt">KEY_NATIVE</span>, <span class="tt">KEY_STRUCT</span>, <span class="tt">CBRACE</span>, <span class="tt">SEMICOLON</span>, and <span class="tt">END</span>.  <br /></td></tr>
+<tr class="memitem:ga2571b2e14f2c4a0dc6237e6a90bb4442" id="r_ga2571b2e14f2c4a0dc6237e6a90bb4442"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga2571b2e14f2c4a0dc6237e6a90bb4442">Bond::ENUM_DELIMITERS_TYPESET</a></td></tr>
+<tr class="memdesc:ga2571b2e14f2c4a0dc6237e6a90bb4442"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of tokens delimiting the end of <a class="el" href="namespace_bond.html">Bond</a> enum declarations, namely: <span class="tt">CBRACE</span>, <span class="tt">SEMICOLON</span>, and <span class="tt">END</span>.  <br /></td></tr>
+<tr class="memitem:ga32aba9be8d453f662809880b49129d0e" id="r_ga32aba9be8d453f662809880b49129d0e"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga32aba9be8d453f662809880b49129d0e">Bond::ENUMERATOR_DELIMITERS_TYPESET</a></td></tr>
+<tr class="memdesc:ga32aba9be8d453f662809880b49129d0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of tokens delimiting the end of <a class="el" href="namespace_bond.html">Bond</a> enumerator declarations, namely: <span class="tt">CBRACE</span>, <span class="tt">SEMICOLON</span>, and <span class="tt">COMMA</span>.  <br /></td></tr>
+<tr class="memitem:ga329d404de8f0bd492addf61522856870" id="r_ga329d404de8f0bd492addf61522856870"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga329d404de8f0bd492addf61522856870">Bond::STRUCT_MEMBER_DELIMITERS_TYPESET</a></td></tr>
+<tr class="memdesc:ga329d404de8f0bd492addf61522856870"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of tokens delimiting the end of <a class="el" href="namespace_bond.html">Bond</a> struct member declarations, namely: <span class="tt">CBRACE</span> and <span class="tt">SEMICOLON</span>.  <br /></td></tr>
+<tr class="memitem:ga2e7fed3e527a119f6333645c99c58ca6" id="r_ga2e7fed3e527a119f6333645c99c58ca6"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga2e7fed3e527a119f6333645c99c58ca6">Bond::INITIALIZER_DELIMITERS_TYPESET</a></td></tr>
+<tr class="memdesc:ga2e7fed3e527a119f6333645c99c58ca6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of tokens delimiting the end of <a class="el" href="namespace_bond.html">Bond</a> initializers, namely: <span class="tt">CBRACE</span>, <span class="tt">OBRACE</span> and <span class="tt">COMMA</span>.  <br /></td></tr>
+<tr class="memitem:gad4ca7228f417c7c8c45bdcc5031c0328" id="r_gad4ca7228f417c7c8c45bdcc5031c0328"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#gad4ca7228f417c7c8c45bdcc5031c0328">Bond::SWITCH_SECTION_DELIMITERS_TYPESET</a></td></tr>
+<tr class="memdesc:gad4ca7228f417c7c8c45bdcc5031c0328"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of tokens delimiting the end of <a class="el" href="namespace_bond.html">Bond</a> switch statement sections, namely: <span class="tt">KEY_CASE</span>, <span class="tt">KEY_DEFAULT</span>, <span class="tt">CBRACE</span> and <span class="tt">END</span>.  <br /></td></tr>
+<tr class="memitem:gaa2cc6a55258061709921277fa7ea4e9c" id="r_gaa2cc6a55258061709921277fa7ea4e9c"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#gaa2cc6a55258061709921277fa7ea4e9c">Bond::STATEMENT_DELIMITERS_TYPESET</a></td></tr>
+<tr class="memdesc:gaa2cc6a55258061709921277fa7ea4e9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of tokens delimiting the end of <a class="el" href="namespace_bond.html">Bond</a> statements, namely: <span class="tt">KEY_BREAK</span>, <span class="tt">KEY_CASE</span>, <span class="tt">KEY_CONTINUE</span>, <span class="tt">KEY_DEFAULT</span>, <span class="tt">KEY_DO</span>, <span class="tt">KEY_IF</span>, <span class="tt">KEY_FOR</span>, <span class="tt">KEY_RETURN</span>, <span class="tt">KEY_SWITCH</span>, <span class="tt">KEY_USING</span>, <span class="tt">KEY_WHILE</span>, <span class="tt">OBRACE</span>, <span class="tt">CBRACE</span> and <span class="tt">SEMICOLON</span>.  <br /></td></tr>
+<tr class="memitem:ga94f90737495d62a65bbb37819b0a24c7" id="r_ga94f90737495d62a65bbb37819b0a24c7"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga94f90737495d62a65bbb37819b0a24c7">Bond::LABEL_DELIMITERS_TYPESET</a></td></tr>
+<tr class="memdesc:ga94f90737495d62a65bbb37819b0a24c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of tokens delimiting the end of <a class="el" href="namespace_bond.html">Bond</a> switch labels, namely: <span class="tt">KEY_BREAK</span>, <span class="tt">KEY_CASE</span>, <span class="tt">KEY_CONTINUE</span>, <span class="tt">KEY_DEFAULT</span>, <span class="tt">KEY_DO</span>, <span class="tt">KEY_IF</span>, <span class="tt">KEY_FOR</span>, <span class="tt">KEY_RETURN</span>, <span class="tt">KEY_SWITCH</span>, <span class="tt">KEY_USING</span>, <span class="tt">KEY_WHILE</span>, <span class="tt">OBRACE</span>, <span class="tt">CBRACE</span>, <span class="tt">SEMICOLON</span> and <span class="tt">COLON</span>.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>These classes form the parts of the <a class="el" href="namespace_bond.html">Bond</a> compiler. </p>
-</div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Typedef Documentation</h2>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a id="ga6df34c94046fe9c12c5c2b937b974496" name="ga6df34c94046fe9c12c5c2b937b974496"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6df34c94046fe9c12c5c2b937b974496">&#9670;&#160;</a></span>BOND_COMPILER_ERROR_LIST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BOND_COMPILER_ERROR_LIST</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>An X-macro that lists every type of compiler error along with the format of its message. </p>
+<p>To use it, define BOND_COMPILER_ERROR(type, format), expand BOND_COMPILER_ERROR_LIST and then undefine BOND_COMPILER_ERROR.</p>
+<p>The format strings are not printf format strings. CompilerError::Print interprets the following directives, where an argument is arg0 unless the directive is preceded by a 0 or a 1 that selects arg0 or arg1 explicitly, e.g. "%1n":</p><ul>
+<li>%c: The text of the context Token.</li>
+<li>%d: The argument as a signed integer.</li>
+<li>%f: The file name of the argument, which is a Token.</li>
+<li>%l: The line number of the argument, which is a Token.</li>
+<li>%n: The argument, which is a ParseNode, pretty printed.</li>
+<li>%s: The argument, which is a C-style string.</li>
+<li>%t: The text of the argument, which is a Token.</li>
+<li>%u: The argument as a Unicode code point, e.g. U+00E9. </li>
+</ul>
+
+</div>
+</div>
+<a id="ga68fa66092c8e7ebe2369815c69750d9c" name="ga68fa66092c8e7ebe2369815c69750d9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga68fa66092c8e7ebe2369815c69750d9c">&#9670;&#160;</a></span>BOND_TOKEN_LIST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BOND_TOKEN_LIST</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>An X-macro that lists every type of Token. </p>
+<p>To use it, define BOND_TOKEN_ITEM(item), expand BOND_TOKEN_LIST and then undefine BOND_TOKEN_ITEM. The argument of each item is the name of a Token::TokenType enumerator. INVALID is the type of a Token that could not be scanned, END is the type of the last Token of every TokenCollection, and NUM_TOKEN_TYPES is the number of types, not a valid type. </p>
+
+</div>
+</div>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Typedef Documentation</h2>
 <a id="gabc6e1643c8baf99c177f5f2d1bffcab7" name="gabc6e1643c8baf99c177f5f2d1bffcab7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gabc6e1643c8baf99c177f5f2d1bffcab7">&#9670;&#160;</a></span>ParseNodeHandle</h2>
 
@@ -359,14 +427,14 @@ Variables</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="gad1028a1b299a5d3e93bc965fc05de492" name="gad1028a1b299a5d3e93bc965fc05de492"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad1028a1b299a5d3e93bc965fc05de492">&#9670;&#160;</a></span>AreAssignableTypes()</h2>
+<a id="gae64962b892e1c157cea1806147a89451" name="gae64962b892e1c157cea1806147a89451"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae64962b892e1c157cea1806147a89451">&#9670;&#160;</a></span>AreAssignableTypes()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool Bond::AreAssignableTypes </td>
+          <td class="memname">BOND_API bool Bond::AreAssignableTypes </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>fromType</em></span>, </td>
         </tr>
@@ -378,16 +446,19 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Returns whether a value of one type can be assigned to an object of another type. </p>
+<p>The destination type must be assignable, i.e. a non-const lvalue that is not an array. Pointers can be assigned if the source is null or a void pointer, if the destination is a void pointer, or if they point to the same type. Values can be assigned if their types are convertible. </p>
+
 </div>
 </div>
-<a id="ga1fe8e158a8343d6e90e7c53f528179f0" name="ga1fe8e158a8343d6e90e7c53f528179f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1fe8e158a8343d6e90e7c53f528179f0">&#9670;&#160;</a></span>AreComparableTypes()</h2>
+<a id="gab917d95c03deeee8843aa1bd1286ef3a" name="gab917d95c03deeee8843aa1bd1286ef3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab917d95c03deeee8843aa1bd1286ef3a">&#9670;&#160;</a></span>AreComparableTypes()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool Bond::AreComparableTypes </td>
+          <td class="memname">BOND_API bool Bond::AreComparableTypes </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>typeA</em></span>, </td>
         </tr>
@@ -399,16 +470,18 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Returns whether values of the given types can be compared, i.e. whether both are pointers, both are numeric or both are bool. </p>
+
 </div>
 </div>
-<a id="gaee3f46e5d7ab6ec8df54caa5479288d9" name="gaee3f46e5d7ab6ec8df54caa5479288d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaee3f46e5d7ab6ec8df54caa5479288d9">&#9670;&#160;</a></span>AreConvertibleTypes()</h2>
+<a id="ga2205ea1829bea00333032dac335bd002" name="ga2205ea1829bea00333032dac335bd002"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2205ea1829bea00333032dac335bd002">&#9670;&#160;</a></span>AreConvertibleTypes()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool Bond::AreConvertibleTypes </td>
+          <td class="memname">BOND_API bool Bond::AreConvertibleTypes </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>fromType</em></span>, </td>
         </tr>
@@ -420,16 +493,18 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Returns whether a value of one type can be converted to another, i.e. whether the types are comparable or are the same struct or enum type. </p>
+
 </div>
 </div>
-<a id="ga8da2d7c5b201b858392855597c958974" name="ga8da2d7c5b201b858392855597c958974"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga8da2d7c5b201b858392855597c958974">&#9670;&#160;</a></span>AreSameTypes()</h2>
+<a id="ga9ec5d1b3e6c1aced2f271513bfb986e8" name="ga9ec5d1b3e6c1aced2f271513bfb986e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9ec5d1b3e6c1aced2f271513bfb986e8">&#9670;&#160;</a></span>AreSameTypes()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool Bond::AreSameTypes </td>
+          <td class="memname">BOND_API bool Bond::AreSameTypes </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>fromType</em></span>, </td>
         </tr>
@@ -440,6 +515,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns whether two types are the same, recursing through pointers and arrays, where array lengths must also match. The comparison is not symmetric with respect to const: it fails if fromType is const and toType is not, at any level of indirection, but succeeds if only toType is const. </p>
 
 </div>
 </div>
@@ -460,6 +537,14 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Returns the given <a class="el" href="class_bond_1_1_parse_node.html" title="Base class for all parse tree nodes.">ParseNode</a> cast to the concrete type T, or null if its concrete type is not exactly T. The type is determined with a visitor rather than RTTI. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>The node to be cast, or null. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="gacff143e5e2a43a089c53a46e36c1df9d" name="gacff143e5e2a43a089c53a46e36c1df9d"></a>
@@ -479,16 +564,24 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Returns the given <a class="el" href="class_bond_1_1_parse_node.html" title="Base class for all parse tree nodes.">ParseNode</a> cast to the concrete type T, or null if its concrete type is not exactly T. The type is determined with a visitor rather than RTTI. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>The node to be cast, or null. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="ga48df44e721fbe79d6d326bca4f18c4d9" name="ga48df44e721fbe79d6d326bca4f18c4d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga48df44e721fbe79d6d326bca4f18c4d9">&#9670;&#160;</a></span>CastValue() <span class="overload">[1/2]</span></h2>
+<a id="ga665acbfc97771b727b92b2c9ba9312b6" name="ga665acbfc97771b727b92b2c9ba9312b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga665acbfc97771b727b92b2c9ba9312b6">&#9670;&#160;</a></span>CastValue() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="union_bond_1_1_value.html">Value</a> Bond::CastValue </td>
+          <td class="memname">BOND_API <a class="el" href="union_bond_1_1_value.html">Value</a> Bond::CastValue </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="class_bond_1_1_token.html">Token</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>fromValue</em></span>, </td>
         </tr>
@@ -500,16 +593,26 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Converts the value of a constant literal <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> to the given primitive type, as a C cast would. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fromValue</td><td>A <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> whose type is a numeric or bool constant literal. </td></tr>
+    <tr><td class="paramname">toType</td><td>The keyword <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> type of the primitive type to convert to, e.g. <span class="tt">KEY_INT</span>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted value, or a zero <a class="el" href="union_bond_1_1_value.html" title="Union of all value types representable by a Token in the Bond compiler.">Value</a> if the conversion is not supported. </dd></dl>
+
 </div>
 </div>
-<a id="gaefbd8a4c5ef01657c32e2a34dd2511c6" name="gaefbd8a4c5ef01657c32e2a34dd2511c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaefbd8a4c5ef01657c32e2a34dd2511c6">&#9670;&#160;</a></span>CastValue() <span class="overload">[2/2]</span></h2>
+<a id="ga4e0595dd80bb1830f85f9b6696fd0f07" name="ga4e0595dd80bb1830f85f9b6696fd0f07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4e0595dd80bb1830f85f9b6696fd0f07">&#9670;&#160;</a></span>CastValue() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="union_bond_1_1_value.html">Value</a> Bond::CastValue </td>
+          <td class="memname">BOND_API <a class="el" href="union_bond_1_1_value.html">Value</a> Bond::CastValue </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="class_bond_1_1_type_and_value.html">TypeAndValue</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>fromTav</em></span>, </td>
         </tr>
@@ -521,16 +624,26 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Converts a compile-time constant value to the given primitive type, as a C cast would. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fromTav</td><td>The type and value to convert. The value must be defined. </td></tr>
+    <tr><td class="paramname">toType</td><td>The primitive type to convert to. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted value, or a zero <a class="el" href="union_bond_1_1_value.html" title="Union of all value types representable by a Token in the Bond compiler.">Value</a> if the conversion is not supported. </dd></dl>
+
 </div>
 </div>
-<a id="gab36ffd20d085305e7ac53549714d0d24" name="gab36ffd20d085305e7ac53549714d0d24"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab36ffd20d085305e7ac53549714d0d24">&#9670;&#160;</a></span>CombineOperandTypes()</h2>
+<a id="ga5a2a43a38410cd10ce561582ea19df41" name="ga5a2a43a38410cd10ce561582ea19df41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5a2a43a38410cd10ce561582ea19df41">&#9670;&#160;</a></span>CombineOperandTypes()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> Bond::CombineOperandTypes </td>
+          <td class="memname">BOND_API <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> Bond::CombineOperandTypes </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>typeA</em></span>, </td>
         </tr>
@@ -542,16 +655,19 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Returns the type in which a binary operation on operands of the given types is performed, following C's usual arithmetic conversions. </p>
+<p>If either operand is a pointer, the result is that pointer type as an rvalue. Otherwise, double takes precedence over float, which takes precedence over the promoted integer types, among which the wider one wins and unsigned wins when the widths are equal. </p>
+
 </div>
 </div>
-<a id="ga60b58a6d92a8dd0542204be19988f4fb" name="ga60b58a6d92a8dd0542204be19988f4fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga60b58a6d92a8dd0542204be19988f4fb">&#9670;&#160;</a></span>GetLength()</h2>
+<a id="ga6c476056c4b9b77d7bfa12327a0f3fc7" name="ga6c476056c4b9b77d7bfa12327a0f3fc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6c476056c4b9b77d7bfa12327a0f3fc7">&#9670;&#160;</a></span>GetLength()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t Bond::GetLength </td>
+          <td class="memname">BOND_API uint32_t Bond::GetLength </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="class_bond_1_1_list_parse_node.html">ListParseNode</a> *</td>          <td class="paramname"><span class="paramname"><em>list</em></span></td><td>)</td>
           <td></td>
@@ -562,7 +678,7 @@ template&lt;typename T&gt; </div>
 <p>Counts and returns the length of a list of ListParseNodes. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">list</td><td>Pointer to the list of nodes to be counted. </td></tr>
+    <tr><td class="paramname">list</td><td>Pointer to the list of nodes to be counted, or null. </td></tr>
   </table>
   </dd>
 </dl>
@@ -595,16 +711,27 @@ template&lt;typename NodeType, typename Comparator&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Inserts a node into a sorted list of ListParseNodes, after any nodes that compare equal to it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">head</td><td>The first node of the list, or null if the list is empty. </td></tr>
+    <tr><td class="paramname">node</td><td>The node to be inserted. </td></tr>
+    <tr><td class="paramname">compare</td><td>A strict weak ordering that returns whether its first argument precedes its second. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The first node of the resulting list. </dd></dl>
+
 </div>
 </div>
-<a id="gadb2bc3221e9166bbc0d5f08dfcd2b051" name="gadb2bc3221e9166bbc0d5f08dfcd2b051"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gadb2bc3221e9166bbc0d5f08dfcd2b051">&#9670;&#160;</a></span>IsLossyConversion()</h2>
+<a id="ga9b77a93d5d65bb07fe3fd6e98500e524" name="ga9b77a93d5d65bb07fe3fd6e98500e524"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9b77a93d5d65bb07fe3fd6e98500e524">&#9670;&#160;</a></span>IsLossyConversion()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool Bond::IsLossyConversion </td>
+          <td class="memname">BOND_API bool Bond::IsLossyConversion </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="class_bond_1_1_type_and_value.html">TypeAndValue</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>fromTav</em></span>, </td>
         </tr>
@@ -616,22 +743,63 @@ template&lt;typename NodeType, typename Comparator&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Returns whether converting a numeric value to the given numeric type may lose data. </p>
+<p>If the value is a compile-time constant, the conversion is lossy only if the value is not exactly representable by the destination type. Otherwise, it is lossy if the destination type cannot represent every value of the source type. Conversions involving non-numeric types are never reported as lossy. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fromTav</td><td>The type and value being converted. </td></tr>
+    <tr><td class="paramname">toType</td><td>The type to which the value is converted. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="ga511a079045da4bca0edb4ed9014f5a93" name="ga511a079045da4bca0edb4ed9014f5a93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga511a079045da4bca0edb4ed9014f5a93">&#9670;&#160;</a></span>IsNegativeIntegerConstant()</h2>
+<a id="ga43fd9161a711ab87c8f2e60da2b70c0a" name="ga43fd9161a711ab87c8f2e60da2b70c0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga43fd9161a711ab87c8f2e60da2b70c0a">&#9670;&#160;</a></span>IsNegativeIntegerConstant()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool Bond::IsNegativeIntegerConstant </td>
+          <td class="memname">BOND_API bool Bond::IsNegativeIntegerConstant </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="class_bond_1_1_token.html">Token</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>token</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns whether the given <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> is a signed integer constant literal whose value is negative. </p>
+
+</div>
+</div>
+<a id="ga233ba40f7908ff91c36ef2ad151bbe43" name="ga233ba40f7908ff91c36ef2ad151bbe43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga233ba40f7908ff91c36ef2ad151bbe43">&#9670;&#160;</a></span>MayConvertNegativeToUnsigned()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOND_API bool Bond::MayConvertNegativeToUnsigned </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_bond_1_1_type_and_value.html">TypeAndValue</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>operandTav</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>operationType</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if the operand has a signed integer type, the operation in which it is used has an unsigned integer type and the operand is not a constant known to be non-negative. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">operandTav</td><td>The type and value of the operand prior to promotion. </td></tr>
+    <tr><td class="paramname">operationType</td><td>The type in which the operation is performed, as returned by CombineOperandTypes. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -652,16 +820,24 @@ template&lt;typename NodeType&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Returns the node that follows the given one in a list of ListParseNodes, cast to the same type, or null if it is the last node. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">list</td><td>The current node. It must not be null. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="ga8d7e2aa79dfc39b392744aebc3fb9f32" name="ga8d7e2aa79dfc39b392744aebc3fb9f32"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga8d7e2aa79dfc39b392744aebc3fb9f32">&#9670;&#160;</a></span>PromoteType()</h2>
+<a id="ga2745a768e0b002b25a4fbcc1964f49b4" name="ga2745a768e0b002b25a4fbcc1964f49b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2745a768e0b002b25a4fbcc1964f49b4">&#9670;&#160;</a></span>PromoteType()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> Bond::PromoteType </td>
+          <td class="memname">BOND_API <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> Bond::PromoteType </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="class_bond_1_1_type_descriptor.html">TypeDescriptor</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
           <td></td>
@@ -669,11 +845,14 @@ template&lt;typename NodeType&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Returns the type of an operand after C's integer promotions. </p>
+<p>Integer types narrower than int are promoted to int, other numeric types and bool are unchanged, and pointers and arrays become pointer rvalues. </p>
+
 </div>
 </div>
 <a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
-<a id="ga6962c5b3330183f5047c563d0fd012dc" name="ga6962c5b3330183f5047c563d0fd012dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga6962c5b3330183f5047c563d0fd012dc">&#9670;&#160;</a></span>ADDITIVE_OPERATORS_TYPESET</h2>
+<a id="gaa58715111f4ea9fc057bb7889dc2fa47" name="gaa58715111f4ea9fc057bb7889dc2fa47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa58715111f4ea9fc057bb7889dc2fa47">&#9670;&#160;</a></span>ADDITIVE_OPERATORS_TYPESET</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -682,7 +861,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::ADDITIVE_OPERATORS_TYPESET</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::ADDITIVE_OPERATORS_TYPESET</td>
         </tr>
       </table>
   </td>
@@ -696,8 +875,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="gaf02f4056296bf8d944df540b89a930f1" name="gaf02f4056296bf8d944df540b89a930f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf02f4056296bf8d944df540b89a930f1">&#9670;&#160;</a></span>ASSIGNMENT_OPERATORS_TYPESET</h2>
+<a id="gac10a4cce4200818c5c010f9db19d5259" name="gac10a4cce4200818c5c010f9db19d5259"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac10a4cce4200818c5c010f9db19d5259">&#9670;&#160;</a></span>ASSIGNMENT_OPERATORS_TYPESET</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -706,7 +885,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::ASSIGNMENT_OPERATORS_TYPESET</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::ASSIGNMENT_OPERATORS_TYPESET</td>
         </tr>
       </table>
   </td>
@@ -720,8 +899,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="gab090f4ef728344d6ee1b2d0bb29767a2" name="gab090f4ef728344d6ee1b2d0bb29767a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab090f4ef728344d6ee1b2d0bb29767a2">&#9670;&#160;</a></span>BLOCK_DELIMITERS_TYPESET</h2>
+<a id="ga5b591a75b4e9afb949e73d231f5e959e" name="ga5b591a75b4e9afb949e73d231f5e959e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5b591a75b4e9afb949e73d231f5e959e">&#9670;&#160;</a></span>BLOCK_DELIMITERS_TYPESET</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -730,7 +909,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::BLOCK_DELIMITERS_TYPESET</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::BLOCK_DELIMITERS_TYPESET</td>
         </tr>
       </table>
   </td>
@@ -744,8 +923,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="ga9308c5ec469c6467bac5b9a68cffa340" name="ga9308c5ec469c6467bac5b9a68cffa340"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9308c5ec469c6467bac5b9a68cffa340">&#9670;&#160;</a></span>BOOL_TOKEN</h2>
+<a id="gaa94769b167bcea66ec6c8d26419cdd0b" name="gaa94769b167bcea66ec6c8d26419cdd0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa94769b167bcea66ec6c8d26419cdd0b">&#9670;&#160;</a></span>BOOL_TOKEN</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -754,7 +933,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token.html">Token</a> Bond::BOOL_TOKEN</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token.html">Token</a> Bond::BOOL_TOKEN</td>
         </tr>
       </table>
   </td>
@@ -768,8 +947,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="gab5b2268cb9a7ba52e9e44d6c9cd01463" name="gab5b2268cb9a7ba52e9e44d6c9cd01463"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab5b2268cb9a7ba52e9e44d6c9cd01463">&#9670;&#160;</a></span>BOOLEAN_TYPE_SPECIFIERS_TYPESET</h2>
+<a id="gafee2f832da65dfaf103b1bb785b14203" name="gafee2f832da65dfaf103b1bb785b14203"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafee2f832da65dfaf103b1bb785b14203">&#9670;&#160;</a></span>BOOLEAN_TYPE_SPECIFIERS_TYPESET</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -778,7 +957,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::BOOLEAN_TYPE_SPECIFIERS_TYPESET</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::BOOLEAN_TYPE_SPECIFIERS_TYPESET</td>
         </tr>
       </table>
   </td>
@@ -792,8 +971,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="gade59e3d71b933fc0ca181b6529247ccd" name="gade59e3d71b933fc0ca181b6529247ccd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gade59e3d71b933fc0ca181b6529247ccd">&#9670;&#160;</a></span>CHAR_TOKEN</h2>
+<a id="ga1ec31b9b77f115754b4e33287a8d6a45" name="ga1ec31b9b77f115754b4e33287a8d6a45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1ec31b9b77f115754b4e33287a8d6a45">&#9670;&#160;</a></span>CHAR_TOKEN</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -802,7 +981,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token.html">Token</a> Bond::CHAR_TOKEN</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token.html">Token</a> Bond::CHAR_TOKEN</td>
         </tr>
       </table>
   </td>
@@ -816,8 +995,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="gabe0f430df464e7804afaab17ef9d2a73" name="gabe0f430df464e7804afaab17ef9d2a73"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gabe0f430df464e7804afaab17ef9d2a73">&#9670;&#160;</a></span>CHAR_TYPE_SPECIFIERS_TYPESET</h2>
+<a id="ga4ef5afd1009f339e3a56f86d55512278" name="ga4ef5afd1009f339e3a56f86d55512278"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4ef5afd1009f339e3a56f86d55512278">&#9670;&#160;</a></span>CHAR_TYPE_SPECIFIERS_TYPESET</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -826,7 +1005,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::CHAR_TYPE_SPECIFIERS_TYPESET</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::CHAR_TYPE_SPECIFIERS_TYPESET</td>
         </tr>
       </table>
   </td>
@@ -840,8 +1019,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="ga6cd911fd6f5e87ae899e4690f04e33e2" name="ga6cd911fd6f5e87ae899e4690f04e33e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga6cd911fd6f5e87ae899e4690f04e33e2">&#9670;&#160;</a></span>CONSTANT_LITERALS_TYPESET</h2>
+<a id="gac9097ae621d189d5d7396de78b86dd75" name="gac9097ae621d189d5d7396de78b86dd75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac9097ae621d189d5d7396de78b86dd75">&#9670;&#160;</a></span>CONSTANT_LITERALS_TYPESET</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -850,7 +1029,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::CONSTANT_LITERALS_TYPESET</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::CONSTANT_LITERALS_TYPESET</td>
         </tr>
       </table>
   </td>
@@ -864,8 +1043,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="ga8ac741c1ed3a1a7c22280bb60d6d5cf5" name="ga8ac741c1ed3a1a7c22280bb60d6d5cf5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga8ac741c1ed3a1a7c22280bb60d6d5cf5">&#9670;&#160;</a></span>DECLARATION_DELIMITERS_TYPESET</h2>
+<a id="ga0c8c266f57642fc814d2da83d908d7e0" name="ga0c8c266f57642fc814d2da83d908d7e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0c8c266f57642fc814d2da83d908d7e0">&#9670;&#160;</a></span>DECLARATION_DELIMITERS_TYPESET</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -874,7 +1053,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::DECLARATION_DELIMITERS_TYPESET</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::DECLARATION_DELIMITERS_TYPESET</td>
         </tr>
       </table>
   </td>
@@ -888,8 +1067,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="ga3196e4c099aaab744e1f235851c757e4" name="ga3196e4c099aaab744e1f235851c757e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga3196e4c099aaab744e1f235851c757e4">&#9670;&#160;</a></span>DOUBLE_TOKEN</h2>
+<a id="gad2decc33d847c94200538b2bda3738f8" name="gad2decc33d847c94200538b2bda3738f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad2decc33d847c94200538b2bda3738f8">&#9670;&#160;</a></span>DOUBLE_TOKEN</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -898,7 +1077,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token.html">Token</a> Bond::DOUBLE_TOKEN</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token.html">Token</a> Bond::DOUBLE_TOKEN</td>
         </tr>
       </table>
   </td>
@@ -912,8 +1091,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="ga2f3a174e0a7cc50b96d629c7feb1b35f" name="ga2f3a174e0a7cc50b96d629c7feb1b35f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2f3a174e0a7cc50b96d629c7feb1b35f">&#9670;&#160;</a></span>ENUM_DELIMITERS_TYPESET</h2>
+<a id="ga2571b2e14f2c4a0dc6237e6a90bb4442" name="ga2571b2e14f2c4a0dc6237e6a90bb4442"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2571b2e14f2c4a0dc6237e6a90bb4442">&#9670;&#160;</a></span>ENUM_DELIMITERS_TYPESET</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -922,7 +1101,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::ENUM_DELIMITERS_TYPESET</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::ENUM_DELIMITERS_TYPESET</td>
         </tr>
       </table>
   </td>
@@ -936,8 +1115,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="ga3c6976e56d91d135b9baafb5c947659d" name="ga3c6976e56d91d135b9baafb5c947659d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga3c6976e56d91d135b9baafb5c947659d">&#9670;&#160;</a></span>ENUMERATOR_DELIMITERS_TYPESET</h2>
+<a id="ga32aba9be8d453f662809880b49129d0e" name="ga32aba9be8d453f662809880b49129d0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga32aba9be8d453f662809880b49129d0e">&#9670;&#160;</a></span>ENUMERATOR_DELIMITERS_TYPESET</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -946,7 +1125,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::ENUMERATOR_DELIMITERS_TYPESET</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::ENUMERATOR_DELIMITERS_TYPESET</td>
         </tr>
       </table>
   </td>
@@ -960,8 +1139,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="gad56d8615e3a6370b6b2b0b99a3652213" name="gad56d8615e3a6370b6b2b0b99a3652213"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad56d8615e3a6370b6b2b0b99a3652213">&#9670;&#160;</a></span>EQUALITY_OPERATORS_TYPESET</h2>
+<a id="gad541e511d832505eef7bedaba30f73fb" name="gad541e511d832505eef7bedaba30f73fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad541e511d832505eef7bedaba30f73fb">&#9670;&#160;</a></span>EQUALITY_OPERATORS_TYPESET</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -970,7 +1149,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::EQUALITY_OPERATORS_TYPESET</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::EQUALITY_OPERATORS_TYPESET</td>
         </tr>
       </table>
   </td>
@@ -984,8 +1163,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="ga6393bb12c5103a750469f9284b369e8c" name="ga6393bb12c5103a750469f9284b369e8c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga6393bb12c5103a750469f9284b369e8c">&#9670;&#160;</a></span>FLOAT_TOKEN</h2>
+<a id="ga25f658d97cd5ea42accef50bcc6ea58b" name="ga25f658d97cd5ea42accef50bcc6ea58b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga25f658d97cd5ea42accef50bcc6ea58b">&#9670;&#160;</a></span>FLOAT_TOKEN</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -994,7 +1173,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token.html">Token</a> Bond::FLOAT_TOKEN</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token.html">Token</a> Bond::FLOAT_TOKEN</td>
         </tr>
       </table>
   </td>
@@ -1008,8 +1187,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="ga25ff4a7301bf367a8873bc17d045a2e8" name="ga25ff4a7301bf367a8873bc17d045a2e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga25ff4a7301bf367a8873bc17d045a2e8">&#9670;&#160;</a></span>INCLUDE_AND_DECLARATION_DELIMITERS_TYPESET</h2>
+<a id="ga8b33c027b8576f8aa6b4842257fe2a34" name="ga8b33c027b8576f8aa6b4842257fe2a34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8b33c027b8576f8aa6b4842257fe2a34">&#9670;&#160;</a></span>INCLUDE_AND_DECLARATION_DELIMITERS_TYPESET</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1018,7 +1197,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::INCLUDE_AND_DECLARATION_DELIMITERS_TYPESET</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::INCLUDE_AND_DECLARATION_DELIMITERS_TYPESET</td>
         </tr>
       </table>
   </td>
@@ -1032,8 +1211,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="ga852e4d90386efa365d030bed12c6e8f6" name="ga852e4d90386efa365d030bed12c6e8f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga852e4d90386efa365d030bed12c6e8f6">&#9670;&#160;</a></span>INITIALIZER_DELIMITERS_TYPESET</h2>
+<a id="ga2e7fed3e527a119f6333645c99c58ca6" name="ga2e7fed3e527a119f6333645c99c58ca6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2e7fed3e527a119f6333645c99c58ca6">&#9670;&#160;</a></span>INITIALIZER_DELIMITERS_TYPESET</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1042,7 +1221,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::INITIALIZER_DELIMITERS_TYPESET</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::INITIALIZER_DELIMITERS_TYPESET</td>
         </tr>
       </table>
   </td>
@@ -1056,8 +1235,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="ga0788343abf1d6e3fd67a610694eb0c98" name="ga0788343abf1d6e3fd67a610694eb0c98"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0788343abf1d6e3fd67a610694eb0c98">&#9670;&#160;</a></span>INT_TOKEN</h2>
+<a id="ga52ee77203560bd1a1cd692f157266f24" name="ga52ee77203560bd1a1cd692f157266f24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga52ee77203560bd1a1cd692f157266f24">&#9670;&#160;</a></span>INT_TOKEN</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1066,7 +1245,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token.html">Token</a> Bond::INT_TOKEN</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token.html">Token</a> Bond::INT_TOKEN</td>
         </tr>
       </table>
   </td>
@@ -1080,8 +1259,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="gab6e8e5fda03511fdaf4644f3f3a4fa63" name="gab6e8e5fda03511fdaf4644f3f3a4fa63"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab6e8e5fda03511fdaf4644f3f3a4fa63">&#9670;&#160;</a></span>INTEGER_TYPE_SPECIFIERS_TYPESET</h2>
+<a id="ga73a4343d0929a988c84a615861cbbab1" name="ga73a4343d0929a988c84a615861cbbab1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga73a4343d0929a988c84a615861cbbab1">&#9670;&#160;</a></span>INTEGER_TYPE_SPECIFIERS_TYPESET</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1090,7 +1269,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::INTEGER_TYPE_SPECIFIERS_TYPESET</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::INTEGER_TYPE_SPECIFIERS_TYPESET</td>
         </tr>
       </table>
   </td>
@@ -1104,8 +1283,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="ga2e60fab3cef850e9cb69a443499738a3" name="ga2e60fab3cef850e9cb69a443499738a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2e60fab3cef850e9cb69a443499738a3">&#9670;&#160;</a></span>JUMP_KEYWORDS_TYPESET</h2>
+<a id="ga41167e3296817ca025403e2aa97a3606" name="ga41167e3296817ca025403e2aa97a3606"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga41167e3296817ca025403e2aa97a3606">&#9670;&#160;</a></span>JUMP_KEYWORDS_TYPESET</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1114,7 +1293,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::JUMP_KEYWORDS_TYPESET</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::JUMP_KEYWORDS_TYPESET</td>
         </tr>
       </table>
   </td>
@@ -1128,8 +1307,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="ga9ca9355415112f9f314f50daa5dad289" name="ga9ca9355415112f9f314f50daa5dad289"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9ca9355415112f9f314f50daa5dad289">&#9670;&#160;</a></span>LABEL_DELIMITERS_TYPESET</h2>
+<a id="ga94f90737495d62a65bbb37819b0a24c7" name="ga94f90737495d62a65bbb37819b0a24c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga94f90737495d62a65bbb37819b0a24c7">&#9670;&#160;</a></span>LABEL_DELIMITERS_TYPESET</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1138,7 +1317,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::LABEL_DELIMITERS_TYPESET</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::LABEL_DELIMITERS_TYPESET</td>
         </tr>
       </table>
   </td>
@@ -1148,12 +1327,12 @@ template&lt;typename NodeType&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of tokens delimiting the end of <a class="el" href="namespace_bond.html">Bond</a> switch labels, namely: <span class="tt">KEY_BREAK</span>, <span class="tt">KEY_CASE</span>, <span class="tt">KEY_CONTINUE</span>, <span class="tt">KEY_DEFAULT</span>, <span class="tt">KEY_DO</span>, <span class="tt">KEY_IF</span>, <span class="tt">KEY_FOR</span>, <span class="tt">KEY_RETURN</span>, <span class="tt">KEY_SWITCH</span>, <span class="tt">KEY_WHILE</span>, <span class="tt">OBRACE</span>, <span class="tt">CBRACE</span>, <span class="tt">SEMICOLON</span> and <span class="tt">COLON</span>. </p>
+<p>Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of tokens delimiting the end of <a class="el" href="namespace_bond.html">Bond</a> switch labels, namely: <span class="tt">KEY_BREAK</span>, <span class="tt">KEY_CASE</span>, <span class="tt">KEY_CONTINUE</span>, <span class="tt">KEY_DEFAULT</span>, <span class="tt">KEY_DO</span>, <span class="tt">KEY_IF</span>, <span class="tt">KEY_FOR</span>, <span class="tt">KEY_RETURN</span>, <span class="tt">KEY_SWITCH</span>, <span class="tt">KEY_USING</span>, <span class="tt">KEY_WHILE</span>, <span class="tt">OBRACE</span>, <span class="tt">CBRACE</span>, <span class="tt">SEMICOLON</span> and <span class="tt">COLON</span>. </p>
 
 </div>
 </div>
-<a id="ga4a75d07b0787dc636880fa63bc201a5f" name="ga4a75d07b0787dc636880fa63bc201a5f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga4a75d07b0787dc636880fa63bc201a5f">&#9670;&#160;</a></span>LEAST32_INTEGER_TYPE_SPECIFIERS_TYPESET</h2>
+<a id="ga274560a7f2d1d3cf13a3d378a21a35cb" name="ga274560a7f2d1d3cf13a3d378a21a35cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga274560a7f2d1d3cf13a3d378a21a35cb">&#9670;&#160;</a></span>LEAST32_INTEGER_TYPE_SPECIFIERS_TYPESET</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1162,7 +1341,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::LEAST32_INTEGER_TYPE_SPECIFIERS_TYPESET</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::LEAST32_INTEGER_TYPE_SPECIFIERS_TYPESET</td>
         </tr>
       </table>
   </td>
@@ -1176,8 +1355,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="gaf0174c32866ace77edad0298bfdc48a7" name="gaf0174c32866ace77edad0298bfdc48a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf0174c32866ace77edad0298bfdc48a7">&#9670;&#160;</a></span>LONG_INTEGER_TYPE_SPECIFIERS_TYPESET</h2>
+<a id="ga16e0447b696df0f60d08c05e1c989aba" name="ga16e0447b696df0f60d08c05e1c989aba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga16e0447b696df0f60d08c05e1c989aba">&#9670;&#160;</a></span>LONG_INTEGER_TYPE_SPECIFIERS_TYPESET</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1186,7 +1365,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::LONG_INTEGER_TYPE_SPECIFIERS_TYPESET</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::LONG_INTEGER_TYPE_SPECIFIERS_TYPESET</td>
         </tr>
       </table>
   </td>
@@ -1200,8 +1379,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="ga0a3506f9eeebeefa561759d459945194" name="ga0a3506f9eeebeefa561759d459945194"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0a3506f9eeebeefa561759d459945194">&#9670;&#160;</a></span>LONG_TOKEN</h2>
+<a id="ga6a6eed4f755d4ac22b4ad15b1fd18ba7" name="ga6a6eed4f755d4ac22b4ad15b1fd18ba7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6a6eed4f755d4ac22b4ad15b1fd18ba7">&#9670;&#160;</a></span>LONG_TOKEN</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1210,7 +1389,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token.html">Token</a> Bond::LONG_TOKEN</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token.html">Token</a> Bond::LONG_TOKEN</td>
         </tr>
       </table>
   </td>
@@ -1224,8 +1403,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="gac40b1f7400ba9e3fd1bfd29a6a8b7aa9" name="gac40b1f7400ba9e3fd1bfd29a6a8b7aa9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac40b1f7400ba9e3fd1bfd29a6a8b7aa9">&#9670;&#160;</a></span>MOST32_INTEGER_CONSTANTS_TYPESET</h2>
+<a id="ga99a01fb17c3441d39cdae99a0ef0276e" name="ga99a01fb17c3441d39cdae99a0ef0276e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga99a01fb17c3441d39cdae99a0ef0276e">&#9670;&#160;</a></span>MOST32_INTEGER_CONSTANTS_TYPESET</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1234,7 +1413,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::MOST32_INTEGER_CONSTANTS_TYPESET</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::MOST32_INTEGER_CONSTANTS_TYPESET</td>
         </tr>
       </table>
   </td>
@@ -1248,8 +1427,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="ga97c8cedea226a5156be5989588b0e3fa" name="ga97c8cedea226a5156be5989588b0e3fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga97c8cedea226a5156be5989588b0e3fa">&#9670;&#160;</a></span>MOST32_INTEGER_TYPE_SPECIFIERS_TYPESET</h2>
+<a id="ga2f9a721eb763b40bad931d22e8f5b801" name="ga2f9a721eb763b40bad931d22e8f5b801"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2f9a721eb763b40bad931d22e8f5b801">&#9670;&#160;</a></span>MOST32_INTEGER_TYPE_SPECIFIERS_TYPESET</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1258,7 +1437,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::MOST32_INTEGER_TYPE_SPECIFIERS_TYPESET</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::MOST32_INTEGER_TYPE_SPECIFIERS_TYPESET</td>
         </tr>
       </table>
   </td>
@@ -1272,8 +1451,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="ga3255a9f59fa9f6ce200021f6398018e1" name="ga3255a9f59fa9f6ce200021f6398018e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga3255a9f59fa9f6ce200021f6398018e1">&#9670;&#160;</a></span>MULTIPLICATIVE_OPERATORS_TYPESET</h2>
+<a id="ga4757669ab8afd01d451ede6106483af9" name="ga4757669ab8afd01d451ede6106483af9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4757669ab8afd01d451ede6106483af9">&#9670;&#160;</a></span>MULTIPLICATIVE_OPERATORS_TYPESET</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1282,7 +1461,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::MULTIPLICATIVE_OPERATORS_TYPESET</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::MULTIPLICATIVE_OPERATORS_TYPESET</td>
         </tr>
       </table>
   </td>
@@ -1296,8 +1475,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="gae82404223e5d79b4520e7d0d6994e61a" name="gae82404223e5d79b4520e7d0d6994e61a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae82404223e5d79b4520e7d0d6994e61a">&#9670;&#160;</a></span>NUMERIC_TYPE_SPECIFIERS_TYPESET</h2>
+<a id="gad3e0a091ac58c188f023222e1007e87a" name="gad3e0a091ac58c188f023222e1007e87a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad3e0a091ac58c188f023222e1007e87a">&#9670;&#160;</a></span>NUMERIC_TYPE_SPECIFIERS_TYPESET</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1306,7 +1485,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::NUMERIC_TYPE_SPECIFIERS_TYPESET</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::NUMERIC_TYPE_SPECIFIERS_TYPESET</td>
         </tr>
       </table>
   </td>
@@ -1320,8 +1499,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="gab1b040b4632851b40cb95e35c757bdff" name="gab1b040b4632851b40cb95e35c757bdff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab1b040b4632851b40cb95e35c757bdff">&#9670;&#160;</a></span>POSTFIX_OPERATORS_TYPESET</h2>
+<a id="gaff1d5f33d75434910e5954597d89cd0d" name="gaff1d5f33d75434910e5954597d89cd0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaff1d5f33d75434910e5954597d89cd0d">&#9670;&#160;</a></span>POSTFIX_OPERATORS_TYPESET</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1330,7 +1509,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::POSTFIX_OPERATORS_TYPESET</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::POSTFIX_OPERATORS_TYPESET</td>
         </tr>
       </table>
   </td>
@@ -1344,8 +1523,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="ga9904605e5234423a532ba1994b643ad2" name="ga9904605e5234423a532ba1994b643ad2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9904605e5234423a532ba1994b643ad2">&#9670;&#160;</a></span>PRIMITIVE_TYPE_SPECIFIERS_TYPESET</h2>
+<a id="ga189af21ada22cc4b8e6eac842ddf726a" name="ga189af21ada22cc4b8e6eac842ddf726a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga189af21ada22cc4b8e6eac842ddf726a">&#9670;&#160;</a></span>PRIMITIVE_TYPE_SPECIFIERS_TYPESET</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1354,7 +1533,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::PRIMITIVE_TYPE_SPECIFIERS_TYPESET</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::PRIMITIVE_TYPE_SPECIFIERS_TYPESET</td>
         </tr>
       </table>
   </td>
@@ -1368,8 +1547,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="ga93fc2bf1b3fba85529bfb5e16beac0cd" name="ga93fc2bf1b3fba85529bfb5e16beac0cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga93fc2bf1b3fba85529bfb5e16beac0cd">&#9670;&#160;</a></span>PROPERTYOF_OPERATORS_TYPESET</h2>
+<a id="ga3c03eb7776386d9458d59f2d1c4b8637" name="ga3c03eb7776386d9458d59f2d1c4b8637"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3c03eb7776386d9458d59f2d1c4b8637">&#9670;&#160;</a></span>PROPERTYOF_OPERATORS_TYPESET</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1378,7 +1557,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::PROPERTYOF_OPERATORS_TYPESET</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::PROPERTYOF_OPERATORS_TYPESET</td>
         </tr>
       </table>
   </td>
@@ -1392,8 +1571,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="gae037f865ad40449220db1bcc581dc35c" name="gae037f865ad40449220db1bcc581dc35c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae037f865ad40449220db1bcc581dc35c">&#9670;&#160;</a></span>RELATIONAL_OPERATORS_TYPESET</h2>
+<a id="gaf85c1f66f0962ddf998316bb5015f97a" name="gaf85c1f66f0962ddf998316bb5015f97a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf85c1f66f0962ddf998316bb5015f97a">&#9670;&#160;</a></span>RELATIONAL_OPERATORS_TYPESET</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1402,7 +1581,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::RELATIONAL_OPERATORS_TYPESET</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::RELATIONAL_OPERATORS_TYPESET</td>
         </tr>
       </table>
   </td>
@@ -1416,8 +1595,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="ga1d649c2fd0cb13731ad287b9073bf2e4" name="ga1d649c2fd0cb13731ad287b9073bf2e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1d649c2fd0cb13731ad287b9073bf2e4">&#9670;&#160;</a></span>SHIFT_OPERATORS_TYPESET</h2>
+<a id="ga835cb2cfeb98049c0a3724b48fee7b9a" name="ga835cb2cfeb98049c0a3724b48fee7b9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga835cb2cfeb98049c0a3724b48fee7b9a">&#9670;&#160;</a></span>SHIFT_OPERATORS_TYPESET</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1426,7 +1605,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::SHIFT_OPERATORS_TYPESET</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::SHIFT_OPERATORS_TYPESET</td>
         </tr>
       </table>
   </td>
@@ -1440,8 +1619,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="ga543c505c34ff21a885129b62313fedc9" name="ga543c505c34ff21a885129b62313fedc9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga543c505c34ff21a885129b62313fedc9">&#9670;&#160;</a></span>SIGNED_INTEGER_CONSTANTS_TYPESET</h2>
+<a id="gafdef1c33258c16da8c92be1f445354f2" name="gafdef1c33258c16da8c92be1f445354f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafdef1c33258c16da8c92be1f445354f2">&#9670;&#160;</a></span>SIGNED_INTEGER_CONSTANTS_TYPESET</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1450,7 +1629,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::SIGNED_INTEGER_CONSTANTS_TYPESET</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::SIGNED_INTEGER_CONSTANTS_TYPESET</td>
         </tr>
       </table>
   </td>
@@ -1464,8 +1643,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="gaafea1ca0cfae7ebe4da1d7e8d67c861e" name="gaafea1ca0cfae7ebe4da1d7e8d67c861e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaafea1ca0cfae7ebe4da1d7e8d67c861e">&#9670;&#160;</a></span>SIGNED_INTEGER_TYPE_SPECIFIERS_TYPESET</h2>
+<a id="ga04a0ca0db9779b1c063cf6b389646553" name="ga04a0ca0db9779b1c063cf6b389646553"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga04a0ca0db9779b1c063cf6b389646553">&#9670;&#160;</a></span>SIGNED_INTEGER_TYPE_SPECIFIERS_TYPESET</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1474,7 +1653,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::SIGNED_INTEGER_TYPE_SPECIFIERS_TYPESET</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::SIGNED_INTEGER_TYPE_SPECIFIERS_TYPESET</td>
         </tr>
       </table>
   </td>
@@ -1488,8 +1667,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="ga79fe0150789678136e9264725b1647d2" name="ga79fe0150789678136e9264725b1647d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga79fe0150789678136e9264725b1647d2">&#9670;&#160;</a></span>STATEMENT_DELIMITERS_TYPESET</h2>
+<a id="gaa2cc6a55258061709921277fa7ea4e9c" name="gaa2cc6a55258061709921277fa7ea4e9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa2cc6a55258061709921277fa7ea4e9c">&#9670;&#160;</a></span>STATEMENT_DELIMITERS_TYPESET</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1498,7 +1677,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::STATEMENT_DELIMITERS_TYPESET</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::STATEMENT_DELIMITERS_TYPESET</td>
         </tr>
       </table>
   </td>
@@ -1508,12 +1687,12 @@ template&lt;typename NodeType&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of tokens delimiting the end of <a class="el" href="namespace_bond.html">Bond</a> statements, namely: <span class="tt">KEY_BREAK</span>, <span class="tt">KEY_CASE</span>, <span class="tt">KEY_CONTINUE</span>, <span class="tt">KEY_DEFAULT</span>, <span class="tt">KEY_DO</span>, <span class="tt">KEY_IF</span>, <span class="tt">KEY_FOR</span>, <span class="tt">KEY_RETURN</span>, <span class="tt">KEY_SWITCH</span>, <span class="tt">KEY_WHILE</span>, <span class="tt">OBRACE</span>, <span class="tt">CBRACE</span> and <span class="tt">COLON</span>. </p>
+<p>Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of tokens delimiting the end of <a class="el" href="namespace_bond.html">Bond</a> statements, namely: <span class="tt">KEY_BREAK</span>, <span class="tt">KEY_CASE</span>, <span class="tt">KEY_CONTINUE</span>, <span class="tt">KEY_DEFAULT</span>, <span class="tt">KEY_DO</span>, <span class="tt">KEY_IF</span>, <span class="tt">KEY_FOR</span>, <span class="tt">KEY_RETURN</span>, <span class="tt">KEY_SWITCH</span>, <span class="tt">KEY_USING</span>, <span class="tt">KEY_WHILE</span>, <span class="tt">OBRACE</span>, <span class="tt">CBRACE</span> and <span class="tt">SEMICOLON</span>. </p>
 
 </div>
 </div>
-<a id="ga02fb746b6dc06ad3feb69b4c0eddba47" name="ga02fb746b6dc06ad3feb69b4c0eddba47"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga02fb746b6dc06ad3feb69b4c0eddba47">&#9670;&#160;</a></span>STRUCT_MEMBER_DELIMITERS_TYPESET</h2>
+<a id="ga329d404de8f0bd492addf61522856870" name="ga329d404de8f0bd492addf61522856870"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga329d404de8f0bd492addf61522856870">&#9670;&#160;</a></span>STRUCT_MEMBER_DELIMITERS_TYPESET</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1522,7 +1701,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::STRUCT_MEMBER_DELIMITERS_TYPESET</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::STRUCT_MEMBER_DELIMITERS_TYPESET</td>
         </tr>
       </table>
   </td>
@@ -1536,8 +1715,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="gad80f8ec169da85499b1239a1a43dcd1c" name="gad80f8ec169da85499b1239a1a43dcd1c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad80f8ec169da85499b1239a1a43dcd1c">&#9670;&#160;</a></span>SWITCH_LABELS_TYPESET</h2>
+<a id="gafa580a619501826a027aaef1ea17229d" name="gafa580a619501826a027aaef1ea17229d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafa580a619501826a027aaef1ea17229d">&#9670;&#160;</a></span>SWITCH_LABELS_TYPESET</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1546,7 +1725,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::SWITCH_LABELS_TYPESET</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::SWITCH_LABELS_TYPESET</td>
         </tr>
       </table>
   </td>
@@ -1560,8 +1739,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="gabc116b73a209e3e0ad00702499e3067f" name="gabc116b73a209e3e0ad00702499e3067f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gabc116b73a209e3e0ad00702499e3067f">&#9670;&#160;</a></span>SWITCH_SECTION_DELIMITERS_TYPESET</h2>
+<a id="gad4ca7228f417c7c8c45bdcc5031c0328" name="gad4ca7228f417c7c8c45bdcc5031c0328"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad4ca7228f417c7c8c45bdcc5031c0328">&#9670;&#160;</a></span>SWITCH_SECTION_DELIMITERS_TYPESET</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1570,7 +1749,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::SWITCH_SECTION_DELIMITERS_TYPESET</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::SWITCH_SECTION_DELIMITERS_TYPESET</td>
         </tr>
       </table>
   </td>
@@ -1580,12 +1759,12 @@ template&lt;typename NodeType&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of tokens delimiting the end of <a class="el" href="namespace_bond.html">Bond</a> switch statement sections, namely: <span class="tt">KEY_CASE</span>, <span class="tt">KEY_DEFAULT</span>, <span class="tt">CBRACE</span> and <span class="tt">COMMA</span>. </p>
+<p>Constant <a class="el" href="class_bond_1_1_token_type_set.html" title="Represents a collection of related TokenTypes.">TokenTypeSet</a> of tokens delimiting the end of <a class="el" href="namespace_bond.html">Bond</a> switch statement sections, namely: <span class="tt">KEY_CASE</span>, <span class="tt">KEY_DEFAULT</span>, <span class="tt">CBRACE</span> and <span class="tt">END</span>. </p>
 
 </div>
 </div>
-<a id="ga2ded564254c23d6ff90e7a11636d9bcf" name="ga2ded564254c23d6ff90e7a11636d9bcf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2ded564254c23d6ff90e7a11636d9bcf">&#9670;&#160;</a></span>TYPE_DESCRIPTORS_TYPESET</h2>
+<a id="ga8fabb19815206436eba3c8a1f95608be" name="ga8fabb19815206436eba3c8a1f95608be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8fabb19815206436eba3c8a1f95608be">&#9670;&#160;</a></span>TYPE_DESCRIPTORS_TYPESET</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1594,7 +1773,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::TYPE_DESCRIPTORS_TYPESET</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::TYPE_DESCRIPTORS_TYPESET</td>
         </tr>
       </table>
   </td>
@@ -1608,8 +1787,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="ga78010f1bcb69321419ecdaba32074716" name="ga78010f1bcb69321419ecdaba32074716"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga78010f1bcb69321419ecdaba32074716">&#9670;&#160;</a></span>UCHAR_TOKEN</h2>
+<a id="ga7dcf14694605dcb15bad564d35b6f1bb" name="ga7dcf14694605dcb15bad564d35b6f1bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7dcf14694605dcb15bad564d35b6f1bb">&#9670;&#160;</a></span>UCHAR_TOKEN</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1618,7 +1797,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token.html">Token</a> Bond::UCHAR_TOKEN</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token.html">Token</a> Bond::UCHAR_TOKEN</td>
         </tr>
       </table>
   </td>
@@ -1632,8 +1811,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="ga7ebb336a1afba1b977dfacf36f46eba8" name="ga7ebb336a1afba1b977dfacf36f46eba8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga7ebb336a1afba1b977dfacf36f46eba8">&#9670;&#160;</a></span>UINT_TOKEN</h2>
+<a id="ga2f1d12ec541c68d725045b0a25b22d34" name="ga2f1d12ec541c68d725045b0a25b22d34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2f1d12ec541c68d725045b0a25b22d34">&#9670;&#160;</a></span>UINT_TOKEN</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1642,7 +1821,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token.html">Token</a> Bond::UINT_TOKEN</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token.html">Token</a> Bond::UINT_TOKEN</td>
         </tr>
       </table>
   </td>
@@ -1656,8 +1835,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="ga425c23909d1b88308ade9fb2c4093784" name="ga425c23909d1b88308ade9fb2c4093784"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga425c23909d1b88308ade9fb2c4093784">&#9670;&#160;</a></span>ULONG_TOKEN</h2>
+<a id="gae4474e6660266b2d92a96ed15660b3a8" name="gae4474e6660266b2d92a96ed15660b3a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae4474e6660266b2d92a96ed15660b3a8">&#9670;&#160;</a></span>ULONG_TOKEN</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1666,7 +1845,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token.html">Token</a> Bond::ULONG_TOKEN</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token.html">Token</a> Bond::ULONG_TOKEN</td>
         </tr>
       </table>
   </td>
@@ -1680,8 +1859,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="ga70a75a6f7578fbf29994964380fa565d" name="ga70a75a6f7578fbf29994964380fa565d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga70a75a6f7578fbf29994964380fa565d">&#9670;&#160;</a></span>UNARY_OPERATORS_TYPESET</h2>
+<a id="ga495a3c34417b5a408726b8fcf5806f14" name="ga495a3c34417b5a408726b8fcf5806f14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga495a3c34417b5a408726b8fcf5806f14">&#9670;&#160;</a></span>UNARY_OPERATORS_TYPESET</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1690,7 +1869,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::UNARY_OPERATORS_TYPESET</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::UNARY_OPERATORS_TYPESET</td>
         </tr>
       </table>
   </td>
@@ -1704,8 +1883,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="gaec8843ce8f45d5508ac8e9d6b67e7f66" name="gaec8843ce8f45d5508ac8e9d6b67e7f66"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaec8843ce8f45d5508ac8e9d6b67e7f66">&#9670;&#160;</a></span>UNSIGNED_INTEGER_TYPE_SPECIFIERS_TYPESET</h2>
+<a id="gac78677ff8c3cc520a4b3f86b7bff77df" name="gac78677ff8c3cc520a4b3f86b7bff77df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac78677ff8c3cc520a4b3f86b7bff77df">&#9670;&#160;</a></span>UNSIGNED_INTEGER_TYPE_SPECIFIERS_TYPESET</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1714,7 +1893,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::UNSIGNED_INTEGER_TYPE_SPECIFIERS_TYPESET</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::UNSIGNED_INTEGER_TYPE_SPECIFIERS_TYPESET</td>
         </tr>
       </table>
   </td>
@@ -1728,8 +1907,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="ga7449b8d4c459fc828acdf9ec09a1c369" name="ga7449b8d4c459fc828acdf9ec09a1c369"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga7449b8d4c459fc828acdf9ec09a1c369">&#9670;&#160;</a></span>VOID_TOKEN</h2>
+<a id="ga7c7e0efe7d17c720a4f7488a8d8b4983" name="ga7c7e0efe7d17c720a4f7488a8d8b4983"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7c7e0efe7d17c720a4f7488a8d8b4983">&#9670;&#160;</a></span>VOID_TOKEN</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1738,7 +1917,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token.html">Token</a> Bond::VOID_TOKEN</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token.html">Token</a> Bond::VOID_TOKEN</td>
         </tr>
       </table>
   </td>
@@ -1752,8 +1931,8 @@ template&lt;typename NodeType&gt; </div>
 
 </div>
 </div>
-<a id="ga89acd6af8490e7c9bb872cb24f581613" name="ga89acd6af8490e7c9bb872cb24f581613"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga89acd6af8490e7c9bb872cb24f581613">&#9670;&#160;</a></span>VOID_TYPE_SPECIFIERS_TYPESET</h2>
+<a id="gac034afb363ebf64842c8740e7bce37d0" name="gac034afb363ebf64842c8740e7bce37d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac034afb363ebf64842c8740e7bce37d0">&#9670;&#160;</a></span>VOID_TYPE_SPECIFIERS_TYPESET</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1762,7 +1941,7 @@ template&lt;typename NodeType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::VOID_TYPE_SPECIFIERS_TYPESET</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_token_type_set.html">TokenTypeSet</a> Bond::VOID_TYPE_SPECIFIERS_TYPESET</td>
         </tr>
       </table>
   </td>

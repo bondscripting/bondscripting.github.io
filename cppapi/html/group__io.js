@@ -11,6 +11,7 @@ var group__io =
     [ "Bond::InputStreamAdaptor", "class_bond_1_1_input_stream_adaptor.html", [
       [ "InputStreamAdaptor", "class_bond_1_1_input_stream_adaptor.html#af495c3b567b308efa59146b454cdd08f", null ],
       [ "ClearFlags", "class_bond_1_1_input_stream_adaptor.html#a0471550cbff3bb9352be9ec2ef1de837", null ],
+      [ "Close", "class_bond_1_1_input_stream_adaptor.html#afcbd67bdb137d6c3e9bb14a5c4cd8c29", null ],
       [ "GetFlags", "class_bond_1_1_input_stream_adaptor.html#a8d87eae25142292a929b78e9e1b065d4", null ],
       [ "GetStream", "class_bond_1_1_input_stream_adaptor.html#a373fb145ec08934a9dedca59f8a5e3a6", null ],
       [ "ScanBool", "class_bond_1_1_input_stream_adaptor.html#a3d72dd895c5a3b1e5639d224b5c77cce", null ],
@@ -72,6 +73,7 @@ var group__io =
     [ "Bond::OutputStreamAdaptor", "class_bond_1_1_output_stream_adaptor.html", [
       [ "OutputStreamAdaptor", "class_bond_1_1_output_stream_adaptor.html#a63cb211ad71921ed29a21ff4901496d9", null ],
       [ "ClearFlags", "class_bond_1_1_output_stream_adaptor.html#a9c0e0e0fc2f3177801c329944e703e53", null ],
+      [ "Close", "class_bond_1_1_output_stream_adaptor.html#ad147fc432e9072a0975500a419e96e56", null ],
       [ "GetFlags", "class_bond_1_1_output_stream_adaptor.html#a4556002e60f26a71c3e6f17b3d256f83", null ],
       [ "GetPrecision", "class_bond_1_1_output_stream_adaptor.html#ad1328defee5b82213bed818895416d32", null ],
       [ "GetStream", "class_bond_1_1_output_stream_adaptor.html#a41372a3c3597dcd30b0117f11df41ad0", null ],
@@ -179,5 +181,8 @@ var group__io =
       [ "CreateOutputStream", "class_bond_1_1_stream_factory.html#ac8b88c2fa27215b5ee7d99a334a76673", null ]
     ] ],
     [ "Bond::InputStreamHandle", "group__io.html#ga37b72a5672b81b2727ba53b4ffbe47f8", null ],
-    [ "Bond::OutputStreamHandle", "group__io.html#ga68173a5e6d6425a9194cfc319b70863c", null ]
+    [ "Bond::OutputStreamHandle", "group__io.html#ga68173a5e6d6425a9194cfc319b70863c", null ],
+    [ "Bond::GetDirectory", "group__io.html#ga20a789392ca5fe0fb6723a0fced899a6", null ],
+    [ "Bond::IsAbsolutePath", "group__io.html#gaf33e680567db7ed1721a2027c7d45c52", null ],
+    [ "Bond::NormalizePath", "group__io.html#gaaf703843801b253138e8e6b865719467", null ]
 ];

@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('struct_bond_1_
 </div><!--header-->
 <div class="contents">
 
-<p>Collection of per-CBO Constant tables.  
+<p>The constant tables of a single CBO, which are referenced by index from the bytecode of its functions.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;bond/vm/codesegment.h&gt;</code></p>
@@ -122,12 +122,16 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('struct_bond_1_
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a433b5b6ab49d163eed5ccc82274c9a66" id="r_a433b5b6ab49d163eed5ccc82274c9a66"><td class="memItemLeft">const <a class="el" href="union_bond_1_1_value32.html">Value32</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a433b5b6ab49d163eed5ccc82274c9a66">mValue32Table</a></td></tr>
+<tr class="memdesc:a433b5b6ab49d163eed5ccc82274c9a66"><td class="mdescLeft">&#160;</td><td class="mdescRight">The table of 32-bit constants.  <br /></td></tr>
 <tr class="memitem:a19c27cfa74b2115f9ad7ace8ac8cccc9" id="r_a19c27cfa74b2115f9ad7ace8ac8cccc9"><td class="memItemLeft">const <a class="el" href="union_bond_1_1_value64.html">Value64</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a19c27cfa74b2115f9ad7ace8ac8cccc9">mValue64Table</a></td></tr>
+<tr class="memdesc:a19c27cfa74b2115f9ad7ace8ac8cccc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The table of 64-bit constants.  <br /></td></tr>
 <tr class="memitem:a5013e0e39a5b60baca1341f43900f629" id="r_a5013e0e39a5b60baca1341f43900f629"><td class="memItemLeft">const StringView *&#160;</td><td class="memItemRight"><a class="el" href="#a5013e0e39a5b60baca1341f43900f629">mStringTable</a></td></tr>
+<tr class="memdesc:a5013e0e39a5b60baca1341f43900f629"><td class="mdescLeft">&#160;</td><td class="mdescRight">The table of string constants.  <br /></td></tr>
 <tr class="memitem:ade5509b88d12fe7c37ecdcc7ff5cb23e" id="r_ade5509b88d12fe7c37ecdcc7ff5cb23e"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_qualified_name.html">QualifiedName</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ade5509b88d12fe7c37ecdcc7ff5cb23e">mQualifiedNameTable</a></td></tr>
+<tr class="memdesc:ade5509b88d12fe7c37ecdcc7ff5cb23e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The table of qualified names of the symbols referenced by the CBO.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Collection of per-CBO Constant tables. </p>
+<div class="textblock"><p>The constant tables of a single CBO, which are referenced by index from the bytecode of its functions. </p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="ade5509b88d12fe7c37ecdcc7ff5cb23e" name="ade5509b88d12fe7c37ecdcc7ff5cb23e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ade5509b88d12fe7c37ecdcc7ff5cb23e">&#9670;&#160;</a></span>mQualifiedNameTable</h2>
@@ -140,6 +144,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The table of qualified names of the symbols referenced by the CBO. </p>
 
 </div>
 </div>
@@ -155,6 +161,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The table of string constants. </p>
+
 </div>
 </div>
 <a id="a433b5b6ab49d163eed5ccc82274c9a66" name="a433b5b6ab49d163eed5ccc82274c9a66"></a>
@@ -169,6 +177,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The table of 32-bit constants. </p>
+
 </div>
 </div>
 <a id="a19c27cfa74b2115f9ad7ace8ac8cccc9" name="a19c27cfa74b2115f9ad7ace8ac8cccc9"></a>
@@ -182,6 +192,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The table of 64-bit constants. </p>
 
 </div>
 </div>

@@ -135,19 +135,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8676a9f3a821500f42c1ebc67b430e7e" id="r_a8676a9f3a821500f42c1ebc67b430e7e"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a8676a9f3a821500f42c1ebc67b430e7e">StdioInputStream</a> (FILE *file)</td></tr>
 <tr class="memdesc:a8676a9f3a821500f42c1ebc67b430e7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_bond_1_1_stdio_input_stream.html" title="A concrete implementation of InputStream that performs input operations from a stdio FILE*.">StdioInputStream</a> object.  <br /></td></tr>
 <tr class="memitem:a06992fd717ccafe223108b407a91aaea" id="r_a06992fd717ccafe223108b407a91aaea"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a06992fd717ccafe223108b407a91aaea">StdioInputStream</a> (const char *fileName)</td></tr>
-<tr class="memdesc:a06992fd717ccafe223108b407a91aaea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_bond_1_1_stdio_input_stream.html" title="A concrete implementation of InputStream that performs input operations from a stdio FILE*.">StdioInputStream</a> object.  <br /></td></tr>
+<tr class="memdesc:a06992fd717ccafe223108b407a91aaea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_bond_1_1_stdio_input_stream.html" title="A concrete implementation of InputStream that performs input operations from a stdio FILE*.">StdioInputStream</a> object that opens and owns the given file.  <br /></td></tr>
 <tr class="memitem:a66bd5b0c87cbd9c4789402e6388f4288" id="r_a66bd5b0c87cbd9c4789402e6388f4288"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a66bd5b0c87cbd9c4789402e6388f4288">StdioInputStream</a> (<a class="el" href="class_bond_1_1_stdio_file_handle.html">StdioFileHandle</a> &amp;&amp;handle)</td></tr>
 <tr class="memdesc:a66bd5b0c87cbd9c4789402e6388f4288"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_bond_1_1_stdio_input_stream.html" title="A concrete implementation of InputStream that performs input operations from a stdio FILE*.">StdioInputStream</a> object.  <br /></td></tr>
 <tr class="memitem:a50f246188b09bcfc2665c48ce568b50a" id="r_a50f246188b09bcfc2665c48ce568b50a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a50f246188b09bcfc2665c48ce568b50a">StdioInputStream</a> (StdioInputStream &amp;&amp;other)</td></tr>
 <tr class="memdesc:a50f246188b09bcfc2665c48ce568b50a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move-constructs a <a class="el" href="class_bond_1_1_stdio_input_stream.html" title="A concrete implementation of InputStream that performs input operations from a stdio FILE*.">StdioInputStream</a> object.  <br /></td></tr>
 <tr class="memitem:a890b5f1d13eed5db6183d23f4ec8ce5f" id="r_a890b5f1d13eed5db6183d23f4ec8ce5f"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#a890b5f1d13eed5db6183d23f4ec8ce5f">~StdioInputStream</a> ()</td></tr>
+<tr class="memdesc:a890b5f1d13eed5db6183d23f4ec8ce5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys a <a class="el" href="class_bond_1_1_stdio_input_stream.html" title="A concrete implementation of InputStream that performs input operations from a stdio FILE*.">StdioInputStream</a> object, closing the file if it is owned.  <br /></td></tr>
 <tr class="memitem:a1080d48b74da19cdca0ca42701bb6d94" id="r_a1080d48b74da19cdca0ca42701bb6d94"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a1080d48b74da19cdca0ca42701bb6d94">StdioInputStream</a> (const StdioInputStream &amp;other)=delete</td></tr>
 <tr class="memitem:a6844c1b983edcdf46f4a485659e70700" id="r_a6844c1b983edcdf46f4a485659e70700"><td class="memItemLeft"><a class="el" href="#a8676a9f3a821500f42c1ebc67b430e7e">StdioInputStream</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a6844c1b983edcdf46f4a485659e70700">operator=</a> (const <a class="el" href="#a8676a9f3a821500f42c1ebc67b430e7e">StdioInputStream</a> &amp;other)=delete</td></tr>
 <tr class="memitem:a8f33d12cc3fcfc3078cda25eca3565ac" id="r_a8f33d12cc3fcfc3078cda25eca3565ac"><td class="memItemLeft"><a class="el" href="#a8676a9f3a821500f42c1ebc67b430e7e">StdioInputStream</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a8f33d12cc3fcfc3078cda25eca3565ac">operator=</a> (<a class="el" href="#a8676a9f3a821500f42c1ebc67b430e7e">StdioInputStream</a> &amp;&amp;other)</td></tr>
+<tr class="memdesc:a8f33d12cc3fcfc3078cda25eca3565ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the file if it is owned and takes over the file of another <a class="el" href="class_bond_1_1_stdio_input_stream.html" title="A concrete implementation of InputStream that performs input operations from a stdio FILE*.">StdioInputStream</a>.  <br /></td></tr>
 <tr class="memitem:a2adefdd5a78ece3a86225bbcb29be7df" id="r_a2adefdd5a78ece3a86225bbcb29be7df"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a2adefdd5a78ece3a86225bbcb29be7df">IsBound</a> () const</td></tr>
 <tr class="memdesc:a2adefdd5a78ece3a86225bbcb29be7df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests whether this stream is currently bound to a FILE object.  <br /></td></tr>
 <tr class="memitem:a807a5f41a4994ef05822d23e5707e840" id="r_a807a5f41a4994ef05822d23e5707e840"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a807a5f41a4994ef05822d23e5707e840">Close</a> () override</td></tr>
-<tr class="memdesc:a807a5f41a4994ef05822d23e5707e840"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the stream.  <br /></td></tr>
+<tr class="memdesc:a807a5f41a4994ef05822d23e5707e840"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the FILE object, whether or not it is owned, and unbinds the stream.  <br /></td></tr>
 <tr class="memitem:a9c4776b8bd94e1ac73a6188df3f246c8" id="r_a9c4776b8bd94e1ac73a6188df3f246c8"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a9c4776b8bd94e1ac73a6188df3f246c8">VScan</a> (const char *format, va_list argList) override</td></tr>
 <tr class="memdesc:a9c4776b8bd94e1ac73a6188df3f246c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads formatted input from the stream using a variable argument list.  <br /></td></tr>
 <tr class="memitem:a7aaf67fa0a564948cbc80c9a91a9e652" id="r_a7aaf67fa0a564948cbc80c9a91a9e652"><td class="memItemLeft">virtual size_t&#160;</td><td class="memItemRight"><a class="el" href="#a7aaf67fa0a564948cbc80c9a91a9e652">Read</a> (uint8_t *bytes, size_t numBytes) override</td></tr>
@@ -223,7 +225,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Constructs a <a class="el" href="class_bond_1_1_stdio_input_stream.html" title="A concrete implementation of InputStream that performs input operations from a stdio FILE*.">StdioInputStream</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">file</td><td>The stdio FILE object from which input will be read. The file is not owned by the <a class="el" href="class_bond_1_1_stdio_input_stream.html" title="A concrete implementation of InputStream that performs input operations from a stdio FILE*.">StdioInputStream</a> unless it is later replaced by an owning handle. </td></tr>
+    <tr><td class="paramname">file</td><td>The stdio FILE object from which input will be read. The file is not owned by the <a class="el" href="class_bond_1_1_stdio_input_stream.html" title="A concrete implementation of InputStream that performs input operations from a stdio FILE*.">StdioInputStream</a>, so it is not closed when the <a class="el" href="class_bond_1_1_stdio_input_stream.html" title="A concrete implementation of InputStream that performs input operations from a stdio FILE*.">StdioInputStream</a> is destroyed, but it is closed by <a class="el" href="#a807a5f41a4994ef05822d23e5707e840" title="Closes the FILE object, whether or not it is owned, and unbinds the stream.">Close()</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -253,10 +255,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Constructs a <a class="el" href="class_bond_1_1_stdio_input_stream.html" title="A concrete implementation of InputStream that performs input operations from a stdio FILE*.">StdioInputStream</a> object. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Constructs a <a class="el" href="class_bond_1_1_stdio_input_stream.html" title="A concrete implementation of InputStream that performs input operations from a stdio FILE*.">StdioInputStream</a> object that opens and owns the given file. </p>
+<p>Throws a <a class="el" href="class_bond_1_1_exception.html" title="Exception thrown for all types of errors in the Bond Runtime Library.">Bond::Exception</a> if the file fails to open. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fileName</td><td>The name of the file to open for reading. </td></tr>
+    <tr><td class="paramname">fileName</td><td>The name of the file to open for reading in binary mode, encoded in UTF-8. </td></tr>
   </table>
   </dd>
 </dl>
@@ -351,6 +353,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Destroys a <a class="el" href="class_bond_1_1_stdio_input_stream.html" title="A concrete implementation of InputStream that performs input operations from a stdio FILE*.">StdioInputStream</a> object, closing the file if it is owned. </p>
 
 </div>
 </div>
@@ -467,8 +471,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Closes the stream. </p>
-<p>The default implementation does nothing. Concrete stream implementations may override this function to release owned resources or detach from the underlying data source or sink. </p>
+<p>Closes the FILE object, whether or not it is owned, and unbinds the stream. </p>
 
 <p>Reimplemented from <a class="el" href="class_bond_1_1_stream.html#a982f9804fba2e4c07a8c0677e7e8cc6a">Bond::Stream</a>.</p>
 
@@ -662,6 +665,15 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Closes the file if it is owned and takes over the file of another <a class="el" href="class_bond_1_1_stdio_input_stream.html" title="A concrete implementation of InputStream that performs input operations from a stdio FILE*.">StdioInputStream</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The <a class="el" href="class_bond_1_1_stdio_input_stream.html" title="A concrete implementation of InputStream that performs input operations from a stdio FILE*.">StdioInputStream</a> object from which resources will be moved. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to this <a class="el" href="class_bond_1_1_stdio_input_stream.html" title="A concrete implementation of InputStream that performs input operations from a stdio FILE*.">StdioInputStream</a>. </dd></dl>
+
 </div>
 </div>
 <a id="a977b35c606aae8cfc5918416242a9b73" name="a977b35c606aae8cfc5918416242a9b73"></a>
@@ -796,7 +808,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Sets the current position relative to the end of the stream. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">offset</td><td>The offset from the end position to which the stream should be moved. </td></tr>
+    <tr><td class="paramname">offset</td><td>The offset from the end position to which the stream should be moved, i.e. the new position is <a class="el" href="#affdf55d8097cd10feeb853e6af4eec7c" title="Returns the end position of the stream.">GetEndPosition()</a> + offset, so offset is normally zero or negative. </td></tr>
   </table>
   </dd>
 </dl>

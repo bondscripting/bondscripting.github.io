@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "Bond", "index.html", [
+    [ "Bond C++ API", "index.html", "index" ],
     [ "Topics", "topics.html", "topics" ],
     [ "Namespace Members", "namespacemembers.html", [
       [ "All", "namespacemembers.html", "namespacemembers_dup" ],
@@ -47,22 +48,27 @@ var NAVTREE =
         [ "Enumerator", "functions_eval.html", "functions_eval" ],
         [ "Related Symbols", "functions_rela.html", null ]
       ] ]
+    ] ],
+    [ "File Members", "globals.html", [
+      [ "All", "globals.html", null ],
+      [ "Macros", "globals_defs.html", null ]
     ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"annotated.html",
-"class_bond_1_1_code_segment.html#a9ed57a3b18248f408431546151b070ef",
-"class_bond_1_1_for_statement.html#aa566243e67e5dbb75679e8d83455cdef",
-"class_bond_1_1_output_stream_adaptor.html",
-"class_bond_1_1_parse_node_visitor_adapter.html#a4ff6ffb20d55dbaceae6377f0e2a5363",
-"class_bond_1_1_struct_declaration.html#a4f8afc3141f6944a27444a252c22597a",
-"class_bond_1_1_token.html#ad4b6c5692435cfc04cc96eb829d10da2a61dbfe01af7c84f4dbcbb6b3b239ceb7",
-"functions_eval_n.html",
-"group__types.html#gga557394428c2bb1199d13db3825d0c0f6a2de5714a3ee5fcfc1a9fd0710042b91f",
-"namespacemembers_u.html"
+"algorithm_8h.html",
+"class_bond_1_1_code_segment.html#a638419702e8142119de7ece0bf88b3c5",
+"class_bond_1_1_expression.html",
+"class_bond_1_1_named_initializer.html#ad987189c235534211bc9a74b6d298365",
+"class_bond_1_1_parse_node_visitor_adapter.html#a03be8af08f2e38bc8ce9a17a25e63f60",
+"class_bond_1_1_stdio_stream_factory.html#af765a5ae21db0d37d23ae0341f0e9777",
+"class_bond_1_1_token.html#a6d09a1144b5a79476ae9c8056728362fae993df6b482f780127531d1d9685288b",
+"class_bond_1_1_while_statement.html#a6d1f8859f97ee3634be386e4097c54a1",
+"group__types.html#gac060939ad510bd7f5bffb2705784883c",
+"group__types.html#gga557394428c2bb1199d13db3825d0c0f6af4f1c41d8f781fb73d434b2cba4b4161",
+"union_bond_1_1_value16.html#a59585d8059baf4eabfca5a16fb7b1aa6"
 ];
 
 const SYNCONMSG = 'click to disable panel synchronization';

@@ -128,11 +128,16 @@ Inheritance diagram for Bond::Allocator::Handle&lt; T &gt;:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6e9fbf4db1f98410fd8cc9246cb3662b" id="r_a6e9fbf4db1f98410fd8cc9246cb3662b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a6e9fbf4db1f98410fd8cc9246cb3662b">Handle</a> (<a class="el" href="class_bond_1_1_allocator.html">Allocator</a> *allocator=nullptr, T *ptr=nullptr)</td></tr>
+<tr class="memdesc:a6e9fbf4db1f98410fd8cc9246cb3662b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_bond_1_1_allocator_1_1_handle.html" title="An owning memory handle that derives from unique_ptr that deallocates memory using a Deallocator rath...">Handle</a> object.  <br /></td></tr>
 <tr class="memitem:a5e754a110a404f6c6b6fbd8a451a24f6" id="r_a5e754a110a404f6c6b6fbd8a451a24f6"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a5e754a110a404f6c6b6fbd8a451a24f6">Handle</a> (<a class="el" href="class_bond_1_1_allocator.html">Allocator</a> &amp;allocator, T *ptr=nullptr)</td></tr>
+<tr class="memdesc:a5e754a110a404f6c6b6fbd8a451a24f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_bond_1_1_allocator_1_1_handle.html" title="An owning memory handle that derives from unique_ptr that deallocates memory using a Deallocator rath...">Handle</a> object.  <br /></td></tr>
 <tr class="memitem:ae98f2d8a3e80b345ca8e2c5684187c0a" id="r_ae98f2d8a3e80b345ca8e2c5684187c0a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ae98f2d8a3e80b345ca8e2c5684187c0a">Handle</a> (Handle &amp;&amp;other)</td></tr>
+<tr class="memdesc:ae98f2d8a3e80b345ca8e2c5684187c0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_bond_1_1_allocator_1_1_handle.html" title="An owning memory handle that derives from unique_ptr that deallocates memory using a Deallocator rath...">Handle</a> object that takes ownership of the memory owned by another.  <br /></td></tr>
 <tr class="memitem:a132c786caf9f2d1996b7c6641f5cd71d" id="r_a132c786caf9f2d1996b7c6641f5cd71d"><td class="memItemLeft"><a class="el" href="#a6e9fbf4db1f98410fd8cc9246cb3662b">Handle</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a132c786caf9f2d1996b7c6641f5cd71d">operator=</a> (<a class="el" href="#a6e9fbf4db1f98410fd8cc9246cb3662b">Handle</a> &amp;&amp;other)</td></tr>
+<tr class="memdesc:a132c786caf9f2d1996b7c6641f5cd71d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees the currently owned memory and takes ownership of the memory owned by another <a class="el" href="class_bond_1_1_allocator_1_1_handle.html" title="An owning memory handle that derives from unique_ptr that deallocates memory using a Deallocator rath...">Handle</a>.  <br /></td></tr>
 <tr class="memitem:afb7aa531081f7484459394a18cc7873f" id="r_afb7aa531081f7484459394a18cc7873f"><td class="memTemplParams" colspan="2">template&lt;typename U&gt; </td></tr>
 <tr class="memitem:afb7aa531081f7484459394a18cc7873f template"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#afb7aa531081f7484459394a18cc7873f">operator Handle&lt; U &gt;</a> () &amp;&amp;</td></tr>
+<tr class="memdesc:afb7aa531081f7484459394a18cc7873f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transfers ownership of the memory to a <a class="el" href="class_bond_1_1_allocator_1_1_handle.html" title="An owning memory handle that derives from unique_ptr that deallocates memory using a Deallocator rath...">Handle</a> of another pointer type.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
@@ -167,6 +172,15 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Constructs a <a class="el" href="class_bond_1_1_allocator_1_1_handle.html" title="An owning memory handle that derives from unique_ptr that deallocates memory using a Deallocator rath...">Handle</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">allocator</td><td>The allocator that frees the memory, or null if it is not to be freed. </td></tr>
+    <tr><td class="paramname">ptr</td><td>Pointer to the owned memory, which must have been allocated by <code class="param">allocator</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a5e754a110a404f6c6b6fbd8a451a24f6" name="a5e754a110a404f6c6b6fbd8a451a24f6"></a>
@@ -198,6 +212,15 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Constructs a <a class="el" href="class_bond_1_1_allocator_1_1_handle.html" title="An owning memory handle that derives from unique_ptr that deallocates memory using a Deallocator rath...">Handle</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">allocator</td><td>The allocator that frees the memory. </td></tr>
+    <tr><td class="paramname">ptr</td><td>Pointer to the owned memory, which must have been allocated by <code class="param">allocator</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ae98f2d8a3e80b345ca8e2c5684187c0a" name="ae98f2d8a3e80b345ca8e2c5684187c0a"></a>
@@ -224,6 +247,8 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="class_bond_1_1_allocator_1_1_handle.html" title="An owning memory handle that derives from unique_ptr that deallocates memory using a Deallocator rath...">Handle</a> object that takes ownership of the memory owned by another. </p>
 
 </div>
 </div>
@@ -255,6 +280,8 @@ template&lt;typename U&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Transfers ownership of the memory to a <a class="el" href="class_bond_1_1_allocator_1_1_handle.html" title="An owning memory handle that derives from unique_ptr that deallocates memory using a Deallocator rath...">Handle</a> of another pointer type. </p>
+
 </div>
 </div>
 <a id="a132c786caf9f2d1996b7c6641f5cd71d" name="a132c786caf9f2d1996b7c6641f5cd71d"></a>
@@ -281,6 +308,8 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Frees the currently owned memory and takes ownership of the memory owned by another <a class="el" href="class_bond_1_1_allocator_1_1_handle.html" title="An owning memory handle that derives from unique_ptr that deallocates memory using a Deallocator rath...">Handle</a>. </p>
 
 </div>
 </div>

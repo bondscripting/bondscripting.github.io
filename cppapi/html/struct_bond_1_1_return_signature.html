@@ -122,12 +122,14 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('struct_bond_1_
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab7f459aa6fc5532c4f962b244bb70734" id="r_ab7f459aa6fc5532c4f962b244bb70734"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab7f459aa6fc5532c4f962b244bb70734">ReturnSignature</a> (uint32_t size=0, uint32_t type=0)</td></tr>
-<tr class="memdesc:ab7f459aa6fc5532c4f962b244bb70734"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="struct_bond_1_1_return_signature.html" title="Signature metadata for a function return value.">ReturnSignature</a>.  <br /></td></tr>
+<tr class="memdesc:ab7f459aa6fc5532c4f962b244bb70734"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="struct_bond_1_1_return_signature.html" title="Signature metadata for a function return value.">ReturnSignature</a> object.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a18ee14852b7d1bc8acad1e9463cef595" id="r_a18ee14852b7d1bc8acad1e9463cef595"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a18ee14852b7d1bc8acad1e9463cef595">mSize</a>:28</td></tr>
+<tr class="memdesc:a18ee14852b7d1bc8acad1e9463cef595"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of the return value in bytes.  <br /></td></tr>
 <tr class="memitem:a318f27a8ccba9a3cc3bcf6afda5f4b3e" id="r_a318f27a8ccba9a3cc3bcf6afda5f4b3e"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a318f27a8ccba9a3cc3bcf6afda5f4b3e">mType</a>:4</td></tr>
+<tr class="memdesc:a318f27a8ccba9a3cc3bcf6afda5f4b3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="group__types.html#ga852f7fbdd2b590ad8ede531c62fcd649" title="Enumeration of the types of function parameters and return values in CBO files.">SignatureType</a> of the return value.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Signature metadata for a function return value. </p>
@@ -159,11 +161,11 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Constructs a <a class="el" href="struct_bond_1_1_return_signature.html" title="Signature metadata for a function return value.">ReturnSignature</a>. </p>
+<p>Constructs a <a class="el" href="struct_bond_1_1_return_signature.html" title="Signature metadata for a function return value.">ReturnSignature</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">size</td><td>Size of the return value in bytes. </td></tr>
-    <tr><td class="paramname">type</td><td>Encoded <a class="el" href="namespace_bond.html">Bond</a> type identifier for the return value. </td></tr>
+    <tr><td class="paramname">type</td><td>The <a class="el" href="group__types.html#ga852f7fbdd2b590ad8ede531c62fcd649" title="Enumeration of the types of function parameters and return values in CBO files.">SignatureType</a> of the return value. </td></tr>
   </table>
   </dd>
 </dl>
@@ -183,6 +185,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Size of the return value in bytes. </p>
+
 </div>
 </div>
 <a id="a318f27a8ccba9a3cc3bcf6afda5f4b3e" name="a318f27a8ccba9a3cc3bcf6afda5f4b3e"></a>
@@ -196,6 +200,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The <a class="el" href="group__types.html#ga852f7fbdd2b590ad8ede531c62fcd649" title="Enumeration of the types of function parameters and return values in CBO files.">SignatureType</a> of the return value. </p>
 
 </div>
 </div>

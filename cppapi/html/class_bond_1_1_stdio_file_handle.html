@@ -239,12 +239,12 @@ Public Member Functions</h2></td></tr>
 <p>Opens a file and constructs a handle that owns the resulting FILE pointer. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fileName</td><td>The path to the file to open. </td></tr>
+    <tr><td class="paramname">fileName</td><td>The path to the file to open, encoded in UTF-8. </td></tr>
     <tr><td class="paramname">mode</td><td>The fopen mode string used to open the file. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section remark"><dt>Remarks</dt><dd>If fopen fails, the handle remains unbound. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>If fopen fails, the handle remains unbound. On Windows, the handle also remains unbound if fileName is not valid UTF-8 or is longer than BOND_MAX_PATH_LENGTH bytes, including the terminating null. </dd></dl>
 
 </div>
 </div>

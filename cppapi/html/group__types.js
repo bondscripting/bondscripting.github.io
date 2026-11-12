@@ -1,5 +1,6 @@
 var group__types =
 [
+    [ "types.h", "types_8h.html", null ],
     [ "Bond::DataView", "class_bond_1_1_data_view.html", [
       [ "DataView", "class_bond_1_1_data_view.html#a78a923d1bff8a5420b6d386d2b2193a7", null ],
       [ "DataView", "class_bond_1_1_data_view.html#a6bb80c28bc9dfcea8c1359d50caa7354", null ],
@@ -12,7 +13,7 @@ var group__types =
       [ "DataViewIndex", "class_bond_1_1_data_view_index.html#ac881e449bf6bec7f9a5820675b795292", null ],
       [ "GetDataViewNames", "class_bond_1_1_data_view_index.html#a25849d5f74634d42acebbe37c00391cc", null ],
       [ "GetDataViews", "class_bond_1_1_data_view_index.html#af07189c1e7b07e0996c6cceb08fa3cfb", null ],
-      [ "GetNumDataViews", "class_bond_1_1_data_view_index.html#a622a78c7ae1fd4fc62e65c6ad6da7e59", null ]
+      [ "GetNumDataViews", "class_bond_1_1_data_view_index.html#a2df1db862a07276d2c83b334d5bbbb9b", null ]
     ] ],
     [ "Bond::QualifiedName", "class_bond_1_1_qualified_name.html", [
       [ "QualifiedName", "class_bond_1_1_qualified_name.html#a42060719457fb926d11395314883434a", null ],
@@ -81,7 +82,10 @@ var group__types =
       [ "buffer", "struct_bond_1_1_value_1_1_0fstruct_0e_8m_string.html#a9eb50881f47b5d46460e04ac4fc5281d", null ],
       [ "length", "struct_bond_1_1_value_1_1_0fstruct_0e_8m_string.html#af77ced641c4afde05bd38d90ee24af95", null ]
     ] ],
+    [ "BOND_NATIVE_GETTER_SUFFIX", "group__types.html#gac060939ad510bd7f5bffb2705784883c", null ],
+    [ "BOND_NATIVE_SETTER_SUFFIX", "group__types.html#ga866ab1896c7b1b4a76af68ce5a2ff415", null ],
     [ "BOND_OPCODE_LIST", "group__types.html#ga753b1436366d6951f6dc48087cf3b7bb", null ],
+    [ "BOND_SIGNATURE_TYPE_LIST", "group__types.html#ga5ce5500a771c7c7a642d96c60ae32ca8", null ],
     [ "Bond::OpCode", "group__types.html#ga557394428c2bb1199d13db3825d0c0f6", [
       [ "Bond::OPCODE_NOP", "group__types.html#gga557394428c2bb1199d13db3825d0c0f6ab89f4ca4eb1b7e579b96eb750e177b2e", null ],
       [ "Bond::OPCODE_CONSTC", "group__types.html#gga557394428c2bb1199d13db3825d0c0f6aae1b6ea4732a98775f59a8fe1dbf91c2", null ],
@@ -232,9 +236,7 @@ var group__types =
       [ "Bond::OPCODE_SUBF", "group__types.html#gga557394428c2bb1199d13db3825d0c0f6a3fac46e6d3fb5ebb0e52111602180d8b", null ],
       [ "Bond::OPCODE_SUBD", "group__types.html#gga557394428c2bb1199d13db3825d0c0f6aaee25bc85804a198b9cb80e9e72eee27", null ],
       [ "Bond::OPCODE_MULI", "group__types.html#gga557394428c2bb1199d13db3825d0c0f6abae27ddd635904bab6ed8bc26e1e2a30", null ],
-      [ "Bond::OPCODE_MULUI", "group__types.html#gga557394428c2bb1199d13db3825d0c0f6af467ed18b2e254858ff1f8ceaa437162", null ],
       [ "Bond::OPCODE_MULL", "group__types.html#gga557394428c2bb1199d13db3825d0c0f6acadc3609872b8adbc5ad6c3e44ae9bf4", null ],
-      [ "Bond::OPCODE_MULUL", "group__types.html#gga557394428c2bb1199d13db3825d0c0f6ab67fc4a1d8ae6fae412492e883fbe2b5", null ],
       [ "Bond::OPCODE_MULF", "group__types.html#gga557394428c2bb1199d13db3825d0c0f6a88d8410b70f79b39ecdcea3cbdc97314", null ],
       [ "Bond::OPCODE_MULD", "group__types.html#gga557394428c2bb1199d13db3825d0c0f6affb3d6e63ff33cc8f6b675096ee0c9a6", null ],
       [ "Bond::OPCODE_DIVI", "group__types.html#gga557394428c2bb1199d13db3825d0c0f6a212c706ba3505148721f14130f3f0442", null ],
@@ -313,6 +315,7 @@ var group__types =
       [ "Bond::OPCODE_LOOKUPSWITCH", "group__types.html#gga557394428c2bb1199d13db3825d0c0f6a9e71045e0ebbcc890b939079c7c9d830", null ],
       [ "Bond::OPCODE_TABLESWITCH", "group__types.html#gga557394428c2bb1199d13db3825d0c0f6a6ad85e85e7b1a05e16d5c06cdd4d52e1", null ],
       [ "Bond::OPCODE_INVOKE", "group__types.html#gga557394428c2bb1199d13db3825d0c0f6a0265d829bcbec109b9cb7f4c55936510", null ],
+      [ "Bond::OPCODE_INVOKEUNPACK", "group__types.html#gga557394428c2bb1199d13db3825d0c0f6aa3c9f0b0f578f914293c7c9ac84bfb76", null ],
       [ "Bond::OPCODE_RETURN", "group__types.html#gga557394428c2bb1199d13db3825d0c0f6a0754dbc09273164677e9da80f58dc0dd", null ],
       [ "Bond::OPCODE_RETURN32", "group__types.html#gga557394428c2bb1199d13db3825d0c0f6af5f973e715b442d4eba352a54e437a87", null ],
       [ "Bond::OPCODE_RETURN64", "group__types.html#gga557394428c2bb1199d13db3825d0c0f6a81610495cc1ddc7f3549122b19bcf3c0", null ],
@@ -323,7 +326,7 @@ var group__types =
       [ "Bond::OC_PARAM_NONE", "group__types.html#gga2490c24df3d969eccdecb7ea1150c4cca3779dd9f522684de361b2442d7eaaafa", null ],
       [ "Bond::OC_PARAM_CHAR", "group__types.html#gga2490c24df3d969eccdecb7ea1150c4cca344e2c87ebf91023466effd122aeceec", null ],
       [ "Bond::OC_PARAM_UCHAR", "group__types.html#gga2490c24df3d969eccdecb7ea1150c4cca64e8fcf7605acb8a6cc546cc735260cf", null ],
-      [ "Bond::OC_PARAM_UCHAR_CHAR", "group__types.html#gga2490c24df3d969eccdecb7ea1150c4ccae43eb7226eec1400569d909e12f8584b", null ],
+      [ "Bond::OC_PARAM_CHAR_CHAR", "group__types.html#gga2490c24df3d969eccdecb7ea1150c4ccad1de658f58f65107e42e5f3cff697ab5", null ],
       [ "Bond::OC_PARAM_SHORT", "group__types.html#gga2490c24df3d969eccdecb7ea1150c4ccaf1ad558c571772be73f71bcb060a1a43", null ],
       [ "Bond::OC_PARAM_USHORT", "group__types.html#gga2490c24df3d969eccdecb7ea1150c4cca68a518761a635c7784dfb3fc4bf836c9", null ],
       [ "Bond::OC_PARAM_INT", "group__types.html#gga2490c24df3d969eccdecb7ea1150c4cca0d2c8543da6f347e6ac9ed89030dc9fe", null ],
@@ -336,10 +339,51 @@ var group__types =
       [ "Bond::OC_PARAM_LOOKUPSWITCH", "group__types.html#gga2490c24df3d969eccdecb7ea1150c4ccab28fb25a575604c44cd47b06678c2d65", null ],
       [ "Bond::OC_PARAM_TABLESWITCH", "group__types.html#gga2490c24df3d969eccdecb7ea1150c4cca28df9d91823552ba53410d09cb65fc4c", null ]
     ] ],
-    [ "Bond::GetOpCodeMnemonic", "group__types.html#gad500a490b83cfb44bfc4b7f56925028b", null ],
-    [ "Bond::GetOpCodeParamType", "group__types.html#ga88242ea393f502a775234dcb09ccd8d7", null ],
-    [ "Bond::GetStackDelta", "group__types.html#ga3186af69ba26130f18ae6517e6f3f05b", null ],
+    [ "Bond::PointerSize", "group__types.html#gad6df57f21c24017711bb3ccd316fb4b6", [
+      [ "Bond::POINTER_32BIT", "group__types.html#ggad6df57f21c24017711bb3ccd316fb4b6a523bae4bc1f4f5e39684b239b950476b", null ],
+      [ "Bond::POINTER_64BIT", "group__types.html#ggad6df57f21c24017711bb3ccd316fb4b6a4ba1c5015932073e600739779ff8bb0c", null ]
+    ] ],
+    [ "Bond::SignatureType", "group__types.html#ga852f7fbdd2b590ad8ede531c62fcd649", [
+      [ "Bond::SIG_VOID", "group__types.html#gga852f7fbdd2b590ad8ede531c62fcd649a59fa97fe9a4e24dd74ec92b7dc19985c", null ],
+      [ "Bond::SIG_BOOL", "group__types.html#gga852f7fbdd2b590ad8ede531c62fcd649a1530a2bd23f5d742fef81313537d2b92", null ],
+      [ "Bond::SIG_CHAR", "group__types.html#gga852f7fbdd2b590ad8ede531c62fcd649af809c23913caa25e388714c27f42a4f6", null ],
+      [ "Bond::SIG_UCHAR", "group__types.html#gga852f7fbdd2b590ad8ede531c62fcd649a2578e88496e6881b1b03413a2dc71a90", null ],
+      [ "Bond::SIG_SHORT", "group__types.html#gga852f7fbdd2b590ad8ede531c62fcd649adb655a24b61288118f9bbc0605aa29a5", null ],
+      [ "Bond::SIG_USHORT", "group__types.html#gga852f7fbdd2b590ad8ede531c62fcd649a9875c81846158507e23ba134fd15207c", null ],
+      [ "Bond::SIG_INT", "group__types.html#gga852f7fbdd2b590ad8ede531c62fcd649a118c2329df697496668a24eb6dab80a5", null ],
+      [ "Bond::SIG_UINT", "group__types.html#gga852f7fbdd2b590ad8ede531c62fcd649a76982b5fafb411f1a8dd22ed631acf02", null ],
+      [ "Bond::SIG_LONG", "group__types.html#gga852f7fbdd2b590ad8ede531c62fcd649a38360fa8f8fdb6f92661ce764c60ce3f", null ],
+      [ "Bond::SIG_ULONG", "group__types.html#gga852f7fbdd2b590ad8ede531c62fcd649a94df7a7c5f091d77f8c0b34c1fff8fec", null ],
+      [ "Bond::SIG_FLOAT", "group__types.html#gga852f7fbdd2b590ad8ede531c62fcd649a7b48535db5d1d567535118f671171e34", null ],
+      [ "Bond::SIG_DOUBLE", "group__types.html#gga852f7fbdd2b590ad8ede531c62fcd649abf7335a92eb35a3102d90fd82faa1f84", null ],
+      [ "Bond::SIG_POINTER", "group__types.html#gga852f7fbdd2b590ad8ede531c62fcd649a2d876b4c4dbbf9bc7d6f85caf01c42b1", null ],
+      [ "Bond::SIG_AGGREGATE", "group__types.html#gga852f7fbdd2b590ad8ede531c62fcd649a7c56cec47b2d236c7c65ddd5f5a1627c", null ]
+    ] ],
+    [ "Bond::ExpandApiTypeMnemonic", "group__types.html#ga5b04b1487481090eaf7c6b622db10605", null ],
+    [ "Bond::ExpandBondTypeMnemonic", "group__types.html#ga2ad4ab0ce310eb856b60629ad202ad7f", null ],
+    [ "Bond::GetApiTypeMnemonic", "group__types.html#gae0b6a61b2d1d719633e3e51e29ad4e02", null ],
+    [ "Bond::GetBondTypeMnemonic", "group__types.html#ga6c21003293af59a112ae1ba8c7fccd60", null ],
+    [ "Bond::GetOpCodeMnemonic", "group__types.html#gaa4267cc7cadce022d7edaed7712ad587", null ],
+    [ "Bond::GetOpCodeParamType", "group__types.html#ga8a49b1403026b17ee3852475621182d9", null ],
+    [ "Bond::GetPointerSize", "group__types.html#gaa334d8b6d2203114fef557fe57bf74fe", null ],
+    [ "Bond::GetStackDelta", "group__types.html#gab10767436bbc126b73af9551d43b86d7", null ],
     [ "Bond::operator<", "group__types.html#ga9f55fa87c6b684715a369dbc50090eda", null ],
     [ "Bond::operator<", "group__types.html#ga99af6153ceab4fc4dbf201baee72fb57", null ],
-    [ "Bond::operator<", "group__types.html#ga91c58667f1fcc96d3144edbdfc53422c", null ]
+    [ "Bond::operator<", "group__types.html#ga91c58667f1fcc96d3144edbdfc53422c", null ],
+    [ "Bond::BOND_BOOL_SIZE", "group__types.html#gaf9258f6ac5a5191f7e5640ef7fc87529", null ],
+    [ "Bond::BOND_CHAR_SIZE", "group__types.html#ga4a06b5131d49cfa99ef52f7c57f0512c", null ],
+    [ "Bond::BOND_DEFAULT_STRUCT_ALIGN", "group__types.html#gac0a38e81f17af81f332982ad691a773e", null ],
+    [ "Bond::BOND_DEFAULT_STRUCT_SIZE", "group__types.html#gac32bf986194af0a0f068124eed7c3155", null ],
+    [ "Bond::BOND_DOUBLE_SIZE", "group__types.html#gadf540afcf970f3a07df60487b5d29b63", null ],
+    [ "Bond::BOND_FLOAT_SIZE", "group__types.html#gae1c7a43c7a20acab33bda2e3c6abd9b1", null ],
+    [ "Bond::BOND_INT_SIZE", "group__types.html#ga9e3be89072bf87c6090ad034965299e5", null ],
+    [ "Bond::BOND_LONG_SIZE", "group__types.html#gaef2c8b6c1141fd453d36ddb221be71b6", null ],
+    [ "Bond::BOND_NATIVE_POINTER_SIZE", "group__types.html#ga84787e97baa6296bde4a923e97023079", null ],
+    [ "Bond::BOND_SHORT_SIZE", "group__types.html#ga8367092e643187cc0cd9575d8aad0b2f", null ],
+    [ "Bond::BOND_SLOT_SIZE", "group__types.html#ga7b54466a4ec2823fe2ee164ce021fa88", null ],
+    [ "Bond::BOND_UCHAR_SIZE", "group__types.html#gab266e727e17c27dd4edce82e88f16b17", null ],
+    [ "Bond::BOND_UINT_SIZE", "group__types.html#ga4d28b2e435ddebc3be60b0ee08545d35", null ],
+    [ "Bond::BOND_ULONG_SIZE", "group__types.html#ga58aec166c9f9654a9e6389eecc340b44", null ],
+    [ "Bond::BOND_USHORT_SIZE", "group__types.html#gad9c310918ee44c7d28f8a90127211d9d", null ],
+    [ "Bond::BOND_VOID_SIZE", "group__types.html#gac1111f40416f5f7561ba5f769a8b9151", null ]
 ];

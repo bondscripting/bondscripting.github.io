@@ -110,39 +110,73 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_bond_1_1
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Bond::AutoStack&lt; ValueType &gt; Class Template Reference</div></div>
+  <div class="headertitle"><div class="title">Bond::AutoStack&lt; ValueType &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__stl.html">STL</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A stack whose elements are automatic variables.  
+ <a href="#details">More...</a></p>
 
 <p><code>#include &lt;bond/stl/autostack.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:Element" id="r_Element"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_auto_stack_1_1_element.html">Element</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A single value on an <a class="el" href="class_bond_1_1_auto_stack.html" title="A stack whose elements are automatic variables.">AutoStack</a>, owned by the scope that pushed it.  <a href="class_bond_1_1_auto_stack_1_1_element.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Iterator" id="r_Iterator"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_auto_stack_1_1_iterator.html">Iterator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An iterator that visits the values of an <a class="el" href="class_bond_1_1_auto_stack.html" title="A stack whose elements are automatic variables.">AutoStack</a> from the top to the bottom.  <a href="class_bond_1_1_auto_stack_1_1_iterator.html#details">More...</a><br /></td></tr>
 <tr class="memitem:ConstIterator" id="r_ConstIterator"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_auto_stack_1_1_const_iterator.html">ConstIterator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An iterator that visits the values of a const <a class="el" href="class_bond_1_1_auto_stack.html" title="A stack whose elements are automatic variables.">AutoStack</a> from the top to the bottom.  <a href="class_bond_1_1_auto_stack_1_1_const_iterator.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad87be3e332d46044ffee9a0d02c682d0" id="r_ad87be3e332d46044ffee9a0d02c682d0"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ad87be3e332d46044ffee9a0d02c682d0">AutoStack</a> ()</td></tr>
+<tr class="memitem:a23c838fb737ffae0efd87f874eba4b3a" id="r_a23c838fb737ffae0efd87f874eba4b3a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a23c838fb737ffae0efd87f874eba4b3a">AutoStack</a> () noexcept</td></tr>
+<tr class="memdesc:a23c838fb737ffae0efd87f874eba4b3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an empty <a class="el" href="class_bond_1_1_auto_stack.html" title="A stack whose elements are automatic variables.">AutoStack</a>.  <br /></td></tr>
+<tr class="memitem:aedc6b293f754600fd859bb87947eb840" id="r_aedc6b293f754600fd859bb87947eb840"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aedc6b293f754600fd859bb87947eb840">~AutoStack</a> ()</td></tr>
+<tr class="memdesc:aedc6b293f754600fd859bb87947eb840"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the <a class="el" href="class_bond_1_1_auto_stack.html" title="A stack whose elements are automatic variables.">AutoStack</a>. All Elements must have been destroyed beforehand.  <br /></td></tr>
+<tr class="memitem:ae599c3f4e25405c8845ac9b28f61698b" id="r_ae599c3f4e25405c8845ac9b28f61698b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ae599c3f4e25405c8845ac9b28f61698b">AutoStack</a> (const AutoStack &amp;other)=delete</td></tr>
+<tr class="memitem:a3ccb88fbdec52ac61da9d4ef011a90e0" id="r_a3ccb88fbdec52ac61da9d4ef011a90e0"><td class="memItemLeft"><a class="el" href="#a23c838fb737ffae0efd87f874eba4b3a">AutoStack</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a3ccb88fbdec52ac61da9d4ef011a90e0">operator=</a> (const <a class="el" href="#a23c838fb737ffae0efd87f874eba4b3a">AutoStack</a> &amp;other)=delete</td></tr>
 <tr class="memitem:a52b77ae049a1fdd978e35ede91f614a7" id="r_a52b77ae049a1fdd978e35ede91f614a7"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
 <tr class="memitem:a52b77ae049a1fdd978e35ede91f614a7 template"><td class="memItemLeft"><a class="el" href="class_bond_1_1_auto_stack_1_1_element.html">Element</a>&#160;</td><td class="memItemRight"><a class="el" href="#a52b77ae049a1fdd978e35ede91f614a7">Push</a> (Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:a52b77ae049a1fdd978e35ede91f614a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes a value onto the top of the stack.  <br /></td></tr>
 <tr class="memitem:a1053dafaf36859754bdcd616e8a930b8" id="r_a1053dafaf36859754bdcd616e8a930b8"><td class="memItemLeft">ValueType &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a1053dafaf36859754bdcd616e8a930b8">GetTop</a> ()</td></tr>
+<tr class="memdesc:a1053dafaf36859754bdcd616e8a930b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the value at the top of the stack. The stack must not be empty.  <br /></td></tr>
 <tr class="memitem:a519365a0f53027710df5d7bbd21e1c59" id="r_a519365a0f53027710df5d7bbd21e1c59"><td class="memItemLeft">const ValueType &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a519365a0f53027710df5d7bbd21e1c59">GetTop</a> () const</td></tr>
+<tr class="memdesc:a519365a0f53027710df5d7bbd21e1c59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the value at the top of the stack. The stack must not be empty.  <br /></td></tr>
 <tr class="memitem:a3c8cd3bfd0e9ff3e0a0309cd2cfe70f6" id="r_a3c8cd3bfd0e9ff3e0a0309cd2cfe70f6"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3c8cd3bfd0e9ff3e0a0309cd2cfe70f6">SetTop</a> (const ValueType &amp;value)</td></tr>
+<tr class="memdesc:a3c8cd3bfd0e9ff3e0a0309cd2cfe70f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns a copy of the given value to the value at the top of the stack. The stack must not be empty.  <br /></td></tr>
 <tr class="memitem:a85bc75be2463bb4d88472fcf71ff7a49" id="r_a85bc75be2463bb4d88472fcf71ff7a49"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a85bc75be2463bb4d88472fcf71ff7a49">SetTop</a> (ValueType &amp;&amp;value)</td></tr>
-<tr class="memitem:a27ce76a1366394c0419f777e89ddcd89" id="r_a27ce76a1366394c0419f777e89ddcd89"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a27ce76a1366394c0419f777e89ddcd89">IsEmpty</a> () const</td></tr>
+<tr class="memdesc:a85bc75be2463bb4d88472fcf71ff7a49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the given value into the value at the top of the stack. The stack must not be empty.  <br /></td></tr>
+<tr class="memitem:ac71e60827e54030bd206fdd38f5de3de" id="r_ac71e60827e54030bd206fdd38f5de3de"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ac71e60827e54030bd206fdd38f5de3de">IsEmpty</a> () const noexcept</td></tr>
+<tr class="memdesc:ac71e60827e54030bd206fdd38f5de3de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the stack contains no values.  <br /></td></tr>
 <tr class="memitem:a66ca0c9c44ac9c9c1c0586c105961b06" id="r_a66ca0c9c44ac9c9c1c0586c105961b06"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a66ca0c9c44ac9c9c1c0586c105961b06">Contains</a> (const ValueType &amp;value) const</td></tr>
-<tr class="memitem:a551dbf8d291e06f206615e4559cfa4a0" id="r_a551dbf8d291e06f206615e4559cfa4a0"><td class="memItemLeft"><a class="el" href="class_bond_1_1_auto_stack_1_1_iterator.html">Iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#a551dbf8d291e06f206615e4559cfa4a0">begin</a> ()</td></tr>
-<tr class="memitem:a93766f1d75b94ffd571919406e4abed3" id="r_a93766f1d75b94ffd571919406e4abed3"><td class="memItemLeft"><a class="el" href="class_bond_1_1_auto_stack_1_1_const_iterator.html">ConstIterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#a93766f1d75b94ffd571919406e4abed3">begin</a> () const</td></tr>
-<tr class="memitem:a1d1375889efb43dd0923770bf1e6aa8d" id="r_a1d1375889efb43dd0923770bf1e6aa8d"><td class="memItemLeft"><a class="el" href="class_bond_1_1_auto_stack_1_1_const_iterator.html">ConstIterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1d1375889efb43dd0923770bf1e6aa8d">cbegin</a> () const</td></tr>
-<tr class="memitem:a5a23832bb6b33dfb78c340e1e5d03cc8" id="r_a5a23832bb6b33dfb78c340e1e5d03cc8"><td class="memItemLeft"><a class="el" href="class_bond_1_1_auto_stack_1_1_iterator.html">Iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#a5a23832bb6b33dfb78c340e1e5d03cc8">end</a> ()</td></tr>
-<tr class="memitem:ac69e489ac6c50192e3e272383376409e" id="r_ac69e489ac6c50192e3e272383376409e"><td class="memItemLeft"><a class="el" href="class_bond_1_1_auto_stack_1_1_const_iterator.html">ConstIterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac69e489ac6c50192e3e272383376409e">end</a> () const</td></tr>
-<tr class="memitem:a19d8963e9e2b50eb76c038bc0d33e9c0" id="r_a19d8963e9e2b50eb76c038bc0d33e9c0"><td class="memItemLeft"><a class="el" href="class_bond_1_1_auto_stack_1_1_const_iterator.html">ConstIterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#a19d8963e9e2b50eb76c038bc0d33e9c0">cend</a> () const</td></tr>
+<tr class="memdesc:a66ca0c9c44ac9c9c1c0586c105961b06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether any value on the stack compares equal to the given value.  <br /></td></tr>
+<tr class="memitem:abcf24bad95eff2b1616ff0e9cbdfeb1a" id="r_abcf24bad95eff2b1616ff0e9cbdfeb1a"><td class="memItemLeft"><a class="el" href="class_bond_1_1_auto_stack_1_1_iterator.html">Iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#abcf24bad95eff2b1616ff0e9cbdfeb1a">begin</a> () noexcept</td></tr>
+<tr class="memdesc:abcf24bad95eff2b1616ff0e9cbdfeb1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an <a class="el" href="class_bond_1_1_auto_stack_1_1_iterator.html" title="An iterator that visits the values of an AutoStack from the top to the bottom.">Iterator</a> referring to the value at the top of the stack.  <br /></td></tr>
+<tr class="memitem:ae04b658888dfbc41784505e19bea2c39" id="r_ae04b658888dfbc41784505e19bea2c39"><td class="memItemLeft"><a class="el" href="class_bond_1_1_auto_stack_1_1_const_iterator.html">ConstIterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae04b658888dfbc41784505e19bea2c39">begin</a> () const noexcept</td></tr>
+<tr class="memdesc:ae04b658888dfbc41784505e19bea2c39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a <a class="el" href="class_bond_1_1_auto_stack_1_1_const_iterator.html" title="An iterator that visits the values of a const AutoStack from the top to the bottom.">ConstIterator</a> referring to the value at the top of the stack.  <br /></td></tr>
+<tr class="memitem:a68f089fc556da98b4c033bb46a280e0a" id="r_a68f089fc556da98b4c033bb46a280e0a"><td class="memItemLeft"><a class="el" href="class_bond_1_1_auto_stack_1_1_const_iterator.html">ConstIterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#a68f089fc556da98b4c033bb46a280e0a">cbegin</a> () const noexcept</td></tr>
+<tr class="memdesc:a68f089fc556da98b4c033bb46a280e0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a <a class="el" href="class_bond_1_1_auto_stack_1_1_const_iterator.html" title="An iterator that visits the values of a const AutoStack from the top to the bottom.">ConstIterator</a> referring to the value at the top of the stack.  <br /></td></tr>
+<tr class="memitem:a6e2e0ffc566a49f0824d4408c523eff7" id="r_a6e2e0ffc566a49f0824d4408c523eff7"><td class="memItemLeft"><a class="el" href="class_bond_1_1_auto_stack_1_1_iterator.html">Iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6e2e0ffc566a49f0824d4408c523eff7">end</a> () noexcept</td></tr>
+<tr class="memdesc:a6e2e0ffc566a49f0824d4408c523eff7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an <a class="el" href="class_bond_1_1_auto_stack_1_1_iterator.html" title="An iterator that visits the values of an AutoStack from the top to the bottom.">Iterator</a> referring to the position past the value at the bottom of the stack.  <br /></td></tr>
+<tr class="memitem:a962a059845c3827e89d60eb65c1103de" id="r_a962a059845c3827e89d60eb65c1103de"><td class="memItemLeft"><a class="el" href="class_bond_1_1_auto_stack_1_1_const_iterator.html">ConstIterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#a962a059845c3827e89d60eb65c1103de">end</a> () const noexcept</td></tr>
+<tr class="memdesc:a962a059845c3827e89d60eb65c1103de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a <a class="el" href="class_bond_1_1_auto_stack_1_1_const_iterator.html" title="An iterator that visits the values of a const AutoStack from the top to the bottom.">ConstIterator</a> referring to the position past the value at the bottom of the stack.  <br /></td></tr>
+<tr class="memitem:afa49838db89618fc26a1284f047c0381" id="r_afa49838db89618fc26a1284f047c0381"><td class="memItemLeft"><a class="el" href="class_bond_1_1_auto_stack_1_1_const_iterator.html">ConstIterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#afa49838db89618fc26a1284f047c0381">cend</a> () const noexcept</td></tr>
+<tr class="memdesc:afa49838db89618fc26a1284f047c0381"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a <a class="el" href="class_bond_1_1_auto_stack_1_1_const_iterator.html" title="An iterator that visits the values of a const AutoStack from the top to the bottom.">ConstIterator</a> referring to the position past the value at the bottom of the stack.  <br /></td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ad87be3e332d46044ffee9a0d02c682d0" name="ad87be3e332d46044ffee9a0d02c682d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad87be3e332d46044ffee9a0d02c682d0">&#9670;&#160;</a></span>AutoStack()</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename ValueType&gt;<br />
+class Bond::AutoStack&lt; ValueType &gt;</div><p>A stack whose elements are automatic variables. </p>
+<p>Pushing a value onto the stack returns an <a class="el" href="class_bond_1_1_auto_stack_1_1_element.html" title="A single value on an AutoStack, owned by the scope that pushed it.">Element</a> that must be kept alive for as long as the value should remain on the stack; destroying the <a class="el" href="class_bond_1_1_auto_stack_1_1_element.html" title="A single value on an AutoStack, owned by the scope that pushed it.">Element</a> pops the value. Elements must be destroyed in reverse order of creation and must not outlive the stack. The stack cannot be copied or moved.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ValueType</td><td>The type of the values held by the stack. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a23c838fb737ffae0efd87f874eba4b3a" name="a23c838fb737ffae0efd87f874eba4b3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23c838fb737ffae0efd87f874eba4b3a">&#9670;&#160;</a></span>AutoStack() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -161,16 +195,17 @@ template&lt;typename ValueType&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
+<p>Constructs an empty <a class="el" href="class_bond_1_1_auto_stack.html" title="A stack whose elements are automatic variables.">AutoStack</a>. </p>
+
 </div>
 </div>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a551dbf8d291e06f206615e4559cfa4a0" name="a551dbf8d291e06f206615e4559cfa4a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a551dbf8d291e06f206615e4559cfa4a0">&#9670;&#160;</a></span>begin() <span class="overload">[1/2]</span></h2>
+<a id="aedc6b293f754600fd859bb87947eb840" name="aedc6b293f754600fd859bb87947eb840"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedc6b293f754600fd859bb87947eb840">&#9670;&#160;</a></span>~AutoStack()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -181,7 +216,7 @@ template&lt;typename ValueType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_bond_1_1_auto_stack_1_1_iterator.html">Iterator</a> <a class="el" href="class_bond_1_1_auto_stack.html">Bond::AutoStack</a>&lt; ValueType &gt;::begin </td>
+          <td class="memname"><a class="el" href="class_bond_1_1_auto_stack.html">Bond::AutoStack</a>&lt; ValueType &gt;::~<a class="el" href="#a23c838fb737ffae0efd87f874eba4b3a">AutoStack</a> </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -194,10 +229,40 @@ template&lt;typename ValueType&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Destroys the <a class="el" href="class_bond_1_1_auto_stack.html" title="A stack whose elements are automatic variables.">AutoStack</a>. All Elements must have been destroyed beforehand. </p>
+
 </div>
 </div>
-<a id="a93766f1d75b94ffd571919406e4abed3" name="a93766f1d75b94ffd571919406e4abed3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a93766f1d75b94ffd571919406e4abed3">&#9670;&#160;</a></span>begin() <span class="overload">[2/2]</span></h2>
+<a id="ae599c3f4e25405c8845ac9b28f61698b" name="ae599c3f4e25405c8845ac9b28f61698b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae599c3f4e25405c8845ac9b28f61698b">&#9670;&#160;</a></span>AutoStack() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_bond_1_1_auto_stack.html">Bond::AutoStack</a>&lt; ValueType &gt;::AutoStack </td>
+          <td>(</td>
+          <td class="paramtype">const AutoStack&lt; ValueType &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="ae04b658888dfbc41784505e19bea2c39" name="ae04b658888dfbc41784505e19bea2c39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae04b658888dfbc41784505e19bea2c39">&#9670;&#160;</a></span>begin() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -216,15 +281,46 @@ template&lt;typename ValueType&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns a <a class="el" href="class_bond_1_1_auto_stack_1_1_const_iterator.html" title="An iterator that visits the values of a const AutoStack from the top to the bottom.">ConstIterator</a> referring to the value at the top of the stack. </p>
+
 </div>
 </div>
-<a id="a1d1375889efb43dd0923770bf1e6aa8d" name="a1d1375889efb43dd0923770bf1e6aa8d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d1375889efb43dd0923770bf1e6aa8d">&#9670;&#160;</a></span>cbegin()</h2>
+<a id="abcf24bad95eff2b1616ff0e9cbdfeb1a" name="abcf24bad95eff2b1616ff0e9cbdfeb1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcf24bad95eff2b1616ff0e9cbdfeb1a">&#9670;&#160;</a></span>begin() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_bond_1_1_auto_stack_1_1_iterator.html">Iterator</a> <a class="el" href="class_bond_1_1_auto_stack.html">Bond::AutoStack</a>&lt; ValueType &gt;::begin </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns an <a class="el" href="class_bond_1_1_auto_stack_1_1_iterator.html" title="An iterator that visits the values of an AutoStack from the top to the bottom.">Iterator</a> referring to the value at the top of the stack. </p>
+
+</div>
+</div>
+<a id="a68f089fc556da98b4c033bb46a280e0a" name="a68f089fc556da98b4c033bb46a280e0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68f089fc556da98b4c033bb46a280e0a">&#9670;&#160;</a></span>cbegin()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -243,15 +339,17 @@ template&lt;typename ValueType&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns a <a class="el" href="class_bond_1_1_auto_stack_1_1_const_iterator.html" title="An iterator that visits the values of a const AutoStack from the top to the bottom.">ConstIterator</a> referring to the value at the top of the stack. </p>
+
 </div>
 </div>
-<a id="a19d8963e9e2b50eb76c038bc0d33e9c0" name="a19d8963e9e2b50eb76c038bc0d33e9c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19d8963e9e2b50eb76c038bc0d33e9c0">&#9670;&#160;</a></span>cend()</h2>
+<a id="afa49838db89618fc26a1284f047c0381" name="afa49838db89618fc26a1284f047c0381"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa49838db89618fc26a1284f047c0381">&#9670;&#160;</a></span>cend()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -270,10 +368,12 @@ template&lt;typename ValueType&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns a <a class="el" href="class_bond_1_1_auto_stack_1_1_const_iterator.html" title="An iterator that visits the values of a const AutoStack from the top to the bottom.">ConstIterator</a> referring to the position past the value at the bottom of the stack. </p>
 
 </div>
 </div>
@@ -302,37 +402,18 @@ template&lt;typename ValueType&gt; </div>
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a5a23832bb6b33dfb78c340e1e5d03cc8" name="a5a23832bb6b33dfb78c340e1e5d03cc8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a23832bb6b33dfb78c340e1e5d03cc8">&#9670;&#160;</a></span>end() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename ValueType&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_bond_1_1_auto_stack_1_1_iterator.html">Iterator</a> <a class="el" href="class_bond_1_1_auto_stack.html">Bond::AutoStack</a>&lt; ValueType &gt;::end </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>Returns whether any value on the stack compares equal to the given value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The value to search for. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a id="ac69e489ac6c50192e3e272383376409e" name="ac69e489ac6c50192e3e272383376409e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac69e489ac6c50192e3e272383376409e">&#9670;&#160;</a></span>end() <span class="overload">[2/2]</span></h2>
+<a id="a962a059845c3827e89d60eb65c1103de" name="a962a059845c3827e89d60eb65c1103de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a962a059845c3827e89d60eb65c1103de">&#9670;&#160;</a></span>end() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -351,10 +432,41 @@ template&lt;typename ValueType&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns a <a class="el" href="class_bond_1_1_auto_stack_1_1_const_iterator.html" title="An iterator that visits the values of a const AutoStack from the top to the bottom.">ConstIterator</a> referring to the position past the value at the bottom of the stack. </p>
+
+</div>
+</div>
+<a id="a6e2e0ffc566a49f0824d4408c523eff7" name="a6e2e0ffc566a49f0824d4408c523eff7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e2e0ffc566a49f0824d4408c523eff7">&#9670;&#160;</a></span>end() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_bond_1_1_auto_stack_1_1_iterator.html">Iterator</a> <a class="el" href="class_bond_1_1_auto_stack.html">Bond::AutoStack</a>&lt; ValueType &gt;::end </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns an <a class="el" href="class_bond_1_1_auto_stack_1_1_iterator.html" title="An iterator that visits the values of an AutoStack from the top to the bottom.">Iterator</a> referring to the position past the value at the bottom of the stack. </p>
 
 </div>
 </div>
@@ -383,6 +495,8 @@ template&lt;typename ValueType&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Returns a reference to the value at the top of the stack. The stack must not be empty. </p>
+
 </div>
 </div>
 <a id="a519365a0f53027710df5d7bbd21e1c59" name="a519365a0f53027710df5d7bbd21e1c59"></a>
@@ -410,10 +524,12 @@ template&lt;typename ValueType&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Returns a const reference to the value at the top of the stack. The stack must not be empty. </p>
+
 </div>
 </div>
-<a id="a27ce76a1366394c0419f777e89ddcd89" name="a27ce76a1366394c0419f777e89ddcd89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27ce76a1366394c0419f777e89ddcd89">&#9670;&#160;</a></span>IsEmpty()</h2>
+<a id="ac71e60827e54030bd206fdd38f5de3de" name="ac71e60827e54030bd206fdd38f5de3de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac71e60827e54030bd206fdd38f5de3de">&#9670;&#160;</a></span>IsEmpty()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -432,7 +548,36 @@ template&lt;typename ValueType&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns whether the stack contains no values. </p>
+
+</div>
+</div>
+<a id="a3ccb88fbdec52ac61da9d4ef011a90e0" name="a3ccb88fbdec52ac61da9d4ef011a90e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ccb88fbdec52ac61da9d4ef011a90e0">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a23c838fb737ffae0efd87f874eba4b3a">AutoStack</a> &amp; <a class="el" href="class_bond_1_1_auto_stack.html">Bond::AutoStack</a>&lt; ValueType &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a23c838fb737ffae0efd87f874eba4b3a">AutoStack</a>&lt; ValueType &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -461,10 +606,19 @@ template&lt;typename... Args&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Pushes a value onto the top of the stack. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>The arguments forwarded to the constructor of the value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An <a class="el" href="class_bond_1_1_auto_stack_1_1_element.html" title="A single value on an AutoStack, owned by the scope that pushed it.">Element</a> that keeps the value on the stack for as long as it is alive. Discarding the result destroys the <a class="el" href="class_bond_1_1_auto_stack_1_1_element.html" title="A single value on an AutoStack, owned by the scope that pushed it.">Element</a> immediately, which pops the value again. </dd></dl>
 
 </div>
 </div>
@@ -493,6 +647,14 @@ template&lt;typename ValueType&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Assigns a copy of the given value to the value at the top of the stack. The stack must not be empty. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The value to be copied. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a85bc75be2463bb4d88472fcf71ff7a49" name="a85bc75be2463bb4d88472fcf71ff7a49"></a>
@@ -519,6 +681,14 @@ template&lt;typename ValueType&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Moves the given value into the value at the top of the stack. The stack must not be empty. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The value to be moved. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

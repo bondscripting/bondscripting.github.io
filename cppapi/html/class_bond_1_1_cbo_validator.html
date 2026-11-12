@@ -129,12 +129,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a73d1f889e87d14f237ea5bcee883c744" id="r_a73d1f889e87d14f237ea5bcee883c744"><td class="memItemLeft"><a class="el" href="struct_bond_1_1_cbo_validator_1_1_result.html">Result</a>&#160;</td><td class="memItemRight"><a class="el" href="#a73d1f889e87d14f237ea5bcee883c744">Validate</a> (const void *byteCode, size_t length)</td></tr>
 <tr class="memdesc:a73d1f889e87d14f237ea5bcee883c744"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates CBO data from an in-memory byte buffer.  <br /></td></tr>
 <tr class="memitem:a776a5b9d339e9a4234be3ed395c19001" id="r_a776a5b9d339e9a4234be3ed395c19001"><td class="memItemLeft"><a class="el" href="struct_bond_1_1_cbo_validator_1_1_result.html">Result</a>&#160;</td><td class="memItemRight"><a class="el" href="#a776a5b9d339e9a4234be3ed395c19001">Validate</a> (<a class="el" href="class_bond_1_1_input_stream.html">InputStream</a> &amp;stream)</td></tr>
-<tr class="memdesc:a776a5b9d339e9a4234be3ed395c19001"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates CBO data from an input stream.  <br /></td></tr>
+<tr class="memdesc:a776a5b9d339e9a4234be3ed395c19001"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates CBO data from an input stream, starting at its current position.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A validator for <a class="el" href="namespace_bond.html">Bond</a> CBO bytecode streams. </p>
-<p>The <a class="el" href="class_bond_1_1_cbo_validator.html" title="A validator for Bond CBO bytecode streams.">CboValidator</a> verifies the structure of serialized CBO data and reports summary information about the validated contents.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_bond_1_1_input_stream.html" title="An abstract interface for performing both unformatted and formatted input operations.">InputStream</a> </dd></dl>
+<p>The <a class="el" href="class_bond_1_1_cbo_validator.html" title="A validator for Bond CBO bytecode streams.">CboValidator</a> verifies the structure of serialized CBO data and reports summary information about the validated contents, such as the number of entries in each table, which <a class="el" href="class_bond_1_1_cbo_loader.html" title="Loads CBO modules and resolves their native function bindings.">CboLoader</a> uses to size its allocations. A <a class="el" href="class_bond_1_1_exception.html" title="Exception thrown for all types of errors in the Bond Runtime Library.">Bond::Exception</a> is thrown if the CBO data is invalid, incomplete or has an unsupported format version.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_bond_1_1_cbo_loader.html" title="Loads CBO modules and resolves their native function bindings.">CboLoader</a>, <a class="el" href="class_bond_1_1_input_stream.html" title="An abstract interface for performing both unformatted and formatted input operations.">InputStream</a> </dd></dl>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a73d1f889e87d14f237ea5bcee883c744" name="a73d1f889e87d14f237ea5bcee883c744"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a73d1f889e87d14f237ea5bcee883c744">&#9670;&#160;</a></span>Validate() <span class="overload">[1/2]</span></h2>
@@ -182,10 +182,10 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Validates CBO data from an input stream. </p>
+<p>Validates CBO data from an input stream, starting at its current position. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">stream</td><td>Input stream containing CBO data. </td></tr>
+    <tr><td class="paramname">stream</td><td>Input stream containing CBO data. Its position is left after the validated data, so it must be reset before the data is read again. </td></tr>
   </table>
   </dd>
 </dl>

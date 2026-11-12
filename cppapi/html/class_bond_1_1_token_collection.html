@@ -128,7 +128,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An ordered immutable collection of Tokens. </p>
-<p>A <a class="el" href="class_bond_1_1_token_collection.html" title="An ordered immutable collection of Tokens.">TokenCollection</a> is the output from a <a class="el" href="class_bond_1_1_lexer.html" title="A lexer for the Bond scripting language.">Lexer</a> and can be used as the input to a <a class="el" href="class_bond_1_1_parser.html" title="A parser for the Bond scripting language.">Parser</a>. Several TokenCollections can be daisy-chained in a linked list. </p>
+<p>A <a class="el" href="class_bond_1_1_token_collection.html" title="An ordered immutable collection of Tokens.">TokenCollection</a> is the output from a <a class="el" href="class_bond_1_1_lexer.html" title="A lexer for the Bond scripting language.">Lexer</a> and can be used as the input to a <a class="el" href="class_bond_1_1_parser.html" title="A parser for the Bond scripting language.">Parser</a>. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7d60fd7504972754b8bff7cbe41cdfdf" name="a7d60fd7504972754b8bff7cbe41cdfdf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7d60fd7504972754b8bff7cbe41cdfdf">&#9670;&#160;</a></span>TokenCollection()</h2>
@@ -160,7 +160,7 @@ Public Member Functions</h2></td></tr>
 <p>Constructs a <a class="el" href="class_bond_1_1_token_collection.html" title="An ordered immutable collection of Tokens.">TokenCollection</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">tokens</td><td>A pointer to an array of <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> objects that form the contents of the collection. </td></tr>
+    <tr><td class="paramname">tokens</td><td>A pointer to an array of <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> objects that form the contents of the collection. It is not copied, so it must outlive the <a class="el" href="class_bond_1_1_token_collection.html" title="An ordered immutable collection of Tokens.">TokenCollection</a>. </td></tr>
     <tr><td class="paramname">numTokens</td><td>The number of Tokens contained in the collection. </td></tr>
   </table>
   </dd>

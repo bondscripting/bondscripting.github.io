@@ -24,6 +24,7 @@ var class_bond_1_1_type_descriptor =
     [ "GetStackSize", "class_bond_1_1_type_descriptor.html#a55d1b0e27ebedcd2a79d5913bd479f27", null ],
     [ "GetTypeSpecifier", "class_bond_1_1_type_descriptor.html#a229ba2b6a3d3aca75f133286722cdab2", null ],
     [ "GetTypeSpecifier", "class_bond_1_1_type_descriptor.html#ab36403bd2eebad963d85c927e1138bca", null ],
+    [ "HasUndefinedTypeName", "class_bond_1_1_type_descriptor.html#a3bc034e52f4043fd682bce31377f9433", null ],
     [ "IsAddressable", "class_bond_1_1_type_descriptor.html#a3363e8aadd4f72be0dbe1fa64d4d3e9d", null ],
     [ "IsArrayType", "class_bond_1_1_type_descriptor.html#ad93545044ddc0083311edd10d0a6b867", null ],
     [ "IsAssignable", "class_bond_1_1_type_descriptor.html#a778079c4f3291a1c916f0bd228a5fab4", null ],

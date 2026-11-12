@@ -132,6 +132,7 @@ Inheritance diagram for Bond::StreamFactory:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a0dfcffed7d47ba4643581e079b882c87" id="r_a0dfcffed7d47ba4643581e079b882c87"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#a0dfcffed7d47ba4643581e079b882c87">~StreamFactory</a> ()</td></tr>
+<tr class="memdesc:a0dfcffed7d47ba4643581e079b882c87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys a <a class="el" href="class_bond_1_1_stream_factory.html" title="An abstract interface for creating file streams without being coupled to any particular concrete type...">StreamFactory</a> object.  <br /></td></tr>
 <tr class="memitem:adfa35fa12b772b748c5aaa65c9541691" id="r_adfa35fa12b772b748c5aaa65c9541691"><td class="memItemLeft">virtual <a class="el" href="group__io.html#ga37b72a5672b81b2727ba53b4ffbe47f8">InputStreamHandle</a>&#160;</td><td class="memItemRight"><a class="el" href="#adfa35fa12b772b748c5aaa65c9541691">CreateInputStream</a> (const char *fileName)=0</td></tr>
 <tr class="memdesc:adfa35fa12b772b748c5aaa65c9541691"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an owning pointer to a dynamically allocated <a class="el" href="class_bond_1_1_input_stream.html" title="An abstract interface for performing both unformatted and formatted input operations.">InputStream</a>.  <br /></td></tr>
 <tr class="memitem:ac8b88c2fa27215b5ee7d99a334a76673" id="r_ac8b88c2fa27215b5ee7d99a334a76673"><td class="memItemLeft">virtual <a class="el" href="group__io.html#ga68173a5e6d6425a9194cfc319b70863c">OutputStreamHandle</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac8b88c2fa27215b5ee7d99a334a76673">CreateOutputStream</a> (const char *fileName, bool append)=0</td></tr>
@@ -139,6 +140,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An abstract interface for creating file streams without being coupled to any particular concrete type of stream. </p>
+<p>Implementations report a failure to create a stream either by throwing a <a class="el" href="class_bond_1_1_exception.html" title="Exception thrown for all types of errors in the Bond Runtime Library.">Bond::Exception</a> or by returning a null handle. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a0dfcffed7d47ba4643581e079b882c87" name="a0dfcffed7d47ba4643581e079b882c87"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0dfcffed7d47ba4643581e079b882c87">&#9670;&#160;</a></span>~StreamFactory()</h2>
@@ -162,6 +164,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Destroys a <a class="el" href="class_bond_1_1_stream_factory.html" title="An abstract interface for creating file streams without being coupled to any particular concrete type...">StreamFactory</a> object. </p>
 
 </div>
 </div>
@@ -192,7 +196,7 @@ Public Member Functions</h2></td></tr>
 <p>Returns an owning pointer to a dynamically allocated <a class="el" href="class_bond_1_1_input_stream.html" title="An abstract interface for performing both unformatted and formatted input operations.">InputStream</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fileName</td><td>The name of the file for which an input stream is created. </td></tr>
+    <tr><td class="paramname">fileName</td><td>The name of the file for which an input stream is created, encoded in UTF-8. </td></tr>
   </table>
   </dd>
 </dl>
@@ -231,7 +235,7 @@ Public Member Functions</h2></td></tr>
 <p>Returns an owning pointer to a dynamically allocated <a class="el" href="class_bond_1_1_output_stream.html" title="An abstract interface for performing both unformatted and formatted output operations.">OutputStream</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fileName</td><td>The name of the file for which an output stream is created. </td></tr>
+    <tr><td class="paramname">fileName</td><td>The name of the file for which an output stream is created, encoded in UTF-8. </td></tr>
     <tr><td class="paramname">append</td><td>Whether bytes are written to the end of an existing file. </td></tr>
   </table>
   </dd>

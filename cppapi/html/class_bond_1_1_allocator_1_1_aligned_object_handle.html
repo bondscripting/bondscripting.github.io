@@ -128,11 +128,16 @@ Inheritance diagram for Bond::Allocator::AlignedObjectHandle&lt; T &gt;:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:acb3a8eb5ad8ab3f4d25e047c08633150" id="r_acb3a8eb5ad8ab3f4d25e047c08633150"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#acb3a8eb5ad8ab3f4d25e047c08633150">AlignedObjectHandle</a> (<a class="el" href="class_bond_1_1_allocator.html">Allocator</a> *allocator=nullptr, T *ptr=nullptr)</td></tr>
+<tr class="memdesc:acb3a8eb5ad8ab3f4d25e047c08633150"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <a class="el" href="class_bond_1_1_allocator_1_1_aligned_object_handle.html" title="An owning object handle that derives from unique_ptr that destroys an aligned object using an Aligned...">AlignedObjectHandle</a> object.  <br /></td></tr>
 <tr class="memitem:a8679edc9fdd8b007c40962bd91bcd0db" id="r_a8679edc9fdd8b007c40962bd91bcd0db"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a8679edc9fdd8b007c40962bd91bcd0db">AlignedObjectHandle</a> (<a class="el" href="class_bond_1_1_allocator.html">Allocator</a> &amp;allocator, T *ptr=nullptr)</td></tr>
+<tr class="memdesc:a8679edc9fdd8b007c40962bd91bcd0db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <a class="el" href="class_bond_1_1_allocator_1_1_aligned_object_handle.html" title="An owning object handle that derives from unique_ptr that destroys an aligned object using an Aligned...">AlignedObjectHandle</a> object.  <br /></td></tr>
 <tr class="memitem:aaff0094094e063bdba2a88b3d205b62e" id="r_aaff0094094e063bdba2a88b3d205b62e"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aaff0094094e063bdba2a88b3d205b62e">AlignedObjectHandle</a> (AlignedObjectHandle &amp;&amp;other)</td></tr>
+<tr class="memdesc:aaff0094094e063bdba2a88b3d205b62e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <a class="el" href="class_bond_1_1_allocator_1_1_aligned_object_handle.html" title="An owning object handle that derives from unique_ptr that destroys an aligned object using an Aligned...">AlignedObjectHandle</a> object that takes ownership of the object owned by another.  <br /></td></tr>
 <tr class="memitem:a5cc05fefec93b1a8984d120158d4d5af" id="r_a5cc05fefec93b1a8984d120158d4d5af"><td class="memItemLeft"><a class="el" href="#acb3a8eb5ad8ab3f4d25e047c08633150">AlignedObjectHandle</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a5cc05fefec93b1a8984d120158d4d5af">operator=</a> (<a class="el" href="#acb3a8eb5ad8ab3f4d25e047c08633150">AlignedObjectHandle</a> &amp;&amp;other)</td></tr>
+<tr class="memdesc:a5cc05fefec93b1a8984d120158d4d5af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the currently owned object and takes ownership of the object owned by another <a class="el" href="class_bond_1_1_allocator_1_1_aligned_object_handle.html" title="An owning object handle that derives from unique_ptr that destroys an aligned object using an Aligned...">AlignedObjectHandle</a>.  <br /></td></tr>
 <tr class="memitem:a29ec2301a1a3150766017a55284bb0a7" id="r_a29ec2301a1a3150766017a55284bb0a7"><td class="memTemplParams" colspan="2">template&lt;typename U, typename Bond::enable_if&lt; Bond::is_same&lt; U, T &gt;::value||Bond::has_virtual_destructor&lt; U &gt;::value, int &gt;::type = 0&gt; </td></tr>
 <tr class="memitem:a29ec2301a1a3150766017a55284bb0a7 template"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a29ec2301a1a3150766017a55284bb0a7">operator AlignedObjectHandle&lt; U &gt;</a> () &amp;&amp;</td></tr>
+<tr class="memdesc:a29ec2301a1a3150766017a55284bb0a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transfers ownership of the object to an <a class="el" href="class_bond_1_1_allocator_1_1_aligned_object_handle.html" title="An owning object handle that derives from unique_ptr that destroys an aligned object using an Aligned...">AlignedObjectHandle</a> of another type, which must be T or have a virtual destructor so that the object is destroyed correctly.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
@@ -167,6 +172,15 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Constructs an <a class="el" href="class_bond_1_1_allocator_1_1_aligned_object_handle.html" title="An owning object handle that derives from unique_ptr that destroys an aligned object using an Aligned...">AlignedObjectHandle</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">allocator</td><td>The allocator that frees the memory, or null if the object is not to be destroyed. </td></tr>
+    <tr><td class="paramname">ptr</td><td>Pointer to the owned object, whose memory must have been allocated by <code class="param">allocator</code> with AllocateAligned. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a8679edc9fdd8b007c40962bd91bcd0db" name="a8679edc9fdd8b007c40962bd91bcd0db"></a>
@@ -198,6 +212,15 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Constructs an <a class="el" href="class_bond_1_1_allocator_1_1_aligned_object_handle.html" title="An owning object handle that derives from unique_ptr that destroys an aligned object using an Aligned...">AlignedObjectHandle</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">allocator</td><td>The allocator that frees the memory. </td></tr>
+    <tr><td class="paramname">ptr</td><td>Pointer to the owned object, whose memory must have been allocated by <code class="param">allocator</code> with AllocateAligned. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="aaff0094094e063bdba2a88b3d205b62e" name="aaff0094094e063bdba2a88b3d205b62e"></a>
@@ -224,6 +247,8 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Constructs an <a class="el" href="class_bond_1_1_allocator_1_1_aligned_object_handle.html" title="An owning object handle that derives from unique_ptr that destroys an aligned object using an Aligned...">AlignedObjectHandle</a> object that takes ownership of the object owned by another. </p>
 
 </div>
 </div>
@@ -255,6 +280,8 @@ template&lt;typename U, typename Bond::enable_if&lt; Bond::is_same&lt; U, T &gt;
 </table>
 </div><div class="memdoc">
 
+<p>Transfers ownership of the object to an <a class="el" href="class_bond_1_1_allocator_1_1_aligned_object_handle.html" title="An owning object handle that derives from unique_ptr that destroys an aligned object using an Aligned...">AlignedObjectHandle</a> of another type, which must be T or have a virtual destructor so that the object is destroyed correctly. </p>
+
 </div>
 </div>
 <a id="a5cc05fefec93b1a8984d120158d4d5af" name="a5cc05fefec93b1a8984d120158d4d5af"></a>
@@ -281,6 +308,8 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Destroys the currently owned object and takes ownership of the object owned by another <a class="el" href="class_bond_1_1_allocator_1_1_aligned_object_handle.html" title="An owning object handle that derives from unique_ptr that destroys an aligned object using an Aligned...">AlignedObjectHandle</a>. </p>
 
 </div>
 </div>

@@ -122,16 +122,22 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('struct_bond_1_
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a163dba2528d1b984dda4e9f1f590aaeb" id="r_a163dba2528d1b984dda4e9f1f590aaeb"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a163dba2528d1b984dda4e9f1f590aaeb">StreamPos</a> (size_t i=0, size_t l=1, size_t c=1)</td></tr>
+<tr class="memdesc:a163dba2528d1b984dda4e9f1f590aaeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="struct_bond_1_1_stream_pos.html" title="A POD struct to contain the index, line and column of a token in source code.">StreamPos</a> object.  <br /></td></tr>
 <tr class="memitem:aea0066810ddb1cba49d59e67639d217e" id="r_aea0066810ddb1cba49d59e67639d217e"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aea0066810ddb1cba49d59e67639d217e">StreamPos</a> (const StreamPos &amp;other)=default</td></tr>
+<tr class="memdesc:aea0066810ddb1cba49d59e67639d217e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a copy of another <a class="el" href="struct_bond_1_1_stream_pos.html" title="A POD struct to contain the index, line and column of a token in source code.">StreamPos</a>.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a4c6bb9595c67dfb1f4a269dfde59c7a8" id="r_a4c6bb9595c67dfb1f4a269dfde59c7a8"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a4c6bb9595c67dfb1f4a269dfde59c7a8">index</a></td></tr>
+<tr class="memdesc:a4c6bb9595c67dfb1f4a269dfde59c7a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The byte offset into the source.  <br /></td></tr>
 <tr class="memitem:a658a87ab66115df63f8e4b25dc284c0e" id="r_a658a87ab66115df63f8e4b25dc284c0e"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a658a87ab66115df63f8e4b25dc284c0e">line</a></td></tr>
+<tr class="memdesc:a658a87ab66115df63f8e4b25dc284c0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The 1-based line number.  <br /></td></tr>
 <tr class="memitem:a5467e4be0ad05341a9175df158bc8ffe" id="r_a5467e4be0ad05341a9175df158bc8ffe"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a5467e4be0ad05341a9175df158bc8ffe">column</a></td></tr>
+<tr class="memdesc:a5467e4be0ad05341a9175df158bc8ffe"><td class="mdescLeft">&#160;</td><td class="mdescRight">The 1-based column number, counted in code points.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A POD struct to contain the index, line and column of a token in source code. </p>
+<p>The index is a byte offset into the UTF-8 source. Lines and columns are 1-based, and columns count code points rather than bytes, so they match what an editor shows for most text. Stray UTF-8 continuation bytes, which are invalid, do not advance the column.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="class_bond_1_1_char_stream.html" title="An iterator over the contents of a stream of text.">CharStream</a> </dd></dl>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a163dba2528d1b984dda4e9f1f590aaeb" name="a163dba2528d1b984dda4e9f1f590aaeb"></a>
@@ -166,6 +172,16 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Constructs a <a class="el" href="struct_bond_1_1_stream_pos.html" title="A POD struct to contain the index, line and column of a token in source code.">StreamPos</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>The byte offset into the source. </td></tr>
+    <tr><td class="paramname">l</td><td>The 1-based line number. </td></tr>
+    <tr><td class="paramname">c</td><td>The 1-based column number. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="aea0066810ddb1cba49d59e67639d217e" name="aea0066810ddb1cba49d59e67639d217e"></a>
@@ -191,6 +207,8 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Constructs a copy of another <a class="el" href="struct_bond_1_1_stream_pos.html" title="A POD struct to contain the index, line and column of a token in source code.">StreamPos</a>. </p>
+
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
@@ -206,6 +224,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The 1-based column number, counted in code points. </p>
+
 </div>
 </div>
 <a id="a4c6bb9595c67dfb1f4a269dfde59c7a8" name="a4c6bb9595c67dfb1f4a269dfde59c7a8"></a>
@@ -220,6 +240,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The byte offset into the source. </p>
+
 </div>
 </div>
 <a id="a658a87ab66115df63f8e4b25dc284c0e" name="a658a87ab66115df63f8e4b25dc284c0e"></a>
@@ -233,6 +255,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The 1-based line number. </p>
 
 </div>
 </div>

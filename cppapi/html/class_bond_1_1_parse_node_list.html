@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_bond_1_1
 </div><!--header-->
 <div class="contents">
 
-<p>Helper container for singly linked lists of parse nodes.  
+<p>Helper container for singly linked lists of parse nodes, which tracks the tail of the list so that nodes can be appended in constant time. It does not own the nodes.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;bond/compiler/parsenodes.h&gt;</code></p>
@@ -132,7 +132,13 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename NodeType&gt;<br />
-class Bond::ParseNodeList&lt; NodeType &gt;</div><p>Helper container for singly linked lists of parse nodes. </p>
+class Bond::ParseNodeList&lt; NodeType &gt;</div><p>Helper container for singly linked lists of parse nodes, which tracks the tail of the list so that nodes can be appended in constant time. It does not own the nodes. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">NodeType</td><td>The type of the nodes in the list, which must derive from <a class="el" href="class_bond_1_1_list_parse_node.html" title="Base class for parse nodes that can be linked into singly linked lists.">ListParseNode</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a0394db043b4a3ddab8972e632f12ba77" name="a0394db043b4a3ddab8972e632f12ba77"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0394db043b4a3ddab8972e632f12ba77">&#9670;&#160;</a></span>ParseNodeList()</h2>

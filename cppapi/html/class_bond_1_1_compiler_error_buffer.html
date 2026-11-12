@@ -126,24 +126,26 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afc3479c3660326fbe635c36288763180" id="r_afc3479c3660326fbe635c36288763180"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afc3479c3660326fbe635c36288763180">Reset</a> ()</td></tr>
 <tr class="memdesc:afc3479c3660326fbe635c36288763180"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the contents of the error buffer.  <br /></td></tr>
 <tr class="memitem:aba82d6e40abffe2e572b867db294f3f1" id="r_aba82d6e40abffe2e572b867db294f3f1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aba82d6e40abffe2e572b867db294f3f1">PushError</a> (<a class="el" href="class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4c">CompilerError::Type</a> type, const <a class="el" href="class_bond_1_1_token.html">Token</a> *context=nullptr, const void *arg0=nullptr, const void *arg1=nullptr)</td></tr>
-<tr class="memdesc:aba82d6e40abffe2e572b867db294f3f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_bond_1_1_compiler_error.html" title="A container for error information reported by the various components of the Bond compiler.">CompilerError</a> object with the given type and arguments to format the error message and adds it to the buffer.  <br /></td></tr>
+<tr class="memdesc:aba82d6e40abffe2e572b867db294f3f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_bond_1_1_compiler_error.html" title="A container for error information reported by the various components of the Bond compiler.">CompilerError</a> object with the given type and pointer arguments to format the error message and adds it to the buffer, unless the buffer is full.  <br /></td></tr>
 <tr class="memitem:a84cd21f969b073882f2b22ce60d5a519" id="r_a84cd21f969b073882f2b22ce60d5a519"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a84cd21f969b073882f2b22ce60d5a519">PushErrorInt</a> (<a class="el" href="class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4c">CompilerError::Type</a> type, const <a class="el" href="class_bond_1_1_token.html">Token</a> *context=nullptr, intptr_t arg0=0, intptr_t arg1=0)</td></tr>
-<tr class="memdesc:a84cd21f969b073882f2b22ce60d5a519"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_bond_1_1_compiler_error.html" title="A container for error information reported by the various components of the Bond compiler.">CompilerError</a> object with the given type and arguments to format the error message and adds it to the buffer.  <br /></td></tr>
+<tr class="memdesc:a84cd21f969b073882f2b22ce60d5a519"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_bond_1_1_compiler_error.html" title="A container for error information reported by the various components of the Bond compiler.">CompilerError</a> object with the given type and integer arguments to format the error message and adds it to the buffer, unless the buffer is full.  <br /></td></tr>
 <tr class="memitem:a942a592ab37bd2026b9ba2ff01782769" id="r_a942a592ab37bd2026b9ba2ff01782769"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a942a592ab37bd2026b9ba2ff01782769">HasErrors</a> () const</td></tr>
 <tr class="memdesc:a942a592ab37bd2026b9ba2ff01782769"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the buffer contains any errors.  <br /></td></tr>
 <tr class="memitem:a3c4a7568974f348c5660f0a497296f24" id="r_a3c4a7568974f348c5660f0a497296f24"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a3c4a7568974f348c5660f0a497296f24">GetNumErrors</a> () const</td></tr>
 <tr class="memdesc:a3c4a7568974f348c5660f0a497296f24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of errors in the buffer.  <br /></td></tr>
+<tr class="memitem:a2103e1ed02861dbb36f9973faca54693" id="r_a2103e1ed02861dbb36f9973faca54693"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2103e1ed02861dbb36f9973faca54693">Truncate</a> (size_t numErrors)</td></tr>
+<tr class="memdesc:a2103e1ed02861dbb36f9973faca54693"><td class="mdescLeft">&#160;</td><td class="mdescRight">Discards the errors pushed after the buffer contained the given number of errors.  <br /></td></tr>
 <tr class="memitem:a4f1f87d696aad88f4b8bc5b193d67542" id="r_a4f1f87d696aad88f4b8bc5b193d67542"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_compiler_error.html">CompilerError</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a4f1f87d696aad88f4b8bc5b193d67542">GetError</a> (size_t index) const</td></tr>
 <tr class="memdesc:a4f1f87d696aad88f4b8bc5b193d67542"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="class_bond_1_1_compiler_error.html" title="A container for error information reported by the various components of the Bond compiler.">CompilerError</a> at the specified index in the buffer.  <br /></td></tr>
 <tr class="memitem:a936e747b3a35dcd106c599a539cea92e" id="r_a936e747b3a35dcd106c599a539cea92e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a936e747b3a35dcd106c599a539cea92e">CopyFrom</a> (const <a class="el" href="#af3acd12d5dcc557e844521767e5c4c01">CompilerErrorBuffer</a> &amp;other)</td></tr>
-<tr class="memdesc:a936e747b3a35dcd106c599a539cea92e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends the contents of the given <a class="el" href="class_bond_1_1_compiler_error_buffer.html" title="A container for CompilerError instances generated by the various components of the Bond compiler.">CompilerErrorBuffer</a> to this one.  <br /></td></tr>
+<tr class="memdesc:a936e747b3a35dcd106c599a539cea92e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends the contents of the given <a class="el" href="class_bond_1_1_compiler_error_buffer.html" title="A container for CompilerError instances generated by the various components of the Bond compiler.">CompilerErrorBuffer</a> to this one. Errors that do not fit are dropped.  <br /></td></tr>
 <tr class="memitem:aba03f34ea14c8f167b9c533991837a10" id="r_aba03f34ea14c8f167b9c533991837a10"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aba03f34ea14c8f167b9c533991837a10">Print</a> (<a class="el" href="class_bond_1_1_output_stream.html">OutputStream</a> &amp;stream) const</td></tr>
-<tr class="memdesc:aba03f34ea14c8f167b9c533991837a10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a formatted error message for each error to the given <a class="el" href="class_bond_1_1_output_stream.html" title="An abstract interface for performing both unformatted and formatted output operations.">OutputStream</a>.  <br /></td></tr>
+<tr class="memdesc:aba03f34ea14c8f167b9c533991837a10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a formatted error message for each error, each followed by a newline, to the given <a class="el" href="class_bond_1_1_output_stream.html" title="An abstract interface for performing both unformatted and formatted output operations.">OutputStream</a>.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A container for <a class="el" href="class_bond_1_1_compiler_error.html" title="A container for error information reported by the various components of the Bond compiler.">CompilerError</a> instances generated by the various components of the <a class="el" href="namespace_bond.html">Bond</a> compiler. </p>
 <p>A <a class="el" href="class_bond_1_1_compiler_error_buffer.html" title="A container for CompilerError instances generated by the various components of the Bond compiler.">CompilerErrorBuffer</a> is used by the <a class="el" href="class_bond_1_1_lexer.html" title="A lexer for the Bond scripting language.">Lexer</a>, <a class="el" href="class_bond_1_1_parser.html" title="A parser for the Bond scripting language.">Parser</a>, <a class="el" href="class_bond_1_1_semantic_analyzer.html" title="A semantic analyzer for a parse tree generated from the Bond scripting language.">SemanticAnalyzer</a> and <a class="el" href="class_bond_1_1_code_generator.html" title="A code generator for the Bond scripting language.">CodeGenerator</a> of the <a class="el" href="namespace_bond.html">Bond</a> compiler to collect the errors that they detect. The <a class="el" href="class_bond_1_1_compiler_error_buffer.html" title="A container for CompilerError instances generated by the various components of the Bond compiler.">CompilerErrorBuffer</a> provides functionality for printing formatted error messages to an <a class="el" href="class_bond_1_1_output_stream.html" title="An abstract interface for performing both unformatted and formatted output operations.">OutputStream</a>.</p>
-<p>The size of the buffer is fixed, and no memory allocations are incurred. If the buffer overflows, any additional errors are dropped since they are not considered relevant because they are most likely the consequence of the compiler being confused by the initial set of errors that caused the buffer to fill up.</p>
+<p>The size of the buffer is fixed at 64 errors, and no memory allocations are incurred. If the buffer overflows, any additional errors are dropped since they are not considered relevant because they are most likely the consequence of the compiler being confused by the initial set of errors that caused the buffer to fill up.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="class_bond_1_1_code_generator.html" title="A code generator for the Bond scripting language.">CodeGenerator</a>, <a class="el" href="class_bond_1_1_compiler_error.html" title="A container for error information reported by the various components of the Bond compiler.">CompilerError</a>, <a class="el" href="class_bond_1_1_lexer.html" title="A lexer for the Bond scripting language.">Lexer</a>, <a class="el" href="class_bond_1_1_parser.html" title="A parser for the Bond scripting language.">Parser</a>, <a class="el" href="class_bond_1_1_semantic_analyzer.html" title="A semantic analyzer for a parse tree generated from the Bond scripting language.">SemanticAnalyzer</a> </dd></dl>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af3acd12d5dcc557e844521767e5c4c01" name="af3acd12d5dcc557e844521767e5c4c01"></a>
@@ -181,7 +183,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Appends the contents of the given <a class="el" href="class_bond_1_1_compiler_error_buffer.html" title="A container for CompilerError instances generated by the various components of the Bond compiler.">CompilerErrorBuffer</a> to this one. </p>
+<p>Appends the contents of the given <a class="el" href="class_bond_1_1_compiler_error_buffer.html" title="A container for CompilerError instances generated by the various components of the Bond compiler.">CompilerErrorBuffer</a> to this one. Errors that do not fit are dropped. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">other</td><td>The <a class="el" href="class_bond_1_1_compiler_error_buffer.html" title="A container for CompilerError instances generated by the various components of the Bond compiler.">CompilerErrorBuffer</a> whose contents are appended. </td></tr>
@@ -293,7 +295,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Prints a formatted error message for each error to the given <a class="el" href="class_bond_1_1_output_stream.html" title="An abstract interface for performing both unformatted and formatted output operations.">OutputStream</a>. </p>
+<p>Prints a formatted error message for each error, each followed by a newline, to the given <a class="el" href="class_bond_1_1_output_stream.html" title="An abstract interface for performing both unformatted and formatted output operations.">OutputStream</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">stream</td><td>The <a class="el" href="class_bond_1_1_output_stream.html" title="An abstract interface for performing both unformatted and formatted output operations.">OutputStream</a> to which the error messages are printed. </td></tr>
@@ -332,8 +334,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructs a <a class="el" href="class_bond_1_1_compiler_error.html" title="A container for error information reported by the various components of the Bond compiler.">CompilerError</a> object with the given type and arguments to format the error message and adds it to the buffer. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_bond_1_1_compiler_error.html#a63542242178727d42f4ef8d702c82a95" title="Default constructs an empty CompilerError object with the NO_ERROR error type.">CompilerError::CompilerError</a>. </dd></dl>
+<p>Constructs a <a class="el" href="class_bond_1_1_compiler_error.html" title="A container for error information reported by the various components of the Bond compiler.">CompilerError</a> object with the given type and pointer arguments to format the error message and adds it to the buffer, unless the buffer is full. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_bond_1_1_compiler_error.html#a63542242178727d42f4ef8d702c82a95" title="Default constructs an empty CompilerError object with the NO_ERROR error type.">CompilerError::CompilerError</a> </dd></dl>
 
 </div>
 </div>
@@ -366,8 +368,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructs a <a class="el" href="class_bond_1_1_compiler_error.html" title="A container for error information reported by the various components of the Bond compiler.">CompilerError</a> object with the given type and arguments to format the error message and adds it to the buffer. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_bond_1_1_compiler_error.html#a63542242178727d42f4ef8d702c82a95" title="Default constructs an empty CompilerError object with the NO_ERROR error type.">CompilerError::CompilerError</a>. </dd></dl>
+<p>Constructs a <a class="el" href="class_bond_1_1_compiler_error.html" title="A container for error information reported by the various components of the Bond compiler.">CompilerError</a> object with the given type and integer arguments to format the error message and adds it to the buffer, unless the buffer is full. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_bond_1_1_compiler_error.html#a63542242178727d42f4ef8d702c82a95" title="Default constructs an empty CompilerError object with the NO_ERROR error type.">CompilerError::CompilerError</a> </dd></dl>
 
 </div>
 </div>
@@ -387,6 +389,39 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Clears the contents of the error buffer. </p>
+
+</div>
+</div>
+<a id="a2103e1ed02861dbb36f9973faca54693" name="a2103e1ed02861dbb36f9973faca54693"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2103e1ed02861dbb36f9973faca54693">&#9670;&#160;</a></span>Truncate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Bond::CompilerErrorBuffer::Truncate </td>
+          <td>(</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>numErrors</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Discards the errors pushed after the buffer contained the given number of errors. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">numErrors</td><td>The number of errors to retain. Has no effect if it is not smaller than the current number of errors. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

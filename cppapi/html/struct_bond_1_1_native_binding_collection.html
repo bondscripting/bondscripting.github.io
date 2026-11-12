@@ -110,18 +110,26 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('struct_bond_1_
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Bond::NativeBindingCollection Struct Reference</div></div>
+  <div class="headertitle"><div class="title">Bond::NativeBindingCollection Struct Reference<div class="ingroups"><a class="el" href="group__api.html">Native API</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A collection of NativeFunctionBindings, typically one per library, passed to <a class="el" href="class_bond_1_1_cbo_loader.html#a3d4828d0535e3c49e2e7996b29f0af04" title="Adds a collection of native function bindings used to resolve native declarations.">CboLoader::AddNativeBinding</a>.  
+ <a href="#details">More...</a></p>
 
 <p><code>#include &lt;bond/api/nativebinding.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:aeff58a93646319fa438eaa7329cd8eac" id="r_aeff58a93646319fa438eaa7329cd8eac"><td class="memItemLeft">const <a class="el" href="struct_bond_1_1_native_function_binding.html">NativeFunctionBinding</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aeff58a93646319fa438eaa7329cd8eac">mFunctionBindings</a></td></tr>
+<tr class="memdesc:aeff58a93646319fa438eaa7329cd8eac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the array of function bindings.  <br /></td></tr>
 <tr class="memitem:a46c1f4a8be7d32df63e29ecf844532de" id="r_a46c1f4a8be7d32df63e29ecf844532de"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a46c1f4a8be7d32df63e29ecf844532de">mFunctionBindingCount</a></td></tr>
+<tr class="memdesc:a46c1f4a8be7d32df63e29ecf844532de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of entries in the array of function bindings.  <br /></td></tr>
 </table>
-<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A collection of NativeFunctionBindings, typically one per library, passed to <a class="el" href="class_bond_1_1_cbo_loader.html#a3d4828d0535e3c49e2e7996b29f0af04" title="Adds a collection of native function bindings used to resolve native declarations.">CboLoader::AddNativeBinding</a>. </p>
+<p>Collections for <a class="el" href="namespace_bond.html">Bond</a> source files that declare native functions can be generated with a <a class="el" href="class_bond_1_1_native_binding_generator.html" title="A generator for C++ native binding declarations and definitions.">NativeBindingGenerator</a>. </p>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="a46c1f4a8be7d32df63e29ecf844532de" name="a46c1f4a8be7d32df63e29ecf844532de"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a46c1f4a8be7d32df63e29ecf844532de">&#9670;&#160;</a></span>mFunctionBindingCount</h2>
 
@@ -133,6 +141,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Number of entries in the array of function bindings. </p>
 
 </div>
 </div>
@@ -147,6 +157,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Pointer to the array of function bindings. </p>
 
 </div>
 </div>

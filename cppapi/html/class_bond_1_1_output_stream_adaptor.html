@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_bond_1_1
 </div><!--header-->
 <div class="contents">
 
-<p>A wrapper around an OuputStream that adds formatted output operations used within the <a class="el" href="namespace_bond.html">Bond</a> Standard Library.  
+<p>A wrapper around an <a class="el" href="class_bond_1_1_output_stream.html" title="An abstract interface for performing both unformatted and formatted output operations.">OutputStream</a> that adds formatted output operations used within the <a class="el" href="namespace_bond.html">Bond</a> Standard Library.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;bond/io/outputstreamadaptor.h&gt;</code></p>
@@ -122,9 +122,11 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_bond_1_1
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a63cb211ad71921ed29a21ff4901496d9" id="r_a63cb211ad71921ed29a21ff4901496d9"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a63cb211ad71921ed29a21ff4901496d9">OutputStreamAdaptor</a> (<a class="el" href="class_bond_1_1_output_stream.html">OutputStream</a> *stream)</td></tr>
-<tr class="memdesc:a63cb211ad71921ed29a21ff4901496d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <a class="el" href="class_bond_1_1_output_stream_adaptor.html" title="A wrapper around an OuputStream that adds formatted output operations used within the Bond Standard L...">OutputStreamAdaptor</a> object.  <br /></td></tr>
+<tr class="memdesc:a63cb211ad71921ed29a21ff4901496d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <a class="el" href="class_bond_1_1_output_stream_adaptor.html" title="A wrapper around an OutputStream that adds formatted output operations used within the Bond Standard ...">OutputStreamAdaptor</a> object with no formatting flags, a precision of DEFAULT_PRECISION and a field width of 0.  <br /></td></tr>
 <tr class="memitem:a41372a3c3597dcd30b0117f11df41ad0" id="r_a41372a3c3597dcd30b0117f11df41ad0"><td class="memItemLeft"><a class="el" href="class_bond_1_1_output_stream.html">OutputStream</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a41372a3c3597dcd30b0117f11df41ad0">GetStream</a> () const</td></tr>
 <tr class="memdesc:a41372a3c3597dcd30b0117f11df41ad0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the wrapped <a class="el" href="class_bond_1_1_output_stream.html" title="An abstract interface for performing both unformatted and formatted output operations.">OutputStream</a>.  <br /></td></tr>
+<tr class="memitem:ad147fc432e9072a0975500a419e96e56" id="r_ad147fc432e9072a0975500a419e96e56"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad147fc432e9072a0975500a419e96e56">Close</a> ()</td></tr>
+<tr class="memdesc:ad147fc432e9072a0975500a419e96e56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the wrapped <a class="el" href="class_bond_1_1_output_stream.html" title="An abstract interface for performing both unformatted and formatted output operations.">OutputStream</a> and detaches from it, after which GetStream returns null. Does nothing if there is no wrapped <a class="el" href="class_bond_1_1_output_stream.html" title="An abstract interface for performing both unformatted and formatted output operations.">OutputStream</a>.  <br /></td></tr>
 <tr class="memitem:a930efca55317508e004bfa323295cb2a" id="r_a930efca55317508e004bfa323295cb2a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a930efca55317508e004bfa323295cb2a">Print</a> (const char *str)</td></tr>
 <tr class="memdesc:a930efca55317508e004bfa323295cb2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a null-terminated string to the wrapped <a class="el" href="class_bond_1_1_output_stream.html" title="An abstract interface for performing both unformatted and formatted output operations.">OutputStream</a>.  <br /></td></tr>
 <tr class="memitem:ad7aa40d2f24917bc0467e22bd070ef45" id="r_ad7aa40d2f24917bc0467e22bd070ef45"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad7aa40d2f24917bc0467e22bd070ef45">Print</a> (bool value)</td></tr>
@@ -161,9 +163,11 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a39b365f065d7464eac307982a5b02c20" id="r_a39b365f065d7464eac307982a5b02c20"><td class="memItemLeft">static const int&#160;</td><td class="memItemRight"><a class="el" href="#a39b365f065d7464eac307982a5b02c20">DEFAULT_PRECISION</a> = 6</td></tr>
+<tr class="memdesc:a39b365f065d7464eac307982a5b02c20"><td class="mdescLeft">&#160;</td><td class="mdescRight">The floating-point precision of a newly constructed <a class="el" href="class_bond_1_1_output_stream_adaptor.html" title="A wrapper around an OutputStream that adds formatted output operations used within the Bond Standard ...">OutputStreamAdaptor</a>.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A wrapper around an OuputStream that adds formatted output operations used within the <a class="el" href="namespace_bond.html">Bond</a> Standard Library. </p>
+<div class="textblock"><p>A wrapper around an <a class="el" href="class_bond_1_1_output_stream.html" title="An abstract interface for performing both unformatted and formatted output operations.">OutputStream</a> that adds formatted output operations used within the <a class="el" href="namespace_bond.html">Bond</a> Standard Library. </p>
+<p>The output functions must only be called while the adaptor wraps a stream. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a63cb211ad71921ed29a21ff4901496d9" name="a63cb211ad71921ed29a21ff4901496d9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a63cb211ad71921ed29a21ff4901496d9">&#9670;&#160;</a></span>OutputStreamAdaptor()</h2>
@@ -188,10 +192,10 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Constructs an <a class="el" href="class_bond_1_1_output_stream_adaptor.html" title="A wrapper around an OuputStream that adds formatted output operations used within the Bond Standard L...">OutputStreamAdaptor</a> object. </p>
+<p>Constructs an <a class="el" href="class_bond_1_1_output_stream_adaptor.html" title="A wrapper around an OutputStream that adds formatted output operations used within the Bond Standard ...">OutputStreamAdaptor</a> object with no formatting flags, a precision of DEFAULT_PRECISION and a field width of 0. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">stream</td><td>The stream to which formatted output is written. </td></tr>
+    <tr><td class="paramname">stream</td><td>The stream to which formatted output is written, or null. The stream is not owned by the adaptor. </td></tr>
   </table>
   </dd>
 </dl>
@@ -224,6 +228,25 @@ Static Public Attributes</h2></td></tr>
 
 <p>Clears all formatting flags. </p>
 <p>This clears any bitfield values previously set from the <a class="el" href="namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618">IO::Flags</a> enum. </p>
+
+</div>
+</div>
+<a id="ad147fc432e9072a0975500a419e96e56" name="ad147fc432e9072a0975500a419e96e56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad147fc432e9072a0975500a419e96e56">&#9670;&#160;</a></span>Close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Bond::OutputStreamAdaptor::Close </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Closes the wrapped <a class="el" href="class_bond_1_1_output_stream.html" title="An abstract interface for performing both unformatted and formatted output operations.">OutputStream</a> and detaches from it, after which GetStream returns null. Does nothing if there is no wrapped <a class="el" href="class_bond_1_1_output_stream.html" title="An abstract interface for performing both unformatted and formatted output operations.">OutputStream</a>. </p>
 
 </div>
 </div>
@@ -688,6 +711,8 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>The floating-point precision of a newly constructed <a class="el" href="class_bond_1_1_output_stream_adaptor.html" title="A wrapper around an OutputStream that adds formatted output operations used within the Bond Standard ...">OutputStreamAdaptor</a>. </p>
 
 </div>
 </div>

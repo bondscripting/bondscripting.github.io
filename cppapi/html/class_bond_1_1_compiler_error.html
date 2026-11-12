@@ -123,86 +123,101 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_bond_1_1
 Public Types</h2></td></tr>
 <tr class="memitem:a430955157112716ca7099c81e8eaff4c" id="r_a430955157112716ca7099c81e8eaff4c"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a430955157112716ca7099c81e8eaff4c">Type</a> { <br />
 &#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4ca75cf3e1e8d0a2e1955ac7d0565af89b2">NO_ERROR</a>
+, <a class="el" href="#a430955157112716ca7099c81e8eaff4cac1c0ec31801111ca17e1b6a8b4af8f86">INPUT_FILE_NOT_FOUND</a>
+, <a class="el" href="#a430955157112716ca7099c81e8eaff4cad1b186e8e999e752dc92a843050bf206">INCLUDE_FILE_NOT_FOUND</a>
 , <a class="el" href="#a430955157112716ca7099c81e8eaff4caea44b6507a8e22e01ddfe3245281428d">INVALID_ESCAPE</a>
-, <a class="el" href="#a430955157112716ca7099c81e8eaff4ca1a6cea60b8f73f68ad75fa5ebbf614cf">MISSING_HEX_ESCAPE</a>
-, <a class="el" href="#a430955157112716ca7099c81e8eaff4ca67977d6ed872bb22d16d7f4350da2085">OCTAL_ESCAPE_RANGE</a>
 , <br />
-&#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4ca161c52cc0c1972bedf4b41ff4c65f31a">HEX_ESCAPE_RANGE</a>
+&#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4ca1a6cea60b8f73f68ad75fa5ebbf614cf">MISSING_HEX_ESCAPE</a>
+, <a class="el" href="#a430955157112716ca7099c81e8eaff4ca67977d6ed872bb22d16d7f4350da2085">OCTAL_ESCAPE_RANGE</a>
+, <a class="el" href="#a430955157112716ca7099c81e8eaff4ca161c52cc0c1972bedf4b41ff4c65f31a">HEX_ESCAPE_RANGE</a>
+, <a class="el" href="#a430955157112716ca7099c81e8eaff4ca9620e057f5d287afbbb85a6c34130fa4">INVALID_UNICODE_ESCAPE</a>
+, <br />
+&#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4cafb7e0aaee46ae6da186b9eca135965ec">UNICODE_ESCAPE_RANGE</a>
 , <a class="el" href="#a430955157112716ca7099c81e8eaff4caec58b9547d2c157b2cba874848f6744f">INVALID_OCTAL_INT</a>
 , <a class="el" href="#a430955157112716ca7099c81e8eaff4ca64e9122de1cbd6ce64c4cc3ac1889be4">INVALID_HEX_INT</a>
 , <a class="el" href="#a430955157112716ca7099c81e8eaff4cad95e277dcdab8fd9346cee7aebfe08e3">INVALID_INT</a>
 , <br />
-&#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4ca6658ac012e8c8f510d84a114329d6ad6">INVALID_FLOAT</a>
+&#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4caf5633bdbdcdec46d505391f3f2b213fb">INT_OUT_OF_RANGE</a>
+, <a class="el" href="#a430955157112716ca7099c81e8eaff4ca6658ac012e8c8f510d84a114329d6ad6">INVALID_FLOAT</a>
+, <a class="el" href="#a430955157112716ca7099c81e8eaff4caaf3b5932edc95b070c8b7346ef84a651">FLOAT_OUT_OF_RANGE</a>
 , <a class="el" href="#a430955157112716ca7099c81e8eaff4ca399dfe800d3319e8365da7bddf436fb8">EMPTY_CHARACTER_CONSTANT</a>
-, <a class="el" href="#a430955157112716ca7099c81e8eaff4cac82226cc0a7573c9db9e859e22efdc10">MULTI_CHARACTER_CONSTANT</a>
+, <br />
+&#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4cac82226cc0a7573c9db9e859e22efdc10">MULTI_CHARACTER_CONSTANT</a>
+, <a class="el" href="#a430955157112716ca7099c81e8eaff4cabdf6c647ff46049e6483461c4f2406cd">NON_ASCII_CHARACTER_CONSTANT</a>
 , <a class="el" href="#a430955157112716ca7099c81e8eaff4ca55d10bfa36a845dd1635356e4fbcaf63">UNTERMINATED_CHARACTER</a>
+, <a class="el" href="#a430955157112716ca7099c81e8eaff4ca0b2a92671ceb45618aeb6734be2b7631">UNTERMINATED_STRING</a>
 , <br />
-&#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4ca0b2a92671ceb45618aeb6734be2b7631">UNTERMINATED_STRING</a>
-, <a class="el" href="#a430955157112716ca7099c81e8eaff4ca0af836c43c8be050d3af393c6721c539">UNTERMINATED_COMMENT</a>
-, <a class="el" href="#a430955157112716ca7099c81e8eaff4ca48e09f1fdd8e4a7802acfe028c87b8f9">DUPLICATE_CONST</a>
+&#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4ca0af836c43c8be050d3af393c6721c539">UNTERMINATED_COMMENT</a>
+, <a class="el" href="#a430955157112716ca7099c81e8eaff4ca450af11f2617e67029c01fc911d8018f">INVALID_CHARACTER</a>
+, <a class="el" href="#a430955157112716ca7099c81e8eaff4ca06be853f1741ef0f143fcf1e22e1d12f">INVALID_UTF8</a>
+, <a class="el" href="#a430955157112716ca7099c81e8eaff4ca7553c43daf3ef85bba7ce795763735e1">UNSUPPORTED_ENCODING</a>
+, <br />
+&#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4ca48e09f1fdd8e4a7802acfe028c87b8f9">DUPLICATE_CONST</a>
 , <a class="el" href="#a430955157112716ca7099c81e8eaff4ca5284da0fa27d4fe444d1a7c3eddbc5da">PARSE_ERROR</a>
-, <br />
-&#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4ca3104b9c8876b660ae08bd825c0fe1cdd">SIZE_AND_ALIGNMENT_NOT_ALLOWED</a>
+, <a class="el" href="#a430955157112716ca7099c81e8eaff4ca3104b9c8876b660ae08bd825c0fe1cdd">SIZE_AND_ALIGNMENT_NOT_ALLOWED</a>
 , <a class="el" href="#a430955157112716ca7099c81e8eaff4ca233727ef92ffca7b49236ef20e5c9493">VOID_NOT_ALLOWED</a>
-, <a class="el" href="#a430955157112716ca7099c81e8eaff4ca4dc8307bd8cb6c49ea2ab7fa6e94d23d">ARRAY_OF_VOID</a>
+, <br />
+&#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4ca4dc8307bd8cb6c49ea2ab7fa6e94d23d">ARRAY_OF_VOID</a>
 , <a class="el" href="#a430955157112716ca7099c81e8eaff4cae1a29005944f7ccb5f58feb2174141aa">MULTIDIMENTIONAL_ARRAY_BOUNDS</a>
-, <br />
-&#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4ca106369546a90a20131e64390dc7db4e6">INITIALIZER_NOT_ALLOWED</a>
+, <a class="el" href="#a430955157112716ca7099c81e8eaff4ca106369546a90a20131e64390dc7db4e6">INITIALIZER_NOT_ALLOWED</a>
 , <a class="el" href="#a430955157112716ca7099c81e8eaff4cafa44291be0f6ed7ffbfccc77db56bf11">CONST_NON_MEMBER_FUNCTION</a>
-, <a class="el" href="#a430955157112716ca7099c81e8eaff4ca0e9a861d7d8a386107590bf055d35b13">NATIVE_FUNCTION_DEFINITION</a>
+, <br />
+&#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4ca0e9a861d7d8a386107590bf055d35b13">NATIVE_FUNCTION_DEFINITION</a>
 , <a class="el" href="#a430955157112716ca7099c81e8eaff4cafcdeb318e9d635167dc384733644ef66">NON_NATIVE_FUNCTION_DECLARATION</a>
-, <br />
-&#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4ca2bd0c136a0eeba800ab073206fd2f18a">FUNCTION_RETURNS_ARRAY</a>
+, <a class="el" href="#a430955157112716ca7099c81e8eaff4ca2bd0c136a0eeba800ab073206fd2f18a">FUNCTION_RETURNS_ARRAY</a>
 , <a class="el" href="#a430955157112716ca7099c81e8eaff4ca43d62f0507e92a3af9ad3e16c11a45ef">EMPTY_SWITCH_STATEMENT</a>
-, <a class="el" href="#a430955157112716ca7099c81e8eaff4ca6af1ca988ba9ef2242dd72852f8d71b1">EMPTY_SWITCH_LABEL_LIST</a>
+, <br />
+&#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4ca6af1ca988ba9ef2242dd72852f8d71b1">EMPTY_SWITCH_LABEL_LIST</a>
 , <a class="el" href="#a430955157112716ca7099c81e8eaff4caba6f230982bb873b2dc44dca67e80a8f">UNTERMINATED_SWITCH_SECTION</a>
-, <br />
-&#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4caac820be51b533bb1e7b11d0109168451">DUPLICATE_DEFAULT_IN_SWITCH</a>
+, <a class="el" href="#a430955157112716ca7099c81e8eaff4caac820be51b533bb1e7b11d0109168451">DUPLICATE_DEFAULT_IN_SWITCH</a>
 , <a class="el" href="#a430955157112716ca7099c81e8eaff4ca224bc18573a218ff13fbcaa333f07944">DUPLICATE_CASE_IN_SWITCH</a>
-, <a class="el" href="#a430955157112716ca7099c81e8eaff4ca6af7e26dca0e78c006a451958719c3e1">INVALID_OPERATOR_IN_CONST_EXPRESSION</a>
+, <br />
+&#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4ca6af7e26dca0e78c006a451958719c3e1">INVALID_OPERATOR_IN_CONST_EXPRESSION</a>
 , <a class="el" href="#a430955157112716ca7099c81e8eaff4cad2a21664b7ea9baf2b939321b4da80d9">FUNCTION_CALL_IN_CONST_EXPRESSION</a>
-, <br />
-&#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4ca762fc3741c9a4e14168cb6e177b6295b">DUPLICATE_SYMBOL</a>
+, <a class="el" href="#a430955157112716ca7099c81e8eaff4ca762fc3741c9a4e14168cb6e177b6295b">DUPLICATE_SYMBOL</a>
 , <a class="el" href="#a430955157112716ca7099c81e8eaff4caa9ac8f4da1b1030dcebe86b023c32494">UNEXPECTED_TOKEN</a>
-, <a class="el" href="#a430955157112716ca7099c81e8eaff4ca560f1a9d582791c6cbade2b94e838b1d">SYMBOL_IS_NOT_DEFINED</a>
+, <br />
+&#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4ca560f1a9d582791c6cbade2b94e838b1d">SYMBOL_IS_NOT_DEFINED</a>
 , <a class="el" href="#a430955157112716ca7099c81e8eaff4ca8ca1132fcc2d012f4c8fbfec1beab233">EXPECTED_NAMESPACE</a>
-, <br />
-&#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4cab520b1a00d9050ec7cc0625e13587337">USING_NAMESPACE_REQUIRES_NAMESPACE_KEYWORD</a>
+, <a class="el" href="#a430955157112716ca7099c81e8eaff4cab520b1a00d9050ec7cc0625e13587337">USING_NAMESPACE_REQUIRES_NAMESPACE_KEYWORD</a>
 , <a class="el" href="#a430955157112716ca7099c81e8eaff4cad20782f0f1640de30b31febd5b7480b5">AMBIGUOUS_SYMBOL_REFERENCE</a>
-, <a class="el" href="#a430955157112716ca7099c81e8eaff4ca263066b2019c5beb2bb00d695e58c870">NATIVE_STRUCT_IS_NOT_DEFINED</a>
+, <br />
+&#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4ca263066b2019c5beb2bb00d695e58c870">NATIVE_STRUCT_IS_NOT_DEFINED</a>
 , <a class="el" href="#a430955157112716ca7099c81e8eaff4cad94102d4fe8e251551abf1becb7c4290">DUPLICATE_NATIVE_STRUCT_STUB</a>
-, <br />
-&#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4cafdc63ad3b3fbb41c09ab76b4f7cdcdcf">SYMBOL_IS_NOT_A_TYPE</a>
+, <a class="el" href="#a430955157112716ca7099c81e8eaff4cafdc63ad3b3fbb41c09ab76b4f7cdcdcf">SYMBOL_IS_NOT_A_TYPE</a>
 , <a class="el" href="#a430955157112716ca7099c81e8eaff4cae261e60aba92b2ad53ae979533a79fd2">INVALID_SYMBOL_IN_EXPRESSION</a>
-, <a class="el" href="#a430955157112716ca7099c81e8eaff4ca59d46c5c7cd4f3d1a3ccf481f57a4f60">NON_STRUCT_MEMBER_REQUEST</a>
+, <br />
+&#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4ca59d46c5c7cd4f3d1a3ccf481f57a4f60">NON_STRUCT_MEMBER_REQUEST</a>
 , <a class="el" href="#a430955157112716ca7099c81e8eaff4ca8dada41ed9974b099bb3d1daac8cf428">INVALID_MEMBER_REQUEST</a>
-, <br />
-&#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4cae7885fac3c9332aed95fa33a3a279d2b">NON_CONST_MEMBER_FUNCTION_REQUEST</a>
+, <a class="el" href="#a430955157112716ca7099c81e8eaff4cae7885fac3c9332aed95fa33a3a279d2b">NON_CONST_MEMBER_FUNCTION_REQUEST</a>
 , <a class="el" href="#a430955157112716ca7099c81e8eaff4ca17d437c77ff105c7547ec9c40c02857c">THIS_IN_NON_MEMBER_FUNCTION</a>
-, <a class="el" href="#a430955157112716ca7099c81e8eaff4ca0218aed69c15fc929d4fdba9c6ae2d7d">EXPRESSION_IS_NOT_CALLABLE</a>
+, <br />
+&#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4ca0218aed69c15fc929d4fdba9c6ae2d7d">EXPRESSION_IS_NOT_CALLABLE</a>
 , <a class="el" href="#a430955157112716ca7099c81e8eaff4cac0f38154e72783adb9e987e633bb7289">INCORRECT_NUMBER_OF_ARGS</a>
-, <br />
-&#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4ca8e7b32057458fa158ba19e663b8d0eb7">INVALID_TYPE_FOR_OPERATOR</a>
+, <a class="el" href="#a430955157112716ca7099c81e8eaff4ca8e7b32057458fa158ba19e663b8d0eb7">INVALID_TYPE_FOR_OPERATOR</a>
 , <a class="el" href="#a430955157112716ca7099c81e8eaff4ca92137f21f6c2305562a0684ddb90f1df">INVALID_TYPE_FOR_POINTER_OPERATOR</a>
-, <a class="el" href="#a430955157112716ca7099c81e8eaff4cadea6d0df9ca025d418e5b3dded3b5511">INVALID_TYPE_FOR_INDEX_OPERATOR</a>
+, <br />
+&#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4cadea6d0df9ca025d418e5b3dded3b5511">INVALID_TYPE_FOR_INDEX_OPERATOR</a>
 , <a class="el" href="#a430955157112716ca7099c81e8eaff4ca58bed93ff576d5ac76e0a4415fe1632c">INVALID_TYPE_CONVERSION</a>
-, <br />
-&#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4cadab6e4964cb81d3d52fae1370e2694b7">INVALID_RETURN_TYPE_CONVERSION</a>
+, <a class="el" href="#a430955157112716ca7099c81e8eaff4cadab6e4964cb81d3d52fae1370e2694b7">INVALID_RETURN_TYPE_CONVERSION</a>
 , <a class="el" href="#a430955157112716ca7099c81e8eaff4ca8f3872421b0640e83c9344088f6f1ede">INVALID_TYPE_ASSIGNMENT</a>
-, <a class="el" href="#a430955157112716ca7099c81e8eaff4ca75ac744f5d8ba5985c874f77dd28679f">ENUMERATOR_VALUE_IS_NOT_CONST_INTEGER</a>
+, <br />
+&#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4ca75ac744f5d8ba5985c874f77dd28679f">ENUMERATOR_VALUE_IS_NOT_CONST_INTEGER</a>
 , <a class="el" href="#a430955157112716ca7099c81e8eaff4ca27a315252720dbef4bd6218b1f26a543">ARRAY_SIZE_IS_NOT_CONST_INTEGER</a>
-, <br />
-&#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4ca53f6c4e141d2155850d9e6c49bac1f4e">ARRAY_SIZE_IS_ZERO</a>
+, <a class="el" href="#a430955157112716ca7099c81e8eaff4ca53f6c4e141d2155850d9e6c49bac1f4e">ARRAY_SIZE_IS_ZERO</a>
 , <a class="el" href="#a430955157112716ca7099c81e8eaff4ca00636c5591eaf4a23d398c241a7315e5">ARRAY_SIZE_IS_UNSPECIFIED</a>
-, <a class="el" href="#a430955157112716ca7099c81e8eaff4ca4cf80628d632f51ca32152562104d1ca">SWITCH_CONTROL_IS_NOT_INTEGER</a>
+, <br />
+&#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4ca4cf80628d632f51ca32152562104d1ca">SWITCH_CONTROL_IS_NOT_INTEGER</a>
 , <a class="el" href="#a430955157112716ca7099c81e8eaff4ca79db25cd85743f606657ffd60b42dd43">SWITCH_LABEL_IS_NOT_CONST_INTEGER</a>
-, <br />
-&#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4cad87df1abe649495655ff5df6d1ba1656">IF_CONDITION_IS_NOT_BOOLEAN</a>
+, <a class="el" href="#a430955157112716ca7099c81e8eaff4cad87df1abe649495655ff5df6d1ba1656">IF_CONDITION_IS_NOT_BOOLEAN</a>
 , <a class="el" href="#a430955157112716ca7099c81e8eaff4cae948f059ff3ad62a1b8e83498b89087e">WHILE_CONDITION_IS_NOT_BOOLEAN</a>
-, <a class="el" href="#a430955157112716ca7099c81e8eaff4ca45a1ddd2d4b6da648fdd24d02e321479">FOR_CONDITION_IS_NOT_BOOLEAN</a>
-, <a class="el" href="#a430955157112716ca7099c81e8eaff4ca76ad5cadd45a3fce6263f8791c98139d">TERNARY_OPERAND_TYPE_MISMATCH</a>
 , <br />
-&#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4caca627cdff689ba32299f8207baa1c2ab">UNINITIALIZED_CONST</a>
+&#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4ca45a1ddd2d4b6da648fdd24d02e321479">FOR_CONDITION_IS_NOT_BOOLEAN</a>
+, <a class="el" href="#a430955157112716ca7099c81e8eaff4ca3571ab959e47af30e0b6b128003a783c">TERNARY_CONDITION_IS_NOT_BOOLEAN</a>
+, <a class="el" href="#a430955157112716ca7099c81e8eaff4ca76ad5cadd45a3fce6263f8791c98139d">TERNARY_OPERAND_TYPE_MISMATCH</a>
+, <a class="el" href="#a430955157112716ca7099c81e8eaff4caca627cdff689ba32299f8207baa1c2ab">UNINITIALIZED_CONST</a>
+, <br />
+&#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4ca11123770061e20ffeed4b993e2dbd3e4">UNINITIALIZED_VARIABLE</a>
 , <a class="el" href="#a430955157112716ca7099c81e8eaff4ca6c8ff57388b1dffb276a0b49d63d2017">NON_CONST_DECLARATION</a>
 , <a class="el" href="#a430955157112716ca7099c81e8eaff4ca8c58d642113bca49e3080e7bcd96f902">NON_LVALUE_TYPE</a>
 , <a class="el" href="#a430955157112716ca7099c81e8eaff4caed65a672ec360efb868b6caa363451e9">NON_LVALUE_ASSIGNMENT</a>
@@ -228,18 +243,21 @@ Public Types</h2></td></tr>
 , <a class="el" href="#a430955157112716ca7099c81e8eaff4cac717eaf2af32f615bf5004628512e393">POINTER_ARITHMETIC_OF_UNDEFINED_SIZE</a>
 , <br />
 &#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4ca126971287f99b9b144cae4957b9dd05e">NOT_ALL_PATHS_RETURN_A_VALUE</a>
+, <a class="el" href="#a430955157112716ca7099c81e8eaff4ca010232dd378dc9002d3e67fb2a47b228">MISSING_RETURN_VALUE</a>
 , <a class="el" href="#a430955157112716ca7099c81e8eaff4ca8a3809947a2d3dfc159df2c1309b4bc4">INVALID_BREAK</a>
 , <a class="el" href="#a430955157112716ca7099c81e8eaff4cae642874329dac775739d7e830f0c25ce">INVALID_CONTINUE</a>
-, <a class="el" href="#a430955157112716ca7099c81e8eaff4cac7584a672b278e2d5eaddab0fd0e2317">UNREACHABLE_CODE</a>
 , <br />
-&#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4caeb2fee3cee36a99ebc193a7dc33b01d4">LOSSY_CONVERSION</a>
+&#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4cac7584a672b278e2d5eaddab0fd0e2317">UNREACHABLE_CODE</a>
+, <a class="el" href="#a430955157112716ca7099c81e8eaff4caeb2fee3cee36a99ebc193a7dc33b01d4">LOSSY_CONVERSION</a>
+, <a class="el" href="#a430955157112716ca7099c81e8eaff4cae943c3322607111b780982f0655160ce">SIGNED_UNSIGNED_MISMATCH</a>
 , <a class="el" href="#a430955157112716ca7099c81e8eaff4ca5a35cc1a4ef6974c0001751383754425">VALUE32_TABLE_OVERFLOW</a>
-, <a class="el" href="#a430955157112716ca7099c81e8eaff4cad64add9d375e92d456679fe8093f769f">VALUE64_TABLE_OVERFLOW</a>
-, <a class="el" href="#a430955157112716ca7099c81e8eaff4ca4a0e167207f8ab04eca756da779b4a00">STRING_TABLE_OVERFLOW</a>
 , <br />
-&#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4ca256192df96def49fd4e38a59d5af0fed">QUALIFIED_NAME_TABLE_OVERFLOW</a>
+&#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4cad64add9d375e92d456679fe8093f769f">VALUE64_TABLE_OVERFLOW</a>
+, <a class="el" href="#a430955157112716ca7099c81e8eaff4ca4a0e167207f8ab04eca756da779b4a00">STRING_TABLE_OVERFLOW</a>
+, <a class="el" href="#a430955157112716ca7099c81e8eaff4ca256192df96def49fd4e38a59d5af0fed">QUALIFIED_NAME_TABLE_OVERFLOW</a>
 , <a class="el" href="#a430955157112716ca7099c81e8eaff4ca4544bf779380af604e391f705cc97adc">STRING_OVERFLOW</a>
-, <a class="el" href="#a430955157112716ca7099c81e8eaff4cafbff367435dc427c53770c388d20dc2e">INTERNAL_ERROR</a>
+, <br />
+&#160;&#160;<a class="el" href="#a430955157112716ca7099c81e8eaff4cafbff367435dc427c53770c388d20dc2e">INTERNAL_ERROR</a>
 <br />
  }</td></tr>
 <tr class="memdesc:a430955157112716ca7099c81e8eaff4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">An enumeration identifying all types of compiler errors.  <a href="#a430955157112716ca7099c81e8eaff4c">More...</a><br /></td></tr>
@@ -257,7 +275,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab55776c4416ee9ad3ee96ea0c775bca0" id="r_ab55776c4416ee9ad3ee96ea0c775bca0"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#ab55776c4416ee9ad3ee96ea0c775bca0">GetFormat</a> () const</td></tr>
 <tr class="memdesc:ab55776c4416ee9ad3ee96ea0c775bca0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the error message format string for the <a class="el" href="class_bond_1_1_compiler_error.html" title="A container for error information reported by the various components of the Bond compiler.">CompilerError</a>'s type.  <br /></td></tr>
 <tr class="memitem:ac0a57814410d35c95618897a4ec2c76c" id="r_ac0a57814410d35c95618897a4ec2c76c"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#ac0a57814410d35c95618897a4ec2c76c">GetErrorName</a> () const</td></tr>
-<tr class="memdesc:ac0a57814410d35c95618897a4ec2c76c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string representation of the <a class="el" href="class_bond_1_1_compiler_error.html" title="A container for error information reported by the various components of the Bond compiler.">CompilerError</a>'s type.  <br /></td></tr>
+<tr class="memdesc:ac0a57814410d35c95618897a4ec2c76c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of the <a class="el" href="class_bond_1_1_compiler_error.html" title="A container for error information reported by the various components of the Bond compiler.">CompilerError</a>'s type, e.g. "INVALID_ESCAPE".  <br /></td></tr>
 <tr class="memitem:afa2ef08ac7ee04d1da472939301740eb" id="r_afa2ef08ac7ee04d1da472939301740eb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afa2ef08ac7ee04d1da472939301740eb">Print</a> (<a class="el" href="class_bond_1_1_output_stream.html">OutputStream</a> &amp;stream) const</td></tr>
 <tr class="memdesc:afa2ef08ac7ee04d1da472939301740eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a formatted error message to the given <a class="el" href="class_bond_1_1_output_stream.html" title="An abstract interface for performing both unformatted and formatted output operations.">OutputStream</a>.  <br /></td></tr>
 </table><table class="memberdecls">
@@ -266,7 +284,7 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a88fd5ebe6422dc7b1630f0168546642e" id="r_a88fd5ebe6422dc7b1630f0168546642e"><td class="memItemLeft">static const char *&#160;</td><td class="memItemRight"><a class="el" href="#a88fd5ebe6422dc7b1630f0168546642e">GetFormat</a> (<a class="el" href="#a430955157112716ca7099c81e8eaff4c">Type</a> type)</td></tr>
 <tr class="memdesc:a88fd5ebe6422dc7b1630f0168546642e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the error message format string for the given error type.  <br /></td></tr>
 <tr class="memitem:a2cf838b6b594690dc3788ab2f5b7a6bd" id="r_a2cf838b6b594690dc3788ab2f5b7a6bd"><td class="memItemLeft">static const char *&#160;</td><td class="memItemRight"><a class="el" href="#a2cf838b6b594690dc3788ab2f5b7a6bd">GetErrorName</a> (<a class="el" href="#a430955157112716ca7099c81e8eaff4c">Type</a> type)</td></tr>
-<tr class="memdesc:a2cf838b6b594690dc3788ab2f5b7a6bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string representation of the given error type.  <br /></td></tr>
+<tr class="memdesc:a2cf838b6b594690dc3788ab2f5b7a6bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of the given error type, e.g. "INVALID_ESCAPE".  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A container for error information reported by the various components of the <a class="el" href="namespace_bond.html">Bond</a> compiler. </p>
@@ -289,19 +307,29 @@ Static Public Member Functions</h2></td></tr>
 <p>An enumeration identifying all types of compiler errors. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4ca75cf3e1e8d0a2e1955ac7d0565af89b2" name="a430955157112716ca7099c81e8eaff4ca75cf3e1e8d0a2e1955ac7d0565af89b2"></a>NO_ERROR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4cac1c0ec31801111ca17e1b6a8b4af8f86" name="a430955157112716ca7099c81e8eaff4cac1c0ec31801111ca17e1b6a8b4af8f86"></a>INPUT_FILE_NOT_FOUND&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4cad1b186e8e999e752dc92a843050bf206" name="a430955157112716ca7099c81e8eaff4cad1b186e8e999e752dc92a843050bf206"></a>INCLUDE_FILE_NOT_FOUND&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4caea44b6507a8e22e01ddfe3245281428d" name="a430955157112716ca7099c81e8eaff4caea44b6507a8e22e01ddfe3245281428d"></a>INVALID_ESCAPE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4ca1a6cea60b8f73f68ad75fa5ebbf614cf" name="a430955157112716ca7099c81e8eaff4ca1a6cea60b8f73f68ad75fa5ebbf614cf"></a>MISSING_HEX_ESCAPE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4ca67977d6ed872bb22d16d7f4350da2085" name="a430955157112716ca7099c81e8eaff4ca67977d6ed872bb22d16d7f4350da2085"></a>OCTAL_ESCAPE_RANGE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4ca161c52cc0c1972bedf4b41ff4c65f31a" name="a430955157112716ca7099c81e8eaff4ca161c52cc0c1972bedf4b41ff4c65f31a"></a>HEX_ESCAPE_RANGE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4ca9620e057f5d287afbbb85a6c34130fa4" name="a430955157112716ca7099c81e8eaff4ca9620e057f5d287afbbb85a6c34130fa4"></a>INVALID_UNICODE_ESCAPE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4cafb7e0aaee46ae6da186b9eca135965ec" name="a430955157112716ca7099c81e8eaff4cafb7e0aaee46ae6da186b9eca135965ec"></a>UNICODE_ESCAPE_RANGE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4caec58b9547d2c157b2cba874848f6744f" name="a430955157112716ca7099c81e8eaff4caec58b9547d2c157b2cba874848f6744f"></a>INVALID_OCTAL_INT&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4ca64e9122de1cbd6ce64c4cc3ac1889be4" name="a430955157112716ca7099c81e8eaff4ca64e9122de1cbd6ce64c4cc3ac1889be4"></a>INVALID_HEX_INT&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4cad95e277dcdab8fd9346cee7aebfe08e3" name="a430955157112716ca7099c81e8eaff4cad95e277dcdab8fd9346cee7aebfe08e3"></a>INVALID_INT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4caf5633bdbdcdec46d505391f3f2b213fb" name="a430955157112716ca7099c81e8eaff4caf5633bdbdcdec46d505391f3f2b213fb"></a>INT_OUT_OF_RANGE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4ca6658ac012e8c8f510d84a114329d6ad6" name="a430955157112716ca7099c81e8eaff4ca6658ac012e8c8f510d84a114329d6ad6"></a>INVALID_FLOAT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4caaf3b5932edc95b070c8b7346ef84a651" name="a430955157112716ca7099c81e8eaff4caaf3b5932edc95b070c8b7346ef84a651"></a>FLOAT_OUT_OF_RANGE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4ca399dfe800d3319e8365da7bddf436fb8" name="a430955157112716ca7099c81e8eaff4ca399dfe800d3319e8365da7bddf436fb8"></a>EMPTY_CHARACTER_CONSTANT&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4cac82226cc0a7573c9db9e859e22efdc10" name="a430955157112716ca7099c81e8eaff4cac82226cc0a7573c9db9e859e22efdc10"></a>MULTI_CHARACTER_CONSTANT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4cabdf6c647ff46049e6483461c4f2406cd" name="a430955157112716ca7099c81e8eaff4cabdf6c647ff46049e6483461c4f2406cd"></a>NON_ASCII_CHARACTER_CONSTANT&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4ca55d10bfa36a845dd1635356e4fbcaf63" name="a430955157112716ca7099c81e8eaff4ca55d10bfa36a845dd1635356e4fbcaf63"></a>UNTERMINATED_CHARACTER&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4ca0b2a92671ceb45618aeb6734be2b7631" name="a430955157112716ca7099c81e8eaff4ca0b2a92671ceb45618aeb6734be2b7631"></a>UNTERMINATED_STRING&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4ca0af836c43c8be050d3af393c6721c539" name="a430955157112716ca7099c81e8eaff4ca0af836c43c8be050d3af393c6721c539"></a>UNTERMINATED_COMMENT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4ca450af11f2617e67029c01fc911d8018f" name="a430955157112716ca7099c81e8eaff4ca450af11f2617e67029c01fc911d8018f"></a>INVALID_CHARACTER&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4ca06be853f1741ef0f143fcf1e22e1d12f" name="a430955157112716ca7099c81e8eaff4ca06be853f1741ef0f143fcf1e22e1d12f"></a>INVALID_UTF8&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4ca7553c43daf3ef85bba7ce795763735e1" name="a430955157112716ca7099c81e8eaff4ca7553c43daf3ef85bba7ce795763735e1"></a>UNSUPPORTED_ENCODING&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4ca48e09f1fdd8e4a7802acfe028c87b8f9" name="a430955157112716ca7099c81e8eaff4ca48e09f1fdd8e4a7802acfe028c87b8f9"></a>DUPLICATE_CONST&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4ca5284da0fa27d4fe444d1a7c3eddbc5da" name="a430955157112716ca7099c81e8eaff4ca5284da0fa27d4fe444d1a7c3eddbc5da"></a>PARSE_ERROR&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4ca3104b9c8876b660ae08bd825c0fe1cdd" name="a430955157112716ca7099c81e8eaff4ca3104b9c8876b660ae08bd825c0fe1cdd"></a>SIZE_AND_ALIGNMENT_NOT_ALLOWED&#160;</td><td class="fielddoc"></td></tr>
@@ -351,8 +379,10 @@ Static Public Member Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4cad87df1abe649495655ff5df6d1ba1656" name="a430955157112716ca7099c81e8eaff4cad87df1abe649495655ff5df6d1ba1656"></a>IF_CONDITION_IS_NOT_BOOLEAN&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4cae948f059ff3ad62a1b8e83498b89087e" name="a430955157112716ca7099c81e8eaff4cae948f059ff3ad62a1b8e83498b89087e"></a>WHILE_CONDITION_IS_NOT_BOOLEAN&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4ca45a1ddd2d4b6da648fdd24d02e321479" name="a430955157112716ca7099c81e8eaff4ca45a1ddd2d4b6da648fdd24d02e321479"></a>FOR_CONDITION_IS_NOT_BOOLEAN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4ca3571ab959e47af30e0b6b128003a783c" name="a430955157112716ca7099c81e8eaff4ca3571ab959e47af30e0b6b128003a783c"></a>TERNARY_CONDITION_IS_NOT_BOOLEAN&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4ca76ad5cadd45a3fce6263f8791c98139d" name="a430955157112716ca7099c81e8eaff4ca76ad5cadd45a3fce6263f8791c98139d"></a>TERNARY_OPERAND_TYPE_MISMATCH&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4caca627cdff689ba32299f8207baa1c2ab" name="a430955157112716ca7099c81e8eaff4caca627cdff689ba32299f8207baa1c2ab"></a>UNINITIALIZED_CONST&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4ca11123770061e20ffeed4b993e2dbd3e4" name="a430955157112716ca7099c81e8eaff4ca11123770061e20ffeed4b993e2dbd3e4"></a>UNINITIALIZED_VARIABLE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4ca6c8ff57388b1dffb276a0b49d63d2017" name="a430955157112716ca7099c81e8eaff4ca6c8ff57388b1dffb276a0b49d63d2017"></a>NON_CONST_DECLARATION&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4ca8c58d642113bca49e3080e7bcd96f902" name="a430955157112716ca7099c81e8eaff4ca8c58d642113bca49e3080e7bcd96f902"></a>NON_LVALUE_TYPE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4caed65a672ec360efb868b6caa363451e9" name="a430955157112716ca7099c81e8eaff4caed65a672ec360efb868b6caa363451e9"></a>NON_LVALUE_ASSIGNMENT&#160;</td><td class="fielddoc"></td></tr>
@@ -373,10 +403,12 @@ Static Public Member Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4cae5054bfc44e619ea3f6bf0a6873f5372" name="a430955157112716ca7099c81e8eaff4cae5054bfc44e619ea3f6bf0a6873f5372"></a>ASSIGNMENT_OF_UNDEFINED_SIZE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4cac717eaf2af32f615bf5004628512e393" name="a430955157112716ca7099c81e8eaff4cac717eaf2af32f615bf5004628512e393"></a>POINTER_ARITHMETIC_OF_UNDEFINED_SIZE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4ca126971287f99b9b144cae4957b9dd05e" name="a430955157112716ca7099c81e8eaff4ca126971287f99b9b144cae4957b9dd05e"></a>NOT_ALL_PATHS_RETURN_A_VALUE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4ca010232dd378dc9002d3e67fb2a47b228" name="a430955157112716ca7099c81e8eaff4ca010232dd378dc9002d3e67fb2a47b228"></a>MISSING_RETURN_VALUE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4ca8a3809947a2d3dfc159df2c1309b4bc4" name="a430955157112716ca7099c81e8eaff4ca8a3809947a2d3dfc159df2c1309b4bc4"></a>INVALID_BREAK&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4cae642874329dac775739d7e830f0c25ce" name="a430955157112716ca7099c81e8eaff4cae642874329dac775739d7e830f0c25ce"></a>INVALID_CONTINUE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4cac7584a672b278e2d5eaddab0fd0e2317" name="a430955157112716ca7099c81e8eaff4cac7584a672b278e2d5eaddab0fd0e2317"></a>UNREACHABLE_CODE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4caeb2fee3cee36a99ebc193a7dc33b01d4" name="a430955157112716ca7099c81e8eaff4caeb2fee3cee36a99ebc193a7dc33b01d4"></a>LOSSY_CONVERSION&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4cae943c3322607111b780982f0655160ce" name="a430955157112716ca7099c81e8eaff4cae943c3322607111b780982f0655160ce"></a>SIGNED_UNSIGNED_MISMATCH&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4ca5a35cc1a4ef6974c0001751383754425" name="a430955157112716ca7099c81e8eaff4ca5a35cc1a4ef6974c0001751383754425"></a>VALUE32_TABLE_OVERFLOW&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4cad64add9d375e92d456679fe8093f769f" name="a430955157112716ca7099c81e8eaff4cad64add9d375e92d456679fe8093f769f"></a>VALUE64_TABLE_OVERFLOW&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a430955157112716ca7099c81e8eaff4ca4a0e167207f8ab04eca756da779b4a00" name="a430955157112716ca7099c81e8eaff4ca4a0e167207f8ab04eca756da779b4a00"></a>STRING_TABLE_OVERFLOW&#160;</td><td class="fielddoc"></td></tr>
@@ -456,8 +488,8 @@ Static Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">type</td><td>An enumerator identifying what type of error the compiler has detected. </td></tr>
-    <tr><td class="paramname">context</td><td>A <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> identifying where in the source code the error was detected. </td></tr>
-    <tr><td class="paramname">arg0</td><td>An argument supplying information to be inserted into the format string for the error message. Can be an integer, a C-style string, a pointer to a <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a>, or a pointer to a <a class="el" href="class_bond_1_1_parse_node.html" title="Base class for all parse tree nodes.">ParseNode</a> depending on the requirements of the error message. </td></tr>
+    <tr><td class="paramname">context</td><td>A <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a> identifying where in the source code the error was detected, or null if the error has no location in the source code. </td></tr>
+    <tr><td class="paramname">arg0</td><td>An argument supplying information to be inserted into the format string for the error message. Can be an integer, a C-style string, a pointer to a <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a>, or a pointer to a <a class="el" href="class_bond_1_1_parse_node.html" title="Base class for all parse tree nodes.">ParseNode</a> depending on the requirements of the error message. Pointers are not copied, so their targets must outlive the <a class="el" href="class_bond_1_1_compiler_error.html" title="A container for error information reported by the various components of the Bond compiler.">CompilerError</a>. </td></tr>
     <tr><td class="paramname">arg1</td><td>An additional argument used in the same way as arg0. </td></tr>
   </table>
   </dd>
@@ -508,7 +540,7 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns a string representation of the <a class="el" href="class_bond_1_1_compiler_error.html" title="A container for error information reported by the various components of the Bond compiler.">CompilerError</a>'s type. </p>
+<p>Returns the name of the <a class="el" href="class_bond_1_1_compiler_error.html" title="A container for error information reported by the various components of the Bond compiler.">CompilerError</a>'s type, e.g. "INVALID_ESCAPE". </p>
 
 </div>
 </div>
@@ -535,7 +567,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a string representation of the given error type. </p>
+<p>Returns the name of the given error type, e.g. "INVALID_ESCAPE". </p>
 
 </div>
 </div>
@@ -628,7 +660,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Prints a formatted error message to the given <a class="el" href="class_bond_1_1_output_stream.html" title="An abstract interface for performing both unformatted and formatted output operations.">OutputStream</a>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>The message is prefixed with the file name, line and column of the context <a class="el" href="class_bond_1_1_token.html" title="A token describing a syntactic unit of the Bond scripting language (e.g. keywords,...">Token</a>, if any. It is not followed by a newline. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">stream</td><td>The <a class="el" href="class_bond_1_1_output_stream.html" title="An abstract interface for performing both unformatted and formatted output operations.">OutputStream</a> to which the error message is printed. </td></tr>
   </table>

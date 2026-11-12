@@ -122,12 +122,14 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('struct_bond_1_
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1137fa1cd54dfee08a503150cf72afee" id="r_a1137fa1cd54dfee08a503150cf72afee"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a1137fa1cd54dfee08a503150cf72afee">ParamListSignature</a> (const <a class="el" href="struct_bond_1_1_param_signature.html">ParamSignature</a> *paramSignatures=nullptr, uint32_t paramCount=0)</td></tr>
-<tr class="memdesc:a1137fa1cd54dfee08a503150cf72afee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="struct_bond_1_1_param_list_signature.html" title="Signature metadata for a function&#39;s parameter list.">ParamListSignature</a>.  <br /></td></tr>
+<tr class="memdesc:a1137fa1cd54dfee08a503150cf72afee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="struct_bond_1_1_param_list_signature.html" title="Signature metadata for a function&#39;s parameter list.">ParamListSignature</a> object.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:af37657080964a33e8397f0f1629f6217" id="r_af37657080964a33e8397f0f1629f6217"><td class="memItemLeft">const <a class="el" href="struct_bond_1_1_param_signature.html">ParamSignature</a> *&#160;</td><td class="memItemRight"><a class="el" href="#af37657080964a33e8397f0f1629f6217">mParamSignatures</a></td></tr>
+<tr class="memdesc:af37657080964a33e8397f0f1629f6217"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the parameter signature array, in declaration order.  <br /></td></tr>
 <tr class="memitem:aa9b7ad8b1ced7f20307fe8dc55ec4c08" id="r_aa9b7ad8b1ced7f20307fe8dc55ec4c08"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#aa9b7ad8b1ced7f20307fe8dc55ec4c08">mParamCount</a></td></tr>
+<tr class="memdesc:aa9b7ad8b1ced7f20307fe8dc55ec4c08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of entries in the parameter signature array.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Signature metadata for a function's parameter list. </p>
@@ -159,10 +161,10 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Constructs a <a class="el" href="struct_bond_1_1_param_list_signature.html" title="Signature metadata for a function&#39;s parameter list.">ParamListSignature</a>. </p>
+<p>Constructs a <a class="el" href="struct_bond_1_1_param_list_signature.html" title="Signature metadata for a function&#39;s parameter list.">ParamListSignature</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">paramSignatures</td><td>Pointer to the parameter signature array. </td></tr>
+    <tr><td class="paramname">paramSignatures</td><td>Pointer to the parameter signature array. It is not copied. </td></tr>
     <tr><td class="paramname">paramCount</td><td>Number of entries in the parameter signature array. </td></tr>
   </table>
   </dd>
@@ -183,6 +185,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Number of entries in the parameter signature array. </p>
+
 </div>
 </div>
 <a id="af37657080964a33e8397f0f1629f6217" name="af37657080964a33e8397f0f1629f6217"></a>
@@ -196,6 +200,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Pointer to the parameter signature array, in declaration order. </p>
 
 </div>
 </div>

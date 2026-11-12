@@ -131,9 +131,10 @@ Inheritance diagram for Bond::ExpressionStatement:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9fed4347cfbe947cea371ff3e7c3c4d0" id="r_a9fed4347cfbe947cea371ff3e7c3c4d0"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a9fed4347cfbe947cea371ff3e7c3c4d0">ExpressionStatement</a> (<a class="el" href="class_bond_1_1_expression.html">Expression</a> *expression)</td></tr>
-<tr class="memdesc:a9fed4347cfbe947cea371ff3e7c3c4d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an expression statement.  <br /></td></tr>
+<tr class="memitem:ac5eba8884a4a5eeda41db8fc20b06e67" id="r_ac5eba8884a4a5eeda41db8fc20b06e67"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ac5eba8884a4a5eeda41db8fc20b06e67">ExpressionStatement</a> (<a class="el" href="class_bond_1_1_expression.html">Expression</a> *expression, const <a class="el" href="class_bond_1_1_token.html">Token</a> *declaratorName=nullptr)</td></tr>
+<tr class="memdesc:ac5eba8884a4a5eeda41db8fc20b06e67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an expression statement.  <br /></td></tr>
 <tr class="memitem:a38f1fc37a7eb1722aecbf93b6cf20026" id="r_a38f1fc37a7eb1722aecbf93b6cf20026"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#a38f1fc37a7eb1722aecbf93b6cf20026">~ExpressionStatement</a> ()</td></tr>
+<tr class="memdesc:a38f1fc37a7eb1722aecbf93b6cf20026"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys an <a class="el" href="class_bond_1_1_expression_statement.html" title="Represents a statement that evaluates an expression.">ExpressionStatement</a> object.  <br /></td></tr>
 <tr class="memitem:a11160801c981cbb0c3a3f67ab29861b4" id="r_a11160801c981cbb0c3a3f67ab29861b4"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a11160801c981cbb0c3a3f67ab29861b4">Accept</a> (<a class="el" href="class_bond_1_1_parse_node_visitor.html">ParseNodeVisitor</a> &amp;visitor) override</td></tr>
 <tr class="memdesc:a11160801c981cbb0c3a3f67ab29861b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispatches this node to the given visitor.  <br /></td></tr>
 <tr class="memitem:ab38a1ce4d6e92c8a226cf1ec93c68283" id="r_ab38a1ce4d6e92c8a226cf1ec93c68283"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ab38a1ce4d6e92c8a226cf1ec93c68283">Accept</a> (<a class="el" href="class_bond_1_1_parse_node_visitor.html">ParseNodeVisitor</a> &amp;visitor) const override</td></tr>
@@ -144,8 +145,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a72aabaf6e46ae00f99731c66a3574e44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the statement expression.  <br /></td></tr>
 <tr class="memitem:a8ea8fb24ab2b4fefbb4eb706e723412d" id="r_a8ea8fb24ab2b4fefbb4eb706e723412d"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_expression.html">Expression</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a8ea8fb24ab2b4fefbb4eb706e723412d">GetExpression</a> () const</td></tr>
 <tr class="memdesc:a8ea8fb24ab2b4fefbb4eb706e723412d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the statement expression.  <br /></td></tr>
+<tr class="memitem:a4709ca5484c99f9506410a51ef2b8999" id="r_a4709ca5484c99f9506410a51ef2b8999"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_token.html">Token</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a4709ca5484c99f9506410a51ef2b8999">GetDeclaratorName</a> () const</td></tr>
+<tr class="memdesc:a4709ca5484c99f9506410a51ef2b8999"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the token of the name that would have been declared if the statement were an uninitialized variable declaration, or null if it does not have that shape.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_bond_1_1_list_parse_node"><td colspan="2">Public Member Functions inherited from <a class="el" href="class_bond_1_1_list_parse_node.html">Bond::ListParseNode</a></td></tr>
 <tr class="memitem:ad34e3a955708dfa0ff6be03639492619 pub_methods_class_bond_1_1_list_parse_node" id="r_ad34e3a955708dfa0ff6be03639492619"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_list_parse_node.html#ad34e3a955708dfa0ff6be03639492619">~ListParseNode</a> ()</td></tr>
+<tr class="memdesc:ad34e3a955708dfa0ff6be03639492619 pub_methods_class_bond_1_1_list_parse_node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys a <a class="el" href="class_bond_1_1_list_parse_node.html" title="Base class for parse nodes that can be linked into singly linked lists.">ListParseNode</a> object.  <br /></td></tr>
 <tr class="memitem:a7ef67e649f6ecb80adc285091fb42851 pub_methods_class_bond_1_1_list_parse_node" id="r_a7ef67e649f6ecb80adc285091fb42851"><td class="memItemLeft"><a class="el" href="class_bond_1_1_list_parse_node.html#a7be09e471f388a343f2b68de7417f939">ListParseNode</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_list_parse_node.html#a7ef67e649f6ecb80adc285091fb42851">GetNextNode</a> ()</td></tr>
 <tr class="memdesc:a7ef67e649f6ecb80adc285091fb42851 pub_methods_class_bond_1_1_list_parse_node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the next node in the list.  <br /></td></tr>
 <tr class="memitem:a2490c2fbc501b82858efae21f95c8922 pub_methods_class_bond_1_1_list_parse_node" id="r_a2490c2fbc501b82858efae21f95c8922"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_list_parse_node.html#a7be09e471f388a343f2b68de7417f939">ListParseNode</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_list_parse_node.html#a2490c2fbc501b82858efae21f95c8922">GetNextNode</a> () const</td></tr>
@@ -154,6 +158,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a631c04c65ff24ec65a51af71a1bed5a2 pub_methods_class_bond_1_1_list_parse_node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the next node in the list.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_bond_1_1_parse_node"><td colspan="2">Public Member Functions inherited from <a class="el" href="class_bond_1_1_parse_node.html">Bond::ParseNode</a></td></tr>
 <tr class="memitem:a38c4879ddf1a936a68ebd90eeb5a03da pub_methods_class_bond_1_1_parse_node" id="r_a38c4879ddf1a936a68ebd90eeb5a03da"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_bond_1_1_parse_node.html#a38c4879ddf1a936a68ebd90eeb5a03da">~ParseNode</a> ()</td></tr>
+<tr class="memdesc:a38c4879ddf1a936a68ebd90eeb5a03da pub_methods_class_bond_1_1_parse_node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys a <a class="el" href="class_bond_1_1_parse_node.html" title="Base class for all parse tree nodes.">ParseNode</a> object.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -165,8 +170,8 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a statement that evaluates an expression. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a9fed4347cfbe947cea371ff3e7c3c4d0" name="a9fed4347cfbe947cea371ff3e7c3c4d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9fed4347cfbe947cea371ff3e7c3c4d0">&#9670;&#160;</a></span>ExpressionStatement()</h2>
+<a id="ac5eba8884a4a5eeda41db8fc20b06e67" name="ac5eba8884a4a5eeda41db8fc20b06e67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5eba8884a4a5eeda41db8fc20b06e67">&#9670;&#160;</a></span>ExpressionStatement()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -177,8 +182,12 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">Bond::ExpressionStatement::ExpressionStatement </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_bond_1_1_expression.html">Expression</a> *</td>          <td class="paramname"><span class="paramname"><em>expression</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_bond_1_1_expression.html">Expression</a> *</td>          <td class="paramname"><span class="paramname"><em>expression</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="class_bond_1_1_token.html">Token</a> *</td>          <td class="paramname"><span class="paramname"><em>declaratorName</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -192,6 +201,7 @@ Additional Inherited Members</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">expression</td><td><a class="el" href="class_bond_1_1_expression.html" title="Base class for expression nodes.">Expression</a> to evaluate, or null for empty statements. </td></tr>
+    <tr><td class="paramname">declaratorName</td><td>For a statement that has the shape of an uninitialized variable declaration (e.g. <span class="tt">A * b;</span>), the token of the name that would have been declared. Used to report a missing initializer if the statement turns out to be a declaration. </td></tr>
   </table>
   </dd>
 </dl>
@@ -220,6 +230,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Destroys an <a class="el" href="class_bond_1_1_expression_statement.html" title="Represents a statement that evaluates an expression.">ExpressionStatement</a> object. </p>
 
 </div>
 </div>
@@ -321,6 +333,33 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A token associated with this node, or null if no token applies. </dd></dl>
 
 <p>Implements <a class="el" href="class_bond_1_1_parse_node.html#ae9a578142b6f2ab663f6b9990012fa13">Bond::ParseNode</a>.</p>
+
+</div>
+</div>
+<a id="a4709ca5484c99f9506410a51ef2b8999" name="a4709ca5484c99f9506410a51ef2b8999"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4709ca5484c99f9506410a51ef2b8999">&#9670;&#160;</a></span>GetDeclaratorName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_bond_1_1_token.html">Token</a> * Bond::ExpressionStatement::GetDeclaratorName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the token of the name that would have been declared if the statement were an uninitialized variable declaration, or null if it does not have that shape. </p>
 
 </div>
 </div>

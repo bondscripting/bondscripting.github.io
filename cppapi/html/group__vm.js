@@ -43,8 +43,7 @@ var group__vm =
       [ "mPackedArgSize", "struct_bond_1_1_function.html#aea10754fdc06e8c598c7b3f4d1e08e8a", null ],
       [ "mParamListSignature", "struct_bond_1_1_function.html#aa2e0945b465e2ad73112ef9fb6b19d5c", null ],
       [ "mReturnSignature", "struct_bond_1_1_function.html#a00bd219afcaef29323fbc3b4a45d5ce0", null ],
-      [ "mStackSize", "struct_bond_1_1_function.html#a7ebe86c4e1e627ee44caedba8cbcaf2c", null ],
-      [ "mUnpackArguments", "struct_bond_1_1_function.html#a0caff527dbdaa04ff42dd69473c50c34", null ]
+      [ "mStackSize", "struct_bond_1_1_function.html#a7ebe86c4e1e627ee44caedba8cbcaf2c", null ]
     ] ],
     [ "Bond::Function::[union].__unnamed0__", "union_bond_1_1_function_1_1_0funion_0e_8____unnamed0____.html", [
       [ "mCode", "union_bond_1_1_function_1_1_0funion_0e_8____unnamed0____.html#ab881dbe60ef4c199d2a8ee8012cc6fc7", null ],
@@ -85,8 +84,7 @@ var group__vm =
       [ "Call", "class_bond_1_1_invocation_stack_frame.html#a8d2f2a683dbf969aab9457070a5c7367", null ],
       [ "operator=", "class_bond_1_1_invocation_stack_frame.html#a38eb45ed32190c17e95c85b99e20119c", null ],
       [ "PushArg", "class_bond_1_1_invocation_stack_frame.html#a61e84638cbec5942a89b83ce8341381e", null ],
-      [ "PushArgs", "class_bond_1_1_invocation_stack_frame.html#a9f62cecac011c47574bb37530644e551", null ],
-      [ "PushArgs", "class_bond_1_1_invocation_stack_frame.html#a319cd4d8861c8e5a1d79d024484c68f7", null ]
+      [ "PushArgs", "class_bond_1_1_invocation_stack_frame.html#a20b034f8c3feb4d6a7086794fae0a9f7", null ]
     ] ],
     [ "Bond::StackFrame", "class_bond_1_1_stack_frame.html", [
       [ "StackFrame", "class_bond_1_1_stack_frame.html#aecab98b70d6f86548395afa390322a26", null ],

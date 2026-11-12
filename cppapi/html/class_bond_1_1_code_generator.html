@@ -121,9 +121,10 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_bond_1_1
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6872dc7c2720d3502bd96db43c55c40c" id="r_a6872dc7c2720d3502bd96db43c55c40c"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a6872dc7c2720d3502bd96db43c55c40c">CodeGenerator</a> (<a class="el" href="class_bond_1_1_allocator.html">Allocator</a> &amp;allocator, <a class="el" href="class_bond_1_1_compiler_error_buffer.html">CompilerErrorBuffer</a> &amp;errorBuffer, <a class="el" href="namespace_bond.html#ad6df57f21c24017711bb3ccd316fb4b6">PointerSize</a> pointerSize=<a class="el" href="namespace_bond.html#a84787e97baa6296bde4a923e97023079">BOND_NATIVE_POINTER_SIZE</a>)</td></tr>
+<tr class="memitem:a6872dc7c2720d3502bd96db43c55c40c" id="r_a6872dc7c2720d3502bd96db43c55c40c"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a6872dc7c2720d3502bd96db43c55c40c">CodeGenerator</a> (<a class="el" href="class_bond_1_1_allocator.html">Allocator</a> &amp;allocator, <a class="el" href="class_bond_1_1_compiler_error_buffer.html">CompilerErrorBuffer</a> &amp;errorBuffer, <a class="el" href="group__types.html#gad6df57f21c24017711bb3ccd316fb4b6">PointerSize</a> pointerSize=<a class="el" href="group__types.html#ga84787e97baa6296bde4a923e97023079">BOND_NATIVE_POINTER_SIZE</a>)</td></tr>
 <tr class="memdesc:a6872dc7c2720d3502bd96db43c55c40c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_bond_1_1_code_generator.html" title="A code generator for the Bond scripting language.">CodeGenerator</a> object.  <br /></td></tr>
 <tr class="memitem:a7bd6d49742286d3c78042a07bc64604a" id="r_a7bd6d49742286d3c78042a07bc64604a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a7bd6d49742286d3c78042a07bc64604a">~CodeGenerator</a> ()</td></tr>
+<tr class="memdesc:a7bd6d49742286d3c78042a07bc64604a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys a <a class="el" href="class_bond_1_1_code_generator.html" title="A code generator for the Bond scripting language.">CodeGenerator</a> object.  <br /></td></tr>
 <tr class="memitem:a0be9a94dcd4cd4edf6ed528c7becb5a1" id="r_a0be9a94dcd4cd4edf6ed528c7becb5a1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0be9a94dcd4cd4edf6ed528c7becb5a1">Generate</a> (const <a class="el" href="class_bond_1_1_translation_unit.html">TranslationUnit</a> *translationUnitList, <a class="el" href="class_bond_1_1_output_stream.html">OutputStream</a> &amp;stream)</td></tr>
 <tr class="memdesc:a0be9a94dcd4cd4edf6ed528c7becb5a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates bytecode for a list of parse trees.  <br /></td></tr>
 </table>
@@ -154,7 +155,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_bond.html#ad6df57f21c24017711bb3ccd316fb4b6">PointerSize</a></td>          <td class="paramname"><span class="paramname"><em>pointerSize</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="namespace_bond.html#a84787e97baa6296bde4a923e97023079">BOND_NATIVE_POINTER_SIZE</a></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="group__types.html#gad6df57f21c24017711bb3ccd316fb4b6">PointerSize</a></td>          <td class="paramname"><span class="paramname"><em>pointerSize</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="group__types.html#ga84787e97baa6296bde4a923e97023079">BOND_NATIVE_POINTER_SIZE</a></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -199,6 +200,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Destroys a <a class="el" href="class_bond_1_1_code_generator.html" title="A code generator for the Bond scripting language.">CodeGenerator</a> object. </p>
+
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
@@ -222,7 +225,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Generates bytecode for a list of parse trees. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Code is generated only for the TranslationUnits that require it. Global initializers whose values cannot be determined at compile time are combined into a single static initializer, in list order and then declaration order within each <a class="el" href="class_bond_1_1_translation_unit.html" title="Represents a complete parsed source file.">TranslationUnit</a>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">translationUnitList</td><td>A linked list of parse trees to be compiled to bytecode. </td></tr>
     <tr><td class="paramname">stream</td><td><a class="el" href="class_bond_1_1_output_stream.html" title="An abstract interface for performing both unformatted and formatted output operations.">OutputStream</a> to which the generated bytecode is written in the CBO file format. </td></tr>

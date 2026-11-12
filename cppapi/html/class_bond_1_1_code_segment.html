@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_bond_1_1
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3bed94f0932de8ca94cdd6b3787d2ebc" id="r_a3bed94f0932de8ca94cdd6b3787d2ebc"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a3bed94f0932de8ca94cdd6b3787d2ebc">CodeSegment</a> (const <a class="el" href="struct_bond_1_1_function.html">Function</a> *functionTable, size_t functionCount, const <a class="el" href="struct_bond_1_1_function.html">Function</a> *staticInitializerTable, size_t staticInitializerCount, const <a class="el" href="struct_bond_1_1_data_entry.html">DataEntry</a> *dataTable, size_t dataCount)</td></tr>
-<tr class="memdesc:a3bed94f0932de8ca94cdd6b3787d2ebc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_bond_1_1_code_segment.html" title="Collection of functions, static initializers and data loaded from CBO files.">CodeSegment</a> from prebuilt tables.  <br /></td></tr>
+<tr class="memdesc:a3bed94f0932de8ca94cdd6b3787d2ebc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_bond_1_1_code_segment.html" title="Collection of functions, static initializers and data loaded from CBO files.">CodeSegment</a> object from prebuilt tables.  <br /></td></tr>
 <tr class="memitem:a712f05ce4bb8c0132fcdbe28812f86c6" id="r_a712f05ce4bb8c0132fcdbe28812f86c6"><td class="memItemLeft">const <a class="el" href="struct_bond_1_1_function.html">Function</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a712f05ce4bb8c0132fcdbe28812f86c6">GetFunction</a> (const <a class="el" href="class_bond_1_1_qualified_name.html">QualifiedName</a> &amp;qualifiedName) const</td></tr>
 <tr class="memdesc:a712f05ce4bb8c0132fcdbe28812f86c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds a function by qualified name.  <br /></td></tr>
 <tr class="memitem:a5a00d5dc1ef5268c859c5f5228125c5a" id="r_a5a00d5dc1ef5268c859c5f5228125c5a"><td class="memItemLeft">const <a class="el" href="struct_bond_1_1_function.html">Function</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a5a00d5dc1ef5268c859c5f5228125c5a">GetFunction</a> (const char *qualifiedName) const</td></tr>
@@ -156,7 +156,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Collection of functions, static initializers and data loaded from CBO files. </p>
-<p>A <a class="el" href="class_bond_1_1_code_segment.html" title="Collection of functions, static initializers and data loaded from CBO files.">CodeSegment</a> is produced by <a class="el" href="class_bond_1_1_cbo_loader.html" title="Loads CBO modules and resolves their native function bindings.">CboLoader</a> and consumed by the <a class="el" href="class_bond_1_1_v_m.html">VM</a>. It supports looking up functions and data entries by qualified name, and calling static initializers before an application's entry point is invoked. </p>
+<p>A <a class="el" href="class_bond_1_1_code_segment.html" title="Collection of functions, static initializers and data loaded from CBO files.">CodeSegment</a> is produced by <a class="el" href="class_bond_1_1_cbo_loader.html" title="Loads CBO modules and resolves their native function bindings.">CboLoader</a> and consumed by the <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a>. It supports looking up functions and data entries by qualified name, and calling static initializers before an application's entry point is invoked. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3bed94f0932de8ca94cdd6b3787d2ebc" name="a3bed94f0932de8ca94cdd6b3787d2ebc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3bed94f0932de8ca94cdd6b3787d2ebc">&#9670;&#160;</a></span>CodeSegment()</h2>
@@ -205,14 +205,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Constructs a <a class="el" href="class_bond_1_1_code_segment.html" title="Collection of functions, static initializers and data loaded from CBO files.">CodeSegment</a> from prebuilt tables. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Constructs a <a class="el" href="class_bond_1_1_code_segment.html" title="Collection of functions, static initializers and data loaded from CBO files.">CodeSegment</a> object from prebuilt tables. </p>
+<p>The tables are not copied, so they must remain valid for the lifetime of the <a class="el" href="class_bond_1_1_code_segment.html" title="Collection of functions, static initializers and data loaded from CBO files.">CodeSegment</a>. Lookups by name use a binary search, so the function and data tables must be sorted by name in the order defined by <a class="el" href="class_bond_1_1_qualified_name.html#a039cff7d684787018321ad02dd3090ae" title="Does an element-wise lexicographic comparison of this QualifiedName with another one.">QualifiedName::Compare</a>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">functionTable</td><td>Array of callable functions. </td></tr>
+    <tr><td class="paramname">functionTable</td><td>Array of callable functions, sorted by name. </td></tr>
     <tr><td class="paramname">functionCount</td><td>Number of entries in <code class="param">functionTable</code>. </td></tr>
     <tr><td class="paramname">staticInitializerTable</td><td>Array of static initializer functions. </td></tr>
     <tr><td class="paramname">staticInitializerCount</td><td>Number of entries in <code class="param">staticInitializerTable</code>. </td></tr>
-    <tr><td class="paramname">dataTable</td><td>Array of named data entries. </td></tr>
+    <tr><td class="paramname">dataTable</td><td>Array of named data entries, sorted by name. </td></tr>
     <tr><td class="paramname">dataCount</td><td>Number of entries in <code class="param">dataTable</code>. </td></tr>
   </table>
   </dd>
@@ -237,9 +237,9 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Calls all static initializer functions in this code segment. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Each CBO contributes at most one static initializer. They are called in the order the CBOs were added to the <a class="el" href="class_bond_1_1_cbo_loader.html" title="Loads CBO modules and resolves their native function bindings.">CboLoader</a>. Global data is zero-filled when the code segment is loaded, so a global read before its initializer has run is zero. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">vm</td><td><a class="el" href="class_bond_1_1_v_m.html">VM</a> instance used to invoke initializer functions. </td></tr>
+    <tr><td class="paramname">vm</td><td><a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a> instance used to invoke initializer functions. </td></tr>
   </table>
   </dd>
 </dl>
@@ -292,7 +292,7 @@ Public Member Functions</h2></td></tr>
 <p>Finds a data entry by qualified name string. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">qualifiedName</td><td>Fully qualified data entry name string. </td></tr>
+    <tr><td class="paramname">qualifiedName</td><td>Fully qualified data entry name with its elements separated by the '.' character. </td></tr>
   </table>
   </dd>
 </dl>
@@ -378,7 +378,7 @@ Public Member Functions</h2></td></tr>
 <p>Gets the index of a data entry by qualified name string. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">qualifiedName</td><td>Fully qualified data entry name string. </td></tr>
+    <tr><td class="paramname">qualifiedName</td><td>Fully qualified data entry name with its elements separated by the '.' character. </td></tr>
   </table>
   </dd>
 </dl>
@@ -430,7 +430,7 @@ Public Member Functions</h2></td></tr>
 <p>Finds a function by qualified name string. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">qualifiedName</td><td>Fully qualified function name string. </td></tr>
+    <tr><td class="paramname">qualifiedName</td><td>Fully qualified function name with its elements separated by the '.' character, e.g. "Namespace.Function". </td></tr>
   </table>
   </dd>
 </dl>
@@ -522,7 +522,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the number of functions in the function table. </p>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="struct_bond_1_1_function.html" title="Function metadata and executable payload loaded from CBO.">Function</a> table size. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="struct_bond_1_1_function.html" title="Metadata and executable code or native binding of a function loaded from a CBO.">Function</a> table size. </dd></dl>
 
 </div>
 </div>
@@ -544,11 +544,11 @@ Public Member Functions</h2></td></tr>
 <p>Gets the index of a function by qualified name string. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">qualifiedName</td><td>Fully qualified function name string. </td></tr>
+    <tr><td class="paramname">qualifiedName</td><td>Fully qualified function name with its elements separated by the '.' character. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="struct_bond_1_1_function.html" title="Function metadata and executable payload loaded from CBO.">Function</a> index, or -1 if it is not found. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="struct_bond_1_1_function.html" title="Metadata and executable code or native binding of a function loaded from a CBO.">Function</a> index, or -1 if it is not found. </dd></dl>
 
 </div>
 </div>
@@ -574,7 +574,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="struct_bond_1_1_function.html" title="Function metadata and executable payload loaded from CBO.">Function</a> index, or -1 if it is not found. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="struct_bond_1_1_function.html" title="Metadata and executable code or native binding of a function loaded from a CBO.">Function</a> index, or -1 if it is not found. </dd></dl>
 
 </div>
 </div>
