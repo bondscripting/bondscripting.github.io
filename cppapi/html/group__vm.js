@@ -138,5 +138,7 @@ var group__vm =
     ] ],
     [ "Bond::CodeSegmentHandle", "group__vm.html#gaea40a4240d611c6257be448f8f3c590c", null ],
     [ "Bond::CollectableHandle", "group__vm.html#gafa928831f66f99255739910ae1c1adbb", null ],
-    [ "Bond::StackFrames", "group__vm.html#gaa26b04bb3d53922d0775e28b6a2fdb73", null ]
+    [ "Bond::StackFrames", "group__vm.html#gaa26b04bb3d53922d0775e28b6a2fdb73", null ],
+    [ "BondDebugDumpCallStack", "group__vm.html#ga5ec448bfb303ab0b155b50cf2b5f5b44", null ],
+    [ "BondDebugDumpStackFrame", "group__vm.html#ga73a92975ffaad2d4e92145b8034dff48", null ]
 ];

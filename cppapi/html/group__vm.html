@@ -157,6 +157,13 @@ Typedefs</h2></td></tr>
 <tr class="memdesc:gafa928831f66f99255739910ae1c1adbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">An owning pointer to a dynamically allocated <a class="el" href="class_bond_1_1_collectable.html" title="Base class for objects tracked by a Collector.">Collectable</a>.  <br /></td></tr>
 <tr class="memitem:gaa26b04bb3d53922d0775e28b6a2fdb73" id="r_gaa26b04bb3d53922d0775e28b6a2fdb73"><td class="memItemLeft">typedef <a class="el" href="class_bond_1_1_auto_stack.html">AutoStack</a>&lt; <a class="el" href="class_bond_1_1_stack_frame.html">StackFrame</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#gaa26b04bb3d53922d0775e28b6a2fdb73">Bond::StackFrames</a></td></tr>
 <tr class="memdesc:gaa26b04bb3d53922d0775e28b6a2fdb73"><td class="mdescLeft">&#160;</td><td class="mdescRight">The call stack of a <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a>.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga5ec448bfb303ab0b155b50cf2b5f5b44" id="r_ga5ec448bfb303ab0b155b50cf2b5f5b44"><td class="memItemLeft">BOND_API const char *&#160;</td><td class="memItemRight"><a class="el" href="#ga5ec448bfb303ab0b155b50cf2b5f5b44">BondDebugDumpCallStack</a> (const <a class="el" href="class_bond_1_1_v_m.html">Bond::VM</a> *vm)</td></tr>
+<tr class="memdesc:ga5ec448bfb303ab0b155b50cf2b5f5b44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a description of the call stack of a VM, as written by <a class="el" href="class_bond_1_1_v_m.html#a39c45888519f0dbd65247bd3d58db8d9" title="Writes a description of every StackFrame on the call stack, from the top down, to the given stream.">Bond::VM::DumpCallStack()</a>.  <br /></td></tr>
+<tr class="memitem:ga73a92975ffaad2d4e92145b8034dff48" id="r_ga73a92975ffaad2d4e92145b8034dff48"><td class="memItemLeft">BOND_API const char *&#160;</td><td class="memItemRight"><a class="el" href="#ga73a92975ffaad2d4e92145b8034dff48">BondDebugDumpStackFrame</a> (const <a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> *frame)</td></tr>
+<tr class="memdesc:ga73a92975ffaad2d4e92145b8034dff48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a description of a StackFrame, as written by <a class="el" href="class_bond_1_1_v_m.html#ad64b81f73d5a0aaffcadc9f539b340bc" title="Writes a description of the given StackFrame, consisting of the signature of its function and the val...">Bond::VM::DumpStackFrame()</a>.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>These classes form the parts of the <a class="el" href="namespace_bond.html">Bond</a> virtual machine. </p>
@@ -206,6 +213,59 @@ Typedefs</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The call stack of a <a class="el" href="class_bond_1_1_v_m.html" title="A virtual machine that executes the Bond bytecode in a CodeSegment.">VM</a>. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="ga5ec448bfb303ab0b155b50cf2b5f5b44" name="ga5ec448bfb303ab0b155b50cf2b5f5b44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5ec448bfb303ab0b155b50cf2b5f5b44">&#9670;&#160;</a></span>BondDebugDumpCallStack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOND_API const char * BondDebugDumpCallStack </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_bond_1_1_v_m.html">Bond::VM</a> *</td>          <td class="paramname"><span class="paramname"><em>vm</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a description of the call stack of a VM, as written by <a class="el" href="class_bond_1_1_v_m.html#a39c45888519f0dbd65247bd3d58db8d9" title="Writes a description of every StackFrame on the call stack, from the top down, to the given stream.">Bond::VM::DumpCallStack()</a>. </p>
+<p>This function is meant to be called from the expression evaluator of a native debugger while the VM is suspended, e.g. <span class="tt"><a class="el" href="#ga5ec448bfb303ab0b155b50cf2b5f5b44" title="Returns a description of the call stack of a VM, as written by Bond::VM::DumpCallStack().">BondDebugDumpCallStack</a>(&amp;<a class="el" href="group__vm.html" title="These classes form the parts of the Bond virtual machine.">Virtual Machine</a>),s8</span> in the Immediate window of Visual Studio or <span class="tt">call <a class="el" href="#ga5ec448bfb303ab0b155b50cf2b5f5b44" title="Returns a description of the call stack of a VM, as written by Bond::VM::DumpCallStack().">BondDebugDumpCallStack</a>(&amp;<a class="el" href="group__vm.html" title="These classes form the parts of the Bond virtual machine.">Virtual Machine</a>)</span> in gdb. It has C linkage so that it can be called without qualification. The text is written to a static buffer that is overwritten by every call to this function or to <a class="el" href="#ga73a92975ffaad2d4e92145b8034dff48" title="Returns a description of a StackFrame, as written by Bond::VM::DumpStackFrame().">BondDebugDumpStackFrame()</a> and truncated if it does not fit, so these functions are not thread safe and are not intended for use by applications. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vm</td><td>The VM whose call stack is described. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A null-terminated string, which is empty if vm is null. </dd></dl>
+
+</div>
+</div>
+<a id="ga73a92975ffaad2d4e92145b8034dff48" name="ga73a92975ffaad2d4e92145b8034dff48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga73a92975ffaad2d4e92145b8034dff48">&#9670;&#160;</a></span>BondDebugDumpStackFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOND_API const char * BondDebugDumpStackFrame </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_bond_1_1_stack_frame.html">Bond::StackFrame</a> *</td>          <td class="paramname"><span class="paramname"><em>frame</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a description of a StackFrame, as written by <a class="el" href="class_bond_1_1_v_m.html#ad64b81f73d5a0aaffcadc9f539b340bc" title="Writes a description of the given StackFrame, consisting of the signature of its function and the val...">Bond::VM::DumpStackFrame()</a>. </p>
+<p>This function is meant to be called from the expression evaluator of a native debugger while the VM is suspended, e.g. <span class="tt"><a class="el" href="#ga73a92975ffaad2d4e92145b8034dff48" title="Returns a description of a StackFrame, as written by Bond::VM::DumpStackFrame().">BondDebugDumpStackFrame</a>(&amp;frame),s8</span> in the Immediate window of Visual Studio. It shares the static buffer of <a class="el" href="#ga5ec448bfb303ab0b155b50cf2b5f5b44" title="Returns a description of the call stack of a VM, as written by Bond::VM::DumpCallStack().">BondDebugDumpCallStack()</a> and has the same limitations. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frame</td><td>The StackFrame to be described. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A null-terminated string, which is empty if frame is null. </dd></dl>
 
 </div>
 </div>

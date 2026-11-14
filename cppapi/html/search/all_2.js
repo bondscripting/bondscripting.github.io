@@ -34,11 +34,13 @@ var searchData=
   ['bond_5fulong_5fsize_31',['BOND_ULONG_SIZE',['../group__types.html#ga58aec166c9f9654a9e6389eecc340b44',1,'Bond']]],
   ['bond_5fushort_5fsize_32',['BOND_USHORT_SIZE',['../group__types.html#gad9c310918ee44c7d28f8a90127211d9d',1,'Bond']]],
   ['bond_5fvoid_5fsize_33',['BOND_VOID_SIZE',['../group__types.html#gac1111f40416f5f7561ba5f769a8b9151',1,'Bond']]],
-  ['bool_5ftoken_34',['BOOL_TOKEN',['../group__compiler.html#gaa94769b167bcea66ec6c8d26419cdd0b',1,'Bond']]],
-  ['bool_5ftype_5fspecifier_35',['BOOL_TYPE_SPECIFIER',['../group__nodes.html#ga5e0f8c23f2adad334661287c8a70b8bc',1,'Bond']]],
-  ['boolalpha_36',['BoolAlpha',['../namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a296b8578eeca2079b42b58321e73b44e',1,'Bond::IO']]],
-  ['boolean_5ftype_5fspecifiers_5ftypeset_37',['BOOLEAN_TYPE_SPECIFIERS_TYPESET',['../group__compiler.html#gafee2f832da65dfaf103b1bb785b14203',1,'Bond']]],
-  ['boolstack_38',['BoolStack',['../group__stl.html#ga473aacb8a77d3d4c679f66542194453a',1,'Bond']]],
-  ['braces_5faround_5fscalar_5finitializer_39',['BRACES_AROUND_SCALAR_INITIALIZER',['../class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4ca45d072655d6a3ca865e64ba3222e000b',1,'Bond::CompilerError']]],
-  ['buffer_40',['buffer',['../struct_bond_1_1_value_1_1_0fstruct_0e_8m_string.html#a9eb50881f47b5d46460e04ac4fc5281d',1,'Bond::Value::[struct].mString']]]
+  ['bonddebugdumpcallstack_34',['BondDebugDumpCallStack',['../group__vm.html#ga5ec448bfb303ab0b155b50cf2b5f5b44',1,'vm.h']]],
+  ['bonddebugdumpstackframe_35',['BondDebugDumpStackFrame',['../group__vm.html#ga73a92975ffaad2d4e92145b8034dff48',1,'vm.h']]],
+  ['bool_5ftoken_36',['BOOL_TOKEN',['../group__compiler.html#gaa94769b167bcea66ec6c8d26419cdd0b',1,'Bond']]],
+  ['bool_5ftype_5fspecifier_37',['BOOL_TYPE_SPECIFIER',['../group__nodes.html#ga5e0f8c23f2adad334661287c8a70b8bc',1,'Bond']]],
+  ['boolalpha_38',['BoolAlpha',['../namespace_bond_1_1_i_o.html#add339f9d3e5b8439e00bab182b998618a296b8578eeca2079b42b58321e73b44e',1,'Bond::IO']]],
+  ['boolean_5ftype_5fspecifiers_5ftypeset_39',['BOOLEAN_TYPE_SPECIFIERS_TYPESET',['../group__compiler.html#gafee2f832da65dfaf103b1bb785b14203',1,'Bond']]],
+  ['boolstack_40',['BoolStack',['../group__stl.html#ga473aacb8a77d3d4c679f66542194453a',1,'Bond']]],
+  ['braces_5faround_5fscalar_5finitializer_41',['BRACES_AROUND_SCALAR_INITIALIZER',['../class_bond_1_1_compiler_error.html#a430955157112716ca7099c81e8eaff4ca45d072655d6a3ca865e64ba3222e000b',1,'Bond::CompilerError']]],
+  ['buffer_42',['buffer',['../struct_bond_1_1_value_1_1_0fstruct_0e_8m_string.html#a9eb50881f47b5d46460e04ac4fc5281d',1,'Bond::Value::[struct].mString']]]
 ];
