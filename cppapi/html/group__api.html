@@ -133,6 +133,8 @@ Typedefs</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:ga6b037c4c072f157a79ed47d16f087911" id="r_ga6b037c4c072f157a79ed47d16f087911"><td class="memItemLeft">BOND_API void&#160;</td><td class="memItemRight"><a class="el" href="#ga6b037c4c072f157a79ed47d16f087911">Bond::LoadAllLibs</a> (<a class="el" href="class_bond_1_1_cbo_loader.html">CboLoader</a> &amp;cboLoader)</td></tr>
 <tr class="memdesc:ga6b037c4c072f157a79ed47d16f087911"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds all libraries of the <a class="el" href="namespace_bond.html">Bond</a> Standard Library to the given <a class="el" href="class_bond_1_1_cbo_loader.html" title="Loads CBO modules and resolves their native function bindings.">CboLoader</a>.  <br /></td></tr>
+<tr class="memitem:ga22d31949d874931bb6a1c1628410e036" id="r_ga22d31949d874931bb6a1c1628410e036"><td class="memItemLeft">BOND_API void&#160;</td><td class="memItemRight"><a class="el" href="#ga22d31949d874931bb6a1c1628410e036">Bond::LoadLibDebug</a> (<a class="el" href="class_bond_1_1_cbo_loader.html">CboLoader</a> &amp;cboLoader)</td></tr>
+<tr class="memdesc:ga22d31949d874931bb6a1c1628410e036"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the compiled code and native bindings of the debug library to the given <a class="el" href="class_bond_1_1_cbo_loader.html" title="Loads CBO modules and resolves their native function bindings.">CboLoader</a>.  <br /></td></tr>
 <tr class="memitem:gac145736f24ab130fbb5e73b7bc94b054" id="r_gac145736f24ab130fbb5e73b7bc94b054"><td class="memItemLeft">BOND_API void&#160;</td><td class="memItemRight"><a class="el" href="#gac145736f24ab130fbb5e73b7bc94b054">Bond::LoadLibIo</a> (<a class="el" href="class_bond_1_1_cbo_loader.html">CboLoader</a> &amp;cboLoader)</td></tr>
 <tr class="memdesc:gac145736f24ab130fbb5e73b7bc94b054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the compiled code and native bindings of the io library to the given <a class="el" href="class_bond_1_1_cbo_loader.html" title="Loads CBO modules and resolves their native function bindings.">CboLoader</a>.  <br /></td></tr>
 <tr class="memitem:ga6989dc07fd0a5aa635143f44a4c5567e" id="r_ga6989dc07fd0a5aa635143f44a4c5567e"><td class="memItemLeft">BOND_API void&#160;</td><td class="memItemRight"><a class="el" href="#ga6989dc07fd0a5aa635143f44a4c5567e">Bond::LoadLibMath</a> (<a class="el" href="class_bond_1_1_cbo_loader.html">CboLoader</a> &amp;cboLoader)</td></tr>
@@ -146,8 +148,8 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:ga6b7c96db9f24be91453c2b72dfaf3f8e" id="r_ga6b7c96db9f24be91453c2b72dfaf3f8e"><td class="memItemLeft">const <a class="el" href="class_bond_1_1_data_view_index.html">DataViewIndex</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga6b7c96db9f24be91453c2b72dfaf3f8e">Bond::INCLUDE_FILE_INDEX</a></td></tr>
-<tr class="memdesc:ga6b7c96db9f24be91453c2b72dfaf3f8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">An index of the source of the include files of the <a class="el" href="namespace_bond.html">Bond</a> Standard Library, which are embedded in the <a class="el" href="namespace_bond.html">Bond</a> library.  <br /></td></tr>
+<tr class="memitem:gabf4b65f4535300a682cc72e75d12cda8" id="r_gabf4b65f4535300a682cc72e75d12cda8"><td class="memItemLeft">BOND_API const <a class="el" href="class_bond_1_1_data_view_index.html">DataViewIndex</a>&#160;</td><td class="memItemRight"><a class="el" href="#gabf4b65f4535300a682cc72e75d12cda8">Bond::INCLUDE_FILE_INDEX</a></td></tr>
+<tr class="memdesc:gabf4b65f4535300a682cc72e75d12cda8"><td class="mdescLeft">&#160;</td><td class="mdescRight">An index of the source of the include files of the <a class="el" href="namespace_bond.html">Bond</a> Standard Library, which are embedded in the <a class="el" href="namespace_bond.html">Bond</a> library.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>These types and functions bind native C++ functions to <a class="el" href="namespace_bond.html">Bond</a> and give access to the <a class="el" href="namespace_bond.html">Bond</a> Standard Library. </p>
@@ -186,9 +188,34 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Adds all libraries of the <a class="el" href="namespace_bond.html">Bond</a> Standard Library to the given <a class="el" href="class_bond_1_1_cbo_loader.html" title="Loads CBO modules and resolves their native function bindings.">CboLoader</a>. </p>
-<p>Equivalent to calling <a class="el" href="#gac145736f24ab130fbb5e73b7bc94b054" title="Adds the compiled code and native bindings of the io library to the given CboLoader.">LoadLibIo()</a>, <a class="el" href="#ga6989dc07fd0a5aa635143f44a4c5567e" title="Adds the compiled code and native bindings of the math library to the given CboLoader.">LoadLibMath()</a>, <a class="el" href="#ga304a9df42e15571ccab1e8a1a02a5e7f" title="Adds the compiled code and native bindings of the memory library to the given CboLoader.">LoadLibMemory()</a>, <a class="el" href="#ga29950757c38d67ca17c759b6eb068fe6" title="Adds the compiled code and native bindings of the string library to the given CboLoader.">LoadLibString()</a> and <a class="el" href="#ga86d4c87d3a96f65468cd6b8894ef6327" title="Adds the compiled code and native bindings of the type library to the given CboLoader.">LoadLibType()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Equivalent to calling <a class="el" href="#ga22d31949d874931bb6a1c1628410e036" title="Adds the compiled code and native bindings of the debug library to the given CboLoader.">LoadLibDebug()</a>, <a class="el" href="#gac145736f24ab130fbb5e73b7bc94b054" title="Adds the compiled code and native bindings of the io library to the given CboLoader.">LoadLibIo()</a>, <a class="el" href="#ga6989dc07fd0a5aa635143f44a4c5567e" title="Adds the compiled code and native bindings of the math library to the given CboLoader.">LoadLibMath()</a>, <a class="el" href="#ga304a9df42e15571ccab1e8a1a02a5e7f" title="Adds the compiled code and native bindings of the memory library to the given CboLoader.">LoadLibMemory()</a>, <a class="el" href="#ga29950757c38d67ca17c759b6eb068fe6" title="Adds the compiled code and native bindings of the string library to the given CboLoader.">LoadLibString()</a> and <a class="el" href="#ga86d4c87d3a96f65468cd6b8894ef6327" title="Adds the compiled code and native bindings of the type library to the given CboLoader.">LoadLibType()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cboLoader</td><td>The <a class="el" href="class_bond_1_1_cbo_loader.html" title="Loads CBO modules and resolves their native function bindings.">CboLoader</a> to which the libraries are added. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga22d31949d874931bb6a1c1628410e036" name="ga22d31949d874931bb6a1c1628410e036"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga22d31949d874931bb6a1c1628410e036">&#9670;&#160;</a></span>LoadLibDebug()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOND_API void Bond::LoadLibDebug </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_bond_1_1_cbo_loader.html">CboLoader</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>cboLoader</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds the compiled code and native bindings of the debug library to the given <a class="el" href="class_bond_1_1_cbo_loader.html" title="Loads CBO modules and resolves their native function bindings.">CboLoader</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cboLoader</td><td>The <a class="el" href="class_bond_1_1_cbo_loader.html" title="Loads CBO modules and resolves their native function bindings.">CboLoader</a> to which the library is added. </td></tr>
   </table>
   </dd>
 </dl>
@@ -321,8 +348,8 @@ Variables</h2></td></tr>
 </div>
 </div>
 <a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
-<a id="ga6b7c96db9f24be91453c2b72dfaf3f8e" name="ga6b7c96db9f24be91453c2b72dfaf3f8e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga6b7c96db9f24be91453c2b72dfaf3f8e">&#9670;&#160;</a></span>INCLUDE_FILE_INDEX</h2>
+<a id="gabf4b65f4535300a682cc72e75d12cda8" name="gabf4b65f4535300a682cc72e75d12cda8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabf4b65f4535300a682cc72e75d12cda8">&#9670;&#160;</a></span>INCLUDE_FILE_INDEX</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -331,7 +358,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_bond_1_1_data_view_index.html">DataViewIndex</a> Bond::INCLUDE_FILE_INDEX</td>
+          <td class="memname">BOND_API const <a class="el" href="class_bond_1_1_data_view_index.html">DataViewIndex</a> Bond::INCLUDE_FILE_INDEX</td>
         </tr>
       </table>
   </td>
@@ -342,7 +369,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>An index of the source of the include files of the <a class="el" href="namespace_bond.html">Bond</a> Standard Library, which are embedded in the <a class="el" href="namespace_bond.html">Bond</a> library. </p>
-<p>The files are named "io.bond", "math.bond", "memory.bond", "string.bond" and "type.bond". The index can be used to resolve include directives in <a class="el" href="namespace_bond.html">Bond</a> scripts without accessing the file system, e.g. with a <a class="el" href="class_bond_1_1_memory_stream_factory.html" title="A concrete implementation of StreamFactory that instantiates MemoryInputStreams for a fixed collectio...">MemoryStreamFactory</a>. </p>
+<p>The files are named "debug.bond", "io.bond", "math.bond", "memory.bond", "string.bond" and "type.bond". The index can be used to resolve include directives in <a class="el" href="namespace_bond.html">Bond</a> scripts without accessing the file system, e.g. with a <a class="el" href="class_bond_1_1_memory_stream_factory.html" title="A concrete implementation of StreamFactory that instantiates MemoryInputStreams for a fixed collectio...">MemoryStreamFactory</a>. </p>
 
 </div>
 </div>
