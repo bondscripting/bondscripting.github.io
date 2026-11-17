@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bond Programming Language</title>
 <link rel="stylesheet" type="text/css" href="css/bond.css">
@@ -33,8 +34,10 @@
 <li class="toc_h3"><a href="#diff_include">Include directives</a></li>
 <li class="toc_h3"><a href="#diff_ambiguities">Ambiguities in the grammar</a></li>
 <li class="toc_h3"><a href="#diff_type_declarations">Type declarations</a></li>
+<li class="toc_h3"><a href="#diff_initialization">Local variables must be initialized</a></li>
 <li class="toc_h3"><a href="#diff_primitive_names">Primitive type names</a></li>
 <li class="toc_h3"><a href="#diff_fixed_width">Numeric types have a fixed width</a></li>
+<li class="toc_h3"><a href="#diff_conversions">Stricter conversions</a></li>
 <li class="toc_h3"><a href="#diff_boolean_conditions">Conditions must be Boolean</a></li>
 <li class="toc_h3"><a href="#diff_unreachable_code">Unreachable code is an error</a></li>
 <li class="toc_h3"><a href="#diff_no_function_pointers">No function pointers</a></li>
@@ -44,9 +47,11 @@
 <li class="toc_h3"><a href="#diff_no_globals">No global or static variables</a></li>
 <li class="toc_h3"><a href="#diff_sbrm">Scope-based resource management</a></li>
 <li class="toc_h3"><a href="#diff_native_blocks">Native blocks</a></li>
+<li class="toc_h3"><a href="#diff_utf8">Source code is UTF-8</a></li>
 <li class="toc_h2"><a href="#language_ref">Language Reference</a></li>
 <li class="toc_h3"><a href="#elements">Basics of Bond</a></li>
 <li class="toc_h4"><a href="#structure_of_a_program">Structure of a Program</a></li>
+<li class="toc_h4"><a href="#source_files">Source Files and Character Encoding</a></li>
 <li class="toc_h4"><a href="#comments">Comments</a></li>
 <li class="toc_h4"><a href="#compiler_directives">Compiler Directives</a></li>
 <li class="toc_h4"><a href="#identifiers">Identifiers</a></li>
@@ -66,6 +71,7 @@
 <li class="toc_h4"><a href="#operators">Operators</a></li>
 <li class="toc_h5"><a href="#assignment_operator">Assignment Operator</a></li>
 <li class="toc_h5"><a href="#arithmetic_operators">Arithmetic Operators</a></li>
+<li class="toc_h5"><a href="#arithmetic_conversions">Usual Arithmetic Conversions</a></li>
 <li class="toc_h5"><a href="#increment_operators">Increment and Decrement Operators</a></li>
 <li class="toc_h5"><a href="#relational_operators">Relational and Comparison Operators</a></li>
 <li class="toc_h5"><a href="#logical_operators">Logical Operators</a></li>
@@ -106,6 +112,9 @@
 <li class="toc_h4"><a href="#using_statements"><span class="token">using</span> Statements</a></li>
 <li class="toc_h3"><a href="#sbrm">Scope-Based Resource Management</a></li>
 <li class="toc_h3"><a href="#native_blocks">Native Blocks</a></li>
+<li class="toc_h4"><a href="#native_functions">Native Functions</a></li>
+<li class="toc_h4"><a href="#native_structs">Native Structs</a></li>
+<li class="toc_h4"><a href="#native_bindings">Implementing and Binding Native Code</a></li>
 </ul>
 
 <h2 id="differences_with_c">Notable Differences With C</h2>
@@ -126,9 +135,11 @@
 
 <p>This line of code can be parsed as the declarative statement: <span class="token">B</span> is a pointer to type <span class="token">A</span>. Or it can be parsed as the expression statement: the value of variable <span class="token">A</span> times the value of variable <span class="token">B</span>. C compilers resolve the ambiguity using forward declarations and by giving the parser access to the symbol table so that it can look up whether <span class="token">A</span> is a type. This approach introduces a burden on the programmer to add forward declarations to the source code and pushes elements of semantic analysis (e.g. maintenance of the symbol table) into the parser.</p>
 
-<p>Fortunately, such ambiguities result in statements with no effect when parsed as expression statements, so it is not necessary to support such statements. Bond's approach to resolving the ambiguity is to favour parsing statements as declarative statements whenever possible. If it turns out that <span class="token">A</span> is not a type, the semantic analyzer will raise an error to that effect during a later stage of compilation.</p>
+<p>Bond resolves the ambiguity without consulting the symbol table, by taking advantage of the rule that <a href="#diff_initialization">local variables must be initialized</a>. A statement that begins with the name of a user-defined type (not a primitive type and not <span class="token">const</span>), followed only by <span class="token">*</span> and array suffixes, is parsed as a declarative statement only if its first variable has an initializer, since <span class="token">A * B = C;</span> cannot be an expression. Otherwise, it is parsed as an expression statement. If it later turns out that <span class="token">A</span> is a type, the semantic analyzer reports that <span class="token">B</span> is an uninitialized variable, which is the error that the declaration would have produced anyway. Wrapping an expression in parentheses always makes it an expression.</p>
 
-<p>In hindsight, it may have been worth considering eliminating such ambiguities by modifying the syntax for declarative statements.</p>
+<pre class="code">A * B;        // An expression if A is a variable. An error if A is a type: B is uninitialized.
+A * B = null; // Always a declaration: B is a pointer to an A.
+(A * B);      // Always an expression.</pre>
 
 <p>For clarity and to avoid other possible ambiguities, the syntax for casting and the sizeof operator were both slightly modified from C. The syntax for casting is:</p>
 
@@ -144,15 +155,31 @@ sizeof expression</pre>
 <h4 id="diff_type_declarations">Type declarations</h4>
 <p>To simplify reading and parsing type declarations, all elements pertaining to type declarations (e.g. type names, <span class="token">[]</span>, <span class="token">*</span>, <span class="token">const</span>) appear prior to variable names. The most obvious effect of this change is with array declarations, but there are some other subtleties as well.</p>
 
-<pre class="code">int[3][5] array; // C equivalent is: int array[3][5];
-int[3] a, b;     // Both a and b are of type int[3].
-int* a, b;       // Both a and b are of type int*. In C, a is int* and b is int.</pre>
+<pre class="code">int[3][5] array = {};      // C equivalent is: int array[3][5] = {0};
+int[3] a = {}, b = {};     // Both a and b are of type int[3].
+int* p = null, q = null;   // Both p and q are of type int*. In C, p is int* and q is int.</pre>
+
+<h4 id="diff_initialization">Local variables must be initialized</h4>
+<p>Every local variable must be given an initial value when it is declared, including the variables of a declaration with several names and a variable declared in the initialization part of a <span class="token">for</span> statement. Reading an uninitialized variable is therefore impossible. Arrays and structs can be zero-initialized with empty braces. See the section on <a href="#variables">Variables</a> for further details.</p>
+
+<pre class="code">int x;               // Error: uninitialized variable 'x'.
+int y = 0;           // OK.
+int[8] buffer = {};  // OK: all elements are zero.
+int a, b = 1;        // Error: a is uninitialized.</pre>
 
 <h4 id="diff_primitive_names">Primitive type names</h4>
 <p>All primitive type names consist of a single reserved keyword. Where C has the type <span class="token">unsigned int</span>, Bond has <span class="token">uint</span>.</p>
 
 <h4 id="diff_fixed_width">Numeric types have a fixed width</h4>
 <p>The types <span class="token">char</span>, <span class="token">short</span>, <span class="token">int</span> and <span class="token">long</span> (as well as their unsigned counterparts) have 8, 16, 32, and 64 bits respectively. The types <span class="token">float</span> and <span class="token">double</span> have 32 and 64 bits respectively. See the section on <a href="#primitive_types">Primitive Types</a> for further details.</p>
+
+<h4 id="diff_conversions">Stricter conversions</h4>
+<p>A value is never implicitly converted to a type that cannot represent all of its possible values. For example, a <span class="token">long</span> cannot be implicitly assigned to an <span class="token">int</span> and an <span class="token">int</span> cannot be implicitly assigned to a <span class="token">float</span>; such conversions require an explicit cast. Likewise, a signed integer that may be negative is never silently converted to an unsigned type by an arithmetic or comparison operator, so comparing an <span class="token">int</span> with a <span class="token">uint</span> is an error rather than a subtle bug. Finally, integer constants are never silently truncated; a constant that does not fit its type is an error. See the sections on <a href="#variables">Variables</a> and <a href="#arithmetic_conversions">Usual Arithmetic Conversions</a> for further details.</p>
+
+<pre class="code">bool IsSmaller(int i, uint u)
+{
+    return i &lt; u; // Error: i may be negative but is converted to uint.
+}</pre>
 
 <h4 id="diff_boolean_conditions">Conditions must be Boolean</h4>
 <p>The conditions of <span class="token">if</span>, <span class="token">while</span>, <span class="token">do</span> and <span class="token">for</span> statements and of the ternary operator, as well as the operands of the <span class="token">!</span>, <span class="token">&amp;&amp;</span> and <span class="token">||</span> operators, must be of type <span class="token">bool</span>. Integers and pointers are not implicitly converted to <span class="token">bool</span>, and casts between <span class="token">bool</span> and numeric types are not allowed. Instead, compare the value explicitly.</p>
@@ -193,13 +220,30 @@ const int BAZ = Foo::BAR;</pre>
 <pre class="code">const int[2][3] GLOBAL_CONSTANT = {{1, 2, 3}, {4, 5, 6}}; // Permitted
 int[2][3] GLOBAL_VARIABLE = {{1, 2, 3}, {4, 5, 6}};       // Error</pre>
 
+<p>It is the outermost part of the type that must be <span class="token">const</span>. A global pointer must therefore be a <span class="token">const</span> pointer, even if it points to <span class="token">const</span> data.</p>
+
+<pre class="code">const char *const GREETING = "Hello"; // Permitted
+const char *MESSAGE = "Hello";        // Error: the pointer itself is not const.</pre>
+
+<p>The initializer of a global constant does not need to be a compile-time constant. A constant whose value cannot be determined at compile time, such as one initialized by a function call, is initialized when the program is loaded, in the order in which the constants are declared.</p>
+
+<pre class="code">const int SQUARE = Square(7); // Initialized when the program is loaded.
+
+int Square(int x)
+{
+    return x * x;
+}</pre>
+
 <p>There are also no static variables, so all local variables have a lifetime that does not surpass that of the scope in which they are declared.</p>
 
 <h4 id="diff_sbrm">Scope-based resource management</h4>
-<p>C has explicit resource management, meaning that the acquisition of a resource must be explicitly paired with the release of that resource in code. For example, memory allocated with malloc() must be deallocated with free() and files opened with fopen() must be closed with fclose(). Bond supports explicit resource management as well, but it also has a form of scope-based resource management that allows resources to be automatically released when a function returns. See the section on <a href="#sbrm">Scope-Based Resource Management</a> for further details.</p>
+<p>C has explicit resource management, meaning that the acquisition of a resource must be explicitly paired with the release of that resource in code. For example, memory allocated with malloc() must be deallocated with free() and files opened with fopen() must be closed with fclose(). Bond supports explicit resource management as well, but it also has a form of scope-based resource management that allows resources, such as memory and files, to be automatically released when the function that acquired them returns. See the section on <a href="#sbrm">Scope-Based Resource Management</a> for further details.</p>
 
 <h4 id="diff_native_blocks">Native blocks</h4>
 <p>Declarations for functions and structs implemented in C++ can be placed in native blocks, allowing those functions to be called and those types to be manipulated from Bond code with full type checking and semantic analysis. See the section on <a href="#native_blocks">Native Blocks</a> for further details.</p>
+
+<h4 id="diff_utf8">Source code is UTF-8</h4>
+<p>Bond source files are always encoded in UTF-8, and string literals produce UTF-8 text. Non-ASCII characters can appear in string literals and comments, but keywords and identifiers are ASCII only. A <span class="token">char</span> holds a single byte of UTF-8, not a full character. See the section on <a href="#source_files">Source Files and Character Encoding</a> for further details.</p>
 
 <h2 id="language_ref">Language Reference</h2>
 <h3 id="elements">Basics of Bond</h3>
@@ -246,6 +290,8 @@ int main()
 <p>A function definition specifies a return type (i.e. what kind of result the function produces; in this case <span class="token">int</span>), a name (<span class="token">main</span>), and a parameter list enclosed in parentheses (i.e. the operands of the operation performed by the function). This example does not require any parameters.</p>
 
 <p>The <span class="token">main</span> function is a special function for standalone Bond programs. It is the entry point of the program (i.e. where execution of the program begins). When Bond is embedded in a larger application written in C++, any function may be an entry point.</p>
+
+<p>The <span class="token">bond</span> command line tool accepts a <span class="token">main</span> function with no parameters, as in this example, or one declared as <span class="token">int main(int argc, const char **argv)</span>. In the latter form, <span class="token">argv</span> holds the command line arguments that follow the <span class="token">-</span> argument of the <span class="token">bond</span> tool and <span class="token">argc</span> is their count. Unlike C, the arguments do not include the name of the program.</p>
 </dd>
 
 <dt>Lines 5 and 8: <span class="token">{</span> and <span class="token">}</span></dt>
@@ -263,8 +309,19 @@ int main()
 <dd>This line of code is a statement that specifies what value is returned by the <span class="token">main</span> function. As we saw on line 4, the <span class="token">main</span> function returns an <span class="token">int</span>. In Bond, as with other programming languages, such as C and C++, the return value of the <span class="token">main</span> function indicates the exit status of the program. By convention, a return value of 0 indicates that the program terminated normally, whereas any other value indicates an application specific error code.</dd>
 </dl>
 
+<h4 id="source_files">Source Files and Character Encoding</h4>
+<p>Bond source files are encoded in UTF-8. A file may begin with a UTF-8 byte order mark, which is ignored. A file that begins with a UTF-16 or UTF-32 byte order mark is rejected, as is a file containing a byte sequence that is not valid UTF-8 anywhere, including in comments and literals.</p>
+
+<p>Keywords, identifiers, numbers and punctuation consist of ASCII characters only. Characters outside of the ASCII range may appear only in <a href="#comments">comments</a> and <a href="#string_literals">string literals</a>; anywhere else they are reported as invalid characters. A <a href="#character_constants">character constant</a> holds a single byte, so it cannot hold a non-ASCII character.</p>
+
+<pre class="code">// Comments may contain any text: café, 東京, ✓.
+const char *const CITY = "Montréal"; // OK: UTF-8 in a string literal.
+const int café = 1;                   // Error: identifiers are ASCII only.</pre>
+
+<p>Since text is UTF-8, a <span class="token">char</span> holds one byte (a UTF-8 code unit) rather than a character. A character outside of the ASCII range occupies two to four bytes of a string. The <span class="token">Bond::Strlen</span> function of the standard library returns the length of a string in bytes, whereas <span class="token">Bond::Utf8Length</span> returns the number of characters (code points). Both are declared in <span class="token">string.bond</span>, along with other functions for decoding, encoding and validating UTF-8.</p>
+
 <h4 id="comments">Comments</h4>
-<p>Comments are text that is ignored by the compiler. Bond supports both styles of comments found in C. A line comment begins with <span class="token">//</span> and extends to the end of the line. A block comment begins with <span class="token">/*</span> and ends with the next <span class="token">*/</span>, and may span several lines. Block comments do not nest.</p>
+<p>Comments are text that is ignored by the compiler. Bond supports both styles of comments found in C. A line comment begins with <span class="token">//</span> and extends to the end of the line. A block comment begins with <span class="token">/*</span> and ends with the next <span class="token">*/</span>, and may span several lines. Block comments do not nest, and a block comment that is not terminated before the end of the file is an error. Comments may contain any UTF-8 text.</p>
 
 <pre class="code">// This is a line comment.
 int x = 7; // A line comment can follow code.
@@ -281,7 +338,16 @@ int y = /* even in the middle of a line */ 8;</pre>
 <pre class="code">include "io.bond";
 include "memory.bond";</pre>
 
-<p>Include directives may only appear at file scope, where they can be interleaved with other declarations. They cannot appear inside namespaces or functions. If the same file is included more than once (directly or indirectly through other includes), the compiler scans that file only once.</p>
+<p>Include directives may only appear at file scope, where they can be interleaved with other declarations. They cannot appear inside namespaces, native blocks or functions. If the same file is included more than once (directly or indirectly through other includes), the compiler scans that file only once, so files may also include each other circularly.</p>
+
+<p>The compiler looks for an included file in the following places, in order:</p>
+<ol>
+<li>The directory containing the file with the include directive (unless the path is absolute).</li>
+<li>The files of the Standard Bond Library, such as <span class="token">io.bond</span> and <span class="token">memory.bond</span>, which are built into the compiler.</li>
+<li>The current working directory.</li>
+<li>The directories specified with the <span class="token">-I</span> option of <span class="token">bondc</span>, in the order in which they are given.</li>
+</ol>
+<p>It is an error if the file cannot be found. Note that the compiler generates code only for the files named on its command line. Included files are analyzed so that their declarations can be referenced, but their code must be compiled too, either by naming them on the same command line or by compiling them to another CBO file that is loaded alongside (the <span class="token">bond</span> tool accepts several CBO files). The Standard Bond Library is the exception, since it is already built into the Bond runtime.</p>
 
 <pre class="code">// app.bond
 include "io.bond";
@@ -293,7 +359,7 @@ int main()
 }</pre>
 
 <h4 id="identifiers">Identifiers</h4>
-<p>Identifiers are names for symbols such as variables, functions and types defined in code. Identifiers consist of any sequence of letters, digits and underscores ('_'), with the exception that the first character cannot be a digit. Also, keywords are reserved and cannot be used as identifiers. Identifiers are case sensitive.</p>
+<p>Identifiers are names for symbols such as variables, functions and types defined in code. Identifiers consist of any sequence of ASCII letters (<span class="token">a</span> to <span class="token">z</span> and <span class="token">A</span> to <span class="token">Z</span>), digits and underscores ('_'), with the exception that the first character cannot be a digit. Also, keywords are reserved and cannot be used as identifiers. Identifiers are case sensitive.</p>
 
 <h4 id="keywords">Keywords</h4>
 <p>Keywords are reserved by the language and have special meaning for the compiler. The following is a list of all Bond keywords.</p>
@@ -394,9 +460,18 @@ int main()
 
 <p>Decimal integers consist of a sequence of the digits <span class="token">0</span> through <span class="token">9</span> and cannot begin with a <span class="token">0</span>.</p>
 
-<p>Without a suffix, an integer constant is of type <span class="token">int</span>. An optional suffix <span class="token">u</span> or <span class="token">U</span> can be appended to force the value to be of type <span class="token">uint</span> and an optional suffix <span class="token">l</span> or <span class="token">L</span> can be appended to force the value to be of type <span class="token">long</span>. The two can be combined in either order to create values of type <span class="token">ulong</span>. For example, <span class="token">27u</span> is of type <span class="token">uint</span>, and <span class="token">27ul</span> and <span class="token">27lu</span> are of type <span class="token">ulong</span>.</p>
+<p>Without a suffix, an integer constant is of type <span class="token">int</span>. An optional suffix <span class="token">u</span> or <span class="token">U</span> can be appended to force the value to be of type <span class="token">uint</span> and an optional suffix <span class="token">l</span> or <span class="token">L</span> can be appended to force the value to be of type <span class="token">long</span>. The two can be combined in either order to create values of type <span class="token">ulong</span>. For example, <span class="token">27u</span> is of type <span class="token">uint</span>, and <span class="token">27ul</span> and <span class="token">27lu</span> are of type <span class="token">ulong</span>. The suffix <span class="token">ll</span> of C is not supported.</p>
 
-<p>Unlike C, the type of an integer constant is determined by its suffix alone, not by the magnitude of its value. A constant without an <span class="token">l</span> or <span class="token">L</span> suffix is truncated to 32 bits, even if its value does not fit. For example, <span class="token">4294967296</span> is an <span class="token">int</span> whose value is 0, whereas <span class="token">4294967296L</span> is a <span class="token">long</span> with the intended value.</p>
+<p>Unlike C, the type of an integer constant is determined by its suffix alone, not by the magnitude of its value. A constant whose value does not fit in its type is an error. A decimal constant must fit in the range of its signed or unsigned type, whereas a hexadecimal or octal constant may use all of the bits of its type, in which case the bit pattern is interpreted according to the type's signedness.</p>
+
+<pre class="code">int a = 2147483647;      // OK: the largest int.
+int b = 2147483648;      // Error: the constant is out of range for an int.
+long c = 2147483648L;    // OK.
+int d = 0xffffffff;      // OK: all 32 bits are set, so d is -1.
+uint e = 4294967295u;    // OK: the largest uint.
+long f = 4294967296;     // Error: the constant is an int, despite the destination being a long.</pre>
+
+<p>Note that a negative constant is a positive constant to which the unary <span class="token">-</span> operator is applied. As a consequence, the smallest <span class="token">int</span> cannot be written as <span class="token">-2147483648</span>, since <span class="token">2147483648</span> is out of range. It can be written as <span class="token">-2147483647 - 1</span> or as <span class="token">0x80000000</span>.</p>
 
 <h5 id="floating_point_constants">Floating-Point Constants</h5>
 <p>Floating-point constants represent an approximation of real numbers. They are composed of an integral part, a decimal point, a fractional part and an exponent part. The integral part or the fractional part may be omitted, but not both and the exponent may always be omitted. The integral and fractional parts consist of a sequence of digits, while the exponent consists of <span class="token">e</span> or <span class="token">E</span> followed by an optional sign and a sequence of digits.</p>
@@ -411,8 +486,10 @@ int main()
 3.14159f    // This value is of type float.
 3f          // Also a float, since the suffix makes it a floating-point constant.</pre>
 
+<p>There are no hexadecimal floating-point constants. Unlike C, an integral part with a leading zero is interpreted as an octal integer, so <span class="token">012.5</span> is an error. A constant whose magnitude is too large for its type, such as <span class="token">1e39f</span>, is also an error.</p>
+
 <h5 id="character_constants">Character Constants</h5>
-<p>Character constants represent values of type <span class="token">char</span> and are typically expressed as a single character between single quotes. For example, <span class="token">'a'</span> represents the letter a.</p>
+<p>Character constants represent values of type <span class="token">char</span> and are typically expressed as a single character between single quotes. For example, <span class="token">'a'</span> represents the letter a. Since a <span class="token">char</span> holds a single byte, the character must be an ASCII character. A character such as <span class="token">'é'</span>, which occupies two bytes in UTF-8, is an error; use a <a href="#string_literals">string literal</a> instead. Empty character constants (<span class="token">''</span>) and constants containing several characters (<span class="token">'ab'</span>) are also errors.</p>
 
 <p>Some values cannot be expressed with a single character and are expressed as an escape sequence between single quotes. Escape sequences begin with a backslash and are depicted in the table below. They can also be used in <a href="#string_literals">string literals</a>.</p>
 
@@ -434,14 +511,26 @@ int main()
 <tr><td><span class="token">\?</span></td><td>Question mark</td></tr>
 <tr><td><span class="token">\<i>ooo</i></span></td><td>Character with the octal value <i>ooo</i></td></tr>
 <tr><td><span class="token">\x<i>hh</i></span></td><td>Character with the hexadecimal value <i>hh</i></td></tr>
+<tr><td><span class="token">\u<i>hhhh</i></span></td><td>Unicode character with the code point <i>hhhh</i> (exactly 4 hexadecimal digits)</td></tr>
+<tr><td><span class="token">\U<i>hhhhhhhh</i></span></td><td>Unicode character with the code point <i>hhhhhhhh</i> (exactly 8 hexadecimal digits)</td></tr>
 </table>
 
-<p>Octal and hexadecimal escape sequences consume as many octal or hexadecimal digits as follow the backslash, and the resulting value must not exceed 255. For example, <span class="token">'\0'</span> is the null character and <span class="token">'\x41'</span> is the letter A.</p>
+<p>Octal and hexadecimal escape sequences consume as many octal or hexadecimal digits as follow the backslash (unlike C, octal escapes are not limited to 3 digits), and the resulting value must not exceed 255. They produce a single byte with that value. For example, <span class="token">'\0'</span> is the null character and <span class="token">'\x41'</span> is the letter A.</p>
+
+<p>Unicode escape sequences produce the UTF-8 encoding of the code point. The code point must not exceed <span class="token">10FFFF</span> and must not be a UTF-16 surrogate (<span class="token">D800</span> to <span class="token">DFFF</span>). In a character constant, a Unicode escape sequence must produce a single byte, so its code point must not exceed <span class="token">7F</span>. For example, <span class="token">'\u0041'</span> is the letter A, but <span class="token">'\u00e9'</span> is an error.</p>
 
 <h5 id="string_literals">String Literals</h5>
 <p>String literals represent a sequence of characters and are of type <span class="token">const char *</span>. They consist of a sequence of characters and escape sequences enclosed in double quotes and are implicitly terminated with a null character (<span class="token">\0</span>).</p>
 
 <pre class="code">const char *greeting = "Hello\tWorld!\n";</pre>
+
+<p>String literals are UTF-8. Non-ASCII characters can be written directly in a string literal or with Unicode escape sequences, and both produce the same bytes. Octal and hexadecimal escape sequences produce arbitrary bytes, which need not form valid UTF-8.</p>
+
+<pre class="code">const char *a = "café";        // 5 bytes plus the null character, since é is 2 bytes.
+const char *b = "caf\u00e9";   // The same string written with an escape sequence.
+const char *c = "\U0001F600";  // An emoji: 4 bytes plus the null character.</pre>
+
+<p>Unlike C, adjacent string literals are not concatenated, so <span class="token">"Hello " "World"</span> is an error. A string literal must be terminated with a double quote before the end of the file.</p>
 
 <p>A string literal can also be used to initialize an array of <span class="token">char</span>, in which case the characters, including the terminating null character, are copied into the array. See the section on <a href="#array_types">Array Types</a> for details.</p>
 
@@ -451,23 +540,29 @@ int main()
 <p>Null pointers are commonly used to initialize pointer variables that are assigned later, to represent optional references and to indicate failure in APIs that return pointers. Pointers, including examples that use <span class="token">null</span>, are covered in the <a href="#pointer_types">Pointer Types</a> section.</p>
 
 <h4 id="variables">Variables</h4>
-<p>A variable is a named storage area for a value of a particular type. A variable can be used to store the result of a computation, and recalling it later. The syntax to declare a variable is a type name followed by a name (an identifier). The following snippet shows the declaration of a variable named <span class="token">x</span> that stores an <span class="token">int</span>.</p>
+<p>A variable is a named storage area for a value of a particular type. A variable can be used to store the result of a computation, and recalling it later. The syntax to declare a variable is a type name followed by a name (an identifier), an equal sign and an expression that produces the variable's initial value. The following snippet shows the declaration of a variable named <span class="token">x</span> that stores an <span class="token">int</span> and is initialized with the value <span class="token">7</span>.</p>
 
-<pre class="code">int x;</pre>
+<pre class="code">int x = 7;</pre>
 
-<p>Several variables of the same type can be declared at once by using a comma separated list of names.</p>
+<p>Unlike C, a local variable must be initialized when it is declared. Omitting the initializer is an error, which guarantees that a variable is never read before it is given a value.</p>
 
-<pre class="code">int x, y, z;</pre>
+<pre class="code">int x; // Error: uninitialized variable 'x'.</pre>
+
+<p>Several variables of the same type can be declared at once by using a comma separated list of names. Each of them must have its own initializer.</p>
+
+<pre class="code">int x = 1, y = 2, z = 3;
+int u, v = 0; // Error: u is uninitialized.</pre>
 
 <p>However, it is often easier to read and understand code that uses separate declarations.</p>
 
-<pre class="code">int x;
-int y;
-int z;</pre>
+<pre class="code">int x = 1;
+int y = 2;
+int z = 3;</pre>
 
-<p>A variable can be initialized when it is declared by following its name with an equal sign and an expression that produces the value that is assigned to the variable.</p>
+<p>Variables of <a href="#array_types">array</a> and <a href="#struct_types">struct</a> types are initialized with a brace-enclosed list of values. A pair of empty braces initializes all of the elements or members to zero, which is convenient when the values are not known yet. Braces cannot be used to initialize a variable of a primitive or pointer type.</p>
 
-<pre class="code">int x = 7;</pre>
+<pre class="code">int[4] counts = {};  // All four elements are 0.
+int n = {};          // Error: braces around the initializer of a scalar.</pre>
 
 <p>The value of a variable can be accessed by placing its name in an expression.</p>
 
@@ -489,13 +584,17 @@ x = x + 1;
 
 <p>The value assigned to a variable must be of an appropriate type, meaning that it has exactly the same type as the variable or that converting a numerical value from one type to another would not lead to a loss of data. For example, assigning a value of type <span class="token">double</span> to a variable of type <span class="token">int</span> would truncate the fractional part of the value, a value of type <span class="token">int</span> cannot fit into a <span class="token">short</span> since the latter's range is smaller, and an <span class="token">int</span> would lose its sign when assigned to a <span class="token">uint</span>. Conversely, assigning an <span class="token">int</span> to a <span class="token">double</span> and a <span class="token">short</span> to an <span class="token">int</span> are both acceptable since they are lossless operations. Assigning a <span class="token">uint</span> to an <span class="token">int</span> remains unsafe since both types can represent values that cannot be represented by the other. Less obviously, assigning an <span class="token">int</span> to a <span class="token">float</span> or a <span class="token">long</span> to a <span class="token">double</span> is also considered lossy, since the floating-point type does not have enough precision to represent every value of the integer type exactly. A conversion that could lose data requires an explicit <a href="#type_casting_operator">cast</a>; otherwise the compiler reports an error.</p>
 
-<p>When the value being assigned is a constant that is known at compile time, the compiler checks the value itself rather than its type. The assignment is allowed as long as the value fits in the destination type. This is why constants of type <span class="token">int</span> can be used to initialize variables of smaller or unsigned types.</p>
+<p>When the value being assigned is a constant that is known at compile time, the compiler checks the value itself rather than its type. The assignment is allowed as long as the value can be represented exactly by the destination type. This is why constants of type <span class="token">int</span> can be used to initialize variables of smaller or unsigned types, and why <span class="token">double</span> constants can initialize <span class="token">float</span> and integer variables when no precision is lost.</p>
 
 <pre class="code">short s = 5;      // OK: 5 fits in a short, even though 5 is an int.
 uint u = 7;       // OK: 7 fits in a uint.
 ulong i = 0;      // OK: 0 fits in a ulong.
+float f = 1.5;    // OK: 1.5 is exactly representable as a float.
+int n = 3.0;      // OK: 3.0 is exactly representable as an int.
 uchar c = 300;    // Error: 300 does not fit in a uchar.
 uint v = -1;      // Error: -1 does not fit in a uint.
+float g = 0.1;    // Error: 0.1 is not exactly representable as a float. Use 0.1f.
+int m = 2.5;      // Error: the fractional part would be lost.
 
 int x = 7;
 short t = x;      // Error: the value of x is not known at compile time
@@ -546,9 +645,7 @@ int remainder = 23 % 10; // Modulo division: remainder is 3.</pre>
 
 <p>Modulo division, which is applicable only to integers, produces the remainder of a division.</p>
 
-<!-- TODO: usual arithmetic conversions -->
-
-<p>The <span class="token">+</span> and <span class="token">-</span> operators can also be used as unary operators and appear before their lone operand. The <span class="token">-</span> operator negates its operand, meaning that it is equivalent to multiplying the operand by <span class="token">-1</span>. The <span class="token">+</span> operator is equivalent to multiplying its operand by <span class="token">1</span>, which leaves it intact. It is not particularly useful and is only included in the language for completeness.</p>
+<p>The <span class="token">+</span> and <span class="token">-</span> operators can also be used as unary operators and appear before their lone operand. The <span class="token">-</span> operator negates its operand, meaning that it is equivalent to multiplying the operand by <span class="token">-1</span>. The <span class="token">+</span> operator is equivalent to multiplying its operand by <span class="token">1</span>, which leaves it intact. It is not particularly useful and is only included in the language for completeness. The operand of both operators undergoes integer promotion (see below), so negating a <span class="token">short</span> produces an <span class="token">int</span>. Negating an unsigned value is allowed and wraps around, as in C, so <span class="token">-1u</span> is the largest <span class="token">uint</span>.</p>
 
 <pre class="code">double a = 3.0;
 double b = -a; // b is -3.0.
@@ -559,6 +656,54 @@ double e = +b; // e is -3.0.</pre>
 <p>Putting it all together:</p>
 
 <pre class="code">double a = -2.0 - -((3.0 * 12.0) / (3.0 + 6.0)); // a is 2.0.</pre>
+
+<h5 id="arithmetic_conversions">Usual Arithmetic Conversions</h5>
+<p>The operands of a binary operator do not need to have the same type. When the operands of an arithmetic, bitwise, relational or equality operator, or the two result expressions of the <a href="#ternary_operator">ternary operator</a>, have different numeric types, they are converted to a common type before the operation is performed. For arithmetic and bitwise operators, the common type is also the type of the result. The common type is determined as follows:</p>
+
+<ol>
+<li>If either operand is a <span class="token">double</span>, the common type is <span class="token">double</span>.</li>
+<li>Otherwise, if either operand is a <span class="token">float</span>, the common type is <span class="token">float</span>.</li>
+<li>Otherwise, both operands are integers and they first undergo <i>integer promotion</i>: values of type <span class="token">char</span>, <span class="token">uchar</span>, <span class="token">short</span> and <span class="token">ushort</span> are converted to <span class="token">int</span>. Then the common type is the first of <span class="token">ulong</span>, <span class="token">long</span>, <span class="token">uint</span> and <span class="token">int</span> that is the type of either promoted operand.</li>
+</ol>
+
+<p>The following table shows some examples.</p>
+
+<table>
+<tr>
+<th>Operand Types</th>
+<th>Common Type</th>
+</tr>
+<tr><td><span class="token">char</span>, <span class="token">char</span></td><td><span class="token">int</span></td></tr>
+<tr><td><span class="token">uchar</span>, <span class="token">short</span></td><td><span class="token">int</span></td></tr>
+<tr><td><span class="token">ushort</span>, <span class="token">uint</span></td><td><span class="token">uint</span></td></tr>
+<tr><td><span class="token">int</span>, <span class="token">uint</span></td><td><span class="token">uint</span></td></tr>
+<tr><td><span class="token">uint</span>, <span class="token">long</span></td><td><span class="token">long</span></td></tr>
+<tr><td><span class="token">long</span>, <span class="token">ulong</span></td><td><span class="token">ulong</span></td></tr>
+<tr><td><span class="token">long</span>, <span class="token">float</span></td><td><span class="token">float</span></td></tr>
+<tr><td><span class="token">int</span>, <span class="token">double</span></td><td><span class="token">double</span></td></tr>
+<tr><td><span class="token">float</span>, <span class="token">double</span></td><td><span class="token">double</span></td></tr>
+</table>
+
+<p>Note that the result of an operation on values of a type smaller than <span class="token">int</span> is an <span class="token">int</span>. As explained in the <a href="#variables">Variables</a> section, assigning that result back to a variable of the smaller type requires a cast. Also note that a <span class="token">float</span> is not promoted to a <span class="token">double</span>.</p>
+
+<pre class="code">short s1 = 3;
+short s2 = 4;
+int i = s1 * s2;                    // OK: the result is an int.
+short s3 = cast&lt;short&gt;(s1 * s2);    // The cast is required.
+float f = 2.0f * 3;                 // The result is a float.
+double d = 1.5f + 2.0;              // The result is a double.</pre>
+
+<p>When the common type is unsigned, converting a signed operand to it would change the value of a negative operand, which is a common source of bugs in C. In Bond, it is an error for an operand of a signed type to be converted to <span class="token">uint</span> or <span class="token">ulong</span> unless it is a constant that is known not to be negative. This rule applies to the arithmetic, bitwise, relational and equality operators, the ternary operator and the compound assignment operators, but not to the bit shifting operators. A cast makes the conversion explicit when it is intended.</p>
+
+<pre class="code">int i = -1;
+uint u = 1;
+uint a = u + 1;                       // OK: the constant 1 is not negative.
+uint b = u + i;                       // Error: i may be negative but is converted to uint.
+uint c = u + cast&lt;uint&gt;(i);           // OK: the conversion is explicit.
+bool d = i &lt; u;                       // Error: i may be negative but is converted to uint.
+bool e = (i &lt; 0) || (cast&lt;uint&gt;(i) &lt; u); // OK.
+long f = i + u;                       // Error: the common type is uint, not long.
+long g = i + cast&lt;long&gt;(u);           // OK: the common type is long.</pre>
 
 <h5 id="increment_operators">Increment and Decrement Operators</h5>
 <p>Since adding and subtracting <span class="token">1</span> from variables is such a common thing to do when programming, special shorthand operators exist specifically for that task denoted with <span class="token">++</span> and <span class="token">--</span>. The former adds <span class="token">1</span> to its operand and the latter subtracts <span class="token">1</span>.</p>
@@ -585,6 +730,8 @@ b = a++;
 
 <h5 id="relational_operators">Relational and Comparison Operators</h5>
 <p>The six relational operators are <span class="token">==</span>, <span class="token">!=</span>, <span class="token">&lt;</span>, <span class="token">&gt;</span>, <span class="token">&lt;=</span> and <span class="token">&gt;=</span>, and they are used to compare the value of two expressions. The result of a relational operator is a <span class="token">bool</span> (i.e. either the value <span class="token">true</span> or <span class="token">false</span>) indicating whether the comparison was successful.</p>
+
+<p>The two operands must both be numeric, both be of type <span class="token">bool</span> or both be pointers. Numeric operands are converted to a common type by the <a href="#arithmetic_conversions">usual arithmetic conversions</a>, so comparing a signed integer that may be negative with an unsigned integer is an error. Pointers can be compared with each other and with <a href="#null_pointer"><span class="token">null</span></a>.</p>
 
 <p>The <span class="token">==</span> and <span class="token">!=</span> operators test whether two values are equal or not equal respectively.</p>
 
@@ -669,6 +816,8 @@ a >> 3;      // Result is 00000000000000000000000000001111, zeros inserted on th
 a = -123;    // a is 11111111111111111111111110000101.
 a >> 3;      // Result is 11111111111111111111111111110000, ones inserted on the left.</pre>
 
+<p>Both operands of the bit shifting operators must be integers, but unlike the other binary operators, they are not converted to a common type. The type of the result is the type of the left operand after integer promotion (see <a href="#arithmetic_conversions">Usual Arithmetic Conversions</a>). For example, shifting a <span class="token">uchar</span> produces an <span class="token">int</span>, and shifting a <span class="token">uint</span> by an <span class="token">int</span> produces a <span class="token">uint</span>.</p>
+
 <h5 id="compound_assignment_operators">Compound Assignment Operators</h5>
 <p>There are ten compound assignment operators that, in addition to performing an operation, assign the result to the variable or memory location (see <a href="#array_types">Arrays</a> and <a href="#pointer_types">Pointers</a>) described by the left operand. These operators do not introduce any new operations, they just provide convenient shorthand notation. See the table below for an overview of all of the compound assignment operators.</p>
 
@@ -729,11 +878,17 @@ a >> 3;      // Result is 11111111111111111111111111110000, ones inserted on the
 </tr>
 </table>
 
-<p>The equivalence is not exact in two respects. First, the left operand of a compound assignment is evaluated only once, which matters when evaluating it has side effects (e.g. <span class="token">array[i++] += 1;</span>). Second, the result of the operation is converted back to the type of the left operand without the check for loss of data that applies to the plain assignment operator.</p>
+<p>The equivalence is not exact in two respects. First, the left operand of a compound assignment is evaluated only once, which matters when evaluating it has side effects (e.g. <span class="token">array[i++] += 1;</span>). Second, the result of the operation is converted back to the type of the left operand without the check for loss of data that applies to the plain assignment operator. The check that a signed operand that may be negative is not converted to an unsigned type (see <a href="#arithmetic_conversions">Usual Arithmetic Conversions</a>) still applies, however.</p>
 
 <pre class="code">short s = 5;
 s += 1;     // OK: the result is converted back to short.
-s = s + 1;  // Error: s + 1 is an int, which does not always fit in a short.</pre>
+s = s + 1;  // Error: s + 1 is an int, which does not always fit in a short.
+
+int i = 7;
+i *= 1.5;   // OK: computed as a double, then truncated, so i is 10.
+
+uint u = 3;
+u += i;     // Error: i may be negative but is converted to uint.</pre>
 
 <p>The <span class="token">+=</span> and <span class="token">-=</span> operators can also be applied to pointers to advance them by a number of elements (see <a href="#pointer_types">Pointer Types</a>).</p>
 
@@ -974,7 +1129,9 @@ alignofDouble = alignof(4.0 + 2.0); // equivalent to alignof&lt;double&gt;.</pre
 a = b + c; // Performs an addition and assigns the result to the variable a.</pre>
 
 <h4 id="declarative_statements">Declarative Statements</h4>
-<p>A declarative statement is used to declare and optionally initialize a variable. In fact, we have already covered declarative statements in some detail in the <a href="#variables">Variables</a> section, and have seen many examples in the sample code. The only aspect of declarative statements that we have yet to cover is the initialization of aggregate types, however, that will be deferred to the sections on <a href="#array_types">Array Types</a> and <a href="#struct_types">Structure Types</a>.</p>
+<p>A declarative statement is used to declare and initialize one or more variables. In fact, we have already covered declarative statements in some detail in the <a href="#variables">Variables</a> section, and have seen many examples in the sample code. Within a function, every variable declared by a declarative statement must have an initializer. The only aspect of declarative statements that we have yet to cover in detail is the initialization of aggregate types, however, that will be deferred to the sections on <a href="#array_types">Array Types</a> and <a href="#struct_types">Structure Types</a>.</p>
+
+<p>As explained in the section on <a href="#diff_ambiguities">Ambiguities in the grammar</a>, a statement such as <span class="token">A * b;</span>, whose first variable has no initializer, is parsed as an expression statement rather than a declarative statement.</p>
 
 <h4 id="compound_statements">Compound Statements</h4>
 <p>A compound statement, also known as a block, provides a means to collect several statements together that can be placed wherever a single statement is expected. A block consists of a list of zero or more statements enclosed in curly braces: <span class="token">{}</span>. The statements contained within a block are all executed in order and can be any type of statement, including nested compound statements. Furthermore, any variables declared within a block are local to that block and cease to exist when program execution leaves the scope of the block.</p>
@@ -1153,7 +1310,7 @@ while (condition_expression);</pre>
 
 <p>The equivalence is not exact: a <span class="token">continue</span> statement in the body of a for loop still causes the <span class="token">increment_expression</span> to be evaluated before the condition is re-evaluated, whereas in the while loop above it would skip it (see <a href="#jump_statements">Jump Statements</a>).</p>
 
-<p>All three parts between the parentheses following the <span class="token">for</span> keyword are optional. If the <span class="token">condition_expression</span> is omitted, the loop repeats until it is exited by a jump statement. The <span class="token">init_statement</span> executes first and once only. It can be an expression or a variable declaration. A variable declared there only exists within the for loop. Then, as with the while loop, the <span class="token">condition_expression</span> is evaluated. If it evaluates to true, the <span class="token">body_statement</span> executes. Subsequently, the <span class="token">increment_expression</span> is evaluated; it is expected to have a side effect (e.g. increment the variable declared in the <span class="token">init_statement</span>), since the result of the expression is not used otherwise. Finally, execution returns to the top of the loop and the <span class="token">condition_expression</span> is evaluated again. Once the condition evaluates to false, execution proceeds to the statement following the body of the loop.</p>
+<p>All three parts between the parentheses following the <span class="token">for</span> keyword are optional. If the <span class="token">condition_expression</span> is omitted, the loop repeats until it is exited by a jump statement. The <span class="token">init_statement</span> executes first and once only. It can be an expression or a variable declaration, which must have an initializer like any other. A variable declared there only exists within the for loop. Then, as with the while loop, the <span class="token">condition_expression</span> is evaluated. If it evaluates to true, the <span class="token">body_statement</span> executes. Subsequently, the <span class="token">increment_expression</span> is evaluated; it is expected to have a side effect (e.g. increment the variable declared in the <span class="token">init_statement</span>), since the result of the expression is not used otherwise. Finally, execution returns to the top of the loop and the <span class="token">condition_expression</span> is evaluated again. Once the condition evaluates to false, execution proceeds to the statement following the body of the loop.</p>
 
 <p>The <a href="#while_example">example</a> presented in the <a href="#while_statements"><span class="token">while</span> Statements</a> section can be written more concisely as:</p>
 
@@ -1338,23 +1495,29 @@ void TryToModifyAFunctionArgument()
 
 <pre class="code">AnimalSound sound = Moo;</pre>
 
+<p>Since an enumerated type is represented as an <span class="token">int</span>, conversions between enumerated types and <span class="token">int</span> are implicit in both directions. As in C, no check is made that a value assigned to a variable of an enumerated type corresponds to one of its enumerators.</p>
+
+<pre class="code">int value = Quack;        // value is 43.
+AnimalSound other = 1;    // OK: other is Oink.</pre>
+
 <h4 id="array_types">Array Types</h4>
 <p>An array is a collection of elements of the same type stored contiguously in memory. As noted in the <a href="#diff_type_declarations">Type Declarations</a> section, one notable difference between Bond and C is that all parts of a type descriptor, including array dimensions, appear before the variable name.</p>
 
-<p>An array type is written by placing the length in square brackets after the element type. The length must be an integer constant expression that can be evaluated at compile time, and it cannot be zero.</p>
+<p>An array type is written by placing the length in square brackets after the element type. The length must be an integer constant expression that can be evaluated at compile time, of an integer type of 32 bits or less, and it cannot be zero. Like any other local variable, an array must be initialized when it is declared; empty braces initialize all of its elements to zero.</p>
 
-<pre class="code">int[5] numbers;
-float[10] samples;
-char[32] buffer;</pre>
+<pre class="code">int[5] numbers = {};
+float[10] samples = {};
+char[32] buffer = {};</pre>
 
 <p>Multiple variables of the same array type can be declared at once, and each variable will have the same type. In contrast to C, there is no ambiguity here.</p>
 
-<pre class="code">int[3] a, b; // Both a and b are of type int[3].</pre>
+<pre class="code">int[3] a = {}, b = {}; // Both a and b are of type int[3].</pre>
 
-<p>An array can be initialized with a brace-enclosed initializer list. If an initializer list is provided, the array length can be omitted from the type and the compiler will infer the length from the number of elements.</p>
+<p>An array can be initialized with a brace-enclosed initializer list. If an initializer list is provided, the array length can be omitted from the type and the compiler will infer the length from the number of elements. An empty list cannot be used to infer the length.</p>
 
 <pre class="code">int[5] data = {10, 20, 30, 40, 50};
-int[] values = {1, 2, 3}; // Length is inferred as 3.</pre>
+int[] values = {1, 2, 3}; // Length is inferred as 3.
+int[] none = {};          // Error: the length cannot be inferred.</pre>
 
 <p>If the initializer list has fewer elements than the array, the remaining elements are initialized to zero. It is an error for it to have more elements than the array.</p>
 
@@ -1385,7 +1548,7 @@ data[1] = 25;         // Modify the second element.</pre>
 <p>Unlike individual elements, an array as a whole cannot be assigned to. To copy an array, copy its elements one at a time.</p>
 
 <pre class="code">int[3] a = {1, 2, 3};
-int[3] b;
+int[3] b = {};
 b = a; // Error: arrays cannot be assigned.</pre>
 
 <p>Arrays work naturally with loops for iterating over their elements.</p>
@@ -1397,7 +1560,7 @@ for (int i = 0; i &lt; 5; ++i)
     sum += scores[i];
 }</pre>
 
-<p>In most expressions, an array is converted to a pointer to its first element. This is what allows an array to be passed to a function that expects a pointer, or assigned to a pointer variable (see <a href="#pointer_types">Pointer Types</a>). When an array type appears as a parameter type, the compiler converts it to a pointer to the element type. This means that arrays are effectively passed by reference and that the function does not know the length of the array.</p>
+<p>In most expressions, an array is converted to a pointer to its first element. This is what allows an array to be passed to a function that expects a pointer, or assigned to a pointer variable (see <a href="#pointer_types">Pointer Types</a>). When an array type appears as a parameter type, the compiler converts it to a <span class="token">const</span> pointer to the element type (e.g. <span class="token">int[]</span> becomes <span class="token">int * const</span>). This means that arrays are effectively passed by reference and that the function does not know the length of the array. The elements can be modified through the parameter, but the parameter itself cannot be made to point elsewhere.</p>
 
 <pre class="code">int SumArray(int[] values, int count)
 {
@@ -1426,7 +1589,7 @@ m[0][1] = 20;      // Modify element at row 0, column 1.</pre>
 
 <p>Array types with three or more dimensions follow the same pattern.</p>
 
-<pre class="code">int[2][3][4] cube;
+<pre class="code">int[2][3][4] cube = {};
 cube[0][1][2] = 42;</pre>
 
 <h4 id="pointer_types">Pointer Types</h4>
@@ -1571,7 +1734,7 @@ if (ptr != null)
 <p>A structure type, or struct, is a composite data type that groups related variables together under a single name. Unlike C, Bond structs can also contain member functions, a feature borrowed from C++.</p>
 
 <h5 id="struct_definitions">Defining Structures</h5>
-<p>A struct is declared using the <span class="token">struct</span> keyword followed by a name, a body enclosed in curly braces and a semicolon. The body contains a list of member variable declarations and member function definitions. Member variables and member functions can appear in any order within the body. Structs can be declared at file scope or within a namespace.</p>
+<p>A struct is declared using the <span class="token">struct</span> keyword followed by a name, a body enclosed in curly braces and a semicolon. The body contains a list of member variable declarations and member function definitions. Member variables and member functions can appear in any order within the body, and the body may be empty. Structs can be declared at file scope or within a namespace, but not within a function.</p>
 
 <pre class="code">struct Point
 {
@@ -1596,16 +1759,16 @@ if (ptr != null)
     // Node child; would be an error.
 };</pre>
 
-<p>Unlike C++, member variable declarations cannot have initializers. Members are initialized when an instance is initialized, as described next.</p>
+<p>Unlike C++, member variable declarations cannot have initializers, and member variables cannot be declared <span class="token">const</span>. Members are initialized when an instance is initialized, as described next.</p>
 
 <h5 id="struct_instantiation">Instantiation and Initialization</h5>
-<p>A variable of a struct type is declared the same way as any other variable. The variable is called an instance of that struct type. Simply declaring a struct variable allocates memory for all of its members on the stack.</p>
+<p>A variable of a struct type is declared the same way as any other variable. The variable is called an instance of that struct type. Declaring a struct variable allocates memory for all of its members on the stack. Like any other local variable, it must be initialized; empty braces initialize all of its members to zero.</p>
 
-<pre class="code">Point p;
+<pre class="code">Point p = {};
 p.x = 10;
 p.y = 20;</pre>
 
-<p>A struct instance can also be initialized with a brace-enclosed initializer list. The values in the list are assigned to the members in the order in which they are declared in the struct definition. If the list has fewer values than the struct has member variables, the remaining members are initialized to zero.</p>
+<p>A struct instance can also be initialized with a non-empty brace-enclosed initializer list, or with an expression of the same struct type, such as a function call that returns a struct. The values in the list are assigned to the members in the order in which they are declared in the struct definition. If the list has fewer values than the struct has member variables, the remaining members are initialized to zero.</p>
 
 <pre class="code">Point p = {10, 20};
 Line segment = {{0, 0}, {5, 5}};
@@ -1614,7 +1777,7 @@ Point origin = {0}; // origin.y is also 0.</pre>
 <p>Struct values can be assigned from one variable to another. This copies the entire contents of the struct.</p>
 
 <pre class="code">Point a = {3, 4};
-Point b;
+Point b = {};
 b = a; // b.x is 3 and b.y is 4.</pre>
 
 <h5 id="member_access">Member Variables</h5>
@@ -1747,13 +1910,13 @@ namespace Util
 <p>Identifiers declared within a namespace are accessed using the scope resolution operator <span class="token">::</span>. The namespace name appears on the left side of the operator and the identifier on the right.</p>
 
 <pre class="code">double area = Geometry::CircleArea(5.0);
-Geometry::Point p;
+Geometry::Point p = {};
 p.x = 10;
 p.y = 20;</pre>
 
 <p>For nested namespaces, the <span class="token">::</span> operator is chained to navigate the hierarchy.</p>
 
-<pre class="code">Graphics::Shapes::Circle c;
+<pre class="code">Graphics::Shapes::Circle c = {};
 c.x = 100;
 c.y = 200;
 c.radius = 50;</pre>
@@ -1783,19 +1946,28 @@ c.radius = 50;</pre>
     double area = CircleArea(5.0);
 }</pre>
 
-<p>Using statements can only appear within a block scope such as the body of a function or a compound statement. Unlike C++, they cannot appear at file scope or directly within a namespace. The effect of a using statement is limited to the block in which it appears.</p>
+<p>A using declaration can name any namespaced symbol, such as a struct, an enumerated type, a function, a constant or an enumerator, but not a namespace; a namespace must be brought into scope with a using directive. Conversely, a using directive must name a namespace.</p>
+
+<pre class="code">void Example()
+{
+    using Graphics::Shapes;           // Error: Shapes is a namespace. Use 'using namespace'.
+    using namespace Geometry::Point;  // Error: Point is not a namespace.
+}</pre>
+
+<p>Using statements can only appear within a block scope such as the body of a function, a compound statement or a section of a switch statement. Unlike C++, they cannot appear at file scope, directly within a namespace or struct, or in the initialization part of a <span class="token">for</span> statement. A using statement takes effect from the point at which it appears until the end of the enclosing block, just like a local variable declaration.</p>
 
 <pre class="code">void Example()
 {
     {
+        double a = Geometry::CircleArea(1.0); // CircleArea must be qualified here.
         using namespace Geometry;
-        Point p = {1, 2}; // Point is visible here.
+        Point p = {1, 2};                     // Point is visible here.
     }
     // Point is no longer visible without qualification.
     Geometry::Point q = {3, 4};
 }</pre>
 
-<p>Using directives can be chained with nested namespaces. Once a namespace has been brought into scope, its child namespaces can be referenced without the parent prefix.</p>
+<p>Using directives can be chained with nested namespaces. Once a namespace has been brought into scope, its child namespaces can be referenced without the parent prefix, both in other using statements and in qualified names.</p>
 
 <pre class="code">void Example()
 {
@@ -1803,28 +1975,295 @@ c.radius = 50;</pre>
     using namespace Shapes;
 
     // Circle is accessible without the full Graphics::Shapes:: prefix.
-    Circle c;
+    Circle c = {};
     c.radius = 10;
 }</pre>
 
-<p>If using directives bring two different symbols with the same name into scope, an unqualified reference to that name is ambiguous and the compiler reports an error. The symbols can still be referenced by their qualified names.</p>
+<p>When looking up an unqualified name, the compiler searches the enclosing blocks from the innermost outward, then the struct (in a member function), then the enclosing namespaces from the innermost outward. The two forms of using statements behave differently in this search:</p>
+
+<ul>
+<li>A using declaration behaves like a local declaration in its block. It hides symbols with the same name that are declared in outer scopes or brought in by using directives, regardless of the order in which they appear. It is an error for it to have the same name as a variable or another using declaration in the same block.</li>
+<li>A using directive does not declare anything in its block. Instead, the symbols of the named namespace are found as though they were declared in the innermost namespace that encloses both the using directive and the named namespace; for a function declared at file scope, that is the global scope. Consequently, local variables and parameters hide the symbols brought in by a using directive.</li>
+</ul>
+
+<pre class="code">namespace Colors { const int RED = 1; const int GREEN = 2; }
+namespace Lights { const int RED = 10; }
+
+int Example(int GREEN)
+{
+    using namespace Colors;
+    using Lights::RED;
+    return RED + GREEN; // Lights::RED and the parameter GREEN: 10 + GREEN.
+}</pre>
+
+<p>If using directives bring two different symbols with the same name into scope, or if a using directive brings in a symbol with the same name as a symbol declared in the scope where the directive's symbols are found, an unqualified reference to that name is ambiguous and the compiler reports an error. The error is only reported where the name is referenced, so the using directives themselves are harmless. The symbols can still be referenced by their qualified names.</p>
 
 <pre class="code">namespace A { const int VALUE = 1; }
 namespace B { const int VALUE = 2; }
+const int LIMIT = 100;
+namespace C { const int LIMIT = 200; }
 
 int Example()
 {
     using namespace A;
     using namespace B;
+    using namespace C;
     // return VALUE;  would be an error since VALUE is ambiguous.
-    return A::VALUE + B::VALUE; // OK.
+    // return LIMIT;  would be an error since the global LIMIT and C::LIMIT clash.
+    return A::VALUE + B::VALUE + C::LIMIT; // OK.
 }</pre>
 
 
-<h3 id="sbrm">Scope-Based Resource Management TODO</h3>
+<h3 id="sbrm">Scope-Based Resource Management</h3>
+<p>As we saw in the <a href="#pointer_types">Pointer Types</a> section, memory allocated with <span class="token">Bond::Allocate</span> must be explicitly freed with <span class="token">Bond::Free</span>. Likewise, a file opened with <span class="token">Bond::CreateInputStream</span> or <span class="token">Bond::CreateOutputStream</span> must be explicitly closed and freed with <span class="token">Bond::FreeInputStream</span> or <span class="token">Bond::FreeOutputStream</span>. Forgetting to do so, especially on one of several paths through a function, leaks the resource.</p>
+
+<p>Bond offers an alternative in the form of scope-based resource management. Every function call has its own <i>collector</i>, represented by the type <span class="token">Bond::Collector</span>. A resource that is registered with a collector is released automatically when the function call that owns the collector returns, regardless of which return statement is executed. The resources registered with a collector are released in the reverse order of their registration. They are also released if the function is exited because of a runtime error.</p>
+
+<p>The Standard Bond Library offers <i>collected</i> variants of its functions that acquire resources. Each of them registers the resource with the collector of the Bond function that calls it.</p>
+
+<table>
+<tr>
+<th>Function</th>
+<th>Library</th>
+<th>Resource</th>
+</tr>
+<tr><td><span class="token">AllocateCollected</span></td><td><span class="token">memory.bond</span></td><td>A block of memory</td></tr>
+<tr><td><span class="token">AllocateAlignedCollected</span></td><td><span class="token">memory.bond</span></td><td>An aligned block of memory</td></tr>
+<tr><td><span class="token">CreateInputStreamCollected</span></td><td><span class="token">io.bond</span></td><td>A file opened for reading, which is closed when released</td></tr>
+<tr><td><span class="token">CreateOutputStreamCollected</span></td><td><span class="token">io.bond</span></td><td>A file opened for writing, which is flushed and closed when released</td></tr>
+</table>
+
+<p>A resource acquired with one of these functions must not be released manually (e.g. a block of memory returned by <span class="token">Bond::AllocateCollected</span> must not be passed to <span class="token">Bond::Free</span>), and it must not be used after the function that acquired it has returned. In particular, a function must not return a pointer to collected memory that it allocated itself.</p>
+
+<pre class="code">int SumOfSquares(int n)
+{
+    // The array is freed automatically when SumOfSquares returns.
+    int *squares = Bond::AllocateCollected(cast&lt;ulong&gt;(n) * sizeof&lt;int&gt;);
+
+    for (int i = 0; i &lt; n; ++i)
+    {
+        squares[i] = i * i;
+    }
+
+    int sum = 0;
+    for (int i = 0; i &lt; n; ++i)
+    {
+        sum += squares[i];
+    }
+    return sum;
+}</pre>
+
+<p>Sometimes a function needs to allocate a resource on behalf of its caller, so that the resource outlives the function that allocated it. For that purpose, <span class="token">Bond::GetCollector</span> returns a pointer to the collector of the function that calls it, which can be passed to another function. The <span class="token">AllocateWithCollector</span>, <span class="token">AllocateAlignedWithCollector</span>, <span class="token">CreateInputStreamWithCollector</span> and <span class="token">CreateOutputStreamWithCollector</span> functions register the resource with the given collector rather than with the collector of their caller. If the given collector is <span class="token">null</span>, they use the collector of their caller.</p>
+
+<p>The following program demonstrates both techniques. <span class="token">MakeSquares</span> allocates an array that is registered with the collector of <span class="token">WriteSquares</span>, so the array remains valid after <span class="token">MakeSquares</span> returns. Both the array and the output file are released when <span class="token">WriteSquares</span> returns, despite <span class="token">WriteSquares</span> never freeing them explicitly.</p>
+
+<pre class="code">include "io.bond";
+include "memory.bond";
+
+// Allocates an array of n squares that is registered with the given collector,
+// so that the array outlives this function.
+int *MakeSquares(Bond::Collector *collector, int n)
+{
+    int *squares = Bond::AllocateWithCollector(collector, cast&lt;ulong&gt;(n) * sizeof&lt;int&gt;);
+    for (int i = 0; i &lt; n; ++i)
+    {
+        squares[i] = i * i;
+    }
+    return squares;
+}
+
+void WriteSquares(const char *fileName, int n)
+{
+    // The file is flushed and closed when WriteSquares returns.
+    Bond::OutputStream *stream = Bond::CreateOutputStreamCollected(fileName, false);
+    if (stream == null)
+    {
+        Bond::StdErr()-&gt;PrintStr("Cannot open ")-&gt;PrintStr(fileName)-&gt;PrintStr("\n");
+        return;
+    }
+
+    // The array is freed when WriteSquares returns.
+    int *squares = MakeSquares(Bond::GetCollector(), n);
+    for (int i = 0; i &lt; n; ++i)
+    {
+        stream-&gt;PrintI(squares[i])-&gt;PrintStr("\n");
+    }
+}
+
+int main()
+{
+    WriteSquares("squares.txt", 5);
+    return 0;
+}</pre>
+
+<p>After running this program, the file <span class="token">squares.txt</span> contains the following.</p>
+
+<pre class="code">0
+1
+4
+9
+16</pre>
 
 
-<h3 id="native_blocks">Native Blocks TODO</h3>
+<h3 id="native_blocks">Native Blocks</h3>
+<p>Bond is designed to be embedded in applications written in C++, and Bond code often needs to call functions and manipulate data structures that are implemented in C++. Native blocks declare such functions and structs to the Bond compiler, so that Bond code can use them with full type checking. In fact, the whole Standard Bond Library is declared this way; see <span class="token">io.bond</span>, for example.</p>
+
+<p>A native block is introduced by the <span class="token">native</span> keyword followed by a body enclosed in curly braces. It can appear at file scope or within a namespace, and its body can contain the same declarations as a namespace, including namespaces, enumerated types and constants. Functions and structs declared within a native block are native, meaning that they are implemented in C++ rather than in Bond.</p>
+
+<pre class="code">native
+{
+    namespace Geo
+    {
+        // A function implemented in C++.
+        double Hypot(double x, double y);
+
+        // An opaque struct, which can only be used through pointers.
+        struct Mesh
+        {
+            int GetVertexCount() const;
+        };
+
+        Mesh *LoadMesh(const char *fileName);
+        void FreeMesh(Mesh *mesh);
+
+        // A struct whose instances occupy 8 bytes, aligned on 4 byte boundaries.
+        struct Point2&lt;8, 4&gt;
+        {
+            int X;
+            int Y;
+            int LengthSquared() const;
+        };
+    }
+}</pre>
+
+<p>From the point of view of Bond code, native functions and structs are used exactly like their Bond counterparts.</p>
+
+<pre class="code">int CountVertices(const char *fileName)
+{
+    Geo::Mesh *mesh = Geo::LoadMesh(fileName);
+    if (mesh == null)
+    {
+        return 0;
+    }
+    const int count = mesh-&gt;GetVertexCount();
+    Geo::FreeMesh(mesh);
+    return count;
+}
+
+int Example()
+{
+    Geo::Point2 p = {};
+    p.X = 3;
+    p.Y = 4;
+    return p.LengthSquared(); // Returns 25.
+}</pre>
+
+<h4 id="native_functions">Native Functions</h4>
+<p>A native function is declared with a function prototype: a return type, a name and a parameter list, followed by a semicolon instead of a body. It is an error for a function declared in a native block to have a body, and it is an error for a function declared outside of a native block not to have one.</p>
+
+<h4 id="native_structs">Native Structs</h4>
+<p>A native struct is declared like any other struct, except that its member functions are declared with prototypes rather than defined, and that its name can optionally be followed by its size and alignment in bytes between angle brackets: <span class="token">struct Name&lt;size, alignment&gt;</span>. The alignment can be omitted, in which case it is 4. The size must be at least 1 and must be a multiple of the alignment, and the alignment must be a power of 2 greater than 1. Since the compiler cannot know the layout of a type implemented in C++, it is the programmer's responsibility to ensure that the size and alignment match those of the C++ type.</p>
+
+<p>A native struct declared without a size is opaque: its size is unknown to Bond, so it can only be manipulated through pointers, which are typically obtained from native functions. It cannot be used as the type of a variable, a member or a return value, and pointer arithmetic cannot be performed on pointers to it. The <span class="token">Bond::InputStream</span> and <span class="token">Bond::OutputStream</span> types of the Standard Bond Library are examples of opaque native structs.</p>
+
+<p>The size of a native struct can also be specified separately from its declaration, with a declaration consisting only of the struct's name, size and alignment. This allows a library to declare an opaque struct, and an application that knows the struct's size to make it instantiable. A native struct can only be given a size once.</p>
+
+<pre class="code">native
+{
+    struct Buffer
+    {
+        int GetLength() const;
+    };
+}
+
+// Elsewhere, possibly in another file.
+native
+{
+    struct Buffer&lt;16, 8&gt;;
+}</pre>
+
+<p>A native struct that has a size can be instantiated on the stack, used as a member of a Bond struct or stored in an array. Since its contents are managed by C++ code, it can only be initialized with empty braces, which set all of its bytes to zero, or with the value of an expression of the same type, such as a native function's return value. A non-empty initializer list is an error.</p>
+
+<p>Accessing a member variable of a native struct, such as <span class="token">p.X</span> in the example above, calls a native getter function to read its value and a native setter function to assign it. As a consequence, the address of a member variable of a native struct cannot be taken. Member variables can be declared in both opaque and sized native structs.</p>
+
+<h4 id="native_bindings">Implementing and Binding Native Code</h4>
+<p>Every native function, member function, getter and setter is implemented in C++ by a function with the following signature, which receives its arguments and returns its value through a <span class="token">Bond::StackFrame</span>.</p>
+
+<pre class="code">void Function(Bond::StackFrame &amp;frame);</pre>
+
+<p>The <span class="token">bondc</span> compiler generates the declarations of these functions, along with a <i>native binding collection</i> that maps the name of each native function to its C++ implementation, when it is given the <span class="token">-b</span>, <span class="token">-c</span>, <span class="token">-h</span> and <span class="token">-i</span> options. Assuming that the native block of the example above is in a file named <span class="token">geo.bond</span>, the following command compiles it to <span class="token">geo.cbo</span> and generates <span class="token">geobindings.h</span> and <span class="token">geobindings.cpp</span>:</p>
+
+<pre class="code">bondc -o geo.cbo -b GEO_BINDING_COLLECTION -c geobindings.cpp -h geobindings.h -i geobindings.h geo.bond</pre>
+
+<p>The generated header declares the following functions. Bond namespaces become C++ namespaces, member functions are prefixed with the name of their struct and two underscores, and each member variable gets a getter and a setter.</p>
+
+<pre class="code">namespace Geo
+{
+void Hypot(Bond::StackFrame &amp;frame);
+void Mesh__GetVertexCount(Bond::StackFrame &amp;frame);
+void LoadMesh(Bond::StackFrame &amp;frame);
+void FreeMesh(Bond::StackFrame &amp;frame);
+void Point2__LengthSquared(Bond::StackFrame &amp;frame);
+void Point2__X__get(Bond::StackFrame &amp;frame);
+void Point2__X__set(Bond::StackFrame &amp;frame);
+void Point2__Y__get(Bond::StackFrame &amp;frame);
+void Point2__Y__set(Bond::StackFrame &amp;frame);
+}</pre>
+
+<p>The application implements these functions. Arguments are read with <span class="token">frame.GetArg&lt;Type&gt;(index)</span>, and the return value is set with <span class="token">frame.SetReturnValue(value)</span>. For member functions, getters and setters, argument 0 is the <span class="token">this</span> pointer and the declared parameters follow it. A setter receives the new value as argument 1.</p>
+
+<pre class="code">#include "geobindings.h"
+#include &lt;cmath&gt;
+
+namespace Geo
+{
+
+// The C++ type behind the Bond type Geo::Point2: 8 bytes, aligned on 4 byte boundaries.
+struct Point2
+{
+    int32_t x;
+    int32_t y;
+};
+
+void Hypot(Bond::StackFrame &amp;frame)
+{
+    const double x = frame.GetArg&lt;double&gt;(0);
+    const double y = frame.GetArg&lt;double&gt;(1);
+    frame.SetReturnValue(std::hypot(x, y));
+}
+
+void Point2__LengthSquared(Bond::StackFrame &amp;frame)
+{
+    const Point2 *p = frame.GetArg&lt;const Point2 *&gt;(0);
+    frame.SetReturnValue(int32_t(p-&gt;x * p-&gt;x + p-&gt;y * p-&gt;y));
+}
+
+void Point2__X__get(Bond::StackFrame &amp;frame)
+{
+    const Point2 *p = frame.GetArg&lt;const Point2 *&gt;(0);
+    frame.SetReturnValue(p-&gt;x);
+}
+
+void Point2__X__set(Bond::StackFrame &amp;frame)
+{
+    Point2 *p = frame.GetArg&lt;Point2 *&gt;(0);
+    p-&gt;x = frame.GetArg&lt;int32_t&gt;(1);
+}
+
+// The remaining functions are implemented similarly.
+
+}</pre>
+
+<p>Finally, the application registers the binding collection with the <span class="token">Bond::CboLoader</span> that loads the compiled Bond code, which must include the CBO file containing the native declarations (<span class="token">geo.cbo</span> in this example). When the code is loaded, every native function is bound to its C++ implementation by name. Loading fails if a native function of the loaded code has no implementation, or if a binding names a function that is not a native function of the loaded code.</p>
+
+<pre class="code">Bond::CboLoader cboLoader(allocator);
+Bond::LoadAllLibs(cboLoader);                        // The Standard Bond Library.
+cboLoader.AddNativeBinding(GEO_BINDING_COLLECTION);  // The application's native functions.
+cboLoader.AddCboFile(geoCboStream);                  // geo.cbo
+cboLoader.AddCboFile(appCboStream);                  // The application's Bond code.
+Bond::CodeSegmentHandle codeSegmentHandle = cboLoader.Load();</pre>
+
+<p>Note that the <span class="token">bond</span> command line tool only binds the native functions of the Standard Bond Library, so programs that use other native functions must be run by an application that registers their bindings.</p>
 
 
 <br>
