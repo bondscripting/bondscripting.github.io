@@ -2263,7 +2263,7 @@ cboLoader.AddCboFile(geoCboStream);                  // geo.cbo
 cboLoader.AddCboFile(appCboStream);                  // The application's Bond code.
 Bond::CodeSegmentHandle codeSegmentHandle = cboLoader.Load();</pre>
 
-<p>Note that the <span class="token">bond</span> command line tool only binds the native functions of the Standard Bond Library, so programs that use other native functions must be run by an application that registers their bindings.</p>
+<p>Note that the <span class="token">bond</span> command line tool only binds the native functions of the Standard Bond Library, so programs that use other native functions must be run by an application that registers their bindings. <a href="embedding.html#native_functions">Embedding Bond</a> describes how an application does this, and how it <a href="embedding.html#loading">loads</a> and runs Bond code.</p>
 
 
 <br>

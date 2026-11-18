@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bond Programming Language</title>
+<link rel="stylesheet" type="text/css" href="css/bond.css">
+</head>
+
+<body>
+<div class="page">
+
+<div class="header">
+<img class="headlogo" src="img/bond_logo_90x124.png" alt="Bond Logo">
+<p class="prodid">Bond</p>
+</div>
+
+<ul class="navbar">
+<li class="navbutton"><a href="index.html">Home</a></li>
+<li class="navbutton"><a href="documentation.html">Documentation</a></li>
+<li class="navbutton"><a href="download.html">Download</a></li>
+<li class="navbutton"><a href="license.html">License</a></li>
+</ul>
+
+<div class="content">
+
+<h2 id="embedding">Embedding Bond</h2>
+<p>This guide explains how to add Bond to a C++ application. It covers getting the source code, building the Bond Runtime Library and linking it into an application, and then each step of using its API: compiling Bond source code, loading the compiled code, binding native functions, initializing global data, creating virtual machines and calling Bond functions. A <a href="#example">complete example</a> puts all of the steps together.</p>
+<p>The guide shows <i>how</i> to do these things. For <i>why</i> the runtime works the way it does, including where memory is allocated, what is shared between virtual machines and the pitfalls to avoid, read <a href="architecture.html">The Bond Architecture</a>. Every class and function mentioned here is described in detail in the <a href="cppapi/html/index.html">C++ API documentation</a>.</p>
+
+<ul class="toc">
+<li class="toc_h2"><a href="#overview">Overview</a></li>
+<li class="toc_h2"><a href="#requirements">Requirements</a></li>
+<li class="toc_h2"><a href="#source">Getting the Source</a></li>
+<li class="toc_h2"><a href="#building">Building and Linking</a></li>
+<li class="toc_h3"><a href="#cmake_subproject">CMake Subproject</a></li>
+<li class="toc_h3"><a href="#prebuilt">Linking a Prebuilt Library</a></li>
+<li class="toc_h3"><a href="#own_build">Adding the Sources to Your Own Build</a></li>
+<li class="toc_h3"><a href="#shared">Shared Library</a></li>
+<li class="toc_h3"><a href="#configuration">Configuration Macros</a></li>
+<li class="toc_h2"><a href="#compiling">Compiling Bond Source</a></li>
+<li class="toc_h3"><a href="#bondc">With bondc</a></li>
+<li class="toc_h3"><a href="#compiler_api">With the Compiler API</a></li>
+<li class="toc_h2"><a href="#loading">Loading a Code Segment</a></li>
+<li class="toc_h2"><a href="#native_functions">Native Functions</a></li>
+<li class="toc_h3"><a href="#native_workflow">Declaring, Generating and Registering</a></li>
+<li class="toc_h3"><a href="#native_impl">Implementing Native Functions</a></li>
+<li class="toc_h3"><a href="#native_manual">Writing a Binding Collection by Hand</a></li>
+<li class="toc_h2"><a href="#static_initializers">Running Static Initializers</a></li>
+<li class="toc_h2"><a href="#vm">Creating a Virtual Machine</a></li>
+<li class="toc_h2"><a href="#calling">Calling Bond Functions</a></li>
+<li class="toc_h2"><a href="#errors">Handling Errors</a></li>
+<li class="toc_h2"><a href="#example">A Complete Example</a></li>
+<li class="toc_h2"><a href="#misc">Other Things Worth Knowing</a></li>
+</ul>
+
+<h2 id="overview">Overview</h2>
+<p>An application can embed Bond in one of two ways:</p>
+<ul>
+<li><b>Runtime only.</b> Bond source files are compiled ahead of time into CBO files by the <span class="token">bondc</span> command line compiler, for example as a build step or in an asset pipeline. The application only loads and runs the compiled code. This is the usual choice, since it keeps the compiler out of the application entirely.</li>
+<li><b>Runtime and compiler.</b> The application, or a tool such as an editor, also compiles Bond source code itself through the compiler API. This is useful for tools, for live editing of scripts and for applications that accept source code at run time.</li>
+</ul>
+<p>Either way, running Bond code always takes the same steps:</p>
+<ol>
+<li>Choose an <span class="token">Allocator</span> through which Bond allocates memory.</li>
+<li>Add the Bond Standard Library, the application's native bindings and the application's CBO files to a <span class="token">CboLoader</span>, and call <span class="token">Load()</span> to link them into a <span class="token">CodeSegment</span>.</li>
+<li>Create one or more <span class="token">VM</span>s that execute the code segment.</li>
+<li>Run the code segment's static initializers once.</li>
+<li>Call Bond functions.</li>
+</ol>
+<p>Figure 5 of <a href="architecture.html#memory">The Bond Architecture</a> shows these phases and the memory allocated by each of them.</p>
+
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>A C++17 compiler. Bond is developed with MSVC, GCC and Clang.</li>
+<li>C++ exception support. The runtime reports errors by throwing <span class="token">Bond::Exception</span>.</li>
+<li>A little-endian target. <span class="token">bond/conf.h</span> stops the compilation on other targets.</li>
+<li>CBO files compiled for the target's pointer size. A runtime built for 64-bit pointers only loads CBO files compiled with <span class="token">bondc -p64</span>, and likewise for 32 bits. By default, <span class="token">bondc</span> compiles for the pointer size of the platform it runs on.</li>
+</ul>
+
+<h2 id="source">Getting the Source</h2>
+<p>The source code is hosted on GitHub. See the <a href="download.html">Download</a> page, or clone the repository directly:</p>
+<pre class="code">git clone https://github.com/bondscripting/bond.git</pre>
+<p>Many applications add the repository as a Git submodule or copy it into a directory of third party code, so that the version of Bond is pinned along with the application. The repository is organized as follows:</p>
+<table>
+<tr><th>Path</th><th>Contents</th></tr>
+<tr><td><span class="token">include/bond/</span></td><td>The public headers. The <span class="token">include</span> directory is the only include path an application needs. Headers are included as <span class="token">"bond/&lt;area&gt;/&lt;file&gt;.h"</span>.</td></tr>
+<tr><td><span class="token">source/</span></td><td>The sources of the Bond Runtime Library, including the compiled Bond Standard Library embedded as C++ arrays.</td></tr>
+<tr><td><span class="token">lib/include/</span></td><td>The Bond declarations of the Bond Standard Library, such as <span class="token">io.bond</span> and <span class="token">math.bond</span>. Copies of them are embedded in the library, so they are only needed for reference.</td></tr>
+<tr><td><span class="token">tools/</span></td><td>The command line tools: the compiler <span class="token">bondc</span>, the virtual machine <span class="token">bond</span>, the disassembler <span class="token">bondd</span> and <span class="token">prettyprint</span>.</td></tr>
+<tr><td><span class="token">CMakeLists.txt</span>, <span class="token">Makefile.*</span>, <span class="token">vs/</span></td><td>Build files for CMake, Make and Visual Studio.</td></tr>
+<tr><td><span class="token">README.md</span></td><td>Build instructions and the command line options of the tools.</td></tr>
+</table>
+
+<h2 id="building">Building and Linking</h2>
+<p>Bond builds as a library named <span class="token">bond</span>, static by default. The build also produces the command line tools, which an application typically uses in its build to compile its scripts. There are several ways to build Bond and link it into an application.</p>
+
+<h3 id="cmake_subproject">CMake Subproject</h3>
+<p>For an application that is built with CMake, the simplest way to use Bond is to add its source tree as a subdirectory and link the <span class="token">bond_lib</span> target:</p>
+<pre class="code"># Bond's tests and utilities are not needed by the application.
+set(BOND_BUILD_TESTS OFF CACHE BOOL "" FORCE)
+set(BOND_BUILD_TEST_FRAMEWORK OFF CACHE BOOL "" FORCE)
+set(BOND_BUILD_UTILS OFF CACHE BOOL "" FORCE)
+add_subdirectory(external/bond)
+
+add_executable(mygame main.cpp)
+target_link_libraries(mygame PRIVATE bond_lib)</pre>
+<p>Linking <span class="token">bond_lib</span> provides everything an application needs to compile against Bond: the include path, the <span class="token">BOND_ASSERTS_ENABLED=0</span> definition in all configurations except Debug, the <span class="token">BOND_SHARED</span> definition when Bond is a <a href="#shared">shared library</a>, and on MSVC, the debugger visualizers for Bond's types.</p>
+<p>The tools remain available as the targets <span class="token">bondc</span>, <span class="token">bond</span>, <span class="token">bondd</span> and <span class="token">prettyprint</span>. They are only built if something depends on them, so leaving <span class="token">BOND_BUILD_TOOLS</span> on costs nothing. It allows the application's build to compile its scripts with the freshly built <span class="token">bondc</span>, as the <a href="#example">complete example</a> does. When cross-compiling, <span class="token">bondc</span> must instead be built separately for the build machine.</p>
+
+<h3 id="prebuilt">Linking a Prebuilt Library</h3>
+<p>Bond can also be built on its own, and the resulting library linked like any other third party library. With CMake, run the following from the root of the Bond repository:</p>
+<pre class="code">cmake -S . -B build
+cmake --build build --config Release --target bond_lib tools</pre>
+<p>The library is written to <span class="token">build/lib</span>, as <span class="token">libbond.a</span> with GCC and Clang and as <span class="token">bond.lib</span> with MSVC, and the tools to <span class="token">build/bin</span>. Multi-configuration generators, such as Visual Studio's, add a subdirectory for the configuration, such as <span class="token">build/lib/Release</span>. The <span class="token">--config</span> option only applies to those generators. For the others, choose the configuration with <span class="token">-DCMAKE_BUILD_TYPE=Release</span> when configuring.</p>
+<p>The README describes the alternatives:</p>
+<ul>
+<li><b>Make.</b> Link one of the provided Makefiles, for example <span class="token">ln -s Makefile.gcc Makefile</span>, then run <span class="token">make</span> for the library and <span class="token">make tools</span> for the tools. They are written to <span class="token">build/lib/bond.a</span> and <span class="token">build/bin</span>.</li>
+<li><b>Visual Studio.</b> Open <span class="token">vs/bond.slnx</span> in Visual Studio 2026 with the Desktop development with C++ workload. The library is written to <span class="token">build/&lt;Configuration&gt;/lib</span>.</li>
+</ul>
+<p>To compile the application, add Bond's <span class="token">include</span> directory to its include path, link the library, and on Windows also link <span class="token">shell32</span>. The application must be compiled with the same <a href="#configuration">configuration macros</a> as the library. In particular, CMake and Visual Studio build the Release library with <span class="token">BOND_ASSERTS_ENABLED=0</span>, so the application must define it too.</p>
+
+<h3 id="own_build">Adding the Sources to Your Own Build</h3>
+<p>Bond has no dependencies besides the C++ standard library, so its sources can also be compiled directly as part of the application's own build system. Compile every <span class="token">source/*.cpp</span> file as C++17, with both <span class="token">include</span> and <span class="token">source</span> on the include path. On MSVC, also compile with <span class="token">/utf-8</span>, and link <span class="token">shell32</span> on Windows. The application's own code only needs <span class="token">include</span>.</p>
+
+<h3 id="shared">Shared Library</h3>
+<p>Bond can also be built as a shared library by configuring CMake with <span class="token">-DBUILD_SHARED_LIBS=ON</span>. A few additional rules apply:</p>
+<ul>
+<li>Code that uses the shared library must be compiled with <span class="token">BOND_SHARED</span> defined. CMake does this automatically for targets that link <span class="token">bond_lib</span>.</li>
+<li>On Windows, <span class="token">bond.dll</span> must be found at run time, typically by placing it next to the executable.</li>
+<li>Compile the application with the same compiler, standard library and build configuration as the library, because Bond's public types use standard library containers.</li>
+<li>Native bindings that are compiled <i>into</i> a shared library and exported from it must be generated with <span class="token">bondc -e BOND_API -x bond/conf.h</span>, so that their declarations are exported. Bindings compiled into the application itself need neither option.</li>
+</ul>
+
+<h3 id="configuration">Configuration Macros</h3>
+<p>Bond's compile-time configuration is defined in <span class="token">bond/conf.h</span>. Each macro can be overridden on the command line, or in a header named by <span class="token">USER_BOND_CONFIG_HEADER</span>, which <span class="token">conf.h</span> includes before giving the macros their default values.</p>
+<table>
+<tr><th>Macro</th><th>Default</th><th>Effect</th></tr>
+<tr><td><span class="token">BOND_RUNTIME_CHECKS_ENABLED</span></td><td>1</td><td>Validates the use of the runtime API, such as the types and number of arguments passed to and read from functions, and the use of null streams by the Standard Library. Violations throw a <span class="token">Bond::Exception</span>. Disabling the checks removes their overhead, but makes mistakes undefined behavior.</td></tr>
+<tr><td><span class="token">BOND_ASSERTS_ENABLED</span></td><td>1</td><td>Enables Bond's internal consistency checks. CMake and Visual Studio set it to 0 in all configurations except Debug.</td></tr>
+<tr><td><span class="token">BOND_FILESYSTEM_PREFIX</span></td><td><span class="token">""</span></td><td>A string prepended to every file name opened by a <span class="token">StdioStreamFactory</span>.</td></tr>
+<tr><td><span class="token">BOND_MAX_PATH_LENGTH</span></td><td>1024</td><td>The maximum length of a file path, in bytes. Longer paths fail to open.</td></tr>
+<tr><td><span class="token">BOND_PATH_SEPARATOR</span>, <span class="token">BOND_PATH_SEPARATOR_CHAR</span></td><td><span class="token">"\\"</span> on Windows, <span class="token">"/"</span> elsewhere</td><td>The file path separator, as a string and as a character. They must be overridden together.</td></tr>
+</table>
+<div class="warning">
+<p><b>The library and the application must be compiled with the same configuration.</b> Parts of the runtime, such as <span class="token">StackFrame::GetArg()</span> and <span class="token">InvocationStackFrame::PushArg()</span>, are templates that are compiled into the application, and their behavior depends on these macros. The simplest way to keep the configuration consistent is to set it in a header named by <span class="token">USER_BOND_CONFIG_HEADER</span>, or with CMake, as public compile definitions of the library, for example <span class="token">target_compile_definitions(bond_lib PUBLIC BOND_RUNTIME_CHECKS_ENABLED=0)</span>.</p>
+</div>
+
+<h2 id="compiling">Compiling Bond Source</h2>
+<p>Compiling is optional for the application. An application that only runs code compiled ahead of time never needs the compiler. When Bond is linked statically, the linker leaves the compiler out of the executable if the application does not use it.</p>
+
+<h3 id="bondc">With bondc</h3>
+<p>The <span class="token">bondc</span> command line compiler compiles one or more Bond source files into a single CBO file:</p>
+<pre class="code">bondc -o game.cbo player.bond enemies.bond
+bondc -p32 -o game32.cbo player.bond enemies.bond   # For a target with 32-bit pointers.</pre>
+<p>Code is generated for the input files only. Files that are merely included, with an <a href="language.html#diff_include">include directive</a>, provide declarations but no code. Their code must come from another CBO file that is loaded at the same time, which is how the Standard Library's headers, such as <span class="token">io.bond</span>, work. The include files of the Standard Library are built into <span class="token">bondc</span>, and the <span class="token">-I</span> option adds directories in which to search for other included files. The README lists all of <span class="token">bondc</span>'s options.</p>
+
+<h3 id="compiler_api">With the Compiler API</h3>
+<p>The compiler consists of a <span class="token">Lexer</span>, a <span class="token">Parser</span> and a <span class="token">SemanticAnalyzer</span>, coordinated by a <span class="token">FrontEnd</span>, followed by a <span class="token">CodeGenerator</span>. They are described in <a href="architecture.html#compiler">The Bond Architecture</a>. The following function compiles a list of source files into a CBO file in memory. It is how <span class="token">bondc</span> itself works, except that <span class="token">bondc</span> writes the CBO to a file.</p>
+<pre class="code">#include "bond/api/libinclude.h"
+#include "bond/compiler/codegenerator.h"
+#include "bond/compiler/compilererror.h"
+#include "bond/compiler/frontend.h"
+#include "bond/compiler/lexer.h"
+#include "bond/compiler/parser.h"
+#include "bond/compiler/semanticanalyzer.h"
+#include "bond/io/memoryoutputstream.h"
+#include "bond/io/memorystreamfactory.h"
+#include "bond/io/stdiooutputstream.h"
+#include "bond/io/stdiostreamfactory.h"
+
+// Compiles the given source files into one CBO in cboBuffer. Returns its size, or 0 on error.
+size_t Compile(Bond::Allocator &allocator, const char *const *fileNames, size_t numFiles,
+    uint8_t *cboBuffer, size_t bufferSize)
+{
+    Bond::CompilerErrorBuffer errorBuffer;
+    Bond::TokenCollectionStore tokenStore((Bond::TokenCollectionStore::allocator_type(&amp;allocator)));
+    Bond::ParseNodeStore parseNodeStore((Bond::ParseNodeStore::allocator_type(&amp;allocator)));
+    Bond::Lexer lexer(allocator, errorBuffer);
+    Bond::Parser parser(allocator, errorBuffer, parseNodeStore);
+    Bond::SemanticAnalyzer analyzer(errorBuffer);
+
+    // Look for files among the embedded Standard Library headers first, then on disk.
+    // Missing files return null, so that they are reported as compiler errors.
+    Bond::StdioStreamFactory fileFactory(allocator, nullptr, nullptr, false);
+    Bond::MemoryStreamFactory stdLibFactory(allocator, Bond::INCLUDE_FILE_INDEX, &amp;fileFactory, false);
+    Bond::FrontEnd frontEnd(allocator, tokenStore, lexer, parser, analyzer, stdLibFactory);
+
+    for (size_t i = 0; i &lt; numFiles; ++i)
+    {
+        frontEnd.AddInputFile(fileNames[i]);
+    }
+    Bond::TranslationUnit *translationUnits = frontEnd.Analyze();
+
+    size_t cboSize = 0;
+    if (!errorBuffer.HasErrors())
+    {
+        Bond::MemoryOutputStream cboStream(cboBuffer, Bond::Stream::pos_t(bufferSize));
+        Bond::CodeGenerator generator(allocator, errorBuffer);
+        generator.Generate(translationUnits, cboStream);
+        cboSize = size_t(cboStream.GetPosition());
+    }
+
+    if (errorBuffer.HasErrors())
+    {
+        Bond::StdErrOutputStream errStream;
+        errorBuffer.Print(errStream);
+        return 0;
+    }
+    if (cboSize &gt;= bufferSize)
+    {
+        // A MemoryOutputStream silently discards what does not fit.
+        return 0;
+    }
+    return cboSize;
+}</pre>
+<p>A few points are worth noting:</p>
+<ul>
+<li><b>Compiler errors are not thrown.</b> They are collected in the <span class="token">CompilerErrorBuffer</span>, so that all of them can be reported at once. Check <span class="token">HasErrors()</span> after analysis and after code generation, and print the errors with <span class="token">Print()</span>, or inspect them one by one. A <span class="token">Bond::Exception</span> can still be thrown for failures that are not errors in the source code, such as a stream factory that cannot open a file and is configured to throw.</li>
+<li><b>Source files are opened through a StreamFactory.</b> Implement the <span class="token">StreamFactory</span> interface to load sources from an asset store, an archive or the network. <span class="token">INCLUDE_FILE_INDEX</span> contains the include files of the Standard Library. Placing a <span class="token">MemoryStreamFactory</span> for it in front of the application's factory, as above, resolves directives such as <span class="token">include "io.bond";</span> without accessing the file system.</li>
+<li><b>Pointer size.</b> To compile for a target whose pointer size differs from the compiler's own, pass the pointer size to both <span class="token">SemanticAnalyzer::SetPointerSize()</span>, before calling <span class="token">Analyze()</span>, and the <span class="token">CodeGenerator</span> constructor.</li>
+<li><b>Lifetimes.</b> The parse trees refer to tokens and strings owned by the stores and the FrontEnd, so all of the compiler objects must stay alive until code generation is done. The resulting CBO only needs to stay alive until it has been <a href="#loading">loaded</a>, so the buffer can be reused afterwards.</li>
+<li><b>Allocators.</b> Each compiler object takes an allocator. All of the compiler's memory is released when the objects are destroyed, so a pool or arena allocator that is cleared after compiling works well.</li>
+</ul>
+<p>Tools can also generate native binding files from the parse trees with a <span class="token">NativeBindingGenerator</span>, as <span class="token">bondc</span> does when given the <span class="token">-b</span>, <span class="token">-c</span>, <span class="token">-h</span> and <span class="token">-i</span> options.</p>
+
+<h2 id="loading">Loading a Code Segment</h2>
+<p>A <span class="token">CboLoader</span> combines any number of CBO files into a single <span class="token">CodeSegment</span>, binds native functions to their C++ implementations, and resolves the references between functions and data. <a href="architecture.html#code_segment">The Bond Architecture</a> explains what happens during loading.</p>
+<pre class="code">#include "bond/api/libruntime.h"
+#include "bond/io/stdioinputstream.h"
+#include "bond/vm/cboloader.h"
+#include "bond/vm/codesegment.h"
+
+Bond::CodeSegmentHandle codeSegment;
+{
+    Bond::CboLoader cboLoader(allocator);
+    Bond::LoadAllLibs(cboLoader);                       // The Bond Standard Library.
+    cboLoader.AddNativeBinding(HOST_BINDING_COLLECTION); // The application's native functions.
+    Bond::StdioInputStream hostCbo("host.cbo");          // Throws if the file cannot be opened.
+    Bond::StdioInputStream gameCbo("game.cbo");
+    cboLoader.AddCboFile(hostCbo);
+    cboLoader.AddCboFile(gameCbo);
+    codeSegment = cboLoader.Load();
+} // The loader and the CBO streams are no longer needed.</pre>
+<ul>
+<li><b>Inputs.</b> CBO files are added either as input streams or as buffers in memory, with <span class="token">AddCboFile(data, size)</span>. The loader only refers to them, and to the native binding collections, until <span class="token">Load()</span> copies what it needs into the code segment. They must therefore stay valid until <span class="token">Load()</span> returns, but not longer. Scoping the loader in a block, as above, releases everything that loading needed.</li>
+<li><b>The Standard Library.</b> Its compiled code and native bindings are built into the runtime library. <span class="token">LoadAllLibs()</span> adds all of it. Alternatively, functions such as <span class="token">LoadLibIo()</span> and <span class="token">LoadLibMath()</span> add individual libraries. In that case, add every library whose include file the application's scripts include, directly or indirectly. For example, <span class="token">io.bond</span> includes <span class="token">memory.bond</span>.</li>
+<li><b>Order.</b> Static initializers run in the order in which their CBO files were added. Add libraries before the code that depends on them.</li>
+<li><b>Allocators.</b> The code segment is allocated from the loader's allocator. The second constructor, <span class="token">CboLoader(tempAllocator, permAllocator)</span>, uses separate allocators for the temporary data of loading and for the long-lived code segment.</li>
+<li><b>Errors.</b> <span class="token">Load()</span> throws a <span class="token">Bond::Exception</span> if a CBO file is malformed, was compiled for a different pointer size or format version, or if a function or global is defined twice, a referenced name is not defined, or a native function has no binding.</li>
+</ul>
+<p>The <span class="token">CodeSegmentHandle</span> returned by <span class="token">Load()</span> owns the code segment and frees it when it is destroyed. The code segment must outlive every VM that uses it, so declare the handle before the VMs. Its functions are looked up with <span class="token">GetFunction()</span>, and its global constants with <span class="token">GetDataEntry()</span>, by qualified name with the elements separated by dots, such as <span class="token">"Game.Score"</span>. Both return null if there is no such name.</p>
+
+<h2 id="native_functions">Native Functions</h2>
+<p>Native functions are Bond functions implemented in C++. They are how Bond scripts call into the application. The Bond side of native functions and structs, the C++ functions that implement them and the naming conventions for member functions, getters and setters are described in the <a href="language.html#native_blocks">Native Blocks</a> section of the language reference. This section describes how they fit into an application.</p>
+
+<h3 id="native_workflow">Declaring, Generating and Registering</h3>
+<p>Native functions are declared in a <a href="language.html#native_blocks">native block</a>, usually in a file of their own:</p>
+<pre class="code">// host.bond
+native
+{
+    namespace Host
+    {
+        int GetLevel();
+        void Log(const char *message);
+    }
+}</pre>
+<p><span class="token">bondc</span> compiles the file and generates the C++ declarations of the native functions, along with a <i>native binding collection</i> that maps their names to their implementations:</p>
+<pre class="code">bondc -o host.cbo -b HOST_BINDING_COLLECTION -c hostbindings.cpp -h hostbindings.h -i hostbindings.h host.bond</pre>
+<p>The generated header looks like this:</p>
+<pre class="code">#ifndef HOSTBINDINGS_H
+#define HOSTBINDINGS_H
+
+#include "bond/api/nativebinding.h"
+
+extern const Bond::NativeBindingCollection HOST_BINDING_COLLECTION;
+
+namespace Host
+{
+void GetLevel(Bond::StackFrame &amp;frame);
+void Log(Bond::StackFrame &amp;frame);
+}
+
+#endif</pre>
+<p>The application compiles <span class="token">hostbindings.cpp</span>, implements the declared functions, and registers the collection with the CboLoader, as shown in the <a href="#loading">previous section</a>. Scripts that use the functions include <span class="token">host.bond</span>.</p>
+<div class="warning">
+<p><b>The CBO compiled from the native declarations must be loaded.</b> Including <span class="token">host.bond</span> in a script makes the native functions known to the compiler, but does not generate them into the script's CBO file. Unless <span class="token">host.cbo</span> is also loaded, or <span class="token">host.bond</span> is passed to <span class="token">bondc</span> as an input file along with the scripts, loading fails with an error such as <span class="token">Unresolved qualified name 'Host.GetLevel'</span>.</p>
+</div>
+<p>The loader checks the bindings when it loads the code. Loading fails if a native function has no binding, or if a binding names a function that is not a native function of the loaded code. Register a binding collection only together with the CBO file that declares its functions.</p>
+
+<h3 id="native_impl">Implementing Native Functions</h3>
+<p>Each native function receives the <span class="token">StackFrame</span> of its call, from which it reads its arguments and through which it sets its return value:</p>
+<pre class="code">#include "hostbindings.h"
+#include "bond/vm/vm.h"
+#include &lt;cstdio&gt;
+
+namespace Host
+{
+
+void GetLevel(Bond::StackFrame &amp;frame)
+{
+    frame.SetReturnValue(int32_t(3));
+}
+
+void Log(Bond::StackFrame &amp;frame)
+{
+    const char *message = frame.GetArg&lt;const char *&gt;(0);
+    printf("[log] %s\n", message);
+}
+
+}</pre>
+<ul>
+<li><b>Types.</b> <span class="token">GetArg&lt;T&gt;(index)</span> must use the C++ type that corresponds to the parameter's Bond type, as listed under <a href="language.html#primitive_types">Primitive Types</a>. For example, <span class="token">int</span> is <span class="token">int32_t</span>, <span class="token">long</span> is <span class="token">int64_t</span> and <span class="token">bool</span> is <span class="token">uint8_t</span>. Integer types match any Bond integer type of the same size, regardless of signedness. Pointers are passed as pointers, and structs can be passed and returned by value as any trivially copyable C++ type of the same size. With <a href="#configuration">runtime checks</a> enabled, a mismatch throws a <span class="token">Bond::Exception</span>.</li>
+<li><b>Member functions.</b> For native member functions, getters and setters, argument 0 is the <span class="token">this</span> pointer. See <a href="language.html#native_bindings">Implementing and Binding Native Code</a>.</li>
+<li><b>The VM.</b> <span class="token">frame.GetVM()</span> returns the VM executing the call. From it, a native function can get the VM's allocator with <span class="token">GetAllocator()</span>, its standard streams with <span class="token">GetStdOut()</span>, <span class="token">GetStdErr()</span> and <span class="token">GetStdIn()</span>, its <span class="token">StreamFactory</span>, and its <span class="token">CodeSegment</span>.</li>
+<li><b>Application state.</b> Bond has no global variables, and native functions receive only their StackFrame. To reach application state, a native function can use state of its own that is keyed by the VM, or the script can pass it a pointer that it received from the application.</li>
+<li><b>Allocating on behalf of the caller.</b> Memory that should live until the calling Bond function returns can be registered with the <span class="token">Collector</span> of the caller's frame, <span class="token">frame.GetVM().GetCallerStackFrame().GetCollector()</span>. This is how the Standard Library's collected allocation and stream functions work; see <span class="token">source/libmemory.cpp</span>. It is the basis of <a href="language.html#sbrm">scope-based resource management</a>.</li>
+<li><b>Errors.</b> <span class="token">frame.GetVM().RaiseError(format, ...)</span> throws a <span class="token">Bond::Exception</span> whose message is followed by a dump of the Bond call stack.</li>
+<li><b>Calling back into Bond.</b> A native function can <a href="#calling">call Bond functions</a> on the same VM. An error raised in the nested call propagates through the native function, so it must be exception-safe.</li>
+</ul>
+
+<h3 id="native_manual">Writing a Binding Collection by Hand</h3>
+<p>A binding collection is just an array of name and function pairs, so it can also be written by hand, for example for a few functions in a test:</p>
+<pre class="code">const Bond::NativeFunctionBinding HOST_BINDINGS[] =
+{
+    {"Host.GetLevel", Host::GetLevel},
+    {"Host.Log", Host::Log},
+};
+
+const Bond::NativeBindingCollection HOST_BINDING_COLLECTION = {HOST_BINDINGS, 2};</pre>
+<p>Names are fully qualified, with their elements separated by dots. Generated bindings are less error-prone, since they are always consistent with the Bond declarations.</p>
+
+<h2 id="static_initializers">Running Static Initializers</h2>
+<p>Global constants whose values are only known at run time, such as <span class="token">const int BONUS = Square(10);</span>, are initialized by <i>static initializers</i>, which the compiler generates. The application must run them, once, after loading and before calling any other Bond function:</p>
+<pre class="code">codeSegment-&gt;CallStaticInitializers(vm);</pre>
+<p>Any VM that uses the code segment can run them. Any memory that the initializers allocate comes from that VM's allocator.</p>
+<div class="warning">
+<p><b>Static initializers must run exactly once per code segment.</b> If they are never run, the affected constants silently read as zero. If they are run again, or while another VM is running code, they rewrite data that every VM shares. See <a href="architecture.html#globals">Global Data and Static Initialization</a> and <a href="architecture.html#pitfalls">Pitfalls</a>.</p>
+</div>
+
+<h2 id="vm">Creating a Virtual Machine</h2>
+<p>A <span class="token">VM</span> executes the functions of a code segment:</p>
+<pre class="code">#include "bond/io/stdiooutputstream.h"
+#include "bond/vm/vm.h"
+
+Bond::StdOutOutputStream outStream;
+Bond::StdErrOutputStream errStream;
+Bond::VM vm(allocator, *codeSegment, 64 * 1024, nullptr, &amp;outStream, &amp;errStream);</pre>
+<table>
+<tr><th>Parameter</th><th>Description</th></tr>
+<tr><td><span class="token">allocator</span></td><td>The allocator from which the VM's stack is allocated. The Standard Library also allocates from it, as do native functions that use <span class="token">GetAllocator()</span>.</td></tr>
+<tr><td><span class="token">codeSegment</span></td><td>The code segment to execute. It is not copied, so it must outlive the VM.</td></tr>
+<tr><td><span class="token">stackSize</span></td><td>The size of the VM's stack in bytes, which is fixed for the lifetime of the VM. The <span class="token">bond</span> tool uses 256 kB by default.</td></tr>
+<tr><td><span class="token">stdIn</span>, <span class="token">stdOut</span>, <span class="token">stdErr</span></td><td>Optional. The streams returned by the Standard Library's <span class="token">StdIn()</span>, <span class="token">StdOut()</span> and <span class="token">StdErr()</span>. Any <span class="token">InputStream</span> or <span class="token">OutputStream</span> will do, so output can be redirected to a log or captured in memory.</td></tr>
+<tr><td><span class="token">streamFactory</span></td><td>Optional. The factory through which the Standard Library opens files. A <span class="token">StdioStreamFactory</span> opens files on disk, optionally relative to a root path. A custom factory can restrict or redirect the files that scripts can access.</td></tr>
+</table>
+<ul>
+<li><b>Missing streams.</b> The streams and the factory default to null. With runtime checks enabled, a script that uses a missing stream, or that opens a file without a factory, fails with a <span class="token">Bond::Exception</span>. Without runtime checks, it crashes. Pass the streams that the application's scripts are expected to use.</li>
+<li><b>Lifetimes.</b> The VM owns none of the objects passed to it. The allocator, the code segment, the streams and the factory must all outlive it.</li>
+<li><b>Stack size.</b> Creating a VM makes exactly one allocation: its stack. The stack must hold the deepest chain of calls the scripts make. Each Bond call also uses the native stack of the thread that runs the VM, so a very large VM stack used for deep recursion can overflow the native stack first. See <a href="architecture.html#pitfalls">Pitfalls</a>.</li>
+<li><b>Many VMs, many threads.</b> Any number of VMs can share one code segment, each costing only its stack. A VM must only be used by one thread at a time, and Bond performs no synchronization. See <a href="architecture.html#sharing">Sharing a Code Segment Between VMs</a>.</li>
+</ul>
+
+<h2 id="calling">Calling Bond Functions</h2>
+<p>The simplest way to call a Bond function is <span class="token">VM::CallFunction()</span>, which takes a pointer to where the return value is stored, followed by the arguments. <span class="token">VM::CallVoidFunction()</span> does the same for functions that return <span class="token">void</span>. Functions can be identified by name, but looking them up once and reusing the <span class="token">const Function *</span> avoids a binary search on every call:</p>
+<pre class="code">const Bond::Function *score = codeSegment-&gt;GetFunction("Game.Score");
+if (score != nullptr)
+{
+    int32_t result = 0;
+    vm.CallFunction(*score, &amp;result, int32_t(5));
+}
+
+vm.CallVoidFunction("Game.Reset");</pre>
+<p>When the arguments are not all known in one place, an <span class="token">InvocationStackFrame</span> builds the call argument by argument:</p>
+<pre class="code">int32_t result = 0;
+{
+    Bond::InvocationStackFrame frame(vm, *score, &amp;result);
+    frame.PushArg(int32_t(5));
+    frame.Call();
+}</pre>
+<p>An InvocationStackFrame pushes a frame onto the VM's call stack when it is constructed and pops it when it is destroyed, so it should be a local variable that goes out of scope right after the call.</p>
+<ul>
+<li><b>Argument types.</b> Arguments follow the same rules as <a href="#native_impl">native function arguments</a>. Use fixed-width types, such as <span class="token">int32_t(5)</span> rather than <span class="token">5L</span>, whose size differs between platforms. Pointers to the application's data can be passed directly. Bond reads and writes through them like C does, without conversion or copying.</li>
+<li><b>Return types.</b> Integers smaller than 32 bits are returned widened to 32 bits, so a Bond function that returns <span class="token">bool</span>, <span class="token">char</span> or <span class="token">short</span> must be received in an <span class="token">int32_t</span> or a <span class="token">uint32_t</span>. With runtime checks enabled, a smaller integer type is rejected at compile time.</li>
+<li><b>Checks.</b> With runtime checks enabled, a wrong number of arguments, or a wrong argument or return type, throws a <span class="token">Bond::Exception</span> before the function runs. For example: <span class="token">Attempt to call a function with incorrect return address type. Expected 'int32_t'.</span></li>
+<li><b>Entry points.</b> Bond has no fixed entry point. An application calls whatever functions it chooses, any number of times. The <span class="token">bond</span> tool, for example, calls <span class="token">main</span> with either no parameters or <span class="token">argc</span> and <span class="token">argv</span>, depending on its signature; see <span class="token">tools/bond.cpp</span>.</li>
+</ul>
+
+<h2 id="errors">Handling Errors</h2>
+<p>All runtime errors are reported by throwing a <span class="token">Bond::Exception</span>. One handler around loading and calling covers everything:</p>
+<pre class="code">try
+{
+    // Load, create the VM, run static initializers and call functions.
+}
+catch (const Bond::Exception &amp;e)
+{
+    fprintf(stderr, "%s\n", e.GetMessage());
+}</pre>
+<ul>
+<li>Errors raised while Bond code runs include a dump of the Bond call stack in the message. The message is stored in a fixed buffer of <span class="token">Exception::MESSAGE_BUFFER_LENGTH</span> bytes inside the exception, so very long messages are truncated.</li>
+<li>As the exception propagates, the VM's call stack is restored and collected resources are released, so the VM can be used again for further calls. Memory that the script allocated with <span class="token">Allocate()</span> and had not freed is leaked, as in C.</li>
+<li>Bond has no exception handling of its own, and a Bond function cannot catch an error. See <a href="architecture.html#errors">Errors</a>.</li>
+</ul>
+
+<h2 id="example">A Complete Example</h2>
+<p>The following example puts the steps together. It uses the <span class="token">host.bond</span> file from the <a href="#native_workflow">Native Functions</a> section and a script that uses it:</p>
+<pre class="code">// game.bond
+include "io.bond";
+include "host.bond";
+
+namespace Game
+{
+    int Square(int x)
+    {
+        return x * x;
+    }
+
+    // Not a compile-time constant, so it is set by the static initializer.
+    const int BONUS = Square(10);
+
+    int Score(int hits)
+    {
+        Host::Log("Scoring");
+        const int score = hits * Host::GetLevel() + BONUS;
+        Bond::StdOut()-&gt;PrintStr("Score: ")-&gt;PrintI(score)-&gt;PrintC('\n');
+        return score;
+    }
+}</pre>
+<p>The application implements the native functions, loads <span class="token">host.cbo</span> and <span class="token">game.cbo</span>, and calls <span class="token">Game.Score</span>:</p>
+<pre class="code">// main.cpp
+#include "hostbindings.h"
+#include "bond/api/libruntime.h"
+#include "bond/io/stdioinputstream.h"
+#include "bond/io/stdiooutputstream.h"
+#include "bond/systems/defaultallocator.h"
+#include "bond/systems/exception.h"
+#include "bond/vm/cboloader.h"
+#include "bond/vm/codesegment.h"
+#include "bond/vm/vm.h"
+#include &lt;cstdio&gt;
+
+// Implementations of the native functions declared in host.bond.
+namespace Host
+{
+
+void GetLevel(Bond::StackFrame &amp;frame)
+{
+    frame.SetReturnValue(int32_t(3));
+}
+
+void Log(Bond::StackFrame &amp;frame)
+{
+    const char *message = frame.GetArg&lt;const char *&gt;(0);
+    printf("[log] %s\n", message);
+}
+
+}
+
+int main()
+{
+    Bond::DefaultAllocator allocator;
+
+    try
+    {
+        // 1. Load the CBO files into a code segment.
+        Bond::CodeSegmentHandle codeSegment;
+        {
+            Bond::CboLoader cboLoader(allocator);
+            Bond::LoadAllLibs(cboLoader);
+            cboLoader.AddNativeBinding(HOST_BINDING_COLLECTION);
+            Bond::StdioInputStream hostCbo("host.cbo");
+            Bond::StdioInputStream gameCbo("game.cbo");
+            cboLoader.AddCboFile(hostCbo);
+            cboLoader.AddCboFile(gameCbo);
+            codeSegment = cboLoader.Load();
+        } // The loader and the CBO streams are no longer needed.
+
+        // 2. Create a VM with a 64 kB stack. Bond's StdOut() writes to outStream.
+        Bond::StdOutOutputStream outStream;
+        Bond::StdErrOutputStream errStream;
+        Bond::VM vm(allocator, *codeSegment, 64 * 1024, nullptr, &amp;outStream, &amp;errStream);
+
+        // 3. Initialize global constants, such as Game::BONUS.
+        codeSegment-&gt;CallStaticInitializers(vm);
+
+        // 4. Look up a function once, then call it.
+        const Bond::Function *score = codeSegment-&gt;GetFunction("Game.Score");
+        if (score == nullptr)
+        {
+            fprintf(stderr, "Game.Score not found\n");
+            return 1;
+        }
+        int32_t result = 0;
+        vm.CallFunction(*score, &amp;result, int32_t(5));
+        printf("Result: %d\n", int(result));
+    }
+    catch (const Bond::Exception &amp;e)
+    {
+        fprintf(stderr, "%s\n", e.GetMessage());
+        return 1;
+    }
+
+    return 0;
+}</pre>
+<p>The CMake project builds Bond as a subproject, uses the <span class="token">bondc</span> it builds to compile the scripts and generate the bindings, and builds the application:</p>
+<pre class="code">cmake_minimum_required(VERSION 3.16)
+project(BondExample LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+set(BOND_BUILD_TESTS OFF CACHE BOOL "" FORCE)
+set(BOND_BUILD_TEST_FRAMEWORK OFF CACHE BOOL "" FORCE)
+set(BOND_BUILD_UTILS OFF CACHE BOOL "" FORCE)
+add_subdirectory(external/bond)
+
+# Compile the scripts and generate the native bindings with bondc.
+set(GEN_DIR ${CMAKE_CURRENT_BINARY_DIR})
+add_custom_command(
+  OUTPUT ${GEN_DIR}/host.cbo ${GEN_DIR}/hostbindings.cpp ${GEN_DIR}/hostbindings.h
+  COMMAND bondc -o host.cbo -b HOST_BINDING_COLLECTION -c hostbindings.cpp
+          -h hostbindings.h -i hostbindings.h ${CMAKE_CURRENT_SOURCE_DIR}/host.bond
+  DEPENDS bondc ${CMAKE_CURRENT_SOURCE_DIR}/host.bond
+  WORKING_DIRECTORY ${GEN_DIR}
+)
+add_custom_command(
+  OUTPUT ${GEN_DIR}/game.cbo
+  COMMAND bondc -o game.cbo ${CMAKE_CURRENT_SOURCE_DIR}/game.bond
+  DEPENDS bondc ${CMAKE_CURRENT_SOURCE_DIR}/game.bond ${CMAKE_CURRENT_SOURCE_DIR}/host.bond
+  WORKING_DIRECTORY ${GEN_DIR}
+)
+
+add_executable(example main.cpp ${GEN_DIR}/hostbindings.cpp ${GEN_DIR}/game.cbo)
+target_include_directories(example PRIVATE ${GEN_DIR})
+target_link_libraries(example PRIVATE bond_lib)</pre>
+<p>Listing <span class="token">game.cbo</span> among the sources of the executable makes the build generate it, even though it is not compiled. The CBO files are written to the build directory, and the program opens them by relative path, so run it from there. With a multi-configuration generator, such as Visual Studio's, the executable is in a subdirectory for the configuration:</p>
+<pre class="code">cmake -S . -B build
+cmake --build build --config Release
+cd build
+Release/example</pre>
+<p>It prints:</p>
+<pre class="code">[log] Scoring
+Score: 115
+Result: 115</pre>
+
+<h2 id="misc">Other Things Worth Knowing</h2>
+<ul>
+<li><b>Custom allocators.</b> All of Bond's memory goes through the <span class="token">Allocator</span> interface. An implementation provides <span class="token">Allocate()</span>, <span class="token">AllocateAligned()</span>, <span class="token">Free()</span> and <span class="token">FreeAligned()</span>. The provided <span class="token">DefaultAllocator</span> uses <span class="token">new</span> and <span class="token">delete</span>. It counts outstanding allocations, which <span class="token">GetNumAllocations()</span> returns, making it easy to check for leaks in tests. The count is not synchronized, so the DefaultAllocator is not thread-safe.</li>
+<li><b>Custom stream factories.</b> Every file that the compiler or the Standard Library opens goes through a <span class="token">StreamFactory</span>. Factories can be chained through their delegate factory, as the compiler example does.</li>
+<li><b>UTF-8 console output on Windows.</b> Bond strings are UTF-8. A console application on Windows can create a <span class="token">Bond::Utf8ConsoleOutput</span> object, declared in <span class="token">bond/tools/commandline.h</span>, to make the console display UTF-8 output while it exists. Libraries that embed Bond should leave the console to their host application.</li>
+<li><b>Versions.</b> <span class="token">bond/version.h</span> defines the version of Bond, <span class="token">Bond::VERSION_STRING</span>, and the range of CBO format versions the runtime can load. The CBO format has not been finalized, so rebuild all CBO files when upgrading Bond.</li>
+<li><b>Debugging.</b> With MSVC, the CMake build embeds debugger visualizers for Bond's types, such as VMs and stack frames. While a VM is stopped in a native debugger, <span class="token">BondDebugDumpCallStack(&amp;vm)</span> returns its Bond call stack as a string. The <span class="token">bondd</span> tool disassembles CBO files, and the <span class="token">@ pc</span> offsets in call stack dumps refer to its listings.</li>
+</ul>
+
+<br>
+</div> <!--content-->
+
+</div> <!--page-->
+</body>
+</html>

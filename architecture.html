@@ -25,7 +25,7 @@
 <div class="content">
 
 <h2 id="architecture">The Bond Architecture</h2>
-<p>This document describes how Bond is put together: how source code becomes bytecode, how that bytecode is loaded, and how it runs inside an application. While it covers the compiler briefly, most of it is about the runtime, because the runtime's properties determine whether Bond is well suited to an application. These properties include when memory is allocated, what is shared, what happens when something goes wrong, and what Bond does not do for you. If you are comparing Bond with other embeddable scripting languages, such as Lua, the <a href="#runtime">runtime</a> and <a href="#pitfalls">pitfalls</a> sections are the ones to read.</p>
+<p>This document describes how Bond is put together: how source code becomes bytecode, how that bytecode is loaded, and how it runs inside an application. While it covers the compiler briefly, most of it is about the runtime, because the runtime's properties determine whether Bond is well suited to an application. These properties include when memory is allocated, what is shared, what happens when something goes wrong, and what Bond does not do for you. If you are comparing Bond with other embeddable scripting languages, such as Lua, the <a href="#runtime">runtime</a> and <a href="#pitfalls">pitfalls</a> sections are the ones to read. For step-by-step instructions on building Bond and using its API, see <a href="embedding.html">Embedding Bond</a>.</p>
 
 <ul class="toc">
 <li class="toc_h2"><a href="#overview">Overview</a></li>
@@ -165,7 +165,7 @@
 <figcaption>Figure 5. The lifecycle of an embedded Bond runtime, and where allocations happen.</figcaption>
 </figure>
 
-<p>The following sketch shows these phases in C++. Error handling and the application's own native bindings are omitted.</p>
+<p>The following sketch shows these phases in C++. Error handling and the application's own native bindings are omitted. <a href="embedding.html#example">Embedding Bond</a> has a complete program.</p>
 <pre class="code">Bond::DefaultAllocator allocator;
 
 // 1. Load: link the CBOs into a single CodeSegment.
