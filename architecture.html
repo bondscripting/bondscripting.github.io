@@ -78,8 +78,9 @@
 <ul>
 <li>A CBO file is compiled for a specific pointer size, 32 or 64 bits (<span class="token">bondc -p32</span> or <span class="token">-p64</span>, defaulting to the compiler's own). The runtime refuses to load a CBO whose pointer size differs from its own. Multi-byte values are stored in little-endian order, and Bond only supports little-endian targets. A CBO file does not otherwise depend on the platform.</li>
 <li>Functions implemented in C++ are declared in Bond <a href="language.html#native_blocks">native blocks</a>. Their bodies are absent from the CBO. They are bound to C++ functions when the CBO is loaded. The compiler can also generate the C++ boilerplate for those bindings (<span class="token">bondc -b -c -h -i</span>). This is how the whole Bond Standard Library is implemented.</li>
-<li>The CBO format has not been finalized. A runtime only accepts a limited range of format versions, and that range may change between releases, so rebuild CBO files when upgrading Bond.</li>
+<li>A runtime only loads CBO files whose format version is in the range that it supports.</li>
 </ul>
+<p>The layout of CBO files is specified in the <a href="https://github.com/bondscripting/bond/blob/master/docs/cbo-file-format.md">CBO File Format</a> document.</p>
 
 <h2 id="runtime">The Runtime</h2>
 
@@ -137,7 +138,7 @@
 <p>The application calls Bond functions by qualified name or through a <span class="token">const Function *</span> looked up in advance. It can use <span class="token">VM::CallFunction()</span> and <span class="token">VM::CallVoidFunction()</span>, or build a call argument by argument with an <span class="token">InvocationStackFrame</span>. When runtime checks are enabled, the default (<span class="token">BOND_RUNTIME_CHECKS_ENABLED</span>), the argument and return types used by the host are validated against the function's signature.</p>
 
 <h3 id="execution">Execution Model</h3>
-<p>The VM is a stack-based bytecode interpreter. Each function call gets a frame on the VM stack holding its arguments, its local variables and its operand stack. The compiler computes the size of the locals and the maximum depth of the operand stack for every function. Before each call, the VM checks that the callee's frame fits in the remaining stack space, and throws an exception if it does not. Within a function, no further bounds checks on the stack are needed.</p>
+<p>The VM is a stack-based bytecode interpreter. Each function call gets a frame on the VM stack holding its arguments, its local variables and its operand stack. The compiler computes the size of the locals and the maximum depth of the operand stack for every function. Before each call, the VM checks that the callee's frame fits in the remaining stack space, and throws an exception if it does not. Within a function, no further bounds checks on the stack are needed. The instructions are specified in the <a href="https://github.com/bondscripting/bond/blob/master/docs/instruction-set.md">Bond Instruction Set</a> document.</p>
 <p>Calls between Bond and C++ work in both directions. A native function receives the StackFrame of its call, reads its arguments with <span class="token">GetArg&lt;T&gt;()</span>, and sets its return value with <span class="token">SetReturnValue()</span>. It may call back into Bond on the same VM. Arguments and return values use Bond's fixed-width types and C-like struct layout, so data can be exchanged with C++ without conversion.</p>
 <p>Each call made by Bond code also makes a nested call on the host thread's C++ stack. A deep chain of Bond calls therefore uses native stack space as well as VM stack space (see <a href="#pitfalls">Pitfalls</a>).</p>
 
