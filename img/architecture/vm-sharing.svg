@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="400" viewBox="0 0 900 400">
+<title>Several VMs sharing one CodeSegment</title>
+<style>
+text { font-family: Arial, Helvetica, sans-serif; font-size: 13px; fill: #202020; }
+.c { text-anchor: middle; }
+.b { font-weight: bold; }
+.s { font-size: 11px; fill: #404040; }
+.w { fill: #FFFFFF; }
+.navy { fill: #304860; stroke: #304860; stroke-width: 1.5; }
+.panel { fill: #EEF2F7; stroke: #304860; stroke-width: 1.5; }
+.box { fill: #FFFFFF; stroke: #304860; stroke-width: 1.2; }
+.line { stroke: #304860; stroke-width: 1.5; fill: none; }
+.warn { fill: #FBEAEA; stroke: #B03030; stroke-width: 1.5; }
+.warntext { fill: #802020; }
+</style>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M0,0 L10,5 L0,10 z" fill="#304860"/>
+</marker>
+</defs>
+
+<!-- Shared code segment -->
+<rect class="navy" x="290" y="15" width="320" height="80" rx="6"/>
+<text class="c b w" x="450" y="42">CodeSegment</text>
+<text class="c w" x="450" y="62">bytecode, constants, global constants</text>
+<text class="c w" x="450" y="80">loaded once, read-only after initialization</text>
+
+<!-- References -->
+<path class="line" d="M145,165 V130 Q145,120 155,120 H380 Q390,120 390,110 V97" marker-end="url(#arrow)"/>
+<line class="line" x1="450" y1="165" x2="450" y2="97" marker-end="url(#arrow)"/>
+<path class="line" d="M755,165 V130 Q755,120 745,120 H520 Q510,120 510,110 V97" marker-end="url(#arrow)"/>
+<text class="c s" x="268" y="113">const CodeSegment &amp;</text>
+<text class="c s" x="632" y="113">const CodeSegment &amp;</text>
+
+<!-- VM 1 -->
+<rect class="panel" x="15" y="165" width="260" height="165" rx="6"/>
+<text class="b" x="30" y="188">VM 1</text>
+<text class="s" x="265" y="188" text-anchor="end">used by thread A</text>
+<rect class="box" x="30" y="200" width="230" height="26" rx="3"/>
+<text x="42" y="218">Stack (fixed size, owned)</text>
+<rect class="box" x="30" y="232" width="230" height="26" rx="3"/>
+<text x="42" y="250">Call stack of StackFrames</text>
+<rect class="box" x="30" y="264" width="230" height="26" rx="3"/>
+<text x="42" y="282">Allocator</text>
+<rect class="box" x="30" y="296" width="230" height="26" rx="3"/>
+<text x="42" y="314">std streams, StreamFactory</text>
+
+<!-- VM 2 -->
+<rect class="panel" x="320" y="165" width="260" height="165" rx="6"/>
+<text class="b" x="335" y="188">VM 2</text>
+<text class="s" x="570" y="188" text-anchor="end">used by thread B</text>
+<rect class="box" x="335" y="200" width="230" height="26" rx="3"/>
+<text x="347" y="218">Stack (fixed size, owned)</text>
+<rect class="box" x="335" y="232" width="230" height="26" rx="3"/>
+<text x="347" y="250">Call stack of StackFrames</text>
+<rect class="box" x="335" y="264" width="230" height="26" rx="3"/>
+<text x="347" y="282">Allocator</text>
+<rect class="box" x="335" y="296" width="230" height="26" rx="3"/>
+<text x="347" y="314">std streams, StreamFactory</text>
+
+<!-- VM N -->
+<rect class="panel" x="625" y="165" width="260" height="165" rx="6"/>
+<text class="b" x="640" y="188">VM N</text>
+<text class="s" x="875" y="188" text-anchor="end">used by thread B</text>
+<rect class="box" x="640" y="200" width="230" height="26" rx="3"/>
+<text x="652" y="218">Stack (fixed size, owned)</text>
+<rect class="box" x="640" y="232" width="230" height="26" rx="3"/>
+<text x="652" y="250">Call stack of StackFrames</text>
+<rect class="box" x="640" y="264" width="230" height="26" rx="3"/>
+<text x="652" y="282">Allocator</text>
+<rect class="box" x="640" y="296" width="230" height="26" rx="3"/>
+<text x="652" y="314">std streams, StreamFactory</text>
+
+<!-- Warning -->
+<rect class="warn" x="15" y="348" width="870" height="42" rx="4"/>
+<text class="c b warntext" x="450" y="366">No locks anywhere: use each VM from one thread at a time.</text>
+<text class="c warntext" x="450" y="382">The allocators, streams and native functions that VMs share must be thread-safe themselves.</text>
+</svg>

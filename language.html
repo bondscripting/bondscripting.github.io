@@ -215,7 +215,7 @@ const int BAZ = Foo::BAR;</pre>
 <p>Another aspect borrowed from C++ is struct member functions. See the section on <a href="#struct_types">Structure Types</a> for further details.</p>
 
 <h4 id="diff_no_globals">No global or static variables</h4>
-<p>Global constants are permitted, however, global variables are not. (TODO: see the documentation on the Virtual Machine Architecture for the justification.)</p>
+<p>Global constants are permitted, however, global variables are not. The <a href="architecture.html#globals">Bond Architecture</a> document explains why.</p>
 
 <pre class="code">const int[2][3] GLOBAL_CONSTANT = {{1, 2, 3}, {4, 5, 6}}; // Permitted
 int[2][3] GLOBAL_VARIABLE = {{1, 2, 3}, {4, 5, 6}};       // Error</pre>

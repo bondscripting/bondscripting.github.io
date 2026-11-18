@@ -285,8 +285,52 @@ div.code
     padding: 16px 4px 16px 0;
 }
 
+figure.diagram
+{
+    margin: 24px 16px;
+    text-align: center;
+}
+
+figure.diagram img
+{
+    height: auto;
+    max-width: 100%;
+}
+
+figure.diagram figcaption
+{
+    color: #404040;
+    font-size: 0.9em;
+    margin-top: 8px;
+}
+
+.note, .warning
+{
+    background-color: #E8EDF3;
+    border-left: 4px solid #304860;
+    margin: 16px;
+    padding: 1px 16px;
+}
+
+.warning
+{
+    background-color: #FBEAEA;
+    border-left-color: #B03030;
+}
+
 @media (max-width: 600px)
 {
+    figure.diagram
+    {
+        margin: 16px 0;
+    }
+
+    .note, .warning
+    {
+        margin: 16px 0;
+        padding: 1px 8px;
+    }
+
     .prodid
     {
         font-size: 3em;

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="480" viewBox="0 0 820 480">
+<title>Memory layout of a CodeSegment</title>
+<style>
+text { font-family: Arial, Helvetica, sans-serif; font-size: 13px; fill: #202020; }
+.c { text-anchor: middle; }
+.b { font-weight: bold; }
+.s { font-size: 11px; fill: #404040; }
+.meta { fill: #DCE4EE; stroke: #304860; stroke-width: 1.2; }
+.code { fill: #E8E8E0; stroke: #304860; stroke-width: 1.2; }
+.data { fill: #F6E3C8; stroke: #304860; stroke-width: 1.2; }
+.line { stroke: #304860; stroke-width: 1.5; fill: none; }
+</style>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M0,0 L10,5 L0,10 z" fill="#304860"/>
+</marker>
+</defs>
+
+<text class="c b" x="380" y="26">One allocation per CodeSegment</text>
+
+<rect class="meta" x="230" y="40" width="300" height="32"/>
+<text class="c" x="380" y="61">CodeSegment object</text>
+<rect class="meta" x="230" y="72" width="300" height="32"/>
+<text class="c" x="380" y="93">ConstantTable (one per CBO)</text>
+<rect class="meta" x="230" y="104" width="300" height="32"/>
+<text class="c" x="380" y="125">32-bit and 64-bit constants</text>
+<rect class="meta" x="230" y="136" width="300" height="32"/>
+<text class="c" x="380" y="157">String table and string bytes</text>
+<rect class="meta" x="230" y="168" width="300" height="32"/>
+<text class="c" x="380" y="189">Qualified names</text>
+<rect class="meta" x="230" y="200" width="300" height="32"/>
+<text class="c" x="380" y="221">Parameter signatures</text>
+<rect class="meta" x="230" y="232" width="300" height="32"/>
+<text class="c" x="380" y="253">Function table (sorted by name)</text>
+<rect class="meta" x="230" y="264" width="300" height="32"/>
+<text class="c" x="380" y="285">Static initializer table</text>
+<rect class="code" x="230" y="296" width="300" height="48"/>
+<text class="c b" x="380" y="325">Bytecode</text>
+<rect class="meta" x="230" y="344" width="300" height="32"/>
+<text class="c" x="380" y="365">Data table (sorted by name)</text>
+<rect class="data" x="230" y="376" width="300" height="40"/>
+<text class="c b" x="380" y="401">Global constant storage</text>
+
+<!-- Left: handle -->
+<text class="b" x="20" y="52">CodeSegmentHandle</text>
+<text class="s" x="20" y="70">owns the block and frees it</text>
+<text class="s" x="20" y="85">with the permanent allocator</text>
+<line class="line" x1="170" y1="56" x2="228" y2="56" marker-end="url(#arrow)"/>
+
+<!-- Right: brackets -->
+<path class="line" d="M540,42 H552 V374 H540"/>
+<text class="b" x="566" y="190">Immutable once Load() returns</text>
+<text class="s" x="566" y="208">Bytecode operands are patched in place</text>
+<text class="s" x="566" y="223">during Load() only. All VMs read it.</text>
+
+<path class="line" d="M540,378 H552 V414 H540"/>
+<text class="b" x="566" y="392">Written during initialization</text>
+<text class="s" x="566" y="408">zero-filled, set by the loader and by</text>
+<text class="s" x="566" y="423">static initializers, then only read</text>
+
+<text class="c s" x="380" y="455">The tables refer to one another through absolute pointers into the same block, so the block cannot be relocated.</text>
+</svg>

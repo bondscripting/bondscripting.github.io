@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bond Programming Language</title>
+<link rel="stylesheet" type="text/css" href="css/bond.css">
+</head>
+
+<body>
+<div class="page">
+
+<div class="header">
+<img class="headlogo" src="img/bond_logo_90x124.png" alt="Bond Logo">
+<p class="prodid">Bond</p>
+</div>
+
+<ul class="navbar">
+<li class="navbutton"><a href="index.html">Home</a></li>
+<li class="navbutton"><a href="documentation.html">Documentation</a></li>
+<li class="navbutton"><a href="download.html">Download</a></li>
+<li class="navbutton"><a href="license.html">License</a></li>
+</ul>
+
+<div class="content">
+
+<h2 id="architecture">The Bond Architecture</h2>
+<p>This document describes how Bond is put together: how source code becomes bytecode, how that bytecode is loaded, and how it runs inside an application. While it covers the compiler briefly, most of it is about the runtime, because the runtime's properties determine whether Bond is well suited to an application. These properties include when memory is allocated, what is shared, what happens when something goes wrong, and what Bond does not do for you. If you are comparing Bond with other embeddable scripting languages, such as Lua, the <a href="#runtime">runtime</a> and <a href="#pitfalls">pitfalls</a> sections are the ones to read.</p>
+
+<ul class="toc">
+<li class="toc_h2"><a href="#overview">Overview</a></li>
+<li class="toc_h2"><a href="#compiler">The Compiler</a></li>
+<li class="toc_h2"><a href="#runtime">The Runtime</a></li>
+<li class="toc_h3"><a href="#runtime_components">Components</a></li>
+<li class="toc_h3"><a href="#code_segment">Building a Code Segment</a></li>
+<li class="toc_h3"><a href="#globals">Global Data and Static Initialization</a></li>
+<li class="toc_h3"><a href="#vm">Virtual Machines</a></li>
+<li class="toc_h3"><a href="#execution">Execution Model</a></li>
+<li class="toc_h3"><a href="#memory">Memory and Resources</a></li>
+<li class="toc_h3"><a href="#sharing">Sharing a Code Segment Between VMs</a></li>
+<li class="toc_h3"><a href="#errors">Errors</a></li>
+<li class="toc_h3"><a href="#comparison">Comparison With Dynamic Scripting Languages</a></li>
+<li class="toc_h2"><a href="#pitfalls">Pitfalls</a></li>
+</ul>
+
+<h2 id="overview">Overview</h2>
+<p>Bond splits its work between two distinct stages:</p>
+<ul>
+<li><b>Compilation</b> turns Bond source files into compiled Bond object files (CBO files) that contain bytecode. It is normally done ahead of time, for example as a build step or in an asset pipeline. The <span class="token">bondc</span> tool does this from the command line, and the compiler can also be embedded in tools through the C++ API.</li>
+<li><b>Execution</b> takes place in the application. The runtime loads one or more CBO files, links them into a single <i>code segment</i>, and runs their functions in one or more <i>virtual machines</i> (VMs).</li>
+</ul>
+<p>The runtime does not need the compiler. An application that only runs precompiled bytecode never parses source code.</p>
+<p>Bond is a statically typed, C-like language, and its runtime is designed in the same spirit as C. Data has a fixed, known layout. Memory is managed explicitly or by scope rather than by a garbage collector. The runtime does nothing behind your back. At a glance:</p>
+<ul>
+<li>Loading builds one immutable code segment in a single memory allocation.</li>
+<li>Creating a VM costs a single allocation: its stack.</li>
+<li>Any number of VMs can share one code segment.</li>
+<li>Once a VM exists, running Bond code allocates no memory and acquires no resources except where the Bond code, or native code it calls, explicitly asks for them.</li>
+<li>There is no garbage collector, so there are no collection pauses and no hidden memory growth.</li>
+<li>There is no sandbox and no synchronization. Bond trusts the scripts it runs and the application that embeds it, the way C does.</li>
+</ul>
+
+<h2 id="compiler">The Compiler</h2>
+<p>The compiler is a classic pipeline. A <i>FrontEnd</i> coordinates three stages:</p>
+<ul>
+<li>The <b>Lexer</b> turns source text into tokens.</li>
+<li>The <b>Parser</b> turns tokens into a parse tree for each source file.</li>
+<li>The <b>SemanticAnalyzer</b> makes five passes over the parse trees. They resolve names, evaluate types and compile-time constant values, and validate the program, for example by rejecting unreachable code or non-constant globals.</li>
+</ul>
+<p>The FrontEnd opens source files and the files they include through a <i>StreamFactory</i>, so sources can come from anywhere: disk, memory or an application's asset store. Errors are not thrown. They are collected in a <i>CompilerErrorBuffer</i> so that all of them can be reported at once. When analysis succeeds, the <b>CodeGenerator</b> writes the bytecode for all of the input files to a single CBO file.</p>
+
+<figure class="diagram">
+<img src="img/architecture/compiler-pipeline.svg" alt="Diagram of the compiler pipeline: source files flow through the Lexer, Parser and SemanticAnalyzer inside the FrontEnd, then the CodeGenerator writes a CBO file. Optionally, a NativeBindingGenerator writes C++ binding files.">
+<figcaption>Figure 1. The compiler pipeline.</figcaption>
+</figure>
+
+<p>A few properties of CBO files matter at runtime:</p>
+<ul>
+<li>A CBO file is compiled for a specific pointer size, 32 or 64 bits (<span class="token">bondc -p32</span> or <span class="token">-p64</span>, defaulting to the compiler's own). The runtime refuses to load a CBO whose pointer size differs from its own. Multi-byte values are stored in little-endian order, and Bond only supports little-endian targets. A CBO file does not otherwise depend on the platform.</li>
+<li>Functions implemented in C++ are declared in Bond <a href="language.html#native_blocks">native blocks</a>. Their bodies are absent from the CBO. They are bound to C++ functions when the CBO is loaded. The compiler can also generate the C++ boilerplate for those bindings (<span class="token">bondc -b -c -h -i</span>). This is how the whole Bond Standard Library is implemented.</li>
+<li>The CBO format has not been finalized. A runtime only accepts a limited range of format versions, and that range may change between releases, so rebuild CBO files when upgrading Bond.</li>
+</ul>
+
+<h2 id="runtime">The Runtime</h2>
+
+<h3 id="runtime_components">Components</h3>
+<p>The runtime library consists of a handful of cooperating parts, all of which are documented in the <a href="cppapi/html/index.html">C++ API documentation</a>.</p>
+<table>
+<tr><th>Component</th><th>Role</th></tr>
+<tr><td>CboLoader</td><td>Validates one or more CBO files, merges them into a CodeSegment, binds native functions and resolves references between functions and data.</td></tr>
+<tr><td>CodeSegment</td><td>The immutable result of loading: function and data tables, constants, bytecode and the storage for global constants. Functions and global constants can be looked up by qualified name, such as <span class="token">"Game.Update"</span>.</td></tr>
+<tr><td>VM</td><td>Executes the functions of a CodeSegment. It owns a fixed-size stack and refers to an Allocator, standard input, output and error streams, and a StreamFactory for opening files.</td></tr>
+<tr><td>StackFrame, InvocationStackFrame</td><td>The activation record of a function call. Native functions read their arguments from it and write their return values to it. Host code uses an InvocationStackFrame, or the VM::CallFunction shortcut, to call Bond functions.</td></tr>
+<tr><td>Collector</td><td>Attached to every stack frame. It releases the resources registered with it when the function call ends. This is the basis of Bond's <a href="language.html#sbrm">scope-based resource management</a>.</td></tr>
+<tr><td>NativeBindingCollection</td><td>A table that maps the qualified names of native functions to C++ functions with the signature <span class="token">void F(Bond::StackFrame &amp;frame)</span>.</td></tr>
+<tr><td>Allocator</td><td>An abstract interface through which every allocation made by Bond passes. The application supplies the implementation. A simple DefaultAllocator based on <span class="token">new</span> and <span class="token">delete</span> is provided.</td></tr>
+<tr><td>Standard Library</td><td>Precompiled CBOs embedded in the runtime library, plus their native bindings. <span class="token">LoadAllLibs()</span> or the individual <span class="token">LoadLib*()</span> functions add them to a CboLoader. See the <a href="bondapi/html/index.html">Standard Library documentation</a>.</td></tr>
+</table>
+
+<h3 id="code_segment">Building a Code Segment</h3>
+<p>The application adds CBO files to a <i>CboLoader</i>, either as in-memory buffers or as input streams, along with the NativeBindingCollections of the standard library and of its own native functions. It then calls <span class="token">Load()</span>, which works in two passes. The first pass validates every CBO and adds up the size of everything it contains. The second pass makes <b>a single allocation</b> large enough for the whole code segment, zero-fills it, and copies the constants, bytecode and initial data of all the CBOs into it.</p>
+<p>The loader then links the result:</p>
+<ul>
+<li>Functions and global constants are sorted by name, so that they can be looked up with a binary search. A name defined more than once is an error.</li>
+<li>Every native function is bound to its C++ implementation. A native function without a binding, or a binding that does not name a native function, is an error.</li>
+<li>Function and data names referenced by the bytecode are resolved to table indices, and the bytecode is patched in place, so that no name lookups happen during execution. A reference to a name that is not defined is an error.</li>
+</ul>
+<p>All errors are reported by throwing a <span class="token">Bond::Exception</span>. When <span class="token">Load()</span> returns, the CBO files are no longer needed and can be released. The code segment is returned in a <span class="token">CodeSegmentHandle</span>, which owns the allocation. The CboLoader can use a separate allocator for its temporary bookkeeping, so that the long-lived code segment and short-lived loading data can come from different memory pools.</p>
+
+<figure class="diagram">
+<img src="img/architecture/cbo-loading.svg" alt="Diagram of CboLoader::Load(): application CBOs, embedded standard library CBOs and native binding collections go into the loader, which validates, sizes, allocates, copies, sorts, binds and resolves, producing a single CodeSegment.">
+<figcaption>Figure 2. Building a CodeSegment.</figcaption>
+</figure>
+
+<figure class="diagram">
+<img src="img/architecture/codesegment-layout.svg" alt="Diagram of the memory layout of a CodeSegment: a single block containing the CodeSegment object, constant tables, strings, qualified names, parameter signatures, function tables, bytecode, the data table and global constant storage.">
+<figcaption>Figure 3. Everything a CodeSegment contains lives in one block of memory.</figcaption>
+</figure>
+
+<h3 id="globals">Global Data and Static Initialization</h3>
+<p>Bond <a href="language.html#diff_no_globals">does not allow global variables</a>. Data declared at file or namespace scope must be <span class="token">const</span>. This rule follows directly from the runtime's design. Storage for global constants lives in the code segment, and a code segment is shared by every VM that runs it (see <a href="#sharing">below</a>). A global variable would have to be one of two things:</p>
+<ul>
+<li>Shared by all VMs. Unrelated script instances would then see each other's changes, and VMs on different threads would race on that data.</li>
+<li>Copied for every VM. Creating a VM would then cost an allocation and initialization proportional to the size of the program's global data.</li>
+</ul>
+<p>Bond avoids both by keeping the code segment immutable. State lives on a VM's stack, in memory passed via function parameters, or in memory that the script allocates explicitly and passes around.</p>
+<p>Global constants are initialized in two ways:</p>
+<ul>
+<li>A constant whose value is known at compile time, such as <span class="token">const int SIZE = 16;</span>, is stored in the CBO and written by the loader. The rest of the storage is zero-filled.</li>
+<li>A constant whose value can only be computed at runtime, such as <span class="token">const int SQUARE = Square(7);</span>, is initialized by a <i>static initializer</i>. That is a function generated by the compiler, at most one per CBO. The application runs these initializers by calling <span class="token">CodeSegment::CallStaticInitializers(vm)</span> once, after loading and before running any other Bond code. They run in the order in which the CBOs were added to the loader, and in declaration order within each CBO. The VM does not call them automatically.</li>
+</ul>
+<p>After static initialization, nothing in the code segment is written again.</p>
+
+<h3 id="vm">Virtual Machines</h3>
+<p>A VM is constructed from an Allocator, a reference to a CodeSegment and a stack size. It can optionally also take the streams to use as standard input, output and error, and a StreamFactory through which the standard library opens files. The VM holds a <i>const reference</i> to the code segment. It neither copies nor modifies it, so the code segment must outlive every VM that uses it.</p>
+<p>The constructor makes exactly one allocation: the VM's stack, whose size is fixed for the VM's lifetime. A VM holds no other per-program state. That is why creating a VM is cheap, regardless of how large the program is.</p>
+<p>The application calls Bond functions by qualified name or through a <span class="token">const Function *</span> looked up in advance. It can use <span class="token">VM::CallFunction()</span> and <span class="token">VM::CallVoidFunction()</span>, or build a call argument by argument with an <span class="token">InvocationStackFrame</span>. When runtime checks are enabled, the default (<span class="token">BOND_RUNTIME_CHECKS_ENABLED</span>), the argument and return types used by the host are validated against the function's signature.</p>
+
+<h3 id="execution">Execution Model</h3>
+<p>The VM is a stack-based bytecode interpreter. Each function call gets a frame on the VM stack holding its arguments, its local variables and its operand stack. The compiler computes the size of the locals and the maximum depth of the operand stack for every function. Before each call, the VM checks that the callee's frame fits in the remaining stack space, and throws an exception if it does not. Within a function, no further bounds checks on the stack are needed.</p>
+<p>Calls between Bond and C++ work in both directions. A native function receives the StackFrame of its call, reads its arguments with <span class="token">GetArg&lt;T&gt;()</span>, and sets its return value with <span class="token">SetReturnValue()</span>. It may call back into Bond on the same VM. Arguments and return values use Bond's fixed-width types and C-like struct layout, so data can be exchanged with C++ without conversion.</p>
+<p>Each call made by Bond code also makes a nested call on the host thread's C++ stack. A deep chain of Bond calls therefore uses native stack space as well as VM stack space (see <a href="#pitfalls">Pitfalls</a>).</p>
+
+<figure class="diagram">
+<img src="img/architecture/vm-stack.svg" alt="Diagram of the VM stack with frames for main() and Foo(), each holding arguments, local variables and an operand stack. Foo's frame has a Collector that frees its collected resources when Foo returns. A parallel column shows the host thread's C++ stack growing with each Bond call.">
+<figcaption>Figure 4. Stack frames, the per-frame Collector, and the host's C++ stack.</figcaption>
+</figure>
+
+<h3 id="memory">Memory and Resources</h3>
+<p>Bond has <b>no garbage collector</b>, and its runtime never allocates memory on its own initiative once a VM exists. Executing Bond code acquires memory or other resources in only these cases:</p>
+<ul>
+<li>The script calls a memory function of the standard library, such as <span class="token">Allocate()</span> or <span class="token">AllocateCollected()</span>, or opens a file stream, such as with <span class="token">CreateInputStream()</span>. All of these go through the VM's Allocator and StreamFactory.</li>
+<li>A native function supplied by the application allocates memory itself. What the application's native code does is up to the application.</li>
+</ul>
+<p>Arithmetic, function calls, local variables, structs, arrays and string literals never allocate. Locals and temporaries live on the VM stack, and string literals live in the code segment. Bond has no hidden boxing, string building or closure allocation. A function that does not allocate explicitly runs in bounded, predictable memory.</p>
+<p>Memory that the script acquires is released in one of two ways:</p>
+<ul>
+<li><b>Explicitly</b>, with <span class="token">Free()</span>, <span class="token">FreeAligned()</span> or the stream-closing functions, as in C.</li>
+<li><b>By scope</b>, using the <i>collected</i> variants of the allocation and stream functions. These register the resource with the Collector of the calling function's stack frame. The resource is released when that function returns, or when its frame is unwound by an exception. A function can hand its Collector to a function it calls, so that the callee can allocate memory that outlives it. See <a href="language.html#sbrm">Scope-Based Resource Management</a>.</li>
+</ul>
+<p>Either way, memory is released at a well-defined point in the program, and its cost is paid there and nowhere else.</p>
+
+<figure class="diagram">
+<img src="img/architecture/lifecycle.svg" alt="Timeline with five phases: Load allocates one block for the CodeSegment plus temporaries; Create VMs allocates one block per VM for its stack; Initialize, done once, allocates only what static initializers ask for; Execute allocates nothing unless code explicitly asks; Tear down frees VM stacks and then the CodeSegment.">
+<figcaption>Figure 5. The lifecycle of an embedded Bond runtime, and where allocations happen.</figcaption>
+</figure>
+
+<p>The following sketch shows these phases in C++. Error handling and the application's own native bindings are omitted.</p>
+<pre class="code">Bond::DefaultAllocator allocator;
+
+// 1. Load: link the CBOs into a single CodeSegment.
+Bond::CboLoader cboLoader(allocator);
+Bond::LoadAllLibs(cboLoader);
+cboLoader.AddCboFile(cboBytes, cboSize);
+Bond::CodeSegmentHandle codeSegment = cboLoader.Load();
+
+// 2. Create a VM: allocates its 64 kB stack and nothing else.
+Bond::VM vm(allocator, *codeSegment, 64 * 1024);
+
+// 3. Initialize global constants, once per CodeSegment, using any VM.
+codeSegment-&gt;CallStaticInitializers(vm);
+
+// 4. Execute: no allocations unless the script asks for them.
+const Bond::Function *update = codeSegment-&gt;GetFunction("Game.Update");
+int32_t result = 0;
+vm.CallFunction(*update, &amp;result, deltaTime);
+
+// 5. Tear down: vm is destroyed before codeSegment (reverse declaration order).</pre>
+
+<h3 id="sharing">Sharing a Code Segment Between VMs</h3>
+<p>Since a VM owns nothing but its stack and a code segment is never written after static initialization, any number of VMs can reference the same code segment. A program is loaded once, however many instances of it run. Each additional instance costs one stack allocation of a size the application chooses. This works well for running one script per game entity, per request or per document, or for keeping a few VMs on standby so that work can start without delay.</p>
+
+<figure class="diagram">
+<img src="img/architecture/vm-sharing.svg" alt="Diagram of one read-only CodeSegment referenced by three VMs. Each VM has its own stack, call stack, allocator, and streams. A warning states that there are no locks and each VM must be used from one thread at a time.">
+<figcaption>Figure 6. Several VMs sharing one CodeSegment.</figcaption>
+</figure>
+
+<div class="warning">
+<p><b>Bond performs no synchronization of any kind.</b> Sharing a code segment between VMs is safe because the code segment is only read. The runtime does not manage threads or locks. If VMs run on more than one thread:</p>
+<ul>
+<li>Each VM must be used by only one thread at a time.</li>
+<li><span class="token">CallStaticInitializers()</span> must complete before any VM starts running Bond code, and it must be called only once.</li>
+<li>Any Allocator, stream, StreamFactory or native function that more than one VM uses must be thread-safe. The DefaultAllocator is <i>not</i> thread-safe, because it keeps an unsynchronized count of outstanding allocations. Give each thread its own allocator, or supply a thread-safe one.</li>
+<li>Scripts must not share mutable memory through pointers held in global constants. See <a href="#pitfalls">Pitfalls</a>.</li>
+</ul>
+</div>
+
+<h3 id="errors">Errors</h3>
+<p>The runtime reports errors by throwing a <span class="token">Bond::Exception</span>. This happens when loading fails, a function cannot be found, the VM stack overflows, the host calls a function with the wrong argument or return types (with runtime checks enabled), or a native function raises an error. Errors raised during execution include a dump of the Bond call stack in the exception's message, which is stored in a fixed-size buffer inside the exception object. Bond has no exception handling of its own, so the exception propagates through any Bond frames to the host code that started the call. As the frames unwind, their Collectors release any collected resources and the VM's call stack is restored, so the VM can be used again. Memory allocated with <span class="token">Allocate()</span> and not yet freed is leaked, just as it would be in C.</p>
+
+<h3 id="comparison">Comparison With Dynamic Scripting Languages</h3>
+<p>The table below summarizes how Bond's runtime differs from that of a typical dynamic scripting language, using Lua as the example. Neither approach is better in general. Bond trades safety and flexibility for predictability and low overhead.</p>
+<table>
+<tr><th></th><th>Bond</th><th>Lua (typical usage)</th></tr>
+<tr><td>Typing</td><td>Static, checked at compile time</td><td>Dynamic, checked at runtime</td></tr>
+<tr><td>Compilation</td><td>Ahead of time; the compiler is not needed by the application</td><td>Usually compiled from source when loaded; precompiled bytecode is optional</td></tr>
+<tr><td>Memory management</td><td>Explicit or scope-based; no garbage collector</td><td>Garbage collected</td></tr>
+<tr><td>Allocation during execution</td><td>Only when explicitly requested</td><td>Implicit, e.g. when creating tables, strings and closures</td></tr>
+<tr><td>Pauses</td><td>None introduced by the runtime</td><td>Garbage collection work is interleaved with execution</td></tr>
+<tr><td>Data exchange with C++</td><td>C-like structs and fixed-width types; pointers can be passed directly</td><td>Values are converted through the C API's stack; C data is wrapped in userdata</td></tr>
+<tr><td>Running many instances</td><td>Many VMs share one loaded code segment; each new VM costs one stack allocation</td><td>Each independent state loads its own copy of the scripts</td></tr>
+<tr><td>Memory safety</td><td>None; scripts use raw pointers and can corrupt the host</td><td>Memory-safe at the language level; scripts can be sandboxed by restricting their environment</td></tr>
+<tr><td>Suspending scripts</td><td>Not supported; a call runs to completion</td><td>Coroutines; debug hooks can interrupt long-running scripts</td></tr>
+<tr><td>Dynamic features</td><td>No closures, function pointers or runtime code loading</td><td>First-class functions, closures, metatables, loading code at runtime</td></tr>
+</table>
+
+<h2 id="pitfalls">Pitfalls</h2>
+<p>Bond's runtime does exactly what it is told and very little else. The following consequences of that design are easy to overlook.</p>
+
+<h4>Bond is not a sandbox</h4>
+<p>Bond has C's pointers and C's lack of safety nets. The VM does not check for null pointers, array bounds or integer division by zero. A faulty script can crash the application or silently corrupt its memory, including memory that belongs to other VMs or to the code segment. Treat Bond scripts as trusted code, with the same level of trust as the application's own C++. Bond is not suitable for running untrusted, user-supplied code.</p>
+
+<h4>Bond calls consume the host thread's stack</h4>
+<p>The VM checks for overflow of its own stack, but every Bond function call also nests a C++ call on the thread that runs the VM. Deep recursion in a VM with a large stack can exhaust the native thread stack before the VM's stack runs out. That crashes the application rather than throwing an exception. Size VM stacks with the host thread's stack in mind, or keep recursion shallow.</p>
+
+<h4>Scripts cannot be interrupted</h4>
+<p>A Bond function runs until it returns or throws. There are no coroutines, no instruction limits and no way to preempt a VM, so an infinite loop in a script blocks the calling thread forever. Work that needs to be spread over time must be structured as explicit calls from the host.</p>
+
+<h4>Static initializers must be run, exactly once</h4>
+<p>If <span class="token">CallStaticInitializers()</span> is never called, constants initialized at runtime silently read as zero. If it is called again, or while other VMs are running, it rewrites data that every VM shares and repeats any allocations the initializers make.</p>
+
+<h4>Global constants are only shallowly constant</h4>
+<p>Only the outermost part of a global's type has to be <span class="token">const</span>. A global constant can be a pointer to mutable memory, such as <span class="token">int *const BUFFER = cast&lt;int *&gt;(Bond::Allocate(1024UL));</span>. That memory is then shared by every VM that uses the code segment, which brings back exactly the shared mutable state that the language rule is meant to prevent. Two related issues come with it:</p>
+<ul>
+<li>Memory allocated by a static initializer comes from the allocator of the VM passed to <span class="token">CallStaticInitializers()</span>.</li>
+<li>Memory allocated with a <i>collected</i> function in a static initializer is released as soon as the initializer returns, which leaves the global pointing at freed memory.</li>
+</ul>
+
+<h4><span class="token">const</span> is enforced by the compiler, not the hardware</h4>
+<p>A cast can remove <span class="token">const</span> from a pointer, and the code segment's memory is not write-protected. Code that writes to a global constant through such a pointer changes it for every VM. Worse, the change is inconsistent. Compile-time constants are folded into the bytecode where they are used, so those uses still see the original value, while reads through pointers see the new one.</p>
+
+<h4>Lifetimes are the application's responsibility</h4>
+<ul>
+<li>The code segment must outlive every VM that references it.</li>
+<li>Streams, StreamFactories and Allocators passed to a VM are not owned by it and must outlive it.</li>
+<li>CBO data passed to the CboLoader only needs to remain valid until <span class="token">Load()</span> returns.</li>
+</ul>
+
+<h4>Errors are C++ exceptions</h4>
+<p>Runtime errors propagate as <span class="token">Bond::Exception</span> through every frame between the error and the host code that called into Bond, including any native functions in between. Native functions that call back into Bond, or that hold resources across such calls, must be exception-safe. Applications built without exception support cannot use Bond.</p>
+
+<h4>CBO files must match the runtime</h4>
+<p>A CBO compiled for a different pointer size, or in a format version that the runtime does not support, is rejected at load time.</p>
+
+<h4>Look up functions once</h4>
+<p>Looking up a function by name is a binary search with string comparisons. It is fast, but not free. Applications that call the same function repeatedly, such as once per frame, should look up its <span class="token">const Function *</span> once and reuse it. It remains valid for the lifetime of the code segment.</p>
+
+<br>
+</div> <!--content-->
+
+</div> <!--page-->
+</body>
+</html>

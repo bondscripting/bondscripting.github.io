@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="250" viewBox="0 0 900 250">
+<title>Lifecycle of an embedded Bond runtime and its allocations</title>
+<style>
+text { font-family: Arial, Helvetica, sans-serif; font-size: 13px; fill: #202020; }
+.c { text-anchor: middle; }
+.b { font-weight: bold; }
+.s { font-size: 11px; fill: #404040; }
+.w { fill: #FFFFFF; }
+.navy { fill: #304860; stroke: #304860; stroke-width: 1.5; }
+.alloc { fill: #F6E3C8; stroke: #A06020; stroke-width: 1.2; }
+.none { fill: #DCEBD8; stroke: #3A7A3A; stroke-width: 1.2; }
+.freed { fill: #EEEEEE; stroke: #606060; stroke-width: 1.2; }
+.line { stroke: #304860; stroke-width: 1.5; fill: none; }
+.tick { stroke: #A0A0A0; stroke-width: 1; stroke-dasharray: 3 3; }
+</style>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M0,0 L10,5 L0,10 z" fill="#304860"/>
+</marker>
+</defs>
+
+<!-- Phases -->
+<rect class="navy" x="10" y="50" width="160" height="60" rx="5"/>
+<text class="c b w" x="90" y="76">1. Load</text>
+<text class="c w" x="90" y="95">CboLoader::Load()</text>
+
+<rect class="navy" x="188" y="50" width="160" height="60" rx="5"/>
+<text class="c b w" x="268" y="76">2. Create VMs</text>
+<text class="c w" x="268" y="95">VM(...)</text>
+
+<rect class="navy" x="366" y="50" width="160" height="60" rx="5"/>
+<text class="c b w" x="446" y="76">3. Initialize (once)</text>
+<text class="c w" x="446" y="95">CallStaticInitializers</text>
+
+<rect class="navy" x="544" y="50" width="160" height="60" rx="5"/>
+<text class="c b w" x="624" y="76">4. Execute</text>
+<text class="c w" x="624" y="95">vm.CallFunction(...)</text>
+
+<rect class="navy" x="722" y="50" width="160" height="60" rx="5"/>
+<text class="c b w" x="802" y="76">5. Tear down</text>
+<text class="c w" x="802" y="95">VMs first</text>
+
+<line class="line" x1="170" y1="80" x2="186" y2="80" marker-end="url(#arrow)"/>
+<line class="line" x1="348" y1="80" x2="364" y2="80" marker-end="url(#arrow)"/>
+<line class="line" x1="526" y1="80" x2="542" y2="80" marker-end="url(#arrow)"/>
+<line class="line" x1="704" y1="80" x2="720" y2="80" marker-end="url(#arrow)"/>
+
+<!-- Repeat loop over Execute -->
+<path class="line" d="M584,50 C584,18 664,18 664,48" marker-end="url(#arrow)"/>
+<text class="c s" x="624" y="14">any number of calls</text>
+
+<!-- Allocation badges -->
+<line class="tick" x1="90" y1="110" x2="90" y2="130"/>
+<rect class="alloc" x="10" y="130" width="160" height="72" rx="4"/>
+<text class="c b" x="90" y="152">Allocates</text>
+<text class="c s" x="90" y="170">one block for the whole</text>
+<text class="c s" x="90" y="185">CodeSegment + temporaries</text>
+
+<line class="tick" x1="268" y1="110" x2="268" y2="130"/>
+<rect class="alloc" x="188" y="130" width="160" height="72" rx="4"/>
+<text class="c b" x="268" y="152">Allocates</text>
+<text class="c s" x="268" y="170">one block per VM:</text>
+<text class="c s" x="268" y="185">its stack</text>
+
+<line class="tick" x1="446" y1="110" x2="446" y2="130"/>
+<rect class="alloc" x="366" y="130" width="160" height="72" rx="4"/>
+<text class="c b" x="446" y="152">Allocates</text>
+<text class="c s" x="446" y="170">only what the static</text>
+<text class="c s" x="446" y="185">initializers ask for</text>
+
+<line class="tick" x1="624" y1="110" x2="624" y2="130"/>
+<rect class="none" x="544" y="130" width="160" height="72" rx="4"/>
+<text class="c b" x="624" y="152">Allocates nothing</text>
+<text class="c s" x="624" y="170">unless Bond code or</text>
+<text class="c s" x="624" y="185">native code explicitly asks</text>
+
+<line class="tick" x1="802" y1="110" x2="802" y2="130"/>
+<rect class="freed" x="722" y="130" width="160" height="72" rx="4"/>
+<text class="c b" x="802" y="152">Frees</text>
+<text class="c s" x="802" y="170">VM stacks, then the</text>
+<text class="c s" x="802" y="185">CodeSegment block</text>
+
+<text class="c s" x="450" y="232">All allocations go through Bond::Allocator objects supplied by the host. There is no garbage collector.</text>
+</svg>

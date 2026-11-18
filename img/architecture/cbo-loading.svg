@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360">
+<title>Building a CodeSegment from CBO files</title>
+<style>
+text { font-family: Arial, Helvetica, sans-serif; font-size: 13px; fill: #202020; }
+.c { text-anchor: middle; }
+.b { font-weight: bold; }
+.s { font-size: 11px; fill: #404040; }
+.w { fill: #FFFFFF; }
+.box { fill: #FFFFFF; stroke: #304860; stroke-width: 1.5; }
+.panel { fill: #EEF2F7; stroke: #304860; stroke-width: 1.5; }
+.file { fill: #E8E8E0; stroke: #606060; stroke-width: 1.2; }
+.navy { fill: #304860; stroke: #304860; stroke-width: 1.5; }
+.line { stroke: #304860; stroke-width: 1.5; fill: none; }
+</style>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M0,0 L10,5 L0,10 z" fill="#304860"/>
+</marker>
+</defs>
+
+<!-- Inputs -->
+<rect class="file" x="10" y="45" width="180" height="56" rx="3"/>
+<text class="c b" x="100" y="68">Application .cbo files</text>
+<text class="c s" x="100" y="86">from disk, memory, archives...</text>
+
+<rect class="file" x="10" y="135" width="180" height="56" rx="3"/>
+<text class="c b" x="100" y="158">Standard library .cbo</text>
+<text class="c s" x="100" y="176">embedded in the runtime library</text>
+
+<rect class="file" x="10" y="225" width="180" height="56" rx="3"/>
+<text class="c b" x="100" y="248">NativeBindingCollections</text>
+<text class="c s" x="100" y="266">tables of C++ functions</text>
+
+<text class="c s" x="100" y="310">Inputs only need to stay valid</text>
+<text class="c s" x="100" y="325">until Load() returns.</text>
+
+<line class="line" x1="190" y1="73" x2="228" y2="120" marker-end="url(#arrow)"/>
+<line class="line" x1="190" y1="163" x2="228" y2="163" marker-end="url(#arrow)"/>
+<line class="line" x1="190" y1="253" x2="228" y2="206" marker-end="url(#arrow)"/>
+
+<!-- CboLoader -->
+<rect class="panel" x="230" y="20" width="390" height="300" rx="6"/>
+<text class="b" x="245" y="43">CboLoader::Load()</text>
+
+<rect class="box" x="250" y="56" width="350" height="26" rx="3"/>
+<text x="262" y="74">1. Validate each CBO and check its pointer size</text>
+<rect class="box" x="250" y="93" width="350" height="26" rx="3"/>
+<text x="262" y="111">2. Add up the sizes of all tables, code and data</text>
+<rect class="box" x="250" y="130" width="350" height="26" rx="3"/>
+<text x="262" y="148">3. Make one allocation and zero-fill it</text>
+<rect class="box" x="250" y="167" width="350" height="26" rx="3"/>
+<text x="262" y="185">4. Copy constants, bytecode and initial data</text>
+<rect class="box" x="250" y="204" width="350" height="26" rx="3"/>
+<text x="262" y="222">5. Sort by name, reject duplicate definitions</text>
+<rect class="box" x="250" y="241" width="350" height="26" rx="3"/>
+<text x="262" y="259">6. Bind native functions to C++ implementations</text>
+<rect class="box" x="250" y="278" width="350" height="26" rx="3"/>
+<text x="262" y="296">7. Resolve names in the bytecode to table indices</text>
+
+<text class="c s" x="425" y="345">Any failure throws a Bond::Exception. Temporary bookkeeping uses the temp allocator.</text>
+
+<!-- Output -->
+<line class="line" x1="620" y1="165" x2="658" y2="165" marker-end="url(#arrow)"/>
+<rect class="navy" x="660" y="115" width="225" height="100" rx="6"/>
+<text class="c b w" x="772" y="145">CodeSegment</text>
+<text class="c w" x="772" y="168">one contiguous block from</text>
+<text class="c w" x="772" y="185">the permanent allocator,</text>
+<text class="c w" x="772" y="202">owned by a CodeSegmentHandle</text>
+</svg>
